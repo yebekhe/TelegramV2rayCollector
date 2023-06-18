@@ -16,11 +16,7 @@ function parseProxyUrl($url, $type = "trojan")
         "protocol" => $type,
         "username" => isset($parsedUrl["user"]) ? $parsedUrl["user"] : "",
         "hostname" => isset($parsedUrl["host"]) ? $parsedUrl["host"] : "",
-        "port" => isset($parsedUrl["port"])
-            ? $parsedUrl["port"]
-            : ($type === "trojan"
-                ? 80
-                : 443),
+        "port" => isset($parsedUrl["port"]) ? $parsedUrl["port"]: "",
         "params" => $params,
         "hash" => isset($parsedUrl["fragment"]) ? $parsedUrl["fragment"] : "",
     ];
@@ -42,8 +38,7 @@ function buildProxyUrl($obj, $type = "trojan")
     $url .= $obj["hostname"];
     if (
         isset($obj["port"]) &&
-        $obj["port"] !== "" &&
-        $obj["port"] !== ($type === "trojan" ? 80 : 443)
+        $obj["port"] !== ""
     ) {
         $url .= ":" . $obj["port"];
     }
