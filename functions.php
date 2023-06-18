@@ -293,6 +293,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
                     $final_config = buildProxyUrl($config, "vless");
+                    $final_config = str_replace("&amp;", "&", $final_config);
                     $matchinv2[] = urldecode($final_config);
                 }
                 $sstparray = ["vless" => $matchinv2];
@@ -307,6 +308,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
                     $final_config = buildProxyUrl($config);
+                    $final_config = str_replace("&amp;", "&", $final_config);
                     $matchinv3[] = urldecode($final_config);
                 }
                 $sstparray = ["trojan" => $matchinv3];
