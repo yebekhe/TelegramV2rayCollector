@@ -52,15 +52,9 @@ for ($p = count($Channel) - 1; $p >= 0; $p--) {
             }
         }
 
-
-        if ($mix_data === ""){
-            $data = get_v2ray($CH, $Types[$CH][$type_count] , "text");
-        }
-        else{
-            $data .= "\n" . get_v2ray($CH, $Types[$CH][$type_count] , "text");
-        }
     }
 }
+$mix_data = $vmess_data . "\n" . $vless_data . "\n" . $trojan_data . "\n" . $shadowsocks_data ;
 
 file_put_contents("mix" , $mix_data);
 file_put_contents("vmess", $vmess_data);
