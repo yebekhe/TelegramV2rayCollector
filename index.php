@@ -58,10 +58,10 @@ $fixed_string_vless = str_replace("&amp;", "&", $vless_data);
 $fixed_string_trojan = str_replace("&amp;", "&", $trojan_data);
 $mix_data = $vmess_data . "\n" . $fixed_string_vless . "\n" . $fixed_string_trojan . "\n" . $shadowsocks_data ;
 
-file_put_contents("mix" , $mix_data);
-file_put_contents("vmess", $vmess_data);
-file_put_contents("vless", $fixed_string_vless);
-file_put_contents("trojan", $fixed_string_trojan);
-file_put_contents("ShadowSocks", $shadowsocks_data);
+file_put_contents("sub/mix" , $mix_data);
+file_put_contents("sub/vmess", $vmess_data);
+file_put_contents("sub/vless", $fixed_string_vless);
+file_put_contents("sub/trojan", $fixed_string_trojan);
+file_put_contents("sub/shadowsocks", $shadowsocks_data);
 
 ?>
