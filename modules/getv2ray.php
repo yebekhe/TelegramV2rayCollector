@@ -32,7 +32,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = $final_config;
                 }
                 $v2ray_array = ["vmess" => $match_inverted];
-                $v2ray_array_final = array_values(array_unique($v2ray_array));
+                $v2ray_array_final["vmess"] = array_values(array_unique($v2ray_array["vmess"]));
             } elseif ($type === "vless") {
                 $patern_vless = "#<code>vless://(.*?)<#";
                 preg_match_all($patern_vless, $get, $match_vless);
@@ -47,7 +47,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = urldecode($final_config);
                 }
                 $v2ray_array = ["vless" => $match_inverted];
-                $v2ray_array_final = array_values(array_unique($v2ray_array));
+                $v2ray_array_final["vless"] = array_values(array_unique($v2ray_array["vless"]));
             } elseif ($type === "trojan") {
                 $patern_trojan = "#<code>trojan://(.*?)<#";
                 preg_match_all($patern_trojan, $get, $match_trojan);
@@ -62,7 +62,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = urldecode($final_config);
                 }
                 $v2ray_array = ["trojan" => $match_inverted];
-                $v2ray_array_final = array_values(array_unique($v2ray_array));
+                $v2ray_array_final["trojan"] = array_values(array_unique($v2ray_array["trojan"]));
             } elseif ($type === "ss") {
                 $patern_ss = "#[^vmle]ss://(.*?)<#";
                 preg_match_all($patern_ss, $get, $match_ss);
@@ -77,7 +77,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = urldecode($final_config);
                 }
                 $v2ray_array = ["ss" => $match_inverted];
-                $v2ray_array_final = array_values(array_unique($v2ray_array));
+                $v2ray_array_final["ss"] = array_values(array_unique($v2ray_array["ss"]));
             }
 
             if (isset($output_format) and $output_format === "text") {
