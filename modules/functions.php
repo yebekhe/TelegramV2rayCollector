@@ -181,7 +181,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
                     $final_config = buildProxyUrl($config, "vless");
-                    $matchinv3[] = urldecode($final_config);
+                    $matchinv2[] = urldecode($final_config);
                 }
                 $sstparray = ["vless" => $matchinv2];
             } elseif ($type === "trojan") {
