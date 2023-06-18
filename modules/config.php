@@ -16,18 +16,18 @@ $Types = [
     "Outline_Vpn" => ["vless"],
     "vpn_xw" => ["vless"],
     "prrofile_purple" => ["vmess", "vless"],
-    "ShadowSocks_s" => ["vless"]
+    "ShadowSocks_s" => ["vless"],
     "azadi_az_inja_migzare" => ["vless", "ss"],
     "WomanLifeFreedomVPN" => ["vless"],
     "internet4iran" => ["vless"],
     "customv2ray" => ["vmess", "vless"],
     "LegenderY_Servers" => ["vless"],
     "vpnfail_v2ray" => ["vmess"],
-    "UnlimitedDev" => ["vless"]
+    "UnlimitedDev" => ["vless"],
     "vmessorg" => ["vmess", "vless"],
     "v2rayNG_Matsuri" => ["vless"]
     "v2rayngvpn" => ["vless"],
-    "vpn_ioss" => ["vmess"]
+    "vpn_ioss" => ["vmess"],
 ];
 
 ?>
