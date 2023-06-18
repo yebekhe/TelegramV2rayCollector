@@ -27,7 +27,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
-                    $config["ps"] = $flag . "|" . $channel;
+                    $config["ps"] = $flag . "|" . $channel . "|" . $p + 1;
                     $final_config = encode_vmess($config);
                     $match_inverted[] = $final_config;
                 }
@@ -41,7 +41,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
-                    $config["hash"] = $flag . "|" . $channel;
+                    $config["hash"] = $flag . "|" . $channel . "|" . $v + 1;
                     $final_config = buildProxyUrl($config, "vless");
                     $match_inverted[] = urldecode($final_config);
                 }
@@ -55,7 +55,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
-                    $config["hash"] = $flag . "|" . $channel;
+                    $config["hash"] = $flag . "|" . $channel . "|" . $v + 1;
                     $final_config = buildProxyUrl($config);
                     $match_inverted[] = urldecode($final_config);
                 }
@@ -69,7 +69,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
-                    $config["name"] = $flag . "|" . $channel;
+                    $config["name"] = $flag . "|" . $channel . "|" . $v + 1;
                     $final_config = BuildShadowsocks($config);
                     $match_inverted[] = urldecode($final_config);
                 }
