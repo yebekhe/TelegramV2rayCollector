@@ -180,9 +180,8 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info['countryCode'];
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
-                    $build_config = buildProxyUrl($config, "vless");
-                    $final_config = str_replace("&amp;", "&", $build_config);
-                    $matchinv2[] = $final_config;
+                    $final_config = buildProxyUrl($config, "vless");
+                    $matchinv3[] = urldecode($final_config);
                 }
                 $sstparray = ["vless" => $matchinv2];
             } elseif ($type === "trojan") {
@@ -195,9 +194,8 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info['countryCode'];
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
-                    $build_config = buildProxyUrl($config);
-                    $final_config = str_replace("&amp;", "&", $build_config);
-                    $matchinv3[] = $final_config;
+                    $final_config = buildProxyUrl($config);
+                    $matchinv3[] = urldecode($final_config);
                 }
                 $sstparray = ["trojan" => $matchinv3];
             } elseif ($type === "ss") {
