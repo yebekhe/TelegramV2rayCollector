@@ -22,7 +22,7 @@ function ip_info($ip)
         $ip_address_array = dns_get_record($ip ,  DNS_A);
         $ip_address_count = count($ip_address_array);
         $random_key = rand(0, $ip_address_count - 1);
-        $random_ip_of_url = $ip_address_array[$random_key]['ip']
+        $random_ip_of_url = $ip_address_array[$random_key]['ip'];
         $ipinfo = json_decode(
             file_get_contents("https://api.country.is/" . $random_ip_of_url),
             true
