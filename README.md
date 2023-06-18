@@ -14,11 +14,11 @@ The main script iterates over each channel and the protocol types they offer, th
 ## Usage
 Just import the following subscription link into the corresponding client. Use a client that at least support ss + vless + vmess + trojan.
 
-- [`Mix of All`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/mix)
-- [`Just VMESS`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/vmess)
-- [`Just VLESS`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/vless)
-- [`Just Trojan`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/trojan)
-- [`Just ShadowSocks`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/ShadowSocks)
+- [`Mix of All`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix)
+- [`Just VMESS`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess)
+- [`Just VLESS`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless)
+- [`Just Trojan`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan)
+- [`Just ShadowSocks`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks)
 
 ## Contribution
 If you have a Telegram channel and you want to add it to this project or you know Telegram channels that can be used in this project you can ask for addition in Issues.
