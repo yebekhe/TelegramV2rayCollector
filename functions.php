@@ -142,118 +142,6 @@ function BuildShadowsocks($server)
     return $url;
 }
 
-function check_host($host)
-{
-    if (isset($host)) {
-        $url =
-            "https://check-host.net/check-ping?host=" .
-            $host .
-            "&node=ir3.node.check-host.net&node=ir4.node.check-host.net&node=ir1.node.check-host.net";
-
-        $ch = curl_init();
-        curl_setopt_array($ch, [
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HTTPHEADER => ["Accept: application/json"],
-        ]);
-
-        $response = curl_exec($ch);
-
-        if (curl_errno($ch)) {
-            echo "cURL error: " . curl_error($ch);
-        } else {
-            $request_id = json_decode($response, true)["request_id"];
-
-            return $request_id;
-        }
-        curl_close($ch);
-    }
-}
-
-function check_ping($request_id)
-{
-    if (isset($request_id)) {
-        $url = "https://check-host.net/check-result/" . $request_id;
-
-        $ch = curl_init();
-        curl_setopt_array($ch, [
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HTTPHEADER => ["Accept: application/json"],
-        ]);
-
-        $response = curl_exec($ch);
-
-        if (curl_errno($ch)) {
-            echo "cURL error: " . curl_error($ch);
-        } else {
-            $decoded_response = json_decode($response, true);
-
-            $Tehran_ping = $Shiraz_ping = $Tabriz_ping = 0;
-            $Pings = [];
-
-            if (!empty($decoded_response["ir1.node.check-host.net"])) {
-                $count = 0;
-                foreach (
-                    $decoded_response["ir1.node.check-host.net"][0]
-                    as $value
-                ) {
-                    if (@$value[0] == "OK") {
-                        $count++;
-                        $Tehran_ping += $value[1];
-                    }
-                }
-                if ($count !== 0) {
-                    $Tehran_ping = (@$Tehran_ping / $count) * 1000;
-                }
-            }
-
-            if (!empty($decoded_response["ir3.node.check-host.net"])) {
-                $count = 0;
-                foreach (
-                    $decoded_response["ir3.node.check-host.net"][0]
-                    as $value
-                ) {
-                    if (@$value[0] == "OK") {
-                        $count++;
-                        $Shiraz_ping += $value[1];
-                    }
-                }
-                if ($count !== 0) {
-                    $Shiraz_ping = (@$Shiraz_ping / $count) * 1000;
-                }
-            }
-
-            if (!empty($decoded_response["ir4.node.check-host.net"])) {
-                $count = 0;
-                foreach (
-                    $decoded_response["ir4.node.check-host.net"][0]
-                    as $value
-                ) {
-                    if (@$value[0] == "OK") {
-                        $count++;
-                        $Tabriz_ping += $value[1];
-                    }
-                }
-                if ($count !== 0) {
-                    $Tabriz_ping = (@$Tabriz_ping / $count) * 1000;
-                }
-            }
-
-            $Pings = [
-                "Tehran" => $Tehran_ping,
-                "Tabriz" => $Tabriz_ping,
-                "Shiraz" => $Shiraz_ping,
-            ];
-
-            return $Pings;
-        }
-
-        curl_close($ch);
-    } else {
-        return "Request ID not found!";
-    }
-}
 
 function get_v2ray($channel, $type, $output_format = "text")
 {
@@ -292,8 +180,9 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info['countryCode'];
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
-                    $final_config = buildProxyUrl($config, "vless");
-                    $matchinv2[] = urldecode(html_entity_decode($final_config));
+                    $build_config = buildProxyUrl($config, "vless");
+                    $final_config = str_replace("&amp;", "&", $build_config);
+                    $matchinv2[] = $final_config;
                 }
                 $sstparray = ["vless" => $matchinv2];
             } elseif ($type === "trojan") {
@@ -306,8 +195,9 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info['countryCode'];
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
-                    $final_config = buildProxyUrl($config);
-                    $matchinv3[] = urldecode(html_entity_decode($final_config));
+                    $build_config = buildProxyUrl($config);
+                    $final_config = str_replace("&amp;", "&", $build_config);
+                    $matchinv3[] = $final_config;
                 }
                 $sstparray = ["trojan" => $matchinv3];
             } elseif ($type === "ss") {
