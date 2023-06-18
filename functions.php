@@ -272,7 +272,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                             strpos($match[1][$p], "<br/>")
                         );
                     }
-                    $config = decode_vmess("vmess://" . $match[1][$p]);
+                    $config = decode_vmess($match[1][$p]);
                     $ip = !empty($config['sni']) ? $config['sni'] : (!empty($config['host']) ? $config['host'] : $config['add']);
                     $ip_info = ip_info($ip);
                     $location = $ip_info['countryCode'];
