@@ -3,8 +3,8 @@
 error_reporting(0);
 header("Content-type: application/json;");
 
-include "functions.php";
-include "config.php";
+include "modules/functions.php";
+include "modules/config.php";
 
 $mix_data = "";
 $vmess_data = "";
