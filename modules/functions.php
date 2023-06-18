@@ -1,21 +1,5 @@
 <?php
 include "flag.php";
-function ping($ip, $port)
-{
-    $it = microtime(1);
-    $check = fsockopen($ip, $port, $errno, $errstr, 30);
-    $ft = microtime(1);
-    $militime = round(($ft - $it) * 1e3, 2);
-    return $check ? $militime : "unavailble";
-}
-function ip_info($ip)
-{
-    $ipinfo = json_decode(
-        file_get_contents("http://ip-api.com/json/" . $ip),
-        true
-    );
-    return $ipinfo;
-}
 
 function parseProxyUrl($url, $type = "trojan")
 {
