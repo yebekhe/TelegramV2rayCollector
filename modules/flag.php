@@ -1,10 +1,9 @@
 <?php
-function getFlags(string $countryCode): string
+function getFlags($country_code)
 {
-    return (string) preg_replace_callback(
-        '/./',
-        static fn (array $letter) => mb_chr(ord($letter[0]) % 32 + 0x1F1E5),
-        $countryCode
-    );
+    $flag = "";
+    $flag = mb_convert_encoding( '&#' . ( 127397 + ord( $country_code[0] ) ) . ';', 'UTF-8', 'HTML-ENTITIES');
+    $flag .= mb_convert_encoding( '&#' . ( 127397 + ord( $country_code[1] ) ) . ';', 'UTF-8', 'HTML-ENTITIES');
+    return $flag;
 }
 ?>
