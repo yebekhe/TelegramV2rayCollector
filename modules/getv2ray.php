@@ -29,61 +29,65 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $flag = getFlags($location);
                     $config["ps"] = $flag . "|" . $channel;
                     $final_config = encode_vmess($config);
-                    $matchinv[] = $final_config;
+                    $match_inverted[] = $final_config;
                 }
-                $sstparray = ["vmess" => $matchinv];
+                $v2ray_array = ["vmess" => $match_inverted];
+                $v2ray_array_final = array_values(array_unique($v2ray_array));
             } elseif ($type === "vless") {
                 $patern2 = "#<code>vless://(.*?)<#";
-                preg_match_all($patern2, $get, $matchv);
-                for ($v = count($matchv[1]) - 1; $v >= 0; $v--) {
-                    $config = parseProxyUrl("vless://" . $matchv[1][$v], "vless");
+                preg_match_all($patern2, $get, $match);
+                for ($v = count($match[1]) - 1; $v >= 0; $v--) {
+                    $config = parseProxyUrl("vless://" . $match[1][$v], "vless");
                     $ip = !empty($config['params']['sni']) ? $config['params']['sni'] : (!empty($config['params']['host']) ? $config['params']['host'] : $config['hostname']);
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
                     $final_config = buildProxyUrl($config, "vless");
-                    $matchinv2[] = urldecode($final_config);
+                    $match_inverted[] = urldecode($final_config);
                 }
-                $sstparray = ["vless" => $matchinv2];
+                $v2ray_array = ["vless" => $match_inverted];
+                $v2ray_array_final = array_values(array_unique($v2ray_array));
             } elseif ($type === "trojan") {
                 $patern3 = "#<code>trojan://(.*?)<#";
-                preg_match_all($patern3, $get, $matcht);
-                for ($v = count($matcht[1]) - 1; $v >= 0; $v--) {
-                    $config = parseProxyUrl("trojan://" . $matcht[1][$v]);
+                preg_match_all($patern3, $get, $match);
+                for ($v = count($match[1]) - 1; $v >= 0; $v--) {
+                    $config = parseProxyUrl("trojan://" . $match[1][$v]);
                     $ip = !empty($config['params']['sni']) ? $config['params']['sni'] : (!empty($config['params']['host']) ? $config['params']['host'] : $config['hostname']);
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel;
                     $final_config = buildProxyUrl($config);
-                    $matchinv3[] = urldecode($final_config);
+                    $match_inverted[] = urldecode($final_config);
                 }
-                $sstparray = ["trojan" => $matchinv3];
+                $v2ray_array = ["trojan" => $match_inverted];
+                $v2ray_array_final = array_values(array_unique($v2ray_array));
             } elseif ($type === "ss") {
                 $patern4 = "#[^vmle]ss://(.*?)<#";
-                preg_match_all($patern4, $get, $matchs);
-                for ($v = count($matchs[1]) - 1; $v >= 0; $v--) {
-                    $config = ParseShadowsocks("ss://" . $matchs[1][$v]);
+                preg_match_all($patern4, $get, $match);
+                for ($v = count($match[1]) - 1; $v >= 0; $v--) {
+                    $config = ParseShadowsocks("ss://" . $match[1][$v]);
                     $ip = $config['server_address'];
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
                     $config["name"] = $flag . "|" . $channel;
                     $final_config = BuildShadowsocks($config);
-                    $matchinv4[] = urldecode($final_config);
+                    $match_inverted[] = urldecode($final_config);
                 }
-                $sstparray = ["ss" => $matchinv4];
+                $v2ray_array = ["ss" => $match_inverted];
+                $v2ray_array_final = array_values(array_unique($v2ray_array));
             }
 
             if (isset($output_format) and $output_format === "text") {
                 $output = "";
-                foreach ($sstparray[$type] as $config) {
+                foreach ($v2ray_array_final[$type] as $config) {
                     $output .= $output == "" ? $config : "\n" . $config;
                 }
                 return $output;
             } else {
-                return json_encode($sstparray, 128);
+                return json_encode($v2ray_array_final, 128);
             }
 
         } else {
