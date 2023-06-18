@@ -11,18 +11,18 @@ function get_v2ray($channel, $type, $output_format = "text")
         $get = file_get_contents("https://t.me/s/" . $channel);
         if (!is_null($type)) {
             if ($type === "vmess") {
-                $patern = "#<code>vmess://(.*?)<#";
-                preg_match_all($patern, $get, $match);
-                for ($p = count($match[1]) - 1; $p >= 0; $p--) {
-                    $match[1][$p] = "vmess://" . $match[1][$p];
+                $patern_vmess = "#<code>vmess://(.*?)<#";
+                preg_match_all($patern_vmess, $get, $match_vmess);
+                for ($p = count($match_vmess[1]) - 1; $p >= 0; $p--) {
+                    $match_vmess[1][$p] = "vmess://" . $match_vmess[1][$p];
                     if (strpos($match[1][$p], "<br/>") !== false) {
-                        $match[1][$p] = substr(
-                            $match[1][$p],
+                        $match_vmess[1][$p] = substr(
+                            $match_vmess[1][$p],
                             0,
-                            strpos($match[1][$p], "<br/>")
+                            strpos($match_vmess[1][$p], "<br/>")
                         );
                     }
-                    $config = decode_vmess($match[1][$p]);
+                    $config = decode_vmess($match_vmess[1][$p]);
                     $ip = !empty($config['sni']) ? $config['sni'] : (!empty($config['host']) ? $config['host'] : $config['add']);
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
@@ -34,10 +34,10 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $v2ray_array = ["vmess" => $match_inverted];
                 $v2ray_array_final = array_values(array_unique($v2ray_array));
             } elseif ($type === "vless") {
-                $patern2 = "#<code>vless://(.*?)<#";
-                preg_match_all($patern2, $get, $match);
-                for ($v = count($match[1]) - 1; $v >= 0; $v--) {
-                    $config = parseProxyUrl("vless://" . $match[1][$v], "vless");
+                $patern_vless = "#<code>vless://(.*?)<#";
+                preg_match_all($patern_vless, $get, $match_vless);
+                for ($v = count($match_vless[1]) - 1; $v >= 0; $v--) {
+                    $config = parseProxyUrl("vless://" . $match_vless[1][$v], "vless");
                     $ip = !empty($config['params']['sni']) ? $config['params']['sni'] : (!empty($config['params']['host']) ? $config['params']['host'] : $config['hostname']);
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
@@ -49,10 +49,10 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $v2ray_array = ["vless" => $match_inverted];
                 $v2ray_array_final = array_values(array_unique($v2ray_array));
             } elseif ($type === "trojan") {
-                $patern3 = "#<code>trojan://(.*?)<#";
-                preg_match_all($patern3, $get, $match);
-                for ($v = count($match[1]) - 1; $v >= 0; $v--) {
-                    $config = parseProxyUrl("trojan://" . $match[1][$v]);
+                $patern_trojan = "#<code>trojan://(.*?)<#";
+                preg_match_all($patern_trojan, $get, $match_trojan);
+                for ($v = count($match_trojan[1]) - 1; $v >= 0; $v--) {
+                    $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
                     $ip = !empty($config['params']['sni']) ? $config['params']['sni'] : (!empty($config['params']['host']) ? $config['params']['host'] : $config['hostname']);
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
@@ -64,10 +64,10 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $v2ray_array = ["trojan" => $match_inverted];
                 $v2ray_array_final = array_values(array_unique($v2ray_array));
             } elseif ($type === "ss") {
-                $patern4 = "#[^vmle]ss://(.*?)<#";
-                preg_match_all($patern4, $get, $match);
-                for ($v = count($match[1]) - 1; $v >= 0; $v--) {
-                    $config = ParseShadowsocks("ss://" . $match[1][$v]);
+                $patern_ss = "#[^vmle]ss://(.*?)<#";
+                preg_match_all($patern_ss, $get, $match_ss);
+                for ($v = count($match_ss[1]) - 1; $v >= 0; $v--) {
+                    $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
                     $ip = $config['server_address'];
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
