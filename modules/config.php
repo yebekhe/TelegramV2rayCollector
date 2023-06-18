@@ -27,7 +27,7 @@ $Types = [
     "vmessorg" => ["vmess", "vless"],
     "v2rayNG_Matsuri" => ["vless"]
     "v2rayngvpn" => ["vless"],
-    "vpn_ioss" => ["vmess"],
+    "vpn_ioss" => ["vmess"]
 ];
 
 ?>
