@@ -11,7 +11,7 @@ function get_v2ray($channel, $type, $output_format = "text")
         $get = file_get_contents("https://t.me/s/" . $channel);
         if (!is_null($type)) {
             if ($type === "vmess") {
-                $patern_vmess = "#<code>vmess://(.*?)<#";
+                $patern_vmess = "#vmess://(.*?)<#";
                 preg_match_all($patern_vmess, $get, $match_vmess);
                 for ($p = count($match_vmess[1]) - 1; $p >= 0; $p--) {
                     $match_vmess[1][$p] = "vmess://" . $match_vmess[1][$p];
@@ -32,9 +32,8 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = $final_config;
                 }
                 $v2ray_array = ["vmess" => $match_inverted];
-                $v2ray_array_final["vmess"] = array_values(array_unique($v2ray_array["vmess"]));
             } elseif ($type === "vless") {
-                $patern_vless = "#<code>vless://(.*?)<#";
+                $patern_vless = "#vless://(.*?)<#";
                 preg_match_all($patern_vless, $get, $match_vless);
                 for ($v = count($match_vless[1]) - 1; $v >= 0; $v--) {
                     $config = parseProxyUrl("vless://" . $match_vless[1][$v], "vless");
@@ -47,9 +46,8 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = urldecode($final_config);
                 }
                 $v2ray_array = ["vless" => $match_inverted];
-                $v2ray_array_final["vless"] = array_values(array_unique($v2ray_array["vless"]));
             } elseif ($type === "trojan") {
-                $patern_trojan = "#<code>trojan://(.*?)<#";
+                $patern_trojan = "#trojan://(.*?)<#";
                 preg_match_all($patern_trojan, $get, $match_trojan);
                 for ($v = count($match_trojan[1]) - 1; $v >= 0; $v--) {
                     $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
@@ -62,7 +60,6 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = urldecode($final_config);
                 }
                 $v2ray_array = ["trojan" => $match_inverted];
-                $v2ray_array_final["trojan"] = array_values(array_unique($v2ray_array["trojan"]));
             } elseif ($type === "ss") {
                 $patern_ss = "#[^vmle]ss://(.*?)<#";
                 preg_match_all($patern_ss, $get, $match_ss);
@@ -77,17 +74,16 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $match_inverted[] = urldecode($final_config);
                 }
                 $v2ray_array = ["ss" => $match_inverted];
-                $v2ray_array_final["ss"] = array_values(array_unique($v2ray_array["ss"]));
             }
 
             if (isset($output_format) and $output_format === "text") {
                 $output = "";
-                foreach ($v2ray_array_final[$type] as $config) {
+                foreach ($v2ray_array[$type] as $config) {
                     $output .= $output == "" ? $config : "\n" . $config;
                 }
                 return $output;
             } else {
-                return json_encode($v2ray_array_final, 128);
+                return json_encode($v2ray_array, 128);
             }
 
         } else {
