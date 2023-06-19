@@ -28,17 +28,10 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
                     $config["ps"] = $flag . "|" . $channel . "|" . $p;
-                    if (
-                        array_key_exists("ps", $config) and
-                        count($config) == 1 
-                    ) {
-                        goto a;
-                    } elseif ( count($config) == 1 ) {
-                        goto a;
-                    } else {
+                    if ( count($config) !== 1 ) {
                         $final_config = encode_vmess($config);
                         $match_inverted[] = $final_config;
-                    }
+                    } 
                 }
                 $v2ray_array = ["vmess" => $match_inverted];
             } elseif ($type === "vless") {
