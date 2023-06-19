@@ -39,7 +39,6 @@ function get_v2ray($channel, $type, $output_format = "text")
                         $final_config = encode_vmess($config);
                         $match_inverted[] = $final_config;
                     }
-                    a :
                 }
                 $v2ray_array = ["vmess" => $match_inverted];
             } elseif ($type === "vless") {
@@ -55,12 +54,11 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
                     if (
-                        $config["params"]["security"] == "reality" and
-                        isset($config["params"]["pbk"])
+                        $config["params"]["security"] !== "reality"
                     ) {
-                        $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
-                    } else {
                         $config["hash"] = $flag . "|" . $channel . "|" . $v;
+                    } else {
+                        $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
                     }
                     $final_config = buildProxyUrl($config, "vless");
                     $match_inverted[] = urldecode($final_config);
