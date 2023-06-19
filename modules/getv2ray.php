@@ -26,7 +26,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $config = decode_vmess($match_vmess[1][$p]);
                     $ip = !empty($config["sni"]) ? $config["sni"] : (!empty($config["host"]) ? $config["host"] : $config["add"]);
                     $ip_info = ip_info($ip);
-                    if isset($ip_info["country"]){
+                    if ( isset($ip_info["country"]) ){
                         $location = $ip_info["country"];
                         $flag = getFlags($location);
                     }
@@ -57,7 +57,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     );
                     $ip = !empty($config["params"]["sni"]) ? $config["params"]["sni"] : (!empty($config["params"]["host"]) ? $config["params"]["host"] : $config["hostname"]);
                     $ip_info = ip_info($ip);
-                    if isset($ip_info["country"]){
+                    if ( isset($ip_info["country"]) ){
                         $location = $ip_info["country"];
                         $flag = getFlags($location);
                     }
@@ -88,7 +88,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
                     $ip = !empty($config["params"]["sni"]) ? $config["params"]["sni"] : (!empty($config["params"]["host"]) ? $config["params"]["host"] : $config["hostname"]);
                     $ip_info = ip_info($ip);
-                    if isset($ip_info["country"]){
+                    if ( isset($ip_info["country"]) ){
                         $location = $ip_info["country"];
                         $flag = getFlags($location);
                     }
@@ -114,7 +114,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
                     $ip = $config["server_address"];
                     $ip_info = ip_info($ip);
-                    if isset($ip_info["country"]){
+                    if ( isset($ip_info["country"]) ){
                         $location = $ip_info["country"];
                         $flag = getFlags($location);
                     }
