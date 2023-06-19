@@ -15,7 +15,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                 preg_match_all($patern_vmess, $get, $match_vmess);
                 for ($p = count($match_vmess[1]) - 1; $p >= 0; $p--) {
                     $match_vmess[1][$p] = "vmess://" . $match_vmess[1][$p];
-                    if (strpos($match[1][$p], "<br/>") !== false) {
+                    if (strpos($match_vmess[1][$p], "<br/>") !== false) {
                         $match_vmess[1][$p] = substr(
                             $match_vmess[1][$p],
                             0,
@@ -38,6 +38,13 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $patern_vless = "#vless://(.*?)<#";
                 preg_match_all($patern_vless, $get, $match_vless);
                 for ($v = count($match_vless[1]) - 1; $v >= 0; $v--) {
+                    if (strpos($match_vless[1][$p], "<br/>") !== false) {
+                        $match_vless[1][$p] = substr(
+                            $match_vless[1][$p],
+                            0,
+                            strpos($match_vless[1][$p], "<br/>")
+                        );
+                    }
                     $config = parseProxyUrl(
                         "vless://" . $match_vless[1][$v],
                         "vless"
@@ -60,6 +67,13 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $patern_trojan = "#trojan://(.*?)<#";
                 preg_match_all($patern_trojan, $get, $match_trojan);
                 for ($v = count($match_trojan[1]) - 1; $v >= 0; $v--) {
+                    if (strpos($match_trojan[1][$p], "<br/>") !== false) {
+                        $match_trojan[1][$p] = substr(
+                            $match_trojan[1][$p],
+                            0,
+                            strpos($match_trojan[1][$p], "<br/>")
+                        );
+                    }
                     $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
                     $ip = !empty($config["params"]["sni"]) ? $config["params"]["sni"] : (!empty($config["params"]["host"]) ? $config["params"]["host"] : $config["hostname"]);
                     $ip_info = ip_info($ip);
@@ -74,6 +88,13 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $patern_ss = "#[^vmle]ss://(.*?)<#";
                 preg_match_all($patern_ss, $get, $match_ss);
                 for ($v = count($match_ss[1]) - 1; $v >= 0; $v--) {
+                    if (strpos($match_ss[1][$p], "<br/>") !== false) {
+                        $match_ss[1][$p] = substr(
+                            $match_ss[1][$p],
+                            0,
+                            strpos($match_ss[1][$p], "<br/>")
+                        );
+                    }
                     $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
                     $ip = $config["server_address"];
                     $ip_info = ip_info($ip);
