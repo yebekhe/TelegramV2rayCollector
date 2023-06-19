@@ -14,6 +14,8 @@ The main script iterates over each channel and the protocol types they offer, th
 ## Usage
 Just import the following subscription link into the corresponding client. Use a client that at least support ss + vless + vmess + trojan.
 
+| CONFIG TYPE | NORMAL SUBSCRIPTION | BASE64 SUBSCRIPTION |
+|---|---|---|
 | MIX of ALL | [NORMAL SUBSCRIPTION](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix) | [BASE64 SUBSCRIPTION](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64) |
 | VMESS | [NORMAL SUBSCRIPTION](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess) | [BASE64 SUBSCRIPTION](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64) |
 | VLESS | [NORMAL SUBSCRIPTION](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless) | [BASE64 SUBSCRIPTION](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64) |
