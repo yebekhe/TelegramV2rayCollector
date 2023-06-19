@@ -38,11 +38,11 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $patern_vless = "#vless://(.*?)<#";
                 preg_match_all($patern_vless, $get, $match_vless);
                 for ($v = count($match_vless[1]) - 1; $v >= 0; $v--) {
-                    if (strpos($match_vless[1][$p], "<br/>") !== false) {
-                        $match_vless[1][$p] = substr(
-                            $match_vless[1][$p],
+                    if (strpos($match_vless[1][$v], "<br/>") !== false) {
+                        $match_vless[1][$v] = substr(
+                            $match_vless[1][$v],
                             0,
-                            strpos($match_vless[1][$p], "<br/>")
+                            strpos($match_vless[1][$v], "<br/>")
                         );
                     }
                     $config = parseProxyUrl(
@@ -67,11 +67,11 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $patern_trojan = "#trojan://(.*?)<#";
                 preg_match_all($patern_trojan, $get, $match_trojan);
                 for ($v = count($match_trojan[1]) - 1; $v >= 0; $v--) {
-                    if (strpos($match_trojan[1][$p], "<br/>") !== false) {
-                        $match_trojan[1][$p] = substr(
-                            $match_trojan[1][$p],
+                    if (strpos($match_trojan[1][$v], "<br/>") !== false) {
+                        $match_trojan[1][$v] = substr(
+                            $match_trojan[1][$v],
                             0,
-                            strpos($match_trojan[1][$p], "<br/>")
+                            strpos($match_trojan[1][$v], "<br/>")
                         );
                     }
                     $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
@@ -88,11 +88,11 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $patern_ss = "#[^vmle]ss://(.*?)<#";
                 preg_match_all($patern_ss, $get, $match_ss);
                 for ($v = count($match_ss[1]) - 1; $v >= 0; $v--) {
-                    if (strpos($match_ss[1][$p], "<br/>") !== false) {
-                        $match_ss[1][$p] = substr(
-                            $match_ss[1][$p],
+                    if (strpos($match_ss[1][$v], "<br/>") !== false) {
+                        $match_ss[1][$v] = substr(
+                            $match_ss[1][$v],
                             0,
-                            strpos($match_ss[1][$p], "<br/>")
+                            strpos($match_ss[1][$v], "<br/>")
                         );
                     }
                     $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
