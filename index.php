@@ -13,6 +13,7 @@ function remove_duplicate_vmess($input)
         $parts = decode_vmess($item);
         $part_ps = $parts["ps"];
         unset($parts["ps"]);
+        ksort($parts);
         $part_serialize = serialize($parts);
         $result[$part_serialize][] = $part_ps ?? "";
     }
@@ -36,13 +37,19 @@ function remove_duplicate_non_vmess($input)
 
     foreach ($array as $item) {
         $parts = explode("#", $item);
-        $result[$parts[0]][] = $parts[1] ?? "";
+        $query = parse_url($parts[0], PHP_URL_QUERY);
+        parse_str($query, $queryParams);
+        ksort($queryParams);
+        $queryString = http_build_query($queryParams);
+        $result[$parts[0] . '?' . $queryString][] = $parts[1] ?? "";
     }
+
     $finalResult = [];
-    foreach ($result as $domain => $parts) {
+    foreach ($result as $url => $parts) {
         $partAfterHash = $parts[0] ?? "";
-        $finalResult[] = $domain . "#" . $partAfterHash;
+        $finalResult[] = $url . "#" . $partAfterHash;
     }
+
     $output = "";
     foreach ($finalResult as $config) {
         $output .= $output == "" ? $config : "\n" . $config;
