@@ -42,6 +42,7 @@ $Channel = [
     "VlessConfig",
     "NIM_VPN_ir",
     "hashmakvpn",
+    "X_Her0",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -85,6 +86,7 @@ $Types = [
     "VlessConfig" => ["vless"],
     "NIM_VPN_ir" => ["vless"],
     "hashmakvpn" => ["vmess"],
+    "X_Her0" => ["vless"],
 ];
 
 ?>
