@@ -23,7 +23,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                             strpos($match_vmess[1][$p], "<br/>")
                         );
                     }
-                    if (stripos($match_vmess[1][$v], "...") !== false) {
+                    if (stripos($match_vmess[1][$p], "...") !== false) {
                         null;
                     } else {
                         $config = decode_vmess($match_vmess[1][$p]);
