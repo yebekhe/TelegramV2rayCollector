@@ -78,7 +78,7 @@ function remove_duplicate_vmess($input){
     return $output;
 }
 
-function remove_duplicate_non_vmess(input){
+function remove_duplicate_non_vmess($input){
     $array = explode("\n", $input);
 
     foreach ($array as $item) {
