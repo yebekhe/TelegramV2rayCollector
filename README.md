@@ -15,10 +15,19 @@ The main script iterates over each channel and the protocol types they offer, th
 Just import the following subscription link into the corresponding client. Use a client that at least support ss + vless + vmess + trojan.
 
 - [`Mix of All`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix)
+- [`Mix of All - Base64`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64)
+- 
 - [`Just VMESS`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess)
+- [`Just VMESS - Base64`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64)
+- 
 - [`Just VLESS`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless)
+- [`Just VLESS - Base64`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64)
+- 
 - [`Just Trojan`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan)
+- [`Just Trojan - Base64`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64)
+- 
 - [`Just ShadowSocks`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks)
+- [`Just ShadowSocks - Base64`](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks_base64)
 
 ## Contribution
 If you have a Telegram channel and you want to add it to this project or you know Telegram channels that can be used in this project you can ask for addition in Issues.
