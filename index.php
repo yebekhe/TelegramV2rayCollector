@@ -101,12 +101,10 @@ function remove_duplicate_non_vmess($input)
 }
 
 $fixed_string_vmess = remove_duplicate_vmess($vmess_data);
-$fixed_string_vless = remove_duplicate_non_vmess(
-    str_replace("&amp;", "&", $vless_data)
-);
-$fixed_string_trojan = remove_duplicate_non_vmess(
-    str_replace("&amp;", "&", $trojan_data)
-);
+$string_vless = str_replace("&amp;", "&", $vless_data);
+$fixed_string_vless = remove_duplicate_non_vmess($string_vless);
+$string_trojan =  str_replace("&amp;", "&", $trojan_data);
+$fixed_string_trojan = remove_duplicate_non_vmess($string_trojan);
 $fixed_string_shadowsocks = remove_duplicate_non_vmess($shadowsocks_data);
 
 $mix_data =
