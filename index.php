@@ -1,6 +1,5 @@
 <?php
 
-error_reporting(0);
 header("Content-type: application/json;");
 
 include "modules/getv2ray.php";
