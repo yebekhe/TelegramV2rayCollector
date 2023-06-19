@@ -44,6 +44,8 @@ $Channel = [
     "hashmakvpn",
     "X_Her0",
     "Napsternetvirani",
+    "iran_ray",
+    "INIT1984",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -89,6 +91,8 @@ $Types = [
     "hashmakvpn" => ["vmess"],
     "X_Her0" => ["vless"],
     "Napsternetvirani" => ["vmess"],
+    "iran_ray" => ["vless"],
+    "INIT1984" => ["vless"]
 ];
 
 ?>
