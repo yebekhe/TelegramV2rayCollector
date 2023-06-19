@@ -45,7 +45,12 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $ip_info = ip_info($ip);
                     $location = $ip_info['country'];
                     $flag = getFlags($location);
-                    $config["hash"] = $flag . "|" . $channel . "|" . $v;
+                    if ($config['params']['security']) && $config['params']['security'] === 'reality'){
+                        $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
+                    }
+                    else{
+                        $config["hash"] = $flag . "|" . $channel . "|" . $v;
+                    }
                     $final_config = buildProxyUrl($config, "vless");
                     $match_inverted[] = urldecode($final_config);
                 }
