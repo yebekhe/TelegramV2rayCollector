@@ -60,7 +60,7 @@ function get_reality($input){
     $array = explode("\n", $input);
     $output = "";
     foreach ($array as $item) {
-        if (stripos($string, "reality")){
+        if (stripos($item, "reality")){
             $output .= $output === "" ? $item : "\n$item";
         }
     }
