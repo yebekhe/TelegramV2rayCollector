@@ -23,26 +23,23 @@ function get_v2ray($channel, $type, $output_format = "text")
                         );
                     }
                     $config = decode_vmess($match_vmess[1][$p]);
-                    $ip = !empty($config["sni"])
-                        ? $config["sni"]
-                        : (!empty($config["host"])
-                            ? $config["host"]
-                            : $config["add"]);
+                    $ip = !empty($config["sni"]) ? $config["sni"] : (!empty($config["host"]) ? $config["host"] : $config["add"]);
                     $ip_info = ip_info($ip);
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
                     $config["ps"] = $flag . "|" . $channel . "|" . $p;
                     if (
-                        array_key_exists("ps", $config) &&
-                        count($config) === 1 
+                        array_key_exists("ps", $config) and
+                        count($config) == 1 
                     ) {
-                        null;
-                    } elseif ( count($config) === 1 ) {
-                        null;
+                        goto a;
+                    } elseif ( count($config) == 1 ) {
+                        goto a;
                     } else {
                         $final_config = encode_vmess($config);
                         $match_inverted[] = $final_config;
                     }
+                    a :
                 }
                 $v2ray_array = ["vmess" => $match_inverted];
             } elseif ($type === "vless") {
@@ -58,7 +55,8 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
                     if (
-                        $config["params"]["security"] === "reality"
+                        $config["params"]["security"] == "reality" and
+                        isset($config["params"]["pbk"])
                     ) {
                         $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
                     } else {
