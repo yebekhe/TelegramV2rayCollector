@@ -34,8 +34,10 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $config["ps"] = $flag . "|" . $channel . "|" . $p;
                     if (
                         array_key_exists("ps", $config) &&
-                        count($config) == 1
+                        count($config) === 1 
                     ) {
+                        null;
+                    } elseif ( count($config) === 1 ) {
                         null;
                     } else {
                         $final_config = encode_vmess($config);
@@ -51,16 +53,12 @@ function get_v2ray($channel, $type, $output_format = "text")
                         "vless://" . $match_vless[1][$v],
                         "vless"
                     );
-                    $ip = !empty($config["params"]["sni"])
-                        ? $config["params"]["sni"]
-                        : (!empty($config["params"]["host"])
-                            ? $config["params"]["host"]
-                            : $config["hostname"]);
+                    $ip = !empty($config["params"]["sni"]) ? $config["params"]["sni"] : (!empty($config["params"]["host"]) ? $config["params"]["host"] : $config["hostname"]);
                     $ip_info = ip_info($ip);
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
                     if (
-                        isset($config["params"]["pbk"])
+                        $config["params"]["security"] === "reality"
                     ) {
                         $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
                     } else {
@@ -75,11 +73,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                 preg_match_all($patern_trojan, $get, $match_trojan);
                 for ($v = count($match_trojan[1]) - 1; $v >= 0; $v--) {
                     $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
-                    $ip = !empty($config["params"]["sni"])
-                        ? $config["params"]["sni"]
-                        : (!empty($config["params"]["host"])
-                            ? $config["params"]["host"]
-                            : $config["hostname"]);
+                    $ip = !empty($config["params"]["sni"]) ? $config["params"]["sni"] : (!empty($config["params"]["host"]) ? $config["params"]["host"] : $config["hostname"]);
                     $ip_info = ip_info($ip);
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
