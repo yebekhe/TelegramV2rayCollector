@@ -73,6 +73,7 @@ function remove_duplicate_vmess($input)
         $part_serialize["ps"] = $partAfterHash;
         $finalResult[] = encode_vmess($part_serialize);
     }
+    $output = "";
     foreach ($finalResult as $config) {
         $output .= $output == "" ? $config : "\n" . $config;
     }
@@ -92,6 +93,7 @@ function remove_duplicate_non_vmess($input)
         $partAfterHash = $parts[0] ?? "";
         $finalResult[] = $domain . "#" . $partAfterHash;
     }
+    $output = "";
     foreach ($finalResult as $config) {
         $output .= $output == "" ? $config : "\n" . $config;
     }
