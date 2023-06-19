@@ -53,7 +53,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $ip_info = ip_info($ip);
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
-                    if ( strcasecmp($config["params"]["security"], "reality") == 0) {
+                    if ( stripos($match_vless[1][$v], "reality") !== false) {
                         $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
                     } 
                     else {
