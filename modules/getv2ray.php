@@ -23,23 +23,30 @@ function get_v2ray($channel, $type, $output_format = "text")
                             strpos($match_vmess[1][$p], "<br/>")
                         );
                     }
-                    $config = decode_vmess($match_vmess[1][$p]);
-                    $ip = !empty($config["sni"]) ? $config["sni"] : (!empty($config["host"]) ? $config["host"] : $config["add"]);
-                    $ip_info = ip_info($ip);
-                    if ( isset($ip_info["country"]) ){
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
+                    if (stripos($match_vmess[1][$v], "...") !== false) {
+                        null;
+                    } else {
+                        $config = decode_vmess($match_vmess[1][$p]);
+                        $ip = !empty($config["sni"])
+                            ? $config["sni"]
+                            : (!empty($config["host"])
+                                ? $config["host"]
+                                : $config["add"]);
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
+                        $config["ps"] = $flag . "|" . $channel . "|" . $p;
+                        if (count($config) !== 1) {
+                            $final_config = encode_vmess($config);
+                            $match_inverted[] = $final_config;
+                        }
                     }
-                    else{
-                        $flag = "🚩";
-                    }
-                    $config["ps"] = $flag . "|" . $channel . "|" . $p;
-                    if ( count($config) !== 1 ) {
-                        $final_config = encode_vmess($config);
-                        $match_inverted[] = $final_config;
-                    } 
+                    $v2ray_array = ["vmess" => $match_inverted];
                 }
-                $v2ray_array = ["vmess" => $match_inverted];
             } elseif ($type === "vless") {
                 $patern_vless = "#vless://(.*?)<#";
                 preg_match_all($patern_vless, $get, $match_vless);
@@ -51,29 +58,36 @@ function get_v2ray($channel, $type, $output_format = "text")
                             strpos($match_vless[1][$v], "<br/>")
                         );
                     }
-                    $config = parseProxyUrl(
-                        "vless://" . $match_vless[1][$v],
-                        "vless"
-                    );
-                    $ip = !empty($config["params"]["sni"]) ? $config["params"]["sni"] : (!empty($config["params"]["host"]) ? $config["params"]["host"] : $config["hostname"]);
-                    $ip_info = ip_info($ip);
-                    if ( isset($ip_info["country"]) ){
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
+                    if (stripos($match_vless[1][$v], "...") !== false) {
+                        null;
+                    } else {
+                        $config = parseProxyUrl(
+                            "vless://" . $match_vless[1][$v],
+                            "vless"
+                        );
+                        $ip = !empty($config["params"]["sni"])
+                            ? $config["params"]["sni"]
+                            : (!empty($config["params"]["host"])
+                                ? $config["params"]["host"]
+                                : $config["hostname"]);
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
+                        if (stripos($match_vless[1][$v], "reality") !== false) {
+                            $config["hash"] =
+                                "REALITY|" . $flag . "|" . $channel . "|" . $v;
+                        } else {
+                            $config["hash"] = $flag . "|" . $channel . "|" . $v;
+                        }
+                        $final_config = buildProxyUrl($config, "vless");
+                        $match_inverted[] = urldecode($final_config);
                     }
-                    else{
-                        $flag = "🚩";
-                    }
-                    if ( stripos($match_vless[1][$v], "reality") !== false) {
-                        $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
-                    } 
-                    else {
-                        $config["hash"] = $flag . "|" . $channel . "|" . $v;
-                    }
-                    $final_config = buildProxyUrl($config, "vless");
-                    $match_inverted[] = urldecode($final_config);
+                    $v2ray_array = ["vless" => $match_inverted];
                 }
-                $v2ray_array = ["vless" => $match_inverted];
             } elseif ($type === "trojan") {
                 $patern_trojan = "#trojan://(.*?)<#";
                 preg_match_all($patern_trojan, $get, $match_trojan);
@@ -85,21 +99,30 @@ function get_v2ray($channel, $type, $output_format = "text")
                             strpos($match_trojan[1][$v], "<br/>")
                         );
                     }
-                    $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
-                    $ip = !empty($config["params"]["sni"]) ? $config["params"]["sni"] : (!empty($config["params"]["host"]) ? $config["params"]["host"] : $config["hostname"]);
-                    $ip_info = ip_info($ip);
-                    if ( isset($ip_info["country"]) ){
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
+                    if (stripos($match_trojan[1][$v], "...") !== false) {
+                        null;
+                    } else {
+                        $config = parseProxyUrl(
+                            "trojan://" . $match_trojan[1][$v]
+                        );
+                        $ip = !empty($config["params"]["sni"])
+                            ? $config["params"]["sni"]
+                            : (!empty($config["params"]["host"])
+                                ? $config["params"]["host"]
+                                : $config["hostname"]);
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
+                        $config["hash"] = $flag . "|" . $channel . "|" . $v;
+                        $final_config = buildProxyUrl($config);
+                        $match_inverted[] = urldecode($final_config);
                     }
-                    else{
-                        $flag = "🚩";
-                    }
-                    $config["hash"] = $flag . "|" . $channel . "|" . $v;
-                    $final_config = buildProxyUrl($config);
-                    $match_inverted[] = urldecode($final_config);
+                    $v2ray_array = ["trojan" => $match_inverted];
                 }
-                $v2ray_array = ["trojan" => $match_inverted];
             } elseif ($type === "ss") {
                 $patern_ss = "#[^vmle]ss://(.*?)<#";
                 preg_match_all($patern_ss, $get, $match_ss);
@@ -111,21 +134,24 @@ function get_v2ray($channel, $type, $output_format = "text")
                             strpos($match_ss[1][$v], "<br/>")
                         );
                     }
-                    $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
-                    $ip = $config["server_address"];
-                    $ip_info = ip_info($ip);
-                    if ( isset($ip_info["country"]) ){
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
+                    if (stripos($match_ss[1][$v], "...") !== false) {
+                        null;
+                    } else {
+                        $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
+                        $ip = $config["server_address"];
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
+                        $config["name"] = $flag . "|" . $channel . "|" . $v;
+                        $final_config = BuildShadowsocks($config);
+                        $match_inverted[] = urldecode($final_config);
                     }
-                    else{
-                        $flag = "🚩";
-                    }
-                    $config["name"] = $flag . "|" . $channel . "|" . $v;
-                    $final_config = BuildShadowsocks($config);
-                    $match_inverted[] = urldecode($final_config);
+                    $v2ray_array = ["ss" => $match_inverted];
                 }
-                $v2ray_array = ["ss" => $match_inverted];
             }
 
             if (isset($output_format) and $output_format === "text") {
