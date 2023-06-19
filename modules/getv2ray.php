@@ -23,14 +23,21 @@ function get_v2ray($channel, $type, $output_format = "text")
                         );
                     }
                     $config = decode_vmess($match_vmess[1][$p]);
-                    $ip = !empty($config['sni']) ? $config['sni'] : (!empty($config['host']) ? $config['host'] : $config['add']);
+                    $ip = !empty($config["sni"])
+                        ? $config["sni"]
+                        : (!empty($config["host"])
+                            ? $config["host"]
+                            : $config["add"]);
                     $ip_info = ip_info($ip);
-                    $location = $ip_info['country'];
+                    $location = $ip_info["country"];
                     $flag = getFlags($location);
                     $config["ps"] = $flag . "|" . $channel . "|" . $p;
-                    if (array_key_exists("ps", $config) && count($config) == 1){
+                    if (
+                        array_key_exists("ps", $config) &&
+                        count($config) == 1
+                    ) {
                         null;
-                    }else{
+                    } else {
                         $final_config = encode_vmess($config);
                         $match_inverted[] = $final_config;
                     }
@@ -40,15 +47,25 @@ function get_v2ray($channel, $type, $output_format = "text")
                 $patern_vless = "#vless://(.*?)<#";
                 preg_match_all($patern_vless, $get, $match_vless);
                 for ($v = count($match_vless[1]) - 1; $v >= 0; $v--) {
-                    $config = parseProxyUrl("vless://" . $match_vless[1][$v], "vless");
-                    $ip = !empty($config['params']['sni']) ? $config['params']['sni'] : (!empty($config['params']['host']) ? $config['params']['host'] : $config['hostname']);
+                    $config = parseProxyUrl(
+                        "vless://" . $match_vless[1][$v],
+                        "vless"
+                    );
+                    $ip = !empty($config["params"]["sni"])
+                        ? $config["params"]["sni"]
+                        : (!empty($config["params"]["host"])
+                            ? $config["params"]["host"]
+                            : $config["hostname"]);
                     $ip_info = ip_info($ip);
-                    $location = $ip_info['country'];
+                    $location = $ip_info["country"];
                     $flag = getFlags($location);
-                    if ($config['params']['security']) && $config['params']['security'] === 'reality'){
-                        $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
-                    }
-                    else{
+                    if (
+                        isset($config["params"]["security"]) &&
+                        $config["params"]["security"] === "reality"
+                    ) {
+                        $config["hash"] =
+                            "REALITY|" . $flag . "|" . $channel . "|" . $v;
+                    } else {
                         $config["hash"] = $flag . "|" . $channel . "|" . $v;
                     }
                     $final_config = buildProxyUrl($config, "vless");
@@ -60,9 +77,13 @@ function get_v2ray($channel, $type, $output_format = "text")
                 preg_match_all($patern_trojan, $get, $match_trojan);
                 for ($v = count($match_trojan[1]) - 1; $v >= 0; $v--) {
                     $config = parseProxyUrl("trojan://" . $match_trojan[1][$v]);
-                    $ip = !empty($config['params']['sni']) ? $config['params']['sni'] : (!empty($config['params']['host']) ? $config['params']['host'] : $config['hostname']);
+                    $ip = !empty($config["params"]["sni"])
+                        ? $config["params"]["sni"]
+                        : (!empty($config["params"]["host"])
+                            ? $config["params"]["host"]
+                            : $config["hostname"]);
                     $ip_info = ip_info($ip);
-                    $location = $ip_info['country'];
+                    $location = $ip_info["country"];
                     $flag = getFlags($location);
                     $config["hash"] = $flag . "|" . $channel . "|" . $v;
                     $final_config = buildProxyUrl($config);
@@ -74,9 +95,9 @@ function get_v2ray($channel, $type, $output_format = "text")
                 preg_match_all($patern_ss, $get, $match_ss);
                 for ($v = count($match_ss[1]) - 1; $v >= 0; $v--) {
                     $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
-                    $ip = $config['server_address'];
+                    $ip = $config["server_address"];
                     $ip_info = ip_info($ip);
-                    $location = $ip_info['country'];
+                    $location = $ip_info["country"];
                     $flag = getFlags($location);
                     $config["name"] = $flag . "|" . $channel . "|" . $v;
                     $final_config = BuildShadowsocks($config);
@@ -94,7 +115,6 @@ function get_v2ray($channel, $type, $output_format = "text")
             } else {
                 return json_encode($v2ray_array, 128);
             }
-
         } else {
             return "Error : Proxy type is not defined!";
         }
