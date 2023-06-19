@@ -46,6 +46,8 @@ $Channel = [
     "Napsternetvirani",
     "iran_ray",
     "INIT1984",
+    "EXOGAMERS",
+    "ServerNett",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -92,7 +94,9 @@ $Types = [
     "X_Her0" => ["vless"],
     "Napsternetvirani" => ["vmess"],
     "iran_ray" => ["vless"],
-    "INIT1984" => ["vless"]
+    "INIT1984" => ["vless"],
+    "EXOGAMERS" => ["vless"],
+    "ServerNett" => ["vless"],
 ];
 
 ?>
