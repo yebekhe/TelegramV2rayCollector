@@ -141,6 +141,6 @@ file_put_contents(
     "sub/shadowsocks_base64",
     base64_encode($fixed_string_shadowsocks)
 );
-file_put_contents("sub/reality", fixed_string_reality);
-file_put_contents("sub/reality_base64", base64_encode(fixed_string_reality));
+file_put_contents("sub/reality", $fixed_string_reality);
+file_put_contents("sub/reality_base64", base64_encode($fixed_string_reality));
 ?>
