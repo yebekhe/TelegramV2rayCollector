@@ -23,6 +23,9 @@ Just import the following subscription link into the corresponding client. Use a
 - [Just VLESS](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless)
 - [Just VLESS - Base64](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64)
 
+- [Just Reality](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality)
+- [Just Reality - Base64](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality_base64)
+
 - [Just Trojan](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan)
 - [Just Trojan - Base64](https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64)
 
