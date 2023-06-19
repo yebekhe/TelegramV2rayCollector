@@ -62,8 +62,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     if (
                         isset($config["params"]["pbk"])
                     ) {
-                        $config["hash"] =
-                            "REALITY|" . $flag . "|" . $channel . "|" . $v;
+                        $config["hash"] = "REALITY|" . $flag . "|" . $channel . "|" . $v;
                     } else {
                         $config["hash"] = $flag . "|" . $channel . "|" . $v;
                     }
