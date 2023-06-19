@@ -56,6 +56,16 @@ function remove_duplicate_non_vmess($input)
     return $output;
 }
 
+function get_reality($input){
+    $array = explode("\n", $input);
+    $output = "";
+    foreach ($array as $item) {
+        if (stripos($string, "reality")){
+            $output .= $output === "" ? $item : "\n$item";
+        }
+    }
+}
+
 $mix_data = "";
 $vmess_data = "";
 $trojan_data = "";
@@ -107,6 +117,7 @@ $fixed_string_vless = remove_duplicate_non_vmess($string_vless);
 $string_trojan =  str_replace("&amp;", "&", $trojan_data);
 $fixed_string_trojan = remove_duplicate_non_vmess($string_trojan);
 $fixed_string_shadowsocks = remove_duplicate_non_vmess($shadowsocks_data);
+fixed_string_reality = get_reality($fixed_string_vless);
 
 $mix_data =
     $fixed_string_vmess .
@@ -130,4 +141,6 @@ file_put_contents(
     "sub/shadowsocks_base64",
     base64_encode($fixed_string_shadowsocks)
 );
+file_put_contents("sub/reality", fixed_string_reality);
+file_put_contents("sub/reality_base64", base64_encode(fixed_string_reality));
 ?>
