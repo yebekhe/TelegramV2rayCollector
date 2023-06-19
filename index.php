@@ -117,7 +117,7 @@ $fixed_string_vless = remove_duplicate_non_vmess($string_vless);
 $string_trojan =  str_replace("&amp;", "&", $trojan_data);
 $fixed_string_trojan = remove_duplicate_non_vmess($string_trojan);
 $fixed_string_shadowsocks = remove_duplicate_non_vmess($shadowsocks_data);
-fixed_string_reality = get_reality($fixed_string_vless);
+$fixed_string_reality = get_reality($fixed_string_vless);
 
 $mix_data =
     $fixed_string_vmess .
