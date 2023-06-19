@@ -4,6 +4,7 @@ error_reporting(0);
 header("Content-type: application/json;");
 
 include "modules/getv2ray.php";
+include "modules/vmess.php";
 include "modules/config.php";
 
 $mix_data = "";
@@ -75,19 +76,58 @@ for ($p = count($Channel) - 1; $p >= 0; $p--) {
     }
 }
 
+function remove_duplicate_vmess($input){
+    $array = explode("\n", $input);
+    foreach ($array as $item) {
+        $parts = decode_vmess($item);
+        $part_ps = $parts['ps'];
+        unset($parts['ps']);
+        $part_serialize = serialize($parts);
+        $result[$part_serialize][] = $part_ps ?? '';
+    }
+    $finalResult = [];
+    foreach ($result as $serial => $ps) {
+        $partAfterHash = $ps[0] ?? '';
+        $part_serialize = unserialize($serial);
+        $part_serialize['ps'] = $partAfterHash;
+        $finalResult[] = encode_vmess($part_serialize);
+    }
+    foreach ($finalResult as $config) {
+        $output .= $output == "" ? $config : "\n" . $config;
+    }
+    return $output;
+}
+
+function remove_duplicate_non_vmess(input){
+    $array = explode("\n", $input);
+
+    foreach ($array as $item) {
+        $parts = explode("#", $item);
+        $result[$parts[0]][] = $parts[1] ?? '';
+    }
+    $finalResult = [];
+    foreach ($result as $domain => $parts) {
+        $partAfterHash = $parts[0] ?? '';
+        $finalResult[] = $domain . '#' . $partAfterHash;
+    }
+    foreach ($finalResult as $config) {
+        $output .= $output == "" ? $config : "\n" . $config;
+    }
+    return $output;
+}
 
 $fixed_string_vless = str_replace("&amp;", "&", $vless_data);
 $fixed_string_trojan = str_replace("&amp;", "&", $trojan_data);
-$mix_data = $vmess_data . "\n" . $fixed_string_vless . "\n" . $fixed_string_trojan . "\n" . $shadowsocks_data ;
+$mix_data = remove_duplicate_vmess($vmess_data) . "\n" . remove_duplicate_non_vmess($fixed_string_vless) . "\n" . remove_duplicate_non_vmess($fixed_string_trojan) . "\n" . remove_duplicate_non_vmess($shadowsocks_data) ;
 
 file_put_contents("sub/mix" , $mix_data);
-file_put_contents("sub/vmess", $vmess_data);
-file_put_contents("sub/vless", $fixed_string_vless);
-file_put_contents("sub/trojan", $fixed_string_trojan);
-file_put_contents("sub/shadowsocks", $shadowsocks_data);
+file_put_contents("sub/vmess", remove_duplicate_vmess($vmess_data));
+file_put_contents("sub/vless", remove_duplicate_non_vmess($fixed_string_vless));
+file_put_contents("sub/trojan", remove_duplicate_non_vmess($fixed_string_trojan));
+file_put_contents("sub/shadowsocks", remove_duplicate_non_vmess($shadowsocks_data));
 file_put_contents("sub/mix_base64" , base64_encode($mix_data));
-file_put_contents("sub/vmess_base64", base64_encode($vmess_data));
-file_put_contents("sub/vless_base64", base64_encode($fixed_string_vless));
-file_put_contents("sub/trojan_base64", base64_encode($fixed_string_trojan));
-file_put_contents("sub/shadowsocks_base64", base64_encode($shadowsocks_data));
+file_put_contents("sub/vmess_base64", base64_encode(remove_duplicate_vmess($vmess_data)));
+file_put_contents("sub/vless_base64", base64_encode(remove_duplicate_non_vmess($fixed_string_vless)));
+file_put_contents("sub/trojan_base64", base64_encode(remove_duplicate_non_vmess($fixed_string_trojan)));
+file_put_contents("sub/shadowsocks_base64", base64_encode(remove_duplicate_non_vmess($shadowsocks_data)));
 ?>
