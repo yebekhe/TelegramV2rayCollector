@@ -3,7 +3,6 @@
 header("Content-type: application/json;");
 
 include "modules/getv2ray.php";
-include "modules/vmess.php";
 include "modules/config.php";
 
 $mix_data = "";
