@@ -64,6 +64,7 @@ function get_reality($input){
             $output .= $output === "" ? $item : "\n$item";
         }
     }
+    return $output;
 }
 
 $mix_data = "";
