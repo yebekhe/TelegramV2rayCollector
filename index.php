@@ -85,5 +85,9 @@ file_put_contents("sub/vmess", $vmess_data);
 file_put_contents("sub/vless", $fixed_string_vless);
 file_put_contents("sub/trojan", $fixed_string_trojan);
 file_put_contents("sub/shadowsocks", $shadowsocks_data);
-
+file_put_contents("sub/mix_base64" , base64_encode($mix_data));
+file_put_contents("sub/vmess_base64", base64_encode($vmess_data));
+file_put_contents("sub/vless_base64", base64_encode($fixed_string_vless));
+file_put_contents("sub/trojan_base64", base64_encode($fixed_string_trojan));
+file_put_contents("sub/shadowsocks_base64", base64_encode($shadowsocks_data));
 ?>
