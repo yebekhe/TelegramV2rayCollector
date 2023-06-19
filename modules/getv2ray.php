@@ -60,8 +60,7 @@ function get_v2ray($channel, $type, $output_format = "text")
                     $location = $ip_info["country"];
                     $flag = getFlags($location);
                     if (
-                        isset($config["params"]["security"]) &&
-                        $config["params"]["security"] === "reality"
+                        isset($config["params"]["pbk"])
                     ) {
                         $config["hash"] =
                             "REALITY|" . $flag . "|" . $channel . "|" . $v;
