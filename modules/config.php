@@ -48,6 +48,9 @@ $Channel = [
     "INIT1984",
     "EXOGAMERS",
     "ServerNett",
+    "Pinkpotatocloud",
+    "CloudCityy",
+    "DarkVPNpro",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -97,6 +100,9 @@ $Types = [
     "INIT1984" => ["vless"],
     "EXOGAMERS" => ["vless"],
     "ServerNett" => ["vless"],
+    "Pinkpotatocloud" => ["vmess", "vless"],
+    "CloudCityy" => ["vless"],
+    "DarkVPNpro" => ["vless"],
 ];
 
 ?>
