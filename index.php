@@ -96,18 +96,21 @@ function remove_duplicate_non_vmess($input){
     return $output;
 }
 
-$fixed_string_vless = str_replace("&amp;", "&", $vless_data);
-$fixed_string_trojan = str_replace("&amp;", "&", $trojan_data);
-$mix_data = remove_duplicate_vmess($vmess_data) . "\n" . remove_duplicate_non_vmess($fixed_string_vless) . "\n" . remove_duplicate_non_vmess($fixed_string_trojan) . "\n" . remove_duplicate_non_vmess($shadowsocks_data) ;
+$fixed_string_vmess = remove_duplicate_vmess($vmess_data);
+$fixed_string_vless = remove_duplicate_non_vmess(str_replace("&amp;", "&", $vless_data));
+$fixed_string_trojan = remove_duplicate_non_vmess(str_replace("&amp;", "&", $trojan_data));
+$fixed_string_$shadowsocks = remove_duplicate_non_vmess($shadowsocks_data);
+
+$mix_data = $fixed_string_vmess . "\n" . $fixed_string_vless . "\n" . $fixed_string_trojan . "\n" . $fixed_string_$shadowsocks;
 
 file_put_contents("sub/mix" , $mix_data);
-file_put_contents("sub/vmess", remove_duplicate_vmess($vmess_data));
-file_put_contents("sub/vless", remove_duplicate_non_vmess($fixed_string_vless));
-file_put_contents("sub/trojan", remove_duplicate_non_vmess($fixed_string_trojan));
-file_put_contents("sub/shadowsocks", remove_duplicate_non_vmess($shadowsocks_data));
+file_put_contents("sub/vmess", $fixed_string_vmess);
+file_put_contents("sub/vless", $fixed_string_vless);
+file_put_contents("sub/trojan", $fixed_string_trojan);
+file_put_contents("sub/shadowsocks", $fixed_string_$shadowsocks);
 file_put_contents("sub/mix_base64" , base64_encode($mix_data));
-file_put_contents("sub/vmess_base64", base64_encode(remove_duplicate_vmess($vmess_data)));
-file_put_contents("sub/vless_base64", base64_encode(remove_duplicate_non_vmess($fixed_string_vless)));
-file_put_contents("sub/trojan_base64", base64_encode(remove_duplicate_non_vmess($fixed_string_trojan)));
-file_put_contents("sub/shadowsocks_base64", base64_encode(remove_duplicate_non_vmess($shadowsocks_data)));
+file_put_contents("sub/vmess_base64", base64_encode($fixed_string_vmess));
+file_put_contents("sub/vless_base64", base64_encode($fixed_string_vless));
+file_put_contents("sub/trojan_base64", base64_encode($fixed_string_trojan));
+file_put_contents("sub/shadowsocks_base64", base64_encode($fixed_string_$shadowsocks));
 ?>
