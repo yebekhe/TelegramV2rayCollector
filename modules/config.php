@@ -55,6 +55,7 @@ $Channel = [
     "xrayzxn",
     "shopingv2ray",
     "xrayproxy",
+    "Proxy_PJ",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -111,6 +112,7 @@ $Types = [
     "xrayzxn" => ["vmess", "vless", "trojan", "ss"],
     "shopingv2ray" => ["vless"],
     "xrayproxy" => ["vless"],
+    "Proxy_PJ" => ["vmess", "vless"],
 ];
 
 ?>
