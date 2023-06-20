@@ -55,4 +55,33 @@ function buildProxyUrl($obj, $type = "trojan")
 
     return $url;
 }
+
+function remove_duplicate_xray($input, $type)
+{
+    $array = explode("\n", $input);
+
+    foreach ($array as $item) {
+        $parts = parseProxyUrl($item, $type);
+        $part_hash = $parts["hash"];
+        unset($parts["hash"]);
+        ksort($parts["params"]);
+        $part_serialize = serialize($parts);
+        $result[$part_serialize][] = $part_hash ?? "";
+    }
+
+    $finalResult = [];
+    foreach ($result as $url => $parts) {
+        $partAfterHash = $parts[0] ?? "";
+        $part_serialize = unserialize($url);
+        $part_serialize["hash"] = $partAfterHash;
+        $finalResult[] = buildProxyUrl($part_serialize, $type);
+    }
+
+    $output = "";
+    foreach ($finalResult as $config) {
+        $output .= $output == "" ? $config : "\n" . $config;
+    }
+    return $output;
+}
+
 ?>
