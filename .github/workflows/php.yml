@@ -1,4 +1,4 @@
-name: "Collector"
+name: "CONFIG COLLECTOR"
 
 on:
   push:
@@ -25,5 +25,5 @@ jobs:
           git config --global user.name "yebekhe"
           git config credential.helper store
           git add -A
-          git commit -m "🚀 Subscription Update"
+          git commit -m "🚀 Servers Updated - $(date '+%Y-%m-%d %H:%M:%S')"
           git push
