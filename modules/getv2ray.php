@@ -188,4 +188,5 @@ function get_v2ray($channel, $type, $output_format = "text")
         return "Error : Telegram Channel is not defined!";
     }
 }
+
 ?>
