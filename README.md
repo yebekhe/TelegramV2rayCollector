@@ -44,8 +44,9 @@ https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubuserconten
 
 Now you can use the link above to import the subs into your client
 ```
-## node sources
+## NODE Sources
 This project currently utilizes Telegram channels as the source of v2ray nodes.
+
 Telegram Channels utilized in this Project:
 
 | Telegram Channels | Telegram Channels | Telegram Channels |
