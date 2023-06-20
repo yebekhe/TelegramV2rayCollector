@@ -33,18 +33,20 @@ function get_v2ray($channel, $type, $output_format = "text")
                             : (!empty($config["host"])
                                 ? $config["host"]
                                 : $config["add"]);
-
-                        $ip_info = ip_info($ip);
-                        if (isset($ip_info["country"])) {
-                            $location = $ip_info["country"];
-                            $flag = getFlags($location);
-                        } else {
-                            $flag = "🚩";
-                        }
-                        $config["ps"] = $flag . "|" . $channel . "|" . $p;
-                        if (count($config) !== 1) {
-                            $final_config = encode_vmess($config);
-                            $match_inverted[] = $final_config;
+                        $port = $config["port"];
+                        if (ping($ip, $port) !== "unavailable") {
+                            $ip_info = ip_info($ip);
+                            if (isset($ip_info["country"])) {
+                                $location = $ip_info["country"];
+                                $flag = getFlags($location);
+                            } else {
+                                $flag = "🚩";
+                            }
+                            $config["ps"] = $flag . "|" . $channel . "|" . $p;
+                            if (count($config) !== 1) {
+                                $final_config = encode_vmess($config);
+                                $match_inverted[] = $final_config;
+                            }
                         }
                     }
                 }
@@ -71,22 +73,33 @@ function get_v2ray($channel, $type, $output_format = "text")
                             : (!empty($config["params"]["host"])
                                 ? $config["params"]["host"]
                                 : $config["hostname"]);
-
-                        $ip_info = ip_info($ip);
-                        if (isset($ip_info["country"])) {
-                            $location = $ip_info["country"];
-                            $flag = getFlags($location);
-                        } else {
-                            $flag = "🚩";
+                        $port = $config["port"];
+                        if (ping($ip, $port) !== "unavailable") {
+                            $ip_info = ip_info($ip);
+                            if (isset($ip_info["country"])) {
+                                $location = $ip_info["country"];
+                                $flag = getFlags($location);
+                            } else {
+                                $flag = "🚩";
+                            }
+                            if (
+                                stripos($match_vless[1][$v], "reality") !==
+                                false
+                            ) {
+                                $config["hash"] =
+                                    "REALITY|" .
+                                    $flag .
+                                    "|" .
+                                    $channel .
+                                    "|" .
+                                    $v;
+                            } else {
+                                $config["hash"] =
+                                    $flag . "|" . $channel . "|" . $v;
+                            }
+                            $final_config = buildProxyUrl($config, "vless");
+                            $match_inverted[] = urldecode($final_config);
                         }
-                        if (stripos($match_vless[1][$v], "reality") !== false) {
-                            $config["hash"] =
-                                "REALITY|" . $flag . "|" . $channel . "|" . $v;
-                        } else {
-                            $config["hash"] = $flag . "|" . $channel . "|" . $v;
-                        }
-                        $final_config = buildProxyUrl($config, "vless");
-                        $match_inverted[] = urldecode($final_config);
                     }
                 }
             } elseif ($type === "trojan") {
@@ -111,17 +124,19 @@ function get_v2ray($channel, $type, $output_format = "text")
                             : (!empty($config["params"]["host"])
                                 ? $config["params"]["host"]
                                 : $config["hostname"]);
-
-                        $ip_info = ip_info($ip);
-                        if (isset($ip_info["country"])) {
-                            $location = $ip_info["country"];
-                            $flag = getFlags($location);
-                        } else {
-                            $flag = "🚩";
+                        $port = $config["port"];
+                        if (ping($ip, $port) !== "unavailable") {
+                            $ip_info = ip_info($ip);
+                            if (isset($ip_info["country"])) {
+                                $location = $ip_info["country"];
+                                $flag = getFlags($location);
+                            } else {
+                                $flag = "🚩";
+                            }
+                            $config["hash"] = $flag . "|" . $channel . "|" . $v;
+                            $final_config = buildProxyUrl($config);
+                            $match_inverted[] = urldecode($final_config);
                         }
-                        $config["hash"] = $flag . "|" . $channel . "|" . $v;
-                        $final_config = buildProxyUrl($config);
-                        $match_inverted[] = urldecode($final_config);
                     }
                 }
             } elseif ($type === "ss") {
@@ -140,17 +155,19 @@ function get_v2ray($channel, $type, $output_format = "text")
                     } else {
                         $config = ParseShadowsocks("ss://" . $match_ss[1][$v]);
                         $ip = $config["server_address"];
-
-                        $ip_info = ip_info($ip);
-                        if (isset($ip_info["country"])) {
-                            $location = $ip_info["country"];
-                            $flag = getFlags($location);
-                        } else {
-                            $flag = "🚩";
+                        $port = $config["server_port"];
+                        if (ping($ip, $port) !== "unavailable") {
+                            $ip_info = ip_info($ip);
+                            if (isset($ip_info["country"])) {
+                                $location = $ip_info["country"];
+                                $flag = getFlags($location);
+                            } else {
+                                $flag = "🚩";
+                            }
+                            $config["name"] = $flag . "|" . $channel . "|" . $v;
+                            $final_config = BuildShadowsocks($config);
+                            $match_inverted[] = urldecode($final_config);
                         }
-                        $config["name"] = $flag . "|" . $channel . "|" . $v;
-                        $final_config = BuildShadowsocks($config);
-                        $match_inverted[] = urldecode($final_config);
                     }
                 }
             }
