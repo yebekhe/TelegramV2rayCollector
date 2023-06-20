@@ -13,4 +13,30 @@ function encode_vmess($config)
     return $vmess_config;
 }
 
+function remove_duplicate_vmess($input)
+{
+    $array = explode("\n", $input);
+    foreach ($array as $item) {
+        $parts = decode_vmess($item);
+        $part_ps = $parts["ps"];
+        unset($parts["ps"]);
+        if (count($parts) >= 3) {
+            ksort($parts);
+            $part_serialize = serialize($parts);
+            $result[$part_serialize][] = $part_ps ?? "";
+        }
+    }
+    $finalResult = [];
+    foreach ($result as $serial => $ps) {
+        $partAfterHash = $ps[0] ?? "";
+        $part_serialize = unserialize($serial);
+        $part_serialize["ps"] = $partAfterHash;
+        $finalResult[] = encode_vmess($part_serialize);
+    }
+    $output = "";
+    foreach ($finalResult as $config) {
+        $output .= $output == "" ? $config : "\n" . $config;
+    }
+    return $output;
+}
 ?>
