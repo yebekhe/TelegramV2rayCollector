@@ -1,10 +1,15 @@
 <?php
 function ping($ip, $port)
 {
-    $it = microtime(1);
-    $check = fsockopen($ip, $port, $errno, $errstr, 30);
-    $ft = microtime(1);
+    $it = microtime(true);
+    $check = @fsockopen($ip, $port, $errno, $errstr, 1);
+    $ft = microtime(true);
     $militime = round(($ft - $it) * 1e3, 2);
-    return $check ? $militime : "unavailble";
+    if ($check) {
+        fclose($check);
+        return $militime;
+    } else {
+        return "unavailable";
+    }
 }
 ?>
