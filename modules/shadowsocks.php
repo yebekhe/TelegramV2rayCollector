@@ -49,4 +49,31 @@ function BuildShadowsocks($server)
     return $url;
 }
 
+function remove_duplicate_ss($input)
+{
+    $array = explode("\n", $input);
+
+    foreach ($array as $item) {
+        $parts = ParseShadowsocks($item);
+        $part_hash = $parts["name"];
+        unset($parts["name"]);
+        ksort($parts);
+        $part_serialize = serialize($parts);
+        $result[$part_serialize][] = $part_hash ?? "";
+    }
+
+    $finalResult = [];
+    foreach ($result as $url => $parts) {
+        $partAfterHash = $parts[0] ?? "";
+        $part_serialize = unserialize($url);
+        $part_serialize["name"] = $partAfterHash;
+        $finalResult[] = BuildShadowsocks($part_serialize);
+    }
+
+    $output = "";
+    foreach ($finalResult as $config) {
+        $output .= $output == "" ? $config : "\n" . $config;
+    }
+    return $output;
+}
 ?>
