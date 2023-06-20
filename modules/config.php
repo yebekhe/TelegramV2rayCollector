@@ -51,6 +51,10 @@ $Channel = [
     "Pinkpotatocloud",
     "CloudCityy",
     "DarkVPNpro",
+    "Qv2raychannel",
+    "xrayzxn",
+    "shopingv2ray",
+    "xrayproxy",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -66,7 +70,7 @@ $Types = [
     "vpn_xw" => ["vless"],
     "prrofile_purple" => ["vmess", "vless"],
     "ShadowSocks_s" => ["vless"],
-    "azadi_az_inja_migzare" => ["vless", "ss"],
+    "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
     "WomanLifeFreedomVPN" => ["vless"],
     "internet4iran" => ["vless"],
     "customv2ray" => ["vmess", "vless"],
@@ -103,6 +107,10 @@ $Types = [
     "Pinkpotatocloud" => ["vmess", "vless"],
     "CloudCityy" => ["vless"],
     "DarkVPNpro" => ["vless"],
+    "Qv2raychannel" => ["vless"],
+    "xrayzxn" => ["vmess", "vless", "trojan", "ss"],
+    "shopingv2ray" => ["vless"],
+    "xrayproxy" => ["vless"],
 ];
 
 ?>
