@@ -31,16 +31,16 @@ Just import the following subscription link into the corresponding client. Use a
 - [sub-web-modify](https://sub.v1.mk/)
 - [bianyuan](https://bianyuan.xyz/)  
 
-- **If you don't like the groups and rules that are already set, you can simply use bianyuan API like this::**  
+- **If you don't like the groups and rules that are already set, you can simply use bianyuan API like this (ONLY FOR BASE64 SUBSCRIPTION)::**  
 > don't use this API for your personal subs! Pls run the subconverter locally
 ```
 https://pub-api-1.bianyuan.xyz/sub?target=(OutputFormat)&url=(SubUrl)&insert=false
 
 For Example:
 (OutputFormat) = clash
-(SubUrl) = https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix
+(SubUrl) = https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64
 
-https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix&insert=false
+https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64&insert=false
 
 Now you can use the link above to import the subs into your client
 ```
