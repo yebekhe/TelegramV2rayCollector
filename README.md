@@ -38,9 +38,9 @@ https://pub-api-1.bianyuan.xyz/sub?target=(OutputFormat)&url=(SubUrl)&insert=fal
 
 For Example:
 (OutputFormat) = clash
-(SubUrl) = https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml
+(SubUrl) = https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix
 
-https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml&insert=false
+https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix&insert=false
 
 Now you can use the link above to import the subs into your client
 ```
