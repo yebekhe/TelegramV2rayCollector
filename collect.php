@@ -4,6 +4,7 @@ header("Content-type: application/json;");
 
 include "modules/getv2ray.php";
 include "modules/config.php";
+include "modules/clash.php"
 
 function get_reality($input)
 {
@@ -86,16 +87,20 @@ $mix_data =
 file_put_contents("sub/mix", $mix_data);
 file_put_contents("sub/vmess", $fixed_string_vmess);
 file_put_contents("sub/vless", $fixed_string_vless);
+file_put_contents("sub/reality", $fixed_string_reality);
 file_put_contents("sub/trojan", $fixed_string_trojan);
 file_put_contents("sub/shadowsocks", $fixed_string_shadowsocks);
+
 file_put_contents("sub/mix_base64", base64_encode($mix_data));
 file_put_contents("sub/vmess_base64", base64_encode($fixed_string_vmess));
 file_put_contents("sub/vless_base64", base64_encode($fixed_string_vless));
-file_put_contents("sub/trojan_base64", base64_encode($fixed_string_trojan));
-file_put_contents(
-    "sub/shadowsocks_base64",
-    base64_encode($fixed_string_shadowsocks)
-);
-file_put_contents("sub/reality", $fixed_string_reality);
 file_put_contents("sub/reality_base64", base64_encode($fixed_string_reality));
+file_put_contents("sub/trojan_base64", base64_encode($fixed_string_trojan));
+file_put_contents("sub/shadowsocks_base64", base64_encode($fixed_string_shadowsocks));
+
+file_put_contents("clash/mix.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64"));
+file_put_contents("clash/vmess.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64"));
+file_put_contents("clash/trojan.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64"));
+file_put_contents("clash/shadowsocks.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks_base64"));
+
 ?>
