@@ -65,10 +65,10 @@ Telegram Channels utilized in this Project:
 | [kiava](https://t.me/kiava) | [Helix_Servers](https://t.me/Helix_Servers) | [PAINB0Y](https://t.me/PAINB0Y) | [vmess_vless_v2rayng](https://t.me/vmess_vless_v2rayng) |
 | [VpnProSec](https://t.me/VpnProSec) | [VlessConfig](https://t.me/VlessConfig) | [NIM_VPN_ir](https://t.me/NIM_VPN_ir) | [FreeIranT](https://t.me/FreeIranT) |
 | [hashmakvpn](https://t.me/hashmakvpn) | [X_Her0](https://t.me/X_Her0) | [Napsternetvirani](https://t.me/Napsternetvirani) | [Cov2ray](https://t.me/Cov2ray) |
-| [iran_ray](https://t.me/iran_ray) | [INIT1984](https://t.me/INIT1984) | [EXOGAMERS](https://t.me/EXOGAMERS) | - |
-| [ServerNett](https://t.me/ServerNett) | [Pinkpotatocloud](https://t.me/Pinkpotatocloud) | [CloudCityy](https://t.me/CloudCityy) | - |
-| [DarkVPNpro](https://t.me/DarkVPNpro) | [Qv2raychannel](https://t.me/Qv2raychannel) | [xrayzxn](https://t.me/xrayzxn) | - |
-| [shopingv2ray](https://t.me/shopingv2ray) | [xrayproxy](https://t.me/xrayproxy) | [Proxy_PJ](https://t.me/Proxy_PJ) | - |
+| [iran_ray](https://t.me/iran_ray) | [INIT1984](https://t.me/INIT1984) | [EXOGAMERS](https://t.me/EXOGAMERS) | [V2RayTz](https://t.me/V2RayTz) |
+| [ServerNett](https://t.me/ServerNett) | [Pinkpotatocloud](https://t.me/Pinkpotatocloud) | [CloudCityy](https://t.me/CloudCityy) | [VmessProtocol](https://t.me/VmessProtocol) |
+| [DarkVPNpro](https://t.me/DarkVPNpro) | [Qv2raychannel](https://t.me/Qv2raychannel) | [xrayzxn](https://t.me/xrayzxn) | [MehradLearn](https://t.me/MehradLearn) |
+| [shopingv2ray](https://t.me/shopingv2ray) | [xrayproxy](https://t.me/xrayproxy) | [Proxy_PJ](https://t.me/Proxy_PJ) | [SafeNet_Server](https://t.me/SafeNet_Server) |
 
 
 ## Contribution
