@@ -4,7 +4,7 @@ header("Content-type: application/json;");
 
 include "modules/getv2ray.php";
 include "modules/config.php";
-include "modules/clash.php"
+include "modules/clash.php";
 
 function get_reality($input)
 {
