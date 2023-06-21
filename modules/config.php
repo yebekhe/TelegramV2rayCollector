@@ -70,6 +70,10 @@ $Channel = [
     "vmess_vless_v2rayng",
     "FreeIranT",
     "Cov2ray",
+    "V2RayTz",
+    "VmessProtocol",
+    "MehradLearn",
+    "SafeNet_Server",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -141,6 +145,10 @@ $Types = [
     "vmess_vless_v2rayng" => ["vmess", "vless", "trojan", "ss"],
     "FreeIranT" => ["vless"],
     "Cov2ray" => ["vmess"],
+    "V2RayTz" => ["vless", "trojan"],
+    "VmessProtocol" => ["vless", "trojan", "ss"],
+    "MehradLearn" => ["vless"],
+    "SafeNet_Server" => ["vmess", "vless"]
 ];
 
 ?>
