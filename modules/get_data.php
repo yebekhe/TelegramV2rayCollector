@@ -75,6 +75,7 @@ function get_config($channel, $type)
                     if (count($the_config) !== 1) {
                         $final_config = encode_vmess($the_config);
                         $final_data[$key]["channel"] = $channel;
+                        $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = $final_config;
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
@@ -105,6 +106,7 @@ function get_config($channel, $type)
                     }
                     $final_config = buildProxyUrl($the_config, "vless");
                     $final_data[$key]["channel"] = $channel;
+                    $final_data[$key]["type"] = $type;
                     $final_data[$key]["config"] = urldecode($final_config);
                     $final_data[$key]["time"] = convert_to_iran_time(
                         $matches[1][$key]
@@ -129,6 +131,7 @@ function get_config($channel, $type)
                     $the_config["hash"] = $flag . "|" . $channel . "|" . ping($ip, $port);
                     $final_config = buildProxyUrl($the_config);
                     $final_data[$key]["channel"] = $channel;
+                    $final_data[$key]["type"] = $type;
                     $final_data[$key]["config"] = urldecode($final_config);
                     $final_data[$key]["time"] = convert_to_iran_time(
                         $matches[1][$key]
@@ -149,6 +152,7 @@ function get_config($channel, $type)
                     $the_config["name"] = $flag . "|" . $channel . "|" . ping($ip, $port);
                     $final_config = BuildShadowsocks($the_config);
                     $final_data[$key]["channel"] = $channel;
+                    $final_data[$key]["type"] = $type;
                     $final_data[$key]["config"] = urldecode($final_config);
                     $final_data[$key]["time"] = convert_to_iran_time(
                         $matches[1][$key]
