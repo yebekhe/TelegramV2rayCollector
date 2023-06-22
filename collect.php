@@ -17,6 +17,15 @@ function get_reality($input)
     return $output;
 }
 
+function compare_time($a, $b) {
+    $a_time = strtotime($a->time);
+    $b_time =strtotime($b->time);
+    if ($a_time == $b_time) {
+        return 0;
+    }
+    return ($a_time > $b_time) ? -1 : 1;
+}
+
 $mix_data = [];
 $vmess_data = [];
 $trojan_data = [];
@@ -116,7 +125,11 @@ file_put_contents("sub/reality_base64", base64_encode($fixed_string_reality));
 file_put_contents("sub/trojan_base64", base64_encode($fixed_string_trojan));
 file_put_contents("sub/shadowsocks_base64", base64_encode($fixed_string_shadowsocks));
 
-file_put_contents("json/configs.json", json_encode($mix_data, JSON_PRETTY_PRINT));
+$mix_data_json = json_encode($mix_data, JSON_PRETTY_PRINT);
+$mix_data_decode = json_decode($mix_data_json);
+usort($mix_data_decode, 'compare_time');
+$mix_data_json = json_encode($mix_data_decode, JSON_PRETTY_PRINT);
+file_put_contents("json/configs.json", $mix_data_json);
 
 file_put_contents("clash/mix.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64"));
 file_put_contents("clash/vmess.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64"));
