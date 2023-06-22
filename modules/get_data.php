@@ -48,115 +48,132 @@ function get_config($channel, $type)
 
     preg_match_all($patern_config, $get, $configs);
     $final_data = [];
+    $key_limit = count($configs[1]) - 3;
     foreach ($configs[1] as $key => $config) {
-        if (stripos($config, "...") !== false) {
-            null;
-        } else {
-            if (strpos($config, "<br/>") !== false) {
-                $config = substr($config, 0, $config, "<br/>");
-            }
-            if ($type === "vmess") {
-                $the_config = decode_vmess($type . "://" . $config);
-                $ip = !empty($the_config["sni"])
-                    ? $the_config["sni"]
-                    : (!empty($the_config["host"])
-                        ? $the_config["host"]
-                        : $the_config["add"]);
-                $port = $the_config["port"];
-                if (ping($ip, $port) !== "unavailable") {
-                    $ip_info = ip_info($ip);
-                    if (isset($ip_info["country"])) {
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
-                    } else {
-                        $flag = "🚩";
+        if ($key >= $key_limit) {
+            if (stripos($config, "...") !== false) {
+                null;
+            } else {
+                if (strpos($config, "<br/>") !== false) {
+                    $config = substr($config, 0, $config, "<br/>");
+                }
+                if ($type === "vmess") {
+                    $the_config = decode_vmess($type . "://" . $config);
+                    $ip = !empty($the_config["sni"])
+                        ? $the_config["sni"]
+                        : (!empty($the_config["host"])
+                            ? $the_config["host"]
+                            : $the_config["add"]);
+                    $port = $the_config["port"];
+                    if (ping($ip, $port) !== "unavailable") {
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
+                        $the_config["ps"] =
+                            $flag . "|" . $channel . "|" . ping($ip, $port);
+                        if (count($the_config) !== 1) {
+                            $final_config = encode_vmess($the_config);
+                            $final_data[$key]["channel"] = $channel;
+                            $final_data[$key]["type"] = $type;
+                            $final_data[$key]["config"] = $final_config;
+                            $final_data[$key]["time"] = convert_to_iran_time(
+                                $matches[1][$key]
+                            );
+                        }
                     }
-                    $the_config["ps"] = $flag . "|" . $channel . "|" . ping($ip, $port);
-                    if (count($the_config) !== 1) {
-                        $final_config = encode_vmess($the_config);
+                } elseif ($type === "vless") {
+                    $the_config = parseProxyUrl(
+                        $type . "://" . $config,
+                        "vless"
+                    );
+                    $ip = !empty($the_config["params"]["sni"])
+                        ? $the_config["params"]["sni"]
+                        : (!empty($the_config["params"]["host"])
+                            ? $the_config["params"]["host"]
+                            : $the_config["hostname"]);
+                    $port = $the_config["port"];
+                    if (ping($ip, $port) !== "unavailable") {
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
+                        if (stripos($config, "reality") !== false) {
+                            $the_config["hash"] =
+                                "REALITY|" .
+                                $flag .
+                                "|" .
+                                $channel .
+                                "|" .
+                                ping($ip, $port);
+                            $final_data[$key]["type"] = "reality";
+                        } else {
+                            $the_config["hash"] =
+                                $flag . "|" . $channel . "|" . ping($ip, $port);
+                            $final_data[$key]["type"] = $type;
+                        }
+                        $final_config = buildProxyUrl($the_config, "vless");
                         $final_data[$key]["channel"] = $channel;
                         $final_data[$key]["type"] = $type;
-                        $final_data[$key]["config"] = $final_config;
+                        $final_data[$key]["config"] = urldecode($final_config);
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
                         );
                     }
-                }
-            } elseif ($type === "vless") {
-                $the_config = parseProxyUrl($type . "://" . $config, "vless");
-                $ip = !empty($the_config["params"]["sni"])
-                    ? $the_config["params"]["sni"]
-                    : (!empty($the_config["params"]["host"])
-                        ? $the_config["params"]["host"]
-                        : $the_config["hostname"]);
-                $port = $the_config["port"];
-                if (ping($ip, $port) !== "unavailable") {
-                    $ip_info = ip_info($ip);
-                    if (isset($ip_info["country"])) {
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
-                    } else {
-                        $flag = "🚩";
-                    }
-                    if (stripos($config, "reality") !== false) {
+                } elseif ($type === "trojan") {
+                    $the_config = parseProxyUrl($type . "://" . $config);
+                    $ip = !empty($the_config["params"]["sni"])
+                        ? $the_config["params"]["sni"]
+                        : (!empty($the_config["params"]["host"])
+                            ? $the_config["params"]["host"]
+                            : $the_config["hostname"]);
+                    $port = $the_config["port"];
+                    if (ping($ip, $port) !== "unavailable") {
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
                         $the_config["hash"] =
-                            "REALITY|" . $flag . "|" . $channel . "|" . ping($ip, $port);
-                    } else {
-                        $the_config["hash"] = $flag . "|" . $channel . "|" . ping($ip, $port);
+                            $flag . "|" . $channel . "|" . ping($ip, $port);
+                        $final_config = buildProxyUrl($the_config);
+                        $final_data[$key]["channel"] = $channel;
+                        $final_data[$key]["type"] = $type;
+                        $final_data[$key]["config"] = urldecode($final_config);
+                        $final_data[$key]["time"] = convert_to_iran_time(
+                            $matches[1][$key]
+                        );
                     }
-                    $final_config = buildProxyUrl($the_config, "vless");
-                    $final_data[$key]["channel"] = $channel;
-                    $final_data[$key]["type"] = $type;
-                    $final_data[$key]["config"] = urldecode($final_config);
-                    $final_data[$key]["time"] = convert_to_iran_time(
-                        $matches[1][$key]
-                    );
-                }
-            } elseif ($type === "trojan") {
-                $the_config = parseProxyUrl($type . "://" . $config);
-                $ip = !empty($the_config["params"]["sni"])
-                    ? $the_config["params"]["sni"]
-                    : (!empty($the_config["params"]["host"])
-                        ? $the_config["params"]["host"]
-                        : $the_config["hostname"]);
-                $port = $the_config["port"];
-                if (ping($ip, $port) !== "unavailable") {
-                    $ip_info = ip_info($ip);
-                    if (isset($ip_info["country"])) {
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
-                    } else {
-                        $flag = "🚩";
+                } elseif ($type === "ss") {
+                    $the_config = ParseShadowsocks($type . "://" . $config);
+                    $ip = $the_config["server_address"];
+                    $port = $the_config["server_port"];
+                    if (ping($ip, $port) !== "unavailable") {
+                        $ip_info = ip_info($ip);
+                        if (isset($ip_info["country"])) {
+                            $location = $ip_info["country"];
+                            $flag = getFlags($location);
+                        } else {
+                            $flag = "🚩";
+                        }
+                        $the_config["name"] =
+                            $flag . "|" . $channel . "|" . ping($ip, $port);
+                        $final_config = BuildShadowsocks($the_config);
+                        $final_data[$key]["channel"] = $channel;
+                        $final_data[$key]["type"] = $type;
+                        $final_data[$key]["config"] = urldecode($final_config);
+                        $final_data[$key]["time"] = convert_to_iran_time(
+                            $matches[1][$key]
+                        );
                     }
-                    $the_config["hash"] = $flag . "|" . $channel . "|" . ping($ip, $port);
-                    $final_config = buildProxyUrl($the_config);
-                    $final_data[$key]["channel"] = $channel;
-                    $final_data[$key]["type"] = $type;
-                    $final_data[$key]["config"] = urldecode($final_config);
-                    $final_data[$key]["time"] = convert_to_iran_time(
-                        $matches[1][$key]
-                    );
-                }
-            } elseif ($type === "ss") {
-                $the_config = ParseShadowsocks($type . "://" . $config);
-                $ip = $the_config["server_address"];
-                $port = $the_config["server_port"];
-                if (ping($ip, $port) !== "unavailable") {
-                    $ip_info = ip_info($ip);
-                    if (isset($ip_info["country"])) {
-                        $location = $ip_info["country"];
-                        $flag = getFlags($location);
-                    } else {
-                        $flag = "🚩";
-                    }
-                    $the_config["name"] = $flag . "|" . $channel . "|" . ping($ip, $port);
-                    $final_config = BuildShadowsocks($the_config);
-                    $final_data[$key]["channel"] = $channel;
-                    $final_data[$key]["type"] = $type;
-                    $final_data[$key]["config"] = urldecode($final_config);
-                    $final_data[$key]["time"] = convert_to_iran_time(
-                        $matches[1][$key]
-                    );
                 }
             }
         }
