@@ -74,6 +74,15 @@ $Channel = [
     "VmessProtocol",
     "MehradLearn",
     "SafeNet_Server",
+    "ovpn2",
+    "lrnbymaa",
+    "vpn_tehran",
+    "OutlineVpnOfficial",
+    "v2ray_vpn_ir",
+    "v2_team",
+    "proxy_kafee",
+    "ConfigsHUB",
+    "AlienVPN402",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -148,7 +157,16 @@ $Types = [
     "V2RayTz" => ["vless", "trojan"],
     "VmessProtocol" => ["vless", "trojan", "ss"],
     "MehradLearn" => ["vless"],
-    "SafeNet_Server" => ["vmess", "vless"]
+    "SafeNet_Server" => ["vmess", "vless"],
+    "ovpn2" => ["vmess", "vless", "trojan"],
+    "lrnbymaa" => ["vless"],
+    "vpn_tehran" => ["vmess", "vless", "trojan"],
+    "OutlineVpnOfficial" => ["ss"],
+    "v2ray_vpn_ir" => ["vmess", "vless", "trojan"],
+    "v2_team" => ["vmess", "vless"],
+    "proxy_kafee" => ["vless"],
+    "ConfigsHUB" => ["vmess", "vless", "trojan"],
+    "AlienVPN402" => ["ss"]
 ];
 
 ?>
