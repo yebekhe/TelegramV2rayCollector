@@ -69,6 +69,9 @@ Telegram Channels utilized in this Project:
 | [ServerNett](https://t.me/ServerNett) | [Pinkpotatocloud](https://t.me/Pinkpotatocloud) | [CloudCityy](https://t.me/CloudCityy) | [VmessProtocol](https://t.me/VmessProtocol) |
 | [DarkVPNpro](https://t.me/DarkVPNpro) | [Qv2raychannel](https://t.me/Qv2raychannel) | [xrayzxn](https://t.me/xrayzxn) | [MehradLearn](https://t.me/MehradLearn) |
 | [shopingv2ray](https://t.me/shopingv2ray) | [xrayproxy](https://t.me/xrayproxy) | [Proxy_PJ](https://t.me/Proxy_PJ) | [SafeNet_Server](https://t.me/SafeNet_Server) |
+| [ovpn2](https://t.me/ovpn2) | [OutlineVpnOfficial](https://t.me/OutlineVpnOfficial) | [proxy_kafee](https://t.me/proxy_kafee) | - |
+| [lrnbymaa](https://t.me/lrnbymaa) | [v2ray_vpn_ir](https://t.me/v2ray_vpn_ir) | [ConfigsHUB](https://t.me/ConfigsHUB) | - |
+| [vpn_tehran](https://t.me/vpn_tehran) | [v2_team](https://t.me/v2_team) | [AlienVPN402](https://t.me/AlienVPN402) | - |
 
 
 ## Contribution
