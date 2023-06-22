@@ -112,11 +112,10 @@ function get_config($channel, $type)
                                 $channel .
                                 "|" .
                                 ping($ip, $port);
-                            $final_data[$key]["type"] = "reality";
+                            $type = "reality";
                         } else {
                             $the_config["hash"] =
                                 $flag . "|" . $channel . "|" . ping($ip, $port);
-                            $final_data[$key]["type"] = $type;
                         }
                         $final_config = buildProxyUrl($the_config, "vless");
                         $final_data[$key]["channel"] = $channel;
