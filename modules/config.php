@@ -83,6 +83,10 @@ $Channel = [
     "proxy_kafee",
     "ConfigsHUB",
     "AlienVPN402",
+    "TheHotVPN",
+    "freeconfigv2",
+    "V2rayngninja",
+    "iSegaro",
 ];
 $Types = [
     "V2rayNGn" => ["vmess", "vless"],
@@ -166,7 +170,11 @@ $Types = [
     "v2_team" => ["vmess", "vless"],
     "proxy_kafee" => ["vless"],
     "ConfigsHUB" => ["vmess", "vless", "trojan"],
-    "AlienVPN402" => ["ss"]
+    "AlienVPN402" => ["ss"],
+    "TheHotVPN" => ["vless"],
+    "freeconfigv2" => ["vmess", "vless"],
+    "V2rayngninja" => ["vless", "ss"],
+    "iSegaro" => ["vless"],
 ];
 
 ?>
