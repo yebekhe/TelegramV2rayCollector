@@ -116,7 +116,7 @@ file_put_contents("sub/reality_base64", base64_encode($fixed_string_reality));
 file_put_contents("sub/trojan_base64", base64_encode($fixed_string_trojan));
 file_put_contents("sub/shadowsocks_base64", base64_encode($fixed_string_shadowsocks));
 
-file_put_contents("configs.json", json_encode($mix_data, JSON_PRETTY_PRINT));
+file_put_contents("json/configs.json", json_encode($mix_data, JSON_PRETTY_PRINT));
 
 file_put_contents("clash/mix.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64"));
 file_put_contents("clash/vmess.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64"));
