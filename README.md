@@ -1,5 +1,5 @@
 # TelegramV2rayCollector
-[![Collector](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml/badge.svg)](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml)
+[![Collector](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml/badge.svg)](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml) [![Channels](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/channel_assets.yml/badge.svg)](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/channel_assets.yml)
 
 This is a PHP script that collects V2Ray subscription links from various Telegram channels and saves them to different files based on their protocol type (VMess, VLess, Trojan, and Shadowsocks). The collected links are stored in text format.
 
