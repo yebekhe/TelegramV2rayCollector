@@ -33,32 +33,31 @@ $vless_data = [];
 $shadowsocks_data = [];
 
 
-for ($p = count($Channel) - 1; $p >= 0; $p--) {
-    $CH = $Channel[$p];
+foreach ($Types as $key => $type_array) {
     for (
-        $type_count = count($Types[$CH]) - 1;
+        $type_count = count($type_array) - 1;
         $type_count >= 0;
         $type_count--
     ) {
-        if ($Types[$CH][$type_count] === "vmess") {
+        if ($type_array[$type_count] === "vmess") {
             $vmess_data = array_merge(
                 $vmess_data,
-                get_config($CH, $Types[$CH][$type_count])
+                get_config($key, $type_array[$type_count])
             );
-        } elseif ($Types[$CH][$type_count] === "vless") {
+        } elseif ($type_array[$type_count] === "vless") {
             $vless_data = array_merge(
                 $vless_data,
-                get_config($CH, $Types[$CH][$type_count])
+                get_config($key, $type_array[$type_count])
             );
-        } elseif ($Types[$CH][$type_count] === "trojan") {
+        } elseif ($type_array[$type_count] === "trojan") {
             $trojan_data = array_merge(
                 $trojan_data,
-                get_config($CH, $Types[$CH][$type_count])
+                get_config($key, $type_array[$type_count])
             );
-        } elseif ($Types[$CH][$type_count] === "ss") {
+        } elseif ($type_array[$type_count] === "ss") {
             $shadowsocks_data = array_merge(
                 $shadowsocks_data,
-                get_config($CH, $Types[$CH][$type_count])
+                get_config($key, $type_array[$type_count])
             );
         }
     }
