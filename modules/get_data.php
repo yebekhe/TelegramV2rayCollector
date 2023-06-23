@@ -16,6 +16,8 @@ function convert_to_iran_time($utc_timestamp)
 function get_config($channel, $type)
 {
     $get = file_get_contents("https://t.me/s/" . $channel);
+    $channels_assets = json_decode(file_get_contents("modules/channels/channels_assets.json"), true);
+    
     if ($type === "vmess") {
         preg_match_all(
             '/vmess:\/\/[^"]+(?:[^<]+<[^<]+)*<time datetime="([^"]+)"/',
@@ -77,7 +79,9 @@ function get_config($channel, $type)
                             $flag . "|@" . $channel . "|" . ping($ip, $port);
                         if (count($the_config) !== 1) {
                             $final_config = encode_vmess($the_config);
-                            $final_data[$key]["channel"] = $channel;
+                            $final_data[$key]["channel"]['username'] = $channel;
+                            $final_data[$key]["channel"]['title'] = $channels_assets[$channel]['title'];
+                            $final_data[$key]["channel"]['logo'] = $channels_assets[$channel]['logo'];
                             $final_data[$key]["type"] = $type;
                             $final_data[$key]["config"] = $final_config;
                             $final_data[$key]["time"] = convert_to_iran_time(
@@ -118,7 +122,9 @@ function get_config($channel, $type)
                                 $flag . "|@" . $channel . "|" . ping($ip, $port);
                         }
                         $final_config = buildProxyUrl($the_config, "vless");
-                        $final_data[$key]["channel"] = $channel;
+                        $final_data[$key]["channel"]['username'] = $channel;
+                        $final_data[$key]["channel"]['title'] = $channels_assets[$channel]['title'];
+                        $final_data[$key]["channel"]['logo'] = $channels_assets[$channel]['logo'];
                         $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = urldecode($final_config);
                         $final_data[$key]["time"] = convert_to_iran_time(
@@ -144,7 +150,9 @@ function get_config($channel, $type)
                         $the_config["hash"] =
                             $flag . "|@" . $channel . "|" . ping($ip, $port);
                         $final_config = buildProxyUrl($the_config);
-                        $final_data[$key]["channel"] = $channel;
+                        $final_data[$key]["channel"]['username'] = $channel;
+                        $final_data[$key]["channel"]['title'] = $channels_assets[$channel]['title'];
+                        $final_data[$key]["channel"]['logo'] = $channels_assets[$channel]['logo'];
                         $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = urldecode($final_config);
                         $final_data[$key]["time"] = convert_to_iran_time(
@@ -166,7 +174,9 @@ function get_config($channel, $type)
                         $the_config["name"] =
                             $flag . "|@" . $channel . "|" . ping($ip, $port);
                         $final_config = BuildShadowsocks($the_config);
-                        $final_data[$key]["channel"] = $channel;
+                        $final_data[$key]["channel"]['username'] = $channel;
+                        $final_data[$key]["channel"]['title'] = $channels_assets[$channel]['title'];
+                        $final_data[$key]["channel"]['logo'] = $channels_assets[$channel]['logo'];
                         $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = urldecode($final_config);
                         $final_data[$key]["time"] = convert_to_iran_time(
