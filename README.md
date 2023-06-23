@@ -27,7 +27,8 @@ Just import the following subscription link into the corresponding client. Use a
 
 ## Manual Subs Conversion
 - If your client does not support the formats that provided here use below services to convert them to your client format (like surfboard)
-> Services for online sub conversion: 
+> Services for online sub conversion:
+- [v2rayse](https://v2rayse.com/en/node-convert)
 - [sub-web-modify](https://sub.v1.mk/)
 - [bianyuan](https://bianyuan.xyz/)  
 
