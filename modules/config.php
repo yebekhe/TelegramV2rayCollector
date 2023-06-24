@@ -89,6 +89,7 @@ $Types = [
     "V2rayngninja" => ["vless", "ss"],
     "iSegaro" => ["vless"],
     "bright_vpn" => ["vless", "ss"],
+    "talentvpn" => ["vless"],
 ];
 
 ?>
