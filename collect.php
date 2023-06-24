@@ -134,3 +134,10 @@ file_put_contents("clash/mix.yml", convert_to_clash("https://raw.githubuserconte
 file_put_contents("clash/vmess.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64"));
 file_put_contents("clash/trojan.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64"));
 file_put_contents("clash/shadowsocks.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks_base64"));
+
+file_put_contents("meta/mix.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64", "meta"));
+file_put_contents("meta/vmess.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64", "meta"));
+file_put_contents("meta/vless.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64", "meta"));
+file_put_contents("meta/reality.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality_base64", "meta"));
+file_put_contents("meta/trojan.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64", "meta"));
+file_put_contents("meta/shadowsocks.yml", convert_to_clash("https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks_base64", "meta"));
