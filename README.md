@@ -53,7 +53,7 @@ Telegram Channels utilized in this Project:
 | Telegram Channels | Telegram Channels | Telegram Channels | Telegram Channels |
 | -------- | -------- | -------- | -------- |
 | [V2rayNGn](https://t.me/V2rayNGn) | [free4allVPN](https://t.me/free4allVPN) | [PrivateVPNs](https://t.me/PrivateVPNs) | [V2rayng_Fast](https://t.me/V2rayng_Fast) |
-| [DirectVPN](https://t.me/DirectVPN) | [ProxyFn](https://t.me/ProxyFn) | [v2ray_outlineir](https://t.me/v2ray_outlineir) | [v2ray_swhil](https://t.me/) |
+| [DirectVPN](https://t.me/DirectVPN) | [ProxyFn](https://t.me/ProxyFn) | [v2ray_outlineir](https://t.me/v2ray_outlineir) | [v2ray_swhil](https://t.me/v2ray_swhil) |
 | [NetAccount](https://t.me/NetAccount) | [oneclickvpnkeys](https://t.me/oneclickvpnkeys) | [daorzadannet](https://t.me/daorzadannet) | [LoRd_uL4mo](https://t.me/LoRd_uL4mo) |
 | [Outline_Vpn](https://t.me/Outline_Vpn) | [vpn_xw](https://t.me/vpn_xw) | [prrofile_purple](https://t.me/prrofile_purple) | [proxyymeliii](https://t.me/proxyymeliii) |
 | [ShadowSocks_s](https://t.me/ShadowSocks_s) | [azadi_az_inja_migzare](https://t.me/azadi_az_inja_migzare) | [WomanLifeFreedomVPN](https://t.me/WomanLifeFreedomVPN) | [MsV2ray](https://t.me/MsV2ray) |
@@ -73,7 +73,7 @@ Telegram Channels utilized in this Project:
 | [ovpn2](https://t.me/ovpn2) | [OutlineVpnOfficial](https://t.me/OutlineVpnOfficial) | [proxy_kafee](https://t.me/proxy_kafee) | [TheHotVPN](https://t.me/TheHotVPN) |
 | [lrnbymaa](https://t.me/lrnbymaa) | [v2ray_vpn_ir](https://t.me/v2ray_vpn_ir) | [ConfigsHUB](https://t.me/ConfigsHUB) | [freeconfigv2](https://t.me/freeconfigv2) |
 | [vpn_tehran](https://t.me/vpn_tehran) | [v2_team](https://t.me/v2_team) | [AlienVPN402](https://t.me/AlienVPN402) | [V2rayngninja](https://t.me/V2rayngninja) |
-| [iSegaro](https://t.me/iSegaro) | - | - | - |
+| [iSegaro](https://t.me/iSegaro) | [bright_vpn](https://t.me/bright_vpn) | [talentvpn](https://t.me/talentvpn) | - |
 
 
 ## Contribution
