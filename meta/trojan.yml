@@ -1,0 +1,321 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+  - name: "|@PrivateVPNs|167.69"
+    server: 16.16.209.10
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@PrivateVPNs|93.98"
+    server: 18.196.56.203
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@PrivateVPNs|93.23"
+    server: 3.71.18.126
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@DirectVPN|89.04"
+    server: 35.180.54.50
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@DirectVPN|80.86"
+    server: 18.130.103.255
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@DirectVPN|71.2"
+    server: 54.194.66.200
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@oneclickvpnkeys|86.79"
+    server: hk1997.pro
+    port: 4000
+    type: trojan
+    password: 887c0298-2bab-4d4c-8cb0-b85b3ba9c4bb
+    skip-cert-verify: true
+    sni: hk1997.pro
+    udp: true
+  - name: "|@oneclickvpnkeys|83.65"
+    server: 18.133.224.48
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@oneclickvpnkeys|83.78"
+    server: 54.186.176.148
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@xrayzxn|14.27"
+    server: golibangoli.ddns.net
+    port: 443
+    type: trojan
+    password: a55f52b9-bd3d-466a-ba72-a085d79921e2
+    skip-cert-verify: true
+    sni: uosobshokabbskja.chikaveloiee.gq
+    network: ws
+    ws-opts:
+      path: /RzBm5FTn4dG1GF8WjrVTSeG3l1Hh
+      headers:
+        Host: uosobshokabbskja.chikaveloiee.gq
+    udp: true
+  - name: "|@xrayzxn|514.09"
+    server: Oos.karkas1.ir
+    port: 443
+    type: trojan
+    password: qe2N3UutxI
+    skip-cert-verify: true
+    sni: www.telewebion.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: "|@proxyymeliii|90.85"
+    server: 149.50.75.110
+    port: 4003
+    type: trojan
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    sni: nl1.chuqiangtou.net
+    udp: true
+  - name: "|@v2ray1_ng|90.09"
+    server: gb1.yihaobao.xyz
+    port: 10026
+    type: trojan
+    password: 77bc41c1-0db7-4beb-80a9-27d57d894754
+    skip-cert-verify: true
+    sni: tls.yihaobao.xyz
+    udp: true
+  - name: "|@v2ray1_ng|101.94"
+    server: us2.yihaobao.xyz
+    port: 10026
+    type: trojan
+    password: 77bc41c1-0db7-4beb-80a9-27d57d894754
+    skip-cert-verify: true
+    sni: tls.yihaobao.xyz
+    udp: true
+  - name: "|@v2ray1_ng|135.59"
+    server: 194.146.26.95
+    port: 443
+    type: trojan
+    password: c29790c0-14c7-11ee-8d29-1239d0255272
+    skip-cert-verify: true
+    sni: speedtest.net
+    udp: true
+  - name: "|@V2RayTz|113.25"
+    server: 3.122.235.89
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@V2RayTz|79.8"
+    server: 52.25.142.235
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@V2RayTz|5.7"
+    server: 18.234.142.126
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@ovpn2|130.43"
+    server: us1.chuqiangtou.net
+    port: 4003
+    type: trojan
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    sni: ""
+    udp: true
+  - name: "|@ovpn2|unavailable"
+    server: us3.chuqiangtou.net
+    port: 4003
+    type: trojan
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    sni: ""
+    udp: true
+  - name: "|@vpn_tehran|268.6"
+    server: th1.yihaobao.xyz
+    port: 10022
+    type: trojan
+    password: d51c9c17-c89b-436f-994d-57dc36580f24
+    skip-cert-verify: true
+    sni: tls.yihaobao.xyz
+    udp: true
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - "|@PrivateVPNs|167.69"
+      - "|@PrivateVPNs|93.98"
+      - "|@PrivateVPNs|93.23"
+      - "|@DirectVPN|89.04"
+      - "|@DirectVPN|80.86"
+      - "|@DirectVPN|71.2"
+      - "|@oneclickvpnkeys|86.79"
+      - "|@oneclickvpnkeys|83.65"
+      - "|@oneclickvpnkeys|83.78"
+      - "|@xrayzxn|14.27"
+      - "|@xrayzxn|514.09"
+      - "|@proxyymeliii|90.85"
+      - "|@v2ray1_ng|90.09"
+      - "|@v2ray1_ng|101.94"
+      - "|@v2ray1_ng|135.59"
+      - "|@V2RayTz|113.25"
+      - "|@V2RayTz|79.8"
+      - "|@V2RayTz|5.7"
+      - "|@ovpn2|130.43"
+      - "|@ovpn2|unavailable"
+      - "|@vpn_tehran|268.6"
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - "|@PrivateVPNs|167.69"
+      - "|@PrivateVPNs|93.98"
+      - "|@PrivateVPNs|93.23"
+      - "|@DirectVPN|89.04"
+      - "|@DirectVPN|80.86"
+      - "|@DirectVPN|71.2"
+      - "|@oneclickvpnkeys|86.79"
+      - "|@oneclickvpnkeys|83.65"
+      - "|@oneclickvpnkeys|83.78"
+      - "|@xrayzxn|14.27"
+      - "|@xrayzxn|514.09"
+      - "|@proxyymeliii|90.85"
+      - "|@v2ray1_ng|90.09"
+      - "|@v2ray1_ng|101.94"
+      - "|@v2ray1_ng|135.59"
+      - "|@V2RayTz|113.25"
+      - "|@V2RayTz|79.8"
+      - "|@V2RayTz|5.7"
+      - "|@ovpn2|130.43"
+      - "|@ovpn2|unavailable"
+      - "|@vpn_tehran|268.6"
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "|@PrivateVPNs|167.69"
+      - "|@PrivateVPNs|93.98"
+      - "|@PrivateVPNs|93.23"
+      - "|@DirectVPN|89.04"
+      - "|@DirectVPN|80.86"
+      - "|@DirectVPN|71.2"
+      - "|@oneclickvpnkeys|86.79"
+      - "|@oneclickvpnkeys|83.65"
+      - "|@oneclickvpnkeys|83.78"
+      - "|@xrayzxn|14.27"
+      - "|@xrayzxn|514.09"
+      - "|@proxyymeliii|90.85"
+      - "|@v2ray1_ng|90.09"
+      - "|@v2ray1_ng|101.94"
+      - "|@v2ray1_ng|135.59"
+      - "|@V2RayTz|113.25"
+      - "|@V2RayTz|79.8"
+      - "|@V2RayTz|5.7"
+      - "|@ovpn2|130.43"
+      - "|@ovpn2|unavailable"
+      - "|@vpn_tehran|268.6"
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - "|@PrivateVPNs|167.69"
+      - "|@PrivateVPNs|93.98"
+      - "|@PrivateVPNs|93.23"
+      - "|@DirectVPN|89.04"
+      - "|@DirectVPN|80.86"
+      - "|@DirectVPN|71.2"
+      - "|@oneclickvpnkeys|86.79"
+      - "|@oneclickvpnkeys|83.65"
+      - "|@oneclickvpnkeys|83.78"
+      - "|@xrayzxn|14.27"
+      - "|@xrayzxn|514.09"
+      - "|@proxyymeliii|90.85"
+      - "|@v2ray1_ng|90.09"
+      - "|@v2ray1_ng|101.94"
+      - "|@v2ray1_ng|135.59"
+      - "|@V2RayTz|113.25"
+      - "|@V2RayTz|79.8"
+      - "|@V2RayTz|5.7"
+      - "|@ovpn2|130.43"
+      - "|@ovpn2|unavailable"
+      - "|@vpn_tehran|268.6"
+rules:
+  - MATCH,MANUAL
