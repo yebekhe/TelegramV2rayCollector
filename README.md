@@ -1,16 +1,9 @@
-# TelegramV2rayCollector
+# V2ray Collector
 [![Collector](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml/badge.svg)](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml) [![Channels](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/channel_assets.yml/badge.svg)](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/channel_assets.yml)
 
-This is a PHP script that collects V2Ray subscription links from various Telegram channels and saves them to different files based on their protocol type (VMess, VLess, Trojan, and Shadowsocks). The collected links are stored in text format.
+<b>This project is intended for educational purposes only. Any other use of it, including commercial, personal, or non-educational use, is not accepted!</b>
 
-## How it Works
-The script includes two modules `getv2ray.php` and `config.php`. 
-
-The `config.php` file contains an array of Telegram channels and the types of protocols they offer for V2ray subscriptions. 
-
-The `getv2ray.php` module is responsible for fetching the latest subscription links from a Telegram channel and formatting them as plain text. It takes three arguments: `$channel` represents the Telegram channel name, `$type` represents the type of V2Ray protocol, and `$format` specifies the format of the output (text or JSON).
-
-The main script iterates over each channel and the protocol types they offer, then passes the appropriate arguments to `getv2ray.php` to retrieve the subscription links. The collected links are then concatenated into a single string and saved to individual files based on their protocol type.
+This is a PHP script that collects V2Ray subscription links from various Channels and saves them to different files based on their protocol type (VMess, VLess, Trojan, and Shadowsocks). The collected links are stored in text format.
 
 ## Instructions & Usage
 
@@ -46,11 +39,11 @@ https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubuserconten
 Now you can use the link above to import the subs into your client
 ```
 ## NODE Sources
-This project currently utilizes Telegram channels as the source of v2ray nodes.
+This project currently utilizes Channels as the source of v2ray nodes.
 
-Telegram Channels utilized in this Project:
+Channels utilized in this Project:
 
-| Telegram Channels | Telegram Channels | Telegram Channels | Telegram Channels |
+| Channels | Channels | Channels | Channels |
 | -------- | -------- | -------- | -------- |
 | [V2rayNGn](https://t.me/V2rayNGn) | [free4allVPN](https://t.me/free4allVPN) | [PrivateVPNs](https://t.me/PrivateVPNs) | [V2rayng_Fast](https://t.me/V2rayng_Fast) |
 | [DirectVPN](https://t.me/DirectVPN) | [ProxyFn](https://t.me/ProxyFn) | [v2ray_outlineir](https://t.me/v2ray_outlineir) | [v2ray_swhil](https://t.me/v2ray_swhil) |
@@ -77,7 +70,7 @@ Telegram Channels utilized in this Project:
 
 
 ## Contribution
-If you have a Telegram channel and you want to add it to this project or you know Telegram channels that can be used in this project you can ask for addition in Issues.
+If you have Channel and you want to add it to this project or you know Channels that can be used in this project you can ask for addition in Issues.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
