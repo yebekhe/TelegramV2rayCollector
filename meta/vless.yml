@@ -1,0 +1,1397 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+  - name: "@V2rayNGn|🚩|6.65"
+    server: mci-MsV2ray.ddns.net
+    port: 2087
+    type: vless
+    uuid: 5fac0e66-13a0-443f-fd7a-8c0b027e4631
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.fun
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: "@V2rayNGn|🚩|160.12"
+    server: mtn.MsV2ray.space
+    port: 2083
+    type: vless
+    uuid: 5cd22529-b92a-40de-86c2-591d195a2d55
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.cfd
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: REALITY|@ProxyFn|🇨🇭|unavailable
+    server: 193.168.144.46
+    port: 443
+    type: vless
+    uuid: cdb38f5b-12c3-414b-eacd-a635dc633701
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: mega.io
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: REALITY|@daorzadannet|🇩🇪|174.22
+    server: speedtest.wlftest.xyz
+    port: 443
+    type: vless
+    uuid: 6c39add6-18b8-577c-9a9c-be2082507050
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: REALITY|@Outline_Vpn|🇩🇪|173.42
+    server: big.melov2ray.store
+    port: 27172
+    type: vless
+    uuid: 8b443361-008d-4367-8087-b319dde99729
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ftp.debian.org
+    udp: true
+  - name: REALITY|@prrofile_purple|🚩|6.43
+    server: 194.87.31.249
+    port: 443
+    type: vless
+    uuid: 25a4e556-2b2e-475f-a049-ac4d613f1131
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: "@ShadowSocks_s|🚩|1.92"
+    server: 104.31.16.65
+    port: 8443
+    type: vless
+    uuid: 20c61e39-0117-46f1-b577-56025edb1518
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ti.oooo.skin
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: "@ShadowSocks_s|🇩🇪|180.04"
+    server: 95.179.254.20
+    port: 8443
+    type: vless
+    uuid: 6ca54d62-d9ee-4579-fe58-fb08f300b8be
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ti.oooo.skin
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: "@azadi_az_inja_migzare|🇮🇳|258.32"
+    server: vpn_ow.itsrightw.info
+    port: 12
+    type: vless
+    uuid: a5c0b720-015d-496f-82e6-43b62617d732
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: speedtest.net
+    udp: true
+  - name: "@azadi_az_inja_migzare|🇮🇳|359.22"
+    server: vpn_ow.itsrightw.info
+    port: 11
+    type: vless
+    uuid: 0279b40b-aeb8-462b-8436-437631d9581e
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: zula.ir
+    udp: true
+  - name: REALITY|@azadi_az_inja_migzare|🇨🇿|161.74
+    server: 194.87.31.249
+    port: 443
+    type: vless
+    uuid: 25a4e556-2b2e-475f-a049-ac4d613f1131
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: REALITY|@WomanLifeFreedomVPN|🇩🇪|168.67
+    server: speedtest.wlftest.xyz
+    port: 443
+    type: vless
+    uuid: 85399fea-2ee3-51b5-ad4e-d8b78a2cf1d9
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: REALITY|@internet4iran|🇺🇸|20.86
+    server: ya.connectme.uno
+    port: 443
+    type: vless
+    uuid: 3aeea1d3-0b4f-4834-a6b3-6870ea1c3da9
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: yahoo.com
+    udp: true
+  - name: REALITY|@customv2ray|🇺🇸|72.56
+    server: 5.161.71.13
+    port: 443
+    type: vless
+    uuid: 365ec4f6-53cb-43d1-ac2b-3ef7c6ea187f
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: medium.com
+    udp: true
+  - name: "@UnlimitedDev|🇭🇰|147.01"
+    server: bia-to2.unlimiteddev.xyz
+    port: 80
+    type: vless
+    uuid: 3bfa9403-104a-4fd3-8df0-813c25babb19
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
+    udp: true
+  - name: "@UnlimitedDev|🇭🇰|341.37"
+    server: bia-to2.unlimiteddev.xyz
+    port: 80
+    type: vless
+    uuid: 6667c5f7-844f-4b32-9bc3-6535b7f0fc18
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
+    udp: true
+  - name: "@UnlimitedDev|🇭🇰|147.19"
+    server: bia-to2.unlimiteddev.xyz
+    port: 80
+    type: vless
+    uuid: 7d58213c-74e4-41aa-ead8-492ca21b92b4
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
+    udp: true
+  - name: "@vmessorg|🇲🇾|179.87"
+    server: join-bede-vmessorg.mokhin.me
+    port: 80
+    type: vless
+    uuid: ee91adbf-da60-4c09-e910-9ab2693bc19f
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
+    udp: true
+  - name: "@vmessorg|🇲🇾|179.51"
+    server: join-bede-vmessorg.mokhin.me
+    port: 80
+    type: vless
+    uuid: b6e9683e-6129-43ad-f4e1-3cdff51dfa8a
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
+    udp: true
+  - name: "@vmessorg|🇲🇾|344.1"
+    server: join-bede-vmessorg.mokhin.me
+    port: 80
+    type: vless
+    uuid: 74192de7-e3e4-4623-f5f3-7c969ecd6463
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
+    udp: true
+  - name: REALITY|@v2rayNG_Matsuri|🇸🇪|213.5
+    server: srv15.kiava.fun
+    port: 443
+    type: vless
+    uuid: 9915fa3b-f228-46a2-ab4f-5a67a12aa5db
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: cdn.discordapp.com
+    udp: true
+  - name: "@FalconPolV2rayNG|🇩🇪|168.48"
+    server: mtn.mamaliam.site
+    port: 443
+    type: vless
+    uuid: 5e8677c7-24c9-4b78-e52c-d1e162fb05a7
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: download-center.mamaliam.site
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40free_v2rayyy%40free_v2rayyy"
+    udp: true
+  - name: "@FalconPolV2rayNG|🚩|6.95"
+    server: mci.mamaliam.site
+    port: 443
+    type: vless
+    uuid: 5e8677c7-24c9-4b78-e52c-d1e162fb05a7
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: download-center.mamaliam.site
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40free_v2rayyy%40free_v2rayyy"
+    udp: true
+  - name: "@hassan_saboorii|🇺🇸|2.12"
+    server: "[::ffff:681f:1025]"
+    port: 80
+    type: vless
+    uuid: ddb133fc-d277-4c27-d518-0966796c35dc
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: cEnTer.kaSHTI.woRld
+    network: ws
+    ws-opts:
+      path: nameless-wave-c0e0-work-new.helloworldperianscript.workers.dev
+      headers:
+        Host: cEnTer.kaSHTI.woRld
+    udp: true
+  - name: "@hassan_saboorii|🚩|3.79"
+    server: mci-MsV2ray.ddns.net
+    port: 2087
+    type: vless
+    uuid: 3b36de1c-395b-4e45-8299-44ca96a95290
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.fun
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: "@hassan_saboorii|🚩|9.69"
+    server: mtn.MsV2ray.space
+    port: 2083
+    type: vless
+    uuid: 36d22529-b92a-40de-86c2-591d195a2d55
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.cfd
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: REALITY|@v2rayNGNeT|🇩🇪|157.95
+    server: 159.69.110.28
+    port: 443
+    type: vless
+    uuid: 1336af0c-4001-475d-99ea-3b5c1733e266
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.zula.ir
+    network: grpc
+    grpc-opts:
+      grpc-service-name: Telegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNetTelegram%3A%40V2rayNgNet
+    udp: true
+  - name: REALITY|@ShadowProxy66|🇩🇪|156.18
+    server: 185.219.221.39
+    port: 8443
+    type: vless
+    uuid: 7825a09b-8321-41e0-86b5-2603f318f313
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: discord.com
+    udp: true
+  - name: "@ipV2Ray|🇩🇪|178.04"
+    server: ipV2Ray-mtn4.ddns.net
+    port: 2087
+    type: vless
+    uuid: 755c8d43-b9d2-4c20-9462-ab4dda096baa
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: Tm.NaderShAh.fuN
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40ipV2Ray"
+    udp: true
+  - name: "@ipV2Ray|🚩|4.23"
+    server: ipV2Ray-mci2.ddns.net
+    port: 2096
+    type: vless
+    uuid: 74af1e47-20c9-460d-bcfe-fee8151f4e35
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: Tm.NaderShAh.fuN
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40ipV2Ray"
+    udp: true
+  - name: "@kiava|🇸🇪|180.81"
+    server: sp1.kiava.fun
+    port: 8443
+    type: vless
+    uuid: 725313ae-e979-48e5-eaba-39e8a9eb65fb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sp1.kiava.fun
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: sp1.kiava.fun
+    udp: true
+  - name: "@kiava|🇸🇪|182.48"
+    server: sp2.kiava.fun
+    port: 8443
+    type: vless
+    uuid: 725313ae-e979-48e5-eaba-39e8a9eb65fb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sp2.kiava.fun
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: sp2.kiava.fun
+    udp: true
+  - name: "@kiava|🇸🇪|181.49"
+    server: sp3.kiava.fun
+    port: 8443
+    type: vless
+    uuid: 725313ae-e979-48e5-eaba-39e8a9eb65fb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sp3.kiava.fun
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: sp3.kiava.fun
+    udp: true
+  - name: "@Helix_Servers|🇩🇪|274.13"
+    server: MTN-2.HelixServers.cfd
+    port: 2087
+    type: vless
+    uuid: 2a80b889-0992-4441-b11e-af421b1178bb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: srvnew.helixservers.cfd
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40Helix_Servers-%40Helix_Servers-%40Helix_Servers"
+    udp: true
+  - name: "@Helix_Servers|🇳🇱|16.15"
+    server: MCI-2.HelixServers.cfd
+    port: 2087
+    type: vless
+    uuid: 2a80b889-0992-4441-b11e-af421b1178bb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: srvnew.helixservers.cfd
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40Helix_Servers-%40Helix_Servers-%40Helix_Servers"
+    udp: true
+  - name: "@Helix_Servers|🇩🇪|200.33"
+    server: HS.HelixServers.cfd
+    port: 8443
+    type: vless
+    uuid: d0e27d20-7f7e-4265-9d7e-89de73e4c601
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: telegram.helixservers.cfd
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40Helix_Servers-Helix_Servers-%40Helix-Servers"
+    udp: true
+  - name: "@PAINB0Y|🇮🇳|246.7"
+    server: 3.108.60.59
+    port: 12
+    type: vless
+    uuid: a5c0b720-015d-496f-82e6-43b62617d732
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: speedtest.net
+    udp: true
+  - name: REALITY|@PAINB0Y|🇩🇪|159.28
+    server: 128.140.91.13
+    port: 15866
+    type: vless
+    uuid: d1b7e928-cea6-4cac-a3a6-68a71b2cbdfa
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ftp.debian.org
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: "@VlessConfig|🇺🇸|92.89"
+    server: 3.235.103.91
+    port: 22222
+    type: vless
+    uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: telegram-channel-vlessconfig.sohala.uk
+    network: ws
+    ws-opts:
+      path: /telegram-channel-vlessconfig-ws
+      headers:
+        Host: telegram-channel-vlessconfig.sohala.uk
+    udp: true
+  - name: "@VlessConfig|🇨🇦|74.29"
+    server: 3.96.186.228
+    port: 22222
+    type: vless
+    uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: telegram-channel-vlessconfig.sohala.uk
+    network: ws
+    ws-opts:
+      path: /telegram-channel-vlessconfig-ws
+      headers:
+        Host: telegram-channel-vlessconfig.sohala.uk
+    udp: true
+  - name: "@VlessConfig|🇨🇦|80.07"
+    server: 15.222.44.32
+    port: 22222
+    type: vless
+    uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: telegram-channel-vlessconfig.sohala.uk
+    network: ws
+    ws-opts:
+      path: /telegram-channel-vlessconfig-ws
+      headers:
+        Host: telegram-channel-vlessconfig.sohala.uk
+    udp: true
+  - name: "@NIM_VPN_ir|🇩🇪|156.13"
+    server: 140.82.39.48
+    port: 2083
+    type: vless
+    uuid: 0ee314ab-a7d6-4bb9-84b8-9b5967b2d4f6
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ry.nimplaych.space
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40NIM_VPN_ir%40NIM_VPN_ir%40NIM_VPN_ir"
+    udp: true
+  - name: "@NIM_VPN_ir|🚩|4.09"
+    server: LIGHTNING6-joinbede.ddns.net
+    port: 2096
+    type: vless
+    uuid: 16df47c9-0832-4f7d-a6aa-9adf268c3d4a
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ry.ni%E2%80%A6
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40NIM_VPN_ir%2C%40NIM_VPN_ir%2C%40NIM_VPN_ir"
+    udp: true
+  - name: REALITY|@INIT1984|🇪🇪|180.32
+    server: join-init1984-4.linuxmember.online
+    port: 443
+    type: vless
+    uuid: 9af23aa1-c612-486d-e83d-0efbb0e2acf4
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: "@DarkVPNpro|🚩|2.58"
+    server: speed.cloudflare.com
+    port: 8080
+    type: vless
+    uuid: 8230fa43-a36c-4b8f-f3c5-3cc8e8fc1999
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: b2.iraniancp.click
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        Host: b2.iraniancp.click
+    udp: true
+  - name: REALITY|@Qv2raychannel|🇺🇸|161.78
+    server: "[0000:0000:0000:0000:0000:ffff:c1a8:902e]"
+    port: 443
+    type: vless
+    uuid: cdb38f5b-12c3-414b-eacd-a635dc633701
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: mega.io
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: "@xrayzxn|🇮🇳|245.74"
+    server: ns4-mumbai.goodbyeblock.com
+    port: 443
+    type: vless
+    uuid: f24d1b13-4efc-456e-cc41-31bc18c93f75
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    udp: true
+  - name: "@xrayzxn|🇯🇵|112.05"
+    server: ns1-tokyo.goodbyeblock.com
+    port: 443
+    type: vless
+    uuid: 5e3d898c-80a7-4a5e-9dcf-b3ef7ca5c5b9
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    udp: true
+  - name: "@Proxy_PJ|🇸🇪|1.85"
+    server: 185.146.173.20
+    port: 80
+    type: vless
+    uuid: afad5d99-a4a7-47ae-c999-157a1c01e4a7
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: PhILoSOphy.oppEnuP.cOm
+    network: ws
+    ws-opts:
+      path: /cart
+      headers:
+        Host: PhILoSOphy.oppEnuP.cOm
+    udp: true
+  - name: "@Proxy_PJ|🇮🇷|263.38"
+    server: mc14.mohamadv2.site
+    port: 3220
+    type: vless
+    uuid: 11d5f0d8-55aa-4abd-9403-a259e09281f7
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ghbi.ir
+    udp: true
+  - name: "@v2ray_swhil|🇫🇮|192.91"
+    server: mr4.zayn2013.sbs
+    port: 2020
+    type: vless
+    uuid: a8304c71-c0a4-4ef0-b49e-f672fe514f61
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: xbox.com
+    udp: true
+  - name: "@proxyymeliii|🇮🇷|283.1"
+    server: iran.configforvpn.online
+    port: 54106
+    type: vless
+    uuid: 03213b27-3eca-4c57-f43d-d7a866878083
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: server.configforvpn.online
+    udp: true
+  - name: "@MsV2ray|🚩|4.31"
+    server: mci-MsV2ray.ddns.net
+    port: 2087
+    type: vless
+    uuid: 4fac0e66-13a0-443f-fd7a-8c0b027e4631
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.fun
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: "@vless_vmess|🇮🇷|233.66"
+    server: km.dollaret.top
+    port: 27659
+    type: vless
+    uuid: 9b60ee52-002b-4e04-8f33-c7235b88a431
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: tci.ir
+    udp: true
+  - name: "@MTConfig|🇩🇪|162.87"
+    server: 95.179.254.20
+    port: 8443
+    type: vless
+    uuid: 79401bd8-2402-4488-da05-90ea3e87390f
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ti.oooo.skin
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: "@v2rayNG_VPNN|🚩|1.77"
+    server: 104.31.16.65
+    port: 2053
+    type: vless
+    uuid: 55ad1c3f-51e8-4a27-eb26-23579f8a7814
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.RxV2ray.cfd
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tm.RxV2ray.cfd
+    udp: true
+  - name: "@v2rayNG_VPNN|🚩|1.79"
+    server: 104.31.16.65
+    port: 2053
+    type: vless
+    uuid: 6ed6a5b4-9460-4a2e-ccfd-7776dd288a06
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.RxV2ray.cfd
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tm.RxV2ray.cfd
+    udp: true
+  - name: "@vmess_vless_v2rayng|🇩🇪|358.8"
+    server: s3.iranprogrammer.top
+    port: 54635
+    type: vless
+    uuid: 0f354975-67ec-44ae-fae9-b84acce72a7e
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: speedtest.net
+    udp: true
+  - name: "@vmess_vless_v2rayng|🇩🇪|160.04"
+    server: 95.179.243.13
+    port: 8443
+    type: vless
+    uuid: fee6b878-efef-42ae-fe14-15c02c7dae8b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: fghnb.narcodfd.site
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40ServerNett"
+    udp: true
+  - name: "@FreeIranT|🇷🇴|unavailable"
+    server: mtnc.ircf.space
+    port: 2087
+    type: vless
+    uuid: 593cfa02-fb28-4ffd-9966-25fd00638063
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cdn.lepingshop.top
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: cdn.lepingshop.top
+    udp: true
+  - name: "@FreeIranT|🚩|15.72"
+    server: mci.lepingshop.top
+    port: 2096
+    type: vless
+    uuid: 94f79b2f-4d7c-4996-de76-ca5dde0d421c
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cdn.lepingshop.top
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: cdn.lepingshop.top
+    udp: true
+  - name: "@FreeIranT|🚩|4.62"
+    server: mtn.lepingshop.top
+    port: 2087
+    type: vless
+    uuid: 7ae01ca9-f4ac-4173-86a2-91679924f25f
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cdn.lepingshop.top
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: cdn.lepingshop.top
+    udp: true
+  - name: "@V2RayTz|🚩|6.39"
+    server: all-ShhProxy.ddns.net
+    port: 2087
+    type: vless
+    uuid: acc25930-1189-4773-8b8f-51e46774dd6a
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: i.RsV2ray.cfd
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40shh_proxy"
+    udp: true
+  - name: "@MehradLearn|🚩|3.98"
+    server: mci-msv2ray.ddns.net
+    port: 2087
+    type: vless
+    uuid: 5fac0e66-13a0-443f-fd7a-8c0b027e4631
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.fun
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: "@MehradLearn|🚩|7.32"
+    server: mtn.msv2ray.space
+    port: 2083
+    type: vless
+    uuid: 5cd22529-b92a-40de-86c2-591d195a2d55
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.cfd
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: "@MehradLearn|🚩|4.16"
+    server: mci-msv2ray.ddns.net
+    port: 2087
+    type: vless
+    uuid: 5fac0e66-13a0-443f-fd7a-8c0b027e4631
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: tm.MsV2ray.fun
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40MsV2ray"
+    udp: true
+  - name: REALITY|@SafeNet_Server|🇩🇪|159.58
+    server: 49.13.29.159
+    port: 443
+    type: vless
+    uuid: 6c39add6-18b8-577c-9a9c-be2082507050
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: "@lrnbymaa|🚩|1.8"
+    server: 104.31.16.65
+    port: 443
+    type: vless
+    uuid: 001b11f8-ef63-447b-a9e0-c528eebe4444
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ch.donaldvpn.sbs
+    network: grpc
+    grpc-opts:
+      grpc-service-name: /
+    udp: true
+  - name: REALITY|@vpn_tehran|🇺🇸|159.7
+    server: "[::ffff:310d:1d9f]"
+    port: 443
+    type: vless
+    uuid: 6c39add6-18b8-577c-9a9c-be2082507050
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: "@v2_team|🚩|6.64"
+    server: V2TEAM-mci.ddns.net
+    port: 2083
+    type: vless
+    uuid: 125b830e-f83e-42c9-b6b7-6917ef411fcb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: I.mikeyamirservir.top
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40V2_TEAM"
+    udp: true
+  - name: "@v2_team|🇩🇪|183.58"
+    server: V2TEAM-mtn.ddns.net
+    port: 2087
+    type: vless
+    uuid: 78667f72-ae76-4631-dcbb-7b1b483d51e5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: I.mikeyamirservir.top
+    network: grpc
+    grpc-opts:
+      grpc-service-name: "%40V2_TEAM"
+    udp: true
+  - name: "@ConfigsHUB|🚩|1.61"
+    server: 104.31.16.37
+    port: 80
+    type: vless
+    uuid: ddb133fc-d277-4c27-d518-0966796c35dc
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: cEnTer.kaSHTI.woRld
+    network: ws
+    ws-opts:
+      path: nameless-wave-c0e0-work-new.helloworldperianscript.workers.dev
+      headers:
+        Host: cEnTer.kaSHTI.woRld
+    udp: true
+  - name: "@TheHotVPN|🇩🇪|155.33"
+    server: 45.76.86.53
+    port: 443
+    type: vless
+    uuid: 3bcbd5cd-e791-4770-8bc7-7b1d941c9513
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sahnama.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: SxDYl9d8vvt7fVuOyylRAzJtbkTs
+    udp: true
+  - name: "@TheHotVPN|🇩🇪|341.97"
+    server: abbas.sudobot.click
+    port: 80
+    type: vless
+    uuid: 2436bc60-f71e-44ab-ad7c-296dec1a562f
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
+    udp: true
+  - name: REALITY|@TheHotVPN|🇩🇪|159.81
+    server: 49.12.76.211
+    port: 443
+    type: vless
+    uuid: 85399fea-2ee3-51b5-ad4e-d8b78a2cf1d9
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: "@freeconfigv2|🇩🇪|158.03"
+    server: 167.235.147.3
+    port: 20952
+    type: vless
+    uuid: 4b16264f-2728-4730-d4f5-8a165d19c3a5
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: grpc
+    grpc-opts:
+      grpc-service-name: Telegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2CTelegram%40freeconfigv2%2C
+    udp: true
+  - name: "@freeconfigv2|🇩🇪|157.97"
+    server: 167.235.147.3
+    port: 32019
+    type: vless
+    uuid: e4f62263-487c-4fe3-ba5f-3ed088354ca7
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: grpc
+    grpc-opts:
+      grpc-service-name: Telegram%40freeconfigv2%2CTelegram%40freeconfigv2%2C
+    udp: true
+  - name: REALITY|@V2rayngninja|🇩🇪|168.2
+    server: wifi.alighaemi9731.online
+    port: 443
+    type: vless
+    uuid: 4a27ea21-a778-422f-815b-b9555c73ec4b
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: khabarcanada.ca
+    udp: true
+  - name: "@talentvpn|🇬🇧|144.75"
+    server: 149.102.147.5
+    port: 3096
+    type: vless
+    uuid: 4c564829-770d-4878-969e-6dcdf59f86e6
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: telewebion.com
+    udp: true
+  - name: "@talentvpn|🇺🇸|unavailable"
+    server: 89.117.74.161
+    port: 2096
+    type: vless
+    uuid: 75feed65-961c-4c81-8916-51eb3ae87724
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: telewebion.com
+    udp: true
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - "@V2rayNGn|🚩|6.65"
+      - "@V2rayNGn|🚩|160.12"
+      - REALITY|@ProxyFn|🇨🇭|unavailable
+      - REALITY|@daorzadannet|🇩🇪|174.22
+      - REALITY|@Outline_Vpn|🇩🇪|173.42
+      - REALITY|@prrofile_purple|🚩|6.43
+      - "@ShadowSocks_s|🚩|1.92"
+      - "@ShadowSocks_s|🇩🇪|180.04"
+      - "@azadi_az_inja_migzare|🇮🇳|258.32"
+      - "@azadi_az_inja_migzare|🇮🇳|359.22"
+      - REALITY|@azadi_az_inja_migzare|🇨🇿|161.74
+      - REALITY|@WomanLifeFreedomVPN|🇩🇪|168.67
+      - REALITY|@internet4iran|🇺🇸|20.86
+      - REALITY|@customv2ray|🇺🇸|72.56
+      - "@UnlimitedDev|🇭🇰|147.01"
+      - "@UnlimitedDev|🇭🇰|341.37"
+      - "@UnlimitedDev|🇭🇰|147.19"
+      - "@vmessorg|🇲🇾|179.87"
+      - "@vmessorg|🇲🇾|179.51"
+      - "@vmessorg|🇲🇾|344.1"
+      - REALITY|@v2rayNG_Matsuri|🇸🇪|213.5
+      - "@FalconPolV2rayNG|🇩🇪|168.48"
+      - "@FalconPolV2rayNG|🚩|6.95"
+      - "@hassan_saboorii|🇺🇸|2.12"
+      - "@hassan_saboorii|🚩|3.79"
+      - "@hassan_saboorii|🚩|9.69"
+      - REALITY|@v2rayNGNeT|🇩🇪|157.95
+      - REALITY|@ShadowProxy66|🇩🇪|156.18
+      - "@ipV2Ray|🇩🇪|178.04"
+      - "@ipV2Ray|🚩|4.23"
+      - "@kiava|🇸🇪|180.81"
+      - "@kiava|🇸🇪|182.48"
+      - "@kiava|🇸🇪|181.49"
+      - "@Helix_Servers|🇩🇪|274.13"
+      - "@Helix_Servers|🇳🇱|16.15"
+      - "@Helix_Servers|🇩🇪|200.33"
+      - "@PAINB0Y|🇮🇳|246.7"
+      - REALITY|@PAINB0Y|🇩🇪|159.28
+      - "@VlessConfig|🇺🇸|92.89"
+      - "@VlessConfig|🇨🇦|74.29"
+      - "@VlessConfig|🇨🇦|80.07"
+      - "@NIM_VPN_ir|🇩🇪|156.13"
+      - "@NIM_VPN_ir|🚩|4.09"
+      - REALITY|@INIT1984|🇪🇪|180.32
+      - "@DarkVPNpro|🚩|2.58"
+      - REALITY|@Qv2raychannel|🇺🇸|161.78
+      - "@xrayzxn|🇮🇳|245.74"
+      - "@xrayzxn|🇯🇵|112.05"
+      - "@Proxy_PJ|🇸🇪|1.85"
+      - "@Proxy_PJ|🇮🇷|263.38"
+      - "@v2ray_swhil|🇫🇮|192.91"
+      - "@proxyymeliii|🇮🇷|283.1"
+      - "@MsV2ray|🚩|4.31"
+      - "@vless_vmess|🇮🇷|233.66"
+      - "@MTConfig|🇩🇪|162.87"
+      - "@v2rayNG_VPNN|🚩|1.77"
+      - "@v2rayNG_VPNN|🚩|1.79"
+      - "@vmess_vless_v2rayng|🇩🇪|358.8"
+      - "@vmess_vless_v2rayng|🇩🇪|160.04"
+      - "@FreeIranT|🇷🇴|unavailable"
+      - "@FreeIranT|🚩|15.72"
+      - "@FreeIranT|🚩|4.62"
+      - "@V2RayTz|🚩|6.39"
+      - "@MehradLearn|🚩|3.98"
+      - "@MehradLearn|🚩|7.32"
+      - "@MehradLearn|🚩|4.16"
+      - REALITY|@SafeNet_Server|🇩🇪|159.58
+      - "@lrnbymaa|🚩|1.8"
+      - REALITY|@vpn_tehran|🇺🇸|159.7
+      - "@v2_team|🚩|6.64"
+      - "@v2_team|🇩🇪|183.58"
+      - "@ConfigsHUB|🚩|1.61"
+      - "@TheHotVPN|🇩🇪|155.33"
+      - "@TheHotVPN|🇩🇪|341.97"
+      - REALITY|@TheHotVPN|🇩🇪|159.81
+      - "@freeconfigv2|🇩🇪|158.03"
+      - "@freeconfigv2|🇩🇪|157.97"
+      - REALITY|@V2rayngninja|🇩🇪|168.2
+      - "@talentvpn|🇬🇧|144.75"
+      - "@talentvpn|🇺🇸|unavailable"
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - "@V2rayNGn|🚩|6.65"
+      - "@V2rayNGn|🚩|160.12"
+      - REALITY|@ProxyFn|🇨🇭|unavailable
+      - REALITY|@daorzadannet|🇩🇪|174.22
+      - REALITY|@Outline_Vpn|🇩🇪|173.42
+      - REALITY|@prrofile_purple|🚩|6.43
+      - "@ShadowSocks_s|🚩|1.92"
+      - "@ShadowSocks_s|🇩🇪|180.04"
+      - "@azadi_az_inja_migzare|🇮🇳|258.32"
+      - "@azadi_az_inja_migzare|🇮🇳|359.22"
+      - REALITY|@azadi_az_inja_migzare|🇨🇿|161.74
+      - REALITY|@WomanLifeFreedomVPN|🇩🇪|168.67
+      - REALITY|@internet4iran|🇺🇸|20.86
+      - REALITY|@customv2ray|🇺🇸|72.56
+      - "@UnlimitedDev|🇭🇰|147.01"
+      - "@UnlimitedDev|🇭🇰|341.37"
+      - "@UnlimitedDev|🇭🇰|147.19"
+      - "@vmessorg|🇲🇾|179.87"
+      - "@vmessorg|🇲🇾|179.51"
+      - "@vmessorg|🇲🇾|344.1"
+      - REALITY|@v2rayNG_Matsuri|🇸🇪|213.5
+      - "@FalconPolV2rayNG|🇩🇪|168.48"
+      - "@FalconPolV2rayNG|🚩|6.95"
+      - "@hassan_saboorii|🇺🇸|2.12"
+      - "@hassan_saboorii|🚩|3.79"
+      - "@hassan_saboorii|🚩|9.69"
+      - REALITY|@v2rayNGNeT|🇩🇪|157.95
+      - REALITY|@ShadowProxy66|🇩🇪|156.18
+      - "@ipV2Ray|🇩🇪|178.04"
+      - "@ipV2Ray|🚩|4.23"
+      - "@kiava|🇸🇪|180.81"
+      - "@kiava|🇸🇪|182.48"
+      - "@kiava|🇸🇪|181.49"
+      - "@Helix_Servers|🇩🇪|274.13"
+      - "@Helix_Servers|🇳🇱|16.15"
+      - "@Helix_Servers|🇩🇪|200.33"
+      - "@PAINB0Y|🇮🇳|246.7"
+      - REALITY|@PAINB0Y|🇩🇪|159.28
+      - "@VlessConfig|🇺🇸|92.89"
+      - "@VlessConfig|🇨🇦|74.29"
+      - "@VlessConfig|🇨🇦|80.07"
+      - "@NIM_VPN_ir|🇩🇪|156.13"
+      - "@NIM_VPN_ir|🚩|4.09"
+      - REALITY|@INIT1984|🇪🇪|180.32
+      - "@DarkVPNpro|🚩|2.58"
+      - REALITY|@Qv2raychannel|🇺🇸|161.78
+      - "@xrayzxn|🇮🇳|245.74"
+      - "@xrayzxn|🇯🇵|112.05"
+      - "@Proxy_PJ|🇸🇪|1.85"
+      - "@Proxy_PJ|🇮🇷|263.38"
+      - "@v2ray_swhil|🇫🇮|192.91"
+      - "@proxyymeliii|🇮🇷|283.1"
+      - "@MsV2ray|🚩|4.31"
+      - "@vless_vmess|🇮🇷|233.66"
+      - "@MTConfig|🇩🇪|162.87"
+      - "@v2rayNG_VPNN|🚩|1.77"
+      - "@v2rayNG_VPNN|🚩|1.79"
+      - "@vmess_vless_v2rayng|🇩🇪|358.8"
+      - "@vmess_vless_v2rayng|🇩🇪|160.04"
+      - "@FreeIranT|🇷🇴|unavailable"
+      - "@FreeIranT|🚩|15.72"
+      - "@FreeIranT|🚩|4.62"
+      - "@V2RayTz|🚩|6.39"
+      - "@MehradLearn|🚩|3.98"
+      - "@MehradLearn|🚩|7.32"
+      - "@MehradLearn|🚩|4.16"
+      - REALITY|@SafeNet_Server|🇩🇪|159.58
+      - "@lrnbymaa|🚩|1.8"
+      - REALITY|@vpn_tehran|🇺🇸|159.7
+      - "@v2_team|🚩|6.64"
+      - "@v2_team|🇩🇪|183.58"
+      - "@ConfigsHUB|🚩|1.61"
+      - "@TheHotVPN|🇩🇪|155.33"
+      - "@TheHotVPN|🇩🇪|341.97"
+      - REALITY|@TheHotVPN|🇩🇪|159.81
+      - "@freeconfigv2|🇩🇪|158.03"
+      - "@freeconfigv2|🇩🇪|157.97"
+      - REALITY|@V2rayngninja|🇩🇪|168.2
+      - "@talentvpn|🇬🇧|144.75"
+      - "@talentvpn|🇺🇸|unavailable"
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "@V2rayNGn|🚩|6.65"
+      - "@V2rayNGn|🚩|160.12"
+      - REALITY|@ProxyFn|🇨🇭|unavailable
+      - REALITY|@daorzadannet|🇩🇪|174.22
+      - REALITY|@Outline_Vpn|🇩🇪|173.42
+      - REALITY|@prrofile_purple|🚩|6.43
+      - "@ShadowSocks_s|🚩|1.92"
+      - "@ShadowSocks_s|🇩🇪|180.04"
+      - "@azadi_az_inja_migzare|🇮🇳|258.32"
+      - "@azadi_az_inja_migzare|🇮🇳|359.22"
+      - REALITY|@azadi_az_inja_migzare|🇨🇿|161.74
+      - REALITY|@WomanLifeFreedomVPN|🇩🇪|168.67
+      - REALITY|@internet4iran|🇺🇸|20.86
+      - REALITY|@customv2ray|🇺🇸|72.56
+      - "@UnlimitedDev|🇭🇰|147.01"
+      - "@UnlimitedDev|🇭🇰|341.37"
+      - "@UnlimitedDev|🇭🇰|147.19"
+      - "@vmessorg|🇲🇾|179.87"
+      - "@vmessorg|🇲🇾|179.51"
+      - "@vmessorg|🇲🇾|344.1"
+      - REALITY|@v2rayNG_Matsuri|🇸🇪|213.5
+      - "@FalconPolV2rayNG|🇩🇪|168.48"
+      - "@FalconPolV2rayNG|🚩|6.95"
+      - "@hassan_saboorii|🇺🇸|2.12"
+      - "@hassan_saboorii|🚩|3.79"
+      - "@hassan_saboorii|🚩|9.69"
+      - REALITY|@v2rayNGNeT|🇩🇪|157.95
+      - REALITY|@ShadowProxy66|🇩🇪|156.18
+      - "@ipV2Ray|🇩🇪|178.04"
+      - "@ipV2Ray|🚩|4.23"
+      - "@kiava|🇸🇪|180.81"
+      - "@kiava|🇸🇪|182.48"
+      - "@kiava|🇸🇪|181.49"
+      - "@Helix_Servers|🇩🇪|274.13"
+      - "@Helix_Servers|🇳🇱|16.15"
+      - "@Helix_Servers|🇩🇪|200.33"
+      - "@PAINB0Y|🇮🇳|246.7"
+      - REALITY|@PAINB0Y|🇩🇪|159.28
+      - "@VlessConfig|🇺🇸|92.89"
+      - "@VlessConfig|🇨🇦|74.29"
+      - "@VlessConfig|🇨🇦|80.07"
+      - "@NIM_VPN_ir|🇩🇪|156.13"
+      - "@NIM_VPN_ir|🚩|4.09"
+      - REALITY|@INIT1984|🇪🇪|180.32
+      - "@DarkVPNpro|🚩|2.58"
+      - REALITY|@Qv2raychannel|🇺🇸|161.78
+      - "@xrayzxn|🇮🇳|245.74"
+      - "@xrayzxn|🇯🇵|112.05"
+      - "@Proxy_PJ|🇸🇪|1.85"
+      - "@Proxy_PJ|🇮🇷|263.38"
+      - "@v2ray_swhil|🇫🇮|192.91"
+      - "@proxyymeliii|🇮🇷|283.1"
+      - "@MsV2ray|🚩|4.31"
+      - "@vless_vmess|🇮🇷|233.66"
+      - "@MTConfig|🇩🇪|162.87"
+      - "@v2rayNG_VPNN|🚩|1.77"
+      - "@v2rayNG_VPNN|🚩|1.79"
+      - "@vmess_vless_v2rayng|🇩🇪|358.8"
+      - "@vmess_vless_v2rayng|🇩🇪|160.04"
+      - "@FreeIranT|🇷🇴|unavailable"
+      - "@FreeIranT|🚩|15.72"
+      - "@FreeIranT|🚩|4.62"
+      - "@V2RayTz|🚩|6.39"
+      - "@MehradLearn|🚩|3.98"
+      - "@MehradLearn|🚩|7.32"
+      - "@MehradLearn|🚩|4.16"
+      - REALITY|@SafeNet_Server|🇩🇪|159.58
+      - "@lrnbymaa|🚩|1.8"
+      - REALITY|@vpn_tehran|🇺🇸|159.7
+      - "@v2_team|🚩|6.64"
+      - "@v2_team|🇩🇪|183.58"
+      - "@ConfigsHUB|🚩|1.61"
+      - "@TheHotVPN|🇩🇪|155.33"
+      - "@TheHotVPN|🇩🇪|341.97"
+      - REALITY|@TheHotVPN|🇩🇪|159.81
+      - "@freeconfigv2|🇩🇪|158.03"
+      - "@freeconfigv2|🇩🇪|157.97"
+      - REALITY|@V2rayngninja|🇩🇪|168.2
+      - "@talentvpn|🇬🇧|144.75"
+      - "@talentvpn|🇺🇸|unavailable"
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - "@V2rayNGn|🚩|6.65"
+      - "@V2rayNGn|🚩|160.12"
+      - REALITY|@ProxyFn|🇨🇭|unavailable
+      - REALITY|@daorzadannet|🇩🇪|174.22
+      - REALITY|@Outline_Vpn|🇩🇪|173.42
+      - REALITY|@prrofile_purple|🚩|6.43
+      - "@ShadowSocks_s|🚩|1.92"
+      - "@ShadowSocks_s|🇩🇪|180.04"
+      - "@azadi_az_inja_migzare|🇮🇳|258.32"
+      - "@azadi_az_inja_migzare|🇮🇳|359.22"
+      - REALITY|@azadi_az_inja_migzare|🇨🇿|161.74
+      - REALITY|@WomanLifeFreedomVPN|🇩🇪|168.67
+      - REALITY|@internet4iran|🇺🇸|20.86
+      - REALITY|@customv2ray|🇺🇸|72.56
+      - "@UnlimitedDev|🇭🇰|147.01"
+      - "@UnlimitedDev|🇭🇰|341.37"
+      - "@UnlimitedDev|🇭🇰|147.19"
+      - "@vmessorg|🇲🇾|179.87"
+      - "@vmessorg|🇲🇾|179.51"
+      - "@vmessorg|🇲🇾|344.1"
+      - REALITY|@v2rayNG_Matsuri|🇸🇪|213.5
+      - "@FalconPolV2rayNG|🇩🇪|168.48"
+      - "@FalconPolV2rayNG|🚩|6.95"
+      - "@hassan_saboorii|🇺🇸|2.12"
+      - "@hassan_saboorii|🚩|3.79"
+      - "@hassan_saboorii|🚩|9.69"
+      - REALITY|@v2rayNGNeT|🇩🇪|157.95
+      - REALITY|@ShadowProxy66|🇩🇪|156.18
+      - "@ipV2Ray|🇩🇪|178.04"
+      - "@ipV2Ray|🚩|4.23"
+      - "@kiava|🇸🇪|180.81"
+      - "@kiava|🇸🇪|182.48"
+      - "@kiava|🇸🇪|181.49"
+      - "@Helix_Servers|🇩🇪|274.13"
+      - "@Helix_Servers|🇳🇱|16.15"
+      - "@Helix_Servers|🇩🇪|200.33"
+      - "@PAINB0Y|🇮🇳|246.7"
+      - REALITY|@PAINB0Y|🇩🇪|159.28
+      - "@VlessConfig|🇺🇸|92.89"
+      - "@VlessConfig|🇨🇦|74.29"
+      - "@VlessConfig|🇨🇦|80.07"
+      - "@NIM_VPN_ir|🇩🇪|156.13"
+      - "@NIM_VPN_ir|🚩|4.09"
+      - REALITY|@INIT1984|🇪🇪|180.32
+      - "@DarkVPNpro|🚩|2.58"
+      - REALITY|@Qv2raychannel|🇺🇸|161.78
+      - "@xrayzxn|🇮🇳|245.74"
+      - "@xrayzxn|🇯🇵|112.05"
+      - "@Proxy_PJ|🇸🇪|1.85"
+      - "@Proxy_PJ|🇮🇷|263.38"
+      - "@v2ray_swhil|🇫🇮|192.91"
+      - "@proxyymeliii|🇮🇷|283.1"
+      - "@MsV2ray|🚩|4.31"
+      - "@vless_vmess|🇮🇷|233.66"
+      - "@MTConfig|🇩🇪|162.87"
+      - "@v2rayNG_VPNN|🚩|1.77"
+      - "@v2rayNG_VPNN|🚩|1.79"
+      - "@vmess_vless_v2rayng|🇩🇪|358.8"
+      - "@vmess_vless_v2rayng|🇩🇪|160.04"
+      - "@FreeIranT|🇷🇴|unavailable"
+      - "@FreeIranT|🚩|15.72"
+      - "@FreeIranT|🚩|4.62"
+      - "@V2RayTz|🚩|6.39"
+      - "@MehradLearn|🚩|3.98"
+      - "@MehradLearn|🚩|7.32"
+      - "@MehradLearn|🚩|4.16"
+      - REALITY|@SafeNet_Server|🇩🇪|159.58
+      - "@lrnbymaa|🚩|1.8"
+      - REALITY|@vpn_tehran|🇺🇸|159.7
+      - "@v2_team|🚩|6.64"
+      - "@v2_team|🇩🇪|183.58"
+      - "@ConfigsHUB|🚩|1.61"
+      - "@TheHotVPN|🇩🇪|155.33"
+      - "@TheHotVPN|🇩🇪|341.97"
+      - REALITY|@TheHotVPN|🇩🇪|159.81
+      - "@freeconfigv2|🇩🇪|158.03"
+      - "@freeconfigv2|🇩🇪|157.97"
+      - REALITY|@V2rayngninja|🇩🇪|168.2
+      - "@talentvpn|🇬🇧|144.75"
+      - "@talentvpn|🇺🇸|unavailable"
+rules:
+  - MATCH,MANUAL
