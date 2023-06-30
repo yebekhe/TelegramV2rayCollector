@@ -91,6 +91,11 @@ $Types = [
     "bright_vpn" => ["vless", "ss"],
     "talentvpn" => ["vless"],
     "proxystore11" => ["vless"],
+    "yaney_01" => ["vmess", "trojan", "ss"],
+    "rayvps" => ["vless"],
+    "free1_vpn" => ["vmess", "vless", "vless"],
+    "Parsashonam" => ["vless"],
+    
 ];
 
 ?>
