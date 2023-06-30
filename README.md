@@ -66,7 +66,8 @@ Channels utilized in this Project:
 | [ovpn2](https://t.me/ovpn2) | [OutlineVpnOfficial](https://t.me/OutlineVpnOfficial) | [proxy_kafee](https://t.me/proxy_kafee) | [TheHotVPN](https://t.me/TheHotVPN) |
 | [lrnbymaa](https://t.me/lrnbymaa) | [v2ray_vpn_ir](https://t.me/v2ray_vpn_ir) | [ConfigsHUB](https://t.me/ConfigsHUB) | [freeconfigv2](https://t.me/freeconfigv2) |
 | [vpn_tehran](https://t.me/vpn_tehran) | [v2_team](https://t.me/v2_team) | [AlienVPN402](https://t.me/AlienVPN402) | [V2rayngninja](https://t.me/V2rayngninja) |
-| [iSegaro](https://t.me/iSegaro) | [bright_vpn](https://t.me/bright_vpn) | [talentvpn](https://t.me/talentvpn) | - |
+| [iSegaro](https://t.me/iSegaro) | [bright_vpn](https://t.me/bright_vpn) | [talentvpn](https://t.me/talentvpn) | [proxystore11](https://t.me/proxystore11) |
+| [yaney_01](https://t.me/yaney_01) | [rayvps](https://t.me/rayvps) | [free1_vpn](https://t.me/free1_vpn) | [Parsashonam](https://t.me/Parsashonam) |
 
 
 ## Contribution
