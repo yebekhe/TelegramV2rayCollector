@@ -5,99 +5,81 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: "|@PrivateVPNs|158.06", server: 18.185.89.7, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@PrivateVPNs|173.36", server: 3.77.203.107, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@PrivateVPNs|151.22", server: 15.188.75.114, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@DirectVPN|73.07", server: 54.224.163.15, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@DirectVPN|80.78", server: 35.183.207.165, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@DirectVPN|80.61", server: 99.79.161.121, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@oneclickvpnkeys|13.7", server: us3.yihaobao.xyz, port: 10028, type: trojan, password: 08cae320-d871-489a-8e6a-04cba826f3c8, sni: tls.yihaobao.xyz, skip-cert-verify: false, udp: true}
-  - {name: "|@oneclickvpnkeys|26.9", server: us2.yihaobao.xyz, port: 10026, type: trojan, password: 08cae320-d871-489a-8e6a-04cba826f3c8, sni: tls.yihaobao.xyz, skip-cert-verify: false, udp: true}
-  - {name: "|@oneclickvpnkeys|217.3", server: vn1.yihaobao.xyz, port: 10021, type: trojan, password: 08cae320-d871-489a-8e6a-04cba826f3c8, sni: tls.yihaobao.xyz, skip-cert-verify: false, udp: true}
-  - {name: "|@xrayzxn|5.57", server: golibangoli.ddns.net, port: 443, type: trojan, password: a55f52b9-bd3d-466a-ba72-a085d79921e2, sni: uosobshokabbskja.chikaveloiee.gq, skip-cert-verify: false, udp: true}
-  - {name: "|@xrayzxn|550.67", server: Oos.karkas1.ir, port: 443, type: trojan, password: qe2N3UutxI, sni: www.telewebion.com, skip-cert-verify: false, udp: true}
-  - {name: "|@v2ray_swhil|161.86", server: tehron98-kanalemon.ddns.net, port: 2083, type: trojan, password: id-telegram-TEHRON98, sni: mnm.piyazJafari.cfd, skip-cert-verify: false, udp: true}
-  - {name: "|@v2ray_swhil|4.86", server: tehron98-chanelemon.ddns.net, port: 2083, type: trojan, password: id-telegram-TEHRON98, sni: mnm.piyazJafari.cfd, skip-cert-verify: false, udp: true}
-  - {name: "|@v2ray_swhil|205.55", server: tehron98-kanalemon.ddns.net, port: 2083, type: trojan, password: id-telegram-TEHRON98, skip-cert-verify: false, udp: true}
-  - {name: "|@proxyymeliii|23.58", server: us2.yihaobao.xyz, port: 10026, type: trojan, password: 2c7e32e0-e2af-4cb9-a130-65a13cd8e3d4, sni: tls.yihaobao.xyz, skip-cert-verify: false, udp: true}
-  - {name: "|@proxyymeliii|66.46", server: 51.81.82.15, port: 443, type: trojan, password: a78119c0-1672-11ee-8716-1239d0255272, sni: www.speedtest.net, skip-cert-verify: false, udp: true}
-  - {name: "|@v2ray1_ng|68.61", server: 51.81.82.15, port: 443, type: trojan, password: 09b890c0-1741-11ee-93ef-1239d0255272, sni: zula.ir, skip-cert-verify: false, udp: true}
-  - {name: "|@v2ray1_ng|66.73", server: 51.81.82.15, port: 443, type: trojan, password: 512d5e90-1772-11ee-b138-1239d0255272, sni: zula.ir, skip-cert-verify: false, udp: true}
-  - {name: "|@v2ray1_ng|66.62", server: 51.81.82.15, port: 443, type: trojan, password: caa5eea0-1772-11ee-824e-1239d0255272, sni: zula.ir, skip-cert-verify: false, udp: true}
-  - {name: "|@vmess_vless_v2rayng|31.55", server: 54.213.229.185, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@vmess_vless_v2rayng|81.43", server: 3.12.163.246, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@ovpn2|16.57", server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: false, udp: true}
-  - {name: "|@ovpn2|30.13", server: us3.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: false, udp: true}
-  - {name: "|@vpn_tehran|37", server: 54.213.229.185, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@vpn_tehran|69.49", server: 3.12.163.246, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
-  - {name: "|@ConfigsHUB|196.17", server: tr.mellivmess.com, port: 32950, type: trojan, password: AJCBkjTy9v, skip-cert-verify: false, udp: true}
-  - {name: "|@yaney_01|183.13", server: zf.heigouyunzf.xyz, port: 38801, type: trojan, password: bc879024-4a54-4cda-874a-3a39f6bc634d, skip-cert-verify: false, udp: true}
+  - {name: "|@PrivateVPNs|110.65", server: 15.237.142.189, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@PrivateVPNs|128.54", server: 13.38.41.224, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@PrivateVPNs|115.99", server: 3.9.165.191, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@DirectVPN|40.9", server: 3.141.3.171, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@DirectVPN|52.79", server: 54.213.229.185, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@DirectVPN|53.7", server: 54.202.81.80, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@oneclickvpnkeys|125.46", server: 54.229.41.122, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@oneclickvpnkeys|71.04", server: 3.97.6.235, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@oneclickvpnkeys|126.9", server: 3.70.111.128, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@xrayzxn|21.91", server: golibangoli.ddns.net, port: 443, type: trojan, password: a55f52b9-bd3d-466a-ba72-a085d79921e2, sni: uosobshokabbskja.chikaveloiee.gq, skip-cert-verify: false, udp: true}
+  - {name: "|@xrayzxn|441.26", server: Oos.karkas1.ir, port: 443, type: trojan, password: qe2N3UutxI, sni: www.telewebion.com, skip-cert-verify: false, udp: true}
+  - {name: "|@v2ray_swhil|168.29", server: tehron98-kanalemon.ddns.net, port: 2083, type: trojan, password: Id_TEHRON98, skip-cert-verify: false, udp: true}
+  - {name: "|@proxyymeliii|98.15", server: us2.yihaobao.xyz, port: 10026, type: trojan, password: 2c7e32e0-e2af-4cb9-a130-65a13cd8e3d4, sni: tls.yihaobao.xyz, skip-cert-verify: false, udp: true}
+  - {name: "|@proxyymeliii|38.38", server: 51.81.82.15, port: 443, type: trojan, password: a78119c0-1672-11ee-8716-1239d0255272, sni: www.speedtest.net, skip-cert-verify: false, udp: true}
+  - {name: "|@v2ray1_ng|39.43", server: 51.81.82.15, port: 443, type: trojan, password: 09b890c0-1741-11ee-93ef-1239d0255272, sni: zula.ir, skip-cert-verify: false, udp: true}
+  - {name: "|@v2ray1_ng|35.9", server: 51.81.82.15, port: 443, type: trojan, password: 512d5e90-1772-11ee-b138-1239d0255272, sni: zula.ir, skip-cert-verify: false, udp: true}
+  - {name: "|@v2ray1_ng|34.5", server: 51.81.82.15, port: 443, type: trojan, password: caa5eea0-1772-11ee-824e-1239d0255272, sni: zula.ir, skip-cert-verify: false, udp: true}
+  - {name: "|@vmess_vless_v2rayng|43.06", server: 3.12.163.246, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trj.rollingnext.co.uk, skip-cert-verify: false, udp: true}
+  - {name: "|@ovpn2|90.38", server: us1.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: false, udp: true}
+  - {name: "|@ovpn2|46.16", server: us3.chuqiangtou.net, port: 4003, type: trojan, password: TJCfE7Mx2YcA8kX8zg, skip-cert-verify: false, udp: true}
+  - {name: "|@yaney_01|233.69", server: zf.heigouyunzf.xyz, port: 38801, type: trojan, password: bc879024-4a54-4cda-874a-3a39f6bc634d, skip-cert-verify: false, udp: true}
 proxy-groups:
   - name: 🚀 MANUAL
     type: select
     proxies:
       - ♻️ AUTO SELECT
       - DIRECT
-      - "|@PrivateVPNs|158.06"
-      - "|@PrivateVPNs|173.36"
-      - "|@PrivateVPNs|151.22"
-      - "|@DirectVPN|73.07"
-      - "|@DirectVPN|80.78"
-      - "|@DirectVPN|80.61"
-      - "|@oneclickvpnkeys|13.7"
-      - "|@oneclickvpnkeys|26.9"
-      - "|@oneclickvpnkeys|217.3"
-      - "|@xrayzxn|5.57"
-      - "|@xrayzxn|550.67"
-      - "|@v2ray_swhil|161.86"
-      - "|@v2ray_swhil|4.86"
-      - "|@v2ray_swhil|205.55"
-      - "|@proxyymeliii|23.58"
-      - "|@proxyymeliii|66.46"
-      - "|@v2ray1_ng|68.61"
-      - "|@v2ray1_ng|66.73"
-      - "|@v2ray1_ng|66.62"
-      - "|@vmess_vless_v2rayng|31.55"
-      - "|@vmess_vless_v2rayng|81.43"
-      - "|@ovpn2|16.57"
-      - "|@ovpn2|30.13"
-      - "|@vpn_tehran|37"
-      - "|@vpn_tehran|69.49"
-      - "|@ConfigsHUB|196.17"
-      - "|@yaney_01|183.13"
+      - "|@PrivateVPNs|110.65"
+      - "|@PrivateVPNs|128.54"
+      - "|@PrivateVPNs|115.99"
+      - "|@DirectVPN|40.9"
+      - "|@DirectVPN|52.79"
+      - "|@DirectVPN|53.7"
+      - "|@oneclickvpnkeys|125.46"
+      - "|@oneclickvpnkeys|71.04"
+      - "|@oneclickvpnkeys|126.9"
+      - "|@xrayzxn|21.91"
+      - "|@xrayzxn|441.26"
+      - "|@v2ray_swhil|168.29"
+      - "|@proxyymeliii|98.15"
+      - "|@proxyymeliii|38.38"
+      - "|@v2ray1_ng|39.43"
+      - "|@v2ray1_ng|35.9"
+      - "|@v2ray1_ng|34.5"
+      - "|@vmess_vless_v2rayng|43.06"
+      - "|@ovpn2|90.38"
+      - "|@ovpn2|46.16"
+      - "|@yaney_01|233.69"
   - name: ♻️ AUTO SELECT
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "|@PrivateVPNs|158.06"
-      - "|@PrivateVPNs|173.36"
-      - "|@PrivateVPNs|151.22"
-      - "|@DirectVPN|73.07"
-      - "|@DirectVPN|80.78"
-      - "|@DirectVPN|80.61"
-      - "|@oneclickvpnkeys|13.7"
-      - "|@oneclickvpnkeys|26.9"
-      - "|@oneclickvpnkeys|217.3"
-      - "|@xrayzxn|5.57"
-      - "|@xrayzxn|550.67"
-      - "|@v2ray_swhil|161.86"
-      - "|@v2ray_swhil|4.86"
-      - "|@v2ray_swhil|205.55"
-      - "|@proxyymeliii|23.58"
-      - "|@proxyymeliii|66.46"
-      - "|@v2ray1_ng|68.61"
-      - "|@v2ray1_ng|66.73"
-      - "|@v2ray1_ng|66.62"
-      - "|@vmess_vless_v2rayng|31.55"
-      - "|@vmess_vless_v2rayng|81.43"
-      - "|@ovpn2|16.57"
-      - "|@ovpn2|30.13"
-      - "|@vpn_tehran|37"
-      - "|@vpn_tehran|69.49"
-      - "|@ConfigsHUB|196.17"
-      - "|@yaney_01|183.13"
+      - "|@PrivateVPNs|110.65"
+      - "|@PrivateVPNs|128.54"
+      - "|@PrivateVPNs|115.99"
+      - "|@DirectVPN|40.9"
+      - "|@DirectVPN|52.79"
+      - "|@DirectVPN|53.7"
+      - "|@oneclickvpnkeys|125.46"
+      - "|@oneclickvpnkeys|71.04"
+      - "|@oneclickvpnkeys|126.9"
+      - "|@xrayzxn|21.91"
+      - "|@xrayzxn|441.26"
+      - "|@v2ray_swhil|168.29"
+      - "|@proxyymeliii|98.15"
+      - "|@proxyymeliii|38.38"
+      - "|@v2ray1_ng|39.43"
+      - "|@v2ray1_ng|35.9"
+      - "|@v2ray1_ng|34.5"
+      - "|@vmess_vless_v2rayng|43.06"
+      - "|@ovpn2|90.38"
+      - "|@ovpn2|46.16"
+      - "|@yaney_01|233.69"
   - name: 🎯 GLOBAL DIRECT
     type: select
     proxies:
@@ -115,33 +97,27 @@ proxy-groups:
       - 🚀 MANUAL
       - 🎯 GLOBAL DIRECT
       - ♻️ AUTO SELECT
-      - "|@PrivateVPNs|158.06"
-      - "|@PrivateVPNs|173.36"
-      - "|@PrivateVPNs|151.22"
-      - "|@DirectVPN|73.07"
-      - "|@DirectVPN|80.78"
-      - "|@DirectVPN|80.61"
-      - "|@oneclickvpnkeys|13.7"
-      - "|@oneclickvpnkeys|26.9"
-      - "|@oneclickvpnkeys|217.3"
-      - "|@xrayzxn|5.57"
-      - "|@xrayzxn|550.67"
-      - "|@v2ray_swhil|161.86"
-      - "|@v2ray_swhil|4.86"
-      - "|@v2ray_swhil|205.55"
-      - "|@proxyymeliii|23.58"
-      - "|@proxyymeliii|66.46"
-      - "|@v2ray1_ng|68.61"
-      - "|@v2ray1_ng|66.73"
-      - "|@v2ray1_ng|66.62"
-      - "|@vmess_vless_v2rayng|31.55"
-      - "|@vmess_vless_v2rayng|81.43"
-      - "|@ovpn2|16.57"
-      - "|@ovpn2|30.13"
-      - "|@vpn_tehran|37"
-      - "|@vpn_tehran|69.49"
-      - "|@ConfigsHUB|196.17"
-      - "|@yaney_01|183.13"
+      - "|@PrivateVPNs|110.65"
+      - "|@PrivateVPNs|128.54"
+      - "|@PrivateVPNs|115.99"
+      - "|@DirectVPN|40.9"
+      - "|@DirectVPN|52.79"
+      - "|@DirectVPN|53.7"
+      - "|@oneclickvpnkeys|125.46"
+      - "|@oneclickvpnkeys|71.04"
+      - "|@oneclickvpnkeys|126.9"
+      - "|@xrayzxn|21.91"
+      - "|@xrayzxn|441.26"
+      - "|@v2ray_swhil|168.29"
+      - "|@proxyymeliii|98.15"
+      - "|@proxyymeliii|38.38"
+      - "|@v2ray1_ng|39.43"
+      - "|@v2ray1_ng|35.9"
+      - "|@v2ray1_ng|34.5"
+      - "|@vmess_vless_v2rayng|43.06"
+      - "|@ovpn2|90.38"
+      - "|@ovpn2|46.16"
+      - "|@yaney_01|233.69"
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 GLOBAL DIRECT
  - DOMAIN-SUFFIX,ip6-localhost,🎯 GLOBAL DIRECT
