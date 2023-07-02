@@ -57,7 +57,7 @@ function get_config($channel, $type)
                 null;
             } else {
                 if (strpos($config, "<br/>") !== false) {
-                    $config = substr($config, 0, $config, "<br/>");
+                    $config = substr($config, 0, strpos($config, "<br/>"));
                 }
                 if ($type === "vmess") {
                     $the_config = decode_vmess($type . "://" . $config);
