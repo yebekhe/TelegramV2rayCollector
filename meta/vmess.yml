@@ -32,7 +32,23 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "@free4allVPN|🇺🇸|123.94"
+  - name: "@free4allVPN|🇯🇵|unavailable"
+    server: oci.donpau.com
+    port: 443
+    type: vmess
+    uuid: 3C02DC15-56AE-7889-8936-9A2EA8FF8666
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: oci.donpau.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: oci.donpau.com
+    udp: true
+  - name: "@free4allVPN|🇺🇸|101.33"
     server: 104.19.180.169
     port: 443
     type: vmess
@@ -48,26 +64,7 @@ proxies:
       headers:
         Host: x.leonard.eu.org
     udp: true
-  - name: "@v2ray_outlineir|🚩|8.31"
-    server: 7065.98.32
-    port: 443
-    type: vmess
-    uuid: t.me/PhoenixNTWK
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: www.speedtest.net
-    network: http
-    http-opts:
-      method: GET
-      path:
-        - /t.me/PhoenixNTWK
-      headers:
-        Host:
-          - www.speedtest.net
-    udp: true
-  - name: "@v2ray_outlineir|🇩🇪|92.37"
+  - name: "@v2ray_outlineir|🇩🇪|91.73"
     server: 46.101.157.247
     port: 8880
     type: vmess
@@ -83,7 +80,7 @@ proxies:
       path:
         - /
     udp: true
-  - name: "@v2ray_outlineir|🇩🇪|90.96"
+  - name: "@v2ray_outlineir|🇩🇪|91.04"
     server: 54.38.154.182
     port: 54902
     type: vmess
@@ -94,22 +91,11 @@ proxies:
     skip-cert-verify: true
     servername: ""
     udp: true
-  - name: "@oneclickvpnkeys|🇪🇪|112.73"
-    server: 94.177.25.209
+  - name: "@oneclickvpnkeys|🇫🇷|87.79"
+    server: 51.158.98.130
     port: 443
     type: vmess
-    uuid: 757bd3b1-12f5-49e3-b81b-1040f75aaed7
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    udp: true
-  - name: "@oneclickvpnkeys|🇳🇱|96.54"
-    server: 79.137.205.195
-    port: 8080
-    type: vmess
-    uuid: 12cfce06-cadc-4ae3-8c56-032852c745f4
+    uuid: 8ec62dcf-9ead-48d6-afec-4aa4ed264a95
     alterId: 0
     cipher: auto
     tls: false
@@ -121,7 +107,34 @@ proxies:
       headers:
         Host: ""
     udp: true
-  - name: "@daorzadannet|🇺🇸|118.21"
+  - name: "@oneclickvpnkeys|🇺🇸|63.07"
+    server: 129.146.133.157
+    port: 51009
+    type: vmess
+    uuid: 81714cef-9bde-4a08-aa50-d6bc0172d78b
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    udp: true
+  - name: "@oneclickvpnkeys|🇺🇸|6.06"
+    server: 172.64.167.170
+    port: 8080
+    type: vmess
+    uuid: d0ccd82b-732d-454c-88e6-eba3dddf67d2
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sg-free.adw1681ddaw.tk
+    network: ws
+    ws-opts:
+      path: /sgfree
+      headers:
+        Host: sg-free.adw1681ddaw.tk
+    udp: true
+  - name: "@daorzadannet|🇺🇸|52.36"
     server: ::ffff:88f4:5aca
     port: 443
     type: vmess
@@ -137,7 +150,7 @@ proxies:
       headers:
         Host: us-6.0rd.net
     udp: true
-  - name: "@prrofile_purple|🇺🇸|11.95"
+  - name: "@prrofile_purple|🇺🇸|12.12"
     server: 89.116.38.208
     port: 3456
     type: vmess
@@ -153,7 +166,7 @@ proxies:
       path:
         - /
     udp: true
-  - name: "@customv2ray|🇺🇸|56.7"
+  - name: "@customv2ray|🇺🇸|60.58"
     server: 64.52.108.206
     port: 443
     type: vmess
@@ -169,7 +182,7 @@ proxies:
       headers:
         Host: ""
     udp: true
-  - name: "@customv2ray|🇺🇸|6.03"
+  - name: "@customv2ray|🇺🇸|5.95"
     server: racknerd.gorgorchicken.one
     port: 8443
     type: vmess
@@ -185,7 +198,7 @@ proxies:
       headers:
         Host: ""
     udp: true
-  - name: "@vpnfail_v2ray|🇧🇷|154.81"
+  - name: "@vpnfail_v2ray|🇧🇷|140.1"
     server: 104.18.23.26
     port: 8080
     type: vmess
@@ -201,7 +214,7 @@ proxies:
       headers:
         Host: v2free.sshtproect.shop
     udp: true
-  - name: "@vmessorg|🇺🇸|259.18"
+  - name: "@vmessorg|🇺🇸|220.93"
     server: join-bede-vmessorg.mokhin.me
     port: 80
     type: vmess
@@ -217,7 +230,7 @@ proxies:
       headers:
         Host: ""
     udp: true
-  - name: "@vmessorg|🇺🇸|10.59"
+  - name: "@vmessorg|🇺🇸|9.15"
     server: join-bede-vmessorg.mokhin.me
     port: 80
     type: vmess
@@ -233,7 +246,7 @@ proxies:
       headers:
         Host: ""
     udp: true
-  - name: "@Jeyksatan|🇺🇸|5.99"
+  - name: "@Jeyksatan|🇺🇸|6.04"
     server: 159.69.103.73
     port: 8443
     type: vmess
@@ -252,7 +265,7 @@ proxies:
         Host:
           - tv.musicchoice.com:443
     udp: true
-  - name: "@Jeyksatan|🇺🇸|262.54"
+  - name: "@Jeyksatan|🇺🇸|21.57"
     server: join-bede.vmessorg.fun
     port: 80
     type: vmess
@@ -268,7 +281,7 @@ proxies:
       headers:
         Host: ""
     udp: true
-  - name: "@v2rayvmess|🇺🇸|6.17"
+  - name: "@v2rayvmess|🇺🇸|5.94"
     server: id-lb.vhax.net
     port: 80
     type: vmess
@@ -284,7 +297,7 @@ proxies:
       headers:
         Host: zoom.us
     udp: true
-  - name: "@server01012|🇺🇸|204.39"
+  - name: "@server01012|🇺🇸|227.98"
     server: 185.143.233.221
     port: 80
     type: vmess
@@ -300,7 +313,7 @@ proxies:
       headers:
         Host: 158.zirogame-58.site
     udp: true
-  - name: "@server01012|🇺🇸|227.95"
+  - name: "@server01012|🇺🇸|73.24"
     server: 15.143.233.221
     port: 80
     type: vmess
@@ -316,23 +329,18 @@ proxies:
       headers:
         Host: 158.zirogame-58.site
     udp: true
-  - name: "@ShadowProxy66|🇩🇪|93.36"
-    server: 168.119.58.112
-    port: 80
+  - name: "@ShadowProxy66|🇩🇪|91.14"
+    server: 54.38.154.182
+    port: 54902
     type: vmess
-    uuid: e42d68db-4297-4c17-b5cf-44d421aef400
-    alterId: 0
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     tls: false
     skip-cert-verify: true
     servername: ""
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: ""
     udp: true
-  - name: "@hashmakvpn|🇺🇸|5.87"
+  - name: "@hashmakvpn|🇺🇸|6.34"
     server: 116.203.2.120
     port: 443
     type: vmess
@@ -351,18 +359,23 @@ proxies:
         Host:
           - speedtest.net
     udp: true
-  - name: "@Proxy_PJ|🇩🇪|91.19"
-    server: 54.38.154.182
-    port: 54902
+  - name: "@Proxy_PJ|🇩🇪|94.36"
+    server: 168.119.58.112
+    port: 80
     type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    uuid: e42d68db-4297-4c17-b5cf-44d421aef400
+    alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
     servername: ""
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ""
     udp: true
-  - name: "@v2ray1_ng|🚩|14.67"
+  - name: "@v2ray1_ng|🚩|14.82"
     server: phoenixnetwork.motrcb.click
     port: 443
     type: vmess
@@ -381,7 +394,7 @@ proxies:
         Host:
           - www.speedtest.net
     udp: true
-  - name: "@vless_vmess|🇺🇸|6.48"
+  - name: "@vless_vmess|🇺🇸|6.17"
     server: r-acc3ss.cloud
     port: 443
     type: vmess
@@ -397,7 +410,7 @@ proxies:
       headers:
         Host: little-sound-292f.walidfree22.workers.dev
     udp: true
-  - name: "@MTConfig|🇺🇸|11.93"
+  - name: "@MTConfig|🇺🇸|15.42"
     server: 89.116.38.181
     port: 3456
     type: vmess
@@ -413,7 +426,7 @@ proxies:
       path:
         - /
     udp: true
-  - name: "@ovpn2|🚩|6.67"
+  - name: "@ovpn2|🚩|6.16"
     server: 45.159.218.145
     port: 443
     type: vmess
@@ -429,7 +442,7 @@ proxies:
       headers:
         Host: channel3.unlimiteddev.tk
     udp: true
-  - name: "@ovpn2|🚩|6.05"
+  - name: "@ovpn2|🚩|6.75"
     server: support.cloudflare.com
     port: 80
     type: vmess
@@ -445,61 +458,7 @@ proxies:
       headers:
         Host: b3.iraniancp.click
     udp: true
-  - name: "@v2ray_vpn_ir|🇺🇸|11.84"
-    server: 89.116.38.194
-    port: 3456
-    type: vmess
-    uuid: 32e49539-f569-403d-b4b6-a8978c040d5d
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    network: http
-    http-opts:
-      method: GET
-      path:
-        - /
-    udp: true
-  - name: "@ConfigsHUB|🚩|5.96"
-    server: 95.179.162.223
-    port: 443
-    type: vmess
-    uuid: 5CB68358-4A82-4E67-AFAF-CF95B9C8DFE6
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: Lille.kotick.site
-    network: ws
-    ws-opts:
-      path: /speedtest
-      headers:
-        Host: Lille.kotick.site
-    udp: true
-  - name: "@yaney_01|🇺🇸|89.73"
-    server: 137.175.9.205
-    port: 57902
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    udp: true
-  - name: "@yaney_01|🇺🇸|74.74"
-    server: 108.186.116.183
-    port: 55005
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    udp: true
-  - name: "@yaney_01|🇺🇸|6.86"
+  - name: "@vpn_tehran|🚩|5.96"
     server: dl8.v001sssv.pw
     port: 80
     type: vmess
@@ -515,7 +474,120 @@ proxies:
       headers:
         Host: dl8.v001sssv.pw
     udp: true
-  - name: "@free1_vpn|🇫🇷|91.44"
+  - name: "@vpn_tehran|🇺🇸|6.01"
+    server: cf1.992688.xyz
+    port: 8080
+    type: vmess
+    uuid: 6b056a2c-b821-44b2-cf66-59a1126f6c94
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: o1.992688.xyz
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: o1.992688.xyz
+    udp: true
+  - name: "@vpn_tehran|🚩|5.99"
+    server: cf2.992688.xyz
+    port: 8080
+    type: vmess
+    uuid: b0b12ae2-346c-488b-8d1e-9f3afb8fead3
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: hax.992688.xyz
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: hax.992688.xyz
+    udp: true
+  - name: "@v2ray_vpn_ir|🇺🇸|13.63"
+    server: 89.116.38.194
+    port: 3456
+    type: vmess
+    uuid: 32e49539-f569-403d-b4b6-a8978c040d5d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    network: http
+    http-opts:
+      method: GET
+      path:
+        - /
+    udp: true
+  - name: "@ConfigsHUB|🚩|6.47"
+    server: 95.179.162.177
+    port: 443
+    type: vmess
+    uuid: 5CB68358-4A82-4E67-AFAF-CF95B9C8DFE6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: Lille.kotick.site
+    network: ws
+    ws-opts:
+      path: /speedtest
+      headers:
+        Host: Lille.kotick.site
+    udp: true
+  - name: "@ConfigsHUB|🇮🇷|675.68"
+    server: god_ssconfig.fandlaa.officialvpn.shop
+    port: 2053
+    type: vmess
+    uuid: 7cb7b3f6-eca9-43ee-c289-1b7a5babd3cc
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    udp: true
+  - name: "@yaney_01|🇺🇸|71.94"
+    server: 137.175.9.205
+    port: 57902
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    udp: true
+  - name: "@yaney_01|🇺🇸|74.59"
+    server: 108.186.116.183
+    port: 55005
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: ""
+    udp: true
+  - name: "@yaney_01|🚩|5.86"
+    server: dl8.v001sssv.pw
+    port: 80
+    type: vmess
+    uuid: 3fec7182-02fb-4730-9b97-4c9aee563ef6
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl8.v001sssv.pw
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: dl8.v001sssv.pw
+    udp: true
+  - name: "@free1_vpn|🇫🇷|91.3"
     server: 51.195.35.146
     port: 49982
     type: vmess
@@ -526,7 +598,7 @@ proxies:
     skip-cert-verify: true
     servername: ""
     udp: true
-  - name: "@free1_vpn|🇺🇸|12.45"
+  - name: "@free1_vpn|🇺🇸|11.87"
     server: 89.116.38.194
     port: 3456
     type: vmess
@@ -546,39 +618,44 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - "@free4allVPN|🇺🇸|123.94"
-      - "@v2ray_outlineir|🚩|8.31"
-      - "@v2ray_outlineir|🇩🇪|92.37"
-      - "@v2ray_outlineir|🇩🇪|90.96"
-      - "@oneclickvpnkeys|🇪🇪|112.73"
-      - "@oneclickvpnkeys|🇳🇱|96.54"
-      - "@daorzadannet|🇺🇸|118.21"
-      - "@prrofile_purple|🇺🇸|11.95"
-      - "@customv2ray|🇺🇸|56.7"
-      - "@customv2ray|🇺🇸|6.03"
-      - "@vpnfail_v2ray|🇧🇷|154.81"
-      - "@vmessorg|🇺🇸|259.18"
-      - "@vmessorg|🇺🇸|10.59"
-      - "@Jeyksatan|🇺🇸|5.99"
-      - "@Jeyksatan|🇺🇸|262.54"
-      - "@v2rayvmess|🇺🇸|6.17"
-      - "@server01012|🇺🇸|204.39"
-      - "@server01012|🇺🇸|227.95"
-      - "@ShadowProxy66|🇩🇪|93.36"
-      - "@hashmakvpn|🇺🇸|5.87"
-      - "@Proxy_PJ|🇩🇪|91.19"
-      - "@v2ray1_ng|🚩|14.67"
-      - "@vless_vmess|🇺🇸|6.48"
-      - "@MTConfig|🇺🇸|11.93"
-      - "@ovpn2|🚩|6.67"
-      - "@ovpn2|🚩|6.05"
-      - "@v2ray_vpn_ir|🇺🇸|11.84"
-      - "@ConfigsHUB|🚩|5.96"
-      - "@yaney_01|🇺🇸|89.73"
-      - "@yaney_01|🇺🇸|74.74"
-      - "@yaney_01|🇺🇸|6.86"
-      - "@free1_vpn|🇫🇷|91.44"
-      - "@free1_vpn|🇺🇸|12.45"
+      - "@free4allVPN|🇯🇵|unavailable"
+      - "@free4allVPN|🇺🇸|101.33"
+      - "@v2ray_outlineir|🇩🇪|91.73"
+      - "@v2ray_outlineir|🇩🇪|91.04"
+      - "@oneclickvpnkeys|🇫🇷|87.79"
+      - "@oneclickvpnkeys|🇺🇸|63.07"
+      - "@oneclickvpnkeys|🇺🇸|6.06"
+      - "@daorzadannet|🇺🇸|52.36"
+      - "@prrofile_purple|🇺🇸|12.12"
+      - "@customv2ray|🇺🇸|60.58"
+      - "@customv2ray|🇺🇸|5.95"
+      - "@vpnfail_v2ray|🇧🇷|140.1"
+      - "@vmessorg|🇺🇸|220.93"
+      - "@vmessorg|🇺🇸|9.15"
+      - "@Jeyksatan|🇺🇸|6.04"
+      - "@Jeyksatan|🇺🇸|21.57"
+      - "@v2rayvmess|🇺🇸|5.94"
+      - "@server01012|🇺🇸|227.98"
+      - "@server01012|🇺🇸|73.24"
+      - "@ShadowProxy66|🇩🇪|91.14"
+      - "@hashmakvpn|🇺🇸|6.34"
+      - "@Proxy_PJ|🇩🇪|94.36"
+      - "@v2ray1_ng|🚩|14.82"
+      - "@vless_vmess|🇺🇸|6.17"
+      - "@MTConfig|🇺🇸|15.42"
+      - "@ovpn2|🚩|6.16"
+      - "@ovpn2|🚩|6.75"
+      - "@vpn_tehran|🚩|5.96"
+      - "@vpn_tehran|🇺🇸|6.01"
+      - "@vpn_tehran|🚩|5.99"
+      - "@v2ray_vpn_ir|🇺🇸|13.63"
+      - "@ConfigsHUB|🚩|6.47"
+      - "@ConfigsHUB|🇮🇷|675.68"
+      - "@yaney_01|🇺🇸|71.94"
+      - "@yaney_01|🇺🇸|74.59"
+      - "@yaney_01|🚩|5.86"
+      - "@free1_vpn|🇫🇷|91.3"
+      - "@free1_vpn|🇺🇸|11.87"
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -589,115 +666,130 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@free4allVPN|🇺🇸|123.94"
-      - "@v2ray_outlineir|🚩|8.31"
-      - "@v2ray_outlineir|🇩🇪|92.37"
-      - "@v2ray_outlineir|🇩🇪|90.96"
-      - "@oneclickvpnkeys|🇪🇪|112.73"
-      - "@oneclickvpnkeys|🇳🇱|96.54"
-      - "@daorzadannet|🇺🇸|118.21"
-      - "@prrofile_purple|🇺🇸|11.95"
-      - "@customv2ray|🇺🇸|56.7"
-      - "@customv2ray|🇺🇸|6.03"
-      - "@vpnfail_v2ray|🇧🇷|154.81"
-      - "@vmessorg|🇺🇸|259.18"
-      - "@vmessorg|🇺🇸|10.59"
-      - "@Jeyksatan|🇺🇸|5.99"
-      - "@Jeyksatan|🇺🇸|262.54"
-      - "@v2rayvmess|🇺🇸|6.17"
-      - "@server01012|🇺🇸|204.39"
-      - "@server01012|🇺🇸|227.95"
-      - "@ShadowProxy66|🇩🇪|93.36"
-      - "@hashmakvpn|🇺🇸|5.87"
-      - "@Proxy_PJ|🇩🇪|91.19"
-      - "@v2ray1_ng|🚩|14.67"
-      - "@vless_vmess|🇺🇸|6.48"
-      - "@MTConfig|🇺🇸|11.93"
-      - "@ovpn2|🚩|6.67"
-      - "@ovpn2|🚩|6.05"
-      - "@v2ray_vpn_ir|🇺🇸|11.84"
-      - "@ConfigsHUB|🚩|5.96"
-      - "@yaney_01|🇺🇸|89.73"
-      - "@yaney_01|🇺🇸|74.74"
-      - "@yaney_01|🇺🇸|6.86"
-      - "@free1_vpn|🇫🇷|91.44"
-      - "@free1_vpn|🇺🇸|12.45"
+      - "@free4allVPN|🇯🇵|unavailable"
+      - "@free4allVPN|🇺🇸|101.33"
+      - "@v2ray_outlineir|🇩🇪|91.73"
+      - "@v2ray_outlineir|🇩🇪|91.04"
+      - "@oneclickvpnkeys|🇫🇷|87.79"
+      - "@oneclickvpnkeys|🇺🇸|63.07"
+      - "@oneclickvpnkeys|🇺🇸|6.06"
+      - "@daorzadannet|🇺🇸|52.36"
+      - "@prrofile_purple|🇺🇸|12.12"
+      - "@customv2ray|🇺🇸|60.58"
+      - "@customv2ray|🇺🇸|5.95"
+      - "@vpnfail_v2ray|🇧🇷|140.1"
+      - "@vmessorg|🇺🇸|220.93"
+      - "@vmessorg|🇺🇸|9.15"
+      - "@Jeyksatan|🇺🇸|6.04"
+      - "@Jeyksatan|🇺🇸|21.57"
+      - "@v2rayvmess|🇺🇸|5.94"
+      - "@server01012|🇺🇸|227.98"
+      - "@server01012|🇺🇸|73.24"
+      - "@ShadowProxy66|🇩🇪|91.14"
+      - "@hashmakvpn|🇺🇸|6.34"
+      - "@Proxy_PJ|🇩🇪|94.36"
+      - "@v2ray1_ng|🚩|14.82"
+      - "@vless_vmess|🇺🇸|6.17"
+      - "@MTConfig|🇺🇸|15.42"
+      - "@ovpn2|🚩|6.16"
+      - "@ovpn2|🚩|6.75"
+      - "@vpn_tehran|🚩|5.96"
+      - "@vpn_tehran|🇺🇸|6.01"
+      - "@vpn_tehran|🚩|5.99"
+      - "@v2ray_vpn_ir|🇺🇸|13.63"
+      - "@ConfigsHUB|🚩|6.47"
+      - "@ConfigsHUB|🇮🇷|675.68"
+      - "@yaney_01|🇺🇸|71.94"
+      - "@yaney_01|🇺🇸|74.59"
+      - "@yaney_01|🚩|5.86"
+      - "@free1_vpn|🇫🇷|91.3"
+      - "@free1_vpn|🇺🇸|11.87"
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "@free4allVPN|🇺🇸|123.94"
-      - "@v2ray_outlineir|🚩|8.31"
-      - "@v2ray_outlineir|🇩🇪|92.37"
-      - "@v2ray_outlineir|🇩🇪|90.96"
-      - "@oneclickvpnkeys|🇪🇪|112.73"
-      - "@oneclickvpnkeys|🇳🇱|96.54"
-      - "@daorzadannet|🇺🇸|118.21"
-      - "@prrofile_purple|🇺🇸|11.95"
-      - "@customv2ray|🇺🇸|56.7"
-      - "@customv2ray|🇺🇸|6.03"
-      - "@vpnfail_v2ray|🇧🇷|154.81"
-      - "@vmessorg|🇺🇸|259.18"
-      - "@vmessorg|🇺🇸|10.59"
-      - "@Jeyksatan|🇺🇸|5.99"
-      - "@Jeyksatan|🇺🇸|262.54"
-      - "@v2rayvmess|🇺🇸|6.17"
-      - "@server01012|🇺🇸|204.39"
-      - "@server01012|🇺🇸|227.95"
-      - "@ShadowProxy66|🇩🇪|93.36"
-      - "@hashmakvpn|🇺🇸|5.87"
-      - "@Proxy_PJ|🇩🇪|91.19"
-      - "@v2ray1_ng|🚩|14.67"
-      - "@vless_vmess|🇺🇸|6.48"
-      - "@MTConfig|🇺🇸|11.93"
-      - "@ovpn2|🚩|6.67"
-      - "@ovpn2|🚩|6.05"
-      - "@v2ray_vpn_ir|🇺🇸|11.84"
-      - "@ConfigsHUB|🚩|5.96"
-      - "@yaney_01|🇺🇸|89.73"
-      - "@yaney_01|🇺🇸|74.74"
-      - "@yaney_01|🇺🇸|6.86"
-      - "@free1_vpn|🇫🇷|91.44"
-      - "@free1_vpn|🇺🇸|12.45"
+      - "@free4allVPN|🇯🇵|unavailable"
+      - "@free4allVPN|🇺🇸|101.33"
+      - "@v2ray_outlineir|🇩🇪|91.73"
+      - "@v2ray_outlineir|🇩🇪|91.04"
+      - "@oneclickvpnkeys|🇫🇷|87.79"
+      - "@oneclickvpnkeys|🇺🇸|63.07"
+      - "@oneclickvpnkeys|🇺🇸|6.06"
+      - "@daorzadannet|🇺🇸|52.36"
+      - "@prrofile_purple|🇺🇸|12.12"
+      - "@customv2ray|🇺🇸|60.58"
+      - "@customv2ray|🇺🇸|5.95"
+      - "@vpnfail_v2ray|🇧🇷|140.1"
+      - "@vmessorg|🇺🇸|220.93"
+      - "@vmessorg|🇺🇸|9.15"
+      - "@Jeyksatan|🇺🇸|6.04"
+      - "@Jeyksatan|🇺🇸|21.57"
+      - "@v2rayvmess|🇺🇸|5.94"
+      - "@server01012|🇺🇸|227.98"
+      - "@server01012|🇺🇸|73.24"
+      - "@ShadowProxy66|🇩🇪|91.14"
+      - "@hashmakvpn|🇺🇸|6.34"
+      - "@Proxy_PJ|🇩🇪|94.36"
+      - "@v2ray1_ng|🚩|14.82"
+      - "@vless_vmess|🇺🇸|6.17"
+      - "@MTConfig|🇺🇸|15.42"
+      - "@ovpn2|🚩|6.16"
+      - "@ovpn2|🚩|6.75"
+      - "@vpn_tehran|🚩|5.96"
+      - "@vpn_tehran|🇺🇸|6.01"
+      - "@vpn_tehran|🚩|5.99"
+      - "@v2ray_vpn_ir|🇺🇸|13.63"
+      - "@ConfigsHUB|🚩|6.47"
+      - "@ConfigsHUB|🇮🇷|675.68"
+      - "@yaney_01|🇺🇸|71.94"
+      - "@yaney_01|🇺🇸|74.59"
+      - "@yaney_01|🚩|5.86"
+      - "@free1_vpn|🇫🇷|91.3"
+      - "@free1_vpn|🇺🇸|11.87"
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@free4allVPN|🇺🇸|123.94"
-      - "@v2ray_outlineir|🚩|8.31"
-      - "@v2ray_outlineir|🇩🇪|92.37"
-      - "@v2ray_outlineir|🇩🇪|90.96"
-      - "@oneclickvpnkeys|🇪🇪|112.73"
-      - "@oneclickvpnkeys|🇳🇱|96.54"
-      - "@daorzadannet|🇺🇸|118.21"
-      - "@prrofile_purple|🇺🇸|11.95"
-      - "@customv2ray|🇺🇸|56.7"
-      - "@customv2ray|🇺🇸|6.03"
-      - "@vpnfail_v2ray|🇧🇷|154.81"
-      - "@vmessorg|🇺🇸|259.18"
-      - "@vmessorg|🇺🇸|10.59"
-      - "@Jeyksatan|🇺🇸|5.99"
-      - "@Jeyksatan|🇺🇸|262.54"
-      - "@v2rayvmess|🇺🇸|6.17"
-      - "@server01012|🇺🇸|204.39"
-      - "@server01012|🇺🇸|227.95"
-      - "@ShadowProxy66|🇩🇪|93.36"
-      - "@hashmakvpn|🇺🇸|5.87"
-      - "@Proxy_PJ|🇩🇪|91.19"
-      - "@v2ray1_ng|🚩|14.67"
-      - "@vless_vmess|🇺🇸|6.48"
-      - "@MTConfig|🇺🇸|11.93"
-      - "@ovpn2|🚩|6.67"
-      - "@ovpn2|🚩|6.05"
-      - "@v2ray_vpn_ir|🇺🇸|11.84"
-      - "@ConfigsHUB|🚩|5.96"
-      - "@yaney_01|🇺🇸|89.73"
-      - "@yaney_01|🇺🇸|74.74"
-      - "@yaney_01|🇺🇸|6.86"
-      - "@free1_vpn|🇫🇷|91.44"
-      - "@free1_vpn|🇺🇸|12.45"
+      - "@free4allVPN|🇯🇵|unavailable"
+      - "@free4allVPN|🇺🇸|101.33"
+      - "@v2ray_outlineir|🇩🇪|91.73"
+      - "@v2ray_outlineir|🇩🇪|91.04"
+      - "@oneclickvpnkeys|🇫🇷|87.79"
+      - "@oneclickvpnkeys|🇺🇸|63.07"
+      - "@oneclickvpnkeys|🇺🇸|6.06"
+      - "@daorzadannet|🇺🇸|52.36"
+      - "@prrofile_purple|🇺🇸|12.12"
+      - "@customv2ray|🇺🇸|60.58"
+      - "@customv2ray|🇺🇸|5.95"
+      - "@vpnfail_v2ray|🇧🇷|140.1"
+      - "@vmessorg|🇺🇸|220.93"
+      - "@vmessorg|🇺🇸|9.15"
+      - "@Jeyksatan|🇺🇸|6.04"
+      - "@Jeyksatan|🇺🇸|21.57"
+      - "@v2rayvmess|🇺🇸|5.94"
+      - "@server01012|🇺🇸|227.98"
+      - "@server01012|🇺🇸|73.24"
+      - "@ShadowProxy66|🇩🇪|91.14"
+      - "@hashmakvpn|🇺🇸|6.34"
+      - "@Proxy_PJ|🇩🇪|94.36"
+      - "@v2ray1_ng|🚩|14.82"
+      - "@vless_vmess|🇺🇸|6.17"
+      - "@MTConfig|🇺🇸|15.42"
+      - "@ovpn2|🚩|6.16"
+      - "@ovpn2|🚩|6.75"
+      - "@vpn_tehran|🚩|5.96"
+      - "@vpn_tehran|🇺🇸|6.01"
+      - "@vpn_tehran|🚩|5.99"
+      - "@v2ray_vpn_ir|🇺🇸|13.63"
+      - "@ConfigsHUB|🚩|6.47"
+      - "@ConfigsHUB|🇮🇷|675.68"
+      - "@yaney_01|🇺🇸|71.94"
+      - "@yaney_01|🇺🇸|74.59"
+      - "@yaney_01|🚩|5.86"
+      - "@free1_vpn|🇫🇷|91.3"
+      - "@free1_vpn|🇺🇸|11.87"
 rules:
   - MATCH,MANUAL
