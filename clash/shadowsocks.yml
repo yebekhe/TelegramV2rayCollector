@@ -5,51 +5,48 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: "@free4allVPN|🇬🇧|131.42", server: 212.102.53.79, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "@free4allVPN|🇺🇸|16.3", server: 169.197.142.187, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: "@free4allVPN|🇬🇧|131.47", server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "@xrayzxn|🇫🇷|162.43", server: 51.178.87.37, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: "@xrayzxn|🇫🇷|149.12", server: 149.202.82.172, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "@xrayzxn|🇫🇷|176.52", server: 54.36.174.181, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: "@VmessProtocol|🇩🇪|161.34", server: 145.239.1.100, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
-  - {name: "@VmessProtocol|🇩🇪|159.51", server: 145.239.1.100, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
-  - {name: "@OutlineVpnOfficial|🇵🇱|200.38", server: ak1796.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "@OutlineVpnOfficial|🇸🇬|281.59", server: ak1797.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: "@AlienVPN402|🇫🇷|175.06", server: 54.36.174.181, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: "@free4allVPN|🇬🇧|107.3", server: 212.102.53.79, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "@free4allVPN|🇺🇸|45.3", server: 169.197.142.187, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: "@free4allVPN|🇬🇧|107.62", server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "@xrayzxn|🇫🇷|123.54", server: 51.178.87.37, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: "@xrayzxn|🇫🇷|121.03", server: 149.202.82.172, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: "@xrayzxn|🇫🇷|136.99", server: 54.36.174.181, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: "@VmessProtocol|🇩🇪|124.68", server: 145.239.1.100, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
+  - {name: "@OutlineVpnOfficial|🇵🇱|unavailable", server: ak1796.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "@OutlineVpnOfficial|🇸🇬|556.77", server: ak1797.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: "@AlienVPN402|🇫🇷|140.13", server: 54.36.174.181, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
 proxy-groups:
   - name: 🚀 MANUAL
     type: select
     proxies:
       - ♻️ AUTO SELECT
       - DIRECT
-      - "@free4allVPN|🇬🇧|131.42"
-      - "@free4allVPN|🇺🇸|16.3"
-      - "@free4allVPN|🇬🇧|131.47"
-      - "@xrayzxn|🇫🇷|162.43"
-      - "@xrayzxn|🇫🇷|149.12"
-      - "@xrayzxn|🇫🇷|176.52"
-      - "@VmessProtocol|🇩🇪|161.34"
-      - "@VmessProtocol|🇩🇪|159.51"
-      - "@OutlineVpnOfficial|🇵🇱|200.38"
-      - "@OutlineVpnOfficial|🇸🇬|281.59"
-      - "@AlienVPN402|🇫🇷|175.06"
+      - "@free4allVPN|🇬🇧|107.3"
+      - "@free4allVPN|🇺🇸|45.3"
+      - "@free4allVPN|🇬🇧|107.62"
+      - "@xrayzxn|🇫🇷|123.54"
+      - "@xrayzxn|🇫🇷|121.03"
+      - "@xrayzxn|🇫🇷|136.99"
+      - "@VmessProtocol|🇩🇪|124.68"
+      - "@OutlineVpnOfficial|🇵🇱|unavailable"
+      - "@OutlineVpnOfficial|🇸🇬|556.77"
+      - "@AlienVPN402|🇫🇷|140.13"
   - name: ♻️ AUTO SELECT
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@free4allVPN|🇬🇧|131.42"
-      - "@free4allVPN|🇺🇸|16.3"
-      - "@free4allVPN|🇬🇧|131.47"
-      - "@xrayzxn|🇫🇷|162.43"
-      - "@xrayzxn|🇫🇷|149.12"
-      - "@xrayzxn|🇫🇷|176.52"
-      - "@VmessProtocol|🇩🇪|161.34"
-      - "@VmessProtocol|🇩🇪|159.51"
-      - "@OutlineVpnOfficial|🇵🇱|200.38"
-      - "@OutlineVpnOfficial|🇸🇬|281.59"
-      - "@AlienVPN402|🇫🇷|175.06"
+      - "@free4allVPN|🇬🇧|107.3"
+      - "@free4allVPN|🇺🇸|45.3"
+      - "@free4allVPN|🇬🇧|107.62"
+      - "@xrayzxn|🇫🇷|123.54"
+      - "@xrayzxn|🇫🇷|121.03"
+      - "@xrayzxn|🇫🇷|136.99"
+      - "@VmessProtocol|🇩🇪|124.68"
+      - "@OutlineVpnOfficial|🇵🇱|unavailable"
+      - "@OutlineVpnOfficial|🇸🇬|556.77"
+      - "@AlienVPN402|🇫🇷|140.13"
   - name: 🎯 GLOBAL DIRECT
     type: select
     proxies:
@@ -67,17 +64,16 @@ proxy-groups:
       - 🚀 MANUAL
       - 🎯 GLOBAL DIRECT
       - ♻️ AUTO SELECT
-      - "@free4allVPN|🇬🇧|131.42"
-      - "@free4allVPN|🇺🇸|16.3"
-      - "@free4allVPN|🇬🇧|131.47"
-      - "@xrayzxn|🇫🇷|162.43"
-      - "@xrayzxn|🇫🇷|149.12"
-      - "@xrayzxn|🇫🇷|176.52"
-      - "@VmessProtocol|🇩🇪|161.34"
-      - "@VmessProtocol|🇩🇪|159.51"
-      - "@OutlineVpnOfficial|🇵🇱|200.38"
-      - "@OutlineVpnOfficial|🇸🇬|281.59"
-      - "@AlienVPN402|🇫🇷|175.06"
+      - "@free4allVPN|🇬🇧|107.3"
+      - "@free4allVPN|🇺🇸|45.3"
+      - "@free4allVPN|🇬🇧|107.62"
+      - "@xrayzxn|🇫🇷|123.54"
+      - "@xrayzxn|🇫🇷|121.03"
+      - "@xrayzxn|🇫🇷|136.99"
+      - "@VmessProtocol|🇩🇪|124.68"
+      - "@OutlineVpnOfficial|🇵🇱|unavailable"
+      - "@OutlineVpnOfficial|🇸🇬|556.77"
+      - "@AlienVPN402|🇫🇷|140.13"
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 GLOBAL DIRECT
  - DOMAIN-SUFFIX,ip6-localhost,🎯 GLOBAL DIRECT
