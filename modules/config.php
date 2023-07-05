@@ -52,7 +52,7 @@ $Types = [
     "LoRd_uL4mo" => ["vmess", "vless"],
     "proxyymeliii" => ["vmess", "vless", "trojan", "ss"],
     "MsV2ray" => ["vless"],
-    "free_v2rayy" => ["vmess", "vless"],
+    "free_v2rayyy" => ["vmess", "vless"],
     "v2ray1_ng" => ["vmess", "vless", "trojan"],
     "vless_vmess" => ["vmess", "vless"],
     "MTConfig" => ["vmess", "vless", "ss"],
@@ -82,6 +82,7 @@ $Types = [
     "rayvps" => ["vless"],
     "free1_vpn" => ["vmess", "vless", "vless"],
     "Parsashonam" => ["vless"],
+    "v2rayngvp" => ["vless", "ss"]
 ];
 
 ?>
