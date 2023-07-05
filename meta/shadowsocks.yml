@@ -32,90 +32,98 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "@free4allVPN|🇬🇧|79.05"
+  - name: "@free4allVPN|🇬🇧|74.41"
     server: 212.102.53.79
     port: 443
     type: ss
     cipher: aes-128-gcm
     password: shadowsocks
     udp: true
-  - name: "@free4allVPN|🇺🇸|64.39"
+  - name: "@free4allVPN|🇺🇸|unavailable"
     server: 169.197.142.187
     port: 443
     type: ss
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
     udp: true
-  - name: "@free4allVPN|🇬🇧|79.32"
+  - name: "@free4allVPN|🇬🇧|74.43"
     server: 212.102.53.198
     port: 443
     type: ss
     cipher: aes-128-gcm
     password: shadowsocks
     udp: true
-  - name: "@azadi_az_inja_migzare|🇳🇱|85.36"
+  - name: "@azadi_az_inja_migzare|🇳🇱|81.28"
     server: 185.88.140.63
     port: 8080
     type: ss
     cipher: chacha20-ietf-poly1305
     password: qGjmI8WQlF0tfhDbkLqGdN
     udp: true
-  - name: "@proxyymeliii|🇬🇧|78.35"
+  - name: "@proxyymeliii|🇬🇧|78.26"
     server: 145.239.6.202
     port: 4444
     type: ss
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
     udp: true
-  - name: "@VmessProtocol|🇩🇪|91.47"
+  - name: "@VmessProtocol|🇩🇪|85.94"
     server: 145.239.1.100
     port: 9102
     type: ss
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
     udp: true
-  - name: "@VmessProtocol|🇩🇪|90.92"
+  - name: "@VmessProtocol|🇩🇪|91.02"
     server: 145.239.1.100
     port: 6379
     type: ss
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
     udp: true
-  - name: "@OutlineVpnOfficial|🇵🇱|unavailable"
+  - name: "@OutlineVpnOfficial|🇵🇱|116.48"
     server: ak1796.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 3306
     type: ss
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
     udp: true
-  - name: "@OutlineVpnOfficial|🇸🇬|357.36"
+  - name: "@OutlineVpnOfficial|🇸🇬|378.22"
     server: ak1797.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 805
     type: ss
     cipher: chacha20-ietf-poly1305
     password: G!yBwPWH3Vao
     udp: true
-  - name: "@yaney_01|🇸🇬|248.01"
+  - name: "@yaney_01|🇸🇬|256.26"
     server: 18.139.163.228
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
+  - name: "@v2rayngvp|🇬🇧|75.02"
+    server: 13.87.75.178
+    port: 7294
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: r0G2OWdFqqfcz34LYr9inz
+    udp: true
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - "@free4allVPN|🇬🇧|79.05"
-      - "@free4allVPN|🇺🇸|64.39"
-      - "@free4allVPN|🇬🇧|79.32"
-      - "@azadi_az_inja_migzare|🇳🇱|85.36"
-      - "@proxyymeliii|🇬🇧|78.35"
-      - "@VmessProtocol|🇩🇪|91.47"
-      - "@VmessProtocol|🇩🇪|90.92"
-      - "@OutlineVpnOfficial|🇵🇱|unavailable"
-      - "@OutlineVpnOfficial|🇸🇬|357.36"
-      - "@yaney_01|🇸🇬|248.01"
+      - "@free4allVPN|🇬🇧|74.41"
+      - "@free4allVPN|🇺🇸|unavailable"
+      - "@free4allVPN|🇬🇧|74.43"
+      - "@azadi_az_inja_migzare|🇳🇱|81.28"
+      - "@proxyymeliii|🇬🇧|78.26"
+      - "@VmessProtocol|🇩🇪|85.94"
+      - "@VmessProtocol|🇩🇪|91.02"
+      - "@OutlineVpnOfficial|🇵🇱|116.48"
+      - "@OutlineVpnOfficial|🇸🇬|378.22"
+      - "@yaney_01|🇸🇬|256.26"
+      - "@v2rayngvp|🇬🇧|75.02"
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -126,46 +134,49 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@free4allVPN|🇬🇧|79.05"
-      - "@free4allVPN|🇺🇸|64.39"
-      - "@free4allVPN|🇬🇧|79.32"
-      - "@azadi_az_inja_migzare|🇳🇱|85.36"
-      - "@proxyymeliii|🇬🇧|78.35"
-      - "@VmessProtocol|🇩🇪|91.47"
-      - "@VmessProtocol|🇩🇪|90.92"
-      - "@OutlineVpnOfficial|🇵🇱|unavailable"
-      - "@OutlineVpnOfficial|🇸🇬|357.36"
-      - "@yaney_01|🇸🇬|248.01"
+      - "@free4allVPN|🇬🇧|74.41"
+      - "@free4allVPN|🇺🇸|unavailable"
+      - "@free4allVPN|🇬🇧|74.43"
+      - "@azadi_az_inja_migzare|🇳🇱|81.28"
+      - "@proxyymeliii|🇬🇧|78.26"
+      - "@VmessProtocol|🇩🇪|85.94"
+      - "@VmessProtocol|🇩🇪|91.02"
+      - "@OutlineVpnOfficial|🇵🇱|116.48"
+      - "@OutlineVpnOfficial|🇸🇬|378.22"
+      - "@yaney_01|🇸🇬|256.26"
+      - "@v2rayngvp|🇬🇧|75.02"
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "@free4allVPN|🇬🇧|79.05"
-      - "@free4allVPN|🇺🇸|64.39"
-      - "@free4allVPN|🇬🇧|79.32"
-      - "@azadi_az_inja_migzare|🇳🇱|85.36"
-      - "@proxyymeliii|🇬🇧|78.35"
-      - "@VmessProtocol|🇩🇪|91.47"
-      - "@VmessProtocol|🇩🇪|90.92"
-      - "@OutlineVpnOfficial|🇵🇱|unavailable"
-      - "@OutlineVpnOfficial|🇸🇬|357.36"
-      - "@yaney_01|🇸🇬|248.01"
+      - "@free4allVPN|🇬🇧|74.41"
+      - "@free4allVPN|🇺🇸|unavailable"
+      - "@free4allVPN|🇬🇧|74.43"
+      - "@azadi_az_inja_migzare|🇳🇱|81.28"
+      - "@proxyymeliii|🇬🇧|78.26"
+      - "@VmessProtocol|🇩🇪|85.94"
+      - "@VmessProtocol|🇩🇪|91.02"
+      - "@OutlineVpnOfficial|🇵🇱|116.48"
+      - "@OutlineVpnOfficial|🇸🇬|378.22"
+      - "@yaney_01|🇸🇬|256.26"
+      - "@v2rayngvp|🇬🇧|75.02"
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@free4allVPN|🇬🇧|79.05"
-      - "@free4allVPN|🇺🇸|64.39"
-      - "@free4allVPN|🇬🇧|79.32"
-      - "@azadi_az_inja_migzare|🇳🇱|85.36"
-      - "@proxyymeliii|🇬🇧|78.35"
-      - "@VmessProtocol|🇩🇪|91.47"
-      - "@VmessProtocol|🇩🇪|90.92"
-      - "@OutlineVpnOfficial|🇵🇱|unavailable"
-      - "@OutlineVpnOfficial|🇸🇬|357.36"
-      - "@yaney_01|🇸🇬|248.01"
+      - "@free4allVPN|🇬🇧|74.41"
+      - "@free4allVPN|🇺🇸|unavailable"
+      - "@free4allVPN|🇬🇧|74.43"
+      - "@azadi_az_inja_migzare|🇳🇱|81.28"
+      - "@proxyymeliii|🇬🇧|78.26"
+      - "@VmessProtocol|🇩🇪|85.94"
+      - "@VmessProtocol|🇩🇪|91.02"
+      - "@OutlineVpnOfficial|🇵🇱|116.48"
+      - "@OutlineVpnOfficial|🇸🇬|378.22"
+      - "@yaney_01|🇸🇬|256.26"
+      - "@v2rayngvp|🇬🇧|75.02"
 rules:
   - MATCH,MANUAL
