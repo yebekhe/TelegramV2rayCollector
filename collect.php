@@ -64,26 +64,26 @@ foreach ($Types as $key => $type_array) {
     }
 }
 
-$channel_stats_vmess = ranking($vmess_data, "vmess");
-$channel_stats_vless = ranking($vless_data, "vless");
-$channel_stats_trojan = ranking($trojan_data, "trojan");
-$channel_stats_ss = ranking($ss_data, "ss");
+$channel_ranking_vmess = ranking($vmess_data, "vmess");
+$channel_ranking_vless = ranking($vless_data, "vless");
+$channel_ranking_trojan = ranking($trojan_data, "trojan");
+$channel_ranking_shadowsocks = ranking($shadowsocks_data, "ss");
 
 file_put_contents(
     "ranking/channel_ranking_vmess.json",
-    json_encode($channel_stats_vmess, JSON_PRETTY_PRINT)
+    json_encode($channel_ranking_vmess, JSON_PRETTY_PRINT)
 );
 file_put_contents(
     "ranking/channel_ranking_vless.json",
-    json_encode($channel_stats_vless, JSON_PRETTY_PRINT)
+    json_encode($channel_ranking_vless, JSON_PRETTY_PRINT)
 );
 file_put_contents(
     "ranking/channel_ranking_trojan.json",
-    json_encode($channel_stats_trojan, JSON_PRETTY_PRINT)
+    json_encode($channel_ranking_trojan, JSON_PRETTY_PRINT)
 );
 file_put_contents(
     "ranking/channel_ranking_ss.json",
-    json_encode($channel_stats_ss, JSON_PRETTY_PRINT)
+    json_encode($channel_ranking_shadowsocks, JSON_PRETTY_PRINT)
 );
 
 $vmess_array = [];
