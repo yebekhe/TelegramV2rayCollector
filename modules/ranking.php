@@ -26,7 +26,6 @@ function ranking($input, $type)
     $last_point_array = [];
     $usernames = array_column(array_column($input, "channel"), "username");
     $point_array = array_count_values($usernames);
-    arsort($point_array);
 
     if (file_exists("ranking/channel_ranking_" . $type . ".json")) {
         $last_point_array = json_decode(
@@ -56,6 +55,8 @@ function ranking($input, $type)
         "date" => tehran_time(),
         "points" => $last_point_array['points'],
     ];
+
+    arsort($final_point_array['points']);
 
     return $final_point_array;
 }
