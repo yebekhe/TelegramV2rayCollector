@@ -11,7 +11,7 @@ function tehran_time()
 
 function same_date($time_stamp)
 {
-    $date_now = substr(tehran_time(), 0, 10);
+    $current_date = substr(tehran_time(), 0, 10);
     $compare_date = substr($time_stamp, 0, 10);
     if ($current_date != $compare_date) {
         return false;
