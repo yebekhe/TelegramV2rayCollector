@@ -28,14 +28,14 @@ function ranking($input, $type)
     $point_array = array_count_values($usernames);
     arsort($point_array);
 
-    if (file_exists("json/channel_stats_" . $type . ".json")) {
+    if (file_exists("ranking/channel_ranking_" . $type . ".json")) {
         $last_point_array = json_decode(
-            file_get_contents("json/channel_stats_" . $type . ".json"),
+            file_get_contents("ranking/channel_ranking_" . $type . ".json"),
             true
         );
         $last_rank_date = $last_point_array['date'];
         if (same_date($last_rank_date) === true){
-            unlink("json/channel_stats_" . $type . ".json");
+            unlink("ranking/channel_ranking_" . $type . ".json");
             $last_point_array['points'] = [];
         }
     } else {
