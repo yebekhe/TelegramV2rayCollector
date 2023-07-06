@@ -34,7 +34,7 @@ function ranking($input, $type)
             true
         );
         $last_rank_date = $last_point_array['date'];
-        if (same_date($last_rank_date) === true){
+        if (same_date($last_rank_date) === false){
             unlink("ranking/channel_ranking_" . $type . ".json");
             $last_point_array['points'] = [];
         }
