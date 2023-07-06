@@ -32,7 +32,7 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "|@PrivateVPNs|78.14"
+  - name: "|@PrivateVPNs|143.83"
     server: 18.132.38.36
     port: 22222
     type: trojan
@@ -40,7 +40,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@PrivateVPNs|81.48"
+  - name: "|@PrivateVPNs|112.42"
     server: 176.34.197.163
     port: 22222
     type: trojan
@@ -48,7 +48,15 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@DirectVPN|13.53"
+  - name: "|@PrivateVPNs|113.25"
+    server: 34.255.30.226
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@DirectVPN|45.09"
     server: 18.119.110.164
     port: 22222
     type: trojan
@@ -56,7 +64,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@DirectVPN|102.74"
+  - name: "|@DirectVPN|80.51"
     server: 34.220.146.103
     port: 22222
     type: trojan
@@ -64,7 +72,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@DirectVPN|94.66"
+  - name: "|@DirectVPN|59.16"
     server: 34.215.126.155
     port: 22222
     type: trojan
@@ -72,7 +80,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@oneclickvpnkeys|91.03"
+  - name: "|@oneclickvpnkeys|137.59"
     server: unohana.ddns.net
     port: 30403
     type: trojan
@@ -80,7 +88,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@vmess_vless_v2rayng|16"
+  - name: "|@vmess_vless_v2rayng|48.95"
     server: 18.222.71.55
     port: 22222
     type: trojan
@@ -88,7 +96,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@vmess_vless_v2rayng|92.27"
+  - name: "|@vmess_vless_v2rayng|148.02"
     server: 54.93.211.165
     port: 22222
     type: trojan
@@ -96,7 +104,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@V2RayTz|19.59"
+  - name: "|@V2RayTz|53"
     server: 54.209.247.245
     port: 22222
     type: trojan
@@ -104,7 +112,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@V2RayTz|24.47"
+  - name: "|@V2RayTz|59.6"
     server: 3.96.148.148
     port: 22222
     type: trojan
@@ -112,7 +120,15 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@ovpn2|100.71"
+  - name: "|@V2RayTz|62.56"
+    server: 35.183.61.219
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@ovpn2|56.85"
     server: us1.chuqiangtou.net
     port: 4003
     type: trojan
@@ -120,7 +136,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@ovpn2|119.04"
+  - name: "|@ovpn2|36.06"
     server: us3.chuqiangtou.net
     port: 4003
     type: trojan
@@ -128,15 +144,15 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@ConfigsHUB|113.99"
-    server: tr.mellivmess.com
-    port: 32950
+  - name: "|@yaney_01|243.12"
+    server: 152.70.74.66
+    port: 443
     type: trojan
-    password: AJCBkjTy9v
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@yaney_01|83.52"
+  - name: "|@yaney_01|121.62"
     server: 217.79.181.82
     port: 443
     type: trojan
@@ -144,7 +160,7 @@ proxies:
     skip-cert-verify: true
     sni: downloadde.xn--mes358acgm99l.com
     udp: true
-  - name: "|@yaney_01|68.6"
+  - name: "|@yaney_01|30.06"
     server: 163.123.192.152
     port: 443
     type: trojan
@@ -156,21 +172,23 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - "|@PrivateVPNs|78.14"
-      - "|@PrivateVPNs|81.48"
-      - "|@DirectVPN|13.53"
-      - "|@DirectVPN|102.74"
-      - "|@DirectVPN|94.66"
-      - "|@oneclickvpnkeys|91.03"
-      - "|@vmess_vless_v2rayng|16"
-      - "|@vmess_vless_v2rayng|92.27"
-      - "|@V2RayTz|19.59"
-      - "|@V2RayTz|24.47"
-      - "|@ovpn2|100.71"
-      - "|@ovpn2|119.04"
-      - "|@ConfigsHUB|113.99"
-      - "|@yaney_01|83.52"
-      - "|@yaney_01|68.6"
+      - "|@PrivateVPNs|143.83"
+      - "|@PrivateVPNs|112.42"
+      - "|@PrivateVPNs|113.25"
+      - "|@DirectVPN|45.09"
+      - "|@DirectVPN|80.51"
+      - "|@DirectVPN|59.16"
+      - "|@oneclickvpnkeys|137.59"
+      - "|@vmess_vless_v2rayng|48.95"
+      - "|@vmess_vless_v2rayng|148.02"
+      - "|@V2RayTz|53"
+      - "|@V2RayTz|59.6"
+      - "|@V2RayTz|62.56"
+      - "|@ovpn2|56.85"
+      - "|@ovpn2|36.06"
+      - "|@yaney_01|243.12"
+      - "|@yaney_01|121.62"
+      - "|@yaney_01|30.06"
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -181,61 +199,67 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|78.14"
-      - "|@PrivateVPNs|81.48"
-      - "|@DirectVPN|13.53"
-      - "|@DirectVPN|102.74"
-      - "|@DirectVPN|94.66"
-      - "|@oneclickvpnkeys|91.03"
-      - "|@vmess_vless_v2rayng|16"
-      - "|@vmess_vless_v2rayng|92.27"
-      - "|@V2RayTz|19.59"
-      - "|@V2RayTz|24.47"
-      - "|@ovpn2|100.71"
-      - "|@ovpn2|119.04"
-      - "|@ConfigsHUB|113.99"
-      - "|@yaney_01|83.52"
-      - "|@yaney_01|68.6"
+      - "|@PrivateVPNs|143.83"
+      - "|@PrivateVPNs|112.42"
+      - "|@PrivateVPNs|113.25"
+      - "|@DirectVPN|45.09"
+      - "|@DirectVPN|80.51"
+      - "|@DirectVPN|59.16"
+      - "|@oneclickvpnkeys|137.59"
+      - "|@vmess_vless_v2rayng|48.95"
+      - "|@vmess_vless_v2rayng|148.02"
+      - "|@V2RayTz|53"
+      - "|@V2RayTz|59.6"
+      - "|@V2RayTz|62.56"
+      - "|@ovpn2|56.85"
+      - "|@ovpn2|36.06"
+      - "|@yaney_01|243.12"
+      - "|@yaney_01|121.62"
+      - "|@yaney_01|30.06"
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "|@PrivateVPNs|78.14"
-      - "|@PrivateVPNs|81.48"
-      - "|@DirectVPN|13.53"
-      - "|@DirectVPN|102.74"
-      - "|@DirectVPN|94.66"
-      - "|@oneclickvpnkeys|91.03"
-      - "|@vmess_vless_v2rayng|16"
-      - "|@vmess_vless_v2rayng|92.27"
-      - "|@V2RayTz|19.59"
-      - "|@V2RayTz|24.47"
-      - "|@ovpn2|100.71"
-      - "|@ovpn2|119.04"
-      - "|@ConfigsHUB|113.99"
-      - "|@yaney_01|83.52"
-      - "|@yaney_01|68.6"
+      - "|@PrivateVPNs|143.83"
+      - "|@PrivateVPNs|112.42"
+      - "|@PrivateVPNs|113.25"
+      - "|@DirectVPN|45.09"
+      - "|@DirectVPN|80.51"
+      - "|@DirectVPN|59.16"
+      - "|@oneclickvpnkeys|137.59"
+      - "|@vmess_vless_v2rayng|48.95"
+      - "|@vmess_vless_v2rayng|148.02"
+      - "|@V2RayTz|53"
+      - "|@V2RayTz|59.6"
+      - "|@V2RayTz|62.56"
+      - "|@ovpn2|56.85"
+      - "|@ovpn2|36.06"
+      - "|@yaney_01|243.12"
+      - "|@yaney_01|121.62"
+      - "|@yaney_01|30.06"
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|78.14"
-      - "|@PrivateVPNs|81.48"
-      - "|@DirectVPN|13.53"
-      - "|@DirectVPN|102.74"
-      - "|@DirectVPN|94.66"
-      - "|@oneclickvpnkeys|91.03"
-      - "|@vmess_vless_v2rayng|16"
-      - "|@vmess_vless_v2rayng|92.27"
-      - "|@V2RayTz|19.59"
-      - "|@V2RayTz|24.47"
-      - "|@ovpn2|100.71"
-      - "|@ovpn2|119.04"
-      - "|@ConfigsHUB|113.99"
-      - "|@yaney_01|83.52"
-      - "|@yaney_01|68.6"
+      - "|@PrivateVPNs|143.83"
+      - "|@PrivateVPNs|112.42"
+      - "|@PrivateVPNs|113.25"
+      - "|@DirectVPN|45.09"
+      - "|@DirectVPN|80.51"
+      - "|@DirectVPN|59.16"
+      - "|@oneclickvpnkeys|137.59"
+      - "|@vmess_vless_v2rayng|48.95"
+      - "|@vmess_vless_v2rayng|148.02"
+      - "|@V2RayTz|53"
+      - "|@V2RayTz|59.6"
+      - "|@V2RayTz|62.56"
+      - "|@ovpn2|56.85"
+      - "|@ovpn2|36.06"
+      - "|@yaney_01|243.12"
+      - "|@yaney_01|121.62"
+      - "|@yaney_01|30.06"
 rules:
   - MATCH,MANUAL
