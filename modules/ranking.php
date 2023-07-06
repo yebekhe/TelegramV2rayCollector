@@ -42,8 +42,8 @@ function ranking($input, $type)
         $last_point_array['points'] = [];
     }
 
-    foreach ($point_array as $channel => $point) {
-        if (!empty(array_diff_assoc($point_array, $last_point_array['points']))) {
+    if (!empty(array_diff_assoc($point_array, $last_point_array['points']))) {
+        foreach ($point_array as $channel => $point) {
             if (array_key_exists($channel, $last_point_array['points'])) {
                 $last_point_array['points'][$channel] += $point;
             } else {
