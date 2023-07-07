@@ -32,77 +32,84 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "@free4allVPN|🇬🇧|107.47"
+  - name: "@free4allVPN|🇬🇧|108.98"
     server: 212.102.53.79
     port: 443
     type: ss
     cipher: aes-128-gcm
     password: shadowsocks
     udp: true
-  - name: "@free4allVPN|🇬🇧|107.35"
+  - name: "@free4allVPN|🇬🇧|113.47"
     server: 212.102.53.198
     port: 443
     type: ss
     cipher: aes-128-gcm
     password: shadowsocks
     udp: true
-  - name: "@proxyymeliii|🇬🇧|110.52"
+  - name: "@proxyymeliii|🇬🇧|111.61"
     server: 145.239.6.202
     port: 4444
     type: ss
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
     udp: true
-  - name: "@vmess_vless_v2rayng|🇵🇱|136.9"
-    server: 51.77.53.200
-    port: 8009
-    type: ss
-    cipher: aes-256-gcm
-    password: XKFKl2rULjIp74
-    udp: true
-  - name: "@vmess_vless_v2rayng|🇫🇷|140.54"
+  - name: "@vmess_vless_v2rayng|🇫🇷|141.46"
     server: 54.36.174.181
     port: 6679
     type: ss
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     udp: true
-  - name: "@VmessProtocol|🇬🇧|96.9"
+  - name: "@VmessProtocol|🇩🇪|120.89"
+    server: 145.239.1.100
+    port: 9102
+    type: ss
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
+    udp: true
+  - name: "@VmessProtocol|🇩🇪|127.53"
+    server: 145.239.1.100
+    port: 6379
+    type: ss
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+    udp: true
+  - name: "@VmessProtocol|🇬🇧|unavailable"
     server: 40.120.63.151
     port: 18295
     type: ss
     cipher: chacha20-ietf-poly1305
     password: 9FojhKHRjBbQVBr0Q35Zr5
     udp: true
-  - name: "@OutlineVpnOfficial|🇸🇬|369.11"
+  - name: "@OutlineVpnOfficial|🇸🇬|512.76"
     server: ak1797.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 805
     type: ss
     cipher: chacha20-ietf-poly1305
     password: G!yBwPWH3Vao
     udp: true
-  - name: "@OutlineVpnOfficial|🇮🇷|279.25"
+  - name: "@OutlineVpnOfficial|🇮🇷|248.16"
     server: ak1799.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 9899
     type: ss
     cipher: chacha20-ietf-poly1305
     password: ODveE5bRZA6nqO9r2CrjGn
     udp: true
-  - name: "@yaney_01|🇰🇷|187.87"
+  - name: "@yaney_01|🇰🇷|152.19"
     server: 43.201.19.172
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: "@yaney_01|🇯🇵|160.99"
+  - name: "@yaney_01|🇯🇵|125.67"
     server: 3.112.73.233
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: "@yaney_01|🇰🇷|166.25"
+  - name: "@yaney_01|🇰🇷|152.28"
     server: 43.202.49.224
     port: 443
     type: ss
@@ -113,17 +120,18 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - "@free4allVPN|🇬🇧|107.47"
-      - "@free4allVPN|🇬🇧|107.35"
-      - "@proxyymeliii|🇬🇧|110.52"
-      - "@vmess_vless_v2rayng|🇵🇱|136.9"
-      - "@vmess_vless_v2rayng|🇫🇷|140.54"
-      - "@VmessProtocol|🇬🇧|96.9"
-      - "@OutlineVpnOfficial|🇸🇬|369.11"
-      - "@OutlineVpnOfficial|🇮🇷|279.25"
-      - "@yaney_01|🇰🇷|187.87"
-      - "@yaney_01|🇯🇵|160.99"
-      - "@yaney_01|🇰🇷|166.25"
+      - "@free4allVPN|🇬🇧|108.98"
+      - "@free4allVPN|🇬🇧|113.47"
+      - "@proxyymeliii|🇬🇧|111.61"
+      - "@vmess_vless_v2rayng|🇫🇷|141.46"
+      - "@VmessProtocol|🇩🇪|120.89"
+      - "@VmessProtocol|🇩🇪|127.53"
+      - "@VmessProtocol|🇬🇧|unavailable"
+      - "@OutlineVpnOfficial|🇸🇬|512.76"
+      - "@OutlineVpnOfficial|🇮🇷|248.16"
+      - "@yaney_01|🇰🇷|152.19"
+      - "@yaney_01|🇯🇵|125.67"
+      - "@yaney_01|🇰🇷|152.28"
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -134,49 +142,52 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@free4allVPN|🇬🇧|107.47"
-      - "@free4allVPN|🇬🇧|107.35"
-      - "@proxyymeliii|🇬🇧|110.52"
-      - "@vmess_vless_v2rayng|🇵🇱|136.9"
-      - "@vmess_vless_v2rayng|🇫🇷|140.54"
-      - "@VmessProtocol|🇬🇧|96.9"
-      - "@OutlineVpnOfficial|🇸🇬|369.11"
-      - "@OutlineVpnOfficial|🇮🇷|279.25"
-      - "@yaney_01|🇰🇷|187.87"
-      - "@yaney_01|🇯🇵|160.99"
-      - "@yaney_01|🇰🇷|166.25"
+      - "@free4allVPN|🇬🇧|108.98"
+      - "@free4allVPN|🇬🇧|113.47"
+      - "@proxyymeliii|🇬🇧|111.61"
+      - "@vmess_vless_v2rayng|🇫🇷|141.46"
+      - "@VmessProtocol|🇩🇪|120.89"
+      - "@VmessProtocol|🇩🇪|127.53"
+      - "@VmessProtocol|🇬🇧|unavailable"
+      - "@OutlineVpnOfficial|🇸🇬|512.76"
+      - "@OutlineVpnOfficial|🇮🇷|248.16"
+      - "@yaney_01|🇰🇷|152.19"
+      - "@yaney_01|🇯🇵|125.67"
+      - "@yaney_01|🇰🇷|152.28"
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "@free4allVPN|🇬🇧|107.47"
-      - "@free4allVPN|🇬🇧|107.35"
-      - "@proxyymeliii|🇬🇧|110.52"
-      - "@vmess_vless_v2rayng|🇵🇱|136.9"
-      - "@vmess_vless_v2rayng|🇫🇷|140.54"
-      - "@VmessProtocol|🇬🇧|96.9"
-      - "@OutlineVpnOfficial|🇸🇬|369.11"
-      - "@OutlineVpnOfficial|🇮🇷|279.25"
-      - "@yaney_01|🇰🇷|187.87"
-      - "@yaney_01|🇯🇵|160.99"
-      - "@yaney_01|🇰🇷|166.25"
+      - "@free4allVPN|🇬🇧|108.98"
+      - "@free4allVPN|🇬🇧|113.47"
+      - "@proxyymeliii|🇬🇧|111.61"
+      - "@vmess_vless_v2rayng|🇫🇷|141.46"
+      - "@VmessProtocol|🇩🇪|120.89"
+      - "@VmessProtocol|🇩🇪|127.53"
+      - "@VmessProtocol|🇬🇧|unavailable"
+      - "@OutlineVpnOfficial|🇸🇬|512.76"
+      - "@OutlineVpnOfficial|🇮🇷|248.16"
+      - "@yaney_01|🇰🇷|152.19"
+      - "@yaney_01|🇯🇵|125.67"
+      - "@yaney_01|🇰🇷|152.28"
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@free4allVPN|🇬🇧|107.47"
-      - "@free4allVPN|🇬🇧|107.35"
-      - "@proxyymeliii|🇬🇧|110.52"
-      - "@vmess_vless_v2rayng|🇵🇱|136.9"
-      - "@vmess_vless_v2rayng|🇫🇷|140.54"
-      - "@VmessProtocol|🇬🇧|96.9"
-      - "@OutlineVpnOfficial|🇸🇬|369.11"
-      - "@OutlineVpnOfficial|🇮🇷|279.25"
-      - "@yaney_01|🇰🇷|187.87"
-      - "@yaney_01|🇯🇵|160.99"
-      - "@yaney_01|🇰🇷|166.25"
+      - "@free4allVPN|🇬🇧|108.98"
+      - "@free4allVPN|🇬🇧|113.47"
+      - "@proxyymeliii|🇬🇧|111.61"
+      - "@vmess_vless_v2rayng|🇫🇷|141.46"
+      - "@VmessProtocol|🇩🇪|120.89"
+      - "@VmessProtocol|🇩🇪|127.53"
+      - "@VmessProtocol|🇬🇧|unavailable"
+      - "@OutlineVpnOfficial|🇸🇬|512.76"
+      - "@OutlineVpnOfficial|🇮🇷|248.16"
+      - "@yaney_01|🇰🇷|152.19"
+      - "@yaney_01|🇯🇵|125.67"
+      - "@yaney_01|🇰🇷|152.28"
 rules:
   - MATCH,MANUAL
