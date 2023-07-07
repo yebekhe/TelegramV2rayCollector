@@ -32,23 +32,7 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "|@PrivateVPNs|88.83"
-    server: 13.36.67.216
-    port: 22222
-    type: trojan
-    password: telegram-id-privatevpns
-    skip-cert-verify: true
-    sni: trj.rollingnext.co.uk
-    udp: true
-  - name: "|@PrivateVPNs|81.19"
-    server: 18.133.224.178
-    port: 22222
-    type: trojan
-    password: telegram-id-privatevpns
-    skip-cert-verify: true
-    sni: trj.rollingnext.co.uk
-    udp: true
-  - name: "|@PrivateVPNs|88.33"
+  - name: "|@PrivateVPNs|143.35"
     server: 3.10.227.183
     port: 22222
     type: trojan
@@ -56,31 +40,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@oneclickvpnkeys|382.05"
-    server: free-v2ray-panel.devefun.ink
-    port: 1935
-    type: trojan
-    password: fWCdFcWBZ8
-    skip-cert-verify: true
-    sni: ""
-    udp: true
-  - name: "|@ovpn2|104.43"
-    server: us1.chuqiangtou.net
-    port: 4003
-    type: trojan
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    sni: ""
-    udp: true
-  - name: "|@ovpn2|99.87"
-    server: us3.chuqiangtou.net
-    port: 4003
-    type: trojan
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    sni: ""
-    udp: true
-  - name: "|@ConfigsHUB|114.45"
+  - name: "|@PrivateVPNs|171.08"
     server: 16.16.204.147
     port: 22222
     type: trojan
@@ -88,7 +48,15 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@ConfigsHUB|5.84"
+  - name: "|@PrivateVPNs|159.94"
+    server: 16.16.63.180
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@DirectVPN|5.75"
     server: 3.91.230.121
     port: 22222
     type: trojan
@@ -96,7 +64,39 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@yaney_01|253.64"
+  - name: "|@DirectVPN|5.94"
+    server: 34.207.85.149
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@oneclickvpnkeys|246.32"
+    server: free-v2ray-panel.devefun.ink
+    port: 1935
+    type: trojan
+    password: fWCdFcWBZ8
+    skip-cert-verify: true
+    sni: ""
+    udp: true
+  - name: "|@ovpn2|79.1"
+    server: us1.chuqiangtou.net
+    port: 4003
+    type: trojan
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    sni: ""
+    udp: true
+  - name: "|@ovpn2|68.69"
+    server: us3.chuqiangtou.net
+    port: 4003
+    type: trojan
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    sni: ""
+    udp: true
+  - name: "|@yaney_01|226.83"
     server: 152.70.74.66
     port: 443
     type: trojan
@@ -104,7 +104,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@yaney_01|87.21"
+  - name: "|@yaney_01|87.25"
     server: 217.79.181.82
     port: 443
     type: trojan
@@ -112,7 +112,7 @@ proxies:
     skip-cert-verify: true
     sni: downloadde.xn--mes358acgm99l.com
     udp: true
-  - name: "|@yaney_01|68.19"
+  - name: "|@yaney_01|67.64"
     server: 163.123.192.152
     port: 443
     type: trojan
@@ -124,17 +124,17 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - "|@PrivateVPNs|88.83"
-      - "|@PrivateVPNs|81.19"
-      - "|@PrivateVPNs|88.33"
-      - "|@oneclickvpnkeys|382.05"
-      - "|@ovpn2|104.43"
-      - "|@ovpn2|99.87"
-      - "|@ConfigsHUB|114.45"
-      - "|@ConfigsHUB|5.84"
-      - "|@yaney_01|253.64"
-      - "|@yaney_01|87.21"
-      - "|@yaney_01|68.19"
+      - "|@PrivateVPNs|143.35"
+      - "|@PrivateVPNs|171.08"
+      - "|@PrivateVPNs|159.94"
+      - "|@DirectVPN|5.75"
+      - "|@DirectVPN|5.94"
+      - "|@oneclickvpnkeys|246.32"
+      - "|@ovpn2|79.1"
+      - "|@ovpn2|68.69"
+      - "|@yaney_01|226.83"
+      - "|@yaney_01|87.25"
+      - "|@yaney_01|67.64"
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -145,49 +145,49 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|88.83"
-      - "|@PrivateVPNs|81.19"
-      - "|@PrivateVPNs|88.33"
-      - "|@oneclickvpnkeys|382.05"
-      - "|@ovpn2|104.43"
-      - "|@ovpn2|99.87"
-      - "|@ConfigsHUB|114.45"
-      - "|@ConfigsHUB|5.84"
-      - "|@yaney_01|253.64"
-      - "|@yaney_01|87.21"
-      - "|@yaney_01|68.19"
+      - "|@PrivateVPNs|143.35"
+      - "|@PrivateVPNs|171.08"
+      - "|@PrivateVPNs|159.94"
+      - "|@DirectVPN|5.75"
+      - "|@DirectVPN|5.94"
+      - "|@oneclickvpnkeys|246.32"
+      - "|@ovpn2|79.1"
+      - "|@ovpn2|68.69"
+      - "|@yaney_01|226.83"
+      - "|@yaney_01|87.25"
+      - "|@yaney_01|67.64"
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "|@PrivateVPNs|88.83"
-      - "|@PrivateVPNs|81.19"
-      - "|@PrivateVPNs|88.33"
-      - "|@oneclickvpnkeys|382.05"
-      - "|@ovpn2|104.43"
-      - "|@ovpn2|99.87"
-      - "|@ConfigsHUB|114.45"
-      - "|@ConfigsHUB|5.84"
-      - "|@yaney_01|253.64"
-      - "|@yaney_01|87.21"
-      - "|@yaney_01|68.19"
+      - "|@PrivateVPNs|143.35"
+      - "|@PrivateVPNs|171.08"
+      - "|@PrivateVPNs|159.94"
+      - "|@DirectVPN|5.75"
+      - "|@DirectVPN|5.94"
+      - "|@oneclickvpnkeys|246.32"
+      - "|@ovpn2|79.1"
+      - "|@ovpn2|68.69"
+      - "|@yaney_01|226.83"
+      - "|@yaney_01|87.25"
+      - "|@yaney_01|67.64"
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|88.83"
-      - "|@PrivateVPNs|81.19"
-      - "|@PrivateVPNs|88.33"
-      - "|@oneclickvpnkeys|382.05"
-      - "|@ovpn2|104.43"
-      - "|@ovpn2|99.87"
-      - "|@ConfigsHUB|114.45"
-      - "|@ConfigsHUB|5.84"
-      - "|@yaney_01|253.64"
-      - "|@yaney_01|87.21"
-      - "|@yaney_01|68.19"
+      - "|@PrivateVPNs|143.35"
+      - "|@PrivateVPNs|171.08"
+      - "|@PrivateVPNs|159.94"
+      - "|@DirectVPN|5.75"
+      - "|@DirectVPN|5.94"
+      - "|@oneclickvpnkeys|246.32"
+      - "|@ovpn2|79.1"
+      - "|@ovpn2|68.69"
+      - "|@yaney_01|226.83"
+      - "|@yaney_01|87.25"
+      - "|@yaney_01|67.64"
 rules:
   - MATCH,MANUAL
