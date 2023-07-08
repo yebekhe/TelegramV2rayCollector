@@ -32,7 +32,7 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "|@PrivateVPNs|81.41"
+  - name: "|@PrivateVPNs|82.56"
     server: 35.178.165.132
     port: 22222
     type: trojan
@@ -40,7 +40,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@PrivateVPNs|81.69"
+  - name: "|@PrivateVPNs|81.95"
     server: 13.40.45.155
     port: 22222
     type: trojan
@@ -48,7 +48,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@PrivateVPNs|89.58"
+  - name: "|@PrivateVPNs|106.92"
     server: 3.253.202.60
     port: 22222
     type: trojan
@@ -56,7 +56,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@NetAccount|419.62"
+  - name: "|@NetAccount|415.96"
     server: link2.kuaidog004.top
     port: 36542
     type: trojan
@@ -64,7 +64,7 @@ proxies:
     skip-cert-verify: true
     sni: link2.kuaidog004.top
     udp: true
-  - name: "|@ovpn2|93.76"
+  - name: "|@ovpn2|113.2"
     server: us1.chuqiangtou.net
     port: 4003
     type: trojan
@@ -72,7 +72,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@ovpn2|84.42"
+  - name: "|@ovpn2|109.52"
     server: us3.chuqiangtou.net
     port: 4003
     type: trojan
@@ -80,7 +80,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@vpn_tehran|103.61"
+  - name: "|@vpn_tehran|132.94"
     server: free-v2ray-panel.devefun.ink
     port: 1935
     type: trojan
@@ -88,7 +88,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@yaney_01|234.7"
+  - name: "|@yaney_01|222.86"
     server: 152.70.74.66
     port: 443
     type: trojan
@@ -96,7 +96,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@yaney_01|87.11"
+  - name: "|@yaney_01|87.27"
     server: 217.79.181.82
     port: 443
     type: trojan
@@ -104,7 +104,7 @@ proxies:
     skip-cert-verify: true
     sni: downloadde.xn--mes358acgm99l.com
     udp: true
-  - name: "|@yaney_01|69.23"
+  - name: "|@yaney_01|65.79"
     server: 163.123.192.152
     port: 443
     type: trojan
@@ -116,16 +116,16 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - "|@PrivateVPNs|81.41"
-      - "|@PrivateVPNs|81.69"
-      - "|@PrivateVPNs|89.58"
-      - "|@NetAccount|419.62"
-      - "|@ovpn2|93.76"
-      - "|@ovpn2|84.42"
-      - "|@vpn_tehran|103.61"
-      - "|@yaney_01|234.7"
-      - "|@yaney_01|87.11"
-      - "|@yaney_01|69.23"
+      - "|@PrivateVPNs|82.56"
+      - "|@PrivateVPNs|81.95"
+      - "|@PrivateVPNs|106.92"
+      - "|@NetAccount|415.96"
+      - "|@ovpn2|113.2"
+      - "|@ovpn2|109.52"
+      - "|@vpn_tehran|132.94"
+      - "|@yaney_01|222.86"
+      - "|@yaney_01|87.27"
+      - "|@yaney_01|65.79"
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -136,46 +136,46 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|81.41"
-      - "|@PrivateVPNs|81.69"
-      - "|@PrivateVPNs|89.58"
-      - "|@NetAccount|419.62"
-      - "|@ovpn2|93.76"
-      - "|@ovpn2|84.42"
-      - "|@vpn_tehran|103.61"
-      - "|@yaney_01|234.7"
-      - "|@yaney_01|87.11"
-      - "|@yaney_01|69.23"
+      - "|@PrivateVPNs|82.56"
+      - "|@PrivateVPNs|81.95"
+      - "|@PrivateVPNs|106.92"
+      - "|@NetAccount|415.96"
+      - "|@ovpn2|113.2"
+      - "|@ovpn2|109.52"
+      - "|@vpn_tehran|132.94"
+      - "|@yaney_01|222.86"
+      - "|@yaney_01|87.27"
+      - "|@yaney_01|65.79"
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "|@PrivateVPNs|81.41"
-      - "|@PrivateVPNs|81.69"
-      - "|@PrivateVPNs|89.58"
-      - "|@NetAccount|419.62"
-      - "|@ovpn2|93.76"
-      - "|@ovpn2|84.42"
-      - "|@vpn_tehran|103.61"
-      - "|@yaney_01|234.7"
-      - "|@yaney_01|87.11"
-      - "|@yaney_01|69.23"
+      - "|@PrivateVPNs|82.56"
+      - "|@PrivateVPNs|81.95"
+      - "|@PrivateVPNs|106.92"
+      - "|@NetAccount|415.96"
+      - "|@ovpn2|113.2"
+      - "|@ovpn2|109.52"
+      - "|@vpn_tehran|132.94"
+      - "|@yaney_01|222.86"
+      - "|@yaney_01|87.27"
+      - "|@yaney_01|65.79"
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|81.41"
-      - "|@PrivateVPNs|81.69"
-      - "|@PrivateVPNs|89.58"
-      - "|@NetAccount|419.62"
-      - "|@ovpn2|93.76"
-      - "|@ovpn2|84.42"
-      - "|@vpn_tehran|103.61"
-      - "|@yaney_01|234.7"
-      - "|@yaney_01|87.11"
-      - "|@yaney_01|69.23"
+      - "|@PrivateVPNs|82.56"
+      - "|@PrivateVPNs|81.95"
+      - "|@PrivateVPNs|106.92"
+      - "|@NetAccount|415.96"
+      - "|@ovpn2|113.2"
+      - "|@ovpn2|109.52"
+      - "|@vpn_tehran|132.94"
+      - "|@yaney_01|222.86"
+      - "|@yaney_01|87.27"
+      - "|@yaney_01|65.79"
 rules:
   - MATCH,MANUAL
