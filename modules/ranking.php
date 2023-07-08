@@ -27,6 +27,13 @@ function ranking($input, $type)
     $usernames = array_column(array_column($input, "channel"), "username");
     $point_array = array_count_values($usernames);
 
+    foreach ($input as $key => $config){
+        $username_ch = $config['channel']['username'];
+        if((strtotime(tehran_time()) - strtotime($config['time'])) <= 1800){
+            $point_array[$username_ch] += 2 ;
+        }
+    }
+
     if (file_exists("ranking/channel_ranking_" . $type . ".json")) {
         $last_point_array = json_decode(
             file_get_contents("ranking/channel_ranking_" . $type . ".json"),
