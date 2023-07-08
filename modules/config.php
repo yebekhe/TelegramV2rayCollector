@@ -77,12 +77,18 @@ $Types = [
     "iSegaro" => ["vless"],
     "bright_vpn" => ["vless", "ss"],
     "talentvpn" => ["vless"],
-    "proxystore11" => ["vless"],
+    "proxystore11" => ["vless", "vmess", "trojan"],
     "yaney_01" => ["vmess", "trojan", "ss"],
     "rayvps" => ["vless"],
     "free1_vpn" => ["vmess", "vless", "vless"],
     "Parsashonam" => ["vless"],
-    "v2rayngvp" => ["vless", "ss"]
+    "v2rayngvp" => ["vless", "ss"],
+    "Hope_Net" => ["vmess"],
+    "VPNCLOP" => ["vless"],
+    "fnet00" => ["vmess", "vless", "trojan"],
+    "V2pedia" => ["vless"],
+    "molovpn" => ["vless"],
+    "melov2ray" => ["vless"],
 ];
 
 ?>
