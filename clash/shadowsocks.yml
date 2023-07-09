@@ -5,54 +5,54 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: "@free4allVPN|🇬🇧|113.7", server: 212.102.53.79, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "@free4allVPN|🇬🇧|113.55", server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "@proxyymeliii|🇬🇧|110.56", server: 51.140.250.38, port: 48641, type: ss, cipher: chacha20-ietf-poly1305, password: WSib9hjmTLqkSxDaxZWSHf, udp: true}
-  - {name: "@proxyymeliii|🇳🇱|111.24", server: 40.113.96.242, port: 25471, type: ss, cipher: chacha20-ietf-poly1305, password: GNpCRa4FjJvLZXreuSBXyf, udp: true}
-  - {name: "@proxyymeliii|🇳🇱|112.7", server: 40.113.100.128, port: 34403, type: ss, cipher: chacha20-ietf-poly1305, password: VmKxENhgbXfH467wTRWxOX, udp: true}
-  - {name: "@vmess_vless_v2rayng|🇵🇱|146.52", server: 51.77.53.200, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: "@vmess_vless_v2rayng|🇫🇷|149.47", server: 54.36.174.181, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "@VmessProtocol|🇬🇧|105.63", server: 40.120.63.151, port: 18295, type: ss, cipher: chacha20-ietf-poly1305, password: 9FojhKHRjBbQVBr0Q35Zr5, udp: true}
-  - {name: "@OutlineVpnOfficial|🇬🇧|121.32", server: ak1801.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "@yaney_01|🇰🇷|152.36", server: 43.201.19.172, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "@yaney_01|🇯🇵|124.65", server: 3.112.73.233, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "@yaney_01|🇰🇷|152.28", server: 43.202.49.224, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "@free4allVPN|🇬🇧|131.55", server: 212.102.53.79, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "@free4allVPN|🇬🇧|131.61", server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "@proxyymeliii|🇬🇧|144.93", server: 51.140.250.38, port: 48641, type: ss, cipher: chacha20-ietf-poly1305, password: WSib9hjmTLqkSxDaxZWSHf, udp: true}
+  - {name: "@proxyymeliii|🇳🇱|133.42", server: 40.113.96.242, port: 25471, type: ss, cipher: chacha20-ietf-poly1305, password: GNpCRa4FjJvLZXreuSBXyf, udp: true}
+  - {name: "@proxyymeliii|🇳🇱|133.36", server: 40.113.100.128, port: 34403, type: ss, cipher: chacha20-ietf-poly1305, password: VmKxENhgbXfH467wTRWxOX, udp: true}
+  - {name: "@vmess_vless_v2rayng|🇵🇱|181.52", server: 51.77.53.200, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: "@vmess_vless_v2rayng|🇫🇷|180.3", server: 54.36.174.181, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "@VmessProtocol|🇬🇧|127.26", server: 40.120.63.151, port: 18295, type: ss, cipher: chacha20-ietf-poly1305, password: 9FojhKHRjBbQVBr0Q35Zr5, udp: true}
+  - {name: "@OutlineVpnOfficial|🇬🇧|139.64", server: ak1801.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "@yaney_01|🇰🇷|134.67", server: 43.201.19.172, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "@yaney_01|🇯🇵|108.08", server: 3.112.73.233, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "@yaney_01|🇰🇷|134.52", server: 43.202.49.224, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
 proxy-groups:
   - name: 🚀 MANUAL
     type: select
     proxies:
       - ♻️ AUTO SELECT
       - DIRECT
-      - "@free4allVPN|🇬🇧|113.7"
-      - "@free4allVPN|🇬🇧|113.55"
-      - "@proxyymeliii|🇬🇧|110.56"
-      - "@proxyymeliii|🇳🇱|111.24"
-      - "@proxyymeliii|🇳🇱|112.7"
-      - "@vmess_vless_v2rayng|🇵🇱|146.52"
-      - "@vmess_vless_v2rayng|🇫🇷|149.47"
-      - "@VmessProtocol|🇬🇧|105.63"
-      - "@OutlineVpnOfficial|🇬🇧|121.32"
-      - "@yaney_01|🇰🇷|152.36"
-      - "@yaney_01|🇯🇵|124.65"
-      - "@yaney_01|🇰🇷|152.28"
+      - "@free4allVPN|🇬🇧|131.55"
+      - "@free4allVPN|🇬🇧|131.61"
+      - "@proxyymeliii|🇬🇧|144.93"
+      - "@proxyymeliii|🇳🇱|133.42"
+      - "@proxyymeliii|🇳🇱|133.36"
+      - "@vmess_vless_v2rayng|🇵🇱|181.52"
+      - "@vmess_vless_v2rayng|🇫🇷|180.3"
+      - "@VmessProtocol|🇬🇧|127.26"
+      - "@OutlineVpnOfficial|🇬🇧|139.64"
+      - "@yaney_01|🇰🇷|134.67"
+      - "@yaney_01|🇯🇵|108.08"
+      - "@yaney_01|🇰🇷|134.52"
   - name: ♻️ AUTO SELECT
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@free4allVPN|🇬🇧|113.7"
-      - "@free4allVPN|🇬🇧|113.55"
-      - "@proxyymeliii|🇬🇧|110.56"
-      - "@proxyymeliii|🇳🇱|111.24"
-      - "@proxyymeliii|🇳🇱|112.7"
-      - "@vmess_vless_v2rayng|🇵🇱|146.52"
-      - "@vmess_vless_v2rayng|🇫🇷|149.47"
-      - "@VmessProtocol|🇬🇧|105.63"
-      - "@OutlineVpnOfficial|🇬🇧|121.32"
-      - "@yaney_01|🇰🇷|152.36"
-      - "@yaney_01|🇯🇵|124.65"
-      - "@yaney_01|🇰🇷|152.28"
+      - "@free4allVPN|🇬🇧|131.55"
+      - "@free4allVPN|🇬🇧|131.61"
+      - "@proxyymeliii|🇬🇧|144.93"
+      - "@proxyymeliii|🇳🇱|133.42"
+      - "@proxyymeliii|🇳🇱|133.36"
+      - "@vmess_vless_v2rayng|🇵🇱|181.52"
+      - "@vmess_vless_v2rayng|🇫🇷|180.3"
+      - "@VmessProtocol|🇬🇧|127.26"
+      - "@OutlineVpnOfficial|🇬🇧|139.64"
+      - "@yaney_01|🇰🇷|134.67"
+      - "@yaney_01|🇯🇵|108.08"
+      - "@yaney_01|🇰🇷|134.52"
   - name: 🎯 GLOBAL DIRECT
     type: select
     proxies:
@@ -70,18 +70,18 @@ proxy-groups:
       - 🚀 MANUAL
       - 🎯 GLOBAL DIRECT
       - ♻️ AUTO SELECT
-      - "@free4allVPN|🇬🇧|113.7"
-      - "@free4allVPN|🇬🇧|113.55"
-      - "@proxyymeliii|🇬🇧|110.56"
-      - "@proxyymeliii|🇳🇱|111.24"
-      - "@proxyymeliii|🇳🇱|112.7"
-      - "@vmess_vless_v2rayng|🇵🇱|146.52"
-      - "@vmess_vless_v2rayng|🇫🇷|149.47"
-      - "@VmessProtocol|🇬🇧|105.63"
-      - "@OutlineVpnOfficial|🇬🇧|121.32"
-      - "@yaney_01|🇰🇷|152.36"
-      - "@yaney_01|🇯🇵|124.65"
-      - "@yaney_01|🇰🇷|152.28"
+      - "@free4allVPN|🇬🇧|131.55"
+      - "@free4allVPN|🇬🇧|131.61"
+      - "@proxyymeliii|🇬🇧|144.93"
+      - "@proxyymeliii|🇳🇱|133.42"
+      - "@proxyymeliii|🇳🇱|133.36"
+      - "@vmess_vless_v2rayng|🇵🇱|181.52"
+      - "@vmess_vless_v2rayng|🇫🇷|180.3"
+      - "@VmessProtocol|🇬🇧|127.26"
+      - "@OutlineVpnOfficial|🇬🇧|139.64"
+      - "@yaney_01|🇰🇷|134.67"
+      - "@yaney_01|🇯🇵|108.08"
+      - "@yaney_01|🇰🇷|134.52"
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 GLOBAL DIRECT
  - DOMAIN-SUFFIX,ip6-localhost,🎯 GLOBAL DIRECT
