@@ -33,8 +33,9 @@ function ranking($input, $type)
             $point_array[$username_ch] += 2 ;
         } elseif((strtotime(tehran_time()) - strtotime($config['time'])) <= 3600){
             $point_array[$username_ch] += 1 ;
-        }
-         elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 172800){
+        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 86400){
+            $point_array[$username_ch] -= 3 ;
+        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 172800){
             $point_array[$username_ch] -= 4 ;
         } 
         
