@@ -31,8 +31,15 @@ function ranking($input, $type)
         $username_ch = $config['channel']['username'];
         if((strtotime(tehran_time()) - strtotime($config['time'])) <= 1800){
             $point_array[$username_ch] += 2 ;
-        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 172800){
+        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) <= 3600){
+            $point_array[$username_ch] += 1 ;
+        }
+         elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 172800){
             $point_array[$username_ch] -= 4 ;
+        } 
+        
+        if($config['type'] === "reality"){
+            $point_array[$username_ch] += 1 ;
         }
     }
 
