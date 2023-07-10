@@ -32,15 +32,7 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "|@PrivateVPNs|95.42"
-    server: 3.9.16.169
-    port: 22222
-    type: trojan
-    password: telegram-id-privatevpns
-    skip-cert-verify: true
-    sni: trj.rollingnext.co.uk
-    udp: true
-  - name: "|@PrivateVPNs|67.71"
+  - name: "|@PrivateVPNs|128"
     server: 52.214.157.185
     port: 22222
     type: trojan
@@ -48,7 +40,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@PrivateVPNs|67.73"
+  - name: "|@PrivateVPNs|100"
     server: 34.244.244.172
     port: 22222
     type: trojan
@@ -56,7 +48,23 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@oneclickvpnkeys|100.77"
+  - name: "|@PrivateVPNs|138"
+    server: 13.53.38.165
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@DirectVPN|33"
+    server: 54.243.6.25
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "|@oneclickvpnkeys|107"
     server: 34.242.92.35
     port: 22222
     type: trojan
@@ -64,7 +72,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@oneclickvpnkeys|68.57"
+  - name: "|@oneclickvpnkeys|42"
     server: 163.123.192.151
     port: 443
     type: trojan
@@ -72,7 +80,7 @@ proxies:
     skip-cert-verify: true
     sni: downloadus.xn--mes358acgm99l.com
     udp: true
-  - name: "|@oneclickvpnkeys|68.38"
+  - name: "|@oneclickvpnkeys|41"
     server: 163.123.192.152
     port: 443
     type: trojan
@@ -80,7 +88,7 @@ proxies:
     skip-cert-verify: true
     sni: downloadus.xn--mes358acgm99l.com
     udp: true
-  - name: "|@V2RayTz|50.08"
+  - name: "|@V2RayTz|56"
     server: 35.183.4.147
     port: 22222
     type: trojan
@@ -88,7 +96,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "|@ovpn2|126.3"
+  - name: "|@ovpn2|86"
     server: us1.chuqiangtou.net
     port: 4003
     type: trojan
@@ -96,7 +104,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@ovpn2|85.78"
+  - name: "|@ovpn2|92"
     server: us3.chuqiangtou.net
     port: 4003
     type: trojan
@@ -104,7 +112,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@vpn_tehran|147.16"
+  - name: "|@vpn_tehran|203"
     server: free-v2ray-panel.devefun.ink
     port: 1935
     type: trojan
@@ -112,7 +120,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@yaney_01|237.64"
+  - name: "|@yaney_01|243"
     server: 152.70.74.66
     port: 443
     type: trojan
@@ -120,7 +128,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "|@yaney_01|83.58"
+  - name: "|@yaney_01|116"
     server: 217.79.181.82
     port: 443
     type: trojan
@@ -128,7 +136,7 @@ proxies:
     skip-cert-verify: true
     sni: downloadde.xn--mes358acgm99l.com
     udp: true
-  - name: "|@yaney_01|68.54"
+  - name: "|@yaney_01|41"
     server: 163.123.192.152
     port: 443
     type: trojan
@@ -140,19 +148,20 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - "|@PrivateVPNs|95.42"
-      - "|@PrivateVPNs|67.71"
-      - "|@PrivateVPNs|67.73"
-      - "|@oneclickvpnkeys|100.77"
-      - "|@oneclickvpnkeys|68.57"
-      - "|@oneclickvpnkeys|68.38"
-      - "|@V2RayTz|50.08"
-      - "|@ovpn2|126.3"
-      - "|@ovpn2|85.78"
-      - "|@vpn_tehran|147.16"
-      - "|@yaney_01|237.64"
-      - "|@yaney_01|83.58"
-      - "|@yaney_01|68.54"
+      - "|@PrivateVPNs|128"
+      - "|@PrivateVPNs|100"
+      - "|@PrivateVPNs|138"
+      - "|@DirectVPN|33"
+      - "|@oneclickvpnkeys|107"
+      - "|@oneclickvpnkeys|42"
+      - "|@oneclickvpnkeys|41"
+      - "|@V2RayTz|56"
+      - "|@ovpn2|86"
+      - "|@ovpn2|92"
+      - "|@vpn_tehran|203"
+      - "|@yaney_01|243"
+      - "|@yaney_01|116"
+      - "|@yaney_01|41"
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -163,55 +172,58 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|95.42"
-      - "|@PrivateVPNs|67.71"
-      - "|@PrivateVPNs|67.73"
-      - "|@oneclickvpnkeys|100.77"
-      - "|@oneclickvpnkeys|68.57"
-      - "|@oneclickvpnkeys|68.38"
-      - "|@V2RayTz|50.08"
-      - "|@ovpn2|126.3"
-      - "|@ovpn2|85.78"
-      - "|@vpn_tehran|147.16"
-      - "|@yaney_01|237.64"
-      - "|@yaney_01|83.58"
-      - "|@yaney_01|68.54"
+      - "|@PrivateVPNs|128"
+      - "|@PrivateVPNs|100"
+      - "|@PrivateVPNs|138"
+      - "|@DirectVPN|33"
+      - "|@oneclickvpnkeys|107"
+      - "|@oneclickvpnkeys|42"
+      - "|@oneclickvpnkeys|41"
+      - "|@V2RayTz|56"
+      - "|@ovpn2|86"
+      - "|@ovpn2|92"
+      - "|@vpn_tehran|203"
+      - "|@yaney_01|243"
+      - "|@yaney_01|116"
+      - "|@yaney_01|41"
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "|@PrivateVPNs|95.42"
-      - "|@PrivateVPNs|67.71"
-      - "|@PrivateVPNs|67.73"
-      - "|@oneclickvpnkeys|100.77"
-      - "|@oneclickvpnkeys|68.57"
-      - "|@oneclickvpnkeys|68.38"
-      - "|@V2RayTz|50.08"
-      - "|@ovpn2|126.3"
-      - "|@ovpn2|85.78"
-      - "|@vpn_tehran|147.16"
-      - "|@yaney_01|237.64"
-      - "|@yaney_01|83.58"
-      - "|@yaney_01|68.54"
+      - "|@PrivateVPNs|128"
+      - "|@PrivateVPNs|100"
+      - "|@PrivateVPNs|138"
+      - "|@DirectVPN|33"
+      - "|@oneclickvpnkeys|107"
+      - "|@oneclickvpnkeys|42"
+      - "|@oneclickvpnkeys|41"
+      - "|@V2RayTz|56"
+      - "|@ovpn2|86"
+      - "|@ovpn2|92"
+      - "|@vpn_tehran|203"
+      - "|@yaney_01|243"
+      - "|@yaney_01|116"
+      - "|@yaney_01|41"
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "|@PrivateVPNs|95.42"
-      - "|@PrivateVPNs|67.71"
-      - "|@PrivateVPNs|67.73"
-      - "|@oneclickvpnkeys|100.77"
-      - "|@oneclickvpnkeys|68.57"
-      - "|@oneclickvpnkeys|68.38"
-      - "|@V2RayTz|50.08"
-      - "|@ovpn2|126.3"
-      - "|@ovpn2|85.78"
-      - "|@vpn_tehran|147.16"
-      - "|@yaney_01|237.64"
-      - "|@yaney_01|83.58"
-      - "|@yaney_01|68.54"
+      - "|@PrivateVPNs|128"
+      - "|@PrivateVPNs|100"
+      - "|@PrivateVPNs|138"
+      - "|@DirectVPN|33"
+      - "|@oneclickvpnkeys|107"
+      - "|@oneclickvpnkeys|42"
+      - "|@oneclickvpnkeys|41"
+      - "|@V2RayTz|56"
+      - "|@ovpn2|86"
+      - "|@ovpn2|92"
+      - "|@vpn_tehran|203"
+      - "|@yaney_01|243"
+      - "|@yaney_01|116"
+      - "|@yaney_01|41"
 rules:
   - MATCH,MANUAL
