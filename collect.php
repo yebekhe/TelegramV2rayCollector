@@ -6,18 +6,6 @@ include "modules/config.php";
 include "modules/clash.php";
 include "modules/ranking.php";
 
-function get_reality($input)
-{
-    $array = explode("\n", $input);
-    $output = "";
-    foreach ($array as $item) {
-        if (stripos($item, "reality")) {
-            $output .= $output === "" ? $item : "\n$item";
-        }
-    }
-    return $output;
-}
-
 function compare_time($a, $b)
 {
     $a_time = strtotime($a->time);
