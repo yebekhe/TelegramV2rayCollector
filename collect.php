@@ -201,3 +201,32 @@ file_put_contents(
         "meta"
     )
 );
+
+file_put_contents(
+    "surfboard/mix",
+    convert_to_clash(
+        "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64",
+         "surfboard"
+    )
+);
+file_put_contents(
+    "surfboard/vmess",
+    convert_to_clash(
+        "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64",
+        "surfboard"
+    )
+);
+file_put_contents(
+    "surfboard/trojan",
+    convert_to_clash(
+        "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64",
+        "surfboard"
+    )
+);
+file_put_contents(
+    "surfboard/shadowsocks",
+    convert_to_clash(
+        "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks_base64",
+        "surfboard"
+    )
+);
