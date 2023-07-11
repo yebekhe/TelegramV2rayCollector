@@ -67,7 +67,8 @@ function get_config($channel, $type)
                             ? $the_config["host"]
                             : $the_config["add"]);
                     $port = $the_config["port"];
-                    if (ping($ip, $port) !== "unavailable") {
+                    @$ping_data = ping($ip, $port);
+                    if ($ping_data !== "unavailable") {
                         $ip_info = ip_info($ip);
                         if (isset($ip_info["country"])) {
                             $location = $ip_info["country"];
@@ -76,7 +77,7 @@ function get_config($channel, $type)
                             $flag = "🚩";
                         }
                         $the_config["ps"] =
-                            "@" . $channel . "|" . $flag . "|" . ping($ip, $port);
+                            "@" . $channel . "|" . $flag . "|" . $ping_data;
                         if (count($the_config) !== 1) {
                             $final_config = encode_vmess($the_config);
                             $final_data[$key]["channel"]['username'] = $channel;
@@ -100,7 +101,8 @@ function get_config($channel, $type)
                             ? $the_config["params"]["host"]
                             : $the_config["hostname"]);
                     $port = $the_config["port"];
-                    if (ping($ip, $port) !== "unavailable") {
+                    @$ping_data = ping($ip, $port);
+                    if ($ping_data !== "unavailable") {
                         $ip_info = ip_info($ip);
                         if (isset($ip_info["country"])) {
                             $location = $ip_info["country"];
@@ -116,7 +118,7 @@ function get_config($channel, $type)
                                 "|" .
                                 $flag .
                                 "|" .
-                                ping($ip, $port);
+                                $ping_data;
                             $type = "reality";
                         } else {
                             $the_config["hash"] =
@@ -140,7 +142,8 @@ function get_config($channel, $type)
                             ? $the_config["params"]["host"]
                             : $the_config["hostname"]);
                     $port = $the_config["port"];
-                    if (ping($ip, $port) !== "unavailable") {
+                    @$ping_data = ping($ip, $port);
+                    if ($ping_data !== "unavailable") {
                         $ip_info = ip_info($ip);
                         if (isset($ip_info["country"])) {
                             $location = $ip_info["country"];
@@ -149,7 +152,7 @@ function get_config($channel, $type)
                             $flag = "🚩";
                         }
                         $the_config["hash"] =
-                            $flag . "|@" . $channel . "|" . ping($ip, $port);
+                            $flag . "|@" . $channel . "|" . $ping_data;
                         $final_config = buildProxyUrl($the_config);
                         $final_data[$key]["channel"]['username'] = $channel;
                         $final_data[$key]["channel"]['title'] = $channels_assets[$channel]['title'];
@@ -164,7 +167,8 @@ function get_config($channel, $type)
                     $the_config = ParseShadowsocks($type . "://" . $config);
                     $ip = $the_config["server_address"];
                     $port = $the_config["server_port"];
-                    if (ping($ip, $port) !== "unavailable") {
+                    @$ping_data = ping($ip, $port);
+                    if ($ping_data !== "unavailable") {
                         $ip_info = ip_info($ip);
                         if (isset($ip_info["country"])) {
                             $location = $ip_info["country"];
@@ -173,7 +177,7 @@ function get_config($channel, $type)
                             $flag = "🚩";
                         }
                         $the_config["name"] =
-                            "@" . $channel . "|" . $flag . "|" . ping($ip, $port);
+                            "@" . $channel . "|" . $flag . "|" . $ping_data;
                         $final_config = BuildShadowsocks($the_config);
                         $final_data[$key]["channel"]['username'] = $channel;
                         $final_data[$key]["channel"]['title'] = $channels_assets[$channel]['title'];
