@@ -152,7 +152,7 @@ function get_config($channel, $type)
                             $flag = "🚩";
                         }
                         $the_config["hash"] =
-                            $flag . "|@" . $channel . "|" . $ping_data;
+                            "@" . $channel . "|" . $flag . "|" . $ping_data;
                         $final_config = buildProxyUrl($the_config);
                         $final_data[$key]["channel"]['username'] = $channel;
                         $final_data[$key]["channel"]['title'] = $channels_assets[$channel]['title'];
