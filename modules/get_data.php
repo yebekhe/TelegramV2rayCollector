@@ -53,7 +53,7 @@ function get_config($channel, $type)
     $key_limit = count($configs[1]) - 4;
     foreach ($configs[1] as $key => $config) {
         if ($key >= $key_limit) {
-            if (stripos($config, "…") !== false) {
+            if (stripos($config, "…") !== false or stripos($config, "...") !== false) {
                 null;
             } else {
                 if (strpos($config, "<br/>") !== false) {
