@@ -6,16 +6,6 @@ include "modules/config.php";
 include "modules/clash.php";
 include "modules/ranking.php";
 
-function compare_time($a, $b)
-{
-    $a_time = strtotime($a->time);
-    $b_time = strtotime($b->time);
-    if ($a_time == $b_time) {
-        return 0;
-    }
-    return $a_time > $b_time ? -1 : 1;
-}
-
 $mix_data = [];
 $vmess_data = [];
 $trojan_data = [];
