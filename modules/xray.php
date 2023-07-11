@@ -84,4 +84,17 @@ function remove_duplicate_xray($input, $type)
     return $output;
 }
 
+
+function get_reality($input)
+{
+    $array = explode("\n", $input);
+    $output = "";
+    foreach ($array as $item) {
+        if (stripos($item, "reality")) {
+            $output .= $output === "" ? $item : "\n$item";
+        }
+    }
+    return $output;
+}
+
 ?>
