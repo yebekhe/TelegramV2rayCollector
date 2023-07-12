@@ -18,12 +18,14 @@ function remove_duplicate_vmess($input)
     $array = explode("\n", $input);
     foreach ($array as $item) {
         $parts = decode_vmess($item);
-        $part_ps = $parts["ps"];
-        unset($parts["ps"]);
-        if (count($parts) >= 3) {
-            ksort($parts);
-            $part_serialize = serialize($parts);
-            $result[$part_serialize][] = $part_ps ?? "";
+        if ($parts !== NULL) {
+            $part_ps = $parts["ps"];
+            unset($parts["ps"]);
+            if (count($parts) >= 3) {
+                ksort($parts);
+                $part_serialize = serialize($parts);
+                $result[$part_serialize][] = $part_ps ?? "";
+            }
         }
     }
     $finalResult = [];
