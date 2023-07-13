@@ -89,6 +89,9 @@ $Types = [
     "V2pedia" => ["vless"],
     "molovpn" => ["vless"],
     "melov2ray" => ["vless"],
+    "polproxy" => ["vless"],
+    "Outlinev2rayNG" => ["vless"],
+    "iP_CF" => ["vless"]
 ];
 
 ?>
