@@ -55,7 +55,7 @@ function get_config($channel, $type)
     // Extract configurations based on the pattern
     preg_match_all($patern_config, $get, $configs);
     $final_data = [];
-    $key_limit = count($configs[1]) - 4;
+    $key_limit = count($configs[1]) - 3;
 
     // Iterate through each configuration
     foreach ($configs[1] as $key => $config) {
