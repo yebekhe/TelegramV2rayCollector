@@ -51,12 +51,6 @@ function ranking($input, $type)
         if($config['type'] === "reality"){
             $point_array[$username_ch] += 4 ;
         }
-
-        if((strtotime(tehran_time()) - strtotime($config['time'])) >= 86400){
-            $point_array[$username_ch] -= 3 ;
-        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 172800){
-            $point_array[$username_ch] -= 4 ;
-        } 
     }
 
     if (file_exists("ranking/channel_ranking_" . $type . ".json")) {
