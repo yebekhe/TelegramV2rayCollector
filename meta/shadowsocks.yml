@@ -95,6 +95,13 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LQzrOVLeO5yU9VoZWVxOE5
     udp: true
+  - name: _KR_韩国
+    server: 43.202.58.144
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
@@ -108,6 +115,7 @@ proxy-groups:
       - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - _KR_韩国
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -127,6 +135,7 @@ proxy-groups:
       - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - _KR_韩国
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -142,6 +151,7 @@ proxy-groups:
       - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - _KR_韩国
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
@@ -156,5 +166,6 @@ proxy-groups:
       - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - _KR_韩国
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
