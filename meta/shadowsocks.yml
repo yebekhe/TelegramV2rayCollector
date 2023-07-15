@@ -74,13 +74,6 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 9FojhKHRjBbQVBr0Q35Zr5
     udp: true
-  - name: www.outline.network (SG)
-    server: ak1803.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 443
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 4Hub2f9JyhECyAq2Opm0NS
-    udp: true
   - name: www.outline.network (US)
     server: ak1804.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 8090
@@ -94,6 +87,13 @@ proxies:
     type: ss
     cipher: chacha20-ietf-poly1305
     password: LQzrOVLeO5yU9VoZWVxOE5
+    udp: true
+  - name: www.outline.network (DE)
+    server: ak1806.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 24576
+    type: ss
+    cipher: aes-256-gcm
+    password: VdaItKYmFf
     udp: true
   - name: _KR_韩国
     server: 43.202.58.144
@@ -112,9 +112,9 @@ proxy-groups:
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
       - "@VmessProtocol | برترین کانال سرور v2ray"
-      - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
       - LOAD-BALANCE
       - BEST-PING
@@ -132,9 +132,9 @@ proxy-groups:
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
       - "@VmessProtocol | برترین کانال سرور v2ray"
-      - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
   - name: BEST-PING
     type: url-test
@@ -148,9 +148,9 @@ proxy-groups:
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
       - "@VmessProtocol | برترین کانال سرور v2ray"
-      - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
   - name: FALLBACK
     type: fallback
@@ -163,9 +163,9 @@ proxy-groups:
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
       - "@VmessProtocol | برترین کانال سرور v2ray"
-      - www.outline.network (SG)
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
