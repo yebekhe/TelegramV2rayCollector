@@ -95,6 +95,13 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LQzrOVLeO5yU9VoZWVxOE5
     udp: true
+  - name: www.outline.network (DE)
+    server: ak1806.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 24576
+    type: ss
+    cipher: aes-256-gcm
+    password: VdaItKYmFf
+    udp: true
   - name: _KR_韩国
     server: 43.202.58.144
     port: 443
@@ -115,6 +122,7 @@ proxy-groups:
       - "@VmessProtocol | برترین کانال سرور v2ray"
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
       - LOAD-BALANCE
       - BEST-PING
@@ -135,6 +143,7 @@ proxy-groups:
       - "@VmessProtocol | برترین کانال سرور v2ray"
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
   - name: BEST-PING
     type: url-test
@@ -151,6 +160,7 @@ proxy-groups:
       - "@VmessProtocol | برترین کانال سرور v2ray"
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
   - name: FALLBACK
     type: fallback
@@ -166,6 +176,7 @@ proxy-groups:
       - "@VmessProtocol | برترین کانال سرور v2ray"
       - www.outline.network (US)
       - www.outline.network (NL)
+      - www.outline.network (DE)
       - _KR_韩国
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
