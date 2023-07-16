@@ -94,4 +94,8 @@ $Types = [
     "iP_CF" => ["vless"]
 ];
 
+$donated_subscription = [
+    "https://api.yebekhe.rf.gd/donate/donated_servers/donated_server.json"
+]
+
 ?>
