@@ -71,7 +71,7 @@ foreach ($Types as $key => $type_array) {
 }
 
 $base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
-$openLink_url = "https://5r3f89-8080.csb.app/?url="
+$openLink_url = "https://5r3f89-8080.csb.app/?url=";
 
 $processed_subscription = [];
 $usernames = [];
