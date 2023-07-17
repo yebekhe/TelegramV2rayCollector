@@ -67,13 +67,6 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: Qiz9xWRGKG1Lz11yu6D3nm
     udp: true
-  - name: www.outline.network (NL)
-    server: ak1805.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 443
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: LQzrOVLeO5yU9VoZWVxOE5
-    udp: true
   - name: www.outline.network (DE)
     server: ak1806.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 24576
@@ -87,6 +80,13 @@ proxies:
     type: ss
     cipher: chacha20-ietf-poly1305
     password: MWiIVYCyO8FfybKWhjt9Sz
+    udp: true
+  - name: www.outline.network (AU)
+    server: ak1808.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 443
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: YUWX6COLZYmaHlUGiKwDaN
     udp: true
   - name: _KR_韩国
     server: 43.202.58.144
@@ -104,9 +104,9 @@ proxy-groups:
       - "@FNET00 🇬🇧"
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
-      - www.outline.network (NL)
       - www.outline.network (DE)
       - www.outline.network (IN)
+      - www.outline.network (AU)
       - _KR_韩国
       - LOAD-BALANCE
       - BEST-PING
@@ -123,9 +123,9 @@ proxy-groups:
       - "@FNET00 🇬🇧"
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
-      - www.outline.network (NL)
       - www.outline.network (DE)
       - www.outline.network (IN)
+      - www.outline.network (AU)
       - _KR_韩国
   - name: BEST-PING
     type: url-test
@@ -138,9 +138,9 @@ proxy-groups:
       - "@FNET00 🇬🇧"
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
-      - www.outline.network (NL)
       - www.outline.network (DE)
       - www.outline.network (IN)
+      - www.outline.network (AU)
       - _KR_韩国
   - name: FALLBACK
     type: fallback
@@ -152,9 +152,9 @@ proxy-groups:
       - "@FNET00 🇬🇧"
       - "@vless_new | تلگرام عضو بشید"
       - "@vless_new | تلگرام عضو بشید 2"
-      - www.outline.network (NL)
       - www.outline.network (DE)
       - www.outline.network (IN)
+      - www.outline.network (AU)
       - _KR_韩国
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
