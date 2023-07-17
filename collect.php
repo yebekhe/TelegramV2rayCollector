@@ -71,36 +71,35 @@ foreach ($Types as $key => $type_array) {
 }
 
 $base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
-$openLink_url = "https://5r3f89-8080.csb.app/?url=";
 
 $processed_subscription = [];
 $usernames = [];
 foreach ($donated_subscription as $url){
-    $usernames = json_decode(file_get_contents($openLink_url . $url), true);
+    $usernames = json_decode(file_get_contents($url), true);
     foreach ($usernames as $username){
-        $subscription_data = file_get_contents($openLink_url . $base_donated_url . $username);
+        $subscription_data = file_get_contents($base_donated_url . $username);
         $processed_subscription = process_subscription($subscription_data, $username);
-        foreach ($processed_subscription as $key => $data){
-            switch ($key){
+        foreach ($processed_subscription as $donated_type => $donated_data){
+            switch ($donated_type){
                 case "vmess" :
                     $vmess_data = array_merge(
                         $vmess_data,
-                        $data
+                        $donated_data
                     );
                 case "vless" :
                     $vless_data = array_merge(
                         $vless_data,
-                        $data
+                        $donated_data
                     );
                 case "ss" :
                     $shadowsocks_data = array_merge(
                         $shadowsocks_data,
-                        $data
+                        $donated_data
                     );
                 case "trojan" :
                     $trojan_data = array_merge(
                         $trojan_data,
-                        $data
+                        $donated_data
                     );
             }
         }
