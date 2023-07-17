@@ -82,25 +82,25 @@ foreach ($donated_subscription as $url){
         if (array_key_exists("vmess", $processed_subscription)){
             $vmess_data = array_merge(
                 $vmess_data,
-                $processed_subscription['vmess'];
+                $processed_subscription['vmess']
             );
         }
         if (array_key_exists("vless", $processed_subscription)){
             $vless_data = array_merge(
                 $vless_data,
-                $processed_subscription['vless'];
+                $processed_subscription['vless']
             );
         }
         if (array_key_exists("ss", $processed_subscription)){
             $shadowsocks_data = array_merge(
                 $shadowsocks_data,
-                $processed_subscription['ss'];
+                $processed_subscription['ss']
             );
         }
         if (array_key_exists("trojan", $processed_subscription)){
             $trojan_data = array_merge(
                 $trojan_data,
-                $processed_subscription['trojan'];
+                $processed_subscription['trojan']
             );
         }
         
