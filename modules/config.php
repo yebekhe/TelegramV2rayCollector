@@ -24,7 +24,6 @@ $Types = [
     "v2rayngvpn" => ["vless"],
     "vpn_ioss" => ["vmess"],
     "v2freevpn" => ["vless"],
-    "customv2ray" => ["vmess", "vless"],
     "FalconPolV2rayNG" => ["vless"],
     "v2rayNGNeT" => ["vless"],
     "ShadowProxy66" => ["vmess", "vless"],
