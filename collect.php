@@ -70,6 +70,43 @@ foreach ($Types as $key => $type_array) {
     }
 }
 
+$base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
+
+$processed_subscription = [];
+$usernames = [];
+foreach ($donated_subscription as $url){
+    $usernames = json_decode(file_get_contents($url), true);
+    foreach ($usernames as $username){
+        $subscription_data = file_get_contents($base_donated_url . $username);
+        $processed_subscription = process_subscription($subscription_data, $username);
+        if (array_key_exists("vmess", $processed_subscription)){
+            $vmess_data = array_merge(
+                $vmess_data,
+                $processed_subscription['vmess'];
+            );
+        }
+        if (array_key_exists("vless", $processed_subscription)){
+            $vless_data = array_merge(
+                $vless_data,
+                $processed_subscription['vless'];
+            );
+        }
+        if (array_key_exists("ss", $processed_subscription)){
+            $shadowsocks_data = array_merge(
+                $shadowsocks_data,
+                $processed_subscription['ss'];
+            );
+        }
+        if (array_key_exists("trojan", $processed_subscription)){
+            $trojan_data = array_merge(
+                $trojan_data,
+                $processed_subscription['trojan'];
+            );
+        }
+        
+    }
+}
+
 // Extract the "config" value from each object in $vmess_data and store it in $vmess_array
 $vmess_array = array_map(function ($object) {
     return $object["config"];
