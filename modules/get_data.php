@@ -310,7 +310,7 @@ function process_subscription($input, $channel)
             @$ping_data = ping($ip, $port);
 
             // If ping data is available
-            if ($ping_data !== "unavailable") {
+         //   if ($ping_data !== "unavailable") {
                 // Get IP information (country) and flag
                 $ip_info = ip_info($ip);
                 if (isset($ip_info["country"])) {
@@ -345,7 +345,7 @@ function process_subscription($input, $channel)
                     "time"
                 ] = tehran_time();
                 $array_helper_vmess++;
-            }
+        //    }
         } elseif (substr($config, 0, 8) === "vless://") {
             // Parse the vless configuration
             $the_config = parseProxyUrl($config, "vless");
@@ -365,7 +365,7 @@ function process_subscription($input, $channel)
             @$ping_data = ping($ip, $port);
 
             // If ping data is available
-            if ($ping_data !== "unavailable") {
+            //if ($ping_data !== "unavailable") {
                 // Get IP information (country) and flag
                 $ip_info = ip_info($ip);
                 if (isset($ip_info["country"])) {
@@ -413,7 +413,7 @@ function process_subscription($input, $channel)
                     "time"
                 ] = tehran_time();
                 $array_helper_vless++;
-            }
+           // }
         } elseif (substr($config, 0, 5) === "ss://") {
             // Parse the shadowsocks configuration
             $the_config = ParseShadowsocks($config);
@@ -425,7 +425,7 @@ function process_subscription($input, $channel)
             // Ping the IP and port to get the response time
             @$ping_data = ping($ip, $port);
             // If ping data is available
-            if ($ping_data !== "unavailable") {
+        //    if ($ping_data !== "unavailable") {
                 // Get IP information (country) and flag
                 $ip_info = ip_info($ip);
                 if (isset($ip_info["country"])) {
@@ -457,7 +457,7 @@ function process_subscription($input, $channel)
                 $final_data["ss"][$array_helper_ss]["ping"] = $ping_data;
                 $final_data["ss"][$array_helper_ss]["time"] = tehran_time();
                 $array_helper_ss++;
-            }
+          //  }
         } elseif (stripos($config, "trojan://")) {
             // Parse the trojan configuration
             $the_config = parseProxyUrl($config);
@@ -474,7 +474,7 @@ function process_subscription($input, $channel)
             @$ping_data = ping($ip, $port);
 
             // If ping data is available
-            if ($ping_data !== "unavailable") {
+          //  if ($ping_data !== "unavailable") {
                 // Get IP information (country) and flag
                 $ip_info = ip_info($ip);
                 if (isset($ip_info["country"])) {
@@ -509,7 +509,7 @@ function process_subscription($input, $channel)
                     "time"
                 ] = tehran_time();
                 $array_helper_trojan++;
-            }
+          //  }
         }
     }
 }
