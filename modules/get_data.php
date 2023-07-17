@@ -6,6 +6,18 @@ include "vmess.php";
 include "xray.php";
 include "ping.php";
 
+function openLink($url)
+    {
+        $ch = curl_init();
+        curl_setopt_array($ch, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+            CURLOPT_FOLLOWLOCATION => true,
+        ));
+        return curl_exec($ch);
+    }
+
 function convert_to_iran_time($utc_timestamp)
 {
     $utc_datetime = new DateTime($utc_timestamp);
