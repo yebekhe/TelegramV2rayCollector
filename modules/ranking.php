@@ -35,21 +35,25 @@ function ranking($input, $type)
     $last_point_array = [];
     $usernames = array_column(array_column($input, "channel"), "username");
     $point_array = array_count_values($usernames);
+    $lowest_ping = array_reduce($input, function($min, $item) {
+        return ($item['ping'] < $min) ? $item['ping'] : $min;
+    }, PHP_FLOAT_MAX);
 
     foreach ($input as $key => $config){
-        $username_ch = $config['channel']['username'];
-        if((strtotime(tehran_time()) - strtotime($config['time'])) <= 1800){
-            $point_array[$username_ch] += 2 ;
-        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) <= 3600){
-            $point_array[$username_ch] += 1 ;
-        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 86400){
-            $point_array[$username_ch] -= 3 ;
-        } elseif((strtotime(tehran_time()) - strtotime($config['time'])) >= 172800){
-            $point_array[$username_ch] -= 4 ;
-        } 
         
-        if($config['type'] === "reality"){
-            $point_array[$username_ch] += 4 ;
+        $username_ch = $config['channel']['username'];
+        $time_diff = strtotime(tehran_time()) - strtotime($config['time']);
+        $time_coefficient = 1 / ($time_diff + 1);
+        $point_array[$username_ch] += $time_coefficient;
+
+        $config_ping = $config['ping'];
+        $ping_diff = $config_ping - $lowest_ping;
+        $ping_coefficient = 1 / ($ping_diff + 1);
+        $point_array[$username_ch] += $ping_coefficient;
+        
+        switch ($config['type']){
+            case "reality":
+                $point_array[$username_ch] += 1 ;
         }
     }
 
