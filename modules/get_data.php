@@ -132,6 +132,9 @@ function get_config($channel, $type)
                         : (!empty($the_config["params"]["host"])
                             ? $the_config["params"]["host"]
                             : $the_config["hostname"]);
+                    if (stripos($config, "reality") !== false) {
+                        $ip = $the_config["hostname"]);
+                    }
                     $port = $the_config["port"];
 
                     // Ping the IP and port to get the response time
@@ -348,6 +351,9 @@ function process_subscription($input, $channel)
                 : (!empty($the_config["params"]["host"])
                     ? $the_config["params"]["host"]
                     : $the_config["hostname"]);
+            if (stripos($config, "reality") !== false) {
+                $ip = $the_config["hostname"]);
+            }
             $port = $the_config["port"];
 
             // Ping the IP and port to get the response time
