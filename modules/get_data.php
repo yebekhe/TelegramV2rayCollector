@@ -115,6 +115,7 @@ function get_config($channel, $type)
                             $channels_assets[$channel]["logo"];
                         $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = $final_config;
+                        $final_data[$key]["ping"] = $ping_data;
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
                         );
@@ -133,7 +134,7 @@ function get_config($channel, $type)
                             ? $the_config["params"]["host"]
                             : $the_config["hostname"]);
                     if (stripos($config, "reality") !== false) {
-                        $ip = $the_config["hostname"]);
+                        $ip = $the_config["hostname"];
                     }
                     $port = $the_config["port"];
 
@@ -183,6 +184,7 @@ function get_config($channel, $type)
                             $channels_assets[$channel]["logo"];
                         $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = urldecode($final_config);
+                        $final_data[$key]["ping"] = $ping_data;
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
                         );
@@ -228,6 +230,7 @@ function get_config($channel, $type)
                             $channels_assets[$channel]["logo"];
                         $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = urldecode($final_config);
+                        $final_data[$key]["ping"] = $ping_data;
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
                         );
@@ -268,6 +271,7 @@ function get_config($channel, $type)
                             $channels_assets[$channel]["logo"];
                         $final_data[$key]["type"] = $type;
                         $final_data[$key]["config"] = urldecode($final_config);
+                        $final_data[$key]["ping"] = $ping_data;
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
                         );
@@ -336,6 +340,7 @@ function process_subscription($input, $channel)
                 $final_data["vmess"][$array_helper_vmess][
                     "config"
                 ] = $final_config;
+                $final_data["vmess"][$array_helper_vmess]["ping"] = $ping_data;
                 $final_data["vmess"][$array_helper_vmess][
                     "time"
                 ] = tehran_time();
@@ -352,7 +357,7 @@ function process_subscription($input, $channel)
                     ? $the_config["params"]["host"]
                     : $the_config["hostname"]);
             if (stripos($config, "reality") !== false) {
-                $ip = $the_config["hostname"]);
+                $ip = $the_config["hostname"];
             }
             $port = $the_config["port"];
 
@@ -403,6 +408,7 @@ function process_subscription($input, $channel)
                 $final_data["vless"][$array_helper_vless]["config"] = urldecode(
                     $final_config
                 );
+                $final_data["vless"][$array_helper_vless]["ping"] = $ping_data;
                 $final_data["vless"][$array_helper_vless][
                     "time"
                 ] = tehran_time();
@@ -448,6 +454,7 @@ function process_subscription($input, $channel)
                 $final_data["ss"][$array_helper_ss]["config"] = urldecode(
                     $final_config
                 );
+                $final_data["ss"][$array_helper_ss]["ping"] = $ping_data;
                 $final_data["ss"][$array_helper_ss]["time"] = tehran_time();
                 $array_helper_ss++;
             }
@@ -497,6 +504,7 @@ function process_subscription($input, $channel)
                 $final_data["trojan"][$array_helper_trojan][
                     "config"
                 ] = urldecode($final_config);
+                $final_data["trojan"][$array_helper_trojan]["ping"] = $ping_data;
                 $final_data["trojan"][$array_helper_trojan][
                     "time"
                 ] = tehran_time();
