@@ -79,23 +79,30 @@ foreach ($donated_subscription as $url){
     foreach ($usernames as $username){
         $subscription_data = file_get_contents($base_donated_url . $username);
         $processed_subscription = process_subscription($subscription_data, $username);
-        $vmess_data = array_merge(
-                $vmess_data,
-                $processed_subscription['vmess']
-            );
-        $vless_data = array_merge(
-                $vless_data,
-                $processed_subscription['vless']
-            );
-        $shadowsocks_data = array_merge(
-                $shadowsocks_data,
-                $processed_subscription['ss']
-            );
-        $trojan_data = array_merge(
-                $trojan_data,
-                $processed_subscription['trojan']
-            );
-        
+        foreach ($processed_subscription as $key => $data){
+            switch ($key){
+                case "vmess" :
+                    $vmess_data = array_merge(
+                        $vmess_data,
+                        $data
+                    );
+                case "vless" :
+                    $vless_data = array_merge(
+                        $vless_data,
+                        $data
+                    );
+                case "ss" :
+                    $shadowsocks_data = array_merge(
+                        $shadowsocks_data,
+                        $data
+                    );
+                case "trojan" :
+                    $trojan_data = array_merge(
+                        $trojan_data,
+                        $data
+                    );
+            }
+        }
     }
 }
 
