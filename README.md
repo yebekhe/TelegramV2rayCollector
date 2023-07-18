@@ -1,5 +1,7 @@
 # V2ray Collector
 [![Collector](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml/badge.svg)](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/php.yml) [![Channels](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/channel_assets.yml/badge.svg)](https://github.com/yebekhe/TelegramV2rayCollector/actions/workflows/channel_assets.yml)
+[![Quality](https://img.shields.io/scrutinizer/quality/g/yebekhe/TelegramV2rayCollector?style=flat&logo=scrutinizerci)](https://scrutinizer-ci.com/g/yebekhe/TelegramV2rayCollector/)
+
 
 <b>This project is intended for educational purposes only. Any other use of it, including commercial, personal, or non-educational use, is not accepted!</b>
 
