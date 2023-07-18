@@ -524,5 +524,6 @@ function process_subscription($input, $channel)
           //  }
         }
     }
+    return $final_data; 
 }
 ?>
