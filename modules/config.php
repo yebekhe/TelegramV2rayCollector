@@ -90,7 +90,12 @@ $Types = [
     "melov2ray" => ["vless"],
     "polproxy" => ["vless"],
     "Outlinev2rayNG" => ["vless"],
-    "iP_CF" => ["vless"]
+    "iP_CF" => ["vless"],
+    "VPNCUSTOMIZE" => ["vless"],
+    "MoV2ray" => ["vless"],
+    "Royalping_ir" => ["vmess"],
+    "v2rayng_vpnrog" => ["vless"],
+    
 ];
 
 $donated_subscription = [
