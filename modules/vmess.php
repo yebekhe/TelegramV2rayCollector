@@ -41,4 +41,3 @@ function remove_duplicate_vmess($input)
     }
     return $output;
 }
-?>
