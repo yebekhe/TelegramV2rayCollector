@@ -32,7 +32,7 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: "@PrivateVPNs|🇸🇪|181"
+  - name: "@PrivateVPNs|🇸🇪|141.51"
     server: 16.16.217.1
     port: 22222
     type: trojan
@@ -40,7 +40,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@PrivateVPNs|🇸🇪|205.59"
+  - name: "@PrivateVPNs|🇸🇪|116.73"
     server: 13.48.71.37
     port: 22222
     type: trojan
@@ -48,15 +48,39 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@DirectVPN|🇺🇸|41.42"
-    server: 18.208.147.55
+  - name: "@PrivateVPNs|🇩🇪|93.02"
+    server: 18.194.44.35
+    port: 22222
+    type: trojan
+    password: telegram-id-privatevpns
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "@DirectVPN|🇺🇸|13.35"
+    server: 54.205.159.39
     port: 22222
     type: trojan
     password: telegram-id-directvpn
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@oneclickvpnkeys|🇬🇧|173.3"
+  - name: "@DirectVPN|🇨🇦|23.52"
+    server: 35.183.3.49
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "@DirectVPN|🇨🇦|25.63"
+    server: 15.156.205.231
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "@oneclickvpnkeys|🇬🇧|129.24"
     server: gb1.yihaobao.xyz
     port: 10027
     type: trojan
@@ -64,7 +88,7 @@ proxies:
     skip-cert-verify: true
     sni: tls.yihaobao.xyz
     udp: true
-  - name: "@oneclickvpnkeys|🇺🇸|40.49"
+  - name: "@oneclickvpnkeys|🇺🇸|13.12"
     server: 18.208.147.55
     port: 22222
     type: trojan
@@ -72,7 +96,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@vmess_vless_v2rayng|🇮🇪|97.2"
+  - name: "@vmess_vless_v2rayng|🇮🇪|79.16"
     server: 34.242.178.46
     port: 22222
     type: trojan
@@ -80,7 +104,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@V2RayTz|🇨🇦|88.32"
+  - name: "@V2RayTz|🇨🇦|22.91"
     server: 15.156.203.183
     port: 22222
     type: trojan
@@ -88,7 +112,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@V2RayTz|🇺🇸|53.59"
+  - name: "@V2RayTz|🇺🇸|112.11"
     server: 54.149.6.69
     port: 22222
     type: trojan
@@ -96,7 +120,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@ovpn2|🇺🇸|133.13"
+  - name: "@ovpn2|🇺🇸|145.11"
     server: us1.chuqiangtou.net
     port: 4003
     type: trojan
@@ -104,7 +128,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "@ovpn2|🇺🇸|161.68"
+  - name: "@ovpn2|🇺🇸|109.07"
     server: us3.chuqiangtou.net
     port: 4003
     type: trojan
@@ -112,7 +136,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "@yaney_01|🇺🇸|31.31"
+  - name: "@yaney_01|🇺🇸|67.91"
     server: 163.123.192.57
     port: 443
     type: trojan
@@ -120,7 +144,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "@yaney_01|🇰🇷|344.44"
+  - name: "@yaney_01|🇰🇷|374.89"
     server: ko2.lianpi.xyz
     port: 64123
     type: trojan
@@ -128,52 +152,97 @@ proxies:
     skip-cert-verify: true
     sni: ko2.lianpi.xyz
     udp: true
-  - name: REALITY|@Sarina|🇳🇱|132.18
-    server: 176.124.198.154
-    port: 443
+  - name: REALITY|@Enjoy|🇫🇷|282.56
+    server: likethis.masjedeman.online
+    port: 42576
     type: trojan
-    password: 8b502db0-2393-4d7b-9754-4bb6c17b86ee
-    flow: xtls-rprx-vision
+    password: 5d5f00b6-a45d-4a0e-ef45-f1ca8123f02c
     skip-cert-verify: true
-    sni: www.datadoghq.com
+    sni: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
     udp: true
-  - name: REALITY|@Sarina|🇳🇱|131.76
-    server: 176.124.198.154
-    port: 22
+  - name: REALITY|@Enjoy|🇫🇷|101.45
+    server: likethis.masjedeman.online
+    port: 42576
     type: trojan
-    password: 3381a51b-a826-4dd0-a034-7c6b6113686e
-    flow: xtls-rprx-vision
+    password: 0b1b5d0a-7371-4caf-ace6-3cd1a61fdbe5
     skip-cert-verify: true
-    sni: 000webhost.ir
+    sni: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
     udp: true
-  - name: REALITY|@Sarina|🇳🇱|132.24
-    server: 176.124.198.154
-    port: 10050
+  - name: REALITY|@Enjoy|🇫🇷|106.79
+    server: likethis.masjedeman.online
+    port: 42576
     type: trojan
-    password: 1ecb6d3e-5efb-4bfe-baf1-3c4e70350202
-    flow: xtls-rprx-vision
+    password: c8060cc4-0dfa-46a8-84aa-4fb1db027ae4
     skip-cert-verify: true
-    sni: speedtest.net
+    sni: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY|@Enjoy|🇫🇷|105.09
+    server: likethis.masjedeman.online
+    port: 42576
+    type: trojan
+    password: bdee13e7-f895-4368-d3f0-b4dc01765865
+    skip-cert-verify: true
+    sni: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY|@Enjoy|🇫🇷|87.96
+    server: likethis.masjedeman.online
+    port: 42576
+    type: trojan
+    password: bb642e51-3a19-40a9-e611-4e479dea06d7
+    skip-cert-verify: true
+    sni: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY|@Enjoy|🇫🇷|87.87
+    server: likethis.masjedeman.online
+    port: 42576
+    type: trojan
+    password: d6b4cb73-b5b1-4e2a-83fd-40b9d8723e94
+    skip-cert-verify: true
+    sni: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
     udp: true
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - "@PrivateVPNs|🇸🇪|181"
-      - "@PrivateVPNs|🇸🇪|205.59"
-      - "@DirectVPN|🇺🇸|41.42"
-      - "@oneclickvpnkeys|🇬🇧|173.3"
-      - "@oneclickvpnkeys|🇺🇸|40.49"
-      - "@vmess_vless_v2rayng|🇮🇪|97.2"
-      - "@V2RayTz|🇨🇦|88.32"
-      - "@V2RayTz|🇺🇸|53.59"
-      - "@ovpn2|🇺🇸|133.13"
-      - "@ovpn2|🇺🇸|161.68"
-      - "@yaney_01|🇺🇸|31.31"
-      - "@yaney_01|🇰🇷|344.44"
-      - REALITY|@Sarina|🇳🇱|132.18
-      - REALITY|@Sarina|🇳🇱|131.76
-      - REALITY|@Sarina|🇳🇱|132.24
+      - "@PrivateVPNs|🇸🇪|141.51"
+      - "@PrivateVPNs|🇸🇪|116.73"
+      - "@PrivateVPNs|🇩🇪|93.02"
+      - "@DirectVPN|🇺🇸|13.35"
+      - "@DirectVPN|🇨🇦|23.52"
+      - "@DirectVPN|🇨🇦|25.63"
+      - "@oneclickvpnkeys|🇬🇧|129.24"
+      - "@oneclickvpnkeys|🇺🇸|13.12"
+      - "@vmess_vless_v2rayng|🇮🇪|79.16"
+      - "@V2RayTz|🇨🇦|22.91"
+      - "@V2RayTz|🇺🇸|112.11"
+      - "@ovpn2|🇺🇸|145.11"
+      - "@ovpn2|🇺🇸|109.07"
+      - "@yaney_01|🇺🇸|67.91"
+      - "@yaney_01|🇰🇷|374.89"
+      - REALITY|@Enjoy|🇫🇷|282.56
+      - REALITY|@Enjoy|🇫🇷|101.45
+      - REALITY|@Enjoy|🇫🇷|106.79
+      - REALITY|@Enjoy|🇫🇷|105.09
+      - REALITY|@Enjoy|🇫🇷|87.96
+      - REALITY|@Enjoy|🇫🇷|87.87
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -184,61 +253,79 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@PrivateVPNs|🇸🇪|181"
-      - "@PrivateVPNs|🇸🇪|205.59"
-      - "@DirectVPN|🇺🇸|41.42"
-      - "@oneclickvpnkeys|🇬🇧|173.3"
-      - "@oneclickvpnkeys|🇺🇸|40.49"
-      - "@vmess_vless_v2rayng|🇮🇪|97.2"
-      - "@V2RayTz|🇨🇦|88.32"
-      - "@V2RayTz|🇺🇸|53.59"
-      - "@ovpn2|🇺🇸|133.13"
-      - "@ovpn2|🇺🇸|161.68"
-      - "@yaney_01|🇺🇸|31.31"
-      - "@yaney_01|🇰🇷|344.44"
-      - REALITY|@Sarina|🇳🇱|132.18
-      - REALITY|@Sarina|🇳🇱|131.76
-      - REALITY|@Sarina|🇳🇱|132.24
+      - "@PrivateVPNs|🇸🇪|141.51"
+      - "@PrivateVPNs|🇸🇪|116.73"
+      - "@PrivateVPNs|🇩🇪|93.02"
+      - "@DirectVPN|🇺🇸|13.35"
+      - "@DirectVPN|🇨🇦|23.52"
+      - "@DirectVPN|🇨🇦|25.63"
+      - "@oneclickvpnkeys|🇬🇧|129.24"
+      - "@oneclickvpnkeys|🇺🇸|13.12"
+      - "@vmess_vless_v2rayng|🇮🇪|79.16"
+      - "@V2RayTz|🇨🇦|22.91"
+      - "@V2RayTz|🇺🇸|112.11"
+      - "@ovpn2|🇺🇸|145.11"
+      - "@ovpn2|🇺🇸|109.07"
+      - "@yaney_01|🇺🇸|67.91"
+      - "@yaney_01|🇰🇷|374.89"
+      - REALITY|@Enjoy|🇫🇷|282.56
+      - REALITY|@Enjoy|🇫🇷|101.45
+      - REALITY|@Enjoy|🇫🇷|106.79
+      - REALITY|@Enjoy|🇫🇷|105.09
+      - REALITY|@Enjoy|🇫🇷|87.96
+      - REALITY|@Enjoy|🇫🇷|87.87
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - "@PrivateVPNs|🇸🇪|181"
-      - "@PrivateVPNs|🇸🇪|205.59"
-      - "@DirectVPN|🇺🇸|41.42"
-      - "@oneclickvpnkeys|🇬🇧|173.3"
-      - "@oneclickvpnkeys|🇺🇸|40.49"
-      - "@vmess_vless_v2rayng|🇮🇪|97.2"
-      - "@V2RayTz|🇨🇦|88.32"
-      - "@V2RayTz|🇺🇸|53.59"
-      - "@ovpn2|🇺🇸|133.13"
-      - "@ovpn2|🇺🇸|161.68"
-      - "@yaney_01|🇺🇸|31.31"
-      - "@yaney_01|🇰🇷|344.44"
-      - REALITY|@Sarina|🇳🇱|132.18
-      - REALITY|@Sarina|🇳🇱|131.76
-      - REALITY|@Sarina|🇳🇱|132.24
+      - "@PrivateVPNs|🇸🇪|141.51"
+      - "@PrivateVPNs|🇸🇪|116.73"
+      - "@PrivateVPNs|🇩🇪|93.02"
+      - "@DirectVPN|🇺🇸|13.35"
+      - "@DirectVPN|🇨🇦|23.52"
+      - "@DirectVPN|🇨🇦|25.63"
+      - "@oneclickvpnkeys|🇬🇧|129.24"
+      - "@oneclickvpnkeys|🇺🇸|13.12"
+      - "@vmess_vless_v2rayng|🇮🇪|79.16"
+      - "@V2RayTz|🇨🇦|22.91"
+      - "@V2RayTz|🇺🇸|112.11"
+      - "@ovpn2|🇺🇸|145.11"
+      - "@ovpn2|🇺🇸|109.07"
+      - "@yaney_01|🇺🇸|67.91"
+      - "@yaney_01|🇰🇷|374.89"
+      - REALITY|@Enjoy|🇫🇷|282.56
+      - REALITY|@Enjoy|🇫🇷|101.45
+      - REALITY|@Enjoy|🇫🇷|106.79
+      - REALITY|@Enjoy|🇫🇷|105.09
+      - REALITY|@Enjoy|🇫🇷|87.96
+      - REALITY|@Enjoy|🇫🇷|87.87
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - "@PrivateVPNs|🇸🇪|181"
-      - "@PrivateVPNs|🇸🇪|205.59"
-      - "@DirectVPN|🇺🇸|41.42"
-      - "@oneclickvpnkeys|🇬🇧|173.3"
-      - "@oneclickvpnkeys|🇺🇸|40.49"
-      - "@vmess_vless_v2rayng|🇮🇪|97.2"
-      - "@V2RayTz|🇨🇦|88.32"
-      - "@V2RayTz|🇺🇸|53.59"
-      - "@ovpn2|🇺🇸|133.13"
-      - "@ovpn2|🇺🇸|161.68"
-      - "@yaney_01|🇺🇸|31.31"
-      - "@yaney_01|🇰🇷|344.44"
-      - REALITY|@Sarina|🇳🇱|132.18
-      - REALITY|@Sarina|🇳🇱|131.76
-      - REALITY|@Sarina|🇳🇱|132.24
+      - "@PrivateVPNs|🇸🇪|141.51"
+      - "@PrivateVPNs|🇸🇪|116.73"
+      - "@PrivateVPNs|🇩🇪|93.02"
+      - "@DirectVPN|🇺🇸|13.35"
+      - "@DirectVPN|🇨🇦|23.52"
+      - "@DirectVPN|🇨🇦|25.63"
+      - "@oneclickvpnkeys|🇬🇧|129.24"
+      - "@oneclickvpnkeys|🇺🇸|13.12"
+      - "@vmess_vless_v2rayng|🇮🇪|79.16"
+      - "@V2RayTz|🇨🇦|22.91"
+      - "@V2RayTz|🇺🇸|112.11"
+      - "@ovpn2|🇺🇸|145.11"
+      - "@ovpn2|🇺🇸|109.07"
+      - "@yaney_01|🇺🇸|67.91"
+      - "@yaney_01|🇰🇷|374.89"
+      - REALITY|@Enjoy|🇫🇷|282.56
+      - REALITY|@Enjoy|🇫🇷|101.45
+      - REALITY|@Enjoy|🇫🇷|106.79
+      - REALITY|@Enjoy|🇫🇷|105.09
+      - REALITY|@Enjoy|🇫🇷|87.96
+      - REALITY|@Enjoy|🇫🇷|87.87
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
