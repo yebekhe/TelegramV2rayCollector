@@ -23,6 +23,3 @@ function ip_info($ip)
     );
     return $ipinfo;
 }
-
-?>
-
