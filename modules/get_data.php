@@ -185,10 +185,8 @@ function parse_config($input, $type, $is_sub = false)
             $parsed_config = $is_sub ? decode_vmess($input) : decode_vmess($type . "://" . $input);
             break;
         case "vless":
-            $parsed_config = $is_sub ? parseProxyUrl($input, "vless") : parseProxyUrl($type . "://" . $input, "vless");
-            break;
         case "trojan":
-            $parsed_config = $is_sub ? parseProxyUrl($input) : parseProxyUrl($type . "://" . $input);
+            $parsed_config = $is_sub ? parseProxyUrl($input, $type) : parseProxyUrl($type . "://" . $input, $type);
             break;
         case "ss":
             $parsed_config = $is_sub ? ParseShadowsocks($input) : ParseShadowsocks($type . "://" . $input);
@@ -205,10 +203,8 @@ function build_config($input, $type)
             $build_config = encode_vmess($input);
             break;
         case "vless":
-            $build_config = buildProxyUrl($input, "vless");
-            break;
         case "trojan":
-            $build_config = buildProxyUrl($input);
+            $build_config = buildProxyUrl($input, $type);
             break;
         case "ss":
             $build_config = BuildShadowsocks($input);
