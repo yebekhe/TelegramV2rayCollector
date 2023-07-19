@@ -32,27 +32,6 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: United Kingdom Datacamp
-    server: 212.102.53.79
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-    udp: true
-  - name: United Kingdom Datacamp 2
-    server: 212.102.53.198
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-    udp: true
-  - name: "@vless_new | تلگرام عضو بشید"
-    server: 54.36.174.181
-    port: 6679
-    type: ss
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-    udp: true
   - name: www.outline.network (CA)
     server: ak1809.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 811
@@ -60,19 +39,12 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: G!yBwPWH3Vao
     udp: true
-  - name: _KR_韩国
-    server: 43.202.58.144
-    port: 443
+  - name: www.outline.network (DE)
+    server: ak1810.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 8080
     type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: _SG_新加坡
-    server: 52.221.214.113
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
+    cipher: aes-256-gcm
+    password: KixLvKzwjekG00rm
     udp: true
   - name: _JP_日本
     server: 43.207.78.190
@@ -85,12 +57,8 @@ proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - United Kingdom Datacamp
-      - United Kingdom Datacamp 2
-      - "@vless_new | تلگرام عضو بشید"
       - www.outline.network (CA)
-      - _KR_韩国
-      - _SG_新加坡
+      - www.outline.network (DE)
       - _JP_日本
       - LOAD-BALANCE
       - BEST-PING
@@ -102,12 +70,8 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - United Kingdom Datacamp
-      - United Kingdom Datacamp 2
-      - "@vless_new | تلگرام عضو بشید"
       - www.outline.network (CA)
-      - _KR_韩国
-      - _SG_新加坡
+      - www.outline.network (DE)
       - _JP_日本
   - name: BEST-PING
     type: url-test
@@ -115,24 +79,16 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - United Kingdom Datacamp
-      - United Kingdom Datacamp 2
-      - "@vless_new | تلگرام عضو بشید"
       - www.outline.network (CA)
-      - _KR_韩国
-      - _SG_新加坡
+      - www.outline.network (DE)
       - _JP_日本
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - United Kingdom Datacamp
-      - United Kingdom Datacamp 2
-      - "@vless_new | تلگرام عضو بشید"
       - www.outline.network (CA)
-      - _KR_韩国
-      - _SG_新加坡
+      - www.outline.network (DE)
       - _JP_日本
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
