@@ -46,4 +46,3 @@ function convert_to_clash($input, $type = "clash")
 
     return $config;
 }
-?>
