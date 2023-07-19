@@ -26,8 +26,18 @@ function parseProxyUrl($url, $type = "trojan")
 
 function buildProxyUrl($obj, $type = "trojan")
 {
-    // Construct the base URL
     $url = $type . "://";
+    $url .= addUsernameAndPassword($obj);
+    $url .= $obj["hostname"];
+    $url .= addPort($obj);
+    $url .= addParams($obj);
+    $url .= addHash($obj);
+    return $url;
+}
+
+function addUsernameAndPassword($obj)
+{
+    $url = "";
     if ($obj["username"] !== "") {
         $url .= $obj["username"];
         if (isset($obj["pass"]) && $obj["pass"] !== "") {
@@ -35,24 +45,33 @@ function buildProxyUrl($obj, $type = "trojan")
         }
         $url .= "@";
     }
-    $url .= $obj["hostname"];
-    if (
-        isset($obj["port"]) &&
-        $obj["port"] !== ""
-    ) {
+    return $url;
+}
+
+function addPort($obj)
+{
+    $url = "";
+    if (isset($obj["port"]) && $obj["port"] !== "") {
         $url .= ":" . $obj["port"];
     }
+    return $url;
+}
 
-    // Add the query parameters
+function addParams($obj)
+{
+    $url = "";
     if (!empty($obj["params"])) {
         $url .= "?" . http_build_query($obj["params"]);
     }
+    return $url;
+}
 
-    // Add the fragment identifier
+function addHash($obj)
+{
+    $url = "";
     if (isset($obj["hash"]) && $obj["hash"] !== "") {
         $url .= "#" . $obj["hash"];
     }
-
     return $url;
 }
 
