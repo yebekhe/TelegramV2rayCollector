@@ -51,6 +51,7 @@ function is_valid($input)
 
 function is_reality($input, $type)
 {
+    $is_reality = false;
     switch ($type) {
         case "vmess":
             $is_reality = false;
@@ -75,6 +76,7 @@ function is_reality($input, $type)
 
 function get_ip($input, $type, $is_reality)
 {
+    $ip = "";
     switch ($type) {
         case "vmess":
             $ip = !empty($input["sni"])
@@ -107,6 +109,7 @@ function get_ip($input, $type, $is_reality)
 }
 function get_port($input, $type)
 {
+    $port = "";
     switch ($type) {
         case "vmess":
             $port = $input["port"];
@@ -126,6 +129,7 @@ function get_port($input, $type)
 
 function get_flag($ip)
 {
+    $flag = ""
     $ip_info = ip_info($ip);
     if (isset($ip_info["country"])) {
         $location = $ip_info["country"];
@@ -146,6 +150,7 @@ function get_channels_assets()
 
 function generate_name($channel, $flag, $ping, $is_reality)
 {
+    $name = ""
     switch ($is_reality) {
         case true:
             $name = "REALITY|" . "@" . $channel . " | " . $flag . " | " . $ping;
@@ -159,6 +164,7 @@ function generate_name($channel, $flag, $ping, $is_reality)
 
 function parse_config($input, $type, $is_sub = false)
 {
+    $parsed_config = [];
     switch ($type) {
         case "vmess":
             $parsed_config = $is_sub ? decode_vmess($input) : decode_vmess($type . "://" . $input);
@@ -178,6 +184,7 @@ function parse_config($input, $type, $is_sub = false)
 
 function build_config($input, $type)
 {
+    $build_config = "";
     switch ($type) {
         case "vmess":
             $build_config = encode_vmess($input);
