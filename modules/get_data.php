@@ -129,7 +129,7 @@ function get_port($input, $type)
 
 function get_flag($ip)
 {
-    $flag = ""
+    $flag = "";
     $ip_info = ip_info($ip);
     if (isset($ip_info["country"])) {
         $location = $ip_info["country"];
@@ -150,7 +150,7 @@ function get_channels_assets()
 
 function generate_name($channel, $flag, $ping, $is_reality)
 {
-    $name = ""
+    $name = "";
     switch ($is_reality) {
         case true:
             $name = "REALITY|" . "@" . $channel . " | " . $flag . " | " . $ping;
