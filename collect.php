@@ -20,6 +20,12 @@ function process_mix_json($input, $name)
     file_put_contents("json/" . $name, $mix_data_json); // Save the JSON data to a file in the "json/" directory with the specified name
 }
 
+function fast_fix($input){
+    $input = urldecode($input);
+    $input = str_replace("amp;", "", $input);
+    return $input;
+}
+
 $raw_url_base =
     "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main"; // Define the base URL for fetching raw data
 
@@ -86,21 +92,25 @@ foreach ($donated_subscription as $url){
                         $vmess_data,
                         $donated_data
                     );
+                    break;
                 case "vless" :
                     $vless_data = array_merge(
                         $vless_data,
                         $donated_data
                     );
+                    break;
                 case "ss" :
                     $shadowsocks_data = array_merge(
                         $shadowsocks_data,
                         $donated_data
                     );
+                    break;
                 case "trojan" :
                     $trojan_data = array_merge(
                         $trojan_data,
                         $donated_data
                     );
+                    break;
             }
         }
     }
@@ -148,7 +158,7 @@ foreach ($vmess_data as $vmess_config_data) {
     }
 }
 
-$string_vless = str_replace("&amp;", "&", $vless);
+$string_vless = fast_fix($vless);
 $fixed_string_vless = remove_duplicate_xray($string_vless, "vless");
 $fixed_string_vless_array = explode("\n", $fixed_string_vless);
 $json_vless_array = [];
@@ -166,7 +176,7 @@ foreach ($vless_data as $vless_config_data) {
     }
 }
 
-$string_trojan = str_replace("&amp;", "&", $trojan);
+$string_trojan = fast_fix($trojan);
 $fixed_string_trojan = remove_duplicate_xray($string_trojan, "trojan");
 $fixed_string_trojan_array = explode("\n", $fixed_string_trojan);
 $json_trojan_array = [];
@@ -184,7 +194,8 @@ foreach ($trojan_data as $trojan_config_data) {
     }
 }
 
-$fixed_string_shadowsocks = remove_duplicate_ss($shadowsocks);
+$string_shadowsocks = fast_fix($shadowsocks);
+$fixed_string_shadowsocks = remove_duplicate_ss($string_shadowsocks);
 $fixed_string_shadowsocks_array = explode("\n", $fixed_string_shadowsocks);
 $json_shadowsocks_array = [];
 
