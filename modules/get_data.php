@@ -270,6 +270,7 @@ function get_config($channel, $type)
 
 function detect_type($input)
 {
+    $type = "";
     if (substr($input, 0, 8) === "vmess://") {
         $type = "vmess";
     } elseif (substr($input, 0, 8) === "vless://") {
