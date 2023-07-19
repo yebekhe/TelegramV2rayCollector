@@ -45,6 +45,7 @@ foreach ($Types as $key => $type_array) {
                 // Merge the results of `get_config` function with $vmess_data array
                 $vmess_data = array_merge(
                     $vmess_data,
+                    /** @scrutinizer ignore-call */ 
                     get_config($key, $current_type)
                 );
                 break;
@@ -84,7 +85,7 @@ foreach ($donated_subscription as $url){
     $usernames = json_decode(file_get_contents($url), true);
     foreach ($usernames as $username){
         $subscription_data = file_get_contents($base_donated_url . $username);
-        $processed_subscription = process_subscription($subscription_data, $username);
+        $processed_subscription = /** @scrutinizer ignore-call */ process_subscription($subscription_data, $username);
         foreach ($processed_subscription as $donated_type => $donated_data){
             switch ($donated_type){
                 case "vmess" :
