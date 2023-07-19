@@ -32,27 +32,17 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: REALITY|@WomanLifeFreedomVPN |  | unavailable
-    server: icloud.wlftest.xyz
-    port: 443
-    type: vless
-    uuid: 85399fea-2ee3-51b5-ad4e-d8b78a2cf1d9
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    udp: true
-  - name: REALITY|@UnlimitedDev | 🇩🇪 | 168.39
+  - name: REALITY|@UnlimitedDev | 🇩🇪 | 169.44
     server: bia-to5.unlimiteddev.xyz
     port: 443
     type: vless
-    uuid: b6c5ef49-9ee4-4c52-bf39-b85abc93affd
+    uuid: c79c8f8d-f8e0-4cf0-fa3e-37ad3edf2845
     cipher: auto
     tls: false
     skip-cert-verify: true
     servername: ""
     udp: true
-  - name: REALITY|@kiava | 🇩🇪 | 168.48
+  - name: REALITY|@kiava | 🇩🇪 | 210.2
     server: srv23.kiava.fun
     port: 443
     type: vless
@@ -62,7 +52,7 @@ proxies:
     skip-cert-verify: true
     servername: ""
     udp: true
-  - name: REALITY|@VpnProSec | 🇩🇪 | 178.83
+  - name: REALITY|@VpnProSec | 🇩🇪 | 175.9
     server: vip-mci2.vpnprosec.shop
     port: 443
     type: vless
@@ -72,7 +62,7 @@ proxies:
     skip-cert-verify: true
     servername: ""
     udp: true
-  - name: REALITY|@VpnProSec | 🇬🇧 | 154.95
+  - name: REALITY|@VpnProSec | 🇬🇧 | 138.1
     server: vip-mtn1.vpnprosec.shop
     port: 443
     type: vless
@@ -82,7 +72,7 @@ proxies:
     skip-cert-verify: true
     servername: ""
     udp: true
-  - name: REALITY|@VpnProSec | 🇬🇧 | 151.91
+  - name: REALITY|@VpnProSec | 🇬🇧 | 169.24
     server: vip-mtn2.vpnprosec.shop
     port: 443
     type: vless
@@ -92,7 +82,7 @@ proxies:
     skip-cert-verify: true
     servername: ""
     udp: true
-  - name: REALITY|@free_v2rayyy | 🇩🇪 | 116.39
+  - name: REALITY|@free_v2rayyy | 🇩🇪 | 127.05
     server: 139.59.136.18
     port: 100
     type: vless
@@ -105,7 +95,7 @@ proxies:
     grpc-opts:
       grpc-service-name: /
     udp: true
-  - name: REALITY|@free_v2rayyy | 🇩🇪 | 122.45
+  - name: REALITY|@free_v2rayyy | 🇩🇪 | 119.92
     server: 209.38.232.56
     port: 43963
     type: vless
@@ -118,40 +108,17 @@ proxies:
     grpc-opts:
       grpc-service-name: /
     udp: true
-  - name: REALITY|@freeconfigv2 |  | unavailable
-    server: 85.159.228.16
-    port: 443
-    type: vless
-    uuid: 46f975a2-8f32-405f-ae8e-e1a71560477d
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    udp: true
-  - name: REALITY|@freeconfigv2 |  | unavailable 2
-    server: join.melov2ray.store
-    port: 443
-    type: vless
-    uuid: 46f975a2-8f32-405f-ae8e-e1a71560477d
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: ""
-    udp: true
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - REALITY|@WomanLifeFreedomVPN |  | unavailable
-      - REALITY|@UnlimitedDev | 🇩🇪 | 168.39
-      - REALITY|@kiava | 🇩🇪 | 168.48
-      - REALITY|@VpnProSec | 🇩🇪 | 178.83
-      - REALITY|@VpnProSec | 🇬🇧 | 154.95
-      - REALITY|@VpnProSec | 🇬🇧 | 151.91
-      - REALITY|@free_v2rayyy | 🇩🇪 | 116.39
-      - REALITY|@free_v2rayyy | 🇩🇪 | 122.45
-      - REALITY|@freeconfigv2 |  | unavailable
-      - REALITY|@freeconfigv2 |  | unavailable 2
+      - REALITY|@UnlimitedDev | 🇩🇪 | 169.44
+      - REALITY|@kiava | 🇩🇪 | 210.2
+      - REALITY|@VpnProSec | 🇩🇪 | 175.9
+      - REALITY|@VpnProSec | 🇬🇧 | 138.1
+      - REALITY|@VpnProSec | 🇬🇧 | 169.24
+      - REALITY|@free_v2rayyy | 🇩🇪 | 127.05
+      - REALITY|@free_v2rayyy | 🇩🇪 | 119.92
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -162,46 +129,37 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - REALITY|@WomanLifeFreedomVPN |  | unavailable
-      - REALITY|@UnlimitedDev | 🇩🇪 | 168.39
-      - REALITY|@kiava | 🇩🇪 | 168.48
-      - REALITY|@VpnProSec | 🇩🇪 | 178.83
-      - REALITY|@VpnProSec | 🇬🇧 | 154.95
-      - REALITY|@VpnProSec | 🇬🇧 | 151.91
-      - REALITY|@free_v2rayyy | 🇩🇪 | 116.39
-      - REALITY|@free_v2rayyy | 🇩🇪 | 122.45
-      - REALITY|@freeconfigv2 |  | unavailable
-      - REALITY|@freeconfigv2 |  | unavailable 2
+      - REALITY|@UnlimitedDev | 🇩🇪 | 169.44
+      - REALITY|@kiava | 🇩🇪 | 210.2
+      - REALITY|@VpnProSec | 🇩🇪 | 175.9
+      - REALITY|@VpnProSec | 🇬🇧 | 138.1
+      - REALITY|@VpnProSec | 🇬🇧 | 169.24
+      - REALITY|@free_v2rayyy | 🇩🇪 | 127.05
+      - REALITY|@free_v2rayyy | 🇩🇪 | 119.92
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - REALITY|@WomanLifeFreedomVPN |  | unavailable
-      - REALITY|@UnlimitedDev | 🇩🇪 | 168.39
-      - REALITY|@kiava | 🇩🇪 | 168.48
-      - REALITY|@VpnProSec | 🇩🇪 | 178.83
-      - REALITY|@VpnProSec | 🇬🇧 | 154.95
-      - REALITY|@VpnProSec | 🇬🇧 | 151.91
-      - REALITY|@free_v2rayyy | 🇩🇪 | 116.39
-      - REALITY|@free_v2rayyy | 🇩🇪 | 122.45
-      - REALITY|@freeconfigv2 |  | unavailable
-      - REALITY|@freeconfigv2 |  | unavailable 2
+      - REALITY|@UnlimitedDev | 🇩🇪 | 169.44
+      - REALITY|@kiava | 🇩🇪 | 210.2
+      - REALITY|@VpnProSec | 🇩🇪 | 175.9
+      - REALITY|@VpnProSec | 🇬🇧 | 138.1
+      - REALITY|@VpnProSec | 🇬🇧 | 169.24
+      - REALITY|@free_v2rayyy | 🇩🇪 | 127.05
+      - REALITY|@free_v2rayyy | 🇩🇪 | 119.92
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - REALITY|@WomanLifeFreedomVPN |  | unavailable
-      - REALITY|@UnlimitedDev | 🇩🇪 | 168.39
-      - REALITY|@kiava | 🇩🇪 | 168.48
-      - REALITY|@VpnProSec | 🇩🇪 | 178.83
-      - REALITY|@VpnProSec | 🇬🇧 | 154.95
-      - REALITY|@VpnProSec | 🇬🇧 | 151.91
-      - REALITY|@free_v2rayyy | 🇩🇪 | 116.39
-      - REALITY|@free_v2rayyy | 🇩🇪 | 122.45
-      - REALITY|@freeconfigv2 |  | unavailable
-      - REALITY|@freeconfigv2 |  | unavailable 2
+      - REALITY|@UnlimitedDev | 🇩🇪 | 169.44
+      - REALITY|@kiava | 🇩🇪 | 210.2
+      - REALITY|@VpnProSec | 🇩🇪 | 175.9
+      - REALITY|@VpnProSec | 🇬🇧 | 138.1
+      - REALITY|@VpnProSec | 🇬🇧 | 169.24
+      - REALITY|@free_v2rayyy | 🇩🇪 | 127.05
+      - REALITY|@free_v2rayyy | 🇩🇪 | 119.92
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
