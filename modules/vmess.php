@@ -16,6 +16,7 @@ function encode_vmess($config)
 function remove_duplicate_vmess($input)
 {
     $array = explode("\n", $input);
+    $result = [];
     foreach ($array as $item) {
         $parts = decode_vmess($item);
         if ($parts !== NULL) {
