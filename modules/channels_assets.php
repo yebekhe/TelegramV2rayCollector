@@ -24,4 +24,3 @@ foreach ($Types as $channel => $data_array) {
 
 // Save the channel data array as JSON
 file_put_contents("modules/channels/channels_assets.json", json_encode($channel_array , JSON_PRETTY_PRINT));
-?>
