@@ -90,5 +90,3 @@ function ranking($input, $type)
 
     return $final_point_array;
 }
-
-?>
