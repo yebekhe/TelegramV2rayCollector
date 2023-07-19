@@ -101,5 +101,3 @@ $Types = [
 $donated_subscription = [
     "https://yebekhe.000webhostapp.com/donate/donated_servers/donated_server.json"
 ];
-
-?>
