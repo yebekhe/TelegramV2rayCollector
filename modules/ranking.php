@@ -53,6 +53,7 @@ function ping_coefficient($config_ping, $lowest_ping){
 }
 
 function process_rank_file($type){
+    $last_point_array = [];
     if (file_exists("ranking/channel_ranking_" . $type . ".json")) {
         $last_point_array = json_decode(
             file_get_contents("ranking/channel_ranking_" . $type . ".json"),
@@ -84,8 +85,6 @@ function process_points($point_array, $last_point_array){
 
 function ranking($input, $type)
 {
-    $last_point_array = [];
-
     $point_array = point_array($input);
     $lowest_ping = lowest_ping($input);
 
