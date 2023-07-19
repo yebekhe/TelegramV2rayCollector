@@ -53,6 +53,7 @@ foreach ($Types as $key => $type_array) {
                 // Merge the results of `get_config` function with $vless_data array
                 $vless_data = array_merge(
                     $vless_data,
+                    /** @scrutinizer ignore-call */
                     get_config($key, $current_type)
                 );
                 break;
@@ -60,6 +61,7 @@ foreach ($Types as $key => $type_array) {
                 // Merge the results of `get_config` function with $trojan_data array
                 $trojan_data = array_merge(
                     $trojan_data,
+                    /** @scrutinizer ignore-call */
                     get_config($key, $current_type)
                 );
                 break;
@@ -67,6 +69,7 @@ foreach ($Types as $key => $type_array) {
                 // Merge the results of `get_config` function with $shadowsocks_data array
                 $shadowsocks_data = array_merge(
                     $shadowsocks_data,
+                    /** @scrutinizer ignore-call */
                     get_config($key, $current_type)
                 );
                 break;
