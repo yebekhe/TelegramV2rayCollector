@@ -96,5 +96,3 @@ function get_reality($input)
     }
     return $output;
 }
-
-?>
