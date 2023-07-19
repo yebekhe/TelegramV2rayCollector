@@ -76,37 +76,52 @@ function is_reality($input, $type)
 
 function get_ip($input, $type, $is_reality)
 {
-    $ip = "";
     switch ($type) {
         case "vmess":
-            $ip = !empty($input["sni"])
-                ? $input["sni"]
-                : (!empty($input["host"])
-                    ? $input["host"]
-                    : $input["add"]);
-            break;
+            return get_vmess_ip($input);
         case "vless":
-            $ip = $is_reality
-                ? $input["hostname"]
-                : (!empty($input["params"]["sni"])
-                    ? $input["params"]["sni"]
-                    : (!empty($input["params"]["host"])
-                        ? $input["params"]["host"]
-                        : $input["hostname"]));
-            break;
+            return get_vless_ip($input, $is_reality);
         case "trojan":
-            $ip = !empty($input["params"]["sni"])
-                ? $input["params"]["sni"]
-                : (!empty($input["params"]["host"])
-                    ? $input["params"]["host"]
-                    : $input["hostname"]);
-            break;
+            return get_trojan_ip($input);
         case "ss":
-            $ip = $input["server_address"];
-            break;
+            return get_ss_ip($input);
     }
-    return $ip;
 }
+
+function get_vmess_ip($input)
+{
+    return !empty($input["sni"])
+        ? $input["sni"]
+        : (!empty($input["host"])
+            ? $input["host"]
+            : $input["add"]);
+}
+
+function get_vless_ip($input, $is_reality)
+{
+    return $is_reality
+        ? $input["hostname"]
+        : (!empty($input["params"]["sni"])
+            ? $input["params"]["sni"]
+            : (!empty($input["params"]["host"])
+                ? $input["params"]["host"]
+                : $input["hostname"]));
+}
+
+function get_trojan_ip($input)
+{
+    return !empty($input["params"]["sni"])
+        ? $input["params"]["sni"]
+        : (!empty($input["params"]["host"])
+            ? $input["params"]["host"]
+            : $input["hostname"]);
+}
+
+function get_ss_ip($input)
+{
+    return $input["server_address"];
+}
+
 function get_port($input, $type)
 {
     $port = "";
