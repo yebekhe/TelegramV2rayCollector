@@ -88,13 +88,6 @@ proxies:
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: _SG_新加坡
-    server: 52.221.214.113
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
   - name: _JP_日本
     server: 43.207.78.190
     port: 443
@@ -114,7 +107,6 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - _KR_韩国
-      - _SG_新加坡
       - _JP_日本
       - LOAD-BALANCE
       - BEST-PING
@@ -134,7 +126,6 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - _KR_韩国
-      - _SG_新加坡
       - _JP_日本
   - name: BEST-PING
     type: url-test
@@ -150,7 +141,6 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - _KR_韩国
-      - _SG_新加坡
       - _JP_日本
   - name: FALLBACK
     type: fallback
@@ -165,7 +155,6 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - _KR_韩国
-      - _SG_新加坡
       - _JP_日本
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
