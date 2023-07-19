@@ -12,4 +12,3 @@ function ping($ip, $port)
         return "unavailable";
     }
 }
-?>
