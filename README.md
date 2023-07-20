@@ -14,12 +14,8 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/yebekhe/TelegramV2rayCollector/">
-    <img src="https://img.shields.io/github/languages/top/yebekhe/TelegramV2rayCollector?color=5D6D7E" alt="Github Top Language">
-  </a>
-  <a href="https://github.com/yebekhe/TelegramV2rayCollector/">
-    <img src="https://img.shields.io/github/license/yebekhe/TelegramV2rayCollector?color=5D6D7E" alt="GitHub license">
-  </a>
+  <img src="https://img.shields.io/github/languages/top/yebekhe/TelegramV2rayCollector?color=5D6D7E" alt="Github Top Language">
+  <img src="https://img.shields.io/github/license/yebekhe/TelegramV2rayCollector?color=5D6D7E" alt="GitHub license">
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/yebekhe/TelegramV2rayCollector">
   <img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/t/yebekhe/TelegramV2rayCollector">
 </p>
