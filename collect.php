@@ -26,6 +26,12 @@ function fast_fix($input){
     return $input;
 }
 
+function config_array($input){
+    return array_map(function ($object) {
+    return $object["config"];
+}, $input);
+}
+
 $raw_url_base =
     "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main"; // Define the base URL for fetching raw data
 
@@ -80,38 +86,43 @@ foreach ($Types as $key => $type_array) {
     }
 }
 
+$donated_vmess_data = []; // Initialize an empty array for vmess data
+$donated_trojan_data = []; // Initialize an empty array for trojan data
+$donated_vless_data = []; // Initialize an empty array for vless data
+$donated_shadowsocks_data = []; // Initialize an empty array for shadowsocks data
+
 $base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
 
 $processed_subscription = [];
 $usernames = [];
 foreach ($donated_subscription as $url){
     $usernames = json_decode(file_get_contents($url), true);
-    foreach ($usernames as $ip => $username){
+    foreach ($usernames as $username){
         $subscription_data = file_get_contents($base_donated_url . $username);
         $processed_subscription = /** @scrutinizer ignore-call */ process_subscription($subscription_data, $username);
         foreach ($processed_subscription as $donated_type => $donated_data){
             switch ($donated_type){
                 case "vmess" :
-                    $vmess_data = array_merge(
-                        $vmess_data,
+                    $donated_vmess_data = array_merge(
+                        $donated_vmess_data,
                         $donated_data
                     );
                     break;
                 case "vless" :
-                    $vless_data = array_merge(
-                        $vless_data,
+                    $donated_vless_data = array_merge(
+                        $donated_vless_data,
                         $donated_data
                     );
                     break;
                 case "ss" :
-                    $shadowsocks_data = array_merge(
-                        $shadowsocks_data,
+                    $donated_shadowsocks_data = array_merge(
+                        $donated_shadowsocks_data,
                         $donated_data
                     );
                     break;
                 case "trojan" :
-                    $trojan_data = array_merge(
-                        $trojan_data,
+                    $donated_trojan_data = array_merge(
+                        $donated_trojan_data,
                         $donated_data
                     );
                     break;
@@ -120,32 +131,39 @@ foreach ($donated_subscription as $url){
     }
 }
 
-// Extract the "config" value from each object in $vmess_data and store it in $vmess_array
-$vmess_array = array_map(function ($object) {
-    return $object["config"];
-}, $vmess_data);
+$string_donated_vmess = $donated_vmess_data !== [] ? remove_duplicate_vmess(implode("\n", config_array($donated_vmess_data))) : "";
+$string_donated_vless = $donated_vless_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_vless_data))), "vless") : "";
+$string_donated_trojan = $donated_vless_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_trojan_data))), "trojan") : "";
+$string_donated_shadowsocks = $donated_vless_data !== [] ? remove_duplicate_ss(fast_fix(implode("\n", config_array($donated_shadowsocks_data)))) : "";
 
-// Extract the "config" value from each object in $vless_data and store it in $vless_array
-$vless_array = array_map(function ($object) {
-    return $object["config"];
-}, $vless_data);
+$donated_mix =
+    $string_donated_vmess .
+    "\n" .
+    $string_donated_vless .
+    "\n" .
+    $string_donated_trojan .
+    "\n" .
+    $string_donated_shadowsocks;
+$donated_array = explode("\n", $donated_mix);
 
-// Extract the "config" value from each object in $trojan_data and store it in $trojan_array
-$trojan_array = array_map(function ($object) {
-    return $object["config"];
-}, $trojan_data);
+foreach ($donated_array as $key => $donated_config){
+    if ($donated_config === ""){
+        unset($donated_array[$key]);
+    }
+}
 
-// Extract the "config" value from each object in $shadowsocks_data and store it in $shadowsocks_array
-$shadowsocks_array = array_map(function ($object) {
-    return $object["config"];
-}, $shadowsocks_data);
+$donated_mix = implode("\n", $donated_array);
 
-$vmess = implode("\n", $vmess_array);
-$vless = implode("\n", $vless_array);
-$trojan = implode("\n", $trojan_array);
-$shadowsocks = implode("\n", $shadowsocks_array);
+file_put_contents("sub/donated", $donated_mix);
+file_put_contents("sub/donated_base64", base64_encode($donated_mix));
 
-$fixed_string_vmess = remove_duplicate_vmess($vmess);
+// Extract the "config" value from each object in $type_data and store it in $type_array
+$vmess_array = config_array($vmess_data);
+$vless_array = config_array($vless_data);
+$trojan_array = config_array($trojan_data);
+$shadowsocks_array = config_array($shadowsocks_data);
+
+$fixed_string_vmess = remove_duplicate_vmess(implode("\n", $vmess_array));
 $fixed_string_vmess_array = explode("\n", $fixed_string_vmess);
 $json_vmess_array = [];
 
@@ -162,7 +180,7 @@ foreach ($vmess_data as $vmess_config_data) {
     }
 }
 
-$string_vless = fast_fix($vless);
+$string_vless = fast_fix(implode("\n", $vless_array));
 $fixed_string_vless = remove_duplicate_xray($string_vless, "vless");
 $fixed_string_vless_array = explode("\n", $fixed_string_vless);
 $json_vless_array = [];
@@ -180,7 +198,7 @@ foreach ($vless_data as $vless_config_data) {
     }
 }
 
-$string_trojan = fast_fix($trojan);
+$string_trojan = fast_fix(implode("\n", $trojan_array));
 $fixed_string_trojan = remove_duplicate_xray($string_trojan, "trojan");
 $fixed_string_trojan_array = explode("\n", $fixed_string_trojan);
 $json_trojan_array = [];
@@ -198,7 +216,7 @@ foreach ($trojan_data as $trojan_config_data) {
     }
 }
 
-$string_shadowsocks = fast_fix($shadowsocks);
+$string_shadowsocks = fast_fix(implode("\n", $shadowsocks_array));
 $fixed_string_shadowsocks = remove_duplicate_ss($string_shadowsocks);
 $fixed_string_shadowsocks_array = explode("\n", $fixed_string_shadowsocks);
 $json_shadowsocks_array = [];
@@ -225,7 +243,9 @@ $mix =
     "\n" .
     $fixed_string_trojan .
     "\n" .
-    $fixed_string_shadowsocks;
+    $fixed_string_shadowsocks .
+    "\n" .
+    $donated_mix;
 
 $mix_data = array_merge(
     $vmess_data,
@@ -310,6 +330,17 @@ $clash_types = [
         ),
         "surfboard" => convert_to_clash(
             $raw_url_base . "/sub/shadowsocks_base64",
+            "surfboard"
+        ),
+    ],
+    "donated" => [
+        "clash" => convert_to_clash($raw_url_base . "/sub/donated_base64"),
+        "meta" => convert_to_clash(
+            $raw_url_base . "/sub/donated_base64",
+            "meta"
+        ),
+        "surfboard" => convert_to_clash(
+            $raw_url_base . "/sub/donated_base64",
             "surfboard"
         ),
     ],
