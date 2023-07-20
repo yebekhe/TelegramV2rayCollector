@@ -96,6 +96,8 @@ $base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
 $processed_subscription = [];
 $usernames = [];
 foreach ($donated_subscription as $url){
+    $max_attempts = 3;
+    $attempts = 0;
     while ($attempts < $max_attempts) {
         try {
             $usernames = json_decode(file_get_contents($url), true);
