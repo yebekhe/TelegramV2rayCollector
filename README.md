@@ -56,6 +56,24 @@
       </td>
     </tr>
     <tr>
+      <td>Donated Servers</td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/donated">NORMAL SUBSCRIPTION</a>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/donated_base64">BASE64 SUBSCRIPTION</a>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/clash/donated.yml">CLASH SUBSCRIPTION</a>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/meta/donated.yml">CLASH.Meta SUBSCRIPTION</a>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/donated">SURFBOARD SUBSCRIPTION</a>
+      </td>
+    </tr>
+    <tr>
       <td>VMESS</td>
       <td>
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess">NORMAL SUBSCRIPTION</a>
