@@ -96,7 +96,20 @@ $base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
 $processed_subscription = [];
 $usernames = [];
 foreach ($donated_subscription as $url){
-    $usernames = json_decode(file_get_contents($url), true);
+    while ($attempts < $max_attempts) {
+        try {
+            $usernames = json_decode(file_get_contents($url), true);
+            break; // Success, so break out of the loop
+        } catch (Exception $e) {
+            // Handle the error here, e.g. by logging it
+            $attempts++;
+            if ($attempts == $max_attempts) {
+             // Reached max attempts, so throw an exception to indicate failure
+                throw new Exception('Failed to retrieve data after ' . $max_attempts . ' attempts.');
+            }
+        sleep(1); // Wait for 1 second before retrying
+        }
+    }
     foreach ($usernames as $username){
         $subscription_data = file_get_contents($base_donated_url . $username);
         $processed_subscription = /** @scrutinizer ignore-call */ process_subscription($subscription_data, $username);
