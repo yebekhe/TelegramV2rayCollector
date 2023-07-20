@@ -86,7 +86,7 @@ $processed_subscription = [];
 $usernames = [];
 foreach ($donated_subscription as $url){
     $usernames = json_decode(file_get_contents($url), true);
-    foreach ($usernames as $username){
+    foreach ($usernames as $ip => $username){
         $subscription_data = file_get_contents($base_donated_url . $username);
         $processed_subscription = /** @scrutinizer ignore-call */ process_subscription($subscription_data, $username);
         foreach ($processed_subscription as $donated_type => $donated_data){
