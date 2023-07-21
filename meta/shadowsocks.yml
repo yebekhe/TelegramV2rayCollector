@@ -39,13 +39,6 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: G!yBwPWH3Vao
     udp: true
-  - name: www.outline.network (DE)
-    server: ak1810.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 8080
-    type: ss
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-    udp: true
   - name: www.outline.network (FR)
     server: ak1811.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 6697
@@ -58,7 +51,6 @@ proxy-groups:
     type: select
     proxies:
       - www.outline.network (CA)
-      - www.outline.network (DE)
       - www.outline.network (FR)
       - LOAD-BALANCE
       - BEST-PING
@@ -71,7 +63,6 @@ proxy-groups:
     interval: 300
     proxies:
       - www.outline.network (CA)
-      - www.outline.network (DE)
       - www.outline.network (FR)
   - name: BEST-PING
     type: url-test
@@ -80,7 +71,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - www.outline.network (CA)
-      - www.outline.network (DE)
       - www.outline.network (FR)
   - name: FALLBACK
     type: fallback
@@ -88,7 +78,6 @@ proxy-groups:
     interval: 300
     proxies:
       - www.outline.network (CA)
-      - www.outline.network (DE)
       - www.outline.network (FR)
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
