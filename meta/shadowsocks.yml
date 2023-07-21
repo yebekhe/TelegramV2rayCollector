@@ -53,13 +53,6 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     udp: true
-  - name: _JP_日本
-    server: 43.207.78.190
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
@@ -67,7 +60,6 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - _JP_日本
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -81,7 +73,6 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - _JP_日本
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -91,7 +82,6 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - _JP_日本
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
@@ -100,6 +90,5 @@ proxy-groups:
       - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - _JP_日本
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
