@@ -1,0 +1,729 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+  - name: REALITY|@enjoy | 🇫🇷 | 226.28
+    server: likethis.masjedeman.online
+    port: 32112
+    type: vless
+    uuid: 89e82b97-5b5c-469f-c0e7-73aea44df3f5
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY|@enjoy | 🇫🇷 | 102.73
+    server: likethis.masjedeman.online
+    port: 32112
+    type: vless
+    uuid: 0ad0dae2-1c83-447a-97ea-a09c4301f94b
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY|@enjoy | 🇫🇷 | 100.42
+    server: likethis.masjedeman.online
+    port: 32112
+    type: vless
+    uuid: 93bb493d-ed48-491b-aeaa-f82a352a1204
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY|@enjoy | 🇫🇷 | 89.83
+    server: likethis.masjedeman.online
+    port: 32112
+    type: vless
+    uuid: 266bc4c7-86cb-4b5e-c896-3dd9399c5b5e
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 113.27
+    server: 5.42.77.255
+    port: 443
+    type: vless
+    uuid: 67cf70ab-8aa8-4b3e-af0b-d535f342c615
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.datadoghq.com
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 118.67
+    server: 5.42.77.255
+    port: 22
+    type: vless
+    uuid: 4f536694-2658-4958-8e15-fcc8cf5482cb
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: vj8mrscg.divarcdn.com%2Cvj8mrscg.rubika.ir%2Cvj8mrscg.irib.ir%2Cvj8mrscg.iranlms.ir%2Cvj8mrscg.soft98.ir
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 113.76
+    server: 5.42.77.255
+    port: 2087
+    type: vless
+    uuid: d6bd3742-4a80-425a-adc6-2b523540cdaa
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speedtest.net
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 117.92
+    server: 5.42.77.255
+    port: 8880
+    type: vless
+    uuid: 81556791-ad9a-466f-83c5-6fa9405ed8e3
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speed.cloudflare.com
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 117.88
+    server: 5.42.77.255
+    port: 10050
+    type: vless
+    uuid: d25f15a3-be4b-4b46-83b4-6965f74b57b6
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fruitfulcode.com
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 124.37
+    server: 5.42.77.255
+    port: 2053
+    type: vless
+    uuid: dec4550d-2714-4e97-9bb0-98e3dde6b800
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: favakar.ir
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 113.46
+    server: 5.42.77.255
+    port: 2082
+    type: vless
+    uuid: b5a7de34-cee8-4a8f-ba3d-e22433f1e459
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: benecke.com
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 118.49
+    server: 5.42.77.255
+    port: 8443
+    type: vless
+    uuid: a6798ffb-e454-4a33-b775-4004c411da06
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: tarhpro.ir
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 116.74
+    server: 5.42.77.255
+    port: 6443
+    type: vless
+    uuid: ff9e3c20-081b-4684-90c7-1378cf286bb4
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fernandotrueba.com
+    udp: true
+  - name: REALITY|@way_of_freedom | 🇷🇺 | 119.01
+    server: 5.42.77.255
+    port: 2096
+    type: vless
+    uuid: aa9b5721-df81-4aef-a22a-571c597e891f
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: mathhub.info
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 91.37
+    server: 5.230.67.53
+    port: 443
+    type: vless
+    uuid: 6386a670-8353-4d21-ac59-a3a046e4f68d
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.datadoghq.com
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.56
+    server: 5.230.67.53
+    port: 22
+    type: vless
+    uuid: c5885794-d415-4504-b649-b4edd75f5c99
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: 000webhost.ir
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.32
+    server: 5.230.67.53
+    port: 2058
+    type: vless
+    uuid: 0934cae1-8cd9-4e2c-aea8-1b5ade7beb9d
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speedtest.iranet.ir
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.07
+    server: 5.230.67.53
+    port: 8880
+    type: vless
+    uuid: 3217ab70-940a-4826-b0af-fa3ec9b27a4a
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speed.cloudflare.com
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.2
+    server: 5.230.67.53
+    port: 10050
+    type: vless
+    uuid: 75f86395-ae66-455d-ae60-4809e310cb02
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fruitfulcode.com
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.25
+    server: 5.230.67.53
+    port: 19215
+    type: vless
+    uuid: e476b181-f1de-4a36-bc58-b6f3cc36e531
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: testspeed.parsonline.com
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.34
+    server: 5.230.67.53
+    port: 2082
+    type: vless
+    uuid: c24dc648-5a22-48ca-a281-2ba5858f133f
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: benecke.com
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.22
+    server: 5.230.67.53
+    port: 8443
+    type: vless
+    uuid: 6f6ea915-25f5-42ea-8be5-a06370aa47bd
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: tarhpro.ir
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.24
+    server: 5.230.67.53
+    port: 6443
+    type: vless
+    uuid: ae9b71a2-2eae-4827-892b-4603fbae4d8b
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fernandotrueba.com
+    udp: true
+  - name: REALITY|@kian_pirfalak | 🇩🇪 | 90.41
+    server: 5.230.67.53
+    port: 2096
+    type: vless
+    uuid: fbcd52d3-e2db-48f0-a63d-16c1f852537c
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: mathhub.info
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 98.13
+    server: 176.124.198.154
+    port: 443
+    type: vless
+    uuid: 9ff7c610-e873-4aa9-9dca-500f4ba96147
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.datadoghq.com
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.5
+    server: 176.124.198.154
+    port: 22
+    type: vless
+    uuid: 970af3d0-ebd9-4ff3-9882-2e8d5221fd4d
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: 000webhost.ir
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.47
+    server: 176.124.198.154
+    port: 2087
+    type: vless
+    uuid: 8cc14d9a-bc97-4d07-8dc0-bdc9d802cc4a
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.4
+    server: 176.124.198.154
+    port: 8880
+    type: vless
+    uuid: 1d763419-68ff-437e-9f76-706429fe7398
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speed.cloudflare.com
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.52
+    server: 176.124.198.154
+    port: 10050
+    type: vless
+    uuid: ea10da9a-b889-4807-b70d-b437c193b807
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fruitfulcode.com
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 97.16
+    server: 176.124.198.154
+    port: 2085
+    type: vless
+    uuid: 76a99d92-b749-4e5f-9e7c-173e58a99cb6
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speedtest.iranet.ir
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.13
+    server: 176.124.198.154
+    port: 2082
+    type: vless
+    uuid: ff51ce60-1e8f-435a-a947-b13800b82463
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: benecke.com
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.37
+    server: 176.124.198.154
+    port: 8443
+    type: vless
+    uuid: 69b42ce8-f622-46d3-b871-a2382cc46319
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: tarhpro.ir
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.29
+    server: 176.124.198.154
+    port: 6443
+    type: vless
+    uuid: b6076328-e895-4770-a33f-0ea5f1bf0be2
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fernandotrueba.com
+    udp: true
+  - name: REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.26
+    server: 176.124.198.154
+    port: 2096
+    type: vless
+    uuid: 8fb1610a-fe95-4a9a-95dc-3e8a053414f3
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: mathhub.info
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 117.8
+    server: 5.42.77.71
+    port: 443
+    type: vless
+    uuid: b20bd20a-550e-4717-9be7-3aa532d54615
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.datadoghq.com
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 113.18
+    server: 5.42.77.71
+    port: 22
+    type: vless
+    uuid: 73ec7971-6a10-4963-962e-8bf8f9ad0d2b
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: 000webhost.ir
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 114.51
+    server: 5.42.77.71
+    port: 2087
+    type: vless
+    uuid: e9a8c55a-8a83-4f1e-82b8-34169bdd5f89
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speedtest.net
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 117.74
+    server: 5.42.77.71
+    port: 8880
+    type: vless
+    uuid: e66cc2bd-aef7-45c7-9e71-ac57d1dd2c7a
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: speed.cloudflare.com
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 113.38
+    server: 5.42.77.71
+    port: 10050
+    type: vless
+    uuid: 12c5214f-9a1a-43c8-9ef5-44cd1e2def57
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fruitfulcode.com
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 113.02
+    server: 5.42.77.71
+    port: 2053
+    type: vless
+    uuid: ab06c323-2bfe-4e97-b587-7f8275f1c2df
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: favakar.ir
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 112.97
+    server: 5.42.77.71
+    port: 2082
+    type: vless
+    uuid: 3f93527d-79c1-460c-8834-1e69440e8ce6
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: benecke.com
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 117.69
+    server: 5.42.77.71
+    port: 8443
+    type: vless
+    uuid: 5f23509d-bcc9-4d42-85a1-49be4caab96f
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: tarhpro.ir
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 112.74
+    server: 5.42.77.71
+    port: 6443
+    type: vless
+    uuid: 1ce1fc5b-590c-45bf-acbd-1712eec4c104
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: fernandotrueba.com
+    udp: true
+  - name: REALITY|@hadis_najafi | 🇷🇺 | 113.09
+    server: 5.42.77.71
+    port: 2096
+    type: vless
+    uuid: 004c3d9d-14fb-4b16-8c3f-c23fa87ebbe6
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: mathhub.info
+    udp: true
+proxy-groups:
+  - name: FASTSSH-SSHKIT-HOWDY
+    type: select
+    proxies:
+      - REALITY|@enjoy | 🇫🇷 | 226.28
+      - REALITY|@enjoy | 🇫🇷 | 102.73
+      - REALITY|@enjoy | 🇫🇷 | 100.42
+      - REALITY|@enjoy | 🇫🇷 | 89.83
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.27
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.67
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.76
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.92
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.88
+      - REALITY|@way_of_freedom | 🇷🇺 | 124.37
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.46
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.49
+      - REALITY|@way_of_freedom | 🇷🇺 | 116.74
+      - REALITY|@way_of_freedom | 🇷🇺 | 119.01
+      - REALITY|@kian_pirfalak | 🇩🇪 | 91.37
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.56
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.32
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.07
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.2
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.25
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.34
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.22
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.24
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.41
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 98.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.5
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.47
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.4
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.52
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 97.16
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.37
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.29
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.26
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.8
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.18
+      - REALITY|@hadis_najafi | 🇷🇺 | 114.51
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.38
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.02
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.97
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.69
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.09
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - REALITY|@enjoy | 🇫🇷 | 226.28
+      - REALITY|@enjoy | 🇫🇷 | 102.73
+      - REALITY|@enjoy | 🇫🇷 | 100.42
+      - REALITY|@enjoy | 🇫🇷 | 89.83
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.27
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.67
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.76
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.92
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.88
+      - REALITY|@way_of_freedom | 🇷🇺 | 124.37
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.46
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.49
+      - REALITY|@way_of_freedom | 🇷🇺 | 116.74
+      - REALITY|@way_of_freedom | 🇷🇺 | 119.01
+      - REALITY|@kian_pirfalak | 🇩🇪 | 91.37
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.56
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.32
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.07
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.2
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.25
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.34
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.22
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.24
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.41
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 98.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.5
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.47
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.4
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.52
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 97.16
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.37
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.29
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.26
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.8
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.18
+      - REALITY|@hadis_najafi | 🇷🇺 | 114.51
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.38
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.02
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.97
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.69
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.09
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - REALITY|@enjoy | 🇫🇷 | 226.28
+      - REALITY|@enjoy | 🇫🇷 | 102.73
+      - REALITY|@enjoy | 🇫🇷 | 100.42
+      - REALITY|@enjoy | 🇫🇷 | 89.83
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.27
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.67
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.76
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.92
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.88
+      - REALITY|@way_of_freedom | 🇷🇺 | 124.37
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.46
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.49
+      - REALITY|@way_of_freedom | 🇷🇺 | 116.74
+      - REALITY|@way_of_freedom | 🇷🇺 | 119.01
+      - REALITY|@kian_pirfalak | 🇩🇪 | 91.37
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.56
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.32
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.07
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.2
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.25
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.34
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.22
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.24
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.41
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 98.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.5
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.47
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.4
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.52
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 97.16
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.37
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.29
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.26
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.8
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.18
+      - REALITY|@hadis_najafi | 🇷🇺 | 114.51
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.38
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.02
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.97
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.69
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.09
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - REALITY|@enjoy | 🇫🇷 | 226.28
+      - REALITY|@enjoy | 🇫🇷 | 102.73
+      - REALITY|@enjoy | 🇫🇷 | 100.42
+      - REALITY|@enjoy | 🇫🇷 | 89.83
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.27
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.67
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.76
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.92
+      - REALITY|@way_of_freedom | 🇷🇺 | 117.88
+      - REALITY|@way_of_freedom | 🇷🇺 | 124.37
+      - REALITY|@way_of_freedom | 🇷🇺 | 113.46
+      - REALITY|@way_of_freedom | 🇷🇺 | 118.49
+      - REALITY|@way_of_freedom | 🇷🇺 | 116.74
+      - REALITY|@way_of_freedom | 🇷🇺 | 119.01
+      - REALITY|@kian_pirfalak | 🇩🇪 | 91.37
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.56
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.32
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.07
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.2
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.25
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.34
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.22
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.24
+      - REALITY|@kian_pirfalak | 🇩🇪 | 90.41
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 98.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.5
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.47
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.4
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 96.52
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 97.16
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.13
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.37
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 101.29
+      - REALITY|@sarina_esmailzadeh | 🇳🇱 | 102.26
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.8
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.18
+      - REALITY|@hadis_najafi | 🇷🇺 | 114.51
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.38
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.02
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.97
+      - REALITY|@hadis_najafi | 🇷🇺 | 117.69
+      - REALITY|@hadis_najafi | 🇷🇺 | 112.74
+      - REALITY|@hadis_najafi | 🇷🇺 | 113.09
+rules:
+  - MATCH,FASTSSH-SSHKIT-HOWDY
