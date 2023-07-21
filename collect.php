@@ -15,8 +15,8 @@ function process_mix_json($input, $name)
         $mix_data_decode,
         JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
     ); // Re-encode the sorted data to JSON with pretty printing and Unicode characters not escaped
-    $mix_data_json = str_replace("&amp;", "&", $mix_data_json); // Replace HTML-encoded ampersands with regular ampersands
     $mix_data_json = urldecode($mix_data_json);
+    $mix_data_json = str_replace("amp;", "", $mix_data_json); // Replace HTML-encoded ampersands with regular ampersands
     $mix_data_json = str_replace("\\", "", $mix_data_json); // Remove backslashes from the JSON string
     file_put_contents("json/" . $name, $mix_data_json); // Save the JSON data to a file in the "json/" directory with the specified name
 }
