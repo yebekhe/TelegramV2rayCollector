@@ -7,7 +7,6 @@ external-controller: :9090
 proxies:
   - {name: 🇩🇪 www.outline.network (DE), server: ak1810.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
   - {name: 🇫🇷 www.outline.network (FR), server: ak1811.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: 🇬🇧 www.outline.network (GB), server: ak1812.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou, port: 4444, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
 proxy-groups:
   - name: 🚀 MANUAL
     type: select
@@ -16,7 +15,6 @@ proxy-groups:
       - DIRECT
       - 🇩🇪 www.outline.network (DE)
       - 🇫🇷 www.outline.network (FR)
-      - 🇬🇧 www.outline.network (GB)
   - name: ♻️ AUTO SELECT
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -25,7 +23,6 @@ proxy-groups:
     proxies:
       - 🇩🇪 www.outline.network (DE)
       - 🇫🇷 www.outline.network (FR)
-      - 🇬🇧 www.outline.network (GB)
   - name: 🎯 DIRECT
     type: select
     proxies:
@@ -45,7 +42,6 @@ proxy-groups:
       - ♻️ AUTO SELECT
       - 🇩🇪 www.outline.network (DE)
       - 🇫🇷 www.outline.network (FR)
-      - 🇬🇧 www.outline.network (GB)
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 DIRECT
  - DOMAIN-SUFFIX,ip6-localhost,🎯 DIRECT
