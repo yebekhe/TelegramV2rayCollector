@@ -1,36 +1,12 @@
 port: 7890
 socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
-ipv6: false
-mode: rule
-log-level: silent
 allow-lan: true
+mode: Rule
+log-level: info
+ipv6: true
 external-controller: 0.0.0.0:9090
-secret: ""
-bind-address: "*"
-unified-delay: true
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
-  nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - https://dns.google/dns-query
-  fallback:
-    - 1.1.1.1
-    - 8.8.4.4
-    - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-    - 112.215.203.254
 proxies:
-  - name: REALITY | @enjoy | FR🇫🇷 | 334.85ms
+  - name: REALITY | @enjoy | FR🇫🇷 | 126.86ms
     server: likethis.masjedeman.online
     port: 32112
     type: vless
@@ -43,7 +19,7 @@ proxies:
     grpc-opts:
       grpc-service-name: nowtimetoserviceforfree
     udp: true
-  - name: REALITY | @enjoy | FR🇫🇷 | 247.33ms
+  - name: REALITY | @enjoy | FR🇫🇷 | 117.54ms
     server: likethis.masjedeman.online
     port: 32112
     type: vless
@@ -56,7 +32,7 @@ proxies:
     grpc-opts:
       grpc-service-name: nowtimetoserviceforfree
     udp: true
-  - name: REALITY | @enjoy | FR🇫🇷 | 254.22ms
+  - name: REALITY | @enjoy | FR🇫🇷 | 106.07ms
     server: likethis.masjedeman.online
     port: 32112
     type: vless
@@ -69,7 +45,20 @@ proxies:
     grpc-opts:
       grpc-service-name: nowtimetoserviceforfree
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 133.1ms
+  - name: REALITY | @enjoy | FR🇫🇷 | 107.39ms
+    server: likethis.masjedeman.online
+    port: 32112
+    type: vless
+    uuid: 266bc4c7-86cb-4b5e-c896-3dd9399c5b5e
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.discordapp.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: nowtimetoserviceforfree
+    udp: true
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 97.02ms
     server: 176.124.198.154
     port: 443
     type: vless
@@ -80,7 +69,7 @@ proxies:
     skip-cert-verify: true
     servername: www.datadoghq.com
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.9ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.89ms
     server: 176.124.198.154
     port: 22
     type: vless
@@ -91,7 +80,7 @@ proxies:
     skip-cert-verify: true
     servername: 000webhost.ir
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.63ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.04ms
     server: 176.124.198.154
     port: 2087
     type: vless
@@ -102,7 +91,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.9ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.25ms
     server: 176.124.198.154
     port: 8880
     type: vless
@@ -113,7 +102,7 @@ proxies:
     skip-cert-verify: true
     servername: speed.cloudflare.com
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.87ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.16ms
     server: 176.124.198.154
     port: 10050
     type: vless
@@ -124,7 +113,7 @@ proxies:
     skip-cert-verify: true
     servername: fruitfulcode.com
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.78ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.63ms
     server: 176.124.198.154
     port: 2085
     type: vless
@@ -135,7 +124,7 @@ proxies:
     skip-cert-verify: true
     servername: speedtest.iranet.ir
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.72ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 100.75ms
     server: 176.124.198.154
     port: 2082
     type: vless
@@ -146,7 +135,7 @@ proxies:
     skip-cert-verify: true
     servername: benecke.com
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.77ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.48ms
     server: 176.124.198.154
     port: 8443
     type: vless
@@ -157,7 +146,7 @@ proxies:
     skip-cert-verify: true
     servername: tarhpro.ir
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.91ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.72ms
     server: 176.124.198.154
     port: 6443
     type: vless
@@ -168,7 +157,7 @@ proxies:
     skip-cert-verify: true
     servername: fernandotrueba.com
     udp: true
-  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.82ms
+  - name: REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.67ms
     server: 176.124.198.154
     port: 2096
     type: vless
@@ -179,7 +168,7 @@ proxies:
     skip-cert-verify: true
     servername: mathhub.info
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 148.5ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 117.89ms
     server: 5.42.77.71
     port: 443
     type: vless
@@ -190,7 +179,7 @@ proxies:
     skip-cert-verify: true
     servername: www.datadoghq.com
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 148.27ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 117.54ms
     server: 5.42.77.71
     port: 22
     type: vless
@@ -201,7 +190,7 @@ proxies:
     skip-cert-verify: true
     servername: 000webhost.ir
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 149.78ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 113.25ms
     server: 5.42.77.71
     port: 2087
     type: vless
@@ -212,7 +201,7 @@ proxies:
     skip-cert-verify: true
     servername: speedtest.net
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 149.9ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 119.18ms
     server: 5.42.77.71
     port: 8880
     type: vless
@@ -223,7 +212,7 @@ proxies:
     skip-cert-verify: true
     servername: speed.cloudflare.com
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 149.48ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 117.87ms
     server: 5.42.77.71
     port: 10050
     type: vless
@@ -234,7 +223,7 @@ proxies:
     skip-cert-verify: true
     servername: fruitfulcode.com
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 148.52ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 113.15ms
     server: 5.42.77.71
     port: 2053
     type: vless
@@ -245,7 +234,7 @@ proxies:
     skip-cert-verify: true
     servername: favakar.ir
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 155.7ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 113.12ms
     server: 5.42.77.71
     port: 2082
     type: vless
@@ -256,7 +245,7 @@ proxies:
     skip-cert-verify: true
     servername: benecke.com
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 153.84ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 113.28ms
     server: 5.42.77.71
     port: 8443
     type: vless
@@ -267,7 +256,7 @@ proxies:
     skip-cert-verify: true
     servername: tarhpro.ir
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 148.9ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 113.13ms
     server: 5.42.77.71
     port: 6443
     type: vless
@@ -278,7 +267,7 @@ proxies:
     skip-cert-verify: true
     servername: fernandotrueba.com
     udp: true
-  - name: REALITY | @hadis_najafi | RU🇷🇺 | 148.05ms
+  - name: REALITY | @hadis_najafi | RU🇷🇺 | 117.66ms
     server: 5.42.77.71
     port: 2096
     type: vless
@@ -289,7 +278,7 @@ proxies:
     skip-cert-verify: true
     servername: mathhub.info
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 149.42ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 117.78ms
     server: 5.42.77.255
     port: 443
     type: vless
@@ -300,7 +289,7 @@ proxies:
     skip-cert-verify: true
     servername: www.datadoghq.com
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 150.96ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 113.31ms
     server: 5.42.77.255
     port: 22
     type: vless
@@ -311,7 +300,7 @@ proxies:
     skip-cert-verify: true
     servername: vj8mrscg.divarcdn.com%2Cvj8mrscg.rubika.ir%2Cvj8mrscg.irib.ir%2Cvj8mrscg.iranlms.ir%2Cvj8mrscg.soft98.ir
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 148.48ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 117.44ms
     server: 5.42.77.255
     port: 2087
     type: vless
@@ -322,7 +311,7 @@ proxies:
     skip-cert-verify: true
     servername: speedtest.net
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 145.6ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 113.69ms
     server: 5.42.77.255
     port: 8880
     type: vless
@@ -333,7 +322,7 @@ proxies:
     skip-cert-verify: true
     servername: speed.cloudflare.com
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 150.53ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 120.18ms
     server: 5.42.77.255
     port: 10050
     type: vless
@@ -344,7 +333,7 @@ proxies:
     skip-cert-verify: true
     servername: fruitfulcode.com
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 149.07ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 113.11ms
     server: 5.42.77.255
     port: 2053
     type: vless
@@ -355,7 +344,7 @@ proxies:
     skip-cert-verify: true
     servername: favakar.ir
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 164.24ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 118.9ms
     server: 5.42.77.255
     port: 2082
     type: vless
@@ -366,7 +355,7 @@ proxies:
     skip-cert-verify: true
     servername: benecke.com
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 149.64ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 123.76ms
     server: 5.42.77.255
     port: 8443
     type: vless
@@ -377,7 +366,7 @@ proxies:
     skip-cert-verify: true
     servername: tarhpro.ir
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 149.59ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 130.24ms
     server: 5.42.77.255
     port: 6443
     type: vless
@@ -388,7 +377,7 @@ proxies:
     skip-cert-verify: true
     servername: fernandotrueba.com
     udp: true
-  - name: REALITY | @way_of_freedom | RU🇷🇺 | 151.5ms
+  - name: REALITY | @way_of_freedom | RU🇷🇺 | 119.14ms
     server: 5.42.77.255
     port: 2096
     type: vless
@@ -399,7 +388,7 @@ proxies:
     skip-cert-verify: true
     servername: mathhub.info
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 124.63ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 90.14ms
     server: 5.230.67.53
     port: 443
     type: vless
@@ -410,7 +399,7 @@ proxies:
     skip-cert-verify: true
     servername: www.datadoghq.com
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 125ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 92.44ms
     server: 5.230.67.53
     port: 22
     type: vless
@@ -421,7 +410,7 @@ proxies:
     skip-cert-verify: true
     servername: 000webhost.ir
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 121.77ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 91.48ms
     server: 5.230.67.53
     port: 2058
     type: vless
@@ -432,7 +421,7 @@ proxies:
     skip-cert-verify: true
     servername: speedtest.iranet.ir
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 120.46ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 90.59ms
     server: 5.230.67.53
     port: 8880
     type: vless
@@ -443,7 +432,7 @@ proxies:
     skip-cert-verify: true
     servername: speed.cloudflare.com
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 124.95ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 97.7ms
     server: 5.230.67.53
     port: 10050
     type: vless
@@ -454,7 +443,7 @@ proxies:
     skip-cert-verify: true
     servername: fruitfulcode.com
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 120.73ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 90.78ms
     server: 5.230.67.53
     port: 19215
     type: vless
@@ -465,7 +454,7 @@ proxies:
     skip-cert-verify: true
     servername: testspeed.parsonline.com
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 120.91ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 92ms
     server: 5.230.67.53
     port: 2082
     type: vless
@@ -476,7 +465,7 @@ proxies:
     skip-cert-verify: true
     servername: benecke.com
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 121.11ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 93.64ms
     server: 5.230.67.53
     port: 8443
     type: vless
@@ -487,7 +476,7 @@ proxies:
     skip-cert-verify: true
     servername: tarhpro.ir
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 180.6ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 208.9ms
     server: 5.230.67.53
     port: 6443
     type: vless
@@ -498,7 +487,7 @@ proxies:
     skip-cert-verify: true
     servername: fernandotrueba.com
     udp: true
-  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 121.08ms
+  - name: REALITY | @kian_pirfalak | DE🇩🇪 | 101.06ms
     server: 5.230.67.53
     port: 2096
     type: vless
@@ -509,7 +498,7 @@ proxies:
     skip-cert-verify: true
     servername: mathhub.info
     udp: true
-  - name: REALITY | @V2Hub | NL🇳🇱 | 146.83ms
+  - name: REALITY | @V2Hub | NL🇳🇱 | 110.28ms
     server: fv2ray.ddns.net
     port: 2053
     type: vless
@@ -522,7 +511,7 @@ proxies:
     grpc-opts:
       grpc-service-name: "%40Fv2ray%40Fv2ray%40Fv2ray"
     udp: true
-  - name: REALITY | @V2Hub | NL🇳🇱 | 132.95ms
+  - name: REALITY | @V2Hub | NL🇳🇱 | 96.94ms
     server: 176.124.198.154
     port: 443
     type: vless
@@ -533,7 +522,7 @@ proxies:
     skip-cert-verify: true
     servername: www.datadoghq.com
     udp: true
-  - name: REALITY | @V2Hub | DE🇩🇪 | 127.98ms
+  - name: REALITY | @V2Hub | DE🇩🇪 | 94.66ms
     server: 167.235.249.207
     port: 1111
     type: vless
@@ -544,7 +533,7 @@ proxies:
     skip-cert-verify: true
     servername: flutter.dev
     udp: true
-  - name: REALITY | @V2Hub | GB🇬🇧 | 125.58ms
+  - name: REALITY | @V2Hub | GB🇬🇧 | 90.53ms
     server: 5.181.21.135
     port: 40908
     type: vless
@@ -557,7 +546,7 @@ proxies:
     grpc-opts:
       grpc-service-name: "%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF"
     udp: true
-  - name: REALITY | @V2Hub | UA🇺🇦 | 160.31ms
+  - name: REALITY | @V2Hub | UA🇺🇦 | 121.85ms
     server: 185.126.255.88
     port: 45077
     type: vless
@@ -567,7 +556,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @V2Hub | DE🇩🇪 | 147.97ms
+  - name: REALITY | @V2Hub | DE🇩🇪 | 104.65ms
     server: hoddi.cpionline.co
     port: 443
     type: vless
@@ -578,7 +567,7 @@ proxies:
     skip-cert-verify: true
     servername: fteproxy.org
     udp: true
-  - name: REALITY | @V2Hub | FR🇫🇷 | 1591.06ms
+  - name: REALITY | @V2Hub | FR🇫🇷 | 1837.35ms
     server: nika1401.duckdns.org
     port: 443
     type: vless
@@ -593,226 +582,173 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - REALITY | @enjoy | FR🇫🇷 | 334.85ms
-      - REALITY | @enjoy | FR🇫🇷 | 247.33ms
-      - REALITY | @enjoy | FR🇫🇷 | 254.22ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 133.1ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.63ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.87ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.78ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.72ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.77ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.91ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.82ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.5ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.27ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.78ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.48ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.52ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 155.7ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 153.84ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.05ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.42ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.96ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 148.48ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 145.6ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.53ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.07ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 164.24ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.64ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.59ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 151.5ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.63ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 125ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.77ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.46ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.95ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.73ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.91ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.11ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 180.6ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.08ms
-      - REALITY | @V2Hub | NL🇳🇱 | 146.83ms
-      - REALITY | @V2Hub | NL🇳🇱 | 132.95ms
-      - REALITY | @V2Hub | DE🇩🇪 | 127.98ms
-      - REALITY | @V2Hub | GB🇬🇧 | 125.58ms
-      - REALITY | @V2Hub | UA🇺🇦 | 160.31ms
-      - REALITY | @V2Hub | DE🇩🇪 | 147.97ms
-      - REALITY | @V2Hub | FR🇫🇷 | 1591.06ms
-      - LOAD-BALANCE
-      - BEST-PING
+      - URL-TEST
       - FALLBACK
-      - DIRECT
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://hi.bonds.id/ping
-    interval: 300
-    proxies:
-      - REALITY | @enjoy | FR🇫🇷 | 334.85ms
-      - REALITY | @enjoy | FR🇫🇷 | 247.33ms
-      - REALITY | @enjoy | FR🇫🇷 | 254.22ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 133.1ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.63ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.87ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.78ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.72ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.77ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.91ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.82ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.5ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.27ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.78ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.48ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.52ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 155.7ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 153.84ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.05ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.42ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.96ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 148.48ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 145.6ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.53ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.07ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 164.24ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.64ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.59ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 151.5ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.63ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 125ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.77ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.46ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.95ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.73ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.91ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.11ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 180.6ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.08ms
-      - REALITY | @V2Hub | NL🇳🇱 | 146.83ms
-      - REALITY | @V2Hub | NL🇳🇱 | 132.95ms
-      - REALITY | @V2Hub | DE🇩🇪 | 127.98ms
-      - REALITY | @V2Hub | GB🇬🇧 | 125.58ms
-      - REALITY | @V2Hub | UA🇺🇦 | 160.31ms
-      - REALITY | @V2Hub | DE🇩🇪 | 147.97ms
-      - REALITY | @V2Hub | FR🇫🇷 | 1591.06ms
-  - name: BEST-PING
+      - REALITY | @enjoy | FR🇫🇷 | 126.86ms
+      - REALITY | @enjoy | FR🇫🇷 | 117.54ms
+      - REALITY | @enjoy | FR🇫🇷 | 106.07ms
+      - REALITY | @enjoy | FR🇫🇷 | 107.39ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 97.02ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.89ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.04ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.25ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.16ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.63ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 100.75ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.48ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.72ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.67ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.89ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.54ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.25ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 119.18ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.87ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.15ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.12ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.28ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.13ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.66ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 117.78ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.31ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 117.44ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.69ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 120.18ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.11ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 118.9ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 123.76ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 130.24ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 119.14ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.14ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 92.44ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 91.48ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.59ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 97.7ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.78ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 92ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 93.64ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 208.9ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 101.06ms
+      - REALITY | @V2Hub | NL🇳🇱 | 110.28ms
+      - REALITY | @V2Hub | NL🇳🇱 | 96.94ms
+      - REALITY | @V2Hub | DE🇩🇪 | 94.66ms
+      - REALITY | @V2Hub | GB🇬🇧 | 90.53ms
+      - REALITY | @V2Hub | UA🇺🇦 | 121.85ms
+      - REALITY | @V2Hub | DE🇩🇪 | 104.65ms
+      - REALITY | @V2Hub | FR🇫🇷 | 1837.35ms
+  - name: URL-TEST
     type: url-test
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - REALITY | @enjoy | FR🇫🇷 | 334.85ms
-      - REALITY | @enjoy | FR🇫🇷 | 247.33ms
-      - REALITY | @enjoy | FR🇫🇷 | 254.22ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 133.1ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.63ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.87ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.78ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.72ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.77ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.91ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.82ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.5ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.27ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.78ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.48ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.52ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 155.7ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 153.84ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.05ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.42ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.96ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 148.48ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 145.6ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.53ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.07ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 164.24ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.64ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.59ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 151.5ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.63ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 125ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.77ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.46ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.95ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.73ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.91ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.11ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 180.6ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.08ms
-      - REALITY | @V2Hub | NL🇳🇱 | 146.83ms
-      - REALITY | @V2Hub | NL🇳🇱 | 132.95ms
-      - REALITY | @V2Hub | DE🇩🇪 | 127.98ms
-      - REALITY | @V2Hub | GB🇬🇧 | 125.58ms
-      - REALITY | @V2Hub | UA🇺🇦 | 160.31ms
-      - REALITY | @V2Hub | DE🇩🇪 | 147.97ms
-      - REALITY | @V2Hub | FR🇫🇷 | 1591.06ms
+      - REALITY | @enjoy | FR🇫🇷 | 126.86ms
+      - REALITY | @enjoy | FR🇫🇷 | 117.54ms
+      - REALITY | @enjoy | FR🇫🇷 | 106.07ms
+      - REALITY | @enjoy | FR🇫🇷 | 107.39ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 97.02ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.89ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.04ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.25ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.16ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.63ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 100.75ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.48ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.72ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.67ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.89ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.54ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.25ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 119.18ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.87ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.15ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.12ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.28ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.13ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.66ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 117.78ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.31ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 117.44ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.69ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 120.18ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.11ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 118.9ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 123.76ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 130.24ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 119.14ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.14ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 92.44ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 91.48ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.59ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 97.7ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.78ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 92ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 93.64ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 208.9ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 101.06ms
+      - REALITY | @V2Hub | NL🇳🇱 | 110.28ms
+      - REALITY | @V2Hub | NL🇳🇱 | 96.94ms
+      - REALITY | @V2Hub | DE🇩🇪 | 94.66ms
+      - REALITY | @V2Hub | GB🇬🇧 | 90.53ms
+      - REALITY | @V2Hub | UA🇺🇦 | 121.85ms
+      - REALITY | @V2Hub | DE🇩🇪 | 104.65ms
+      - REALITY | @V2Hub | FR🇫🇷 | 1837.35ms
   - name: FALLBACK
     type: fallback
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - REALITY | @enjoy | FR🇫🇷 | 334.85ms
-      - REALITY | @enjoy | FR🇫🇷 | 247.33ms
-      - REALITY | @enjoy | FR🇫🇷 | 254.22ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 133.1ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.63ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.9ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 128.87ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 132.78ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.72ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 134.77ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.91ms
-      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 131.82ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.5ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.27ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.78ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 149.48ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.52ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 155.7ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 153.84ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.9ms
-      - REALITY | @hadis_najafi | RU🇷🇺 | 148.05ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.42ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.96ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 148.48ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 145.6ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 150.53ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.07ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 164.24ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.64ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 149.59ms
-      - REALITY | @way_of_freedom | RU🇷🇺 | 151.5ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.63ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 125ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.77ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.46ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 124.95ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.73ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 120.91ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.11ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 180.6ms
-      - REALITY | @kian_pirfalak | DE🇩🇪 | 121.08ms
-      - REALITY | @V2Hub | NL🇳🇱 | 146.83ms
-      - REALITY | @V2Hub | NL🇳🇱 | 132.95ms
-      - REALITY | @V2Hub | DE🇩🇪 | 127.98ms
-      - REALITY | @V2Hub | GB🇬🇧 | 125.58ms
-      - REALITY | @V2Hub | UA🇺🇦 | 160.31ms
-      - REALITY | @V2Hub | DE🇩🇪 | 147.97ms
-      - REALITY | @V2Hub | FR🇫🇷 | 1591.06ms
+      - REALITY | @enjoy | FR🇫🇷 | 126.86ms
+      - REALITY | @enjoy | FR🇫🇷 | 117.54ms
+      - REALITY | @enjoy | FR🇫🇷 | 106.07ms
+      - REALITY | @enjoy | FR🇫🇷 | 107.39ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 97.02ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.89ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.04ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.25ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.16ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.63ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 100.75ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 101.48ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.72ms
+      - REALITY | @sarina_esmailzadeh | NL🇳🇱 | 96.67ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.89ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.54ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.25ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 119.18ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.87ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.15ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.12ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.28ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 113.13ms
+      - REALITY | @hadis_najafi | RU🇷🇺 | 117.66ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 117.78ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.31ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 117.44ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.69ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 120.18ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 113.11ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 118.9ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 123.76ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 130.24ms
+      - REALITY | @way_of_freedom | RU🇷🇺 | 119.14ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.14ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 92.44ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 91.48ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.59ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 97.7ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 90.78ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 92ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 93.64ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 208.9ms
+      - REALITY | @kian_pirfalak | DE🇩🇪 | 101.06ms
+      - REALITY | @V2Hub | NL🇳🇱 | 110.28ms
+      - REALITY | @V2Hub | NL🇳🇱 | 96.94ms
+      - REALITY | @V2Hub | DE🇩🇪 | 94.66ms
+      - REALITY | @V2Hub | GB🇬🇧 | 90.53ms
+      - REALITY | @V2Hub | UA🇺🇦 | 121.85ms
+      - REALITY | @V2Hub | DE🇩🇪 | 104.65ms
+      - REALITY | @V2Hub | FR🇫🇷 | 1837.35ms
+
 rules:
-  - MATCH,MANUAL
+ - GEOIP,IR,DIRECT
+ - MATCH,MANUAL

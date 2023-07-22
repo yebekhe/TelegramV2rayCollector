@@ -1,36 +1,12 @@
 port: 7890
 socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
-ipv6: false
-mode: rule
-log-level: silent
 allow-lan: true
+mode: Rule
+log-level: info
+ipv6: true
 external-controller: 0.0.0.0:9090
-secret: ""
-bind-address: "*"
-unified-delay: true
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
-  nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - https://dns.google/dns-query
-  fallback:
-    - 1.1.1.1
-    - 8.8.4.4
-    - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-    - 112.215.203.254
 proxies:
-  - name: REALITY | @daorzadannet | DE🇩🇪 | 124.79ms
+  - name: REALITY | @daorzadannet | DE🇩🇪 | 94.66ms
     server: 49.13.56.167
     port: 443
     type: vless
@@ -41,7 +17,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @daorzadannet | UA🇺🇦 | 151.97ms
+  - name: REALITY | @daorzadannet | UA🇺🇦 | 125.29ms
     server: 185.126.255.88
     port: 45077
     type: vless
@@ -51,7 +27,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @Outline_Vpn | DE🇩🇪 | 124.57ms
+  - name: REALITY | @Outline_Vpn | DE🇩🇪 | 94.5ms
     server: 167.235.249.207
     port: 1111
     type: vless
@@ -62,7 +38,7 @@ proxies:
     skip-cert-verify: true
     servername: flutter.dev
     udp: true
-  - name: REALITY | @prrofile_purple | DE🇩🇪 | 172.49ms
+  - name: REALITY | @prrofile_purple | DE🇩🇪 | 201.34ms
     server: srv6.kiava.fun
     port: 443
     type: vless
@@ -73,7 +49,7 @@ proxies:
     skip-cert-verify: true
     servername: coinmarketcap.com
     udp: true
-  - name: REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 141.17ms
+  - name: REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 112.4ms
     server: panel.wenyx.gq
     port: 443
     type: vless
@@ -84,7 +60,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 183.94ms
+  - name: REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 140.19ms
     server: public504.cdn.gspublicidade.com
     port: 443
     type: vless
@@ -97,7 +73,7 @@ proxies:
     grpc-opts:
       grpc-service-name: Telegram%3A%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504%2C%40Public504
     udp: true
-  - name: REALITY | @UnlimitedDev | DE🇩🇪 | 177.17ms
+  - name: REALITY | @UnlimitedDev | DE🇩🇪 | 150.15ms
     server: bia-to5.unlimiteddev.xyz
     port: 443
     type: vless
@@ -108,7 +84,7 @@ proxies:
     skip-cert-verify: true
     servername: zula.ir
     udp: true
-  - name: REALITY | @vmessorg | DE🇩🇪 | 171.01ms
+  - name: REALITY | @vmessorg | DE🇩🇪 | 324.47ms
     server: join-bede1.vmessorg.fun
     port: 8080
     type: vless
@@ -119,7 +95,7 @@ proxies:
     skip-cert-verify: true
     servername: discord.com
     udp: true
-  - name: REALITY | @vmessorg | DE🇩🇪 | 172.09ms
+  - name: REALITY | @vmessorg | DE🇩🇪 | 277.68ms
     server: join-bede1.vmessorg.fun
     port: 8080
     type: vless
@@ -130,7 +106,7 @@ proxies:
     skip-cert-verify: true
     servername: discord.com
     udp: true
-  - name: REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 140.29ms
+  - name: REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 109.87ms
     server: 88.198.111.247
     port: 2087
     type: vless
@@ -143,20 +119,28 @@ proxies:
     grpc-opts:
       grpc-service-name: "%40v2ray_alpha_vip%E2%80%8C%2C%40v2ray_alpha_vip%E2%80%8C%2C%40v2ray_alpha_vip%E2%80%8C%2C%40v2ray_alpha_vip%E2%80%8C"
     udp: true
-  - name: REALITY | @ShadowProxy66 | DE🇩🇪 | 124.83ms
-    server: 128.140.116.210
-    port: 2020
+  - name: REALITY | @ShadowProxy66 | DE🇩🇪 | 90.06ms
+    server: 207.154.202.228
+    port: 2096
     type: vless
-    uuid: ebb00c40-5534-4c4f-e448-fcb7146d8778
+    uuid: b4e94081-45ff-44b6-ddb1-667ce0a1738d
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: www.speedtest.net
-    network: grpc
-    grpc-opts:
-      grpc-service-name: /
+    servername: zula.ir
     udp: true
-  - name: REALITY | @kiava | DE🇩🇪 | 212.69ms
+  - name: REALITY | @ShadowProxy66 | DE🇩🇪 | 115.63ms
+    server: speedtest2.wlftest.xyz
+    port: 443
+    type: vless
+    uuid: 6c39add6-18b8-577c-9a9c-be2082507050
+    cipher: auto
+    tls: false
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: www.speedtest.net
+    udp: true
+  - name: REALITY | @kiava | DE🇩🇪 | 117.58ms
     server: srv6.kiava.fun
     port: 443
     type: vless
@@ -167,7 +151,7 @@ proxies:
     skip-cert-verify: true
     servername: coinmarketcap.com
     udp: true
-  - name: REALITY | @kiava | DE🇩🇪 | 291.16ms
+  - name: REALITY | @kiava | DE🇩🇪 | 414.96ms
     server: srv7.kiava.fun
     port: 443
     type: vless
@@ -178,7 +162,7 @@ proxies:
     skip-cert-verify: true
     servername: coinmarketcap.com
     udp: true
-  - name: REALITY | @kiava | DE🇩🇪 | 170.57ms
+  - name: REALITY | @kiava | DE🇩🇪 | 101.54ms
     server: srv8.kiava.fun
     port: 443
     type: vless
@@ -189,7 +173,7 @@ proxies:
     skip-cert-verify: true
     servername: coinmarketcap.com
     udp: true
-  - name: REALITY | @VpnProSec | DE🇩🇪 | 147.88ms
+  - name: REALITY | @VpnProSec | DE🇩🇪 | 117.02ms
     server: chaaanel.vpnprosec.shop
     port: 2096
     type: vless
@@ -199,7 +183,7 @@ proxies:
     skip-cert-verify: true
     servername: zula.ir
     udp: true
-  - name: REALITY | @VpnProSec | GB🇬🇧 | 130.23ms
+  - name: REALITY | @VpnProSec | GB🇬🇧 | 118.32ms
     server: chaaaanel.vpnprosec.shop
     port: 2096
     type: vless
@@ -209,7 +193,7 @@ proxies:
     skip-cert-verify: true
     servername: zula.ir
     udp: true
-  - name: REALITY | @VpnProSec | DE🇩🇪 | 141.96ms
+  - name: REALITY | @VpnProSec | DE🇩🇪 | 115.19ms
     server: chaaaaanel.vpnprosec.shop
     port: 2096
     type: vless
@@ -219,7 +203,7 @@ proxies:
     skip-cert-verify: true
     servername: zula.ir
     udp: true
-  - name: REALITY | @INIT1984 | EE🇪🇪 | 154.25ms
+  - name: REALITY | @INIT1984 | EE🇪🇪 | 111.11ms
     server: 37.252.4.81
     port: 2087
     type: vless
@@ -230,7 +214,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @INIT1984 | FR🇫🇷 | 126.82ms
+  - name: REALITY | @INIT1984 | FR🇫🇷 | 93.12ms
     server: 172.232.54.30
     port: 443
     type: vless
@@ -241,18 +225,27 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @shopingv2ray | TR🇹🇷 | 194.67ms
-    server: join_telegram_ip_cf.maskvpn.de
-    port: 3602
+  - name: REALITY | @shopingv2ray | LV🇱🇻 | 111.61ms
+    server: 188.64.12.3
+    port: 443
     type: vless
-    uuid: 0ebf1ed8-a220-461b-8894-3027f945fc0d
+    uuid: d0236924-dd68-4c96-8113-cbea03b917a1
     cipher: auto
     tls: false
-    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    servername: cdn.accuweather.com
+    udp: true
+  - name: REALITY | @shopingv2ray | UA🇺🇦 | 125.13ms
+    server: 185.126.255.88
+    port: 45077
+    type: vless
+    uuid: f328bd85-f5cd-4dc1-a2fc-383af5fec94d
+    cipher: auto
+    tls: false
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @v2ray_swhil | FI🇫🇮 | 146.69ms
+  - name: REALITY | @v2ray_swhil | FI🇫🇮 | 117.4ms
     server: 95.216.217.156
     port: 80
     type: vless
@@ -265,7 +258,7 @@ proxies:
     grpc-opts:
       grpc-service-name: "%40V2rayNGmat"
     udp: true
-  - name: REALITY | @proxyymeliii | DE🇩🇪 | 123.16ms
+  - name: REALITY | @proxyymeliii | DE🇩🇪 | 93.41ms
     server: 128.140.2.18
     port: 443
     type: vless
@@ -276,7 +269,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @SafeNet_Server | FR🇫🇷 | 206.74ms
+  - name: REALITY | @SafeNet_Server | FR🇫🇷 | 86.11ms
     server: 172.232.32.137
     port: 8443
     type: vless
@@ -287,7 +280,7 @@ proxies:
     skip-cert-verify: true
     servername: cdn.discordapp.com
     udp: true
-  - name: REALITY | @ovpn2 | CH🇨🇭 | 123.27ms
+  - name: REALITY | @ovpn2 | CH🇨🇭 | 93.92ms
     server: 193.168.144.46
     port: 443
     type: vless
@@ -300,7 +293,7 @@ proxies:
     grpc-opts:
       grpc-service-name: /
     udp: true
-  - name: REALITY | @vpn_tehran | DE🇩🇪 | 127.22ms
+  - name: REALITY | @vpn_tehran | DE🇩🇪 | 93.45ms
     server: 116.203.107.155
     port: 443
     type: vless
@@ -311,7 +304,7 @@ proxies:
     skip-cert-verify: true
     servername: www.google.com
     udp: true
-  - name: REALITY | @vpn_tehran | DE🇩🇪 | 134.93ms
+  - name: REALITY | @vpn_tehran | DE🇩🇪 | 99.65ms
     server: chaaaaanel.vpnprosec.shop
     port: 2096
     type: vless
@@ -321,7 +314,7 @@ proxies:
     skip-cert-verify: true
     servername: zula.ir
     udp: true
-  - name: REALITY | @v2_team | DE🇩🇪 | 175.7ms
+  - name: REALITY | @v2_team | DE🇩🇪 | 186.7ms
     server: join.v2team.cfd
     port: 2083
     type: vless
@@ -334,17 +327,7 @@ proxies:
     grpc-opts:
       grpc-service-name: Telegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAMTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAMTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAMgonTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM%2CTelegram%3A%40V2_TEAM
     udp: true
-  - name: REALITY | @ConfigsHUB | DE🇩🇪 | 120.4ms
-    server: 207.154.202.228
-    port: 2096
-    type: vless
-    uuid: b4e94081-45ff-44b6-ddb1-667ce0a1738d
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: zula.ir
-    udp: true
-  - name: REALITY | @bright_vpn | RU🇷🇺 | 358.48ms
+  - name: REALITY | @bright_vpn | RU🇷🇺 | 545.58ms
     server: speed.zero0-argovpn-1.gq
     port: 2053
     type: vless
@@ -357,7 +340,7 @@ proxies:
     grpc-opts:
       grpc-service-name: fV2R9vnqRA2baq74
     udp: true
-  - name: REALITY | @bright_vpn | RU🇷🇺 | 360.71ms
+  - name: REALITY | @bright_vpn | RU🇷🇺 | 328.54ms
     server: speed.zero0-argovpn-1.gq
     port: 2053
     type: vless
@@ -370,7 +353,7 @@ proxies:
     grpc-opts:
       grpc-service-name: fV2R9vnqRA2baq74
     udp: true
-  - name: REALITY | @talentvpn | DE🇩🇪 | 623.91ms
+  - name: REALITY | @talentvpn | DE🇩🇪 | 602.05ms
     server: all.mahangalaxy.online
     port: 3755
     type: vless
@@ -381,7 +364,7 @@ proxies:
     skip-cert-verify: true
     servername: ftp.debian.org
     udp: true
-  - name: REALITY | @proxystore11 | DE🇩🇪 | 146.07ms
+  - name: REALITY | @proxystore11 | DE🇩🇪 | 106.61ms
     server: chaaaaanel.vpnprosec.shop
     port: 2096
     type: vless
@@ -391,17 +374,7 @@ proxies:
     skip-cert-verify: true
     servername: zula.ir
     udp: true
-  - name: REALITY | @proxystore11 | LV🇱🇻 | 142.36ms
-    server: 188.64.12.3
-    port: 443
-    type: vless
-    uuid: d0236924-dd68-4c96-8113-cbea03b917a1
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: cdn.accuweather.com
-    udp: true
-  - name: REALITY | @V2pedia | DE🇩🇪 | 275.32ms
+  - name: REALITY | @V2pedia | DE🇩🇪 | 293.32ms
     server: te.argha-v2pedia.monster
     port: 443
     type: vless
@@ -414,7 +387,7 @@ proxies:
     grpc-opts:
       grpc-service-name: Telegram%3A
     udp: true
-  - name: REALITY | @V2pedia | DE🇩🇪 | 136.62ms
+  - name: REALITY | @V2pedia | DE🇩🇪 | 108.56ms
     server: te.argha-v2pedia.monster
     port: 443
     type: vless
@@ -427,7 +400,7 @@ proxies:
     grpc-opts:
       grpc-service-name: Telegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia%2CTelegram%3A%40v2pedia
     udp: true
-  - name: REALITY | @molovpn | NL🇳🇱 | 192.19ms
+  - name: REALITY | @molovpn | NL🇳🇱 | 123.33ms
     server: 194.116.215.93
     port: 443
     type: vless
@@ -437,7 +410,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @melov2ray | DE🇩🇪 | 140.22ms
+  - name: REALITY | @melov2ray | DE🇩🇪 | 129.46ms
     server: F-off.melov2ray.store
     port: 23761
     type: vless
@@ -448,18 +421,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.net
     udp: true
-  - name: REALITY | @iP_CF | DE🇩🇪 | 252.23ms
-    server: join-telegram-ip_cf.safeaccessnet.xyz
-    port: 2096
-    type: vless
-    uuid: 3689ba57-a70c-48ef-bbee-a5a1eb175528
-    cipher: auto
-    tls: false
-    flow: xtls-rprx-vision
-    skip-cert-verify: true
-    servername: www.speedtest.net
-    udp: true
-  - name: REALITY | @iP_CF | GB🇬🇧 | 124.7ms
+  - name: REALITY | @iP_CF | GB🇬🇧 | 96.43ms
     server: 5.181.21.135
     port: 40908
     type: vless
@@ -472,7 +434,7 @@ proxies:
     grpc-opts:
       grpc-service-name: "%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF%40iP_CF"
     udp: true
-  - name: REALITY | @v2rayng_config_amin | RU🇷🇺 | 183.15ms
+  - name: REALITY | @v2rayng_config_amin | RU🇷🇺 | 157.39ms
     server: 185.22.153.168
     port: 30252
     type: vless
@@ -482,7 +444,7 @@ proxies:
     skip-cert-verify: true
     servername: www.speedtest.org
     udp: true
-  - name: REALITY | @v2rayng_config_amin | RU🇷🇺 | 150.76ms
+  - name: REALITY | @v2rayng_config_amin | RU🇷🇺 | 115.71ms
     server: 5.42.77.255
     port: 443
     type: vless
@@ -497,190 +459,140 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - REALITY | @daorzadannet | DE🇩🇪 | 124.79ms
-      - REALITY | @daorzadannet | UA🇺🇦 | 151.97ms
-      - REALITY | @Outline_Vpn | DE🇩🇪 | 124.57ms
-      - REALITY | @prrofile_purple | DE🇩🇪 | 172.49ms
-      - REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 141.17ms
-      - REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 183.94ms
-      - REALITY | @UnlimitedDev | DE🇩🇪 | 177.17ms
-      - REALITY | @vmessorg | DE🇩🇪 | 171.01ms
-      - REALITY | @vmessorg | DE🇩🇪 | 172.09ms
-      - REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 140.29ms
-      - REALITY | @ShadowProxy66 | DE🇩🇪 | 124.83ms
-      - REALITY | @kiava | DE🇩🇪 | 212.69ms
-      - REALITY | @kiava | DE🇩🇪 | 291.16ms
-      - REALITY | @kiava | DE🇩🇪 | 170.57ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 147.88ms
-      - REALITY | @VpnProSec | GB🇬🇧 | 130.23ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 141.96ms
-      - REALITY | @INIT1984 | EE🇪🇪 | 154.25ms
-      - REALITY | @INIT1984 | FR🇫🇷 | 126.82ms
-      - REALITY | @shopingv2ray | TR🇹🇷 | 194.67ms
-      - REALITY | @v2ray_swhil | FI🇫🇮 | 146.69ms
-      - REALITY | @proxyymeliii | DE🇩🇪 | 123.16ms
-      - REALITY | @SafeNet_Server | FR🇫🇷 | 206.74ms
-      - REALITY | @ovpn2 | CH🇨🇭 | 123.27ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 127.22ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 134.93ms
-      - REALITY | @v2_team | DE🇩🇪 | 175.7ms
-      - REALITY | @ConfigsHUB | DE🇩🇪 | 120.4ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 358.48ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 360.71ms
-      - REALITY | @talentvpn | DE🇩🇪 | 623.91ms
-      - REALITY | @proxystore11 | DE🇩🇪 | 146.07ms
-      - REALITY | @proxystore11 | LV🇱🇻 | 142.36ms
-      - REALITY | @V2pedia | DE🇩🇪 | 275.32ms
-      - REALITY | @V2pedia | DE🇩🇪 | 136.62ms
-      - REALITY | @molovpn | NL🇳🇱 | 192.19ms
-      - REALITY | @melov2ray | DE🇩🇪 | 140.22ms
-      - REALITY | @iP_CF | DE🇩🇪 | 252.23ms
-      - REALITY | @iP_CF | GB🇬🇧 | 124.7ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 183.15ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 150.76ms
-      - LOAD-BALANCE
-      - BEST-PING
+      - URL-TEST
       - FALLBACK
-      - DIRECT
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://hi.bonds.id/ping
-    interval: 300
-    proxies:
-      - REALITY | @daorzadannet | DE🇩🇪 | 124.79ms
-      - REALITY | @daorzadannet | UA🇺🇦 | 151.97ms
-      - REALITY | @Outline_Vpn | DE🇩🇪 | 124.57ms
-      - REALITY | @prrofile_purple | DE🇩🇪 | 172.49ms
-      - REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 141.17ms
-      - REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 183.94ms
-      - REALITY | @UnlimitedDev | DE🇩🇪 | 177.17ms
-      - REALITY | @vmessorg | DE🇩🇪 | 171.01ms
-      - REALITY | @vmessorg | DE🇩🇪 | 172.09ms
-      - REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 140.29ms
-      - REALITY | @ShadowProxy66 | DE🇩🇪 | 124.83ms
-      - REALITY | @kiava | DE🇩🇪 | 212.69ms
-      - REALITY | @kiava | DE🇩🇪 | 291.16ms
-      - REALITY | @kiava | DE🇩🇪 | 170.57ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 147.88ms
-      - REALITY | @VpnProSec | GB🇬🇧 | 130.23ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 141.96ms
-      - REALITY | @INIT1984 | EE🇪🇪 | 154.25ms
-      - REALITY | @INIT1984 | FR🇫🇷 | 126.82ms
-      - REALITY | @shopingv2ray | TR🇹🇷 | 194.67ms
-      - REALITY | @v2ray_swhil | FI🇫🇮 | 146.69ms
-      - REALITY | @proxyymeliii | DE🇩🇪 | 123.16ms
-      - REALITY | @SafeNet_Server | FR🇫🇷 | 206.74ms
-      - REALITY | @ovpn2 | CH🇨🇭 | 123.27ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 127.22ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 134.93ms
-      - REALITY | @v2_team | DE🇩🇪 | 175.7ms
-      - REALITY | @ConfigsHUB | DE🇩🇪 | 120.4ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 358.48ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 360.71ms
-      - REALITY | @talentvpn | DE🇩🇪 | 623.91ms
-      - REALITY | @proxystore11 | DE🇩🇪 | 146.07ms
-      - REALITY | @proxystore11 | LV🇱🇻 | 142.36ms
-      - REALITY | @V2pedia | DE🇩🇪 | 275.32ms
-      - REALITY | @V2pedia | DE🇩🇪 | 136.62ms
-      - REALITY | @molovpn | NL🇳🇱 | 192.19ms
-      - REALITY | @melov2ray | DE🇩🇪 | 140.22ms
-      - REALITY | @iP_CF | DE🇩🇪 | 252.23ms
-      - REALITY | @iP_CF | GB🇬🇧 | 124.7ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 183.15ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 150.76ms
-  - name: BEST-PING
+      - REALITY | @daorzadannet | DE🇩🇪 | 94.66ms
+      - REALITY | @daorzadannet | UA🇺🇦 | 125.29ms
+      - REALITY | @Outline_Vpn | DE🇩🇪 | 94.5ms
+      - REALITY | @prrofile_purple | DE🇩🇪 | 201.34ms
+      - REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 112.4ms
+      - REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 140.19ms
+      - REALITY | @UnlimitedDev | DE🇩🇪 | 150.15ms
+      - REALITY | @vmessorg | DE🇩🇪 | 324.47ms
+      - REALITY | @vmessorg | DE🇩🇪 | 277.68ms
+      - REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 109.87ms
+      - REALITY | @ShadowProxy66 | DE🇩🇪 | 90.06ms
+      - REALITY | @ShadowProxy66 | DE🇩🇪 | 115.63ms
+      - REALITY | @kiava | DE🇩🇪 | 117.58ms
+      - REALITY | @kiava | DE🇩🇪 | 414.96ms
+      - REALITY | @kiava | DE🇩🇪 | 101.54ms
+      - REALITY | @VpnProSec | DE🇩🇪 | 117.02ms
+      - REALITY | @VpnProSec | GB🇬🇧 | 118.32ms
+      - REALITY | @VpnProSec | DE🇩🇪 | 115.19ms
+      - REALITY | @INIT1984 | EE🇪🇪 | 111.11ms
+      - REALITY | @INIT1984 | FR🇫🇷 | 93.12ms
+      - REALITY | @shopingv2ray | LV🇱🇻 | 111.61ms
+      - REALITY | @shopingv2ray | UA🇺🇦 | 125.13ms
+      - REALITY | @v2ray_swhil | FI🇫🇮 | 117.4ms
+      - REALITY | @proxyymeliii | DE🇩🇪 | 93.41ms
+      - REALITY | @SafeNet_Server | FR🇫🇷 | 86.11ms
+      - REALITY | @ovpn2 | CH🇨🇭 | 93.92ms
+      - REALITY | @vpn_tehran | DE🇩🇪 | 93.45ms
+      - REALITY | @vpn_tehran | DE🇩🇪 | 99.65ms
+      - REALITY | @v2_team | DE🇩🇪 | 186.7ms
+      - REALITY | @bright_vpn | RU🇷🇺 | 545.58ms
+      - REALITY | @bright_vpn | RU🇷🇺 | 328.54ms
+      - REALITY | @talentvpn | DE🇩🇪 | 602.05ms
+      - REALITY | @proxystore11 | DE🇩🇪 | 106.61ms
+      - REALITY | @V2pedia | DE🇩🇪 | 293.32ms
+      - REALITY | @V2pedia | DE🇩🇪 | 108.56ms
+      - REALITY | @molovpn | NL🇳🇱 | 123.33ms
+      - REALITY | @melov2ray | DE🇩🇪 | 129.46ms
+      - REALITY | @iP_CF | GB🇬🇧 | 96.43ms
+      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 157.39ms
+      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 115.71ms
+  - name: URL-TEST
     type: url-test
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - REALITY | @daorzadannet | DE🇩🇪 | 124.79ms
-      - REALITY | @daorzadannet | UA🇺🇦 | 151.97ms
-      - REALITY | @Outline_Vpn | DE🇩🇪 | 124.57ms
-      - REALITY | @prrofile_purple | DE🇩🇪 | 172.49ms
-      - REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 141.17ms
-      - REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 183.94ms
-      - REALITY | @UnlimitedDev | DE🇩🇪 | 177.17ms
-      - REALITY | @vmessorg | DE🇩🇪 | 171.01ms
-      - REALITY | @vmessorg | DE🇩🇪 | 172.09ms
-      - REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 140.29ms
-      - REALITY | @ShadowProxy66 | DE🇩🇪 | 124.83ms
-      - REALITY | @kiava | DE🇩🇪 | 212.69ms
-      - REALITY | @kiava | DE🇩🇪 | 291.16ms
-      - REALITY | @kiava | DE🇩🇪 | 170.57ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 147.88ms
-      - REALITY | @VpnProSec | GB🇬🇧 | 130.23ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 141.96ms
-      - REALITY | @INIT1984 | EE🇪🇪 | 154.25ms
-      - REALITY | @INIT1984 | FR🇫🇷 | 126.82ms
-      - REALITY | @shopingv2ray | TR🇹🇷 | 194.67ms
-      - REALITY | @v2ray_swhil | FI🇫🇮 | 146.69ms
-      - REALITY | @proxyymeliii | DE🇩🇪 | 123.16ms
-      - REALITY | @SafeNet_Server | FR🇫🇷 | 206.74ms
-      - REALITY | @ovpn2 | CH🇨🇭 | 123.27ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 127.22ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 134.93ms
-      - REALITY | @v2_team | DE🇩🇪 | 175.7ms
-      - REALITY | @ConfigsHUB | DE🇩🇪 | 120.4ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 358.48ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 360.71ms
-      - REALITY | @talentvpn | DE🇩🇪 | 623.91ms
-      - REALITY | @proxystore11 | DE🇩🇪 | 146.07ms
-      - REALITY | @proxystore11 | LV🇱🇻 | 142.36ms
-      - REALITY | @V2pedia | DE🇩🇪 | 275.32ms
-      - REALITY | @V2pedia | DE🇩🇪 | 136.62ms
-      - REALITY | @molovpn | NL🇳🇱 | 192.19ms
-      - REALITY | @melov2ray | DE🇩🇪 | 140.22ms
-      - REALITY | @iP_CF | DE🇩🇪 | 252.23ms
-      - REALITY | @iP_CF | GB🇬🇧 | 124.7ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 183.15ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 150.76ms
+      - REALITY | @daorzadannet | DE🇩🇪 | 94.66ms
+      - REALITY | @daorzadannet | UA🇺🇦 | 125.29ms
+      - REALITY | @Outline_Vpn | DE🇩🇪 | 94.5ms
+      - REALITY | @prrofile_purple | DE🇩🇪 | 201.34ms
+      - REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 112.4ms
+      - REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 140.19ms
+      - REALITY | @UnlimitedDev | DE🇩🇪 | 150.15ms
+      - REALITY | @vmessorg | DE🇩🇪 | 324.47ms
+      - REALITY | @vmessorg | DE🇩🇪 | 277.68ms
+      - REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 109.87ms
+      - REALITY | @ShadowProxy66 | DE🇩🇪 | 90.06ms
+      - REALITY | @ShadowProxy66 | DE🇩🇪 | 115.63ms
+      - REALITY | @kiava | DE🇩🇪 | 117.58ms
+      - REALITY | @kiava | DE🇩🇪 | 414.96ms
+      - REALITY | @kiava | DE🇩🇪 | 101.54ms
+      - REALITY | @VpnProSec | DE🇩🇪 | 117.02ms
+      - REALITY | @VpnProSec | GB🇬🇧 | 118.32ms
+      - REALITY | @VpnProSec | DE🇩🇪 | 115.19ms
+      - REALITY | @INIT1984 | EE🇪🇪 | 111.11ms
+      - REALITY | @INIT1984 | FR🇫🇷 | 93.12ms
+      - REALITY | @shopingv2ray | LV🇱🇻 | 111.61ms
+      - REALITY | @shopingv2ray | UA🇺🇦 | 125.13ms
+      - REALITY | @v2ray_swhil | FI🇫🇮 | 117.4ms
+      - REALITY | @proxyymeliii | DE🇩🇪 | 93.41ms
+      - REALITY | @SafeNet_Server | FR🇫🇷 | 86.11ms
+      - REALITY | @ovpn2 | CH🇨🇭 | 93.92ms
+      - REALITY | @vpn_tehran | DE🇩🇪 | 93.45ms
+      - REALITY | @vpn_tehran | DE🇩🇪 | 99.65ms
+      - REALITY | @v2_team | DE🇩🇪 | 186.7ms
+      - REALITY | @bright_vpn | RU🇷🇺 | 545.58ms
+      - REALITY | @bright_vpn | RU🇷🇺 | 328.54ms
+      - REALITY | @talentvpn | DE🇩🇪 | 602.05ms
+      - REALITY | @proxystore11 | DE🇩🇪 | 106.61ms
+      - REALITY | @V2pedia | DE🇩🇪 | 293.32ms
+      - REALITY | @V2pedia | DE🇩🇪 | 108.56ms
+      - REALITY | @molovpn | NL🇳🇱 | 123.33ms
+      - REALITY | @melov2ray | DE🇩🇪 | 129.46ms
+      - REALITY | @iP_CF | GB🇬🇧 | 96.43ms
+      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 157.39ms
+      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 115.71ms
   - name: FALLBACK
     type: fallback
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - REALITY | @daorzadannet | DE🇩🇪 | 124.79ms
-      - REALITY | @daorzadannet | UA🇺🇦 | 151.97ms
-      - REALITY | @Outline_Vpn | DE🇩🇪 | 124.57ms
-      - REALITY | @prrofile_purple | DE🇩🇪 | 172.49ms
-      - REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 141.17ms
-      - REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 183.94ms
-      - REALITY | @UnlimitedDev | DE🇩🇪 | 177.17ms
-      - REALITY | @vmessorg | DE🇩🇪 | 171.01ms
-      - REALITY | @vmessorg | DE🇩🇪 | 172.09ms
-      - REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 140.29ms
-      - REALITY | @ShadowProxy66 | DE🇩🇪 | 124.83ms
-      - REALITY | @kiava | DE🇩🇪 | 212.69ms
-      - REALITY | @kiava | DE🇩🇪 | 291.16ms
-      - REALITY | @kiava | DE🇩🇪 | 170.57ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 147.88ms
-      - REALITY | @VpnProSec | GB🇬🇧 | 130.23ms
-      - REALITY | @VpnProSec | DE🇩🇪 | 141.96ms
-      - REALITY | @INIT1984 | EE🇪🇪 | 154.25ms
-      - REALITY | @INIT1984 | FR🇫🇷 | 126.82ms
-      - REALITY | @shopingv2ray | TR🇹🇷 | 194.67ms
-      - REALITY | @v2ray_swhil | FI🇫🇮 | 146.69ms
-      - REALITY | @proxyymeliii | DE🇩🇪 | 123.16ms
-      - REALITY | @SafeNet_Server | FR🇫🇷 | 206.74ms
-      - REALITY | @ovpn2 | CH🇨🇭 | 123.27ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 127.22ms
-      - REALITY | @vpn_tehran | DE🇩🇪 | 134.93ms
-      - REALITY | @v2_team | DE🇩🇪 | 175.7ms
-      - REALITY | @ConfigsHUB | DE🇩🇪 | 120.4ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 358.48ms
-      - REALITY | @bright_vpn | RU🇷🇺 | 360.71ms
-      - REALITY | @talentvpn | DE🇩🇪 | 623.91ms
-      - REALITY | @proxystore11 | DE🇩🇪 | 146.07ms
-      - REALITY | @proxystore11 | LV🇱🇻 | 142.36ms
-      - REALITY | @V2pedia | DE🇩🇪 | 275.32ms
-      - REALITY | @V2pedia | DE🇩🇪 | 136.62ms
-      - REALITY | @molovpn | NL🇳🇱 | 192.19ms
-      - REALITY | @melov2ray | DE🇩🇪 | 140.22ms
-      - REALITY | @iP_CF | DE🇩🇪 | 252.23ms
-      - REALITY | @iP_CF | GB🇬🇧 | 124.7ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 183.15ms
-      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 150.76ms
+      - REALITY | @daorzadannet | DE🇩🇪 | 94.66ms
+      - REALITY | @daorzadannet | UA🇺🇦 | 125.29ms
+      - REALITY | @Outline_Vpn | DE🇩🇪 | 94.5ms
+      - REALITY | @prrofile_purple | DE🇩🇪 | 201.34ms
+      - REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 112.4ms
+      - REALITY | @azadi_az_inja_migzare | NL🇳🇱 | 140.19ms
+      - REALITY | @UnlimitedDev | DE🇩🇪 | 150.15ms
+      - REALITY | @vmessorg | DE🇩🇪 | 324.47ms
+      - REALITY | @vmessorg | DE🇩🇪 | 277.68ms
+      - REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 109.87ms
+      - REALITY | @ShadowProxy66 | DE🇩🇪 | 90.06ms
+      - REALITY | @ShadowProxy66 | DE🇩🇪 | 115.63ms
+      - REALITY | @kiava | DE🇩🇪 | 117.58ms
+      - REALITY | @kiava | DE🇩🇪 | 414.96ms
+      - REALITY | @kiava | DE🇩🇪 | 101.54ms
+      - REALITY | @VpnProSec | DE🇩🇪 | 117.02ms
+      - REALITY | @VpnProSec | GB🇬🇧 | 118.32ms
+      - REALITY | @VpnProSec | DE🇩🇪 | 115.19ms
+      - REALITY | @INIT1984 | EE🇪🇪 | 111.11ms
+      - REALITY | @INIT1984 | FR🇫🇷 | 93.12ms
+      - REALITY | @shopingv2ray | LV🇱🇻 | 111.61ms
+      - REALITY | @shopingv2ray | UA🇺🇦 | 125.13ms
+      - REALITY | @v2ray_swhil | FI🇫🇮 | 117.4ms
+      - REALITY | @proxyymeliii | DE🇩🇪 | 93.41ms
+      - REALITY | @SafeNet_Server | FR🇫🇷 | 86.11ms
+      - REALITY | @ovpn2 | CH🇨🇭 | 93.92ms
+      - REALITY | @vpn_tehran | DE🇩🇪 | 93.45ms
+      - REALITY | @vpn_tehran | DE🇩🇪 | 99.65ms
+      - REALITY | @v2_team | DE🇩🇪 | 186.7ms
+      - REALITY | @bright_vpn | RU🇷🇺 | 545.58ms
+      - REALITY | @bright_vpn | RU🇷🇺 | 328.54ms
+      - REALITY | @talentvpn | DE🇩🇪 | 602.05ms
+      - REALITY | @proxystore11 | DE🇩🇪 | 106.61ms
+      - REALITY | @V2pedia | DE🇩🇪 | 293.32ms
+      - REALITY | @V2pedia | DE🇩🇪 | 108.56ms
+      - REALITY | @molovpn | NL🇳🇱 | 123.33ms
+      - REALITY | @melov2ray | DE🇩🇪 | 129.46ms
+      - REALITY | @iP_CF | GB🇬🇧 | 96.43ms
+      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 157.39ms
+      - REALITY | @v2rayng_config_amin | RU🇷🇺 | 115.71ms
+
 rules:
-  - MATCH,MANUAL
+ - GEOIP,IR,DIRECT
+ - MATCH,MANUAL
