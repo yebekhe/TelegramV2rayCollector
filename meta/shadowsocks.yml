@@ -44,20 +44,12 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     udp: true
-  - name: www.outline.network (GB)
-    server: ak1812.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 4444
-    type: ss
-    cipher: aes-256-gcm
-    password: pKEW8JPByTVTLtM
-    udp: true
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - www.outline.network (GB)
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -70,7 +62,6 @@ proxy-groups:
     proxies:
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - www.outline.network (GB)
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -79,7 +70,6 @@ proxy-groups:
     proxies:
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - www.outline.network (GB)
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
@@ -87,6 +77,5 @@ proxy-groups:
     proxies:
       - www.outline.network (DE)
       - www.outline.network (FR)
-      - www.outline.network (GB)
 rules:
   - MATCH,MANUAL
