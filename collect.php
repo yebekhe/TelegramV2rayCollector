@@ -328,7 +328,7 @@ $clash_types = [
         ),
     ],
     "trojan" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/trojan_base64"),
+        "clash" => convert_to_clash($raw_url_base . "/sub/trojan_base64", "clash"),
         "meta" => convert_to_clash(
             $raw_url_base . "/sub/trojan_base64",
             "meta"
@@ -339,7 +339,7 @@ $clash_types = [
         ),
     ],
     "shadowsocks" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/shadowsocks_base64"),
+        "clash" => convert_to_clash($raw_url_base . "/sub/shadowsocks_base64", "clash"),
         "meta" => convert_to_clash(
             $raw_url_base . "/sub/shadowsocks_base64",
             "meta"
@@ -350,7 +350,7 @@ $clash_types = [
         ),
     ],
     "donated" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/donated_base64"),
+        "clash" => convert_to_clash($raw_url_base . "/sub/donated_base64", "clash"),
         "meta" => convert_to_clash(
             $raw_url_base . "/sub/donated_base64",
             "meta"
