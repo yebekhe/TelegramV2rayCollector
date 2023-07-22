@@ -32,13 +32,6 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: www.outline.network (CA)
-    server: ak1809.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 811
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: G!yBwPWH3Vao
-    udp: true
   - name: www.outline.network (DE)
     server: ak1810.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 8080
@@ -53,13 +46,20 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     udp: true
+  - name: www.outline.network (GB)
+    server: ak1812.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 4444
+    type: ss
+    cipher: aes-256-gcm
+    password: pKEW8JPByTVTLtM
+    udp: true
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
+      - www.outline.network (GB)
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -70,25 +70,25 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
+      - www.outline.network (GB)
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
+      - www.outline.network (GB)
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - www.outline.network (CA)
       - www.outline.network (DE)
       - www.outline.network (FR)
+      - www.outline.network (GB)
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
