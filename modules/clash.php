@@ -46,7 +46,7 @@ function convert_to_clash($input, $type = "clash")
         // Replace translations in the fetched data
         $config = strtr($data, $translations);
         $config = preg_replace('/^\s*profile:\s*\n\s*store-selected:\s*true\s*\n/m', '', $config);
-        $new_config = str_replace(
+        $config = str_replace(
             "rules:\n  - MATCH,FASTSSH-SSHKIT-HOWDY",
             "name: DIRECT\n" .
             "type: select\n" .
