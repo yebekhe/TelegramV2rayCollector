@@ -3,7 +3,7 @@ function convert_to_clash($url, $type)
 {
     $repo_base_url = "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/";
     $protocol = str_replace("_base64", "", str_replace($repo_base_url, "", $url));
-    $surf_url = "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/$protocol";
+    $surf_url = "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/" . $protocol;
     $base_url = [
         "clash" => "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=",
         "meta" => "https://sub.bonds.id/sub2?target=clash&url=",
@@ -18,7 +18,6 @@ function convert_to_clash($url, $type)
         "surfboard" =>
             "&insert=false&config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false",
     ];
-    $surf_url = "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/"
     $config_start = [
         "clash" => [
             "port: 7890",
