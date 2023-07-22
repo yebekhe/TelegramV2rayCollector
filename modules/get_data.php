@@ -88,6 +88,61 @@ function get_ip($input, $type, $is_reality)
     }
 }
 
+function get_address($input, $type)
+{
+    switch ($type) {
+        case "vmess":
+            return $input["add"];
+        case "vless":
+        case "trojan":
+            return $input["hostname"];
+        case "ss":
+            return $input["server_address"];
+    }
+}
+
+function is_number_with_dots($s)
+{
+    /*
+     * Returns true if the given string contains only digits and dots, and false otherwise.
+     */
+    for ($i = 0; $i < strlen($s); $i++) {
+        $c = $s[$i];
+        if (!ctype_digit($c) && $c != ".") {
+            return false;
+        }
+    }
+    return true;
+}
+
+function is_valid_address($address)
+{
+    $ipv4_pattern = '/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/';
+    $ipv6_pattern = '/^[0-9a-fA-F:]+$/'; // matches any valid IPv6 address
+
+    if (
+        preg_match($ipv4_pattern, $address) ||
+        preg_match($ipv6_pattern, $address)
+    ) {
+        return true;
+    } elseif (is_number_with_dots($address) === false) {
+        if (
+            substr($address, 0, 8) === "https://" ||
+            substr($address, 0, 7) === "http://"
+        ) {
+            $url = filter_var($address, FILTER_VALIDATE_URL);
+        } else {
+            $url = filter_var("https://" . $address, FILTER_VALIDATE_URL);
+        }
+        if ($url !== false) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return false;
+}
+
 function get_vmess_ip($input)
 {
     return !empty($input["sni"])
@@ -168,7 +223,15 @@ function generate_name($channel, $flag, $ping, $is_reality)
     $name = "";
     switch ($is_reality) {
         case true:
-            $name = "REALITY | " . "@" . $channel . " | " . $flag . " | " . $ping . "ms";
+            $name =
+                "REALITY | " .
+                "@" .
+                $channel .
+                " | " .
+                $flag .
+                " | " .
+                $ping .
+                "ms";
             break;
         case false:
             $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms";
@@ -182,14 +245,20 @@ function parse_config($input, $type, $is_sub = false)
     $parsed_config = [];
     switch ($type) {
         case "vmess":
-            $parsed_config = $is_sub ? decode_vmess($input) : decode_vmess($type . "://" . $input);
+            $parsed_config = $is_sub
+                ? decode_vmess($input)
+                : decode_vmess($type . "://" . $input);
             break;
         case "vless":
         case "trojan":
-            $parsed_config = $is_sub ? parseProxyUrl($input, $type) : parseProxyUrl($type . "://" . $input, $type);
+            $parsed_config = $is_sub
+                ? parseProxyUrl($input, $type)
+                : parseProxyUrl($type . "://" . $input, $type);
             break;
         case "ss":
-            $parsed_config = $is_sub ? ParseShadowsocks($input) : ParseShadowsocks($type . "://" . $input);
+            $parsed_config = $is_sub
+                ? ParseShadowsocks($input)
+                : ParseShadowsocks($type . "://" . $input);
             break;
     }
     return $parsed_config;
@@ -244,33 +313,38 @@ function get_config($channel, $type)
 
                 $the_config = parse_config($config, $type);
 
-                $ip = get_ip($the_config, $type, $is_reality);
-                $port = get_port($the_config, $type);
+                $address = get_address($the_config, $type);
+                if (is_valid_address($address) !== false) {
+                    $ip = get_ip($the_config, $type, $is_reality);
+                    $port = get_port($the_config, $type);
 
-                @$ping_data = ping($ip, $port);
-                if ($ping_data !== "unavailable") {
-                    $flag = get_flag($ip);
+                    @$ping_data = ping($ip, $port);
+                    if ($ping_data !== "unavailable") {
+                        $flag = get_flag($ip);
 
-                    $name_key = $name_array[$type];
-                    $the_config[$name_key] = generate_name(
-                        $channel,
-                        $flag,
-                        $ping_data,
-                        $is_reality
-                    );
-                    $final_config = build_config($the_config, $type);
+                        $name_key = $name_array[$type];
+                        $the_config[$name_key] = generate_name(
+                            $channel,
+                            $flag,
+                            $ping_data,
+                            $is_reality
+                        );
+                        $final_config = build_config($the_config, $type);
 
-                    $final_data[$key]["channel"]["username"] = $channel;
-                    $final_data[$key]["channel"]["title"] =
-                        $channels_assets[$channel]["title"];
-                    $final_data[$key]["channel"]["logo"] =
-                        $channels_assets[$channel]["logo"];
-                    $final_data[$key]["type"] = $is_reality ? "reality" : $type;
-                    $final_data[$key]["config"] = $final_config;
-                    $final_data[$key]["ping"] = $ping_data;
-                    $final_data[$key]["time"] = convert_to_iran_time(
-                        $matches[1][$key]
-                    );
+                        $final_data[$key]["channel"]["username"] = $channel;
+                        $final_data[$key]["channel"]["title"] =
+                            $channels_assets[$channel]["title"];
+                        $final_data[$key]["channel"]["logo"] =
+                            $channels_assets[$channel]["logo"];
+                        $final_data[$key]["type"] = $is_reality
+                            ? "reality"
+                            : $type;
+                        $final_data[$key]["config"] = $final_config;
+                        $final_data[$key]["ping"] = $ping_data;
+                        $final_data[$key]["time"] = convert_to_iran_time(
+                            $matches[1][$key]
+                        );
+                    }
                 }
             }
         }
@@ -315,35 +389,39 @@ function process_subscription($input, $channel)
         $is_reality = is_reality($config, $type);
 
         $the_config = parse_config($config, $type, true);
+        $address = get_address($the_config, $type);
+        if (is_valid_address($address) !== false) {
+            $ip = get_ip($the_config, $type, $is_reality);
+            $port = get_port($the_config, $type);
 
-        $ip = get_ip($the_config, $type, $is_reality);
-        $port = get_port($the_config, $type);
+            @$ping_data = ping($ip, $port);
+            if ($ping_data !== "unavailable") {
+                $flag = get_flag($ip);
 
-        @$ping_data = ping($ip, $port);
-        if ($ping_data !== "unavailable") {
-            $flag = get_flag($ip);
+                $name_key = $name_array[$type];
+                $the_config[$name_key] = generate_name(
+                    $channel,
+                    $flag,
+                    $ping_data,
+                    $is_reality
+                );
+                $final_config = build_config($the_config, $type);
 
-            $name_key = $name_array[$type];
-            $the_config[$name_key] = generate_name(
-                $channel,
-                $flag,
-                $ping_data,
-                $is_reality
-            );
-            $final_config = build_config($the_config, $type);
+                $key = ${"array_helper_$type"};
 
-            $key = ${"array_helper_$type"};
+                $final_data[$type][$key]["channel"]["username"] = $channel;
+                $final_data[$type][$key]["channel"]["title"] = $channel;
+                $final_data[$type][$key]["channel"]["logo"] = "null";
+                $final_data[$type][$key]["type"] = $is_reality
+                    ? "reality"
+                    : $type;
+                $final_data[$type][$key]["config"] = $final_config;
+                $final_data[$type][$key]["ping"] = $ping_data;
+                $final_data[$type][$key]["time"] = tehran_time();
 
-            $final_data[$type][$key]["channel"]["username"] = $channel;
-            $final_data[$type][$key]["channel"]["title"] = $channel;
-            $final_data[$type][$key]["channel"]["logo"] = "null";
-            $final_data[$type][$key]["type"] = $is_reality ? "reality" : $type;
-            $final_data[$type][$key]["config"] = $final_config;
-            $final_data[$type][$key]["ping"] = $ping_data;
-            $final_data[$type][$key]["time"] = tehran_time();
-
-            $key++;
-            ${"array_helper_$type"} = $key;
+                $key++;
+                ${"array_helper_$type"} = $key;
+            }
         }
     }
     return $final_data;
