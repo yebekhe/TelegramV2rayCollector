@@ -148,9 +148,9 @@ function get_flag($ip)
     $ip_info = ip_info($ip);
     if (isset($ip_info["country"])) {
         $location = $ip_info["country"];
-        $flag = getFlags($location);
+        $flag = $location . getFlags($location);
     } else {
-        $flag = "🚩";
+        $flag = "RELAY🚩";
     }
     return $flag;
 }
@@ -168,10 +168,10 @@ function generate_name($channel, $flag, $ping, $is_reality)
     $name = "";
     switch ($is_reality) {
         case true:
-            $name = "REALITY|" . "@" . $channel . " | " . $flag . " | " . $ping;
+            $name = "REALITY | " . "@" . $channel . " | " . $flag . " | " . $ping . "ms";
             break;
         case false:
-            $name = "@" . $channel . " | " . $flag . " | " . $ping;
+            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms";
             break;
     }
     return $name;
