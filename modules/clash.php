@@ -216,19 +216,19 @@ function generate_full_config(
             $proxy_group_string = "[Proxy Group]";
             $proxy_group_manual =
                 $config_proxy_group["[Proxy Group]"][0] .
-                "," .
                 $configs_name .
                 "\n";
+            $proxy_group_manual = str_replace(",,", "", $proxy_group_manual)
             $proxy_group_urltest =
                 $config_proxy_group["[Proxy Group]"][1] .
-                "," .
                 $configs_name .
                 "\n";
+            $proxy_group_urltest = str_replace(",,", "", $proxy_group_urltest)
             $proxy_group_fallback =
                 $config_proxy_group["[Proxy Group]"][2] .
-                "," .
                 $configs_name .
                 "\n";
+            $proxy_group_fallback = str_replace(",,", "", $proxy_group_fallback)
             break;
     }
     $proxy_group_string .=
