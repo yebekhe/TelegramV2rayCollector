@@ -303,7 +303,7 @@ process_mix_json($mix_data_deduplicate, "configs_deduplicate.json");
 
 $clash_types = [
     "mix" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/mix_base64"),
+        "clash" => convert_to_clash($raw_url_base . "/sub/mix_base64", "clash"),
         "meta" => convert_to_clash($raw_url_base . "/sub/mix_base64", "meta"),
         "surfboard" => convert_to_clash(
             $raw_url_base . "/sub/mix_base64",
@@ -311,7 +311,7 @@ $clash_types = [
         ),
     ],
     "vmess" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/vmess_base64"),
+        "clash" => convert_to_clash($raw_url_base . "/sub/vmess_base64", "clash"),
         "meta" => convert_to_clash($raw_url_base . "/sub/vmess_base64", "meta"),
         "surfboard" => convert_to_clash(
             $raw_url_base . "/sub/vmess_base64",
