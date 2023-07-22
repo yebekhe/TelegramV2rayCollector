@@ -39,13 +39,6 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
     udp: true
-  - name: www.outline.network (FR)
-    server: ak1811.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 6697
-    type: ss
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-    udp: true
   - name: www.outline.network (GB)
     server: ak1812.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 4444
@@ -58,7 +51,6 @@ proxy-groups:
     type: select
     proxies:
       - www.outline.network (DE)
-      - www.outline.network (FR)
       - www.outline.network (GB)
       - LOAD-BALANCE
       - BEST-PING
@@ -71,7 +63,6 @@ proxy-groups:
     interval: 300
     proxies:
       - www.outline.network (DE)
-      - www.outline.network (FR)
       - www.outline.network (GB)
   - name: BEST-PING
     type: url-test
@@ -80,7 +71,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - www.outline.network (DE)
-      - www.outline.network (FR)
       - www.outline.network (GB)
   - name: FALLBACK
     type: fallback
@@ -88,7 +78,6 @@ proxy-groups:
     interval: 300
     proxies:
       - www.outline.network (DE)
-      - www.outline.network (FR)
       - www.outline.network (GB)
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
