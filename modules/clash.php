@@ -16,6 +16,9 @@ function convert_to_clash($input, $type = "clash")
         '电报信息' => 'TELEGRAM',
         '苹果服务' => 'APPLE',
         '漏网之鱼' => 'LEAK',
+        'FASTSSH-SSHKIT-HOWDY' => 'MANUAL',
+        '- GEOIP,CN,🎯 DIRECT' => '- GEOIP,IR,🎯 DIRECT',
+        '- MATCH,🐟 LEAK' => '- MATCH,🚀 MANUAL',
     );
 
     $url = '';
@@ -42,6 +45,19 @@ function convert_to_clash($input, $type = "clash")
         
         // Replace translations in the fetched data
         $config = strtr($data, $translations);
+        $config = preg_replace('/^\s*profile:\s*\n\s*store-selected:\s*true\s*\n/m', '', $config);
+        $new_config = str_replace(
+            "rules:\n  - MATCH,FASTSSH-SSHKIT-HOWDY",
+            "name: DIRECT\n" .
+            "type: select\n" .
+            "proxies:\n" .
+            "  -DIRECT\n" .
+            "rules:\n" .
+            "  - GEOIP,IR,Global\n" .
+            "  - MATCH,MANUAL",
+        $config
+        );
+        
     }
 
     return $config;
