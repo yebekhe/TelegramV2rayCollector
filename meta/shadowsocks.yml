@@ -11,8 +11,6 @@ external-controller: 0.0.0.0:9090
 secret: ""
 bind-address: "*"
 unified-delay: true
-profile:
-  store-selected: true
 dns:
   enable: true
   ipv6: false
@@ -54,7 +52,7 @@ proxies:
     password: pKEW8JPByTVTLtM
     udp: true
 proxy-groups:
-  - name: FASTSSH-SSHKIT-HOWDY
+  - name: MANUAL
     type: select
     proxies:
       - www.outline.network (DE)
@@ -91,4 +89,4 @@ proxy-groups:
       - www.outline.network (FR)
       - www.outline.network (GB)
 rules:
-  - MATCH,FASTSSH-SSHKIT-HOWDY
+  - MATCH,MANUAL
