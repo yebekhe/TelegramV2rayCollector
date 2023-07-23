@@ -5,19 +5,77 @@ mode: Rule
 log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
-
 proxies:
-  - {"name":"United Kingdom Datacamp","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"United Kingdom Datacamp","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"Telegram | @FNET00📱","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"@proxyymeliii","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"@proxyymeliii","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"@vless_new | تلگرام عضو بشید","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"www.outline.network (FR)","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"www.outline.network (GB)","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"www.outline.network (PL)","type":"ss","server":"ss","port":,"password":"","cipher":""}
-  - {"name":"US1","type":"ss","server":"ss","port":,"password":"","cipher":""}
-
+  - name: United Kingdom Datacamp
+    server: 212.102.53.79
+    port: 443
+    type: ss
+    cipher: aes-128-gcm
+    password: shadowsocks
+    udp: true
+  - name: United Kingdom Datacamp 2
+    server: 212.102.53.198
+    port: 443
+    type: ss
+    cipher: aes-128-gcm
+    password: shadowsocks
+    udp: true
+  - name: Telegram | @FNET00📱
+    server: passconf.xyz
+    port: 8080
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: qGjmI8WQlF0tfhDbkLqGdN
+    udp: true
+  - name: "@proxyymeliii"
+    server: 51.132.131.116
+    port: 16297
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: WiPAew0Qgpg220ZCltuG8z
+    udp: true
+  - name: "@proxyymeliii 2"
+    server: 51.68.206.229
+    port: 8080
+    type: ss
+    cipher: aes-256-gcm
+    password: KixLvKzwjekG00rm
+    udp: true
+  - name: "@vless_new | تلگرام عضو بشید"
+    server: 54.36.174.181
+    port: 6679
+    type: ss
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
+    udp: true
+  - name: www.outline.network (FR)
+    server: ak1811.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 6697
+    type: ss
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
+    udp: true
+  - name: www.outline.network (GB)
+    server: ak1812.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 4444
+    type: ss
+    cipher: aes-256-gcm
+    password: pKEW8JPByTVTLtM
+    udp: true
+  - name: www.outline.network (PL)
+    server: ak1813.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 6379
+    type: ss
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+    udp: true
+  - name: US1
+    server: 104.168.13.80
+    port: 8080
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: Epl46de5ryftug88ePd
+    udp: true
 proxy-groups:
   - name: MANUAL
     type: select
@@ -25,10 +83,11 @@ proxy-groups:
       - URL-TEST
       - FALLBACK
       - United Kingdom Datacamp
+      - United Kingdom Datacamp 2
       - Telegram | @FNET00📱
-      - @proxyymeliii
-      - @proxyymeliii
-      - @vless_new | تلگرام عضو بشید
+      - "@proxyymeliii"
+      - "@proxyymeliii 2"
+      - "@vless_new | تلگرام عضو بشید"
       - www.outline.network (FR)
       - www.outline.network (GB)
       - www.outline.network (PL)
@@ -40,10 +99,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - United Kingdom Datacamp
+      - United Kingdom Datacamp 2
       - Telegram | @FNET00📱
-      - @proxyymeliii
-      - @proxyymeliii
-      - @vless_new | تلگرام عضو بشید
+      - "@proxyymeliii"
+      - "@proxyymeliii 2"
+      - "@vless_new | تلگرام عضو بشید"
       - www.outline.network (FR)
       - www.outline.network (GB)
       - www.outline.network (PL)
@@ -54,10 +114,11 @@ proxy-groups:
     interval: 300
     proxies:
       - United Kingdom Datacamp
+      - United Kingdom Datacamp 2
       - Telegram | @FNET00📱
-      - @proxyymeliii
-      - @proxyymeliii
-      - @vless_new | تلگرام عضو بشید
+      - "@proxyymeliii"
+      - "@proxyymeliii 2"
+      - "@vless_new | تلگرام عضو بشید"
       - www.outline.network (FR)
       - www.outline.network (GB)
       - www.outline.network (PL)
