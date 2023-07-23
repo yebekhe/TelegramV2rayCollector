@@ -1,4 +1,13 @@
 <?php
+function is_base64_encoded($string)
+{
+    if (base64_encode(base64_decode($string, true)) === $string) {
+        return "true";
+    } else {
+        return "false";
+    }
+}
+
 function process_vmess_clash(array $decoded_config, $output_type)
 {
     $name = $decoded_config["ps"];
