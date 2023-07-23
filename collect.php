@@ -303,61 +303,65 @@ process_mix_json($mix_data_deduplicate, "configs_deduplicate.json");
 
 $clash_types = [
     "mix" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/mix_base64", "clash"),
-        "meta" => convert_to_clash($raw_url_base . "/sub/mix_base64", "meta"),
-        "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/mix_base64",
+        "clash" => full_config($mix, "clash"),
+        "meta" => full_config($mix, "meta"),
+        "surfboard" => full_config(
+            $mix,
             "surfboard"
         ),
     ],
     "vmess" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/vmess_base64", "clash"),
-        "meta" => convert_to_clash($raw_url_base . "/sub/vmess_base64", "meta"),
-        "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/vmess_base64",
-            "surfboard"
+        "clash" => full_config($fixed_string_vmess", "clash"),
+        "meta" => full_config($fixed_string_vmess", "meta"),
+        "surfboard" => full_config(
+            $fixed_string_vmess,
+            "surfboard",
+            "vmess"
         ),
     ],
     "vless" => [
-        "meta" => convert_to_clash($raw_url_base . "/sub/vless_base64", "meta"),
+        "meta" => full_config($fixed_string_vless", "meta"),
     ],
     "reality" => [
-        "meta" => convert_to_clash(
-            $raw_url_base . "/sub/reality_base64",
+        "meta" => full_config(
+            $fixed_string_reality,
             "meta"
         ),
     ],
     "trojan" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/trojan_base64", "clash"),
-        "meta" => convert_to_clash(
-            $raw_url_base . "/sub/trojan_base64",
+        "clash" => full_config($fixed_string_trojan, "clash"),
+        "meta" => full_config(
+            $fixed_string_trojan,
             "meta"
         ),
-        "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/trojan_base64",
-            "surfboard"
+        "surfboard" => full_config(
+            $fixed_string_trojan,
+            "surfboard",
+            "trojan"
         ),
     ],
     "shadowsocks" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/shadowsocks_base64", "clash"),
-        "meta" => convert_to_clash(
-            $raw_url_base . "/sub/shadowsocks_base64",
+        "clash" => full_config($fixed_string_shadowsocks, "clash"),
+        "meta" => full_config(
+            $fixed_string_shadowsocks,
             "meta"
         ),
-        "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/shadowsocks_base64",
-            "surfboard"
+        "surfboard" => full_config(
+            $fixed_string_shadowsocks,
+            "surfboard",
+            "shadowsocks"
         ),
     ],
     "donated" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/donated_base64", "clash"),
-        "meta" => convert_to_clash(
-            $raw_url_base . "/sub/donated_base64",
+        "clash" => full_config($donated_mix, "clash"),
+        "meta" => full_config(
+            $donated_mix,
             "meta"
         ),
-        "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/donated_base64",
-            "surfboard"
+        "surfboard" => full_config(
+            $donated_mix,
+            "surfboard",
+            "donated"
         ),
     ],
 ];
