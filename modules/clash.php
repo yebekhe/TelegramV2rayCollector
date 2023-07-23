@@ -8,10 +8,10 @@ function is_base64_encoded($string)
     }
 }
 
-function process_vmess_clash(array $decoded_config, $output_type)
+function process_vmess_clash($decoded_config, $output_type)
 {
     $name = $decoded_config["ps"];
-    if ($name === "") {
+    if ($name === "" || is_null($decoded_config)) {
         return null;
     }
     $server = $decoded_config["add"];
@@ -80,10 +80,10 @@ function process_vmess_clash(array $decoded_config, $output_type)
     return  str_replace(",," , ",", $vm_template);
 }
 
-function process_trojan_clash(array $decoded_config, $output_type)
+function process_trojan_clash($decoded_config, $output_type)
 {
     $name = $decoded_config["hash"];
-    if ($name === "") {
+    if ($name === "" || is_null($decoded_config)) {
         return null;
     }
     $server = $decoded_config["hostname"];
@@ -122,10 +122,10 @@ function process_trojan_clash(array $decoded_config, $output_type)
     return $tr_template;
 }
 
-function process_shadowsocks_clash(array $decoded_config, $output_type)
+function process_shadowsocks_clash($decoded_config, $output_type)
 {
     $name = $decoded_config["name"];
-    if ($name === "" || $name === null) {
+    if ($name === "" || is_null($name) || is_null($decoded_config)) {
         return null;
     }
     $server = $decoded_config["server_address"];
@@ -155,10 +155,10 @@ function process_shadowsocks_clash(array $decoded_config, $output_type)
     return $ss_template;
 }
 
-function process_vless_clash(array $decoded_config, $output_type)
+function process_vless_clash($decoded_config, $output_type)
 {
     $name = $decoded_config["hash"];
-    if ($name === "") {
+    if ($name === "" || is_null($decoded_config)) {
         return null;
     }
     $server = $decoded_config["hostname"];
