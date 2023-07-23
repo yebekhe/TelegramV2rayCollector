@@ -6,23 +6,130 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 
+proxies:
+  - {"name":"@PrivateVPNs | GB🇬🇧 | 119.31ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@PrivateVPNs | IE🇮🇪 | 117.48ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@PrivateVPNs | IE🇮🇪 | 103.43ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@DirectVPN | CA🇨🇦 | 60.4ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@DirectVPN | US🇺🇸 | 48.89ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@DirectVPN | US🇺🇸 | 66.23ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@NetAccount | JP🇯🇵 | 179.82ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"jp2.aitrjc.xyz","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"@NetAccount | US🇺🇸 | 79.86ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"us3.aitrjc.xyz","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"@vmess_vless_v2rayng | US🇺🇸 | 62.21ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@ovpn2 | US🇺🇸 | 102.93ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@ovpn2 | US🇺🇸 | 106.29ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@proxystore11 | FR🇫🇷 | 725.46ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"hk.jd.com","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@proxystore11 | CA🇨🇦 | 249.88ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"hk.jd.com","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@proxystore11 | US🇺🇸 | 75.66ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"hk.jd.com","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@yaney_01 | US🇺🇸 | 45.17ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"us02web.zoom.us","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@yaney_01 | US🇺🇸 | 9.63ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"us02web.zoom.us","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"@yaney_01 | US🇺🇸 | 9.65ms","type":"trojan","server":"trojan","port":,"udp":true,"password":"","sni":"us02web.zoom.us","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"United Kingdom Datacamp","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"United Kingdom Datacamp","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"Telegram | @FNET00📱","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"@proxyymeliii","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"@proxyymeliii","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"@vless_new | تلگرام عضو بشید","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"www.outline.network (FR)","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"www.outline.network (GB)","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"www.outline.network (PL)","type":"ss","server":"ss","port":,"password":"","cipher":""}
+  - {"name":"US1","type":"ss","server":"ss","port":,"password":"","cipher":""}
+
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - URL-TEST
       - FALLBACK
+      - @PrivateVPNs | IE🇮🇪 | 117.48ms
+      - @PrivateVPNs | IE🇮🇪 | 103.43ms
+      - @DirectVPN | CA🇨🇦 | 60.4ms
+      - @DirectVPN | US🇺🇸 | 48.89ms
+      - @DirectVPN | US🇺🇸 | 66.23ms
+      - @NetAccount | JP🇯🇵 | 179.82ms
+      - @NetAccount | US🇺🇸 | 79.86ms
+      - @vmess_vless_v2rayng | US🇺🇸 | 62.21ms
+      - @ovpn2 | US🇺🇸 | 102.93ms
+      - @ovpn2 | US🇺🇸 | 106.29ms
+      - @proxystore11 | FR🇫🇷 | 725.46ms
+      - @proxystore11 | CA🇨🇦 | 249.88ms
+      - @proxystore11 | US🇺🇸 | 75.66ms
+      - @yaney_01 | US🇺🇸 | 45.17ms
+      - @yaney_01 | US🇺🇸 | 9.63ms
+      - @yaney_01 | US🇺🇸 | 9.65ms
+      - United Kingdom Datacamp
+      - United Kingdom Datacamp
+      - Telegram | @FNET00📱
+      - @proxyymeliii
+      - @proxyymeliii
+      - @vless_new | تلگرام عضو بشید
+      - www.outline.network (FR)
+      - www.outline.network (GB)
+      - www.outline.network (PL)
+      - US1
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - @PrivateVPNs | IE🇮🇪 | 117.48ms
+      - @PrivateVPNs | IE🇮🇪 | 103.43ms
+      - @DirectVPN | CA🇨🇦 | 60.4ms
+      - @DirectVPN | US🇺🇸 | 48.89ms
+      - @DirectVPN | US🇺🇸 | 66.23ms
+      - @NetAccount | JP🇯🇵 | 179.82ms
+      - @NetAccount | US🇺🇸 | 79.86ms
+      - @vmess_vless_v2rayng | US🇺🇸 | 62.21ms
+      - @ovpn2 | US🇺🇸 | 102.93ms
+      - @ovpn2 | US🇺🇸 | 106.29ms
+      - @proxystore11 | FR🇫🇷 | 725.46ms
+      - @proxystore11 | CA🇨🇦 | 249.88ms
+      - @proxystore11 | US🇺🇸 | 75.66ms
+      - @yaney_01 | US🇺🇸 | 45.17ms
+      - @yaney_01 | US🇺🇸 | 9.63ms
+      - @yaney_01 | US🇺🇸 | 9.65ms
+      - United Kingdom Datacamp
+      - United Kingdom Datacamp
+      - Telegram | @FNET00📱
+      - @proxyymeliii
+      - @proxyymeliii
+      - @vless_new | تلگرام عضو بشید
+      - www.outline.network (FR)
+      - www.outline.network (GB)
+      - www.outline.network (PL)
+      - US1
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - @PrivateVPNs | IE🇮🇪 | 117.48ms
+      - @PrivateVPNs | IE🇮🇪 | 103.43ms
+      - @DirectVPN | CA🇨🇦 | 60.4ms
+      - @DirectVPN | US🇺🇸 | 48.89ms
+      - @DirectVPN | US🇺🇸 | 66.23ms
+      - @NetAccount | JP🇯🇵 | 179.82ms
+      - @NetAccount | US🇺🇸 | 79.86ms
+      - @vmess_vless_v2rayng | US🇺🇸 | 62.21ms
+      - @ovpn2 | US🇺🇸 | 102.93ms
+      - @ovpn2 | US🇺🇸 | 106.29ms
+      - @proxystore11 | FR🇫🇷 | 725.46ms
+      - @proxystore11 | CA🇨🇦 | 249.88ms
+      - @proxystore11 | US🇺🇸 | 75.66ms
+      - @yaney_01 | US🇺🇸 | 45.17ms
+      - @yaney_01 | US🇺🇸 | 9.63ms
+      - @yaney_01 | US🇺🇸 | 9.65ms
+      - United Kingdom Datacamp
+      - United Kingdom Datacamp
+      - Telegram | @FNET00📱
+      - @proxyymeliii
+      - @proxyymeliii
+      - @vless_new | تلگرام عضو بشید
+      - www.outline.network (FR)
+      - www.outline.network (GB)
+      - www.outline.network (PL)
+      - US1
 
 rules:
  - GEOIP,IR,DIRECT

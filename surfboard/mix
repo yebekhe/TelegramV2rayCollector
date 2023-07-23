@@ -11,11 +11,38 @@ enhanced-mode-by-rule = true
 
 [Proxy]
 DIRECT = direct
+@PrivateVPNs | GB🇬🇧 | 119.31ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = trj.rollingnext.co.uk, ws = false
+@PrivateVPNs | IE🇮🇪 | 117.48ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = trj.rollingnext.co.uk, ws = false
+@PrivateVPNs | IE🇮🇪 | 103.43ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = trj.rollingnext.co.uk, ws = false
+@DirectVPN | CA🇨🇦 | 60.4ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = trj.rollingnext.co.uk, ws = false
+@DirectVPN | US🇺🇸 | 48.89ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = trj.rollingnext.co.uk, ws = false
+@DirectVPN | US🇺🇸 | 66.23ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = trj.rollingnext.co.uk, ws = false
+@NetAccount | JP🇯🇵 | 179.82ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = true, sni = jp2.aitrjc.xyz, ws = false
+@NetAccount | US🇺🇸 | 79.86ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = true, sni = us3.aitrjc.xyz, ws = false
+@vmess_vless_v2rayng | US🇺🇸 | 62.21ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = trj.rollingnext.co.uk, ws = false
+@ovpn2 | US🇺🇸 | 102.93ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = , ws = false
+@ovpn2 | US🇺🇸 | 106.29ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = , ws = false
+@proxystore11 | FR🇫🇷 | 725.46ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = hk.jd.com, ws = false
+@proxystore11 | CA🇨🇦 | 249.88ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = hk.jd.com, ws = false
+@proxystore11 | US🇺🇸 | 75.66ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = hk.jd.com, ws = false
+@yaney_01 | US🇺🇸 | 45.17ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = us02web.zoom.us, ws = false
+@yaney_01 | US🇺🇸 | 9.63ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = us02web.zoom.us, ws = false
+@yaney_01 | US🇺🇸 | 9.65ms = trojan, trojan, , password = , udp-delay = true, skip-cert-verify = false, sni = us02web.zoom.us, ws = false
+United Kingdom Datacamp = ss, ss, , encrypt-method = , password = 
+United Kingdom Datacamp = ss, ss, , encrypt-method = , password = 
+Telegram | @FNET00📱 = ss, ss, , encrypt-method = , password = 
+@proxyymeliii = ss, ss, , encrypt-method = , password = 
+@proxyymeliii = ss, ss, , encrypt-method = , password = 
+@vless_new | تلگرام عضو بشید = ss, ss, , encrypt-method = , password = 
+www.outline.network (FR) = ss, ss, , encrypt-method = , password = 
+www.outline.network (GB) = ss, ss, , encrypt-method = , password = 
+www.outline.network (PL) = ss, ss, , encrypt-method = , password = 
+US1 = ss, ss, , encrypt-method = , password = 
 
 [Proxy Group]
-MANUAL = select,URL-TEST,FALLBACK,
-URL-TEST = url-test,
-FALLBACK = fallback,
+MANUAL = select,URL-TEST,FALLBACK,@PrivateVPNs | GB🇬🇧 | 119.31ms,@PrivateVPNs | IE🇮🇪 | 117.48ms,@PrivateVPNs | IE🇮🇪 | 103.43ms,@DirectVPN | CA🇨🇦 | 60.4ms,@DirectVPN | US🇺🇸 | 48.89ms,@DirectVPN | US🇺🇸 | 66.23ms,@NetAccount | JP🇯🇵 | 179.82ms,@NetAccount | US🇺🇸 | 79.86ms,@vmess_vless_v2rayng | US🇺🇸 | 62.21ms,@ovpn2 | US🇺🇸 | 102.93ms,@ovpn2 | US🇺🇸 | 106.29ms,@proxystore11 | FR🇫🇷 | 725.46ms,@proxystore11 | CA🇨🇦 | 249.88ms,@proxystore11 | US🇺🇸 | 75.66ms,@yaney_01 | US🇺🇸 | 45.17ms,@yaney_01 | US🇺🇸 | 9.63ms,@yaney_01 | US🇺🇸 | 9.65ms,United Kingdom Datacamp,United Kingdom Datacamp,Telegram | @FNET00📱,@proxyymeliii,@proxyymeliii,@vless_new | تلگرام عضو بشید,www.outline.network (FR),www.outline.network (GB),www.outline.network (PL),US1,
+URL-TEST = url-test,@PrivateVPNs | GB🇬🇧 | 119.31ms,@PrivateVPNs | IE🇮🇪 | 117.48ms,@PrivateVPNs | IE🇮🇪 | 103.43ms,@DirectVPN | CA🇨🇦 | 60.4ms,@DirectVPN | US🇺🇸 | 48.89ms,@DirectVPN | US🇺🇸 | 66.23ms,@NetAccount | JP🇯🇵 | 179.82ms,@NetAccount | US🇺🇸 | 79.86ms,@vmess_vless_v2rayng | US🇺🇸 | 62.21ms,@ovpn2 | US🇺🇸 | 102.93ms,@ovpn2 | US🇺🇸 | 106.29ms,@proxystore11 | FR🇫🇷 | 725.46ms,@proxystore11 | CA🇨🇦 | 249.88ms,@proxystore11 | US🇺🇸 | 75.66ms,@yaney_01 | US🇺🇸 | 45.17ms,@yaney_01 | US🇺🇸 | 9.63ms,@yaney_01 | US🇺🇸 | 9.65ms,United Kingdom Datacamp,United Kingdom Datacamp,Telegram | @FNET00📱,@proxyymeliii,@proxyymeliii,@vless_new | تلگرام عضو بشید,www.outline.network (FR),www.outline.network (GB),www.outline.network (PL),US1,
+FALLBACK = fallback,@PrivateVPNs | GB🇬🇧 | 119.31ms,@PrivateVPNs | IE🇮🇪 | 117.48ms,@PrivateVPNs | IE🇮🇪 | 103.43ms,@DirectVPN | CA🇨🇦 | 60.4ms,@DirectVPN | US🇺🇸 | 48.89ms,@DirectVPN | US🇺🇸 | 66.23ms,@NetAccount | JP🇯🇵 | 179.82ms,@NetAccount | US🇺🇸 | 79.86ms,@vmess_vless_v2rayng | US🇺🇸 | 62.21ms,@ovpn2 | US🇺🇸 | 102.93ms,@ovpn2 | US🇺🇸 | 106.29ms,@proxystore11 | FR🇫🇷 | 725.46ms,@proxystore11 | CA🇨🇦 | 249.88ms,@proxystore11 | US🇺🇸 | 75.66ms,@yaney_01 | US🇺🇸 | 45.17ms,@yaney_01 | US🇺🇸 | 9.63ms,@yaney_01 | US🇺🇸 | 9.65ms,United Kingdom Datacamp,United Kingdom Datacamp,Telegram | @FNET00📱,@proxyymeliii,@proxyymeliii,@vless_new | تلگرام عضو بشید,www.outline.network (FR),www.outline.network (GB),www.outline.network (PL),US1,
 
 [Rule]
 GEOIP,IR,DIRECT
