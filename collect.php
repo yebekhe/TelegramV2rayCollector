@@ -311,8 +311,8 @@ $clash_types = [
         ),
     ],
     "vmess" => [
-        "clash" => full_config($fixed_string_vmess", "clash"),
-        "meta" => full_config($fixed_string_vmess", "meta"),
+        "clash" => full_config($fixed_string_vmess, "clash"),
+        "meta" => full_config($fixed_string_vmess, "meta"),
         "surfboard" => full_config(
             $fixed_string_vmess,
             "surfboard",
@@ -320,7 +320,7 @@ $clash_types = [
         ),
     ],
     "vless" => [
-        "meta" => full_config($fixed_string_vless", "meta"),
+        "meta" => full_config($fixed_string_vless, "meta"),
     ],
     "reality" => [
         "meta" => full_config(
