@@ -37,7 +37,7 @@ function get_config_time($type, $input)
 
 function get_config_items($type, $input)
 {
-    preg_match_all("#" . $type . "://(.*?)<#", $input, $items);
+    preg_match_all("#>" . $type . "://(.*?)<#", $input, $items);
     return $items;
 }
 
