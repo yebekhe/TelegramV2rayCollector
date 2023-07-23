@@ -5,18 +5,18 @@ function convert_to_clash($url, $type)
     $protocol = str_replace("_base64", "", str_replace($repo_base_url, "", $url));
     $surf_url = "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/" . $protocol;
     $base_url = [
-        "clash" => "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=",
-        "meta" => "https://sub.bonds.id/sub2?target=clash&url=",
+        "clash" => "https://yebekhe.rf.gd/subconvertor/?type=clash&url=",
+        "meta" => "https://yebekhe.rf.gd/subconvertor/?type=meta&url=",
         "surfboard" =>
-            "https://pub-api-1.bianyuan.xyz/sub?target=surfboard&url=",
+            "https://yebekhe.rf.gd/subconvertor/?type=surfboard&url=",
     ];
     $params = [
         "clash" =>
-            "&insert=false&config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false",
+            "&process=name",
         "meta" =>
-            "&insert=false&config=base%2Fdatabase%2Fconfig%2Fcustom%2Fgroups%2Fallgroup_redir.ini&emoji=false&list=true&udp=true&tfo=false&expand=false&scv=true&fdn=false&sort=false&new_name=true&sort=false",
+            "&process=name",
         "surfboard" =>
-            "&insert=false&config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false",
+            "&process=name",
     ];
     $config_start = [
         "clash" => [
@@ -119,16 +119,11 @@ function convert_to_clash($url, $type)
         "surfboard" => ["[Rule]", "GEOIP,IR,DIRECT", "FINAL,MANUAL"],
     ];
 
-    $replace_string =
-        "#!MANAGED-CONFIG https://pub-api-1.bianyuan.xyz/sub?config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&emoji=true&fdn=false&insert=false&list=true&scv=false&sort=false&target=surfboard&tfo=false&url=" .
-        $url .
-        " interval=86400 strict=false\n\n";
-
-    $url = $base_url[$type] . $url . $params[$type];
+    $url = $base_url[$type] . $url ;
+    $name_url = $base_url[$type] . $url . $params[$type];
     $proxies = file_get_contents($url);
     $config_array = explode("\n", $proxies);
-    $configs_name = extract_names($config_array, $type);
-    $proxies = str_replace($replace_string, "", $proxies);
+    $configs_name = file_get_contents($name_url);
     $full_configs = generate_full_config(
         $config_start[$type],
         $proxies,
@@ -139,39 +134,6 @@ function convert_to_clash($url, $type)
     );
 
     return $full_configs;
-}
-
-function extract_names($configs_array, $type)
-{
-    $configs_name = "";
-    switch ($type) {
-        case "clash":
-            unset($configs_array[0]);
-            $pattern = '/name:\s*("[^"]+"|[^,]+(?=,))/u';
-            foreach ($configs_array as $config_data) {
-                if (preg_match($pattern, $config_data, $matches)) {
-                    $configs_name .= "      - " . $matches[1] . "\n";
-                }
-            }
-            break;
-        case "meta":
-            $pattern = "/- name:\s+(.*)/";
-            foreach ($configs_array as $config_data) {
-                if (preg_match($pattern, $config_data, $matches)) {
-                    $configs_name .= "      - " . $matches[1] . "\n";
-                }
-            }
-            break;
-        case "surfboard":
-            unset($configs_array[0]);
-            unset($configs_array[1]);
-            foreach ($configs_array as $config_data) {
-                $config_array = explode(" = ", $config_data);
-                $configs_name .= $config_array[0] . ",";
-            }
-            break;
-    }
-    return $configs_name;
 }
 
 function array_to_string($input)
