@@ -3,7 +3,6 @@ header("Content-type: application/json;"); // Set response content type as JSON
 
 include "modules/get_data.php"; // Include the get_data module
 include "modules/config.php"; // Include the config module
-include "modules/clash.php"; // Include the clash module
 include "modules/ranking.php"; // Include the ranking module
 
 function process_mix_json($input, $name)
@@ -301,62 +300,37 @@ foreach ($subscription_types as $subscription_type => $subscription_data) {
 process_mix_json($mix_data, "configs.json");
 process_mix_json($mix_data_deduplicate, "configs_deduplicate.json");
 
+$convertor_url = "https://pxhryl-8080.csb.app/?url=" . $raw_url_base . "/sub/";
+
 $clash_types = [
     "mix" => [
-        "clash" => convert_to_clash($mix, "clash"),
-        "meta" => convert_to_clash($mix, "meta"),
-        "surfboard" => convert_to_clash(
-            $mix,
-            "surfboard",
-            "mix"
-        ),
+        "clash" => file_get_contents($convertor_url . "mix&type=clash&process=full"),
+        "meta" => file_get_contents($convertor_url . "mix&type=metaprocess=full"),
+        "surfboard" => file_get_contents($convertor_url . "mix&type=surfboard&process=full"),
     ],
     "vmess" => [
-        "clash" => convert_to_clash($fixed_string_vmess, "clash"),
-        "meta" => convert_to_clash($fixed_string_vmess, "meta"),
-        "surfboard" => convert_to_clash(
-            $fixed_string_vmess,
-            "surfboard",
-            "vmess"
-        ),
+        "clash" => file_get_contents($convertor_url . "vmess&type=clash&process=full"),
+        "meta" => file_get_contents($convertor_url . "vmess&type=metaprocess=full"),
+        "surfboard" => file_get_contents($convertor_url . "vmess&type=surfboard&process=full" ),
     ],
     "vless" => [
-        "meta" => convert_to_clash($raw_url_base . "/sub/vless_base64", "meta"),
+        "meta" => file_get_contents($convertor_url . "vless&type=meta&process=full"),
     ],
     "reality" => [
-        "meta" => convert_to_clash(
-            $fixed_string_reality,
-            "meta"
-        ),
+        "meta" => file_get_contents($convertor_url . "reality&type=meta&process=full"),
     ],
     "trojan" => [
-        "clash" => convert_to_clash($fixed_string_trojan, "clash"),
-        "meta" => convert_to_clash(
-            $fixed_string_trojan,
-            "meta"
-        ),
-        "surfboard" => convert_to_clash(
-            $fixed_string_trojan,
-            "surfboard",
-            "trojan"
-        ),
+        "clash" => file_get_contents($convertor_url . "trojan&type=clash&process=full"),
+        "meta" => file_get_contents($convertor_url . "trojan&type=meta&process=full"),
+        "surfboard" => file_get_contents($convertor_url . "trojan&type=surfboard&process=full"),
     ],
     "shadowsocks" => [
-        "clash" => convert_to_clash($fixed_string_shadowsocks, "clash"),
-        "meta" => convert_to_clash(
-            $fixed_string_shadowsocks,
-            "meta"
-        ),
-        "surfboard" => convert_to_clash(
-            $fixed_string_shadowsocks,
-            "surfboard"
-        ),
+        "clash" => file_get_contents($convertor_url . "shadowsocks&type=clash&process=full"),
+        "meta" => file_get_contents($convertor_url . "shadowsocks&type=meta&process=full"),
+        "surfboard" => file_get_contents($convertor_url . "shadowsocks&type=surfboard&process=full"),
     ],
     "donated" => [
-        "meta" => convert_to_clash(
-            $donated_mix,
-            "meta"
-        ),
+        "meta" => file_get_contents($convertor_url . "donated&type=surfboard&process=full"),
     ],
 ];
 
