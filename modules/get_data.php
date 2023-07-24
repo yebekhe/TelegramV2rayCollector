@@ -384,6 +384,7 @@ function process_subscription($input, $channel)
     $array_helper_vless = 0;
     $array_helper_ss = 0;
     $array_helper_trojan = 0;
+    $i = 0 ;
     foreach ($configs as $config) {
         $type = detect_type($config);
         $is_reality = is_reality($config, $type);
@@ -397,6 +398,7 @@ function process_subscription($input, $channel)
             @$ping_data = ping($ip, $port);
             if ($ping_data !== "unavailable") {
                 $flag = get_flag($ip);
+                $ping_data = $ping_data - $i;
 
                 $name_key = $name_array[$type];
                 $the_config[$name_key] = generate_name(
@@ -424,5 +426,6 @@ function process_subscription($input, $channel)
             }
         }
     }
+    $i ++ ;
     return $final_data;
 }
