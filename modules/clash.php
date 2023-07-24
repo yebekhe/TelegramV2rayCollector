@@ -1,6 +1,6 @@
 <?php
 header("Content-type: application/json;");
-include 
+
 /** Check if subscription is base64 encoded or not */
 function is_base64_encoded($string)
 {
