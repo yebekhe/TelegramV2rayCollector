@@ -6,7 +6,7 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: "@PrivateVPNs | GB🇬🇧 | 75.84ms"
+  - name: "@PrivateVPNs | GB🇬🇧 | 170.59ms"
     server: 18.169.163.97
     port: 22222
     type: trojan
@@ -14,7 +14,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@PrivateVPNs | IE🇮🇪 | 91.65ms"
+  - name: "@PrivateVPNs | IE🇮🇪 | 168.68ms"
     server: 3.249.10.73
     port: 22222
     type: trojan
@@ -22,7 +22,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@PrivateVPNs | IE🇮🇪 | 80.11ms"
+  - name: "@PrivateVPNs | IE🇮🇪 | 144.42ms"
     server: 3.250.60.38
     port: 22222
     type: trojan
@@ -30,7 +30,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@DirectVPN | CA🇨🇦 | 18.53ms"
+  - name: "@DirectVPN | CA🇨🇦 | 77.56ms"
     server: 15.156.205.61
     port: 22222
     type: trojan
@@ -38,7 +38,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@DirectVPN | US🇺🇸 | 27.41ms"
+  - name: "@DirectVPN | US🇺🇸 | 88.75ms"
     server: 3.143.255.11
     port: 22222
     type: trojan
@@ -46,15 +46,7 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@DirectVPN | US🇺🇸 | 94.9ms"
-    server: 54.212.62.97
-    port: 22222
-    type: trojan
-    password: telegram-id-directvpn
-    skip-cert-verify: true
-    sni: trj.rollingnext.co.uk
-    udp: true
-  - name: "@NetAccount | US🇺🇸 | 75.9ms"
+  - name: "@NetAccount | US🇺🇸 | 16.71ms"
     server: us3.aitrjc.xyz
     port: 10283
     type: trojan
@@ -62,7 +54,7 @@ proxies:
     skip-cert-verify: true
     sni: us3.aitrjc.xyz
     udp: true
-  - name: "@vmess_vless_v2rayng | US🇺🇸 | 13.77ms"
+  - name: "@vmess_vless_v2rayng | US🇺🇸 | 69.57ms"
     server: 18.119.124.2
     port: 22222
     type: trojan
@@ -70,7 +62,15 @@ proxies:
     skip-cert-verify: true
     sni: trj.rollingnext.co.uk
     udp: true
-  - name: "@ovpn2 | US🇺🇸 | 114ms"
+  - name: "@V2RayTz | US🇺🇸 | 26.85ms"
+    server: 54.212.62.97
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    skip-cert-verify: true
+    sni: trj.rollingnext.co.uk
+    udp: true
+  - name: "@ovpn2 | US🇺🇸 | 66.19ms"
     server: us1.chuqiangtou.net
     port: 4003
     type: trojan
@@ -78,7 +78,7 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "@ovpn2 | US🇺🇸 | 135.31ms"
+  - name: "@ovpn2 | US🇺🇸 | 146.6ms"
     server: us3.chuqiangtou.net
     port: 4003
     type: trojan
@@ -86,7 +86,44 @@ proxies:
     skip-cert-verify: true
     sni: ""
     udp: true
-  - name: "@proxystore11 | FR🇫🇷 | 121.85ms"
+  - name: "@ConfigsHUB | DE🇩🇪 | 165.66ms"
+    server: hoddi.cpionline.co
+    port: 443
+    type: trojan
+    password: 93ed0514-854b-4e6c-9967-f8dc4b40db8a
+    skip-cert-verify: true
+    sni: hoddi.cpionline.co
+    network: ws
+    ws-opts:
+      path: /86mNTlgBQQGC7YNALYx5xYr
+      headers:
+        Host: hoddi.cpionline.co
+    udp: true
+  - name: "@ConfigsHUB | DE🇩🇪 | 166.97ms"
+    server: hoddi.cpionline.co
+    port: 443
+    type: trojan
+    password: 93ed0514-854b-4e6c-9967-f8dc4b40db8a
+    skip-cert-verify: true
+    sni: hoddi.cpionline.co
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 86mNTlgBQQGC7YCOhMCX4ouvFSmw
+    udp: true
+  - name: "@ConfigsHUB | RELAY🚩 | 17.33ms"
+    server: mci.ircf.space
+    port: 443
+    type: trojan
+    password: 93ed0514-854b-4e6c-9967-f8dc4b40db8a
+    skip-cert-verify: true
+    sni: hdfycdn1.cpionline.co
+    network: ws
+    ws-opts:
+      path: /86mNTlgBQQGC7YNALYx5xYr
+      headers:
+        Host: hdfycdn1.cpionline.co
+    udp: true
+  - name: "@proxystore11 | FR🇫🇷 | 442.68ms"
     server: ssrsub.t17.trojan.tel
     port: 80
     type: trojan
@@ -94,7 +131,7 @@ proxies:
     skip-cert-verify: true
     sni: hk.jd.com
     udp: true
-  - name: "@proxystore11 | CA🇨🇦 | 121.02ms"
+  - name: "@proxystore11 | CA🇨🇦 | 322.58ms"
     server: ssrsub.t12.trojan.tel
     port: 80
     type: trojan
@@ -102,7 +139,7 @@ proxies:
     skip-cert-verify: true
     sni: hk.jd.com
     udp: true
-  - name: "@proxystore11 | US🇺🇸 | 57.58ms"
+  - name: "@proxystore11 | US🇺🇸 | 384.91ms"
     server: ssrsub.t24.trojan.tel
     port: 80
     type: trojan
@@ -110,7 +147,7 @@ proxies:
     skip-cert-verify: true
     sni: hk.jd.com
     udp: true
-  - name: "@yaney_01 | US🇺🇸 | 19.21ms"
+  - name: "@yaney_01 | US🇺🇸 | 24.2ms"
     server: 64.227.131.19
     port: 443
     type: trojan
@@ -118,7 +155,7 @@ proxies:
     skip-cert-verify: true
     sni: us02web.zoom.us
     udp: true
-  - name: "@yaney_01 | US🇺🇸 | 1.53ms"
+  - name: "@yaney_01 | US🇺🇸 | 2.59ms"
     server: 128.199.221.46
     port: 443
     type: trojan
@@ -126,7 +163,7 @@ proxies:
     skip-cert-verify: true
     sni: us02web.zoom.us
     udp: true
-  - name: "@yaney_01 | US🇺🇸 | 1.43ms"
+  - name: "@yaney_01 | US🇺🇸 | 2.44ms"
     server: 147.182.216.10
     port: 443
     type: trojan
@@ -140,65 +177,74 @@ proxy-groups:
     proxies:
       - URL-TEST
       - FALLBACK
-      - "@PrivateVPNs | GB🇬🇧 | 75.84ms"
-      - "@PrivateVPNs | IE🇮🇪 | 91.65ms"
-      - "@PrivateVPNs | IE🇮🇪 | 80.11ms"
-      - "@DirectVPN | CA🇨🇦 | 18.53ms"
-      - "@DirectVPN | US🇺🇸 | 27.41ms"
-      - "@DirectVPN | US🇺🇸 | 94.9ms"
-      - "@NetAccount | US🇺🇸 | 75.9ms"
-      - "@vmess_vless_v2rayng | US🇺🇸 | 13.77ms"
-      - "@ovpn2 | US🇺🇸 | 114ms"
-      - "@ovpn2 | US🇺🇸 | 135.31ms"
-      - "@proxystore11 | FR🇫🇷 | 121.85ms"
-      - "@proxystore11 | CA🇨🇦 | 121.02ms"
-      - "@proxystore11 | US🇺🇸 | 57.58ms"
-      - "@yaney_01 | US🇺🇸 | 19.21ms"
-      - "@yaney_01 | US🇺🇸 | 1.53ms"
-      - "@yaney_01 | US🇺🇸 | 1.43ms"
+      - "@PrivateVPNs | GB🇬🇧 | 170.59ms"
+      - "@PrivateVPNs | IE🇮🇪 | 168.68ms"
+      - "@PrivateVPNs | IE🇮🇪 | 144.42ms"
+      - "@DirectVPN | CA🇨🇦 | 77.56ms"
+      - "@DirectVPN | US🇺🇸 | 88.75ms"
+      - "@NetAccount | US🇺🇸 | 16.71ms"
+      - "@vmess_vless_v2rayng | US🇺🇸 | 69.57ms"
+      - "@V2RayTz | US🇺🇸 | 26.85ms"
+      - "@ovpn2 | US🇺🇸 | 66.19ms"
+      - "@ovpn2 | US🇺🇸 | 146.6ms"
+      - "@ConfigsHUB | DE🇩🇪 | 165.66ms"
+      - "@ConfigsHUB | DE🇩🇪 | 166.97ms"
+      - "@ConfigsHUB | RELAY🚩 | 17.33ms"
+      - "@proxystore11 | FR🇫🇷 | 442.68ms"
+      - "@proxystore11 | CA🇨🇦 | 322.58ms"
+      - "@proxystore11 | US🇺🇸 | 384.91ms"
+      - "@yaney_01 | US🇺🇸 | 24.2ms"
+      - "@yaney_01 | US🇺🇸 | 2.59ms"
+      - "@yaney_01 | US🇺🇸 | 2.44ms"
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@PrivateVPNs | GB🇬🇧 | 75.84ms"
-      - "@PrivateVPNs | IE🇮🇪 | 91.65ms"
-      - "@PrivateVPNs | IE🇮🇪 | 80.11ms"
-      - "@DirectVPN | CA🇨🇦 | 18.53ms"
-      - "@DirectVPN | US🇺🇸 | 27.41ms"
-      - "@DirectVPN | US🇺🇸 | 94.9ms"
-      - "@NetAccount | US🇺🇸 | 75.9ms"
-      - "@vmess_vless_v2rayng | US🇺🇸 | 13.77ms"
-      - "@ovpn2 | US🇺🇸 | 114ms"
-      - "@ovpn2 | US🇺🇸 | 135.31ms"
-      - "@proxystore11 | FR🇫🇷 | 121.85ms"
-      - "@proxystore11 | CA🇨🇦 | 121.02ms"
-      - "@proxystore11 | US🇺🇸 | 57.58ms"
-      - "@yaney_01 | US🇺🇸 | 19.21ms"
-      - "@yaney_01 | US🇺🇸 | 1.53ms"
-      - "@yaney_01 | US🇺🇸 | 1.43ms"
+      - "@PrivateVPNs | GB🇬🇧 | 170.59ms"
+      - "@PrivateVPNs | IE🇮🇪 | 168.68ms"
+      - "@PrivateVPNs | IE🇮🇪 | 144.42ms"
+      - "@DirectVPN | CA🇨🇦 | 77.56ms"
+      - "@DirectVPN | US🇺🇸 | 88.75ms"
+      - "@NetAccount | US🇺🇸 | 16.71ms"
+      - "@vmess_vless_v2rayng | US🇺🇸 | 69.57ms"
+      - "@V2RayTz | US🇺🇸 | 26.85ms"
+      - "@ovpn2 | US🇺🇸 | 66.19ms"
+      - "@ovpn2 | US🇺🇸 | 146.6ms"
+      - "@ConfigsHUB | DE🇩🇪 | 165.66ms"
+      - "@ConfigsHUB | DE🇩🇪 | 166.97ms"
+      - "@ConfigsHUB | RELAY🚩 | 17.33ms"
+      - "@proxystore11 | FR🇫🇷 | 442.68ms"
+      - "@proxystore11 | CA🇨🇦 | 322.58ms"
+      - "@proxystore11 | US🇺🇸 | 384.91ms"
+      - "@yaney_01 | US🇺🇸 | 24.2ms"
+      - "@yaney_01 | US🇺🇸 | 2.59ms"
+      - "@yaney_01 | US🇺🇸 | 2.44ms"
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - "@PrivateVPNs | GB🇬🇧 | 75.84ms"
-      - "@PrivateVPNs | IE🇮🇪 | 91.65ms"
-      - "@PrivateVPNs | IE🇮🇪 | 80.11ms"
-      - "@DirectVPN | CA🇨🇦 | 18.53ms"
-      - "@DirectVPN | US🇺🇸 | 27.41ms"
-      - "@DirectVPN | US🇺🇸 | 94.9ms"
-      - "@NetAccount | US🇺🇸 | 75.9ms"
-      - "@vmess_vless_v2rayng | US🇺🇸 | 13.77ms"
-      - "@ovpn2 | US🇺🇸 | 114ms"
-      - "@ovpn2 | US🇺🇸 | 135.31ms"
-      - "@proxystore11 | FR🇫🇷 | 121.85ms"
-      - "@proxystore11 | CA🇨🇦 | 121.02ms"
-      - "@proxystore11 | US🇺🇸 | 57.58ms"
-      - "@yaney_01 | US🇺🇸 | 19.21ms"
-      - "@yaney_01 | US🇺🇸 | 1.53ms"
-      - "@yaney_01 | US🇺🇸 | 1.43ms"
+      - "@PrivateVPNs | GB🇬🇧 | 170.59ms"
+      - "@PrivateVPNs | IE🇮🇪 | 168.68ms"
+      - "@PrivateVPNs | IE🇮🇪 | 144.42ms"
+      - "@DirectVPN | CA🇨🇦 | 77.56ms"
+      - "@DirectVPN | US🇺🇸 | 88.75ms"
+      - "@NetAccount | US🇺🇸 | 16.71ms"
+      - "@vmess_vless_v2rayng | US🇺🇸 | 69.57ms"
+      - "@V2RayTz | US🇺🇸 | 26.85ms"
+      - "@ovpn2 | US🇺🇸 | 66.19ms"
+      - "@ovpn2 | US🇺🇸 | 146.6ms"
+      - "@ConfigsHUB | DE🇩🇪 | 165.66ms"
+      - "@ConfigsHUB | DE🇩🇪 | 166.97ms"
+      - "@ConfigsHUB | RELAY🚩 | 17.33ms"
+      - "@proxystore11 | FR🇫🇷 | 442.68ms"
+      - "@proxystore11 | CA🇨🇦 | 322.58ms"
+      - "@proxystore11 | US🇺🇸 | 384.91ms"
+      - "@yaney_01 | US🇺🇸 | 24.2ms"
+      - "@yaney_01 | US🇺🇸 | 2.59ms"
+      - "@yaney_01 | US🇺🇸 | 2.44ms"
 
 rules:
  - GEOIP,IR,DIRECT
