@@ -321,7 +321,8 @@ function get_config($channel, $type)
                     @$ping_data = ping($ip, $port);
                     if ($ping_data !== "unavailable") {
                         $flag = get_flag($ip);
-
+                        $ping_data = $ping_data - $key;
+                        
                         $name_key = $name_array[$type];
                         $the_config[$name_key] = generate_name(
                             $channel,
@@ -329,6 +330,7 @@ function get_config($channel, $type)
                             $ping_data,
                             $is_reality
                         );
+                        
                         $final_config = build_config($the_config, $type);
 
                         $final_data[$key]["channel"]["username"] = $channel;
