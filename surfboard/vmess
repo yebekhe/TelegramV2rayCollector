@@ -1,4 +1,4 @@
-#!MANAGED-CONFIG https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/vmess interval=60 strict=false
+#!MANAGED-CONFIG https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/mix interval=60 strict=false
 
 [General]
 loglevel = notify
@@ -11,10 +11,22 @@ enhanced-mode-by-rule = true
 
 [Proxy]
 DIRECT = direct
+@free4allVPN | US🇺🇸 | 22.17ms = vmess, cloudconebbb.gorgorchicken.one, 8443, username = aa0c4744-9568-4bee-a08b-73668a9b2a42, ws = true, tls = true, vmess-aead = true, ws-path = /cloudconebbb, ws-headers = Host:"cloudconebbb.gorgorchicken.one", skip-cert-verify = true, tfo = false
+@free4allVPN | US🇺🇸 | 142.62ms = vmess, 69.25.115.162, 443, username = 418048af-a293-4b99-9b0c-98ca3580dd24, ws = true, tls = true, vmess-aead = false, ws-path = /path/1688983782619, ws-headers = Host:"www.69908657.xyz", skip-cert-verify = true, tfo = false
+@free4allVPN | US🇺🇸 | 45.56ms = vmess, vus5.0bad.com, 443, username = 927094d3-d678-4763-8591-e240d0bcae87, ws = true, tls = true, vmess-aead = true, ws-path = /chat, ws-headers = Host:"vus5.0bad.com", skip-cert-verify = true, tfo = false
+@v2ray_outlineir | RELAY🚩 | 122.87ms = vmess, 21.57.32.58, 2052, username = 2e729928-ba42-4ece-a540-157558db4b6d, ws = true, tls = false, vmess-aead = true, ws-path = /@AM_TEAMMM, ws-headers = Host:"free.amteamspace.monster", skip-cert-verify = true, tfo = false
+@prrofile_purple | US🇺🇸 | 6.18ms = vmess, mci-amteam.ddns.net, 2052, username = 2e729928-ba42-4ece-a540-157558db4b6d, ws = true, tls = false, vmess-aead = true, ws-path = /@AM_TEAMMM, ws-headers = Host:"free.amteamspace.monster", skip-cert-verify = true, tfo = false
+@vless_vmess | GB🇬🇧 | 102.78ms = vmess, vuk1.0bad.com, 443, username = 927094d3-d678-4763-8591-e240d0bcae87, ws = true, tls = true, vmess-aead = true, ws-path = /chat, ws-headers = Host:"", skip-cert-verify = true, tfo = false
+@vmess_vless_v2rayng | RELAY🚩 | 6.45ms = vmess, 51.15.19.206, 80, username = c903c1c0-2465-11ee-b733-205c6d5f5d78, ws = true, tls = false, vmess-aead = true, ws-path = /op3mxf12, ws-headers = Host:"zula.ir", skip-cert-verify = true, tfo = false
+@ovpn2 | RELAY🚩 | 84.12ms = vmess, support.cloudflare.com, 80, username = 44c467a9-8f0d-41a5-f00b-86569753e5b0, ws = true, tls = false, vmess-aead = true, ws-path = /?ed=2048, ws-headers = Host:"b3.iraniancp.click", skip-cert-verify = true, tfo = false
+@ConfigsHUB | RELAY🚩 | 6.11ms = vmess, mci-amteam.ddns.net, 2052, username = 2e729928-ba42-4ece-a540-157558db4b6d, ws = true, tls = false, vmess-aead = true, ws-path = /@AM_TEAMMM, ws-headers = Host:"free.amteamspace.monster", skip-cert-verify = true, tfo = false
+@yaney_01 | RELAY🚩 | 36.98ms = vmess, dashboard.autoly.ir, 443, username = 6147F065-9AC0-4081-A5A3-A2EB4EBB8958, ws = true, tls = true, vmess-aead = true, ws-path = /Lille.kotick.site/speedtest, ws-headers = Host:"panel2.hodorauth.com", skip-cert-verify = true, tfo = false
+@yaney_01 | RELAY🚩 | 6.01ms = vmess, dashboard.autoly.ir, 443, username = 12612e87-8003-44a8-b4e8-ec4a325e9016, ws = true, tls = true, vmess-aead = true, ws-path = /z.zorro.tk/ou, ws-headers = Host:"panel2.hodorauth.com", skip-cert-verify = true, tfo = false
+@yaney_01 | US🇺🇸 | 6.36ms = vmess, dashboard.autoly.ir, 443, username = 18e5f40f-bda6-4c15-9334-e87cda6047af, ws = true, tls = true, vmess-aead = true, ws-path = /ming2.kiwireich.com/ray, ws-headers = Host:"panel2.hodorauth.com", skip-cert-verify = true, tfo = false
 [Proxy Group]
-MANUAL = select,URL-TEST,FALLBACK
-URL-TEST = url-test
-FALLBACK = fallback
+MANUAL = select,URL-TEST,FALLBACK,@free4allVPN | US🇺🇸 | 22.17ms,@free4allVPN | US🇺🇸 | 142.62ms,@free4allVPN | US🇺🇸 | 45.56ms,@v2ray_outlineir | RELAY🚩 | 122.87ms,@prrofile_purple | US🇺🇸 | 6.18ms,@vless_vmess | GB🇬🇧 | 102.78ms,@vmess_vless_v2rayng | RELAY🚩 | 6.45ms,@ovpn2 | RELAY🚩 | 84.12ms,@ConfigsHUB | RELAY🚩 | 6.11ms,@yaney_01 | RELAY🚩 | 36.98ms,@yaney_01 | RELAY🚩 | 6.01ms,@yaney_01 | US🇺🇸 | 6.36ms,
+URL-TEST = url-test,@free4allVPN | US🇺🇸 | 22.17ms,@free4allVPN | US🇺🇸 | 142.62ms,@free4allVPN | US🇺🇸 | 45.56ms,@v2ray_outlineir | RELAY🚩 | 122.87ms,@prrofile_purple | US🇺🇸 | 6.18ms,@vless_vmess | GB🇬🇧 | 102.78ms,@vmess_vless_v2rayng | RELAY🚩 | 6.45ms,@ovpn2 | RELAY🚩 | 84.12ms,@ConfigsHUB | RELAY🚩 | 6.11ms,@yaney_01 | RELAY🚩 | 36.98ms,@yaney_01 | RELAY🚩 | 6.01ms,@yaney_01 | US🇺🇸 | 6.36ms,
+FALLBACK = fallback,@free4allVPN | US🇺🇸 | 22.17ms,@free4allVPN | US🇺🇸 | 142.62ms,@free4allVPN | US🇺🇸 | 45.56ms,@v2ray_outlineir | RELAY🚩 | 122.87ms,@prrofile_purple | US🇺🇸 | 6.18ms,@vless_vmess | GB🇬🇧 | 102.78ms,@vmess_vless_v2rayng | RELAY🚩 | 6.45ms,@ovpn2 | RELAY🚩 | 84.12ms,@ConfigsHUB | RELAY🚩 | 6.11ms,@yaney_01 | RELAY🚩 | 36.98ms,@yaney_01 | RELAY🚩 | 6.01ms,@yaney_01 | US🇺🇸 | 6.36ms,
 [Rule]
 GEOIP,IR,DIRECT
 FINAL,MANUAL
