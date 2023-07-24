@@ -303,19 +303,21 @@ process_mix_json($mix_data_deduplicate, "configs_deduplicate.json");
 
 $clash_types = [
     "mix" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/mix_base64", "clash"),
-        "meta" => convert_to_clash($raw_url_base . "/sub/mix_base64", "meta"),
+        "clash" => convert_to_clash($mix, "clash"),
+        "meta" => convert_to_clash($mix, "meta"),
         "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/mix_base64",
-            "surfboard"
+            $mix,
+            "surfboard",
+            "mix"
         ),
     ],
     "vmess" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/vmess_base64", "clash"),
-        "meta" => convert_to_clash($raw_url_base . "/sub/vmess_base64", "meta"),
+        "clash" => convert_to_clash($fixed_string_vmess, "clash"),
+        "meta" => convert_to_clash($fixed_string_vmess, "meta"),
         "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/vmess_base64",
-            "surfboard"
+            $fixed_string_vmess,
+            "surfboard",
+            "vmess"
         ),
     ],
     "vless" => [
@@ -323,41 +325,37 @@ $clash_types = [
     ],
     "reality" => [
         "meta" => convert_to_clash(
-            $raw_url_base . "/sub/reality_base64",
+            $fixed_string_reality,
             "meta"
         ),
     ],
     "trojan" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/trojan_base64", "clash"),
+        "clash" => convert_to_clash($fixed_string_trojan, "clash"),
         "meta" => convert_to_clash(
-            $raw_url_base . "/sub/trojan_base64",
+            $fixed_string_trojan,
             "meta"
         ),
         "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/trojan_base64",
-            "surfboard"
+            $fixed_string_trojan,
+            "surfboard",
+            "trojan"
         ),
     ],
     "shadowsocks" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/shadowsocks_base64", "clash"),
+        "clash" => convert_to_clash($fixed_string_shadowsocks, "clash"),
         "meta" => convert_to_clash(
-            $raw_url_base . "/sub/shadowsocks_base64",
+            $fixed_string_shadowsocks,
             "meta"
         ),
         "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/shadowsocks_base64",
+            $fixed_string_shadowsocks,
             "surfboard"
         ),
     ],
     "donated" => [
-        "clash" => convert_to_clash($raw_url_base . "/sub/donated_base64", "clash"),
         "meta" => convert_to_clash(
-            $raw_url_base . "/sub/donated_base64",
+            $donated_mix,
             "meta"
-        ),
-        "surfboard" => convert_to_clash(
-            $raw_url_base . "/sub/donated_base64",
-            "surfboard"
         ),
     ],
 ];
