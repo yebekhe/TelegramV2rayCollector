@@ -306,12 +306,12 @@ $clash_types = [
     "mix" => [
         "clash" => file_get_contents($convertor_url . "mix&type=clash&process=full"),
         "meta" => file_get_contents($convertor_url . "mix&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "mix&type=surfboard&process=full"),
+        "surfboard" => file_get_contents($convertor_url . "mix&type=surfboard&process=full&protocol=mix"),
     ],
     "vmess" => [
         "clash" => file_get_contents($convertor_url . "vmess&type=clash&process=full"),
         "meta" => file_get_contents($convertor_url . "vmess&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "vmess&type=surfboard&process=full" ),
+        "surfboard" => file_get_contents($convertor_url . "vmess&type=surfboard&process=full&protocol=vmess" ),
     ],
     "vless" => [
         "meta" => file_get_contents($convertor_url . "vless&type=meta&process=full"),
@@ -322,12 +322,12 @@ $clash_types = [
     "trojan" => [
         "clash" => file_get_contents($convertor_url . "trojan&type=clash&process=full"),
         "meta" => file_get_contents($convertor_url . "trojan&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "trojan&type=surfboard&process=full"),
+        "surfboard" => file_get_contents($convertor_url . "trojan&type=surfboard&process=full&protocol=trojan"),
     ],
     "shadowsocks" => [
         "clash" => file_get_contents($convertor_url . "shadowsocks&type=clash&process=full"),
         "meta" => file_get_contents($convertor_url . "shadowsocks&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "shadowsocks&type=surfboard&process=full"),
+        "surfboard" => file_get_contents($convertor_url . "shadowsocks&type=surfboard&process=full&protocol=shadowsocks"),
     ],
     "donated" => [
         "meta" => file_get_contents($convertor_url . "donated&type=surfboard&process=full"),
