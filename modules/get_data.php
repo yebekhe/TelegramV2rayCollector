@@ -288,7 +288,7 @@ function get_config($channel, $type)
         "vmess" => "ps",
         "vless" => "hash",
         "trojan" => "hash",
-        "ss" => "remarks",
+        "ss" => "name",
     ];
     // Fetch the content of the Telegram channel URL
     $get = file_get_contents("https://t.me/s/" . $channel);
@@ -375,7 +375,7 @@ function process_subscription($input, $channel)
         "vmess" => "ps",
         "vless" => "hash",
         "trojan" => "hash",
-        "ss" => "remarks",
+        "ss" => "name",
     ];
 
     $final_data = [];
