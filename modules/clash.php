@@ -1,23 +1,350 @@
 <?php
-function convert_to_clash($url, $type)
+header("Content-type: application/json;");
+
+/** Check if subscription is base64 encoded or not */
+function is_base64_encoded($string)
 {
-    $repo_base_url = "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/";
-    $protocol = str_replace("_base64", "", str_replace($repo_base_url, "", $url));
+    if (base64_encode(base64_decode($string, true)) === $string) {
+        return "true";
+    } else {
+        return "false";
+    }
+}
+function process_vmess_clash(array $decoded_config, $output_type)
+{
+    $name = $decoded_config["ps"];
+    if ($name === "") {
+        return null;
+    }
+    $server = $decoded_config["add"];
+    $port = $decoded_config["port"];
+    $cipher = isset($decoded_config["scy"]) ? ',"cipher":"' .$decoded_config["scy"] . '"' : ',"cipher":"auto"';
+    $uuid = $decoded_config["id"];
+    $alterId = $decoded_config["aid"];
+    $tls = $decoded_config["tls"] === "tls" ? "true" : "false";
+    $network = isset($decoded_config["net"]) ? $decoded_config["net"] : "tcp";
+    if ($network === "ws") {
+        $path = $decoded_config["path"];
+        $host = $decoded_config["host"];
+        $opts =
+            ',"ws-opts":{"path":"' .
+            $path .
+            '","headers":{"host":"' .
+            $host .
+            '"}}';
+    } elseif ($network === "grpc") {
+        $servicename = $decoded_config["path"];
+        $mode = $decoded_config["type"];
+        $opts =
+            ',"grpc-opts":{"grpc-service-name":"' .
+            $servicename .
+            '","grpc-mode":"' .
+            $mode .
+            '"}';
+    } elseif ($network === "tcp") {
+        $opts = "";
+    }
+    switch ($output_type){
+        case "clash":
+        case "meta":
+            $vm_template =
+            '  - {"name":"' .
+            $name .
+            '","type":"vmess","server":"' .
+            $server .
+            '","port":' .
+            $port .
+            $cipher .
+            ',"uuid":"' .
+            $uuid .
+            '","alterId":' .
+            $alterId .
+            ',"tls":' .
+            $tls .
+            ',"skip-cert-verify":true,"network":"' .
+            $network .
+            '"' .
+            $opts .
+            "}";
+            break;
+        case "surfboard":
+            if ($network === "ws"){
+                $vmes_aead = ($alterId === "0") ? "true" : "false";
+                $vm_template = $name . ' = vmess, ' . $server . ', ' . $port . ', username = ' . $uuid . ', ws = true, tls = ' . $tls . ', vmess-aead = ' . $vmes_aead . ', ws-path = ' . $path . ', ws-headers = Host:"' . $host . '", skip-cert-verify = true, tfo = false';
+            }else{
+                return null;
+            }
+            break;
+            
+    }
+    
+    return  str_replace(",," , ",", $vm_template);
+}
+
+function process_trojan_clash(array $decoded_config, $output_type)
+{
+    $name = $decoded_config["hash"];
+    if ($name === "") {
+        return null;
+    }
+    $server = $decoded_config["hostname"];
+    $port = $decoded_config["port"];
+    $username = $decoded_config["username"];
+    $sni = isset($decoded_config["params"]["sni"]) ? ',"sni":"' .$decoded_config["params"]["sni"] . '"' : "";
+    $skip_cert =
+        isset($decoded_config["params"]["allowInsecure"]) &&
+        $decoded_config["params"]["allowInsecure"] === "1"
+            ? "true"
+            : "false";
+    switch ($output_type){
+        case "clash":
+        case "meta":
+            $tr_template =
+            '  - {"name":"' .
+            $name .
+            '","type":"trojan","server":"' .
+            $server .
+            '","port":' .
+            $port .
+            ',"udp":false,"password":"' .
+            $username .
+            '"' .
+            $sni .
+            ',"skip-cert-verify":' .
+            $skip_cert .
+            ',"network":"tcp"}';
+            break;
+        case "surfboard":
+            $tr_template = $name . ' = trojan, ' . $server . ', ' . $port . ', password = ' . $username . ', udp-delay = true, skip-cert-verify = ' . $skip_cert . ', sni = ' . $sni . ', ws = false';
+            break;
+    }
+    
+
+    return $tr_template;
+}
+
+function process_shadowsocks_clash(array $decoded_config, $output_type)
+{
+    $name = $decoded_config["name"];
+    if ($name === "" || $name === null) {
+        return null;
+    }
+    $server = $decoded_config["server_address"];
+    $port = $decoded_config["server_port"];
+    $password = $decoded_config["password"];
+    $cipher = $decoded_config["encryption_method"];
+    switch ($output_type){
+        case "clash":
+        case "meta":
+            $ss_template =
+            '  - {"name":"' .
+            $name .
+            '","type":"ss","server":"' .
+            $server .
+            '","port":' .
+            $port .
+            ',"password":"' .
+            $password .
+            '","cipher":"' .
+            $cipher .
+            '"}';
+            break;
+        case "surfboard":
+            $ss_template = $name . ' = ss, ' . $server . ', ' . $port . ', encrypt-method = ' . $cipher . ', password = ' . $password;
+            break;
+        }
+    return $ss_template;
+}
+
+function process_vless_clash(array $decoded_config, $output_type)
+{
+    $name = $decoded_config["hash"];
+    if ($name === "") {
+        return null;
+    }
+    $server = $decoded_config["hostname"];
+    $port = $decoded_config["port"];
+    $username = $decoded_config["username"];
+    $sni = isset($decoded_config["params"]["sni"]) ? ',"servername":"' . $decoded_config["params"]["sni"] . '"' : "" ;
+    $tls = (isset($decoded_config["params"]["security"]) && $decoded_config["params"]["security"] === "tls") ? "true" : "false";
+    $flow =
+        (isset($decoded_config["params"]["flow"]) && $decoded_config["params"]["flow"] !== "")
+            ? ',"flow":"' . $decoded_config["params"]["flow"] . '"'
+            : "";
+    $network = isset($decoded_config["params"]["type"])
+        ? $decoded_config["params"]["type"]
+        : "tcp";
+    if ($network === "ws") {
+        $path = isset($decoded_config["params"]["path"])
+            ? $decoded_config["params"]["path"]
+            : "/";
+        $host = isset($decoded_config["params"]["host"])
+            ? $decoded_config["params"]["host"]
+            : "";
+        $opts =
+            ',"ws-opts":{"path":"' .
+            $path .
+            '","headers":{"host":"' .
+            $host .
+            '"}}';
+    } elseif ($network === "grpc") {
+        $servicename = $decoded_config["params"]["serviceName"];
+        $opts = ',"grpc-opts":{"grpc-service-name":"' . $servicename . '"}';
+    } elseif ($network === "tcp") {
+        $opts = "";
+    } else {
+        $opts = "";
+    }
+    $fingerprint = isset($decoded_config["params"]["fp"])
+        ? ',"client-fingerprint":"' . $decoded_config["params"]["fp"] . '"'
+        : "";
+    $reality =
+    (isset($decoded_config["params"]["security"]) && $decoded_config["params"]["security"] === "reality") ? "true" : "false";
+    if ($reality === "true") {
+        $pbk = $decoded_config["params"]["pbk"];
+        $sid = (isset($decoded_config["params"]["sid"]) && $decoded_config["params"]["sid"] !== "") ?  ',"short-id":"' . $decoded_config["params"]["sid"] . '"' : "";
+        $tls = "true";
+        $fingerprint = isset($decoded_config["params"]["fp"])
+        ? ',"client-fingerprint":"' . $decoded_config["params"]["fp"] . '"'
+        : ',"client-fingerprint":"safari"';
+        $reality_opts =
+            ',"reality-opts":{"public-key":"' .
+            $pbk .
+            '"' .
+            $sid .
+            '}';
+    } else {
+        $reality_opts = "";
+    }
+    
+        switch ($output_type){
+            
+            case "meta":
+                $vl_template =
+                '  - {"name":"' .
+                    $name .
+                    '","type":"vless","server":"' .
+                    $server .
+                    '","port":' .
+                    $port .
+                    ',"udp":false,"uuid":"' .
+                    $username .
+                    '","tls":' .
+                    $tls .
+                    $sni .
+                    $flow . 
+                    ',"network":"' . 
+                    $network . 
+                    '"' .
+                    $opts .
+                    $reality_opts .
+                    $fingerprint .
+                    '}';
+                    break;
+            case "clash":
+            case "surfboard":
+                return null;
+        }
+    
+
+    return str_replace(",," , ",", $vl_template);
+    
+}
+
+function process_convert($config, $type, $output_type)
+{
+    switch ($type) {
+        case "vmess":
+            return process_vmess_clash($config, $output_type);
+        case "vless":
+            return process_vless_clash($config, $output_type);
+        case "trojan":
+            return process_trojan_clash($config, $output_type);
+        case "ss":
+            return process_shadowsocks_clash($config, $output_type);
+    }
+}
+
+function generate_proxies($input, $output_type)
+{
+    $proxies = "";
+    if (is_valid_address($input)){
+        if (is_base64_encoded(file_get_contents($input)) === "true") {
+            $v2ray_subscription = base64_decode(file_get_contents($input), true);
+        } else {
+            $v2ray_subscription = file_get_contents($input);
+        }
+    } else {
+        if (is_base64_encoded($input) === "true"){
+            $v2ray_subscription = base64_decode($input, true);
+        } else {
+            $v2ray_subscription = $input;
+        }
+    }
+
+    $configs_array = explode("\n", $v2ray_subscription);
+    $suitable_config = suitable_output($configs_array , $output_type);
+    foreach ($suitable_config as $config) {
+        $type = detect_type($config);
+        $decoded_config = parse_config($config, $type);
+        $proxies .= (!is_null(process_convert($decoded_config, $type, $output_type))) ? process_convert($decoded_config, $type, $output_type) . "\n" : null;
+    }
+
+    return $proxies;
+}
+
+function suitable_output($input, $output_type){
+    switch ($output_type) {
+        case 'clash':
+        case 'surfboard':
+            foreach ($input as $key => $config) {
+                if (detect_type($config) === "vless"){
+                    unset($input[$key]);
+                }
+                if ($config === "trojan://" || $config === "ss://Og==@:"){
+                    unset($input[$key]);
+                }
+            }
+            break;
+        case 'meta':
+            foreach ($input as $key => $config) {
+                if ($config === "trojan://" || $config === "ss://Og==@:"){
+                    unset($input[$key]);
+                }
+            }
+            break;
+    }
+    return $input;
+}
+
+function extract_names($configs, $type)
+{
+    $configs_name = "";
+    $configs_array = explode("\n", $configs);
+    switch ($type) {
+        case "meta":
+        case "clash":
+            unset($configs_array[0]);
+            $pattern = '/"name":"(.*?)"/';
+            foreach ($configs_array as $config_data) {
+                if (preg_match($pattern, $config_data, $matches)) {
+                    $configs_name .= "      - '" . $matches[1] . "'\n";
+                }
+            }
+            break;
+        case "surfboard":
+            foreach ($configs_array as $config_data) {
+                $config_array = explode(" = ", $config_data);
+                $configs_name .= $config_array[0] . ",";
+            }
+            break;
+    }
+    return str_replace(",," , ",", $configs_name);
+}
+
+function convert_to_clash($input, $type, $protocol = "mix"){
     $surf_url = "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/" . $protocol;
-    $base_url = [
-        "clash" => "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=",
-        "meta" => "https://sub.bonds.id/sub2?target=clash&url=",
-        "surfboard" =>
-            "https://pub-api-1.bianyuan.xyz/sub?target=surfboard&url=",
-    ];
-    $params = [
-        "clash" =>
-            "&insert=false&config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false",
-        "meta" =>
-            "&insert=false&config=base%2Fdatabase%2Fconfig%2Fcustom%2Fgroups%2Fallgroup_redir.ini&emoji=false&list=true&udp=true&tfo=false&expand=false&scv=true&fdn=false&sort=false&new_name=true&sort=false",
-        "surfboard" =>
-            "&insert=false&config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false",
-    ];
+
     $config_start = [
         "clash" => [
             "port: 7890",
@@ -119,16 +446,8 @@ function convert_to_clash($url, $type)
         "surfboard" => ["[Rule]", "GEOIP,IR,DIRECT", "FINAL,MANUAL"],
     ];
 
-    $replace_string =
-        "#!MANAGED-CONFIG https://pub-api-1.bianyuan.xyz/sub?config=https%3A%2F%2Fsubconverter.oss-ap-southeast-1.aliyuncs.com%2FRules%2FRemoteConfig%2Funiversal%2Furltest.ini&emoji=true&fdn=false&insert=false&list=true&scv=false&sort=false&target=surfboard&tfo=false&url=" .
-        $url .
-        " interval=86400 strict=false\n\n";
-
-    $url = $base_url[$type] . $url . $params[$type];
-    $proxies = file_get_contents($url);
-    $config_array = explode("\n", $proxies);
-    $configs_name = extract_names($config_array, $type);
-    $proxies = str_replace($replace_string, "", $proxies);
+    $proxies = generate_proxies($input, $type);
+    $configs_name = extract_names($proxies, $type);
     $full_configs = generate_full_config(
         $config_start[$type],
         $proxies,
@@ -137,41 +456,7 @@ function convert_to_clash($url, $type)
         $configs_name,
         $type
     );
-
     return $full_configs;
-}
-
-function extract_names($configs_array, $type)
-{
-    $configs_name = "";
-    switch ($type) {
-        case "clash":
-            unset($configs_array[0]);
-            $pattern = '/name:\s*("[^"]+"|[^,]+(?=,))/u';
-            foreach ($configs_array as $config_data) {
-                if (preg_match($pattern, $config_data, $matches)) {
-                    $configs_name .= "      - " . $matches[1] . "\n";
-                }
-            }
-            break;
-        case "meta":
-            $pattern = "/- name:\s+(.*)/";
-            foreach ($configs_array as $config_data) {
-                if (preg_match($pattern, $config_data, $matches)) {
-                    $configs_name .= "      - " . $matches[1] . "\n";
-                }
-            }
-            break;
-        case "surfboard":
-            unset($configs_array[0]);
-            unset($configs_array[1]);
-            foreach ($configs_array as $config_data) {
-                $config_array = explode(" = ", $config_data);
-                $configs_name .= $config_array[0] . ",";
-            }
-            break;
-    }
-    return $configs_name;
 }
 
 function array_to_string($input)
@@ -191,6 +476,7 @@ function generate_full_config(
     switch ($type) {
         case "clash":
         case "meta":
+            $proxies = "proxies:\n" . $proxies;
             $proxy_group_string = "proxy-groups:";
             $proxy_group_manual =
                 array_to_string(
@@ -241,9 +527,7 @@ function generate_full_config(
         $config_start_string .
         "\n" .
         $proxies .
-        "\n" .
         $proxy_group_string .
-        "\n" .
         $proxy_rules;
     return $output;
 }
