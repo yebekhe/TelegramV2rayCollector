@@ -305,12 +305,12 @@ $convertor_url = "https://pxhryl-8080.csb.app/?url=" . $raw_url_base . "/sub/";
 $clash_types = [
     "mix" => [
         "clash" => file_get_contents($convertor_url . "mix&type=clash&process=full"),
-        "meta" => file_get_contents($convertor_url . "mix&type=metaprocess=full"),
+        "meta" => file_get_contents($convertor_url . "mix&type=meta&process=full"),
         "surfboard" => file_get_contents($convertor_url . "mix&type=surfboard&process=full"),
     ],
     "vmess" => [
         "clash" => file_get_contents($convertor_url . "vmess&type=clash&process=full"),
-        "meta" => file_get_contents($convertor_url . "vmess&type=metaprocess=full"),
+        "meta" => file_get_contents($convertor_url . "vmess&type=meta&process=full"),
         "surfboard" => file_get_contents($convertor_url . "vmess&type=surfboard&process=full" ),
     ],
     "vless" => [
