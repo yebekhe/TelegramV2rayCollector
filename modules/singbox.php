@@ -91,9 +91,9 @@ function generate_output($input){
         $outbound[] = json_decode($json_output, true);
     }
   
-    $template = json_decode(file_get_contents("template.json"), true);
-    $manual_json = json_decode(file_get_contents("manual.json"), true);
-    $url_test_json = json_decode(file_get_contents("url_test.json"), true);
+    $template = json_decode(file_get_contents("modules/singbox/template.json"), true);
+    $manual_json = json_decode(file_get_contents("modules/singbox/manual.json"), true);
+    $url_test_json = json_decode(file_get_contents("modules/singbox/url_test.json"), true);
 
     $names = extract_names($outbound);
     $manual_outbound = process_jsons($manual_json, $names);
