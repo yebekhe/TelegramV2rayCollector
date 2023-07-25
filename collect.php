@@ -4,6 +4,7 @@ header("Content-type: application/json;"); // Set response content type as JSON
 include "modules/get_data.php"; // Include the get_data module
 include "modules/config.php"; // Include the config module
 include "modules/ranking.php"; // Include the ranking module
+include "modules/singbox.php"; // Include the singbox module
 
 function process_mix_json($input, $name)
 {
@@ -344,6 +345,9 @@ foreach ($clash_types as $clash_type => $clash_datas) {
         }
     }
 }
+
+$singbox_reality_config = generate_output($fixed_string_reality);
+file_put_contents("singbox/reality.json", $singbox_reality_config);
 
 $data = [
     [
