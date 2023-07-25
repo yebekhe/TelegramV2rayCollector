@@ -81,7 +81,7 @@ return $output; // return the JSON configuration
 
 function generate_output($input){
     $outbound = [];
-    $v2ray_subscription = $input
+    $v2ray_subscription = $input;
 
     $configs_array = explode("\n", $v2ray_subscription);
     foreach ($configs_array as $config) {
