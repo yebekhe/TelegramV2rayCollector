@@ -320,8 +320,8 @@ function get_config($channel, $type)
 
                     @$ping_data = ping($ip, $port);
                     if ($ping_data !== "unavailable") {
-                        $flag = get_flag($ip);
-                        $ping_data = $ping_data - $key;
+                        $flag = get_flag($ip) . " | " . $ip . ":" . $port;
+                        $ping_data = $ping_data;
                         
                         $name_key = $name_array[$type];
                         $the_config[$name_key] = generate_name(
@@ -399,8 +399,8 @@ function process_subscription($input, $channel)
 
             @$ping_data = ping($ip, $port);
             if ($ping_data !== "unavailable") {
-                $flag = get_flag($ip);
-                $ping_data = $ping_data - $i;
+                $flag = get_flag($ip) . " | " . $ip . ":" . $port;
+                $ping_data = $ping_data;
 
                 $name_key = $name_array[$type];
                 $the_config[$name_key] = generate_name(
