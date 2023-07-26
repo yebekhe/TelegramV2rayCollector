@@ -1,27 +1,22 @@
 {
+    "log": {
+        "disabled": false,
+        "level": "warn",
+        "timestamp": true
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "0.0.0.0:9090",
+            "external_ui": "yacd",
+            "external_ui_download_url": "https:\/\/github.com\/MetaCubeX\/Yacd-meta\/archive\/gh-pages.zip",
+            "external_ui_download_detour": "URL-TEST",
+            "secret": "YEBEKHE",
+            "default_mode": "rule",
+            "store_selected": true,
+            "cache_file": "clash.db"
+        }
+    },
     "dns": {
-        "independent_cache": true,
-        "rules": [
-            {
-                "auth_user": [
-                    "fakedns"
-                ],
-                "server": "dns-remote"
-            },
-            {
-                "domain_suffix": [
-                    "ir"
-                ],
-                "server": "dns-direct"
-            },
-            {
-                "disable_cache": true,
-                "inbound": [
-                    "tun-in"
-                ],
-                "server": "dns-fake"
-            }
-        ],
         "servers": [
             {
                 "address": "https:\/\/8.8.8.8\/dns-query",
@@ -44,20 +39,29 @@
             {
                 "address": "rcode:\/\/success",
                 "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "server": "dns-direct"
             },
             {
-                "address": "fakedns:\/\/198.18.0.0\/15",
-                "strategy": "ipv4_only",
-                "tag": "dns-fake"
+                "outbound": "direct",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
             }
-        ]
-    },
-    "experimental": {
-        "clash_api": {
-            "cache_file": "..\/cache\/clash.db",
-            "external_controller": "127.0.0.1:9090",
-            "external_ui": "..\/files\/yacd"
-        }
+        ],
+        "reverse_mapping": true,
+        "strategy": "ipv4_only",
+        "independent_cache": true
     },
     "inbounds": [
         {
@@ -69,16 +73,17 @@
             "type": "direct"
         },
         {
-            "domain_strategy": "",
-            "endpoint_independent_nat": true,
-            "inet4_address": [
-                "172.19.0.1\/28"
-            ],
-            "sniff": true,
-            "sniff_override_destination": false,
-            "stack": "system",
+            "type": "tun",
             "tag": "tun-in",
-            "type": "tun"
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1\/30",
+            "inet6_address": "fdfe:dcba:9876::1\/126",
+            "mtu": 1358,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "gvisor",
+            "endpoint_independent_nat": true,
+            "sniff": true
         },
         {
             "domain_strategy": "",
@@ -90,9 +95,6 @@
             "type": "mixed"
         }
     ],
-    "log": {
-        "level": "warn"
-    },
     "outbounds": [
         {
             "tag": "MANUAL",
@@ -1624,6 +1626,16 @@
     ],
     "route": {
         "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "MANUAL",
+        "geoip": {
+            "download_url": "https:\/\/github.com\/malikshi\/sing-box-geo\/releases\/latest\/download\/geoip.db",
+            "download_detour": "URL-TEST"
+        },
+        "geosite": {
+            "download_url": "https:\/\/github.com\/malikshi\/v2ray-rules-dat\/releases\/latest\/download\/geosite.db",
+            "download_detour": "URL-TEST"
+        },
         "rules": [
             {
                 "outbound": "dns-out",
