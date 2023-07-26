@@ -9,7 +9,7 @@
       "external_controller": "0.0.0.0:9090",
       "external_ui": "yacd",
       "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "URL-TEST",
+      "external_ui_download_detour": "MANUAL",
       "secret": "YEBEKHE",
       "default_mode": "rule",
       "store_selected": true,
@@ -73,15 +73,16 @@
     {
       "type": "tun",
       "tag": "tun-in",
+      "domain_strategy": "",
       "interface_name": "tun0",
       "inet4_address": "172.19.0.1/30",
-      "inet6_address": "fdfe:dcba:9876::1/126",
-      "mtu": 1358,
+      "mtu": 1280,
       "auto_route": true,
       "strict_route": true,
-      "stack": "gvisor",
+      "stack": "system",
       "endpoint_independent_nat": true,
-      "sniff": true
+      "sniff": true,
+      "sniff_override_destination": false
     },
     {
       "domain_strategy": "",
