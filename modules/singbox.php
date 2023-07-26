@@ -79,7 +79,7 @@ function vless_reality_json($vless_uri){
 return $output; // return the JSON configuration
 }
 
-function generate_output($input){
+function generate_output($input, $output){
     $outbound = [];
     $v2ray_subscription = $input;
 
@@ -90,8 +90,8 @@ function generate_output($input){
         }
         $outbound[] = json_decode($json_output, true);
     }
-  
-    $template = json_decode(file_get_contents("modules/singbox/template.json"), true);
+    $json_map = ["nekobox" => "template.json", "sfi" => "sfi.json"];
+    $template = json_decode(file_get_contents("modules/singbox/" . $json_map[$output]), true);
     $manual_json = json_decode(file_get_contents("modules/singbox/manual.json"), true);
     $url_test_json = json_decode(file_get_contents("modules/singbox/url_test.json"), true);
 
