@@ -11,7 +11,7 @@ function is_base64_encoded($string)
     }
 }
 
-function get_name($decoded_config){
+function get_singbox_name($decoded_config){
     $name = $decoded_config["hash"];
     if ($name === "") {
         return null;
@@ -19,35 +19,35 @@ function get_name($decoded_config){
     return $name;
 }
 
-function get_server($decoded_config){
+function get_singbox_server($decoded_config){
     return $decoded_config["hostname"];
 }
 
-function get_port($decoded_config){
+function get_singbox_port($decoded_config){
     return $decoded_config["port"];
 }
 
-function get_username($decoded_config){
+function get_singbox_username($decoded_config){
     return $decoded_config["username"];
 }
 
-function get_sni($decoded_config){
+function get_singbox_sni($decoded_config){
     return isset($decoded_config["params"]["sni"]) ? $decoded_config["params"]["sni"] : "";
 }
 
-function get_tls($decoded_config){
+function get_singbox_tls($decoded_config){
     return isset($decoded_config["params"]["security"]) && $decoded_config["params"]["security"] === "tls" ? "true" : "false";
 }
 
-function get_flow($decoded_config){
+function get_singbox_flow($decoded_config){
     return isset($decoded_config["params"]["flow"]) && $decoded_config["params"]["flow"] !== "" ? $decoded_config["params"]["flow"] : "";
 }
 
-function get_network($decoded_config){
+function get_singbox_network($decoded_config){
     return isset($decoded_config["params"]["type"]) ? $decoded_config["params"]["type"] : "tcp";
 }
 
-function get_transport($decoded_config, $network){
+function get_singbox_transport($decoded_config, $network){
     if ($network === "grpc") {
         return isset($decoded_config["params"]["serviceName"]) ? ',"transport":{"type":"grpc", "service_name":"' . $decoded_config["params"]["serviceName"] . '"}' : "";
     } else {
@@ -55,23 +55,23 @@ function get_transport($decoded_config, $network){
     }
 }
 
-function get_fingerprint($decoded_config){
+function get_singbox_fingerprint($decoded_config){
     return isset($decoded_config["params"]["fp"]) && $decoded_config["params"]["fp"] !== "random" && $decoded_config["params"]["fp"] !== "ios" && $decoded_config["params"]["fp"] !== "android" ? $decoded_config["params"]["fp"] : "chrome";
 }
 
-function get_reality($decoded_config){
+function get_singbox_reality($decoded_config){
     return isset($decoded_config["params"]["security"]) && $decoded_config["params"]["security"] === "reality" ? "true" : "false";
 }
 
-function get_pbk($decoded_config){
+function get_singbox_pbk($decoded_config){
     return $decoded_config["params"]["pbk"];
 }
 
-function get_sid($decoded_config){
+function get_singbox_sid($decoded_config){
     return isset($decoded_config["params"]["sid"]) && $decoded_config["params"]["sid"] !== "" ? $decoded_config["params"]["sid"] : "";
 }
 
-function get_output($server, $port, $name, $tls, $sni, $pbk, $sid, $fingerprint, $transport, $flow, $network, $username, $reality){
+function get_singbox_output($server, $port, $name, $tls, $sni, $pbk, $sid, $fingerprint, $transport, $flow, $network, $username, $reality){
     $output = '{"server":"' . $server . '", "server_port":' . $port . ', "tag": "' . $name . '", "tls":{"enabled": true, "reality":{"enabled": ' . $reality . ', "public_key":"' . $pbk . '", "short_id": "' . $sid . '"}, "server_name":"' . $sni . '", "utls":{"enabled": true, "fingerprint":"' . $fingerprint . '"}}' . $transport . ', "type":"vless", "flow":"' . $flow . '", "uuid":"' . $username . '"}';
     return $output;
 }
@@ -79,29 +79,29 @@ function get_output($server, $port, $name, $tls, $sni, $pbk, $sid, $fingerprint,
 function vless_reality_json($vless_uri){
     $decoded_config = parseProxyUrl($vless_uri, "vless");
 
-    $name = get_name($decoded_config);
+    $name = get_singbox_name($decoded_config);
     if ($name === null) {
         return null;
     }
-    $server = get_server($decoded_config);
-    $port = get_port($decoded_config);
-    $username = get_username($decoded_config);
-    $sni = get_sni($decoded_config);
-    $tls = get_tls($decoded_config);
-    $flow = get_flow($decoded_config);
-    $network = get_network($decoded_config);
-    $transport = get_transport($decoded_config, $network);
-    $fingerprint = get_fingerprint($decoded_config);
-    $reality = get_reality($decoded_config);
+    $server = get_singbox_server($decoded_config);
+    $port = get_singbox_port($decoded_config);
+    $username = get_singbox_username($decoded_config);
+    $sni = get_singbox_sni($decoded_config);
+    $tls = get_singbox_tls($decoded_config);
+    $flow = get_singbox_flow($decoded_config);
+    $network = get_singbox_network($decoded_config);
+    $transport = get_singbox_transport($decoded_config, $network);
+    $fingerprint = get_singbox_fingerprint($decoded_config);
+    $reality = get_singbox_reality($decoded_config);
 
     if ($reality === "true") {
-        $pbk = get_pbk($decoded_config);
-        $sid = get_sid($decoded_config);
+        $pbk = get_singbox_pbk($decoded_config);
+        $sid = get_singbox_sid($decoded_config);
         $tls = "true";
         $fingerprint = isset($decoded_config["params"]["fp"]) && $decoded_config["params"]["fp"] !== "random" && $decoded_config["params"]["fp"] !== "ios" ? $decoded_config["params"]["fp"] : "chrome";
     } 
 
-    $output = get_output($server, $port, $name, $tls, $sni, $pbk, $sid, $fingerprint, $transport, $flow, $network, $username, $reality);
+    $output = get_singbox_output($server, $port, $name, $tls, $sni, $pbk, $sid, $fingerprint, $transport, $flow, $network, $username, $reality);
 
     return $output; // return the JSON configuration
 }
