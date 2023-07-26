@@ -90,7 +90,7 @@ function generate_output($input, $output){
         }
         $outbound[] = json_decode($json_output, true);
     }
-    $json_map = ["nekobox" => "template.json", "sfi" => "sfi.json"];
+    $json_map = ["nekobox_old" => "nekobox_1.1.7.json", "nekobox_new" => "nekobox_1.1.8.json", "sfi" => "sfi.json"];
     $template = json_decode(file_get_contents("modules/singbox/" . $json_map[$output]), true);
     $manual_json = json_decode(file_get_contents("modules/singbox/manual.json"), true);
     $url_test_json = json_decode(file_get_contents("modules/singbox/url_test.json"), true);
