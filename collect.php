@@ -151,6 +151,7 @@ $string_donated_vmess = $donated_vmess_data !== [] ? remove_duplicate_vmess(impl
 $string_donated_vless = $donated_vless_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_vless_data))), "vless") : "";
 $string_donated_trojan = $donated_vless_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_trojan_data))), "trojan") : "";
 $string_donated_shadowsocks = $donated_vless_data !== [] ? remove_duplicate_ss(fast_fix(implode("\n", config_array($donated_shadowsocks_data)))) : "";
+$string_donated_reality = get_reality($string_donated_vless);
 
 $donated_mix =
     $string_donated_vmess .
@@ -346,9 +347,11 @@ foreach ($clash_types as $clash_type => $clash_datas) {
     }
 }
 
-$singbox_reality_nekobox = generate_output($fixed_string_reality, "nekobox_old");
-$singbox_reality_nekobox_new = generate_output($fixed_string_reality, "nekobox_new");
-$singbox_reality_ios = generate_output($fixed_string_reality,"sfi");
+$string_reality_singbox = $fixed_string_reality . "\n" . $string_donated_reality ;
+
+$singbox_reality_nekobox = generate_output($string_reality_singbox, "nekobox_old");
+$singbox_reality_nekobox_new = generate_output($string_reality_singbox, "nekobox_new");
+$singbox_reality_ios = generate_output($string_reality_singbox,"sfi");
 file_put_contents("singbox/reality.json", $singbox_reality_nekobox);
 file_put_contents("singbox/nekobox_new.json", $singbox_reality_nekobox_new);
 file_put_contents("singbox/sfi_sfa.json", $singbox_reality_ios);
