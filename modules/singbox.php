@@ -40,7 +40,7 @@ function get_singbox_tls($decoded_config){
 }
 
 function get_singbox_flow($decoded_config){
-    return isset($decoded_config["params"]["flow"]) && stripos($decoded_config["params"]["flow"] , "xtls-rprx-vision") ? "xtls-rprx-vision" : "";
+    return isset($decoded_config["params"]["flow"]) ? "xtls-rprx-vision" : "";
 }
 
 function get_singbox_network($decoded_config){
