@@ -24,7 +24,7 @@ function get_singbox_server($decoded_config){
 }
 
 function get_singbox_port($decoded_config){
-    return $decoded_config["port"];
+    return isset($decoded_config["port"]) ? $decoded_config["port"] : 443;
 }
 
 function get_singbox_username($decoded_config){
@@ -40,7 +40,7 @@ function get_singbox_tls($decoded_config){
 }
 
 function get_singbox_flow($decoded_config){
-    return isset($decoded_config["params"]["flow"]) && $decoded_config["params"]["flow"] !== "" ? $decoded_config["params"]["flow"] : "";
+    return isset($decoded_config["params"]["flow"]) && stripos($decoded_config["params"]["flow"] , "xtls-rprx-vision") ? "xtls-rprx-vision" : "";
 }
 
 function get_singbox_network($decoded_config){
