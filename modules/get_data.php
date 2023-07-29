@@ -6,6 +6,16 @@ include "vmess.php";
 include "xray.php";
 include "ping.php";
 
+function generateEmoji() {
+  $emojis = ["😀", "😎", "🤩", "🤔", "🤗", "😜", "🤪", "😇", "😂", "🤣", "😊", "😉", "😍", "🤤", "😘", "🥰", "😋", "🤑", "🤓", "🤠", "👻", "👾", "🤖", "🦄", "🐶", "🐱", "🐻", "🐼", "🦁", "🐯", "🐮", "🐷", "🐵", "🐸", "🐔", "🐧", "🐣", "🦉", "🐝", "🐞", "🐠", "🐟", "🐬", "🐳", "🌵", "🍕", "🍔", "🍟", "🍺", "🍷", "🍩", "🍪", "🎂", "🍭", "🍿", "🎉", "🎁", "🎈", "🎀", "🎨", "🎲", "🎮", "🎸", "🎤", "🎧", "🎬", "📷", "📹", "💡", "💻", "📱"];
+
+  // Randomly select an emoji from the array
+  $randomIndex = array_rand($emojis);
+  $emoji = $emojis[$randomIndex];
+
+  return $emoji;
+}
+
 function openLink($url)
 {
     $ch = curl_init();
@@ -234,7 +244,7 @@ function generate_name($channel, $flag, $ping, $is_reality)
                 "ms";
             break;
         case false:
-            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms";
+            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms " . generateEmoji();
             break;
     }
     return $name;
