@@ -244,7 +244,7 @@ function generate_name($channel, $flag, $ping, $is_reality)
                 "ms";
             break;
         case false:
-            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms " . generateEmoji();
+            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms | " . generateEmoji();
             break;
     }
     return $name;
