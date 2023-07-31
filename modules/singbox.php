@@ -99,6 +99,9 @@ function vless_reality_json($vless_uri){
 
     if ($reality === "true") {
         $pbk = get_singbox_pbk($decoded_config);
+        if ($pbk === null) {
+            return null;
+        }
         $sid = get_singbox_sid($decoded_config);
         $tls = "true";
         $fingerprint = isset($decoded_config["params"]["fp"]) && $decoded_config["params"]["fp"] !== "random" && $decoded_config["params"]["fp"] !== "ios" ? $decoded_config["params"]["fp"] : "chrome";
