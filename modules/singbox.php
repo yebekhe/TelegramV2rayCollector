@@ -64,6 +64,9 @@ function get_singbox_reality($decoded_config){
 }
 
 function get_singbox_pbk($decoded_config){
+    if (!isset($decoded_config["params"]["pbk"]) || $decoded_config["params"]["pbk"] === ""){
+        return null;
+    }
     return $decoded_config["params"]["pbk"];
 }
 
