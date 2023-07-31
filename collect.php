@@ -347,7 +347,8 @@ foreach ($clash_types as $clash_type => $clash_datas) {
     }
 }
 
-$string_reality_singbox = $fixed_string_reality . "\n" . $string_donated_reality ;
+$the_string_reality_singbox = $fixed_string_reality . "\n" . $string_donated_reality ;
+$string_reality_singbox = remove_duplicate_xray($the_string_reality_singbox, "vless");
 
 $singbox_reality_nekobox = generate_output($string_reality_singbox, "nekobox_old");
 $singbox_reality_nekobox_new = generate_output($string_reality_singbox, "nekobox_new");
