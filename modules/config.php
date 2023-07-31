@@ -66,7 +66,6 @@ $Types = [
     "v2ray_vpn_ir" => ["vmess", "vless", "trojan"],
     "v2_team" => ["vmess", "vless"],
     "ConfigsHUB" => ["vmess", "vless", "trojan"],
-    "freeconfigv2" => ["vmess", "vless"],
     "V2rayngninja" => ["vless", "ss"],
     "iSegaro" => ["vless"],
     "bright_vpn" => ["vless", "ss"],
