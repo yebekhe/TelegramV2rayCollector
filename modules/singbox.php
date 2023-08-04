@@ -124,7 +124,7 @@ function generate_output($input, $output){
         if ($json_output !== null){
             $tag = json_decode($json_output, true)['tag'];
             preg_match('#[A-Z]{2}[🇦-🇿]{2}#', $tag, $matches);
-            $server_location = $matches[1];
+            $server_location = $matches[0];
             $outbound[$server_location][] = json_decode($json_output, true);
         }
     }
