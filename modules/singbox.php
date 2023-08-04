@@ -135,6 +135,7 @@ function generate_output($input, $output){
     $url_test_outbound =[];
     $outbounds = [];
     $names = [];
+    $all_test_group_outbound = [];
     foreach ($outbound as $name => $test_group){
         $names[] = $name;
         $test_group_names = extract_names($test_group);
