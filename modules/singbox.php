@@ -122,17 +122,26 @@ function generate_output($input, $output){
             $json_output = vless_reality_json($config);
         }
         if ($json_output !== null){
-            $outbound[] = json_decode($json_output, true);
+            $server = json_decode($json_output, true)['server'];
+            $server_location = get_flag($server);
+            $outbound[$server_location][] = json_decode($json_output, true);
         }
     }
     $json_map = ["nekobox_old" => "nekobox_1.1.7.json", "nekobox_new" => "nekobox_1.1.8.json", "sfi" => "sfi.json"];
     $template = json_decode(file_get_contents("modules/singbox/" . $json_map[$output]), true);
     $manual_json = json_decode(file_get_contents("modules/singbox/manual.json"), true);
     $url_test_json = json_decode(file_get_contents("modules/singbox/url_test.json"), true);
+    
+    $url_test_outbound =[];
+    foreach ($outbound as $name => $test_group){
+        $names[] = $name;
+        $test_group_names = extract_names($test_group);
+        $url_test_json[0]['tag'] = $name;
+        $test_group_outbound = process_jsons($url_test_json, $test_group_names);
+        $url_test_outbound = array_merge($url_test_outbound, $test_group_outbound);
+    }
 
-    $names = extract_names($outbound);
     $manual_outbound = process_jsons($manual_json, $names);
-    $url_test_outbound = process_jsons($url_test_json, $names);
 
     $template['outbounds'] = array_merge($manual_outbound, $url_test_outbound, $outbound,  $template['outbounds']);
     return json_encode($template, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
