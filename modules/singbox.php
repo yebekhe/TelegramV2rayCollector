@@ -125,7 +125,7 @@ function generate_output($input, $output){
             $the_name = json_decode($json_output, true)['tag'];
             if ($stripos($the_name, "RELAY🚩")){
                 $server_location = "RELAY🚩";
-            } ekse {
+            } else {
                 $pattern = '/\b[A-Z]{2}\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
                 preg_match_all($pattern, $the_name, $matches);
                 $server_location = $matches[0][0];
