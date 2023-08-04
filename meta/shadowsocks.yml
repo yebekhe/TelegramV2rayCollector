@@ -6,48 +6,48 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"name":"@free4allVPN | GB🇬🇧 | 212.102.53.79:443 | 144.39ms | 😀","type":"ss","server":"212.102.53.79","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
-  - {"name":"@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 144.82ms | 🐷","type":"ss","server":"212.102.53.198","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
-  - {"name":"@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 147.03ms | 😎","type":"ss","server":"51.68.206.229","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
-  - {"name":"@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 159.86ms | 😂","type":"ss","server":"49.13.10.50","port":1194,"password":"Uxm4ADwftKdXq5qRA4ZfHS","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.14ms | 🤣","type":"ss","server":"ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
-  - {"name":"@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 150.1ms | 🎧","type":"ss","server":"ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
-  - {"name":"@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 179ms | 🍺","type":"ss","server":"ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":4444,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"@free4allVPN | GB🇬🇧 | 212.102.53.79:443 | 75.06ms | 🐔","type":"ss","server":"212.102.53.79","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 75.8ms | 🦉","type":"ss","server":"212.102.53.198","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 80.06ms | 🐞","type":"ss","server":"51.68.206.229","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 90.7ms | 🦁","type":"ss","server":"49.13.10.50","port":1194,"password":"Uxm4ADwftKdXq5qRA4ZfHS","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.16ms | 🍭","type":"ss","server":"ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 168.11ms | 🐞","type":"ss","server":"ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 108.35ms | 🎧","type":"ss","server":"ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":4444,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - URL-TEST
       - FALLBACK
-      - '@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 144.82ms | 🐷'
-      - '@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 147.03ms | 😎'
-      - '@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 159.86ms | 😂'
-      - '@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.14ms | 🤣'
-      - '@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 150.1ms | 🎧'
-      - '@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 179ms | 🍺'
+      - '@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 75.8ms | 🦉'
+      - '@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 80.06ms | 🐞'
+      - '@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 90.7ms | 🦁'
+      - '@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.16ms | 🍭'
+      - '@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 168.11ms | 🐞'
+      - '@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 108.35ms | 🎧'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies:
-      - '@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 144.82ms | 🐷'
-      - '@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 147.03ms | 😎'
-      - '@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 159.86ms | 😂'
-      - '@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.14ms | 🤣'
-      - '@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 150.1ms | 🎧'
-      - '@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 179ms | 🍺'
+      - '@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 75.8ms | 🦉'
+      - '@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 80.06ms | 🐞'
+      - '@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 90.7ms | 🦁'
+      - '@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.16ms | 🍭'
+      - '@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 168.11ms | 🐞'
+      - '@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 108.35ms | 🎧'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - '@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 144.82ms | 🐷'
-      - '@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 147.03ms | 😎'
-      - '@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 159.86ms | 😂'
-      - '@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.14ms | 🤣'
-      - '@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 150.1ms | 🎧'
-      - '@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 179ms | 🍺'
+      - '@free4allVPN | GB🇬🇧 | 212.102.53.198:443 | 75.8ms | 🦉'
+      - '@azadi_az_inja_migzare | GB🇬🇧 | 51.68.206.229:8080 | 80.06ms | 🐞'
+      - '@vmess_vless_v2rayng | DE🇩🇪 | 49.13.10.50:1194 | 90.7ms | 🦁'
+      - '@OutlineVpnOfficial | FR🇫🇷 | ak1821.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:8080 | 161.16ms | 🍭'
+      - '@OutlineVpnOfficial | GB🇬🇧 | ak1822.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:443 | 168.11ms | 🐞'
+      - '@OutlineVpnOfficial | PL🇵🇱 | ak1823.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou:4444 | 108.35ms | 🎧'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
