@@ -122,8 +122,10 @@ function generate_output($input, $output){
             $json_output = vless_reality_json($config);
         }
         if ($json_output !== null){
-            $server = json_decode($json_output, true)['server'];
-            $server_location = get_flag($server);
+            $server = json_decode($json_output, true)['tag'];
+            $pattern = '/\b[A-Z]{2}\b[\x{1F1E6}-\x{1F1FF}]{2}/u';;
+            preg_match_all($pattern, $string, $matches);
+            $server_location = $matches[0][0];
             $outbound[$server_location][] = json_decode($json_output, true);
         }
     }
