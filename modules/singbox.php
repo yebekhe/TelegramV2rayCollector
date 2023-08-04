@@ -146,7 +146,7 @@ function generate_output($input, $output){
 
     $manual_outbound = process_jsons($manual_json, $names);
     $url_test_json[0]['tag'] = "URL-TEST";
-    $url_test_outbound = process_jsons($url_test_outbound, $names);
+    $url_test_outbound = process_jsons($url_test_json, $names);
     $url_test_outbound = array_merge($url_test_outbound, $all_test_group_outbound);
 
     $template['outbounds'] = array_merge($manual_outbound, $url_test_outbound, $outbounds,  $template['outbounds']);
