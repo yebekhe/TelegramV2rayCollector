@@ -123,7 +123,7 @@ function generate_output($input, $output){
         }
         if ($json_output !== null){
             $the_name = json_decode($json_output, true)['tag'];
-            if ($stripos($the_name, "RELAY🚩")){
+            if (stripos($the_name, "RELAY🚩")){
                 $server_location = "RELAY🚩";
             } else {
                 $pattern = '/\b[A-Z]{2}\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
