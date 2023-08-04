@@ -133,17 +133,23 @@ function generate_output($input, $output){
     $url_test_json = json_decode(file_get_contents("modules/singbox/url_test.json"), true);
     
     $url_test_outbound =[];
+    $outbounds = [];
+    $names = [];
     foreach ($outbound as $name => $test_group){
         $names[] = $name;
         $test_group_names = extract_names($test_group);
         $url_test_json[0]['tag'] = $name;
         $test_group_outbound = process_jsons($url_test_json, $test_group_names);
-        $url_test_outbound = array_merge($url_test_outbound, $test_group_outbound);
+        $all_test_group_outbound = array_merge($all_test_group_outbound, $test_group_outbound);
+        $outbounds = array_merge($outbounds, $test_group);
     }
 
     $manual_outbound = process_jsons($manual_json, $names);
+    $url_test_json[0]['tag'] = "URL-TEST";
+    $url_test_outbound = process_jsons($url_test_outbound, $names);
+    $url_test_outbound = array_merge($url_test_outbound, $all_test_group_outbound);
 
-    $template['outbounds'] = array_merge($manual_outbound, $url_test_outbound, $outbound,  $template['outbounds']);
+    $template['outbounds'] = array_merge($manual_outbound, $url_test_outbound, $outbounds,  $template['outbounds']);
     return json_encode($template, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 }
 
