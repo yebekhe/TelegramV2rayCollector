@@ -302,7 +302,7 @@ foreach ($subscription_types as $subscription_type => $subscription_data) {
 process_mix_json($mix_data, "configs.json");
 process_mix_json($mix_data_deduplicate, "configs_deduplicate.json");
 
-$convertor_url = "https://pxhryl-8080.csb.app/?url=" . $raw_url_base . "/sub/";
+$convertor_url = "https://yebekhe.000webhostapp.com/subconvertor/?url=" . $raw_url_base . "/sub/";
 
 $clash_types = [
     "mix" => [
