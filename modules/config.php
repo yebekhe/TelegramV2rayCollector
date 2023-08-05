@@ -89,7 +89,14 @@ $Types = [
     "MoV2ray" => ["vless"],
     "Royalping_ir" => ["vmess"],
     "v2rayng_vpnrog" => ["vless"],
-    "v2rayng_config_amin" => ["vless", "vmess"]
+    "v2rayng_config_amin" => ["vless", "vmess"],
+    "rxv2ray" => ["vless"],
+    "Capital_NET" => ["vless"],
+    "VpnFreeSec" => ["vless"],
+    "lightning6" => ["vless"],
+    "WebShecan" => ["vless"],
+    "fv2ray" => ["vless"],
+    "vpntwitt" => ["vless"],    
 ];
 
 $donated_subscription = [
