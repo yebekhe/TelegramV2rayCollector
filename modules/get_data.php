@@ -6,14 +6,33 @@ include "vmess.php";
 include "xray.php";
 include "ping.php";
 
-function generateEmoji() {
-  $emojis = ["😀", "😎", "🤩", "🤔", "🤗", "😜", "🤪", "😇", "😂", "🤣", "😊", "😉", "😍", "🤤", "😘", "🥰", "😋", "🤑", "🤓", "🤠", "👻", "👾", "🤖", "🦄", "🐶", "🐱", "🐻", "🐼", "🦁", "🐯", "🐮", "🐷", "🐵", "🐸", "🐔", "🐧", "🐣", "🦉", "🐝", "🐞", "🐠", "🐟", "🐬", "🐳", "🌵", "🍕", "🍔", "🍟", "🍺", "🍷", "🍩", "🍪", "🎂", "🍭", "🍿", "🎉", "🎁", "🎈", "🎀", "🎨", "🎲", "🎮", "🎸", "🎤", "🎧", "🎬", "📷", "📹", "💡", "💻", "📱"];
-
-  // Randomly select an emoji from the array
-  $randomIndex = array_rand($emojis);
-  $emoji = $emojis[$randomIndex];
-
-  return $emoji;
+function numberToEmoji($number) {
+    $map = array(
+        '0' => '0️⃣',
+        '1' => '1️⃣',
+        '2' => '2️⃣',
+        '3' => '3️⃣',
+        '4' => '4️⃣',
+        '5' => '5️⃣',
+        '6' => '6️⃣',
+        '7' => '7️⃣',
+        '8' => '8️⃣',
+        '9' => '9️⃣'
+    );
+    
+    $emoji = "";
+    $digits = str_split($number);
+    
+    foreach ($digits as $digit) {
+        if (count($digits) === 1) {
+            $emoji = $map['0'];
+        }
+        if (isset($map[$digit])) {
+            $emoji .= $map[$digit];
+        }
+    }
+    
+    return $emoji;
 }
 
 function openLink($url)
@@ -228,7 +247,7 @@ function get_channels_assets()
     );
 }
 
-function generate_name($channel, $flag, $ping, $is_reality)
+function generate_name($channel, $flag, $ping, $is_reality, $number)
 {
     $name = "";
     switch ($is_reality) {
@@ -241,10 +260,10 @@ function generate_name($channel, $flag, $ping, $is_reality)
                 $flag .
                 " | " .
                 $ping .
-                "ms | " . generateEmoji();
+                "ms | " . numberToEmoji($number);
             break;
         case false:
-            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms | " . generateEmoji();
+            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms | " . numberToEmoji($number);
             break;
     }
     return $name;
@@ -311,6 +330,7 @@ function get_config($channel, $type)
 
     $final_data = [];
     $key_limit = count($configs[1]) - 3;
+    $config_number = 1;
 
     foreach ($configs[1] as $key => $config) {
         if ($key >= $key_limit) {
@@ -338,7 +358,8 @@ function get_config($channel, $type)
                             $channel,
                             $flag,
                             $ping_data,
-                            $is_reality
+                            $is_reality,
+                            $config_number
                         );
                         
                         $final_config = build_config($the_config, $type);
@@ -356,6 +377,7 @@ function get_config($channel, $type)
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
                         );
+                      $config_number ++ ;
                     }
                 }
             }
