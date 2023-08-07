@@ -419,6 +419,7 @@ function process_subscription($input, $channel)
     $array_helper_ss = 0;
     $array_helper_trojan = 0;
     $config_number = 1;
+    $i = 0;
     foreach ($configs as $config) {
         $type = detect_type($config);
         $is_reality = is_reality($config, $type);
