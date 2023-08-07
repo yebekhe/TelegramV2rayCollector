@@ -84,14 +84,14 @@ function remove_duplicate_xray($input, $type)
         $part_hash = $parts["hash"];
         unset($parts["hash"]);
         ksort($parts["params"]);
-        $part_serialize = serialize($parts);
+        $part_serialize = base64_encode(serialize($parts));
         $result[$part_serialize][] = $part_hash ?? "";
     }
 
     $finalResult = [];
     foreach ($result as $url => $parts) {
         $partAfterHash = $parts[0] ?? "";
-        $part_serialize = unserialize($url);
+        $part_serialize = unserialize(base64_decode($url));
         $part_serialize["hash"] = $partAfterHash;
         $finalResult[] = buildProxyUrl($part_serialize, $type);
     }
