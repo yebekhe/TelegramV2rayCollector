@@ -58,14 +58,14 @@ function remove_duplicate_ss($input)
         $part_hash = $parts["name"];
         unset($parts["name"]);
         ksort($parts);
-        $part_serialize = serialize($parts);
+        $part_serialize = base64_encode(serialize($parts));
         $result[$part_serialize][] = $part_hash ?? "";
     }
 
     $finalResult = [];
     foreach ($result as $url => $parts) {
         $partAfterHash = $parts[0] ?? "";
-        $part_serialize = unserialize($url);
+        $part_serialize = unserialize(base64_decode($url));
         $part_serialize["name"] = $partAfterHash;
         $finalResult[] = BuildShadowsocks($part_serialize);
     }
