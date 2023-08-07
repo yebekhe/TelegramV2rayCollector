@@ -332,7 +332,7 @@ $clash_types = [
         "surfboard" => file_get_contents($convertor_url . "shadowsocks&type=surfboard&process=full&protocol=shadowsocks"),
     ],
     "donated" => [
-        "meta" => file_get_contents($convertor_url . "donated&type=surfboard&process=full"),
+        "meta" => file_get_contents($convertor_url . "donated&type=meta&process=full"),
     ],
 ];
 
