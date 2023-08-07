@@ -167,17 +167,9 @@ function generate_output($input, $output){
         $outbounds = array_merge($outbounds, $test_group);
     }
 
-    foreach ($outbound as $name => $test_group){
-        $names[] = $name;
-        $test_group_names = extract_names($test_group);
-        $url_test_json[0]['tag'] = $name;
-        $test_group_outbound = process_jsons($url_test_json, $test_group_names);
-        $all_test_group_outbound = array_merge($all_test_group_outbound, $test_group_outbound);
-        $outbounds = array_merge($outbounds, $test_group);
-    }
-    $all_names = extract_names($outbounds);
     $manual_outbound = process_jsons($manual_json, $names);
     $url_test_json[0]['tag'] = "URL-TEST";
+    $all_names = extract_names($outbounds);
     $url_test_outbound = process_jsons($url_test_json, $all_names);
     $url_test_outbound = array_merge($url_test_outbound, $all_test_group_outbound);
 
