@@ -116,6 +116,9 @@ function deduplicate_singbox($outbound){
     foreach($outbound as $loc => $configs){
         $uniqueData = [];
         foreach ($configs as $item) {
+            if (!isset($uniqueData[$loc])){
+                $uniqueData[$loc] = [];
+            }
             if (!in_array($item, $uniqueData[$loc])) {
                 $uniqueData[$loc][] = $item;
             }
