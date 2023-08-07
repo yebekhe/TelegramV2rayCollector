@@ -24,7 +24,7 @@ function remove_duplicate_vmess($input)
             unset($parts["ps"]);
             if (count($parts) >= 3) {
                 ksort($parts);
-                $part_serialize = serialize($parts);
+                $part_serialize = base64_encode(serialize($parts));
                 $result[$part_serialize][] = $part_ps ?? "";
             }
         }
@@ -32,7 +32,7 @@ function remove_duplicate_vmess($input)
     $finalResult = [];
     foreach ($result as $serial => $ps) {
         $partAfterHash = $ps[0] ?? "";
-        $part_serialize = unserialize($serial);
+        $part_serialize = unserialize(base64_decode($serial));
         $part_serialize["ps"] = $partAfterHash;
         $finalResult[] = encode_vmess($part_serialize);
     }
