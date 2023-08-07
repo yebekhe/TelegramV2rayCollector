@@ -95,7 +95,6 @@ $Types = [
     "VpnFreeSec" => ["vless"],
     "lightning6" => ["vless"],
     "WebShecan" => ["vless"],
-    "vpntwitt" => ["vless"],
     "v2Line" => ["vmess"],
     "vmessiran" => ["vmess", "vless"],
 ];
