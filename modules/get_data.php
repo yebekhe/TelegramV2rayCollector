@@ -418,7 +418,7 @@ function process_subscription($input, $channel)
     $array_helper_vless = 0;
     $array_helper_ss = 0;
     $array_helper_trojan = 0;
-    $i = 0 ;
+    $config_number = 1;
     foreach ($configs as $config) {
         $type = detect_type($config);
         $is_reality = is_reality($config, $type);
@@ -439,7 +439,8 @@ function process_subscription($input, $channel)
                     $channel,
                     $flag,
                     $ping_data,
-                    $is_reality
+                    $is_reality,
+                    $config_number
                 );
                 $final_config = build_config($the_config, $type);
 
@@ -457,6 +458,7 @@ function process_subscription($input, $channel)
 
                 $key++;
                 ${"array_helper_$type"} = $key;
+                $config_number ++;
             }
         }
     }
