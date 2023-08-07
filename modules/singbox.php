@@ -112,6 +112,17 @@ function vless_reality_json($vless_uri){
     return $output; // return the JSON configuration
 }
 
+function deduplicate_singbox($outbound){
+    foreach($outbound as $loc => $configs){
+        $uniqueData = [];
+        foreach ($configs as $item) {
+            if (!in_array($item, $uniqueData[$loc])) {
+                $uniqueData[$loc][] = $item;
+            }
+        }
+    }
+    return $uniqueData;
+}
 function generate_output($input, $output){
     $outbound = [];
     $v2ray_subscription = $input;
@@ -130,9 +141,10 @@ function generate_output($input, $output){
                 preg_match_all($pattern, $the_name, $matches);
                 $server_location = $matches[0][0];
             }
-            $outbound[$server_location][] = json_decode($json_output, true);
+            $first_outbound[$server_location][] = json_decode($json_output, true);
         }
     }
+    $outbound = deduplicate_singbox($first_outbound);
     $json_map = ["nekobox_old" => "nekobox_1.1.7.json", "nekobox_new" => "nekobox_1.1.8.json", "sfi" => "sfi.json"];
     $template = json_decode(file_get_contents("modules/singbox/" . $json_map[$output]), true);
     $manual_json = json_decode(file_get_contents("modules/singbox/manual.json"), true);
