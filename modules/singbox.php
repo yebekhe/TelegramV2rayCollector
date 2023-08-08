@@ -2,189 +2,336 @@
 
 header("Content-type: application/json;");
 
-function is_base64_encoded($string)
-{
-    if (base64_encode(base64_decode($string, true)) === $string) {
-        return "true";
-    } else {
-        return "false";
-    }
-}
-
-function get_singbox_name($decoded_config){
-    $name = $decoded_config["hash"];
-    if ($name === "") {
-        return null;
-    }
-    return $name;
-}
-
-function get_singbox_server($decoded_config){
-    return $decoded_config["hostname"];
-}
-
-function get_singbox_port($decoded_config){
-    return isset($decoded_config["port"]) ? $decoded_config["port"] : 443;
-}
-
-function get_singbox_username($decoded_config){
-    return $decoded_config["username"];
-}
-
-function get_singbox_sni($decoded_config){
-    return isset($decoded_config["params"]["sni"]) ? $decoded_config["params"]["sni"] : "";
-}
-
-function get_singbox_tls($decoded_config){
-    return isset($decoded_config["params"]["security"]) && $decoded_config["params"]["security"] === "tls" ? "true" : "false";
-}
-
-function get_singbox_flow($decoded_config){
-    return isset($decoded_config["params"]["flow"]) ? "xtls-rprx-vision" : "";
-}
-
-function get_singbox_network($decoded_config){
-    return isset($decoded_config["params"]["type"]) ? $decoded_config["params"]["type"] : "tcp";
-}
-
-function get_singbox_transport($decoded_config, $network){
-    if ($network === "grpc") {
-        return isset($decoded_config["params"]["serviceName"]) ? ',"transport":{"type":"grpc", "service_name":"' . $decoded_config["params"]["serviceName"] . '"}' : "";
-    } else {
-        return "";
-    }
-}
-
-function get_singbox_fingerprint($decoded_config){
-    return isset($decoded_config["params"]["fp"]) && $decoded_config["params"]["fp"] !== "random" && $decoded_config["params"]["fp"] !== "ios" && $decoded_config["params"]["fp"] !== "android" ? $decoded_config["params"]["fp"] : "chrome";
-}
-
-function get_singbox_reality($decoded_config){
-    return isset($decoded_config["params"]["security"]) && $decoded_config["params"]["security"] === "reality" ? "true" : "false";
-}
-
-function get_singbox_pbk($decoded_config){
-    if (!isset($decoded_config["params"]["pbk"]) || $decoded_config["params"]["pbk"] === ""){
-        return null;
-    }
-    return $decoded_config["params"]["pbk"];
-}
-
-function get_singbox_sid($decoded_config){
-    return isset($decoded_config["params"]["sid"]) && $decoded_config["params"]["sid"] !== "" ? $decoded_config["params"]["sid"] : "";
-}
-
-function get_singbox_output($server, $port, $name, $tls, $sni, $pbk, $sid, $fingerprint, $transport, $flow, $network, $username, $reality){
-    $output = '{"server":"' . $server . '", "server_port":' . $port . ', "tag": "' . $name . '", "tls":{"enabled": true, "reality":{"enabled": ' . $reality . ', "public_key":"' . $pbk . '", "short_id": "' . $sid . '"}, "server_name":"' . $sni . '", "utls":{"enabled": true, "fingerprint":"' . $fingerprint . '"}}' . $transport . ', "type":"vless", "flow":"' . $flow . '", "uuid":"' . $username . '"}';
-    return $output;
-}
-
-function vless_reality_json($vless_uri){
-    $decoded_config = parseProxyUrl($vless_uri, "vless");
-
-    $name = get_singbox_name($decoded_config);
-    if ($name === null) {
-        return null;
-    }
-    $server = get_singbox_server($decoded_config);
-    $port = get_singbox_port($decoded_config);
-    $username = get_singbox_username($decoded_config);
-    $sni = get_singbox_sni($decoded_config);
-    $tls = get_singbox_tls($decoded_config);
-    $flow = get_singbox_flow($decoded_config);
-    $network = get_singbox_network($decoded_config);
-    $transport = get_singbox_transport($decoded_config, $network);
-    $fingerprint = get_singbox_fingerprint($decoded_config);
-    $reality = get_singbox_reality($decoded_config);
-
-    if ($reality === "true") {
-        $pbk = get_singbox_pbk($decoded_config);
-        if ($pbk === null) {
-            return null;
-        }
-        $sid = get_singbox_sid($decoded_config);
-        $tls = "true";
-        $fingerprint = isset($decoded_config["params"]["fp"]) && $decoded_config["params"]["fp"] !== "random" && $decoded_config["params"]["fp"] !== "ios" ? $decoded_config["params"]["fp"] : "chrome";
-    } 
-
-    $output = get_singbox_output($server, $port, $name, $tls, $sni, $pbk, $sid, $fingerprint, $transport, $flow, $network, $username, $reality);
-
-    return $output; // return the JSON configuration
-}
-
-function deduplicate_singbox($outbound){
-    foreach($outbound as $loc => $configs){
-        $uniqueData = [];
-        foreach ($configs as $item) {
-            if (!isset($uniqueData[$loc])){
-                $uniqueData[$loc] = [];
-            }
-            if (!in_array($item, $uniqueData[$loc])) {
-                $uniqueData[$loc][] = $item;
-            }
-        }
-    }
-    return $uniqueData;
-}
-function generate_output($input, $output){
-    $outbound = [];
-    $v2ray_subscription = $input;
-
-    $configs_array = explode("\n", $v2ray_subscription);
-    foreach ($configs_array as $config) {
-        if (stripos($config, "security=reality")){
-            $json_output = vless_reality_json($config);
-        }
-        if ($json_output !== null){
-            $the_name = json_decode($json_output, true)['tag'];
-            if (stripos($the_name, "RELAY🚩")){
-                $server_location = "RELAY🚩";
-            } else {
-                $pattern = '/\b[A-Z]{2}\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
-                preg_match_all($pattern, $the_name, $matches);
-                $server_location = $matches[0][0];
-            }
-            if (!in_array(json_decode($json_output, true), $outbound[$server_location])) {
-                $outbound[$server_location][] = json_decode($json_output, true);
-            }
-        }
-    }
-    $json_map = ["nekobox_old" => "nekobox_1.1.7.json", "nekobox_new" => "nekobox_1.1.8.json", "sfi" => "sfi.json"];
-    $template = json_decode(file_get_contents("modules/singbox/" . $json_map[$output]), true);
-    $manual_json = json_decode(file_get_contents("modules/singbox/manual.json"), true);
-    $url_test_json = json_decode(file_get_contents("modules/singbox/url_test.json"), true);
-    
-    $url_test_outbound =[];
-    $outbounds = [];
-    $names = [];
-    $all_test_group_outbound = [];
-    foreach ($outbound as $name => $test_group){
-        $names[] = $name;
-        $test_group_names = extract_names($test_group);
-        $url_test_json[0]['tag'] = $name;
-        $test_group_outbound = process_jsons($url_test_json, $test_group_names);
-        $all_test_group_outbound = array_merge($all_test_group_outbound, $test_group_outbound);
-        $outbounds = array_merge($outbounds, $test_group);
-    }
-
-    $manual_outbound = process_jsons($manual_json, $names);
-    $url_test_json[0]['tag'] = "URL-TEST";
-    $all_names = extract_names($outbounds);
-    $url_test_outbound = process_jsons($url_test_json, $all_names);
-    $url_test_outbound = array_merge($url_test_outbound, $all_test_group_outbound);
-
-    $template['outbounds'] = array_merge($manual_outbound, $url_test_outbound, $outbounds,  $template['outbounds']);
-    return json_encode($template, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-}
-
-function process_jsons($input, $names){
-    $input[0]['outbounds'] = array_merge($input[0]['outbounds'], $names);
+function process_jsons($input, $locationNames){
+    $input[0]['outbounds'] = array_merge($input[0]['outbounds'], $locationNames);
     return $input;
 }
 
 function extract_names($input){
     foreach($input as $config){
-            $names[] = $config['tag'];
+            $locationNames[] = $config['tag'];
     }
-    return $names;
+    return $locationNames;
+}
+
+function VmessSingbox($VmessUrl) {
+    $decode_vmess = decode_vmess($VmessUrl);
+    $configResult = array(
+        "tag"=> $decode_vmess['ps'],
+        "type"=> "vmess",
+        "server"=> $decode_vmess['add'],
+        "server_port"=> $decode_vmess['port'],
+        "uuid"=> $decode_vmess['id'],
+        "security"=> "auto",
+        "alter_id"=> $decode_vmess['aid'],
+        "global_padding"=> false,
+        "authenticated_length"=> true,
+        "packet_encoding"=> "",
+        "multiplex"=> array(
+          "enabled"=> false,
+          "protocol"=> "smux",
+          "max_streams"=> 32
+        )
+    );
+
+    if ($decode_vmess['port'] === "443" || $decode_vmess['tls'] === "tls") {
+        $configResult["tls"] = array(
+            "enabled" => true,
+            "server_name" => $decode_vmess['sni'] !== "" ? $decode_vmess['sni'] : $decode_vmess['add'],
+            "insecure" => true,
+            "disable_sni" => false,
+            "utls"=> array(
+                "enabled"=> true,
+                "fingerprint"=> "chrome"
+              )
+        );
+    }
+
+    if ($decode_vmess['net'] === "ws") {
+        $configResult["transport"] = array(
+            "type" => $decode_vmess['net'],
+            "path" => $decode_vmess['path'],
+            "headers" => array(
+                "Host" => $decode_vmess['host'] !== "" ? $decode_vmess['host'] : $decode_vmess['add']
+            ),
+            "max_early_data" => 0,
+            "early_data_header_name" => "Sec-WebSocket-Protocol"
+        );
+    } elseif ($decode_vmess['net'] === "grpc") {
+        $configResult["transport"] = array(
+            "type" => $decode_vmess['net'],
+            "service_name" => $decode_vmess['path'],
+            "idle_timeout" => "15s",
+            "ping_timeout" => "15s",
+            "permit_without_stream" => false
+        );
+    }
+
+    return $configResult;
+}
+
+function VlessSingbox($VlessUrl) {
+    $decoded_vless = parseProxyUrl($VlessUrl, "vless");
+    $configResult = array(
+      "tag" => $decoded_vless['hash'],
+      "type" => "vless",
+      "server" => $decoded_vless['hostname'],
+      "server_port" => intval($decoded_vless['port']),
+      "uuid" => $decoded_vless['username'],
+      "flow" => "",
+      "packet_encoding" => "xudp",
+      "multiplex" => array(
+        "enabled" => false,
+        "protocol" => "smux",
+        "max_streams" => 32
+      )
+    );
+    
+    if ($decoded_vless['port'] === "443" || $decoded_vless['params']["security"] === "tls" || $decoded_vless['params']["security"] === "reality") {
+      $configResult["tls"] = array(
+        "enabled"=> true,
+          "server_name"=> $decoded_vless['params']['sni'],
+          "insecure"=> false,
+          "utls"=> array(
+            "enabled"=> true,
+            "fingerprint"=> "chrome"
+          )
+      );
+
+      if ($decoded_vless['params']["security"] === "reality" || isset($decoded_vless['params']['pbk'])){
+        $configResult['tls']['reality'] = array(
+            "enabled"=> true,
+            "public_key"=> $decoded_vless['params']["pbk"], 
+            "short_id"=> $decoded_vless['params']["sid"] 
+        );
+      }
+    }
+    $transportTypes = array(
+      "ws" => array(
+        "type" => $decoded_vless['params']["type"],
+        "path" => $decoded_vless['params']["path"],
+        "headers" => array(
+          "Host" => $decoded_vless['params']["host"]
+        ),
+        "max_early_data" => 0,
+        "early_data_header_name" => "Sec-WebSocket-Protocol"
+      ),
+      "grpc" => array(
+        "type" => $decoded_vless['params']["type"],
+        "service_name" => $decoded_vless['params']["serviceName"],
+        "idle_timeout" => "15s",
+        "ping_timeout" => "15s",
+        "permit_without_stream" => false
+      )
+    );
+    $configResult["transport"] = $transportTypes[$decoded_vless['params']["type"]];
+    return $configResult;
+}
+
+function TrojanSingbox($TrojanUrl){
+    $decoded_trojan = parseProxyUrl($TrojanUrl);
+    $configResult = array(
+        "tag"=> $decoded_trojan['hash'],
+        "type"=> "trojan",
+        "server"=> $decoded_trojan['hostname'],
+        "server_port"=> intval($decoded_trojan['port']),
+        "password"=> $decoded_trojan['username'],
+        "tls"=> array(
+          "enabled"=> true,
+          "server_name"=> "YOURDOMAINSERVER",
+          "insecure"=> true,
+          "utls"=> array(
+            "enabled"=> true,
+            "fingerprint"=> "chrome"
+          )
+        ),
+        "transport"=> array(
+          "type"=> "grpc",
+          "service_name"=> "buy-trojan-grpc-pm-telegram-at-synricha",
+          "idle_timeout"=> "15s",
+          "ping_timeout"=> "15s",
+          "permit_without_stream"=> false
+        ),
+        "multiplex"=> array(
+          "enabled"=> false,
+          "protocol"=> "smux",
+          "max_streams"=> 32
+        )
+    );
+
+    if ($decoded_trojan['port'] === "443" || $decoded_trojan['params']["security"] === "tls"){
+        $configResult['tls'] = array(
+            "enabled"=> true,
+            "server_name"=> $decoded_trojan['params']['sni'],
+            "insecure"=> true,
+            "utls"=> array(
+                "enabled"=> true,
+                "fingerprint"=> "chrome"
+            )
+        );
+    }
+
+    $transportTypes = array(
+        "ws" => array(
+            "type"=> $decoded_trojan['params']["type"],
+            "path"=> $decoded_trojan['params']["path"],
+            "headers"=> array(
+                "Host"=> $decoded_trojan['params']["host"]
+            )
+          ),
+          "grpc" => array(
+            "type" => $decoded_trojan['params']["type"],
+            "service_name" => $decoded_trojan['params']["serviceName"],
+            "idle_timeout" => "15s",
+            "ping_timeout" => "15s",
+            "permit_without_stream" => false
+          )
+    );
+
+    $configResult["transport"] = $transportTypes[$decoded_trojan['params']["type"]];
+    return $configResult;
+}
+
+function ShadowsocksSingbox($ShadowsocksUrl) {
+    $decoded_shadowsocks = ParseShadowsocks($ShadowsocksUrl);
+    $configResult = [
+        'tag' => $decoded_shadowsocks['name'],
+        'type' => "shadowsocks",
+        'server' => $decoded_shadowsocks['server_address'],
+        'server_port' => intval($decoded_shadowsocks['server_port']),
+        'method' => $decoded_shadowsocks['encryption_method'],
+        'password' => $decoded_shadowsocks['password'],
+        'plugin' => "",
+        'plugin_opts' => ""
+    ];
+    return $configResult;
+}
+
+function GenerateConfig($input, $output){
+    $outbound = [];
+    $v2ray_subscription = $input;
+
+    $configArray = explode("\n", $v2ray_subscription);
+    foreach ($configArray as $config) {
+        $configType = detect_type($config);
+        switch($configType) {
+            case "vmess":
+                $configSingbox = VmessSingbox($config);
+                break;
+            case "vless":
+                $configSingbox = VlessSingbox($config);
+                break;
+            case "trojan":
+                $configSingbox = TrojanSingbox($config);
+                break;
+            case "ss":
+                $configSingbox = ShadowsocksSingbox($config);
+                break;
+        }
+        if (!is_null($configSingbox)){
+            $configName = $configSingbox['tag'];
+            if (stripos($configName, "RELAY🚩")){
+                $configLocation = "RELAY🚩";
+            } else {
+                $pattern = '/\b[A-Z]{2}\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
+                preg_match_all($pattern, $configName, $matches);
+                $configLocation = $matches[0][0];
+            }
+            if (!in_array($configSingbox, $outbound[$configLocation])) {
+                $outbound[$configLocation][] = $configSingbox;
+            }
+        }
+    }
+    $templateMap = [
+        "nold" => "nekobox_1.1.7.json", 
+        "nnew" => "nnew.json", 
+        "sfia" => "sfi.json"
+    ];
+    $templateBase = json_decode(
+        file_get_contents("modules/singbox/" . $templateMap[$output]), 
+        true
+    );
+    $templateManual = json_decode(
+        file_get_contents("modules/singbox/manual.json"), 
+        true
+    );
+    $templateUrltest = json_decode(
+        file_get_contents("modules/singbox/url_test.json"), 
+        true
+    );
+    
+    $outboundUrltest =[];
+    $outboundSingles = [];
+    $locationNames = [];
+    $outboundBasedOnLocationFull = [];
+    foreach ($outbound as $location => $outboundEachLocation){
+        $locationNames[] = $location;
+        $eachLocationNames = extract_names($outboundEachLocation);
+        $templateUrltest[0]['tag'] = $location;
+        $outboundBasedOnLocation = process_jsons($templateUrltest, $eachLocationNames);
+        $outboundBasedOnLocationFull = array_merge($outboundBasedOnLocationFull, $outboundBasedOnLocation);
+        $outboundSingles = array_merge($outboundSingles, $outboundEachLocation);
+    }
+
+    $templateManual = process_jsons($templateManual, $locationNames);
+    $templateUrltest[0]['tag'] = "URL-TEST";
+    $configNamesFull = extract_names($outboundSingles);
+    $outboundUrltest = process_jsons($templateUrltest, $configNamesFull);
+    $outboundUrltest = array_merge($outboundUrltest, $outboundBasedOnLocationFull);
+
+    $templateBase['outbounds'] = array_merge($templateManual, $outboundUrltest, $outboundSingles,  $templateBase['outbounds']);
+    return json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+}
+
+function GenerateConfigLite($input, $output){
+    $outbound = [];
+    $v2ray_subscription = $input;
+
+    $configArray = explode("\n", $v2ray_subscription);
+    foreach ($configArray as $config) {
+        $configType = detect_type($config);
+        switch($configType) {
+            case "vmess":
+                $configSingbox = VmessSingbox($config);
+                break;
+            case "vless":
+                $configSingbox = VlessSingbox($config);
+                break;
+            case "trojan":
+                $configSingbox = TrojanSingbox($config);
+                break;
+            case "ss":
+                $configSingbox = ShadowsocksSingbox($config);
+                break;
+        }
+        if (!is_null($configSingbox)){
+            if (!in_array($configSingbox, $outbound)) {
+                $outbound[] = $configSingbox;
+            }
+        }
+    }
+    $templateMap = [
+        "nold" => "nekobox_1.1.7.json", 
+        "nnew" => "nnew.json", 
+        "sfia" => "sfi.json"
+    ];
+    $templateBase = json_decode(
+        file_get_contents("modules/singbox/" . $templateMap[$output]), 
+        true
+    );
+    $templateManual = json_decode(
+        file_get_contents("modules/singbox/manual.json"), 
+        true
+    );
+    $templateUrltest = json_decode(
+        file_get_contents("modules/singbox/url_test.json"), 
+        true
+    );
+
+    $names = extract_names($outbound);
+    $outboundManual = process_jsons($templateManual, $names);
+    $outboundUrltest = process_jsons($templateUrltest, $names);
+
+    $templateBase['outbounds'] = array_merge($outboundManual, $outboundUrltest, $outbound,  $templateBase['outbounds']);
+    return json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 }
