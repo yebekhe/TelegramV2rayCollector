@@ -3,7 +3,7 @@
 header("Content-type: application/json;");
 
 function process_jsons($input, $locationNames){
-    $input[0]['outbounds'] = array_merge($input[0]['outbounds'], $locationNames);
+    $input[0]['outbounds'] = array_merge($input[0]['outbounds'], array_filter($locationNames));
     return $input;
 }
 
