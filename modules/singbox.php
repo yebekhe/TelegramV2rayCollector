@@ -18,7 +18,7 @@ function extract_names($input){
 
 function VmessSingbox($VmessUrl) {
     $decode_vmess = decode_vmess($VmessUrl);
-    if (is_null($decode_vmess['ps']) || $decoded_vless['ps'] === ""){
+    if (is_null($decode_vmess['ps']) || $decode_vmess['ps'] === ""){
         return null;
     }
     $configResult = array(
@@ -55,9 +55,9 @@ function VmessSingbox($VmessUrl) {
     if ($decode_vmess['net'] === "ws") {
         $configResult["transport"] = array(
             "type" => $decode_vmess['net'],
-            "path" => $decode_vmess['path'],
+            "path" => "/" . $decode_vmess['path'],
             "headers" => array(
-                "Host" => $decode_vmess['host'] !== "" ? $decode_vmess['host'] : $decode_vmess['add']
+                "Host" => $decode_vmess['host'] !== "" ? $decode_vmess['host'] : $decode_vmess['add'] !== "" ? $decode_vmess['add'] : ""
             ),
             "max_early_data" => 0,
             "early_data_header_name" => "Sec-WebSocket-Protocol"
@@ -98,7 +98,7 @@ function VlessSingbox($VlessUrl) {
     if ($decoded_vless['port'] === "443" || $decoded_vless['params']["security"] === "tls" || $decoded_vless['params']["security"] === "reality") {
       $configResult["tls"] = array(
         "enabled"=> true,
-          "server_name"=> $decoded_vless['params']['sni'],
+          "server_name"=> !is_null($decoded_vless['params']['sni']) ? $decoded_vless['params']['sni'] : "",
           "insecure"=> false,
           "utls"=> array(
             "enabled"=> true,
@@ -110,7 +110,7 @@ function VlessSingbox($VlessUrl) {
         $configResult['tls']['reality'] = array(
             "enabled"=> true,
             "public_key"=> $decoded_vless['params']["pbk"], 
-            "short_id"=> $decoded_vless['params']["sid"] 
+            "short_id"=> !is_null($decoded_vless['params']['sid']) ? $decoded_vless['params']["sid"] : ""
         );
       }
     }
@@ -133,7 +133,10 @@ function VlessSingbox($VlessUrl) {
       )
     );
     if (isset($decoded_vless['params']["type"])){
-        $configResult["transport"] = $transportTypes[$decoded_vless['params']["type"]];
+        if ($decoded_vless['params']["type"] === "ws" || $decoded_vless['params']["type"] === "grpc"){
+            $configResult["transport"] = $transportTypes[$decoded_vless['params']["type"]];
+        }
+        
     }
     return $configResult;
 }
