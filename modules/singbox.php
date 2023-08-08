@@ -18,6 +18,9 @@ function extract_names($input){
 
 function VmessSingbox($VmessUrl) {
     $decode_vmess = decode_vmess($VmessUrl);
+    if (is_null($decode_vmess['ps']) || $decoded_vless['ps'] === ""){
+        return null;
+    }
     $configResult = array(
         "tag"=> $decode_vmess['ps'],
         "type"=> "vmess",
@@ -74,6 +77,9 @@ function VmessSingbox($VmessUrl) {
 
 function VlessSingbox($VlessUrl) {
     $decoded_vless = parseProxyUrl($VlessUrl, "vless");
+    if (is_null($decoded_vless['hash']) || $decoded_vless['hash'] === ""){
+        return null;
+    }
     $configResult = array(
       "tag" => $decoded_vless['hash'],
       "type" => "vless",
@@ -134,6 +140,9 @@ function VlessSingbox($VlessUrl) {
 
 function TrojanSingbox($TrojanUrl){
     $decoded_trojan = parseProxyUrl($TrojanUrl);
+    if (is_null($decoded_trojan['hash']) || $decoded_trojan['hash'] === ""){
+        return null;
+    }
     $configResult = array(
         "tag"=> $decoded_trojan['hash'],
         "type"=> "trojan",
@@ -199,6 +208,9 @@ function TrojanSingbox($TrojanUrl){
 
 function ShadowsocksSingbox($ShadowsocksUrl) {
     $decoded_shadowsocks = ParseShadowsocks($ShadowsocksUrl);
+    if (is_null($decoded_shadowsocks['name']) || $decoded_shadowsocks['name'] === ""){
+        return null;
+    }
     $configResult = [
         'tag' => $decoded_shadowsocks['name'],
         'type' => "shadowsocks",
