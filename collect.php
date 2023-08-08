@@ -352,6 +352,7 @@ $singboxTypes = [
     "vmess" => $fixed_string_vmess,
     "vless" => $fixed_string_vless,
     "trojan" => $$fixed_string_shadowsocks,
+    "shadowsocks" => $fixed_string_shadowsocks,
 ];
 
 foreach ($singboxTypes as $singboxType => $subContents) {
