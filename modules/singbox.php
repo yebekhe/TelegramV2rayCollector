@@ -86,7 +86,7 @@ function VlessSingbox($VlessUrl) {
       "server" => $decoded_vless['hostname'],
       "server_port" => intval($decoded_vless['port']),
       "uuid" => $decoded_vless['username'],
-      "flow" => "",
+      "flow" => !is_null($decoded_vless['params']['flow']) ?  $decoded_vless['params']['flow'] : "",
       "packet_encoding" => "xudp",
       "multiplex" => array(
         "enabled" => false,
@@ -117,9 +117,9 @@ function VlessSingbox($VlessUrl) {
     $transportTypes = array(
       "ws" => array(
         "type" => $decoded_vless['params']["type"],
-        "path" => $decoded_vless['params']["path"],
+        "path" => "/" . $decoded_vless['params']["path"],
         "headers" => array(
-          "Host" => $decoded_vless['params']["host"]
+          "Host" => !is_null($decoded_vless['params']["host"]) ? $decoded_vless['params']["host"] : ""
         ),
         "max_early_data" => 0,
         "early_data_header_name" => "Sec-WebSocket-Protocol"
@@ -152,22 +152,6 @@ function TrojanSingbox($TrojanUrl){
         "server"=> $decoded_trojan['hostname'],
         "server_port"=> intval($decoded_trojan['port']),
         "password"=> $decoded_trojan['username'],
-        "tls"=> array(
-          "enabled"=> true,
-          "server_name"=> "YOURDOMAINSERVER",
-          "insecure"=> true,
-          "utls"=> array(
-            "enabled"=> true,
-            "fingerprint"=> "chrome"
-          )
-        ),
-        "transport"=> array(
-          "type"=> "grpc",
-          "service_name"=> "buy-trojan-grpc-pm-telegram-at-synricha",
-          "idle_timeout"=> "15s",
-          "ping_timeout"=> "15s",
-          "permit_without_stream"=> false
-        ),
         "multiplex"=> array(
           "enabled"=> false,
           "protocol"=> "smux",
@@ -178,7 +162,7 @@ function TrojanSingbox($TrojanUrl){
     if ($decoded_trojan['port'] === "443" || $decoded_trojan['params']["security"] === "tls"){
         $configResult['tls'] = array(
             "enabled"=> true,
-            "server_name"=> $decoded_trojan['params']['sni'],
+            "server_name"=> !is_null($decoded_trojan['params']['sni']) ? $decoded_trojan['params']['sni'] : "",
             "insecure"=> true,
             "utls"=> array(
                 "enabled"=> true,
@@ -190,7 +174,7 @@ function TrojanSingbox($TrojanUrl){
     $transportTypes = array(
         "ws" => array(
             "type"=> $decoded_trojan['params']["type"],
-            "path"=> $decoded_trojan['params']["path"],
+            "path"=> "/" . $decoded_trojan['params']["path"],
             "headers"=> array(
                 "Host"=> $decoded_trojan['params']["host"]
             )
@@ -204,7 +188,9 @@ function TrojanSingbox($TrojanUrl){
           )
     );
     if (isset($decoded_trojan['params']["type"])){
-        $configResult["transport"] = $transportTypes[$decoded_trojan['params']["type"]];
+        if ($decoded_trojan['params']["type"] === "ws" || $decoded_trojan['params']["type"] === "grpc"){
+            $configResult["transport"] = $transportTypes[$decoded_trojan['params']["type"]];
+        }
     }
     return $configResult;
 }
