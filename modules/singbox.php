@@ -126,7 +126,9 @@ function VlessSingbox($VlessUrl) {
         "permit_without_stream" => false
       )
     );
-    $configResult["transport"] = $transportTypes[$decoded_vless['params']["type"]];
+    if (isset($decoded_vless['params']["type"])){
+        $configResult["transport"] = $transportTypes[$decoded_vless['params']["type"]];
+    }
     return $configResult;
 }
 
@@ -189,8 +191,9 @@ function TrojanSingbox($TrojanUrl){
             "permit_without_stream" => false
           )
     );
-
-    $configResult["transport"] = $transportTypes[$decoded_trojan['params']["type"]];
+    if (isset($decoded_trojan['params']["type"])){
+        $configResult["transport"] = $transportTypes[$decoded_trojan['params']["type"]];
+    }
     return $configResult;
 }
 
