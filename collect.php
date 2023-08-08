@@ -351,7 +351,7 @@ $singboxTypes = [
     "mix" => $mix,
     "vmess" => $fixed_string_vmess,
     "vless" => $fixed_string_vless,
-    "trojan" => $$fixed_string_shadowsocks,
+    "trojan" => $fixed_string_trojan,
     "shadowsocks" => $fixed_string_shadowsocks,
 ];
 
