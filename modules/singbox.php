@@ -28,7 +28,7 @@ function VmessSingbox($VmessUrl) {
         "server_port"=> intval($decode_vmess['port']),
         "uuid"=> $decode_vmess['id'],
         "security"=> "auto",
-        "alter_id"=> $decode_vmess['aid'],
+        "alter_id"=> intval($decode_vmess['aid']),
         "global_padding"=> false,
         "authenticated_length"=> true,
         "packet_encoding"=> "",
