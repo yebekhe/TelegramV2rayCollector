@@ -250,7 +250,7 @@ function GenerateConfig($input, $output){
     }
     $templateMap = [
         "nold" => "nekobox_1.1.7.json", 
-        "nnew" => "nnew.json", 
+        "nnew" => "nekobox_1.1.8.json", 
         "sfia" => "sfi.json"
     ];
     $templateBase = json_decode(
@@ -318,7 +318,7 @@ function GenerateConfigLite($input, $output){
     }
     $templateMap = [
         "nold" => "nekobox_1.1.7.json", 
-        "nnew" => "nnew.json", 
+        "nnew" => "nekobox_1.1.8.json", 
         "sfia" => "sfi.json"
     ];
     $templateBase = json_decode(
