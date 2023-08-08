@@ -25,7 +25,7 @@ function VmessSingbox($VmessUrl) {
         "tag"=> $decode_vmess['ps'],
         "type"=> "vmess",
         "server"=> $decode_vmess['add'],
-        "server_port"=> $decode_vmess['port'],
+        "server_port"=> intval($decode_vmess['port']),
         "uuid"=> $decode_vmess['id'],
         "security"=> "auto",
         "alter_id"=> $decode_vmess['aid'],
