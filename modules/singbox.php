@@ -9,7 +9,9 @@ function process_jsons($input, $locationNames){
 
 function extract_names($input){
     foreach($input as $config){
-            $locationNames[] = $config['tag'];
+        if ($config['tag'] !== ""){
+             $locationNames[] = $config['tag'];
+        }
     }
     return $locationNames;
 }
