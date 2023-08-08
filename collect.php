@@ -347,15 +347,31 @@ foreach ($clash_types as $clash_type => $clash_datas) {
     }
 }
 
+$singboxTypes = [
+    "mix" => $mix,
+    "vmess" => $fixed_string_vmess,
+    "vless" => $fixed_string_vless,
+    "trojan" => $$fixed_string_shadowsocks,
+];
+
+foreach ($singboxTypes as $singboxType => $subContents) {
+    file_put_contents("singbox/" . $singboxType . "_neko8.json", GenerateConfig($subContents, "nnew"));
+    file_put_contents("singbox/" . $singboxType . "_neko7.json", GenerateConfig($subContents, "nold"));
+    file_put_contents("singbox/" . $singboxType . "_sfasfi.json", GenerateConfig($subContents, "sfia"));
+    file_put_contents("singbox/" . $singboxType . "_neko8_lite.json", GenerateConfigLite($subContents, "nnew"));
+    file_put_contents("singbox/" . $singboxType . "_neko7_lite.json", GenerateConfigLite($subContents, "nold"));
+    file_put_contents("singbox/" . $singboxType . "_sfasfi_lite.json", GenerateConfigLite($subContents, "sfia"));
+}
+
 $the_string_reality_singbox = $fixed_string_reality . "\n" . $string_donated_reality ;
 $string_reality_singbox = remove_duplicate_xray($the_string_reality_singbox, "vless");
 
-$singbox_reality_nekobox = generate_output($string_reality_singbox, "nekobox_old");
-$singbox_reality_nekobox_new = generate_output($string_reality_singbox, "nekobox_new");
-$singbox_reality_ios = generate_output($string_reality_singbox,"sfi");
-file_put_contents("singbox/reality.json", $singbox_reality_nekobox);
-file_put_contents("singbox/nekobox_new.json", $singbox_reality_nekobox_new);
-file_put_contents("singbox/sfi_sfa.json", $singbox_reality_ios);
+file_put_contents("singbox/reality.json", GenerateConfig($string_reality_singbox, "nold"));
+file_put_contents("singbox/nekobox_new.json", GenerateConfig($string_reality_singbox, "nnew"));
+file_put_contents("singbox/sfi_sfa.json", GenerateConfig($string_reality_singbox,"sfia"));
+file_put_contents("singbox/reality_lite.json", GenerateConfigLite($string_reality_singbox, "nold"));
+file_put_contents("singbox/nekobox_new_lite.json", GenerateConfigLite($string_reality_singbox, "nnew"));
+file_put_contents("singbox/sfi_sfa_lite.json", GenerateConfigLite($string_reality_singbox,"sfia"));
 
 $data = [
     [
