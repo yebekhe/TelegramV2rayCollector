@@ -31,7 +31,7 @@
       <th>CONFIG TYPE</th>
       <th>NORMAL SUBSCRIPTION</th>
       <th>BASE64 SUBSCRIPTION</th>
-      <th>SINGBOX SUBSCRIPTION</th>
+      <th colspan="2">SINGBOX SUBSCRIPTION</th>
       <th>CLASH SUBSCRIPTION</th>
       <th>CLASH.Meta SUBSCRIPTION</th>
       <th>SURFBOARD SUSCRIPTION</th>
@@ -47,7 +47,16 @@
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64">BASE64 SUBSCRIPTION</a>
       </td>
       <td>
-        -
+        <h6>COUNRTY BASED</h2>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/mix_neko7.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/mix_neko8.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/mix_sfasfi.json">SFI/SFA</a>
+      </td>
+      <td>
+        <h6>NO CATEGORIZED</h2>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/mix_neko7_lite.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/mix_neko8_lite.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/mix_sfasfi_lite.json">SFI/SFA</a>
       </td>
       <td>
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/clash/mix.yml">CLASH SUBSCRIPTION</a>
@@ -68,7 +77,10 @@
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/donated_base64">BASE64 SUBSCRIPTION</a>
       </td>
       <td>
-        -
+        <h5>CHECK IN MIX AND REALITY</h5>
+      </td>
+      <td>
+        <h5>CHECK IN MIX AND REALITY</h5>
       </td>
       <td>
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/clash/donated.yml">CLASH SUBSCRIPTION</a>
@@ -89,7 +101,14 @@
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64">BASE64 SUBSCRIPTION</a>
       </td>
       <td>
-        -
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vmess_neko7.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vmess_neko8.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vmess_sfasfi.json">SFI/SFA</a>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vmess_neko7_lite.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vmess_neko8_lite.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vmess_sfasfi_lite.json">SFI/SFA</a>
       </td>
       <td>
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/clash/vmess.yml">CLASH SUBSCRIPTION</a>
@@ -110,7 +129,14 @@
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64">BASE64 SUBSCRIPTION</a>
       </td>
       <td>
-        -
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vless_neko7.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vless_neko8.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vless_sfasfi.json">SFI/SFA</a>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vless_neko7_lite.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vless_neko8_lite.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/vless_sfasfi_lite.json">SFI/SFA</a>
       </td>
       <td>-</td>
       <td>
@@ -127,11 +153,14 @@
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality_base64">BASE64 SUBSCRIPTION</a>
       </td>
       <td>
-        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/reality.json">NEKOBOX 1.1.7 and BELLOW</a>
-        <br><br>
-        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/nekobox_new.json">NEKOBOX 1.1.8</a>
-        <br><br>
-        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/sfi_sfa.json">SFI and SFA</a>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/reality.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/nekobox_new.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/sfi_sfa.json">SFI/SFA</a><br><br>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/reality_lite.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/nekobox_new_lite.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/sfi_sfa_lite.json">SFI/SFA</a>
       </td>
       <td>-</td>
       <td>
@@ -148,7 +177,14 @@
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64">BASE64 SUBSCRIPTION</a>
       </td>
       <td>
-        -
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/trojan_neko7.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/trojan_neko8.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/trojan_sfasfi.json">SFI/SFA</a><br><br>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/trojan_neko7_lite.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/trojan_neko8_lite.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/trojan_sfasfi_lite.json">SFI/SFA</a><br><br>
       </td>
       <td>
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/clash/trojan.yml">CLASH SUBSCRIPTION</a>
@@ -169,7 +205,14 @@
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks_base64">BASE64 SUBSCRIPTION</a>
       </td>
       <td>
-        -
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/shadowsocks_neko7.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/shadowsocks_neko8.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/shadowsocks_sfasfi.json">SFI/SFA</a><br><br>
+      </td>
+      <td>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/shadowsocks_neko7_lite.json">NEKOBOX Until 1.1.7</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/shadowsocks_neko8_lite.json">NEKOBOX 1.1.8</a><br><br>
+        <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/singbox/shadowsocks_sfasfi_lite.json">SFI/SFA</a><br><br>
       </td>
       <td>
         <a href="https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/clash/shadowsocks.yml">CLASH SUBSCRIPTION</a>
