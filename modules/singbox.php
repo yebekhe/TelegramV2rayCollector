@@ -86,7 +86,7 @@ function VlessSingbox($VlessUrl) {
       "server" => $decoded_vless['hostname'],
       "server_port" => intval($decoded_vless['port']),
       "uuid" => $decoded_vless['username'],
-      "flow" => !is_null($decoded_vless['params']['flow']) ?  $decoded_vless['params']['flow'] : "",
+      "flow" => !is_null($decoded_vless['params']['flow']) ? "xtls-rprx-vision" : "",
       "packet_encoding" => "xudp",
       "multiplex" => array(
         "enabled" => false,
