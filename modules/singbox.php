@@ -215,11 +215,12 @@ function ShadowsocksSingbox($ShadowsocksUrl) {
 
 function GenerateConfig($input, $output){
     $outbound = [];
-    $v2ray_subscription = $input;
+    $v2ray_subscription = str_replace(" ", "%20", $input);
 
     $configArray = explode("\n", $v2ray_subscription);
     foreach ($configArray as $config) {
         $configType = detect_type($config);
+        $config = str_replace("%20", " ", $config);
         switch($configType) {
             case "vmess":
                 $configSingbox = VmessSingbox($config);
