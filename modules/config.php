@@ -113,7 +113,8 @@ $Types = [
     "iTV2RAY" => ["vless"],
     "V2rayNGmat" => ["vless"],
     "ARv2ray" => ["vless"],
-    "V2parsin" => ["vmess", "vless"]
+    "V2parsin" => ["vmess", "vless"],
+    "reality_daily" => ["vless"],
 ];
 
 $donated_subscription = [
