@@ -12,18 +12,15 @@ function seprate_by_country($configs){
     $output = [];
     foreach ($configsArray as $config) {
         $configType = detect_type($config);
-        switch ($configType){
-            case "vmess":
-                $configName = parse_config($config, "vmess", true)['ps'];
-                break;
-            case "vless":
-            case "trojan":
-                $configName = parse_config($config, $configType);
-                break;
-            case "shadowsocks":
-                $configName = parse_config($config, "ss");
-                break;
+        
+        if ($configType === "vmess") {
+            $configName = parse_config($config, "vmess", true)['ps'];
+        } elseif ($configType === "vless" || $configType === "trojan" ){
+            $configName = parse_config($config, $configType);
+        } elseif ($configType === "ss"){
+            $configName = parse_config($config, "ss");
         }
+
         if (stripos($configName, "RELAY🚩")){
             $configLocation = "RELAY";
         } else {
@@ -31,9 +28,11 @@ function seprate_by_country($configs){
             preg_match_all($pattern, $configName, $matches);
             $configLocation = mb_substr($matches[0][0], 2, 2);;
         }
+
         if (!isset($output[$configLocation])){
             $output[$configLocation] = [];
         }
+        
         if (!in_array($config, $output[$configLocation])) {
             $output[$configLocation][] = $config;
         }
