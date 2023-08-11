@@ -6,6 +6,16 @@ include "modules/config.php"; // Include the config module
 include "modules/ranking.php"; // Include the ranking module
 include "modules/singbox.php"; // Include the singbox module
 
+function deleteFolder($folder) {
+    if (!is_dir($folder)) {
+        return;
+    }
+    $files = glob($folder . '/*');
+    foreach ($files as $file) {
+        is_dir($file) ? deleteFolder($file) : unlink($file);
+    }
+    rmdir($folder);
+}
 
 function seprate_by_country($configs){
     $configsArray = explode("\n", $configs);
@@ -335,6 +345,8 @@ foreach ($subscription_types as $subscription_type => $subscription_data) {
 }
 
 $countryBased = seprate_by_country($mix);
+deleteFolder("country");
+mkdir("country");
 foreach ($countryBased as $country => $configsArray) {
     if (!is_dir("country/". $country)) {
         mkdir("country/". $country);
