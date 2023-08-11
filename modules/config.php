@@ -103,8 +103,17 @@ $Types = [
     "FreakConfig" => ["vmess", "vless"],
     "frev2ray" => ["vless"],
     "vpnmasi" => ["vless"],
-    
-    
+    "BestV2rang" => ["vless"],
+    "TPvpn_Official" => ["vless"],
+    "AM_TEAMMM" => ["vless"],
+    "Lockey_vpn" => ["vless"],
+    "XsV2ray" => ["vless"],
+    "shh_proxy" => ["vless"],
+    "L_AGVPN13" => ["vless"],
+    "iTV2RAY" => ["vless"],
+    "V2rayNGmat" => ["vless"],
+    "ARv2ray" => ["vless"],
+    "V2parsin" => ["vmess", "vless"]
 ];
 
 $donated_subscription = [
