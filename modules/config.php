@@ -97,6 +97,14 @@ $Types = [
     "WebShecan" => ["vless"],
     "v2Line" => ["vmess"],
     "vmessiran" => ["vmess", "vless"],
+    "Configforvpn01" => ["vless"],
+    "God_CONFIG" => ["vless"],
+    "Awlix_ir" => ["vmess"],
+    "FreakConfig" => ["vmess", "vless"],
+    "frev2ray" => ["vless"],
+    "vpnmasi" => ["vless"],
+    
+    
 ];
 
 $donated_subscription = [
