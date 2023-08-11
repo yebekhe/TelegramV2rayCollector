@@ -6,19 +6,20 @@ include "modules/config.php"; // Include the config module
 include "modules/ranking.php"; // Include the ranking module
 include "modules/singbox.php"; // Include the singbox module
 
+
 function seprate_by_country($configs){
     $configsArray = explode("\n", $configs);
     $configLocation = "";
     $output = [];
     foreach ($configsArray as $config) {
         $configType = detect_type($config);
-        
+
         if ($configType === "vmess") {
             $configName = parse_config($config, "vmess", true)['ps'];
         } elseif ($configType === "vless" || $configType === "trojan" ){
-            $configName = parse_config($config, $configType);
+            $configName = parse_config($config, $configType)['hash'];
         } elseif ($configType === "ss"){
-            $configName = parse_config($config, "ss");
+            $configName = parse_config($config, "ss")['name'];
         }
 
         if (stripos($configName, "RELAY🚩")){
