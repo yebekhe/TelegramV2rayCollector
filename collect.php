@@ -6,6 +6,41 @@ include "modules/config.php"; // Include the config module
 include "modules/ranking.php"; // Include the ranking module
 include "modules/singbox.php"; // Include the singbox module
 
+function seprate_by_country($configs){
+    $configsArray = explode("\n", $configs);
+    $configLocation = "";
+    $output = [];
+    foreach ($configsArray as $config) {
+        $configType = detect_type($config);
+        switch ($configType){
+            case "vmess":
+                $configName = parse_config($config, "vmess", true)['ps'];
+                break;
+            case "vless":
+            case "trojan":
+                $configName = parse_config($config, $configType);
+                break;
+            case "shadowsocks":
+                $configName = parse_config($config, "ss");
+                break;
+        }
+        if (stripos($configName, "RELAY🚩")){
+            $configLocation = "RELAY";
+        } else {
+            $pattern = '/\b[A-Z]{2}\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
+            preg_match_all($pattern, $configName, $matches);
+            $configLocation = mb_substr($matches[0][0], 2, 2);;
+        }
+        if (!isset($output[$configLocation])){
+            $output[$configLocation] = [];
+        }
+        if (!in_array($config, $output[$configLocation])) {
+            $output[$configLocation][] = $config;
+        }
+    }
+    return $output;
+}
+
 function process_mix_json($input, $name)
 {
     $mix_data_json = json_encode($input, JSON_PRETTY_PRINT); // Encode input array to JSON with pretty printing
@@ -297,6 +332,16 @@ foreach ($subscription_types as $subscription_type => $subscription_data) {
         "sub/" . $subscription_type . "_base64",
         $subscription_data
     );
+}
+
+$countryBased = seprate_by_country($mix);
+foreach ($countryBased as $country => $configsArray) {
+    if (!is_dir("country/". $country)) {
+        mkdir("country/". $country);
+    }
+    $configsSub = implode("\n", $configsArray);
+    file_put_contents("country/". $country . "/normal", $configsSub);
+    file_put_contents("country/". $country . "/base64", base64_encode($configsSub));
 }
 
 process_mix_json($mix_data, "configs.json");
