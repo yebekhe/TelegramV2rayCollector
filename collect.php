@@ -35,9 +35,9 @@ function seprate_by_country($configs){
         if (stripos($configName, "RELAY🚩")){
             $configLocation = "RELAY";
         } else {
-            $pattern = '/\b[A-Z]{2}\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
+            $pattern = '/\b([A-Z]{2})\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
             preg_match_all($pattern, $configName, $matches);
-            $configLocation = mb_substr($matches[0][0], 2, 2);;
+            $configLocation = $matches[1][0];
         }
 
         if (!isset($output[$configLocation])){
