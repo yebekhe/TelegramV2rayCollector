@@ -75,7 +75,7 @@ function VmessSingbox($VmessUrl) {
     return $configResult;
 }
 
-function VlessSingbox($VlessUrl, $counter)
+function VlessSingbox($VlessUrl)
 {
     $decoded_vless = parseProxyUrl($VlessUrl, "vless");
     //print_r($decoded_vless);
@@ -83,7 +83,7 @@ function VlessSingbox($VlessUrl, $counter)
         return null;
     }
     $configResult = [
-        "tag" => $decoded_vless["hash"] . " | " . $counter,
+        "tag" => $decoded_vless["hash"],
         "type" => "vless",
         "server" => $decoded_vless["hostname"],
         "server_port" => intval($decoded_vless["port"]),
