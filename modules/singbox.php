@@ -75,26 +75,30 @@ function VmessSingbox($VmessUrl) {
     return $configResult;
 }
 
-function VlessSingbox($VlessUrl) {
+function VlessSingbox($VlessUrl, $counter)
+{
     $decoded_vless = parseProxyUrl($VlessUrl, "vless");
-    if (is_null($decoded_vless['hash']) || $decoded_vless['hash'] === ""){
+    //print_r($decoded_vless);
+    if (is_null($decoded_vless["hash"]) || $decoded_vless["hash"] === "") {
         return null;
     }
-    $configResult = array(
-      "tag" => $decoded_vless['hash'],
-      "type" => "vless",
-      "server" => $decoded_vless['hostname'],
-      "server_port" => intval($decoded_vless['port']),
-      "uuid" => $decoded_vless['username'],
-      "flow" => !is_null($decoded_vless['params']['flow']) ? "xtls-rprx-vision" : "",
-      "packet_encoding" => "xudp",
-      "multiplex" => array(
-        "enabled" => false,
-        "protocol" => "smux",
-        "max_streams" => 32
-      )
-    );
-    
+    $configResult = [
+        "tag" => $decoded_vless["hash"] . " | " . $counter,
+        "type" => "vless",
+        "server" => $decoded_vless["hostname"],
+        "server_port" => intval($decoded_vless["port"]),
+        "uuid" => $decoded_vless["username"],
+        "flow" => !is_null($decoded_vless["params"]["flow"])
+            ? "xtls-rprx-vision"
+            : "",
+        "packet_encoding" => "xudp",
+        "multiplex" => [
+            "enabled" => false,
+            "protocol" => "smux",
+            "max_streams" => 32,
+        ],
+    ];
+
     if (
         $decoded_vless["port"] === "443" ||
         $decoded_vless["params"]["security"] === "tls" ||
@@ -133,11 +137,34 @@ function VlessSingbox($VlessUrl) {
         }
         }
     }
-    if (isset($decoded_vless['params']["type"])){
-        if ($decoded_vless['params']["type"] === "ws" || $decoded_vless['params']["type"] === "grpc"){
-            $configResult["transport"] = $transportTypes[$decoded_vless['params']["type"]];
+    $transportTypes = [
+        "ws" => [
+            "type" => $decoded_vless["params"]["type"],
+            "path" => "/" . $decoded_vless["params"]["path"],
+            "headers" => [
+                "Host" => !is_null($decoded_vless["params"]["host"])
+                    ? $decoded_vless["params"]["host"]
+                    : "",
+            ],
+            "max_early_data" => 0,
+            "early_data_header_name" => "Sec-WebSocket-Protocol",
+        ],
+        "grpc" => [
+            "type" => $decoded_vless["params"]["type"],
+            "service_name" => $decoded_vless["params"]["serviceName"],
+            "idle_timeout" => "15s",
+            "ping_timeout" => "15s",
+            "permit_without_stream" => false,
+        ],
+    ];
+    if (isset($decoded_vless["params"]["type"])) {
+        if (
+            $decoded_vless["params"]["type"] === "ws" ||
+            $decoded_vless["params"]["type"] === "grpc"
+        ) {
+            $configResult["transport"] =
+                $transportTypes[$decoded_vless["params"]["type"]];
         }
-        
     }
     return $configResult;
 }
