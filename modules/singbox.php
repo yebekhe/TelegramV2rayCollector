@@ -95,43 +95,44 @@ function VlessSingbox($VlessUrl) {
       )
     );
     
-    if ($decoded_vless['port'] === "443" || $decoded_vless['params']["security"] === "tls" || $decoded_vless['params']["security"] === "reality") {
-      $configResult["tls"] = array(
-        "enabled"=> true,
-          "server_name"=> !is_null($decoded_vless['params']['sni']) ? $decoded_vless['params']['sni'] : "",
-          "insecure"=> false,
-          "utls"=> array(
-            "enabled"=> true,
-            "fingerprint"=> "chrome"
-          )
-      );
+    if (
+        $decoded_vless["port"] === "443" ||
+        $decoded_vless["params"]["security"] === "tls" ||
+        $decoded_vless["params"]["security"] === "reality"
+    ) {
+        $configResult["tls"] = [
+            "enabled" => true,
+            "server_name" => !is_null($decoded_vless["params"]["sni"])
+                ? $decoded_vless["params"]["sni"]
+                : "",
+            "insecure" => false,
+            "utls" => [
+                "enabled" => true,
+                "fingerprint" => "chrome",
+            ],
+        ];
 
-      if ($decoded_vless['params']["security"] === "reality" || isset($decoded_vless['params']['pbk'])){
-        $configResult['tls']['reality'] = array(
-            "enabled"=> true,
-            "public_key"=> $decoded_vless['params']["pbk"], 
-            "short_id"=> !is_null($decoded_vless['params']['sid']) ? $decoded_vless['params']["sid"] : ""
-        );
-      }
+        if (
+            $decoded_vless["params"]["security"] === "reality" ||
+            isset($decoded_vless["params"]["pbk"])
+        ) {
+            $configResult["tls"]["reality"] = [
+                "enabled" => true,
+                "public_key" => !is_null($decoded_vless["params"]["pbk"])
+                    ? $decoded_vless["params"]["pbk"]
+                    : "",
+                "short_id" => !is_null($decoded_vless["params"]["sid"])
+                    ? $decoded_vless["params"]["sid"]
+                    : "",
+            ];
+        if (
+            is_null($decoded_vless["params"]["pbk"]) or
+            $decoded_vless["params"]["pbk"] === ""
+        ) {
+            return null;
+        }
+        }
     }
-    $transportTypes = array(
-      "ws" => array(
-        "type" => $decoded_vless['params']["type"],
-        "path" => "/" . $decoded_vless['params']["path"],
-        "headers" => array(
-          "Host" => !is_null($decoded_vless['params']["host"]) ? $decoded_vless['params']["host"] : ""
-        ),
-        "max_early_data" => 0,
-        "early_data_header_name" => "Sec-WebSocket-Protocol"
-      ),
-      "grpc" => array(
-        "type" => $decoded_vless['params']["type"],
-        "service_name" => $decoded_vless['params']["serviceName"],
-        "idle_timeout" => "15s",
-        "ping_timeout" => "15s",
-        "permit_without_stream" => false
-      )
-    );
     if (isset($decoded_vless['params']["type"])){
         if ($decoded_vless['params']["type"] === "ws" || $decoded_vless['params']["type"] === "grpc"){
             $configResult["transport"] = $transportTypes[$decoded_vless['params']["type"]];
