@@ -115,6 +115,8 @@ $Types = [
     "ARv2ray" => ["vless"],
     "V2parsin" => ["vmess", "vless"],
     "reality_daily" => ["vless"],
+    "IRN_VPN" => ["vless"],
+    
 ];
 
 $donated_subscription = [
