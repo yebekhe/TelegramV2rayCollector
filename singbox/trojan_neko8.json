@@ -29,7 +29,7 @@
         ],
         "servers": [
             {
-                "address": "https:\/\/8.8.8.8\/dns-query",
+                "address": "https:\/\/dns.bitdefender.net\/dns-query",
                 "address_resolver": "dns-direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
@@ -68,7 +68,7 @@
         {
             "listen": "0.0.0.0",
             "listen_port": 6450,
-            "override_address": "8.8.4.4",
+            "override_address": "8.8.8.8",
             "override_port": 53,
             "tag": "dns-in",
             "type": "direct"
@@ -116,18 +116,18 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "@PrivateVPNs | DE🇩🇪 | 3.78.156.215:22222 | 161.13ms | 0️⃣1️⃣",
-                "@PrivateVPNs | DE🇩🇪 | 52.58.52.124:22222 | 163.97ms | 0️⃣2️⃣",
-                "@PrivateVPNs | FR🇫🇷 | 35.181.159.99:22222 | 152.33ms | 0️⃣3️⃣",
-                "@DirectVPN | GB🇬🇧 | 18.169.182.203:22222 | 156.48ms | 0️⃣1️⃣",
-                "@oneclickvpnkeys | GB🇬🇧 | 3.9.127.187:22222 | 147.05ms | 0️⃣1️⃣",
-                "@DirectVPN | IE🇮🇪 | 99.81.138.133:22222 | 150.51ms | 0️⃣2️⃣",
-                "@vmess_vless_v2rayng | IE🇮🇪 | 99.81.120.13:22222 | 187.23ms | 0️⃣1️⃣",
-                "@vmess_vless_v2rayng | IE🇮🇪 | 63.33.17.50:22222 | 166.37ms | 0️⃣2️⃣",
-                "@DirectVPN | US🇺🇸 | 3.226.61.244:22222 | 115.28ms | 0️⃣3️⃣",
-                "@ovpn2 | US🇺🇸 | us1.chuqiangtou.net:4003 | 91.56ms | 0️⃣1️⃣",
-                "@ovpn2 | US🇺🇸 | us3.chuqiangtou.net:4003 | 66.85ms | 0️⃣3️⃣",
-                "@yaney_01 | CN🇨🇳 | iplc-enter-tw-xe.fib-sys.xyz:11451 | 950.94ms | 0️⃣1️⃣"
+                "@PrivateVPNs | DE🇩🇪 | 3.78.156.215:22222 | 159.26ms | 0️⃣1️⃣",
+                "@PrivateVPNs | DE🇩🇪 | 52.58.52.124:22222 | 161.72ms | 0️⃣2️⃣",
+                "@PrivateVPNs | FR🇫🇷 | 35.181.159.99:22222 | 176.72ms | 0️⃣3️⃣",
+                "@DirectVPN | GB🇬🇧 | 18.169.182.203:22222 | 177.44ms | 0️⃣1️⃣",
+                "@oneclickvpnkeys | GB🇬🇧 | 3.9.127.187:22222 | 149.26ms | 0️⃣1️⃣",
+                "@DirectVPN | IE🇮🇪 | 99.81.138.133:22222 | 137.09ms | 0️⃣2️⃣",
+                "@vmess_vless_v2rayng | IE🇮🇪 | 99.81.120.13:22222 | 145.12ms | 0️⃣1️⃣",
+                "@vmess_vless_v2rayng | IE🇮🇪 | 63.33.17.50:22222 | 136.77ms | 0️⃣2️⃣",
+                "@DirectVPN | US🇺🇸 | 3.226.61.244:22222 | 135.72ms | 0️⃣3️⃣",
+                "@ovpn2 | US🇺🇸 | us1.chuqiangtou.net:4003 | 116.04ms | 0️⃣1️⃣",
+                "@ovpn2 | US🇺🇸 | us3.chuqiangtou.net:4003 | 158.89ms | 0️⃣3️⃣",
+                "@yaney_01 | CN🇨🇳 | iplc-enter-tw-xe.fib-sys.xyz:11451 | 1111.64ms | 0️⃣1️⃣"
             ],
             "url": "http:\/\/www.gstatic.com\/generate_204",
             "interval": "10m",
@@ -137,8 +137,8 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "@PrivateVPNs | DE🇩🇪 | 3.78.156.215:22222 | 161.13ms | 0️⃣1️⃣",
-                "@PrivateVPNs | DE🇩🇪 | 52.58.52.124:22222 | 163.97ms | 0️⃣2️⃣"
+                "@PrivateVPNs | DE🇩🇪 | 3.78.156.215:22222 | 159.26ms | 0️⃣1️⃣",
+                "@PrivateVPNs | DE🇩🇪 | 52.58.52.124:22222 | 161.72ms | 0️⃣2️⃣"
             ],
             "url": "http:\/\/www.gstatic.com\/generate_204",
             "interval": "10m",
@@ -148,7 +148,7 @@
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
-                "@PrivateVPNs | FR🇫🇷 | 35.181.159.99:22222 | 152.33ms | 0️⃣3️⃣"
+                "@PrivateVPNs | FR🇫🇷 | 35.181.159.99:22222 | 176.72ms | 0️⃣3️⃣"
             ],
             "url": "http:\/\/www.gstatic.com\/generate_204",
             "interval": "10m",
@@ -158,8 +158,8 @@
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
-                "@DirectVPN | GB🇬🇧 | 18.169.182.203:22222 | 156.48ms | 0️⃣1️⃣",
-                "@oneclickvpnkeys | GB🇬🇧 | 3.9.127.187:22222 | 147.05ms | 0️⃣1️⃣"
+                "@DirectVPN | GB🇬🇧 | 18.169.182.203:22222 | 177.44ms | 0️⃣1️⃣",
+                "@oneclickvpnkeys | GB🇬🇧 | 3.9.127.187:22222 | 149.26ms | 0️⃣1️⃣"
             ],
             "url": "http:\/\/www.gstatic.com\/generate_204",
             "interval": "10m",
@@ -169,9 +169,9 @@
             "tag": "IE🇮🇪",
             "type": "urltest",
             "outbounds": [
-                "@DirectVPN | IE🇮🇪 | 99.81.138.133:22222 | 150.51ms | 0️⃣2️⃣",
-                "@vmess_vless_v2rayng | IE🇮🇪 | 99.81.120.13:22222 | 187.23ms | 0️⃣1️⃣",
-                "@vmess_vless_v2rayng | IE🇮🇪 | 63.33.17.50:22222 | 166.37ms | 0️⃣2️⃣"
+                "@DirectVPN | IE🇮🇪 | 99.81.138.133:22222 | 137.09ms | 0️⃣2️⃣",
+                "@vmess_vless_v2rayng | IE🇮🇪 | 99.81.120.13:22222 | 145.12ms | 0️⃣1️⃣",
+                "@vmess_vless_v2rayng | IE🇮🇪 | 63.33.17.50:22222 | 136.77ms | 0️⃣2️⃣"
             ],
             "url": "http:\/\/www.gstatic.com\/generate_204",
             "interval": "10m",
@@ -181,9 +181,9 @@
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "@DirectVPN | US🇺🇸 | 3.226.61.244:22222 | 115.28ms | 0️⃣3️⃣",
-                "@ovpn2 | US🇺🇸 | us1.chuqiangtou.net:4003 | 91.56ms | 0️⃣1️⃣",
-                "@ovpn2 | US🇺🇸 | us3.chuqiangtou.net:4003 | 66.85ms | 0️⃣3️⃣"
+                "@DirectVPN | US🇺🇸 | 3.226.61.244:22222 | 135.72ms | 0️⃣3️⃣",
+                "@ovpn2 | US🇺🇸 | us1.chuqiangtou.net:4003 | 116.04ms | 0️⃣1️⃣",
+                "@ovpn2 | US🇺🇸 | us3.chuqiangtou.net:4003 | 158.89ms | 0️⃣3️⃣"
             ],
             "url": "http:\/\/www.gstatic.com\/generate_204",
             "interval": "10m",
@@ -193,14 +193,14 @@
             "tag": "CN🇨🇳",
             "type": "urltest",
             "outbounds": [
-                "@yaney_01 | CN🇨🇳 | iplc-enter-tw-xe.fib-sys.xyz:11451 | 950.94ms | 0️⃣1️⃣"
+                "@yaney_01 | CN🇨🇳 | iplc-enter-tw-xe.fib-sys.xyz:11451 | 1111.64ms | 0️⃣1️⃣"
             ],
             "url": "http:\/\/www.gstatic.com\/generate_204",
             "interval": "10m",
             "tolerance": 50
         },
         {
-            "tag": "@PrivateVPNs | DE🇩🇪 | 3.78.156.215:22222 | 161.13ms | 0️⃣1️⃣",
+            "tag": "@PrivateVPNs | DE🇩🇪 | 3.78.156.215:22222 | 159.26ms | 0️⃣1️⃣",
             "type": "trojan",
             "server": "3.78.156.215",
             "server_port": 22222,
@@ -221,7 +221,7 @@
             }
         },
         {
-            "tag": "@PrivateVPNs | DE🇩🇪 | 52.58.52.124:22222 | 163.97ms | 0️⃣2️⃣",
+            "tag": "@PrivateVPNs | DE🇩🇪 | 52.58.52.124:22222 | 161.72ms | 0️⃣2️⃣",
             "type": "trojan",
             "server": "52.58.52.124",
             "server_port": 22222,
@@ -242,7 +242,7 @@
             }
         },
         {
-            "tag": "@PrivateVPNs | FR🇫🇷 | 35.181.159.99:22222 | 152.33ms | 0️⃣3️⃣",
+            "tag": "@PrivateVPNs | FR🇫🇷 | 35.181.159.99:22222 | 176.72ms | 0️⃣3️⃣",
             "type": "trojan",
             "server": "35.181.159.99",
             "server_port": 22222,
@@ -263,7 +263,7 @@
             }
         },
         {
-            "tag": "@DirectVPN | GB🇬🇧 | 18.169.182.203:22222 | 156.48ms | 0️⃣1️⃣",
+            "tag": "@DirectVPN | GB🇬🇧 | 18.169.182.203:22222 | 177.44ms | 0️⃣1️⃣",
             "type": "trojan",
             "server": "18.169.182.203",
             "server_port": 22222,
@@ -284,7 +284,7 @@
             }
         },
         {
-            "tag": "@oneclickvpnkeys | GB🇬🇧 | 3.9.127.187:22222 | 147.05ms | 0️⃣1️⃣",
+            "tag": "@oneclickvpnkeys | GB🇬🇧 | 3.9.127.187:22222 | 149.26ms | 0️⃣1️⃣",
             "type": "trojan",
             "server": "3.9.127.187",
             "server_port": 22222,
@@ -305,7 +305,7 @@
             }
         },
         {
-            "tag": "@DirectVPN | IE🇮🇪 | 99.81.138.133:22222 | 150.51ms | 0️⃣2️⃣",
+            "tag": "@DirectVPN | IE🇮🇪 | 99.81.138.133:22222 | 137.09ms | 0️⃣2️⃣",
             "type": "trojan",
             "server": "99.81.138.133",
             "server_port": 22222,
@@ -326,7 +326,7 @@
             }
         },
         {
-            "tag": "@vmess_vless_v2rayng | IE🇮🇪 | 99.81.120.13:22222 | 187.23ms | 0️⃣1️⃣",
+            "tag": "@vmess_vless_v2rayng | IE🇮🇪 | 99.81.120.13:22222 | 145.12ms | 0️⃣1️⃣",
             "type": "trojan",
             "server": "99.81.120.13",
             "server_port": 22222,
@@ -347,7 +347,7 @@
             }
         },
         {
-            "tag": "@vmess_vless_v2rayng | IE🇮🇪 | 63.33.17.50:22222 | 166.37ms | 0️⃣2️⃣",
+            "tag": "@vmess_vless_v2rayng | IE🇮🇪 | 63.33.17.50:22222 | 136.77ms | 0️⃣2️⃣",
             "type": "trojan",
             "server": "63.33.17.50",
             "server_port": 22222,
@@ -368,7 +368,7 @@
             }
         },
         {
-            "tag": "@DirectVPN | US🇺🇸 | 3.226.61.244:22222 | 115.28ms | 0️⃣3️⃣",
+            "tag": "@DirectVPN | US🇺🇸 | 3.226.61.244:22222 | 135.72ms | 0️⃣3️⃣",
             "type": "trojan",
             "server": "3.226.61.244",
             "server_port": 22222,
@@ -389,7 +389,7 @@
             }
         },
         {
-            "tag": "@ovpn2 | US🇺🇸 | us1.chuqiangtou.net:4003 | 91.56ms | 0️⃣1️⃣",
+            "tag": "@ovpn2 | US🇺🇸 | us1.chuqiangtou.net:4003 | 116.04ms | 0️⃣1️⃣",
             "type": "trojan",
             "server": "us1.chuqiangtou.net",
             "server_port": 4003,
@@ -410,7 +410,7 @@
             }
         },
         {
-            "tag": "@ovpn2 | US🇺🇸 | us3.chuqiangtou.net:4003 | 66.85ms | 0️⃣3️⃣",
+            "tag": "@ovpn2 | US🇺🇸 | us3.chuqiangtou.net:4003 | 158.89ms | 0️⃣3️⃣",
             "type": "trojan",
             "server": "us3.chuqiangtou.net",
             "server_port": 4003,
@@ -431,7 +431,7 @@
             }
         },
         {
-            "tag": "@yaney_01 | CN🇨🇳 | iplc-enter-tw-xe.fib-sys.xyz:11451 | 950.94ms | 0️⃣1️⃣",
+            "tag": "@yaney_01 | CN🇨🇳 | iplc-enter-tw-xe.fib-sys.xyz:11451 | 1111.64ms | 0️⃣1️⃣",
             "type": "trojan",
             "server": "iplc-enter-tw-xe.fib-sys.xyz",
             "server_port": 11451,
@@ -476,7 +476,7 @@
             },
             {
                 "domain_suffix": [
-                    ".ir"
+                    "ir"
                 ],
                 "outbound": "bypass"
             },
