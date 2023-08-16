@@ -2,6 +2,11 @@
 
 header("Content-type: application/json;");
 
+function isEvenLength($str) {
+    $length = strlen($str);
+    return $length % 2 == 0;
+}
+
 function process_jsons($input, $locationNames){
     $input[0]['outbounds'] = array_merge($input[0]['outbounds'], array_filter($locationNames));
     return $input;
@@ -133,6 +138,12 @@ function VlessSingbox($VlessUrl)
             is_null($decoded_vless["params"]["pbk"]) or
             $decoded_vless["params"]["pbk"] === ""
         ) {
+            return null;
+        }
+        if (
+            !isEvenLength($decoded_vless["params"]["sid"]) && 
+            !is_null($decoded_vless["params"]["sid"])
+           ) {
             return null;
         }
         }
