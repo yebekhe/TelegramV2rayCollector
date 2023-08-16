@@ -65,7 +65,7 @@ $Types = [
     "melov2ray" => ["vless"],
     "polproxy" => ["vless"],
     "Outlinev2rayNG" => ["vless"],
-    "iP_CF" => ["vless"],
+    "iP_CF" => ["vless", "vmess", "trojan", "ss"],
     "VPNCUSTOMIZE" => ["vless"],
     "Royalping_ir" => ["vmess"],
     "v2rayng_vpnrog" => ["vless"],
@@ -91,6 +91,9 @@ $Types = [
     "V2parsin" => ["vmess", "vless"],
     "reality_daily" => ["vless"],
     "IRN_VPN" => ["vless"],
+    "zen_cloud" => ["vmess", "vless"],
+    "flyv2ray" => ["vless"],
+    "serveriran11" => ["vless"]
     
 ];
 
