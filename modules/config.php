@@ -93,7 +93,8 @@ $Types = [
     "IRN_VPN" => ["vless"],
     "zen_cloud" => ["vmess", "vless"],
     "flyv2ray" => ["vless"],
-    "serveriran11" => ["vless"]
+    "serveriran11" => ["vless"],
+    "v2raycollectordonate" => ["vmess", "vless", "trojan", "ss"],
     
 ];
 
