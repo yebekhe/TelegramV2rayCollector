@@ -329,7 +329,11 @@ function get_config($channel, $type)
     $configs = get_config_items($type, $get);
 
     $final_data = [];
-    $key_limit = count($configs[1]) - 3;
+    if ($channel === "v2raycollectordonate" ) {
+        $key_limit = count($configs[1]) - 20;
+    } else {
+        $key_limit = count($configs[1]) - 3;
+    }
     $config_number = 1;
 
     foreach ($configs[1] as $key => $config) {
