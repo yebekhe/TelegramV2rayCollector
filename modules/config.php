@@ -2,6 +2,7 @@
 date_default_timezone_set("Asia/Tehran");
 
 $Types = [
+    "v2raycollectordonate" => ["vmess", "vless", "trojan", "ss"],
     "V2rayNGn" => ["vmess", "vless"],
     "free4allVPN" => ["vmess", "ss"],
     "PrivateVPNs" => ["trojan"],
@@ -94,7 +95,7 @@ $Types = [
     "zen_cloud" => ["vmess", "vless"],
     "flyv2ray" => ["vless"],
     "serveriran11" => ["vless"],
-    "v2raycollectordonate" => ["vmess", "vless", "trojan", "ss"],
+    
     
 ];
 
