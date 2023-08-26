@@ -216,8 +216,8 @@ foreach ($donated_array as $key => $donated_config){
 
 $donated_mix = implode("\n", $donated_array);
 
-file_put_contents("sub/donated", $donated_mix);
-file_put_contents("sub/donated_base64", base64_encode($donated_mix));
+file_put_contents("sub/normal/donated", $donated_mix);
+file_put_contents("sub/base64/donated", base64_encode($donated_mix));
 
 // Extract the "config" value from each object in $type_data and store it in $type_array
 $vmess_array = config_array($vmess_data);
@@ -335,11 +335,11 @@ $subscription_types = [
 // Write subscription data to files
 foreach ($subscription_types as $subscription_type => $subscription_data) {
     file_put_contents(
-        "sub/" . $subscription_type,
+        "sub/normal/" . $subscription_type,
         base64_decode($subscription_data)
     );
     file_put_contents(
-        "sub/" . $subscription_type . "_base64",
+        "sub/base64/" . $subscription_type,
         $subscription_data
     );
 }
@@ -359,51 +359,6 @@ foreach ($countryBased as $country => $configsArray) {
 process_mix_json($mix_data, "configs.json");
 process_mix_json($mix_data_deduplicate, "configs_deduplicate.json");
 
-$convertor_url = "https://yebekhe.serv00.net/api/clash/?url=" . $raw_url_base . "/sub/";
-
-$clash_types = [
-    "mix" => [
-        "clash" => file_get_contents($convertor_url . "mix&type=clash&process=full"),
-        "meta" => file_get_contents($convertor_url . "mix&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "mix&type=surfboard&process=full&protocol=mix"),
-    ],
-    "vmess" => [
-        "clash" => file_get_contents($convertor_url . "vmess&type=clash&process=full"),
-        "meta" => file_get_contents($convertor_url . "vmess&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "vmess&type=surfboard&process=full&protocol=vmess" ),
-    ],
-    "vless" => [
-        "meta" => file_get_contents($convertor_url . "vless&type=meta&process=full"),
-    ],
-    "reality" => [
-        "meta" => file_get_contents($convertor_url . "reality&type=meta&process=full"),
-    ],
-    "trojan" => [
-        "clash" => file_get_contents($convertor_url . "trojan&type=clash&process=full"),
-        "meta" => file_get_contents($convertor_url . "trojan&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "trojan&type=surfboard&process=full&protocol=trojan"),
-    ],
-    "shadowsocks" => [
-        "clash" => file_get_contents($convertor_url . "shadowsocks&type=clash&process=full"),
-        "meta" => file_get_contents($convertor_url . "shadowsocks&type=meta&process=full"),
-        "surfboard" => file_get_contents($convertor_url . "shadowsocks&type=surfboard&process=full&protocol=shadowsocks"),
-    ],
-    "donated" => [
-        "meta" => file_get_contents($convertor_url . "donated&type=meta&process=full"),
-    ],
-];
-
-// Write Clash configuration data to files
-foreach ($clash_types as $clash_type => $clash_datas) {
-    foreach ($clash_datas as $which => $clash_data) {
-        if ($which !== "surfboard") {
-            file_put_contents($which . "/" . $clash_type . ".yml", $clash_data);
-        } else {
-            file_put_contents($which . "/" . $clash_type, $clash_data);
-        }
-    }
-}
-
 $singboxTypes = [
     "mix" => $mix,
     "vmess" => $fixed_string_vmess,
@@ -413,23 +368,23 @@ $singboxTypes = [
 ];
 
 foreach ($singboxTypes as $singboxType => $subContents) {
-    file_put_contents("singbox/" . $singboxType . "_neko8.json", GenerateConfig($subContents, "nnew"));
-    file_put_contents("singbox/" . $singboxType . "_neko7.json", GenerateConfig($subContents, "nold"));
-    file_put_contents("singbox/" . $singboxType . "_sfasfi.json", GenerateConfig($subContents, "sfia"));
-    file_put_contents("singbox/" . $singboxType . "_neko8_lite.json", GenerateConfigLite($subContents, "nnew"));
-    file_put_contents("singbox/" . $singboxType . "_neko7_lite.json", GenerateConfigLite($subContents, "nold"));
-    file_put_contents("singbox/" . $singboxType . "_sfasfi_lite.json", GenerateConfigLite($subContents, "sfia"));
+    file_put_contents("singbox/nekobox/118" . $singboxType . ".json", GenerateConfig($subContents, "nnew"));
+    file_put_contents("singbox/nekobox/117" . $singboxType . ".json", GenerateConfig($subContents, "nold"));
+    file_put_contents("singbox/sfasfi/" . $singboxType . ".json", GenerateConfig($subContents, "sfia"));
+    file_put_contents("singbox/nekobox/118" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nnew"));
+    file_put_contents("singbox/nekobox/117" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nold"));
+    file_put_contents("singbox/sfasfi" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "sfia"));
 }
 
 $the_string_reality_singbox = $fixed_string_reality . "\n" . $string_donated_reality ;
 $string_reality_singbox = remove_duplicate_xray($the_string_reality_singbox, "vless");
 
-file_put_contents("singbox/reality.json", GenerateConfig($string_reality_singbox, "nold"));
-file_put_contents("singbox/nekobox_new.json", GenerateConfig($string_reality_singbox, "nnew"));
-file_put_contents("singbox/sfi_sfa.json", GenerateConfig($string_reality_singbox,"sfia"));
-file_put_contents("singbox/reality_lite.json", GenerateConfigLite($string_reality_singbox, "nold"));
-file_put_contents("singbox/nekobox_new_lite.json", GenerateConfigLite($string_reality_singbox, "nnew"));
-file_put_contents("singbox/sfi_sfa_lite.json", GenerateConfigLite($string_reality_singbox,"sfia"));
+file_put_contents("singbox/nekobox/117/reality.json", GenerateConfig($string_reality_singbox, "nold"));
+file_put_contents("singbox/nekobox/118/reality.json", GenerateConfig($string_reality_singbox, "nnew"));
+file_put_contents("singbox/sfasfi/reality.json", GenerateConfig($string_reality_singbox,"sfia"));
+file_put_contents("singbox/nekobox/117/realityLite.json", GenerateConfigLite($string_reality_singbox, "nold"));
+file_put_contents("singbox/nekobox/118/realityLite.json", GenerateConfigLite($string_reality_singbox, "nnew"));
+file_put_contents("singbox/sfasfi/reality.json", GenerateConfigLite($string_reality_singbox,"sfia"));
 
 $data = [
     [
