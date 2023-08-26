@@ -353,7 +353,10 @@ function get_config($channel, $type)
                     $port = get_port($the_config, $type);
 
                     @$ping_data = ping($ip, $port);
-                    if ($ping_data !== "unavailable") {
+                    if (
+                        !filtered_or_not("https://" . $ip)
+                        $ping_data !== "unavailable"
+                        ) {
                         $flag = get_flag($ip) . " | " . $ip . ":" . $port;
                         $ping_data = $ping_data;
                         
@@ -435,7 +438,10 @@ function process_subscription($input, $channel)
             $port = get_port($the_config, $type);
 
             @$ping_data = ping($ip, $port);
-            if ($ping_data !== "unavailable") {
+            if (
+                !filtered_or_not("https://" . $ip)
+                $ping_data !== "unavailable"
+                ) {
                 $flag = get_flag($ip) . " | " . $ip . ":" . $port;
                 $ping_data = $ping_data;
 
