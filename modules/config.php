@@ -2,7 +2,6 @@
 date_default_timezone_set("Asia/Tehran");
 
 $Types = [
-    "v2raycollectordonate" => ["vmess", "vless", "trojan", "ss"],
     "Helix_Servers" => ["vless"],
     "INIT1984" => ["vless"],
     "Parsashonam" => ["vless"],
@@ -31,6 +30,7 @@ $Types = [
     "V2rayNGmat" => ["vless"],
     "iP_CF" => ["vless", "vmess", "trojan", "ss"],
     "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
+    "v2raycollectordonate" => ["vmess", "vless", "trojan", "ss"],
     "V2rayNGn" => ["vmess", "vless"],
     "free4allVPN" => ["vmess", "ss"],
     "PrivateVPNs" => ["trojan"],
