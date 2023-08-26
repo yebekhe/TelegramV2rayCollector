@@ -384,7 +384,7 @@ file_put_contents("singbox/nekobox/118/reality.json", GenerateConfig($string_rea
 file_put_contents("singbox/sfasfi/reality.json", GenerateConfig($string_reality_singbox,"sfia"));
 file_put_contents("singbox/nekobox/117/realityLite.json", GenerateConfigLite($string_reality_singbox, "nold"));
 file_put_contents("singbox/nekobox/118/realityLite.json", GenerateConfigLite($string_reality_singbox, "nnew"));
-file_put_contents("singbox/sfasfi/reality.json", GenerateConfigLite($string_reality_singbox,"sfia"));
+file_put_contents("singbox/sfasfi/realityLite.json", GenerateConfigLite($string_reality_singbox,"sfia"));
 
 $data = [
     [
