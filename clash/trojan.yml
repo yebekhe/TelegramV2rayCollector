@@ -6,48 +6,44 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"name":"@PrivateVPNs | FR🇫🇷 | 15.188.71.228:22222 | 87.3ms | 0️⃣1️⃣","type":"trojan","server":"15.188.71.228","port":22222,"udp":false,"password":"telegram-id-privatevpns","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"@PrivateVPNs | FR🇫🇷 | 15.188.192.115:22222 | 89.37ms | 0️⃣2️⃣","type":"trojan","server":"15.188.192.115","port":22222,"udp":false,"password":"telegram-id-privatevpns","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 81.37ms | 0️⃣3️⃣","type":"trojan","server":"35.176.111.252","port":22222,"udp":false,"password":"telegram-id-privatevpns","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 71.23ms | 0️⃣1️⃣","type":"trojan","server":"54.195.121.187","port":22222,"udp":false,"password":"telegram-id-directvpn","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 84.26ms | 0️⃣2️⃣","type":"trojan","server":"13.37.142.36","port":22222,"udp":false,"password":"telegram-id-directvpn","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 147.48ms | 0️⃣3️⃣","type":"trojan","server":"13.40.227.237","port":22222,"udp":false,"password":"telegram-id-directvpn","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 80.96ms | 0️⃣1️⃣","type":"trojan","server":"482.outline-vpn.cloud","port":443,"udp":false,"password":"d8fd35e7-25f7-452d-852a-6ad1cfb3c9b8","sni":"ftp.pardazesh.tech","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"@PrivateVPNs | FR🇫🇷 | 15.188.192.115:22222 | 145.2ms | 0️⃣1️⃣","type":"trojan","server":"15.188.192.115","port":22222,"udp":false,"password":"telegram-id-privatevpns","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 157.06ms | 0️⃣2️⃣","type":"trojan","server":"35.176.111.252","port":22222,"udp":false,"password":"telegram-id-privatevpns","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 156.68ms | 0️⃣1️⃣","type":"trojan","server":"54.195.121.187","port":22222,"udp":false,"password":"telegram-id-directvpn","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 163.93ms | 0️⃣2️⃣","type":"trojan","server":"13.37.142.36","port":22222,"udp":false,"password":"telegram-id-directvpn","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 185.71ms | 0️⃣3️⃣","type":"trojan","server":"13.40.227.237","port":22222,"udp":false,"password":"telegram-id-directvpn","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 23.69ms | 0️⃣1️⃣","type":"trojan","server":"482.outline-vpn.cloud","port":443,"udp":false,"password":"d8fd35e7-25f7-452d-852a-6ad1cfb3c9b8","sni":"ftp.pardazesh.tech","skip-cert-verify":false,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - URL-TEST
       - FALLBACK
-      - '@PrivateVPNs | FR🇫🇷 | 15.188.192.115:22222 | 89.37ms | 0️⃣2️⃣'
-      - '@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 81.37ms | 0️⃣3️⃣'
-      - '@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 71.23ms | 0️⃣1️⃣'
-      - '@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 84.26ms | 0️⃣2️⃣'
-      - '@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 147.48ms | 0️⃣3️⃣'
-      - '@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 80.96ms | 0️⃣1️⃣'
+      - '@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 157.06ms | 0️⃣2️⃣'
+      - '@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 156.68ms | 0️⃣1️⃣'
+      - '@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 163.93ms | 0️⃣2️⃣'
+      - '@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 185.71ms | 0️⃣3️⃣'
+      - '@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 23.69ms | 0️⃣1️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies:
-      - '@PrivateVPNs | FR🇫🇷 | 15.188.192.115:22222 | 89.37ms | 0️⃣2️⃣'
-      - '@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 81.37ms | 0️⃣3️⃣'
-      - '@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 71.23ms | 0️⃣1️⃣'
-      - '@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 84.26ms | 0️⃣2️⃣'
-      - '@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 147.48ms | 0️⃣3️⃣'
-      - '@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 80.96ms | 0️⃣1️⃣'
+      - '@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 157.06ms | 0️⃣2️⃣'
+      - '@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 156.68ms | 0️⃣1️⃣'
+      - '@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 163.93ms | 0️⃣2️⃣'
+      - '@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 185.71ms | 0️⃣3️⃣'
+      - '@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 23.69ms | 0️⃣1️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - '@PrivateVPNs | FR🇫🇷 | 15.188.192.115:22222 | 89.37ms | 0️⃣2️⃣'
-      - '@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 81.37ms | 0️⃣3️⃣'
-      - '@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 71.23ms | 0️⃣1️⃣'
-      - '@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 84.26ms | 0️⃣2️⃣'
-      - '@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 147.48ms | 0️⃣3️⃣'
-      - '@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 80.96ms | 0️⃣1️⃣'
+      - '@PrivateVPNs | GB🇬🇧 | 35.176.111.252:22222 | 157.06ms | 0️⃣2️⃣'
+      - '@DirectVPN | IE🇮🇪 | 54.195.121.187:22222 | 156.68ms | 0️⃣1️⃣'
+      - '@DirectVPN | FR🇫🇷 | 13.37.142.36:22222 | 163.93ms | 0️⃣2️⃣'
+      - '@DirectVPN | GB🇬🇧 | 13.40.227.237:22222 | 185.71ms | 0️⃣3️⃣'
+      - '@VmessProtocol | RELAY🚩 | 482.outline-vpn.cloud:443 | 23.69ms | 0️⃣1️⃣'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
