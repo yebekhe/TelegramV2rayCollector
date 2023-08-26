@@ -354,7 +354,7 @@ function get_config($channel, $type)
 
                     @$ping_data = ping($ip, $port);
                     if (
-                        !filtered_or_not("https://" . $ip)
+                        !filtered_or_not("https://" . $ip) &&
                         $ping_data !== "unavailable"
                         ) {
                         $flag = get_flag($ip) . " | " . $ip . ":" . $port;
@@ -439,7 +439,7 @@ function process_subscription($input, $channel)
 
             @$ping_data = ping($ip, $port);
             if (
-                !filtered_or_not("https://" . $ip)
+                !filtered_or_not("https://" . $ip) &&
                 $ping_data !== "unavailable"
                 ) {
                 $flag = get_flag($ip) . " | " . $ip . ":" . $port;
