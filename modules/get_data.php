@@ -247,7 +247,7 @@ function get_channels_assets()
     );
 }
 
-function generate_name($channel, $flag, $ping, $is_reality, $number)
+function generate_name($channel, $flag, $is_reality, $number)
 {
     $name = "";
     switch ($is_reality) {
@@ -259,11 +259,10 @@ function generate_name($channel, $flag, $ping, $is_reality, $number)
                 " | " .
                 $flag .
                 " | " .
-                $ping .
-                "ms | " . numberToEmoji($number);
+                numberToEmoji($number);
             break;
         case false:
-            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms | " . numberToEmoji($number);
+            $name = "@" . $channel . " | " . $flag . " | " . numberToEmoji($number);
             break;
     }
     return $name;
@@ -351,19 +350,15 @@ function get_config($channel, $type)
                 if (is_valid_address($address) !== false) {
                     $ip = get_ip($the_config, $type, $is_reality);
                     $port = get_port($the_config, $type);
-
-                    @$ping_data = ping($ip, $port);
                     if (
-                        $ping_data !== "unavailable"
+                        !filtered_or_not($ip)
                         ) {
                         $flag = get_flag($ip) . " | " . $ip . ":" . $port;
-                        $ping_data = $ping_data;
                         
                         $name_key = $name_array[$type];
                         $the_config[$name_key] = generate_name(
                             $channel,
                             $flag,
-                            $ping_data,
                             $is_reality,
                             $config_number
                         );
@@ -379,7 +374,6 @@ function get_config($channel, $type)
                             ? "reality"
                             : $type;
                         $final_data[$key]["config"] = $final_config;
-                        $final_data[$key]["ping"] = $ping_data;
                         $final_data[$key]["time"] = convert_to_iran_time(
                             $matches[1][$key]
                         );
@@ -435,19 +429,15 @@ function process_subscription($input, $channel)
         if (is_valid_address($address) !== false) {
             $ip = get_ip($the_config, $type, $is_reality);
             $port = get_port($the_config, $type);
-
-            @$ping_data = ping($ip, $port);
             if (
-                $ping_data !== "unavailable"
+                !filtered_or_not($ip, )
                 ) {
                 $flag = get_flag($ip) . " | " . $ip . ":" . $port;
-                $ping_data = $ping_data;
 
                 $name_key = $name_array[$type];
                 $the_config[$name_key] = generate_name(
                     $channel,
                     $flag,
-                    $ping_data,
                     $is_reality,
                     $config_number
                 );
@@ -462,7 +452,6 @@ function process_subscription($input, $channel)
                     ? "reality"
                     : $type;
                 $final_data[$type][$key]["config"] = $final_config;
-                $final_data[$type][$key]["ping"] = $ping_data;
                 $final_data[$type][$key]["time"] = tehran_time();
 
                 $key++;
