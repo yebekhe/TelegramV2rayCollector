@@ -28,6 +28,7 @@ $Types = [
     "VpnProSec" => ["vless"],
     "lightning6" => ["vless"],
     "V2rayNGmat" => ["vless"],
+    "CloudCityy" => ["vless"],
     "iP_CF" => ["vless", "vmess", "trojan", "ss"],
     "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
     "v2raycollectordonate" => ["vmess", "vless", "trojan", "ss"],
