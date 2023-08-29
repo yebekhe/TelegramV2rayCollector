@@ -320,7 +320,7 @@ function GenerateConfig($input, $output){
     }
 
     $templateManual = process_jsons($templateManual, $locationNames);
-    $templateUrltest[0]['tag'] = "URL-TEST";
+    $templateUrltest[0]['tag'] = "URL-TEST | رایگان";
     $configNamesFull = extract_names($outboundSingles);
     $outboundUrltest = process_jsons($templateUrltest, $configNamesFull);
     $outboundUrltest = array_merge($outboundUrltest, $outboundBasedOnLocationFull);
