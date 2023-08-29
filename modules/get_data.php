@@ -247,23 +247,22 @@ function get_channels_assets()
     );
 }
 
-function generate_name($channel, $flag, $ping, $is_reality, $number)
+function generate_name($channel, $flag, $is_reality, $number)
 {
     $name = "";
     switch ($is_reality) {
         case true:
             $name =
-                "REALITY | " .
+                "رایگان | REALITY | " .
                 "@" .
                 $channel .
                 " | " .
                 $flag .
                 " | " .
-                $ping .
-                "ms | " . numberToEmoji($number);
+                numberToEmoji($number);
             break;
         case false:
-            $name = "@" . $channel . " | " . $flag . " | " . $ping . "ms | " . numberToEmoji($number);
+            $name = "رایگان | @" . $channel . " | " . $flag . " | " . numberToEmoji($number);
             break;
     }
     return $name;
@@ -354,7 +353,7 @@ function get_config($channel, $type)
 
                     @$ping_data = ping($ip, $port);
                     if ($ping_data !== "unavailable") {
-                        $flag = get_flag($ip) . " | " . $ip . ":" . $port;
+                        $flag = get_flag($ip);
                         $ping_data = $ping_data;
                         
                         $name_key = $name_array[$type];
@@ -436,7 +435,7 @@ function process_subscription($input, $channel)
 
             @$ping_data = ping($ip, $port);
             if ($ping_data !== "unavailable") {
-                $flag = get_flag($ip) . " | " . $ip . ":" . $port;
+                $flag = get_flag($ip);
                 $ping_data = $ping_data;
 
                 $name_key = $name_array[$type];
