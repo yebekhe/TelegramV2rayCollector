@@ -247,7 +247,7 @@ function get_channels_assets()
     );
 }
 
-function generate_name($channel, $flag, $is_reality, $number)
+function generate_name($channel, $flag, $is_reality, $number, $type)
 {
     $name = "";
     switch ($is_reality) {
@@ -262,7 +262,7 @@ function generate_name($channel, $flag, $is_reality, $number)
                 numberToEmoji($number);
             break;
         case false:
-            $name = "رایگان | @" . $channel . " | " . $flag . " | " . numberToEmoji($number);
+            $name = "رایگان | " . $type . " | @" . $channel . " | " . $flag . " | " . numberToEmoji($number);
             break;
     }
     return $name;
@@ -360,7 +360,8 @@ function get_config($channel, $type)
                             $channel,
                             $flag,
                             $is_reality,
-                            $config_number
+                            $config_number,
+                            strtoupper($type)
                         );
                         
                         $final_config = build_config($the_config, $type);
@@ -440,7 +441,8 @@ function process_subscription($input, $channel)
                     $channel,
                     $flag,
                     $is_reality,
-                    $config_number
+                    $config_number,
+                    strtoupper($type)
                 );
                 $final_config = build_config($the_config, $type);
 
