@@ -102,9 +102,8 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "FR🇫🇷",
-                "SK🇸🇰",
                 "GB🇬🇧",
+                "LU🇱🇺",
                 "US🇺🇸",
                 "AU🇦🇺",
                 "CA🇨🇦",
@@ -116,10 +115,11 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | SS | @V2rayCollectorDonate | SK🇸🇰 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | LU🇱🇺 | 0️⃣1️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | AU🇦🇺 | 0️⃣1️⃣",
@@ -132,31 +132,23 @@
             "tolerance": 50
         },
         {
-            "tag": "FR🇫🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "SK🇸🇰",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @V2rayCollectorDonate | SK🇸🇰 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "LU🇱🇺",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @V2rayCollectorDonate | LU🇱🇺 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -214,27 +206,27 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "ak1772.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
-            "server_port": 810,
-            "method": "chacha20-ietf-poly1305",
-            "password": "G!yBwPWH3Vao",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @V2rayCollectorDonate | SK🇸🇰 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "185.48.248.126",
-            "server_port": 444,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Onsheypy",
+            "server": "77.72.5.113",
+            "server_port": 989,
+            "method": "aes-256-cfb",
+            "password": "f8f7aCzcPKbsF8p3",
             "plugin": "",
             "plugin_opts": ""
         },
         {
             "tag": "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "212.102.53.198",
+            "server_port": 443,
+            "method": "aes-128-gcm",
+            "password": "shadowsocks",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "212.102.53.80",
             "server_port": 443,
@@ -250,6 +242,16 @@
             "server_port": 39550,
             "method": "chacha20-ietf-poly1305",
             "password": "FljusGXaWhe8mAFaqwotpO",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @V2rayCollectorDonate | LU🇱🇺 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "tvc.sabz.top",
+            "server_port": 15255,
+            "method": "aes-128-gcm",
+            "password": "hwZMP00pxaEra1Znt5bqfR0elpezlknJWJEkbenCVt91",
             "plugin": "",
             "plugin_opts": ""
         },
