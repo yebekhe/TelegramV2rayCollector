@@ -113,6 +113,7 @@
                 "FI🇫🇮",
                 "RELAY🚩",
                 "RU🇷🇺",
+                "GE🇬🇪",
                 "US🇺🇸",
                 "FR🇫🇷",
                 "HK🇭🇰"
@@ -175,7 +176,7 @@
                 "رایگان | REALITY | @v2rayng_config_amin | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @zahedan | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @zahedan | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @zahedan | DE🇩🇪 | 0️⃣3️⃣",
@@ -223,6 +224,8 @@
                 "رایگان | REALITY | @VmessProtocol | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | REALITY | @V2rayCollectorDonate | RELAY🚩 | 0️⃣2️⃣",
                 "رایگان | REALITY | @Outline_Vpn | RU🇷🇺 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ConfigsHUB | GE🇬🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | REALITY | @bright_vpn | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | REALITY | @bright_vpn | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | REALITY | @neda_aghasoltan | FR🇫🇷 | 0️⃣1️⃣",
@@ -330,7 +333,7 @@
                 "رایگان | REALITY | @v2rayng_config_amin | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @zahedan | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @zahedan | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @zahedan | DE🇩🇪 | 0️⃣3️⃣",
@@ -447,9 +450,20 @@
             "tolerance": 50
         },
         {
+            "tag": "GE🇬🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @ConfigsHUB | GE🇬🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | REALITY | @bright_vpn | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | REALITY | @bright_vpn | US🇺🇸 | 0️⃣2️⃣"
             ],
@@ -2153,34 +2167,6 @@
         {
             "tag": "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "128.140.45.124",
-            "server_port": 8443,
-            "uuid": "Id-telegram-CUSTOMVPNSERVER",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.discord.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "bsC1bIPbCmL9n5Vz38PV9ICgX6WRk3IZ9Vujonm4L3E",
-                    "short_id": "3d9cbfa7"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣1️⃣",
-            "type": "vless",
             "server": "209.38.217.159",
             "server_port": 443,
             "uuid": "23c3c3e6-691a-48bb-a66a-1755c51862b4",
@@ -2211,6 +2197,34 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "128.140.45.124",
+            "server_port": 8443,
+            "uuid": "Id-telegram-CUSTOMVPNSERVER",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.discord.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "bsC1bIPbCmL9n5Vz38PV9ICgX6WRk3IZ9Vujonm4L3E",
+                    "short_id": "3d9cbfa7"
+                }
             }
         },
         {
@@ -3598,6 +3612,76 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@melo",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | GE🇬🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "77.91.70.194",
+            "server_port": 29814,
+            "uuid": "1fb0bf98-a0e2-41fa-865d-f6afb752df65",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "bWrE8qkV4gTdzCHJ7j4AQ67Kgh-jP6zvTz_I5kizZV0",
+                    "short_id": "f0cf3bb7"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "TELEGRAM:@ZEDMODEON,TELEGRAM:@ZEDMODEON,TELEGRAM:@ZEDMODEON,TELEGRAM:@ZEDMODEON",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "143.42.226.185",
+            "server_port": 2096,
+            "uuid": "771a4eda-412d-43ec-90c4-bec4033f17be",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.theverge.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "OmECH4TjY7SRszDaPqBMyxUimY00ixMzV08urpAAOno",
+                    "short_id": "09dac6ed"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "TELEGRAM:@ZEDMODEON,TELEGRAM:@ZEDMODEON,TELEGRAM:@ZEDMODEON,TELEGRAM:@ZEDMODEON",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
