@@ -30,6 +30,7 @@ $Types = [
     "V2rayNGmat" => ["vless"],
     "CloudCityy" => ["vless"],
     "CUSTOMVPNSERVER" => ["vmess", "vless"],
+    "DigiV2ray" => ["vless"],
     "iP_CF" => ["vless", "vmess", "trojan", "ss"],
     "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
     "V2rayCollectorDonate" => ["vmess", "vless", "trojan", "ss"],
