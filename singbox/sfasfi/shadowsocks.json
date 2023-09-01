@@ -103,9 +103,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "GB🇬🇧",
-                "LU🇱🇺",
-                "US🇺🇸",
                 "CA🇨🇦",
+                "US🇺🇸",
                 "DE🇩🇪",
                 "KR🇰🇷"
             ]
@@ -118,10 +117,10 @@
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @V2rayCollectorDonate | LU🇱🇺 | 0️⃣1️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | SS | @yaney_01 | KR🇰🇷 | 0️⃣1️⃣"
             ],
@@ -143,10 +142,11 @@
             "tolerance": 50
         },
         {
-            "tag": "LU🇱🇺",
+            "tag": "CA🇨🇦",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @V2rayCollectorDonate | LU🇱🇺 | 0️⃣1️⃣"
+                "رایگان | SS | @V2rayCollectorDonate | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -158,16 +158,6 @@
             "outbounds": [
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "CA🇨🇦",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -234,12 +224,22 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @V2rayCollectorDonate | LU🇱🇺 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @V2rayCollectorDonate | CA🇨🇦 | 0️⃣1️⃣",
             "type": "shadowsocks",
             "server": "tvc.sabz.top",
             "server_port": 15255,
             "method": "aes-128-gcm",
             "password": "hwZMP00pxaEra1Znt5bqfR0elpezlknJWJEkbenCVt91",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "ak1846.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
+            "server_port": 811,
+            "method": "chacha20-ietf-poly1305",
+            "password": "G!yBwPWH3Vao",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -260,16 +260,6 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "j4wkIrreHEdC",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "ak1846.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
-            "server_port": 811,
-            "method": "chacha20-ietf-poly1305",
-            "password": "G!yBwPWH3Vao",
             "plugin": "",
             "plugin_opts": ""
         },
