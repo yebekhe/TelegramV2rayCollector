@@ -105,6 +105,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
+                "MD🇲🇩",
                 "SI🇸🇮",
                 "GB🇬🇧",
                 "US🇺🇸",
@@ -118,7 +119,8 @@
                 "رایگان | SS | @iP_CF | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | SS | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | SS | @iP_CF | SI🇸🇮 | 0️⃣2️⃣",
+                "رایگان | SS | @iP_CF | MD🇲🇩 | 0️⃣2️⃣",
+                "رایگان | SS | @iP_CF | SI🇸🇮 | 0️⃣3️⃣",
                 "رایگان | SS | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣2️⃣",
@@ -143,10 +145,20 @@
             "tolerance": 50
         },
         {
+            "tag": "MD🇲🇩",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @iP_CF | MD🇲🇩 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "SI🇸🇮",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | SI🇸🇮 | 0️⃣2️⃣"
+                "رایگان | SS | @iP_CF | SI🇸🇮 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -216,7 +228,17 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @iP_CF | SI🇸🇮 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @iP_CF | MD🇲🇩 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "89.43.111.116",
+            "server_port": 989,
+            "method": "aes-256-gcm",
+            "password": "f8f7aCzcPKbsF8p3",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @iP_CF | SI🇸🇮 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "192.71.244.150",
             "server_port": 989,
