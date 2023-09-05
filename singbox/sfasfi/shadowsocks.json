@@ -103,6 +103,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "FR🇫🇷",
+                "DE🇩🇪",
                 "US🇺🇸",
                 "GB🇬🇧",
                 "JP🇯🇵",
@@ -114,7 +115,9 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @V2rayCollectorDonate | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | SS | @V2rayCollectorDonate | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣2️⃣",
@@ -133,7 +136,18 @@
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @V2rayCollectorDonate | FR🇫🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @iP_CF | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -194,12 +208,32 @@
             "tolerance": 50
         },
         {
+            "tag": "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "162.19.18.235",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
             "tag": "رایگان | SS | @V2rayCollectorDonate | FR🇫🇷 | 0️⃣1️⃣",
             "type": "shadowsocks",
             "server": "149.202.82.172",
             "server_port": 8091,
             "method": "aes-256-gcm",
             "password": "PCnnH6SQSnfoS27",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @iP_CF | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "162.19.139.36",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
             "plugin": "",
             "plugin_opts": ""
         },
