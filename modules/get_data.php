@@ -422,6 +422,7 @@ function process_subscription($input, $channel)
     $array_helper_trojan = 0;
     $config_number = 1;
     $i = 0;
+    $channel = $channel . " | Donated" ;
     foreach ($configs as $config) {
         $type = detect_type($config);
         $is_reality = is_reality($config, $type);
@@ -435,7 +436,7 @@ function process_subscription($input, $channel)
             @$ping_data = ping($ip, $port);
             if ($ping_data !== "unavailable") {
                 $flag = get_flag($ip);
-                $channel = $channel . " | Donated" ;
+                
                 $name_key = $name_array[$type];
                 $the_config[$name_key] = generate_name(
                     $channel,
