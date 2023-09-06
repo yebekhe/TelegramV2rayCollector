@@ -435,7 +435,7 @@ function process_subscription($input, $channel)
             @$ping_data = ping($ip, $port);
             if ($ping_data !== "unavailable") {
                 $flag = get_flag($ip);
-
+                $channel = $channel . " | Donated" ;
                 $name_key = $name_array[$type];
                 $the_config[$name_key] = generate_name(
                     $channel,
