@@ -100,6 +100,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "FR🇫🇷",
+                "BH🇧🇭",
                 "GB🇬🇧",
                 "US🇺🇸",
                 "PL🇵🇱",
@@ -112,6 +113,8 @@
             "outbounds": [
                 "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣2️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | BH🇧🇭 | 0️⃣1️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣",
@@ -135,9 +138,20 @@
             "tolerance": 50
         },
         {
+            "tag": "BH🇧🇭",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @V2rayCollectorDonate | BH🇧🇭 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | GB🇬🇧 | 0️⃣2️⃣"
             ],
@@ -193,6 +207,26 @@
             "server_port": 443,
             "method": "aes-256-cfb",
             "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @V2rayCollectorDonate | BH🇧🇭 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "series-a2-me.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Bog0ELmMM9DSxDdQ",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "series-a1.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "W74XFALLLuw6m5IA",
             "plugin": "",
             "plugin_opts": ""
         },
