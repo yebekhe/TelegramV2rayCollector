@@ -121,7 +121,7 @@
       "download_detour": "direct"
     },
     "geosite": {
-      "download_url": "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.db",
+      "download_url": "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/iran-geosite.db",
       "download_detour": "direct"
     },
     "rules": [
@@ -140,6 +140,18 @@
       {
         "geoip": ["ir"],
         "outbound": "bypass"
+      },
+      {
+        "geosite": ["ir"],
+        "outbound": "direct"
+      },
+      {
+        "geosite":["other"],
+        "outbound": "direct"
+      },
+      {
+        "geosite": ["ads"],
+        "outbound": "block"
       },
       {
         "ip_cidr": ["224.0.0.0/3", "ff00::/8"],
