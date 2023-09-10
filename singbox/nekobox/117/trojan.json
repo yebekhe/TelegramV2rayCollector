@@ -102,11 +102,8 @@
                 "GB🇬🇧",
                 "US🇺🇸",
                 "IE🇮🇪",
-                "SE🇸🇪",
                 "DE🇩🇪",
-                "RELAY🚩",
-                "JP🇯🇵",
-                "HK🇭🇰"
+                "RELAY🚩"
             ]
         },
         {
@@ -120,13 +117,9 @@
                 "رایگان | TROJAN | @iP_CF | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @iP_CF | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | IE🇮🇪 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @DirectVPN | SE🇸🇪 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @v2ray_vpn_ir | RELAY🚩 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @yaney_01 | JP🇯🇵 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @yaney_01 | JP🇯🇵 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @v2ray_vpn_ir | RELAY🚩 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -167,21 +160,11 @@
             "tolerance": 50
         },
         {
-            "tag": "SE🇸🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @DirectVPN | SE🇸🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣3️⃣"
+                "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -192,27 +175,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @v2ray_vpn_ir | RELAY🚩 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "JP🇯🇵",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @yaney_01 | JP🇯🇵 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @yaney_01 | JP🇯🇵 | 0️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "HK🇭🇰",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -366,28 +328,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @DirectVPN | SE🇸🇪 | 0️⃣1️⃣",
-            "type": "trojan",
-            "server": "13.49.211.59",
-            "server_port": 22222,
-            "password": "telegram-id-directvpn",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "trj.rollingnext.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣2️⃣",
+            "tag": "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣1️⃣",
             "type": "trojan",
             "server": "18.184.81.171",
             "server_port": 22222,
@@ -408,7 +349,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣2️⃣",
             "type": "trojan",
             "server": "3.75.166.49",
             "server_port": 22222,
@@ -454,42 +395,6 @@
                 "headers": {
                     "Host": "ftp.pardazesh.tech"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @yaney_01 | JP🇯🇵 | 0️⃣1️⃣",
-            "type": "trojan",
-            "server": "vpnpool.stablize.top",
-            "server_port": 443,
-            "password": "1d77bc32-ea1e-4c9d-8db2-440340d96f12",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @yaney_01 | JP🇯🇵 | 0️⃣3️⃣",
-            "type": "trojan",
-            "server": "vpnpool.stablize.top",
-            "server_port": 443,
-            "password": "124a8baf-5335-43d4-b13f-c3fc03360458",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣2️⃣",
-            "type": "trojan",
-            "server": "vpnhat.stablize.top",
-            "server_port": 443,
-            "password": "124a8baf-5335-43d4-b13f-c3fc03360458",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             }
         },
         {
