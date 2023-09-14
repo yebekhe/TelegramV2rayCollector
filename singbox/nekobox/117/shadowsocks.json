@@ -99,9 +99,10 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "SG🇸🇬",
-                "SE🇸🇪",
                 "US🇺🇸",
+                "FI🇫🇮",
+                "IE🇮🇪",
+                "SE🇸🇪",
                 "JP🇯🇵",
                 "GB🇬🇧",
                 "FR🇫🇷"
@@ -111,10 +112,12 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @free4allVPN | SG🇸🇬 | 0️⃣1️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | SG🇸🇬 | 0️⃣2️⃣",
-                "رایگان | SS | @free4allVPN | SE🇸🇪 | 0️⃣2️⃣",
+                "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @free4allVPN | SE🇸🇪 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | JP🇯🇵 | 0️⃣1️⃣",
                 "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣2️⃣"
@@ -124,11 +127,32 @@
             "tolerance": 50
         },
         {
-            "tag": "SG🇸🇬",
+            "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @free4allVPN | SG🇸🇬 | 0️⃣1️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | SG🇸🇬 | 0️⃣2️⃣"
+                "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FI🇫🇮",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "IE🇮🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -139,16 +163,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @free4allVPN | SE🇸🇪 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @vmess_vless_v2rayng | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -185,32 +199,22 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | SS | @free4allVPN | SG🇸🇬 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "52.220.160.254",
+            "server": "37.218.241.130",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
-            "password": "w6uwzHPGUMIQU39vU1FYBU",
+            "password": "j4wkIrreHEdC",
             "plugin": "",
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @OutlineVpnOfficial | SG🇸🇬 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣2️⃣",
             "type": "shadowsocks",
-            "server": "www.outline.network.v09e1wildhd7r5g6ceg73h8trivtehowzfm7bmd8b06civwdiarshobcs3mqfu4.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
-            "server_port": 8880,
-            "method": "chacha20-ietf-poly1305",
-            "password": "t.me\/OutlineVpnOfficial",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @free4allVPN | SE🇸🇪 | 0️⃣2️⃣",
-            "type": "shadowsocks",
-            "server": "16.16.56.177",
+            "server": "37.218.241.119",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
-            "password": "GMAfVgGCLrfhjG1B7SOdAi",
+            "password": "hr4TCNS2QChu",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -221,6 +225,36 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "j4wkIrreHEdC",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "95.217.181.14",
+            "server_port": 51348,
+            "method": "chacha20-ietf-poly1305",
+            "password": "yimkuHGFb6Dwpcsid2",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "54.220.133.34",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "5Ib9l2M6FC7SayRNmutDuF",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @free4allVPN | SE🇸🇪 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "16.16.56.177",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "GMAfVgGCLrfhjG1B7SOdAi",
             "plugin": "",
             "plugin_opts": ""
         },
