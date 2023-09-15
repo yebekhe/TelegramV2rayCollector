@@ -2,6 +2,13 @@
 
 header("Content-type: application/json;");
 
+function create_tehran_timestamp_tomorrow() {
+  date_default_timezone_set('Asia/Tehran');
+  $dateTomorrow = new DateTime('tomorrow');
+  $timestampTomorrow = strtotime($dateTomorrow->format('Y-m-d H:i:s'));
+  return $timestampTomorrow;
+}
+
 function isEvenLength($str) {
     $length = strlen($str);
     return $length % 2 == 0;
@@ -382,7 +389,7 @@ function GenerateConfigLite($input, $output){
     $finalJson = json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     $headerText = "//profile-title: base64:VFZDIHwgWUVCRUtIRQ==
 //profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000; expire=1671815872
+//subscription-userinfo: upload=0; download=0; total=10737418240000; expire=" . create_tehran_timestamp_tomorrow() . "
 //support-url: https://t.me/v2raycollector
 //profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
 
