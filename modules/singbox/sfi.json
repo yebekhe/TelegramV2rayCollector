@@ -43,7 +43,9 @@
     ],
     "rules": [
       {
-        "domain_suffix": [".ir"],
+        "domain_suffix": [
+          ".ir"
+        ],
         "server": "dns-direct"
       },
       {
@@ -117,46 +119,66 @@
     "override_android_vpn": true,
     "final": "proxy",
     "geoip": {
-      "download_url": "https://github.com/MiSaturo/sing-box-geoip-ir/releases/latest/download/geoip.db",
+      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
       "download_detour": "direct"
     },
     "geosite": {
-      "download_url": "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/iran-geosite.db",
+      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
       "download_detour": "direct"
     },
     "rules": [
       {
         "outbound": "dns-out",
-        "port": [53]
+        "port": [
+          53
+        ]
       },
       {
-        "inbound": ["dns-in"],
+        "inbound": [
+          "dns-in"
+        ],
         "outbound": "dns-out"
       },
       {
-        "domain_suffix": ["ir"],
+        "domain_suffix": [
+          "ir"
+        ],
         "outbound": "bypass"
       },
       {
-        "geoip": ["ir"],
+        "geoip": [
+          "ir"
+        ],
         "outbound": "bypass"
       },
       {
-        "geosite": ["ir"],
+        "geosite": [
+          "ir"
+        ],
         "outbound": "direct"
       },
       {
-        "geosite":["other"],
+        "geosite": [
+          "other"
+        ],
         "outbound": "direct"
       },
       {
-        "geosite": ["ads"],
+        "geosite": [
+          "geosite:category-ads-all"
+        ],
         "outbound": "block"
       },
       {
-        "ip_cidr": ["224.0.0.0/3", "ff00::/8"],
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
         "outbound": "block",
-        "source_ip_cidr": ["224.0.0.0/3", "ff00::/8"]
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ]
       }
     ]
   }
