@@ -259,7 +259,7 @@ function ShadowsocksSingbox($ShadowsocksUrl) {
     return $configResult;
 }
 
-function GenerateConfig($input, $output){
+function GenerateConfig($input, $output, $theType){
     $outbound = [];
     $v2ray_subscription = str_replace(" ", "%20", $input);
 
@@ -334,9 +334,8 @@ function GenerateConfig($input, $output){
 
     $templateBase['outbounds'] = array_merge($templateManual, $outboundUrltest, $outboundSingles,  $templateBase['outbounds']);
     $finalJson = json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-    $headerText = "//profile-title: base64:VFZDIHwgWUVCRUtIRQ==
+    $headerText = "//profile-title: base64:" . base64_encode("TVC | " . strtoupper($theType)) . "
 //profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000; expire=" . create_tehran_timestamp_tomorrow() . "
 //support-url: https://t.me/v2raycollector
 //profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
 
@@ -345,7 +344,7 @@ function GenerateConfig($input, $output){
     return $createJsonc;
 }
 
-function GenerateConfigLite($input, $output){
+function GenerateConfigLite($input, $output, $theType){
     $outbound = [];
     $v2ray_subscription = $input;
 
@@ -396,9 +395,8 @@ function GenerateConfigLite($input, $output){
 
     $templateBase['outbounds'] = array_merge($outboundManual, $outboundUrltest, $outbound,  $templateBase['outbounds']);
     $finalJson = json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-    $headerText = "//profile-title: base64:VFZDIHwgWUVCRUtIRQ==
+    $headerText = "//profile-title: base64:" . base64_encode("TVC | " . strtoupper($theType)) . "
 //profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000; expire=" . create_tehran_timestamp_tomorrow() . "
 //support-url: https://t.me/v2raycollector
 //profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
 
