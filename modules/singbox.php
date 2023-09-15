@@ -379,5 +379,14 @@ function GenerateConfigLite($input, $output){
     $outboundUrltest = process_jsons($templateUrltest, $names);
 
     $templateBase['outbounds'] = array_merge($outboundManual, $outboundUrltest, $outbound,  $templateBase['outbounds']);
-    return json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    $finalJson = json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    $headerText = "//profile-title: base64:VFZDIHwgWUVCRUtIRQ==
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000; expire=1671815872
+//support-url: https://t.me/v2raycollector
+//profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
+
+";
+    $createJsonc = $headerText . $finalJson ;
+    return $createJsonc;
 }
