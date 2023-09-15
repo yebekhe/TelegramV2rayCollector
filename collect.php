@@ -378,23 +378,23 @@ $singboxTypes = [
 ];
 
 foreach ($singboxTypes as $singboxType => $subContents) {
-    file_put_contents("singbox/nekobox/118/" . $singboxType . ".json", GenerateConfig($subContents, "nnew"));
-    file_put_contents("singbox/nekobox/117/" . $singboxType . ".json", GenerateConfig($subContents, "nold"));
-    file_put_contents("singbox/sfasfi/" . $singboxType . ".json", GenerateConfig($subContents, "sfia"));
-    file_put_contents("singbox/nekobox/118/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nnew"));
-    file_put_contents("singbox/nekobox/117/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nold"));
-    file_put_contents("singbox/sfasfi/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "sfia"));
+    file_put_contents("singbox/nekobox/118/" . $singboxType . ".json", GenerateConfig($subContents, "nnew", $singboxType));
+    file_put_contents("singbox/nekobox/117/" . $singboxType . ".json", GenerateConfig($subContents, "nold", $singboxType));
+    file_put_contents("singbox/sfasfi/" . $singboxType . ".json", GenerateConfig($subContents, "sfia", $singboxType));
+    file_put_contents("singbox/nekobox/118/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nnew", $singboxType));
+    file_put_contents("singbox/nekobox/117/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nold", $singboxType));
+    file_put_contents("singbox/sfasfi/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "sfia", $singboxType));
 }
 
 $the_string_reality_singbox = $fixed_string_reality . "\n" . $string_donated_reality ;
 $string_reality_singbox = remove_duplicate_xray($the_string_reality_singbox, "vless");
 
-file_put_contents("singbox/nekobox/117/reality.json", GenerateConfig($string_reality_singbox, "nold"));
-file_put_contents("singbox/nekobox/118/reality.json", GenerateConfig($string_reality_singbox, "nnew"));
-file_put_contents("singbox/sfasfi/reality.json", GenerateConfig($string_reality_singbox,"sfia"));
-file_put_contents("singbox/nekobox/117/realityLite.json", GenerateConfigLite($string_reality_singbox, "nold"));
-file_put_contents("singbox/nekobox/118/realityLite.json", GenerateConfigLite($string_reality_singbox, "nnew"));
-file_put_contents("singbox/sfasfi/realityLite.json", GenerateConfigLite($string_reality_singbox,"sfia"));
+file_put_contents("singbox/nekobox/117/reality.json", GenerateConfig($string_reality_singbox, "nold", "reality"));
+file_put_contents("singbox/nekobox/118/reality.json", GenerateConfig($string_reality_singbox, "nnew", "reality"));
+file_put_contents("singbox/sfasfi/reality.json", GenerateConfig($string_reality_singbox,"sfia", "reality"));
+file_put_contents("singbox/nekobox/117/realityLite.json", GenerateConfigLite($string_reality_singbox, "nold", "reality"));
+file_put_contents("singbox/nekobox/118/realityLite.json", GenerateConfigLite($string_reality_singbox, "nnew", "reality"));
+file_put_contents("singbox/sfasfi/realityLite.json", GenerateConfigLite($string_reality_singbox,"sfia", "reality"));
 
 $data = [
     [
