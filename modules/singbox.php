@@ -333,7 +333,16 @@ function GenerateConfig($input, $output){
     $outboundUrltest = array_merge($outboundUrltest, $outboundBasedOnLocationFull);
 
     $templateBase['outbounds'] = array_merge($templateManual, $outboundUrltest, $outboundSingles,  $templateBase['outbounds']);
-    return json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    $finalJson = json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    $headerText = "//profile-title: base64:VFZDIHwgWUVCRUtIRQ==
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000; expire=" . create_tehran_timestamp_tomorrow() . "
+//support-url: https://t.me/v2raycollector
+//profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
+
+";
+    $createJsonc = $headerText . $finalJson ;
+    return $createJsonc;
 }
 
 function GenerateConfigLite($input, $output){
