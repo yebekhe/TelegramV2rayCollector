@@ -6,6 +6,17 @@ include "modules/config.php"; // Include the config module
 include "modules/ranking.php"; // Include the ranking module
 include "modules/singbox.php"; // Include the singbox module
 
+function addHeader ($subscription, $subscriptionName) {
+    $headerText = "#profile-title: base64:" . base64_encode($subscriptionName) . "
+#profile-update-interval: 1
+#subscription-userinfo: upload=455727941; download=6174315083; total=107374182400000000; expire=" . create_tehran_timestamp_tomorrow() ."
+#support-url: https://t.me/v2raycollector
+#profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
+";
+
+    return $headerText . $subscription;
+}
+
 function deleteFolder($folder) {
     if (!is_dir($folder)) {
         return;
@@ -216,8 +227,8 @@ foreach ($donated_array as $key => $donated_config){
 
 $donated_mix = implode("\n", $donated_array);
 
-file_put_contents("sub/normal/donated", $donated_mix);
-file_put_contents("sub/base64/donated", base64_encode($donated_mix));
+file_put_contents("sub/normal/donated", addHeader($donated_mix));
+file_put_contents("sub/base64/donated", base64_encode(addHeader($donated_mix)));
 
 // Extract the "config" value from each object in $type_data and store it in $type_array
 $vmess_array = config_array($vmess_data);
@@ -336,11 +347,11 @@ $subscription_types = [
 foreach ($subscription_types as $subscription_type => $subscription_data) {
     file_put_contents(
         "sub/normal/" . $subscription_type,
-        base64_decode($subscription_data)
+        base64_decode(addHeader($subscription_data))
     );
     file_put_contents(
         "sub/base64/" . $subscription_type,
-        $subscription_data
+        addHeader($subscription_data)
     );
 }
 
