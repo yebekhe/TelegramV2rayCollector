@@ -336,23 +336,23 @@ $mix_data_deduplicate = array_merge(
 );
 
 $subscription_types = [
-    "mix" => base64_encode($mix),
-    "vmess" => base64_encode($fixed_string_vmess),
-    "vless" => base64_encode($fixed_string_vless),
-    "reality" => base64_encode($fixed_string_reality),
-    "trojan" => base64_encode($fixed_string_trojan),
-    "shadowsocks" => base64_encode($fixed_string_shadowsocks),
+    "mix" => base64_encode(addHeader($mix, "TVC | MIX")),
+    "vmess" => base64_encode(addHeader($fixed_string_vmess, "TVC | VMESS")),
+    "vless" => base64_encode(addHeader($fixed_string_vless, "TVC | VLESS")),
+    "reality" => base64_encode(addHeader($fixed_string_reality, "TVC | REALITY")),
+    "trojan" => base64_encode(addHeader($fixed_string_trojan, "TVC | TROJAN")),
+    "shadowsocks" => base64_encode(addHeader($fixed_string_shadowsocks, "TVC | SHADOWSOCKS")),
 ];
 
 // Write subscription data to files
 foreach ($subscription_types as $subscription_type => $subscription_data) {
     file_put_contents(
         "sub/normal/" . $subscription_type,
-        base64_decode(addHeader($subscription_data, "TVC | " . strtoupper($subscription_type)))
+        base64_decode($subscription_data)
     );
     file_put_contents(
         "sub/base64/" . $subscription_type,
-        addHeader($subscription_data, "TVC | " . strtoupper($subscription_type))
+        $subscription_data
     );
 }
 
