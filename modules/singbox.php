@@ -336,6 +336,7 @@ function GenerateConfig($input, $output, $theType){
     $finalJson = json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     $headerText = "//profile-title: base64:" . base64_encode("TVC | " . strtoupper($theType)) . "
 //profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
 //support-url: https://t.me/v2raycollector
 //profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
 
@@ -397,6 +398,7 @@ function GenerateConfigLite($input, $output, $theType){
     $finalJson = json_encode($templateBase, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     $headerText = "//profile-title: base64:" . base64_encode("TVC | " . strtoupper($theType)) . "
 //profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
 //support-url: https://t.me/v2raycollector
 //profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
 
