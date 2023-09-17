@@ -37,6 +37,7 @@ $Types = [
     "DarkTeam_VPN" => ["vless"],
     "proxy_kafee" => ["vless"],
     "V2raysFree" => ["vless"],
+    "LuminousNet" => ["vless"],
     "servermomo" => ["vless", "trojan", "ss"],
     "ipcloudflaree" => ["vless", "trojan", "ss"],
     "iP_CF" => ["vless", "vmess", "trojan", "ss"],
