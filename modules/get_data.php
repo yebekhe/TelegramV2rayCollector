@@ -357,7 +357,7 @@ function get_config($channel, $type)
                 $is_reality = is_reality($config, $type);
 
                 $the_config = parse_config($config, $type);
-                $check_pbk = $is_reality ? check_pbk($the_config) : true;
+                $check_pbk = $is_reality ? check_pbk($config) : true;
 
                 $address = get_address($the_config, $type);
                 if ($check_pbk) {
@@ -443,7 +443,7 @@ function process_subscription($input, $channel)
         $is_reality = is_reality($config, $type);
 
         $the_config = parse_config($config, $type, true);
-        $check_pbk = $is_reality ? check_pbk($the_config) : true;
+        $check_pbk = $is_reality ? check_pbk($config) : true;
 
         $address = get_address($the_config, $type);
         if ($check_pbk) {
