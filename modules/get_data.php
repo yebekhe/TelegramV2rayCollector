@@ -6,32 +6,33 @@ include "vmess.php";
 include "xray.php";
 include "ping.php";
 
-function numberToEmoji($number) {
-    $map = array(
-        '0' => '0️⃣',
-        '1' => '1️⃣',
-        '2' => '2️⃣',
-        '3' => '3️⃣',
-        '4' => '4️⃣',
-        '5' => '5️⃣',
-        '6' => '6️⃣',
-        '7' => '7️⃣',
-        '8' => '8️⃣',
-        '9' => '9️⃣'
-    );
-    
+function numberToEmoji($number)
+{
+    $map = [
+        "0" => "0️⃣",
+        "1" => "1️⃣",
+        "2" => "2️⃣",
+        "3" => "3️⃣",
+        "4" => "4️⃣",
+        "5" => "5️⃣",
+        "6" => "6️⃣",
+        "7" => "7️⃣",
+        "8" => "8️⃣",
+        "9" => "9️⃣",
+    ];
+
     $emoji = "";
     $digits = str_split($number);
-    
+
     foreach ($digits as $digit) {
         if (count($digits) === 1) {
-            $emoji = $map['0'];
+            $emoji = $map["0"];
         }
         if (isset($map[$digit])) {
             $emoji .= $map[$digit];
         }
     }
-    
+
     return $emoji;
 }
 
@@ -80,27 +81,33 @@ function is_valid($input)
 
 function is_reality($input, $type)
 {
-    $is_reality = false;
     switch ($type) {
         case "vmess":
-            $is_reality = false;
-            break;
-
+            return false;
         case "vless":
             if (stripos($input, "reality") !== false) {
-                $is_reality = true;
+                return true;
             } else {
-                $is_reality = false;
+                return false;
             }
-            break;
         case "trojan":
-            $is_reality = false;
-            break;
+            return false;
         case "ss":
-            $is_reality = false;
-            break;
+            return false;
     }
-    return $is_reality;
+    return false;
+}
+
+function check_pbk($parsedVless)
+{
+    if (
+        is_null($paresdVless["params"]["pbk"]) ||
+        $paresdVless["params"]["pbk"] === ""
+    ) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 function get_ip($input, $type, $is_reality)
@@ -262,7 +269,15 @@ function generate_name($channel, $flag, $is_reality, $number, $type)
                 numberToEmoji($number);
             break;
         case false:
-            $name = "رایگان | " . $type . " | @" . $channel . " | " . $flag . " | " . numberToEmoji($number);
+            $name =
+                "رایگان | " .
+                $type .
+                " | @" .
+                $channel .
+                " | " .
+                $flag .
+                " | " .
+                numberToEmoji($number);
             break;
     }
     return $name;
@@ -328,7 +343,7 @@ function get_config($channel, $type)
     $configs = get_config_items($type, $get);
 
     $final_data = [];
-    if ($channel === "v2raycollectordonate" ) {
+    if ($channel === "v2raycollectordonate") {
         $key_limit = count($configs[1]) - 20;
     } else {
         $key_limit = count($configs[1]) - 3;
@@ -345,41 +360,44 @@ function get_config($channel, $type)
                 $is_reality = is_reality($config, $type);
 
                 $the_config = parse_config($config, $type);
+                $check_pbk = $is_reality ? check_pbk($the_config) : true;
 
                 $address = get_address($the_config, $type);
-                if (is_valid_address($address) !== false) {
-                    $ip = get_ip($the_config, $type, $is_reality);
-                    $port = get_port($the_config, $type);
+                if ($check_pbk) {
+                    if (is_valid_address($address) !== false) {
+                        $ip = get_ip($the_config, $type, $is_reality);
+                        $port = get_port($the_config, $type);
 
-                    @$ping_data = ping($ip, $port);
-                    if ($ping_data !== "unavailable") {
-                        $flag = get_flag($ip);
-                        
-                        $name_key = $name_array[$type];
-                        $the_config[$name_key] = generate_name(
-                            $channel,
-                            $flag,
-                            $is_reality,
-                            $config_number,
-                            strtoupper($type)
-                        );
-                        
-                        $final_config = build_config($the_config, $type);
+                        @$ping_data = ping($ip, $port);
+                        if ($ping_data !== "unavailable") {
+                            $flag = get_flag($ip);
 
-                        $final_data[$key]["channel"]["username"] = $channel;
-                        $final_data[$key]["channel"]["title"] =
-                            $channels_assets[$channel]["title"];
-                        $final_data[$key]["channel"]["logo"] =
-                            $channels_assets[$channel]["logo"];
-                        $final_data[$key]["type"] = $is_reality
-                            ? "reality"
-                            : $type;
-                        $final_data[$key]["config"] = $final_config;
-                        $final_data[$key]["ping"] = $ping_data;
-                        $final_data[$key]["time"] = convert_to_iran_time(
-                            $matches[1][$key]
-                        );
-                      $config_number ++ ;
+                            $name_key = $name_array[$type];
+                            $the_config[$name_key] = generate_name(
+                                $channel,
+                                $flag,
+                                $is_reality,
+                                $config_number,
+                                strtoupper($type)
+                            );
+
+                            $final_config = build_config($the_config, $type);
+
+                            $final_data[$key]["channel"]["username"] = $channel;
+                            $final_data[$key]["channel"]["title"] =
+                                $channels_assets[$channel]["title"];
+                            $final_data[$key]["channel"]["logo"] =
+                                $channels_assets[$channel]["logo"];
+                            $final_data[$key]["type"] = $is_reality
+                                ? "reality"
+                                : $type;
+                            $final_data[$key]["config"] = $final_config;
+                            $final_data[$key]["ping"] = $ping_data;
+                            $final_data[$key]["time"] = convert_to_iran_time(
+                                $matches[1][$key]
+                            );
+                            $config_number++;
+                        }
                     }
                 }
             }
@@ -422,49 +440,53 @@ function process_subscription($input, $channel)
     $array_helper_trojan = 0;
     $config_number = 1;
     $i = 0;
-    $channel = $channel . " | Donated" ;
+    $channel = $channel . " | Donated";
     foreach ($configs as $config) {
         $type = detect_type($config);
         $is_reality = is_reality($config, $type);
 
         $the_config = parse_config($config, $type, true);
+        $check_pbk = $is_reality ? check_pbk($the_config) : true;
+
         $address = get_address($the_config, $type);
-        if (is_valid_address($address) !== false) {
-            $ip = get_ip($the_config, $type, $is_reality);
-            $port = get_port($the_config, $type);
+        if ($check_pbk) {
+            if (is_valid_address($address) !== false) {
+                $ip = get_ip($the_config, $type, $is_reality);
+                $port = get_port($the_config, $type);
 
-            @$ping_data = ping($ip, $port);
-            if ($ping_data !== "unavailable") {
-                $flag = get_flag($ip);
-                
-                $name_key = $name_array[$type];
-                $the_config[$name_key] = generate_name(
-                    $channel,
-                    $flag,
-                    $is_reality,
-                    $config_number,
-                    strtoupper($type)
-                );
-                $final_config = build_config($the_config, $type);
+                @$ping_data = ping($ip, $port);
+                if ($ping_data !== "unavailable") {
+                    $flag = get_flag($ip);
 
-                $key = ${"array_helper_$type"};
+                    $name_key = $name_array[$type];
+                    $the_config[$name_key] = generate_name(
+                        $channel,
+                        $flag,
+                        $is_reality,
+                        $config_number,
+                        strtoupper($type)
+                    );
+                    $final_config = build_config($the_config, $type);
 
-                $final_data[$type][$key]["channel"]["username"] = $channel;
-                $final_data[$type][$key]["channel"]["title"] = $channel;
-                $final_data[$type][$key]["channel"]["logo"] = "null";
-                $final_data[$type][$key]["type"] = $is_reality
-                    ? "reality"
-                    : $type;
-                $final_data[$type][$key]["config"] = $final_config;
-                $final_data[$type][$key]["ping"] = $ping_data;
-                $final_data[$type][$key]["time"] = tehran_time();
+                    $key = ${"array_helper_$type"};
 
-                $key++;
-                ${"array_helper_$type"} = $key;
-                $config_number ++;
+                    $final_data[$type][$key]["channel"]["username"] = $channel;
+                    $final_data[$type][$key]["channel"]["title"] = $channel;
+                    $final_data[$type][$key]["channel"]["logo"] = "null";
+                    $final_data[$type][$key]["type"] = $is_reality
+                        ? "reality"
+                        : $type;
+                    $final_data[$type][$key]["config"] = $final_config;
+                    $final_data[$type][$key]["ping"] = $ping_data;
+                    $final_data[$type][$key]["time"] = tehran_time();
+
+                    $key++;
+                    ${"array_helper_$type"} = $key;
+                    $config_number++;
+                }
             }
         }
     }
-    $i ++ ;
+    $i++;
     return $final_data;
 }
