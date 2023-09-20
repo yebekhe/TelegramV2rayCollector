@@ -98,12 +98,9 @@ function is_reality($input, $type)
     return false;
 }
 
-function check_pbk($parsedVless)
+function check_pbk($input)
 {
-    if (
-        is_null($paresdVless["params"]["pbk"]) ||
-        $paresdVless["params"]["pbk"] === ""
-    ) {
+    if (stripos($input, "pbk=&") !== false) {
         return false;
     } else {
         return true;
