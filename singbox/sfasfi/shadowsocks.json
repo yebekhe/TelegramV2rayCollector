@@ -111,6 +111,7 @@
                 "SE🇸🇪",
                 "FR🇫🇷",
                 "GB🇬🇧",
+                "SG🇸🇬",
                 "IE🇮🇪",
                 "GR🇬🇷",
                 "KR🇰🇷",
@@ -130,7 +131,8 @@
                 "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @free4allVPN | SG🇸🇬 | 0️⃣1️⃣",
+                "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣2️⃣",
                 "رایگان | SS | @VPNGate_Config | GR🇬🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @VPNGate_Config | KR🇰🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @VPNGate_Config | JP🇯🇵 | 0️⃣3️⃣",
@@ -176,10 +178,20 @@
             "tolerance": 50
         },
         {
+            "tag": "SG🇸🇬",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @free4allVPN | SG🇸🇬 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "IE🇮🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣1️⃣"
+                "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -306,7 +318,17 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @free4allVPN | SG🇸🇬 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "52.220.160.254",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "w6uwzHPGUMIQU39vU1FYBU",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @free4allVPN | IE🇮🇪 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "54.220.133.34",
             "server_port": 443,
