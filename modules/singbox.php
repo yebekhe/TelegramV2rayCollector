@@ -246,6 +246,9 @@ function ShadowsocksSingbox($ShadowsocksUrl) {
     if (is_null($decoded_shadowsocks['name']) || $decoded_shadowsocks['name'] === ""){
         return null;
     }
+    if ($decoded_shadowsocks['encryption_method'] === "chacha20-poly1305") {
+        return null;
+    }
     $configResult = [
         'tag' => $decoded_shadowsocks['name'],
         'type' => "shadowsocks",
