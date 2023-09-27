@@ -45,6 +45,7 @@ $Types = [
     "ipcloudflaree" => ["vless", "trojan", "ss"],
     "iP_CF" => ["vless", "vmess", "trojan", "ss", "tuic"],
     "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
+    "V2rayCollector" => ["vless", "tuic"]
     "V2rayCollectorDonate" => ["vmess", "vless", "trojan", "ss", "tuic"],
     "ProxyForOpeta" => ["vless"],
     "VpnWLF" => ["vmess", "vless"],
