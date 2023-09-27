@@ -316,6 +316,7 @@ function GenerateConfig($input, $output, $theType){
                 break;
             case "tuic":
                 $configSingbox = TuicSingbox($config);
+                break;
             case "ss":
                 $configSingbox = ShadowsocksSingbox($config);
                 break;
