@@ -292,6 +292,9 @@ function TuicSingbox($TuicUrl) {
                 "spdy/3.1"
             ],
         ];
+    if (!isset($decodedTuic['params']['alpn']) || is_null($decodedTuic['params']['alpn']) || $decodedTuic['params']['alpn'] === "") {
+      unset($configResult['tls']["alpn"])
+    }
 
     return $configResult;
 }
