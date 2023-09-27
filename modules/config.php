@@ -2,7 +2,7 @@
 date_default_timezone_set("Asia/Tehran");
 
 $Types = [
-    "Helix_Servers" => ["vless"],
+    "Helix_Servers" => ["vless", "tuic"],
     "INIT1984" => ["vless"],
     "Parsashonam" => ["vless"],
     "shopingv2ray" => ["vless"],
@@ -40,7 +40,7 @@ $Types = [
     "LuminousNet" => ["vless"],
     "servermomo" => ["vless", "trojan", "ss"],
     "ipcloudflaree" => ["vless", "trojan", "ss"],
-    "iP_CF" => ["vless", "vmess", "trojan", "ss"],
+    "iP_CF" => ["vless", "vmess", "trojan", "ss", "tuic"],
     "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
     "V2rayCollectorDonate" => ["vmess", "vless", "trojan", "ss"],
     "ProxyForOpeta" => ["vless"],
