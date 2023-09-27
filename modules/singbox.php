@@ -293,7 +293,7 @@ function TuicSingbox($TuicUrl) {
             ],
         ];
     if (!isset($decodedTuic['params']['alpn']) || is_null($decodedTuic['params']['alpn']) || $decodedTuic['params']['alpn'] === "") {
-      unset($configResult['tls']["alpn"])
+      unset($configResult['tls']["alpn"]);
     }
 
     return $configResult;
