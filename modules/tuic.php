@@ -13,7 +13,7 @@ function ParseTuic ($config_str) {
     $output = [
         "protocol" => "tuic",
         "username" => isset($parsedUrl["user"]) ? $parsedUrl["user"] : "",
-        "password" => isset($parsedUrl["pass"]) ? $parsedUrl["pass"] : "",
+        "pass" => isset($parsedUrl["pass"]) ? $parsedUrl["pass"] : "",
         "hostname" => isset($parsedUrl["host"]) ? $parsedUrl["host"] : "",
         "port" => isset($parsedUrl["port"]) ? $parsedUrl["port"] : "",
         "params" => $params,
