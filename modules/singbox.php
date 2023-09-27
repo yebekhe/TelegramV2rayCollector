@@ -277,7 +277,7 @@ function TuicSingbox($TuicUrl) {
         "server" => $decodedTuic['hostname'],
         "server_port" => intval($decodedTuic['port']),
         "uuid" => $decodedTuic['username'],
-        "password" => $decodedTuic['password'],
+        "password" => $decodedTuic['pass'],
         "congestion_control" => $decodedTuic['params']['congestion_control'],
         "udp_relay_mode" => $decodedTuic['params']['udp_relay_mode'],
         "zero_rtt_handshake" => false,
