@@ -4,6 +4,7 @@ include "ipinfo.php";
 include "shadowsocks.php";
 include "vmess.php";
 include "xray.php";
+include "tuic.php";
 include "ping.php";
 
 function numberToEmoji($number)
@@ -94,6 +95,8 @@ function is_reality($input, $type)
             return false;
         case "ss":
             return false;
+        case "tuic":
+            return false;
     }
     return false;
 }
@@ -118,6 +121,8 @@ function get_ip($input, $type, $is_reality)
             return get_trojan_ip($input);
         case "ss":
             return get_ss_ip($input);
+        case "tuic":
+            return get_tuic_ip($input);
     }
 }
 
@@ -131,6 +136,8 @@ function get_address($input, $type)
             return $input["hostname"];
         case "ss":
             return $input["server_address"];
+        case "tuic":
+            return $input["hostname"];
     }
 }
 
@@ -205,6 +212,11 @@ function get_trojan_ip($input)
             : $input["hostname"]);
 }
 
+function get_tuic_ip($input)
+{
+    return $input["hostname"];
+}
+
 function get_ss_ip($input)
 {
     return $input["server_address"];
@@ -212,22 +224,16 @@ function get_ss_ip($input)
 
 function get_port($input, $type)
 {
-    $port = "";
     switch ($type) {
         case "vmess":
-            $port = $input["port"];
-            break;
+            return $input["port"];
         case "vless":
-            $port = $input["port"];
-            break;
         case "trojan":
-            $port = $input["port"];
-            break;
+        case "tuic":
+            return $input["port"];
         case "ss":
-            $port = $input["server_port"];
-            break;
+            return $input["server_port"];
     }
-    return $port;
 }
 
 function get_flag($ip)
@@ -300,26 +306,28 @@ function parse_config($input, $type, $is_sub = false)
                 ? ParseShadowsocks($input)
                 : ParseShadowsocks($type . "://" . $input);
             break;
+        case "tuic":
+            $parsed_config = $is_sub
+                ? ParseTuic($input)
+                : parseTuic($type . "://" . $input);
+            break;
     }
     return $parsed_config;
 }
 
 function build_config($input, $type)
 {
-    $build_config = "";
     switch ($type) {
         case "vmess":
-            $build_config = encode_vmess($input);
-            break;
+            return encode_vmess($input);
         case "vless":
         case "trojan":
-            $build_config = buildProxyUrl($input, $type);
-            break;
+            return buildProxyUrl($input, $type);
         case "ss":
-            $build_config = BuildShadowsocks($input);
-            break;
+            return BuildShadowsocks($input);
+        case "tuic":
+            return buildTuic($input);
     }
-    return $build_config;
 }
 
 function get_config($channel, $type)
@@ -329,6 +337,7 @@ function get_config($channel, $type)
         "vless" => "hash",
         "trojan" => "hash",
         "ss" => "name",
+        "tuic" => "hash"
     ];
     // Fetch the content of the Telegram channel URL
     $get = file_get_contents("https://t.me/s/" . $channel);
@@ -340,7 +349,7 @@ function get_config($channel, $type)
     $configs = get_config_items($type, $get);
 
     $final_data = [];
-    if ($channel === "v2raycollectordonate") {
+    if ($channel === "V2rayCollectorDonate") {
         $key_limit = count($configs[1]) - 20;
     } else {
         $key_limit = count($configs[1]) - 3;
@@ -406,18 +415,18 @@ function get_config($channel, $type)
 
 function detect_type($input)
 {
-    $type = "";
     if (substr($input, 0, 8) === "vmess://") {
-        $type = "vmess";
+        return "vmess";
     } elseif (substr($input, 0, 8) === "vless://") {
-        $type = "vless";
+        return "vless";
     } elseif (substr($input, 0, 9) === "trojan://") {
-        $type = "trojan";
+        return "trojan";
     } elseif (substr($input, 0, 5) === "ss://") {
-        $type = "ss";
-    }
+        return "ss";
+    } elseif (substr($input, 0, 7) === "tuic://") {
+        return "tuic";
+    } 
 
-    return $type;
 }
 
 function process_subscription($input, $channel)
@@ -427,6 +436,7 @@ function process_subscription($input, $channel)
         "vless" => "hash",
         "trojan" => "hash",
         "ss" => "name",
+        "tuic" => "hash"
     ];
 
     $final_data = [];
@@ -435,6 +445,7 @@ function process_subscription($input, $channel)
     $array_helper_vless = 0;
     $array_helper_ss = 0;
     $array_helper_trojan = 0;
+    $array_helper_tuic = 0;
     $config_number = 1;
     $i = 0;
     $channel = $channel . " | Donated";

@@ -34,3 +34,31 @@ function buildTuic($obj)
     $url .= addHash($obj);
     return $url;
 }
+
+function remove_duplicate_tuic($input)
+{
+    $array = explode("\n", $input);
+
+    foreach ($array as $item) {
+        $parts = ParseTuic($item);
+        $part_hash = $parts["hash"];
+        unset($parts["hash"]);
+        ksort($parts["params"]);
+        $part_serialize = base64_encode(serialize($parts));
+        $result[$part_serialize][] = $part_hash ?? "";
+    }
+
+    $finalResult = [];
+    foreach ($result as $url => $parts) {
+        $partAfterHash = $parts[0] ?? "";
+        $part_serialize = unserialize(base64_decode($url));
+        $part_serialize["hash"] = $partAfterHash;
+        $finalResult[] = buildTuic($part_serialize);
+    }
+
+    $output = "";
+    foreach ($finalResult as $config) {
+        $output .= $output == "" ? $config : "\n" . $config;
+    }
+    return $output;
+}

@@ -1,434 +1,500 @@
 <?php
-header("Content-type: application/json;"); // Set response content type as JSON
+include "flag.php";
+include "ipinfo.php";
+include "shadowsocks.php";
+include "vmess.php";
+include "xray.php";
+include "tuic.php";
+include "ping.php";
 
-include "modules/get_data.php"; // Include the get_data module
-include "modules/config.php"; // Include the config module
-include "modules/ranking.php"; // Include the ranking module
-include "modules/singbox.php"; // Include the singbox module
-
-function addHeader ($subscription, $subscriptionName) {
-    $headerText = "#profile-title: base64:" . base64_encode($subscriptionName) . "
-#profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
-#support-url: https://t.me/v2raycollector
-#profile-web-page-url: https://github.com/yebekhe/TelegramV2rayCollector
-
-";
-
-    return $headerText . $subscription;
-}
-
-function deleteFolder($folder) {
-    if (!is_dir($folder)) {
-        return;
-    }
-    $files = glob($folder . '/*');
-    foreach ($files as $file) {
-        is_dir($file) ? deleteFolder($file) : unlink($file);
-    }
-    rmdir($folder);
-}
-
-function seprate_by_country($configs){
-    $configsArray = explode("\n", $configs);
-    $configLocation = "";
-    $output = [];
-    foreach ($configsArray as $config) {
-        $configType = detect_type($config);
-
-        if ($configType === "vmess") {
-            $configName = parse_config($config, "vmess", true)['ps'];
-        } elseif ($configType === "vless" || $configType === "trojan" ){
-            $configName = parse_config($config, $configType)['hash'];
-        } elseif ($configType === "ss"){
-            $configName = parse_config($config, "ss")['name'];
-        }
-
-        if (stripos($configName, "RELAY🚩")){
-            $configLocation = "RELAY";
-        } else {
-            $pattern = '/\b([A-Z]{2})\b[\x{1F1E6}-\x{1F1FF}]{2}/u';
-            preg_match_all($pattern, $configName, $matches);
-            $configLocation = $matches[1][0];
-        }
-
-        if (!isset($output[$configLocation])){
-            $output[$configLocation] = [];
-        }
-        
-        if (!in_array($config, $output[$configLocation])) {
-            $output[$configLocation][] = $config;
-        }
-    }
-    return $output;
-}
-
-function process_mix_json($input, $name)
+function numberToEmoji($number)
 {
-    $mix_data_json = json_encode($input, JSON_PRETTY_PRINT); // Encode input array to JSON with pretty printing
-    $mix_data_decode = json_decode($mix_data_json); // Decode the JSON into an object or array
-    usort($mix_data_decode, "compare_time"); // Sort the decoded data using the "compare_time" function
-    $mix_data_json = json_encode(
-        $mix_data_decode,
-        JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
-    ); // Re-encode the sorted data to JSON with pretty printing and Unicode characters not escaped
-    $mix_data_json = urldecode($mix_data_json);
-    $mix_data_json = str_replace("amp;", "", $mix_data_json); // Replace HTML-encoded ampersands with regular ampersands
-    $mix_data_json = str_replace("\\", "", $mix_data_json); // Remove backslashes from the JSON string
-    file_put_contents("json/" . $name, $mix_data_json); // Save the JSON data to a file in the "json/" directory with the specified name
-}
+    $map = [
+        "0" => "0️⃣",
+        "1" => "1️⃣",
+        "2" => "2️⃣",
+        "3" => "3️⃣",
+        "4" => "4️⃣",
+        "5" => "5️⃣",
+        "6" => "6️⃣",
+        "7" => "7️⃣",
+        "8" => "8️⃣",
+        "9" => "9️⃣",
+    ];
 
-function fast_fix($input){
-    $input = urldecode($input);
-    $input = str_replace("amp;", "", $input);
-    return $input;
-}
+    $emoji = "";
+    $digits = str_split($number);
 
-function config_array($input){
-    return array_map(function ($object) {
-    return $object["config"];
-}, $input);
-}
-
-$raw_url_base =
-    "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main"; // Define the base URL for fetching raw data
-
-$mix_data = []; // Initialize an empty array for mix data
-$vmess_data = []; // Initialize an empty array for vmess data
-$trojan_data = []; // Initialize an empty array for trojan data
-$vless_data = []; // Initialize an empty array for vless data
-$shadowsocks_data = []; // Initialize an empty array for shadowsocks data
-
-//Get data from channels
-foreach ($Types as $key => $type_array) {
-    $count = count($type_array);
-    for ($type_count = $count - 1; $type_count >= 0; $type_count--) {
-        $current_type = $type_array[$type_count];
-        switch ($current_type) {
-            case "vmess":
-                // Merge the results of `get_config` function with $vmess_data array
-                $vmess_data = array_merge(
-                    $vmess_data,
-                    /** @scrutinizer ignore-call */ 
-                    get_config($key, $current_type)
-                );
-                break;
-            case "vless":
-                // Merge the results of `get_config` function with $vless_data array
-                $vless_data = array_merge(
-                    $vless_data,
-                    /** @scrutinizer ignore-call */
-                    get_config($key, $current_type)
-                );
-                break;
-            case "trojan":
-                // Merge the results of `get_config` function with $trojan_data array
-                $trojan_data = array_merge(
-                    $trojan_data,
-                    /** @scrutinizer ignore-call */
-                    get_config($key, $current_type)
-                );
-                break;
-            case "ss":
-                // Merge the results of `get_config` function with $shadowsocks_data array
-                $shadowsocks_data = array_merge(
-                    $shadowsocks_data,
-                    /** @scrutinizer ignore-call */
-                    get_config($key, $current_type)
-                );
-                break;
-            default:
-                // Do nothing if unknown type is encountered
-                break;
+    foreach ($digits as $digit) {
+        if (count($digits) === 1) {
+            $emoji = $map["0"];
+        }
+        if (isset($map[$digit])) {
+            $emoji .= $map[$digit];
         }
     }
+
+    return $emoji;
 }
 
-$donated_vmess_data = []; // Initialize an empty array for vmess data
-$donated_trojan_data = []; // Initialize an empty array for trojan data
-$donated_vless_data = []; // Initialize an empty array for vless data
-$donated_shadowsocks_data = []; // Initialize an empty array for shadowsocks data
-
-$base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
-
-$processed_subscription = [];
-$usernames = [];
-foreach ($donated_subscription as $url){
-    $max_attempts = 3;
-    $attempts = 0;
-    while ($attempts < $max_attempts) {
-        try {
-            $usernames = json_decode(file_get_contents($url), true);
-            break; // Success, so break out of the loop
-        } catch (Exception $e) {
-            // Handle the error here, e.g. by logging it
-            $attempts++;
-            if ($attempts == $max_attempts) {
-             // Reached max attempts, so throw an exception to indicate failure
-                throw new Exception('Failed to retrieve data after ' . $max_attempts . ' attempts.');
-            }
-        sleep(1); // Wait for 1 second before retrying
-        }
-    }
-    foreach ($usernames as $username){
-        $subscription_data = file_get_contents($base_donated_url . $username);
-        $processed_subscription = /** @scrutinizer ignore-call */ process_subscription($subscription_data, $username);
-        foreach ($processed_subscription as $donated_type => $donated_data){
-            switch ($donated_type){
-                case "vmess" :
-                    $donated_vmess_data = array_merge(
-                        $donated_vmess_data,
-                        $donated_data
-                    );
-                    break;
-                case "vless" :
-                    $donated_vless_data = array_merge(
-                        $donated_vless_data,
-                        $donated_data
-                    );
-                    break;
-                case "ss" :
-                    $donated_shadowsocks_data = array_merge(
-                        $donated_shadowsocks_data,
-                        $donated_data
-                    );
-                    break;
-                case "trojan" :
-                    $donated_trojan_data = array_merge(
-                        $donated_trojan_data,
-                        $donated_data
-                    );
-                    break;
-            }
-        }
-    }
+function openLink($url)
+{
+    $ch = curl_init();
+    curl_setopt_array($ch, [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+        CURLOPT_FOLLOWLOCATION => true,
+    ]);
+    return curl_exec($ch);
 }
 
-$string_donated_vmess = $donated_vmess_data !== [] ? remove_duplicate_vmess(implode("\n", config_array($donated_vmess_data))) : "";
-$string_donated_vless = $donated_vless_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_vless_data))), "vless") : "";
-$string_donated_trojan = $donated_vless_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_trojan_data))), "trojan") : "";
-$string_donated_shadowsocks = $donated_vless_data !== [] ? remove_duplicate_ss(fast_fix(implode("\n", config_array($donated_shadowsocks_data)))) : "";
-$string_donated_reality = get_reality($string_donated_vless);
-
-$donated_mix =
-    $string_donated_vmess .
-    "\n" .
-    $string_donated_vless .
-    "\n" .
-    $string_donated_trojan .
-    "\n" .
-    $string_donated_shadowsocks;
-$donated_array = explode("\n", $donated_mix);
-
-foreach ($donated_array as $key => $donated_config){
-    if ($donated_config === ""){
-        unset($donated_array[$key]);
-    }
+function convert_to_iran_time($utc_timestamp)
+{
+    $utc_datetime = new DateTime($utc_timestamp);
+    $utc_datetime->setTimezone(new DateTimeZone("Asia/Tehran"));
+    return $utc_datetime->format("Y-m-d H:i:s");
 }
 
-$donated_mix = implode("\n", $donated_array);
-
-file_put_contents("sub/normal/donated", addHeader($donated_mix, "TVC | DONATED"));
-file_put_contents("sub/base64/donated", base64_encode(addHeader($donated_mix, "TVC | DONATED")));
-
-// Extract the "config" value from each object in $type_data and store it in $type_array
-$vmess_array = config_array($vmess_data);
-$vless_array = config_array($vless_data);
-$trojan_array = config_array($trojan_data);
-$shadowsocks_array = config_array($shadowsocks_data);
-
-$fixed_string_vmess = remove_duplicate_vmess(implode("\n", $vmess_array));
-$fixed_string_vmess_array = explode("\n", $fixed_string_vmess);
-$json_vmess_array = [];
-
-// Iterate over $vmess_data and $fixed_string_vmess_array to find matching configurations
-foreach ($vmess_data as $vmess_config_data) {
-    foreach ($fixed_string_vmess_array as $vmess_config) {
-        if (
-            decode_vmess($vmess_config)["ps"] ===
-            decode_vmess($vmess_config_data["config"])["ps"]
-        ) {
-            // Add matching configuration to $json_vmess_array
-            $json_vmess_array[] = $vmess_config_data;
-        }
-    }
-}
-
-$string_vless = fast_fix(implode("\n", $vless_array));
-$fixed_string_vless = remove_duplicate_xray($string_vless, "vless");
-$fixed_string_vless_array = explode("\n", $fixed_string_vless);
-$json_vless_array = [];
-
-// Iterate over $vless_data and $fixed_string_vless_array to find matching configurations
-foreach ($vless_data as $vless_config_data) {
-    foreach ($fixed_string_vless_array as $vless_config) {
-        if (
-            parseProxyUrl($vless_config, "vless")["hash"] ===
-            parseProxyUrl($vless_config_data["config"], "vless")["hash"]
-        ) {
-            // Add matching configuration to $json_vless_array
-            $json_vless_array[] = $vless_config_data;
-        }
-    }
-}
-
-$string_trojan = fast_fix(implode("\n", $trojan_array));
-$fixed_string_trojan = remove_duplicate_xray($string_trojan, "trojan");
-$fixed_string_trojan_array = explode("\n", $fixed_string_trojan);
-$json_trojan_array = [];
-
-// Iterate over $trojan_data and $fixed_string_trojan_array to find matching configurations
-foreach ($trojan_data as $trojan_config_data) {
-    foreach ($fixed_string_trojan_array as $key => $trojan_config) {
-        if (
-            parseProxyUrl($trojan_config)["hash"] ===
-            parseProxyUrl($trojan_config_data["config"])["hash"]
-        ) {
-            // Add matching configuration to $json_trojan_array
-            $json_trojan_array[$key] = $trojan_config_data;
-        }
-    }
-}
-
-$string_shadowsocks = fast_fix(implode("\n", $shadowsocks_array));
-$fixed_string_shadowsocks = remove_duplicate_ss($string_shadowsocks);
-$fixed_string_shadowsocks_array = explode("\n", $fixed_string_shadowsocks);
-$json_shadowsocks_array = [];
-
-// Iterate over $shadowsocks_data and $fixed_string_shadowsocks_array to find matching configurations
-foreach ($shadowsocks_data as $shadowsocks_config_data) {
-    foreach ($fixed_string_shadowsocks_array as $shadowsocks_config) {
-        if (
-            ParseShadowsocks($shadowsocks_config)["name"] ===
-            ParseShadowsocks($shadowsocks_config_data["config"])["name"]
-        ) {
-            // Add matching configuration to $json_shadowsocks_array
-            $json_shadowsocks_array[] = $shadowsocks_config_data;
-        }
-    }
-}
-
-$fixed_string_reality = get_reality($fixed_string_vless);
-
-$mix =
-    $fixed_string_vmess .
-    "\n" .
-    $fixed_string_vless .
-    "\n" .
-    $fixed_string_trojan .
-    "\n" .
-    $fixed_string_shadowsocks .
-    "\n" .
-    $donated_mix;
-
-$mix_data = array_merge(
-    $vmess_data,
-    $vless_data,
-    $trojan_data,
-    $shadowsocks_data
-);
-
-$mix_data_deduplicate = array_merge(
-    $json_vmess_array,
-    $json_vless_array,
-    $json_trojan_array,
-    $json_shadowsocks_array
-);
-
-$subscription_types = [
-    "mix" => base64_encode(addHeader($mix, "TVC | MIX")),
-    "vmess" => base64_encode(addHeader($fixed_string_vmess, "TVC | VMESS")),
-    "vless" => base64_encode(addHeader($fixed_string_vless, "TVC | VLESS")),
-    "reality" => base64_encode(addHeader($fixed_string_reality, "TVC | REALITY")),
-    "trojan" => base64_encode(addHeader($fixed_string_trojan, "TVC | TROJAN")),
-    "shadowsocks" => base64_encode(addHeader($fixed_string_shadowsocks, "TVC | SHADOWSOCKS")),
-];
-
-// Write subscription data to files
-foreach ($subscription_types as $subscription_type => $subscription_data) {
-    file_put_contents(
-        "sub/normal/" . $subscription_type,
-        base64_decode($subscription_data)
+function get_config_time($type, $input)
+{
+    preg_match_all(
+        "/" . $type . ':\/\/[^"]+(?:[^<]+<[^<]+)*<time datetime="([^"]+)"/',
+        $input,
+        $times
     );
-    file_put_contents(
-        "sub/base64/" . $subscription_type,
-        $subscription_data
+    return $times;
+}
+
+function get_config_items($type, $input)
+{
+    preg_match_all("#>" . $type . "://(.*?)<#", $input, $items);
+    return $items;
+}
+
+function is_valid($input)
+{
+    if (stripos($input, "…") !== false or stripos($input, "...") !== false) {
+        return false;
+    }
+    return true;
+}
+
+function is_reality($input, $type)
+{
+    switch ($type) {
+        case "vmess":
+            return false;
+        case "vless":
+            if (stripos($input, "reality") !== false) {
+                return true;
+            } else {
+                return false;
+            }
+        case "trojan":
+            return false;
+        case "ss":
+            return false;
+        case "tuic":
+            return false;
+    }
+    return false;
+}
+
+function check_pbk($input)
+{
+    if (stripos($input, "pbk=&") !== false) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function get_ip($input, $type, $is_reality)
+{
+    switch ($type) {
+        case "vmess":
+            return get_vmess_ip($input);
+        case "vless":
+            return get_vless_ip($input, $is_reality);
+        case "trojan":
+            return get_trojan_ip($input);
+        case "ss":
+            return get_ss_ip($input);
+        case "tuic":
+            return get_tuic_ip($input);
+    }
+}
+
+function get_address($input, $type)
+{
+    switch ($type) {
+        case "vmess":
+            return $input["add"];
+        case "vless":
+        case "trojan":
+            return $input["hostname"];
+        case "ss":
+            return $input["server_address"];
+        case "tuic":
+            return $input["hostname"];
+    }
+}
+
+function is_number_with_dots($s)
+{
+    /*
+     * Returns true if the given string contains only digits and dots, and false otherwise.
+     */
+    for ($i = 0; $i < strlen($s); $i++) {
+        $c = $s[$i];
+        if (!ctype_digit($c) && $c != ".") {
+            return false;
+        }
+    }
+    return true;
+}
+
+function is_valid_address($address)
+{
+    $ipv4_pattern = '/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/';
+    $ipv6_pattern = '/^[0-9a-fA-F:]+$/'; // matches any valid IPv6 address
+
+    if (
+        preg_match($ipv4_pattern, $address) ||
+        preg_match($ipv6_pattern, $address)
+    ) {
+        return true;
+    } elseif (is_number_with_dots($address) === false) {
+        if (
+            substr($address, 0, 8) === "https://" ||
+            substr($address, 0, 7) === "http://"
+        ) {
+            $url = filter_var($address, FILTER_VALIDATE_URL);
+        } else {
+            $url = filter_var("https://" . $address, FILTER_VALIDATE_URL);
+        }
+        if ($url !== false) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return false;
+}
+
+function get_vmess_ip($input)
+{
+    return !empty($input["sni"])
+        ? $input["sni"]
+        : (!empty($input["host"])
+            ? $input["host"]
+            : $input["add"]);
+}
+
+function get_vless_ip($input, $is_reality)
+{
+    return $is_reality
+        ? $input["hostname"]
+        : (!empty($input["params"]["sni"])
+            ? $input["params"]["sni"]
+            : (!empty($input["params"]["host"])
+                ? $input["params"]["host"]
+                : $input["hostname"]));
+}
+
+function get_trojan_ip($input)
+{
+    return !empty($input["params"]["sni"])
+        ? $input["params"]["sni"]
+        : (!empty($input["params"]["host"])
+            ? $input["params"]["host"]
+            : $input["hostname"]);
+}
+
+function get_tuic_ip($input)
+{
+    return $input["hostname"];
+}
+
+function get_ss_ip($input)
+{
+    return $input["server_address"];
+}
+
+function get_port($input, $type)
+{
+    switch ($type) {
+        case "vmess":
+            return $input["port"];
+        case "vless":
+        case "trojan":
+        case "tuic":
+            return $input["port"];
+        case "ss":
+            return $input["server_port"];
+    }
+}
+
+function get_flag($ip)
+{
+    $flag = "";
+    $ip_info = ip_info($ip);
+    if (isset($ip_info["country"])) {
+        $location = $ip_info["country"];
+        $flag = $location . getFlags($location);
+    } else {
+        $flag = "RELAY🚩";
+    }
+    return $flag;
+}
+
+function get_channels_assets()
+{
+    return json_decode(
+        file_get_contents("modules/channels/channels_assets.json"),
+        true
     );
 }
 
-$countryBased = seprate_by_country($mix);
-deleteFolder("country");
-mkdir("country");
-foreach ($countryBased as $country => $configsArray) {
-    if (!is_dir("country/". $country)) {
-        mkdir("country/". $country);
+function generate_name($channel, $flag, $is_reality, $number, $type)
+{
+    $name = "";
+    switch ($is_reality) {
+        case true:
+            $name =
+                "رایگان | REALITY | " .
+                "@" .
+                $channel .
+                " | " .
+                $flag .
+                " | " .
+                numberToEmoji($number);
+            break;
+        case false:
+            $name =
+                "رایگان | " .
+                $type .
+                " | @" .
+                $channel .
+                " | " .
+                $flag .
+                " | " .
+                numberToEmoji($number);
+            break;
     }
-    $configsSub = implode("\n", $configsArray);
-    file_put_contents("country/". $country . "/normal", $configsSub);
-    file_put_contents("country/". $country . "/base64", base64_encode($configsSub));
+    return $name;
 }
 
-process_mix_json($mix_data, "configs.json");
-process_mix_json($mix_data_deduplicate, "configs_deduplicate.json");
-
-$singboxTypes = [
-    "mix" => $mix,
-    "vmess" => $fixed_string_vmess,
-    "vless" => $fixed_string_vless,
-    "trojan" => $fixed_string_trojan,
-    "shadowsocks" => $fixed_string_shadowsocks,
-];
-
-foreach ($singboxTypes as $singboxType => $subContents) {
-    file_put_contents("singbox/nekobox/118/" . $singboxType . ".json", GenerateConfig($subContents, "nnew", $singboxType));
-    file_put_contents("singbox/nekobox/117/" . $singboxType . ".json", GenerateConfig($subContents, "nold", $singboxType));
-    file_put_contents("singbox/sfasfi/" . $singboxType . ".json", GenerateConfig($subContents, "sfia", $singboxType));
-    file_put_contents("singbox/nekobox/118/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nnew", $singboxType));
-    file_put_contents("singbox/nekobox/117/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "nold", $singboxType));
-    file_put_contents("singbox/sfasfi/" . $singboxType . "Lite.json", GenerateConfigLite($subContents, "sfia", $singboxType));
+function parse_config($input, $type, $is_sub = false)
+{
+    $parsed_config = [];
+    switch ($type) {
+        case "vmess":
+            $parsed_config = $is_sub
+                ? decode_vmess($input)
+                : decode_vmess($type . "://" . $input);
+            break;
+        case "vless":
+        case "trojan":
+            $parsed_config = $is_sub
+                ? parseProxyUrl($input, $type)
+                : parseProxyUrl($type . "://" . $input, $type);
+            break;
+        case "ss":
+            $parsed_config = $is_sub
+                ? ParseShadowsocks($input)
+                : ParseShadowsocks($type . "://" . $input);
+            break;
+        case "tuic":
+            $parsed_config = $is_sub
+                ? ParseTuic($input)
+                : parseTuic($type . "://" . $input);
+            break;
+    }
+    return $parsed_config;
 }
 
-$the_string_reality_singbox = $fixed_string_reality . "\n" . $string_donated_reality ;
-$string_reality_singbox = remove_duplicate_xray($the_string_reality_singbox, "vless");
+function build_config($input, $type)
+{
+    switch ($type) {
+        case "vmess":
+            return encode_vmess($input);
+        case "vless":
+        case "trojan":
+            return buildProxyUrl($input, $type);
+        case "ss":
+            return BuildShadowsocks($input);
+        case "tuic":
+            return buildTuic($input);
+    }
+}
 
-file_put_contents("singbox/nekobox/117/reality.json", GenerateConfig($string_reality_singbox, "nold", "reality"));
-file_put_contents("singbox/nekobox/118/reality.json", GenerateConfig($string_reality_singbox, "nnew", "reality"));
-file_put_contents("singbox/sfasfi/reality.json", GenerateConfig($string_reality_singbox,"sfia", "reality"));
-file_put_contents("singbox/nekobox/117/realityLite.json", GenerateConfigLite($string_reality_singbox, "nold", "reality"));
-file_put_contents("singbox/nekobox/118/realityLite.json", GenerateConfigLite($string_reality_singbox, "nnew", "reality"));
-file_put_contents("singbox/sfasfi/realityLite.json", GenerateConfigLite($string_reality_singbox,"sfia", "reality"));
+function get_config($channel, $type)
+{
+    $name_array = [
+        "vmess" => "ps",
+        "vless" => "hash",
+        "trojan" => "hash",
+        "ss" => "name",
+        "tuic" => "hash"
+    ];
+    // Fetch the content of the Telegram channel URL
+    $get = file_get_contents("https://t.me/s/" . $channel);
 
-$data = [
-    [
-        "data" => $vmess_data,
-        "filename" => "channel_ranking_vmess.json",
-        "type" => "vmess",
-    ],
-    [
-        "data" => $vless_data,
-        "filename" => "channel_ranking_vless.json",
-        "type" => "vless",
-    ],
-    [
-        "data" => $trojan_data,
-        "filename" => "channel_ranking_trojan.json",
-        "type" => "trojan",
-    ],
-    [
-        "data" => $shadowsocks_data,
-        "filename" => "channel_ranking_ss.json",
-        "type" => "ss",
-    ],
-];
+    // Load channels_assets JSON data
+    $channels_assets = get_channels_assets();
 
-// Process each item in the data array
-foreach ($data as $item) {
-    // Calculate ranking for the specific type of data
-    $channel_ranking = ranking($item["data"], $item["type"]);
+    $matches = get_config_time($type, $get);
+    $configs = get_config_items($type, $get);
 
-    // Convert the ranking to JSON format
-    $json_content = json_encode($channel_ranking, JSON_PRETTY_PRINT);
+    $final_data = [];
+    if ($channel === "V2rayCollectorDonate") {
+        $key_limit = count($configs[1]) - 20;
+    } else {
+        $key_limit = count($configs[1]) - 3;
+    }
+    $config_number = 1;
 
-    // Write the JSON content to a file in the "ranking" directory
-    file_put_contents("ranking/{$item["filename"]}", $json_content);
+    foreach ($configs[1] as $key => $config) {
+        if ($key >= $key_limit) {
+            if (is_valid($config)) {
+                if (strpos($config, "<br/>") !== false) {
+                    $config = substr($config, 0, strpos($config, "<br/>"));
+                }
+
+                $is_reality = is_reality($config, $type);
+
+                $the_config = parse_config($config, $type);
+                $check_pbk = $is_reality ? check_pbk($config) : true;
+
+                $address = get_address($the_config, $type);
+                if ($check_pbk) {
+                    if (is_valid_address($address) !== false) {
+                        $ip = get_ip($the_config, $type, $is_reality);
+                        $port = get_port($the_config, $type);
+
+                        @$ping_data = ping($ip, $port);
+                        if ($ping_data !== "unavailable") {
+                            $flag = get_flag($ip);
+
+                            $name_key = $name_array[$type];
+                            $the_config[$name_key] = generate_name(
+                                $channel,
+                                $flag,
+                                $is_reality,
+                                $config_number,
+                                strtoupper($type)
+                            );
+
+                            $final_config = build_config($the_config, $type);
+
+                            $final_data[$key]["channel"]["username"] = $channel;
+                            $final_data[$key]["channel"]["title"] =
+                                $channels_assets[$channel]["title"];
+                            $final_data[$key]["channel"]["logo"] =
+                                $channels_assets[$channel]["logo"];
+                            $final_data[$key]["type"] = $is_reality
+                                ? "reality"
+                                : $type;
+                            $final_data[$key]["config"] = $final_config;
+                            $final_data[$key]["ping"] = $ping_data;
+                            $final_data[$key]["time"] = convert_to_iran_time(
+                                $matches[1][$key]
+                            );
+                            $config_number++;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Return the final data array
+    return $final_data;
+}
+
+function detect_type($input)
+{
+    if (substr($input, 0, 8) === "vmess://") {
+        return "vmess";
+    } elseif (substr($input, 0, 8) === "vless://") {
+        return "vless";
+    } elseif (substr($input, 0, 9) === "trojan://") {
+        return "trojan";
+    } elseif (substr($input, 0, 5) === "ss://") {
+        return "ss";
+    } elseif (substr($input, 0, 7) === "tuic://") {
+        return "tuic";
+    } 
+
+}
+
+function process_subscription($input, $channel)
+{
+    $name_array = [
+        "vmess" => "ps",
+        "vless" => "hash",
+        "trojan" => "hash",
+        "ss" => "name",
+        "tuic" => "hash"
+    ];
+
+    $final_data = [];
+    $configs = explode("\n", $input);
+    $array_helper_vmess = 0;
+    $array_helper_vless = 0;
+    $array_helper_ss = 0;
+    $array_helper_trojan = 0;
+    $array_helper_tuic = 0;
+    $config_number = 1;
+    $i = 0;
+    $channel = $channel . " | Donated";
+    foreach ($configs as $config) {
+        $type = detect_type($config);
+        $is_reality = is_reality($config, $type);
+
+        $the_config = parse_config($config, $type, true);
+        $check_pbk = $is_reality ? check_pbk($config) : true;
+
+        $address = get_address($the_config, $type);
+        if ($check_pbk) {
+            if (is_valid_address($address) !== false) {
+                $ip = get_ip($the_config, $type, $is_reality);
+                $port = get_port($the_config, $type);
+
+                @$ping_data = ping($ip, $port);
+                if ($ping_data !== "unavailable") {
+                    $flag = get_flag($ip);
+
+                    $name_key = $name_array[$type];
+                    $the_config[$name_key] = generate_name(
+                        $channel,
+                        $flag,
+                        $is_reality,
+                        $config_number,
+                        strtoupper($type)
+                    );
+                    $final_config = build_config($the_config, $type);
+
+                    $key = ${"array_helper_$type"};
+
+                    $final_data[$type][$key]["channel"]["username"] = $channel;
+                    $final_data[$type][$key]["channel"]["title"] = $channel;
+                    $final_data[$type][$key]["channel"]["logo"] = "null";
+                    $final_data[$type][$key]["type"] = $is_reality
+                        ? "reality"
+                        : $type;
+                    $final_data[$type][$key]["config"] = $final_config;
+                    $final_data[$type][$key]["ping"] = $ping_data;
+                    $final_data[$type][$key]["time"] = tehran_time();
+
+                    $key++;
+                    ${"array_helper_$type"} = $key;
+                    $config_number++;
+                }
+            }
+        }
+    }
+    $i++;
+    return $final_data;
 }

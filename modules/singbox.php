@@ -259,6 +259,43 @@ function ShadowsocksSingbox($ShadowsocksUrl) {
     return $configResult;
 }
 
+function TuicSingbox($TuicUrl) {
+    $decodedTuic = ParseTuic($TuicUrl);
+    if (
+        is_null($decodedTuic['hash']) ||
+        $decodedTuic['hash'] === ""
+    ) {
+        return null;
+    }
+
+    $configResult = [
+        "tag" => $decodedTuic["hash"],
+        "type" => "tuic",
+        "server" => $decodedTuic['hostname'],
+        "server_port" => intval($decodedTuic['port']),
+        "uuid" => $decodedTuic['username'],
+        "password" => $decodedTuic['password'],
+        "congestion_control" => $decodedTuic['params']['congestion_control'],
+        "udp_relay_mode" => $decodedTuic['params']['udp_relay_mode'],
+        "zero_rtt_handshake" => false,
+        "heartbeat" => "10s",
+        "network" => "tcp",
+    ];
+
+    $configResult['tls'] = [
+            "enabled" => true,
+            "disable_sni" => isset($decodedTuic['params']['sni']) ? false : true,
+            "server_name" => isset($decodedTuic['params']['sni']) ? $decodedTuic['params']['sni'] : "",
+            "insecure" => isset($decodedTuic['params']['allow_insecure']) && intval($decodedTuic['params']['allow_insecure']) === 1 ? true : false,
+            "alpn" => [
+                "h3",
+                "spdy/3.1"
+            ],
+        ];
+
+    return $configResult;
+}
+
 function GenerateConfig($input, $output, $theType){
     $outbound = [];
     $v2ray_subscription = str_replace(" ", "%20", $input);
@@ -277,6 +314,8 @@ function GenerateConfig($input, $output, $theType){
             case "trojan":
                 $configSingbox = TrojanSingbox($config);
                 break;
+            case "tuic":
+                $configSingbox = TuicSingbox($config);
             case "ss":
                 $configSingbox = ShadowsocksSingbox($config);
                 break;
@@ -361,6 +400,9 @@ function GenerateConfigLite($input, $output, $theType){
                 break;
             case "trojan":
                 $configSingbox = TrojanSingbox($config);
+                break;
+            case "tuic":
+                $configSingbox = TuicSingbox($config);
                 break;
             case "ss":
                 $configSingbox = ShadowsocksSingbox($config);
