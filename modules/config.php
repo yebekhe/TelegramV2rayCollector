@@ -2,7 +2,7 @@
 date_default_timezone_set("Asia/Tehran");
 
 $Types = [
-    "Helix_Servers" => ["vless", "tuic"],
+    "Helix_Servers" => ["vless"],
     "irancpi_vpn" => ["tuic"],
     "V2rayCollector" => ["vless", "tuic"],
     "INIT1984" => ["vless"],
