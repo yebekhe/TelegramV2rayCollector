@@ -105,50 +105,45 @@ foreach ($Types as $key => $type_array) {
     $count = count($type_array);
     for ($type_count = $count - 1; $type_count >= 0; $type_count--) {
         $current_type = $type_array[$type_count];
-        switch ($current_type) {
-            case "vmess":
+        if ($current_type === "vmess") {
                 // Merge the results of `get_config` function with $vmess_data array
                 $vmess_data = array_merge(
                     $vmess_data,
                     /** @scrutinizer ignore-call */ 
                     get_config($key, $current_type)
                 );
-                break;
-            case "vless":
+        } 
+        if ($current_type === "vless") {
                 // Merge the results of `get_config` function with $vless_data array
                 $vless_data = array_merge(
                     $vless_data,
                     /** @scrutinizer ignore-call */
                     get_config($key, $current_type)
                 );
-                break;
-            case "trojan":
+        } 
+        if ($current_type === "trojan") {
                 // Merge the results of `get_config` function with $trojan_data array
                 $trojan_data = array_merge(
                     $trojan_data,
                     /** @scrutinizer ignore-call */
                     get_config($key, $current_type)
                 );
-                break;
-            case "ss":
+        } 
+        if($current_type === "ss") {
                 // Merge the results of `get_config` function with $shadowsocks_data array
                 $shadowsocks_data = array_merge(
                     $shadowsocks_data,
                     /** @scrutinizer ignore-call */
                     get_config($key, $current_type)
                 );
-                break;
-            case "tuic":
+        } 
+        if ($current_type === "tuic") {
                 // Merge the results of `get_config` function with $tuic_data array
                 $tuic_data = array_merge(
                     $tuic_data,
                     /** @scrutinizer ignore-call */
                     get_config($key, $current_type)
                 );
-                break;
-            default:
-                // Do nothing if unknown type is encountered
-                break;
         }
     }
 }
@@ -184,40 +179,35 @@ foreach ($donated_subscription as $url){
         $subscription_data = file_get_contents($base_donated_url . $username);
         $processed_subscription = /** @scrutinizer ignore-call */ process_subscription($subscription_data, $username);
         foreach ($processed_subscription as $donated_type => $donated_data){
-            switch ($donated_type){
-                case "vmess" :
+            if ($donated_type === "vmess") {
                     $donated_vmess_data = array_merge(
                         $donated_vmess_data,
                         $donated_data
                     );
-                    break;
-                case "vless" :
+            } 
+            if ($donated_type === "vless") {
                     $donated_vless_data = array_merge(
                         $donated_vless_data,
                         $donated_data
                     );
-                    break;
-                case "ss" :
+            } 
+            if ($donated_type === "ss") {
                     $donated_shadowsocks_data = array_merge(
                         $donated_shadowsocks_data,
                         $donated_data
                     );
-                    break;
-                case "trojan" :
+            } 
+            if ($donated_type === "trojan") {
                     $donated_trojan_data = array_merge(
                         $donated_trojan_data,
                         $donated_data
                     );
-                    break;
-                case "tuic" :
+            } 
+            if ($donated_type === "tuic") {
                     $donated_tuic_data = array_merge(
                         $donated_tuic_data,
                         $donated_data
                     );
-                    break;
-                default:
-                    // Do nothing if unknown type is encountered
-                    break;
             }
         }
     }
@@ -227,7 +217,7 @@ $string_donated_vmess = $donated_vmess_data !== [] ? remove_duplicate_vmess(impl
 $string_donated_vless = $donated_vless_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_vless_data))), "vless") : "";
 $string_donated_trojan = $donated_trojan_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_trojan_data))), "trojan") : "";
 $string_donated_shadowsocks = $donated_shadowsocks_data !== [] ? remove_duplicate_ss(fast_fix(implode("\n", config_array($donated_shadowsocks_data)))) : "";
-$string_donated_tuic = $donated_tuic_data !== [] ? remove_duplicate_ss(fast_fix(implode("\n", config_array($donated_tuic_data)))) : "";
+$string_donated_tuic = $donated_tuic_data !== [] ? remove_duplicate_tuic(fast_fix(implode("\n", config_array($donated_tuic_data)))) : "";
 $string_donated_reality = get_reality($string_donated_vless);
 
 $donated_mix =

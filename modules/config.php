@@ -3,6 +3,8 @@ date_default_timezone_set("Asia/Tehran");
 
 $Types = [
     "Helix_Servers" => ["vless", "tuic"],
+    "irancpi_vpn" => ["tuic"],
+    "V2rayCollector" => ["vless", "tuic"],
     "INIT1984" => ["vless"],
     "Parsashonam" => ["vless"],
     "shopingv2ray" => ["vless"],
@@ -38,14 +40,12 @@ $Types = [
     "proxy_kafee" => ["vless"],
     "V2raysFree" => ["vless"],
     "LuminousNet" => ["vless"],
-    "irancpi_vpn" => ["tuic"],
     "Awlix_V2RAY" => ["vless"],
     "DarkVPNpro" => ["vless"],
     "servermomo" => ["vless", "trojan", "ss"],
     "ipcloudflaree" => ["vless", "trojan", "ss"],
     "iP_CF" => ["vless", "vmess", "trojan", "ss", "tuic"],
     "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
-    "V2rayCollector" => ["vless", "tuic"],
     "V2rayCollectorDonate" => ["vmess", "vless", "trojan", "ss", "tuic"],
     "ProxyForOpeta" => ["vless"],
     "VpnWLF" => ["vmess", "vless"],
