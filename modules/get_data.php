@@ -229,10 +229,11 @@ function get_port($input, $type)
             return $input["port"];
         case "vless":
         case "trojan":
-        case "tuic":
             return $input["port"];
         case "ss":
             return $input["server_port"];
+        case "tuic":
+            return $input["port"];
     }
 }
 
@@ -308,7 +309,7 @@ function parse_config($input, $type, $is_sub = false)
             break;
         case "tuic":
             $parsed_config = $is_sub
-                ? ParseTuic($input)
+                ? parseTuic($input)
                 : parseTuic($type . "://" . $input);
             break;
     }
