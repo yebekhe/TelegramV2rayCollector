@@ -40,7 +40,7 @@ function processWsPath($input) {
   $output = [
       "path" => "/" . $input,
       "max_early_data" => $max_early_data
-  ]
+  ];
   
   return $output;
 }
