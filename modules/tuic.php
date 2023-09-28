@@ -1,6 +1,6 @@
 <?php
 
-function ParseTuic ($config_str) {
+function parseTuic ($config_str) {
     $parsedUrl = parse_url($config_str);
 
     // Extract the parameters from the query string
