@@ -28,60 +28,87 @@ function extract_names($input){
     return $locationNames;
 }
 
-function VmessSingbox($VmessUrl) {
+function processWsPath($input) {
+  if (strpos($input, '/') === 0) {
+    $input = substr($input, 1);
+  }
+  $max_early_data = 0;
+  if (strpos($input, '?ed=2048') !== false) {
+    $input = str_replace('?ed=2048', '', $input);
+    $max_early_data = 2048;
+  }
+  $output = [
+      "path" => "/" . $input,
+      "max_early_data" => $max_early_data
+  ]
+  
+  return $output;
+}
+
+function VmessSingbox($VmessUrl)
+{
     $decode_vmess = decode_vmess($VmessUrl);
-    if (is_null($decode_vmess['ps']) || $decode_vmess['ps'] === ""){
+    if (is_null($decode_vmess["ps"]) || $decode_vmess["ps"] === "") {
         return null;
     }
-    $configResult = array(
-        "tag"=> $decode_vmess['ps'],
-        "type"=> "vmess",
-        "server"=> $decode_vmess['add'],
-        "server_port"=> intval($decode_vmess['port']),
-        "uuid"=> $decode_vmess['id'],
-        "security"=> "auto",
-        "alter_id"=> intval($decode_vmess['aid']),
-        "global_padding"=> false,
-        "authenticated_length"=> true,
-        "packet_encoding"=> "",
-        "multiplex"=> array(
-          "enabled"=> false,
-          "protocol"=> "smux",
-          "max_streams"=> 32
-        )
-    );
+    $configResult = [
+        "tag" => $decode_vmess["ps"],
+        "type" => "vmess",
+        "server" => $decode_vmess["add"],
+        "server_port" => intval($decode_vmess["port"]),
+        "uuid" => $decode_vmess["id"],
+        "security" => "auto",
+        "alter_id" => intval($decode_vmess["aid"]),
+        "global_padding" => false,
+        "authenticated_length" => true,
+        "packet_encoding" => "",
+        "multiplex" => [
+            "enabled" => false,
+            "protocol" => "smux",
+            "max_streams" => 32,
+        ],
+    ];
 
-    if ($decode_vmess['port'] === "443" || $decode_vmess['tls'] === "tls") {
-        $configResult["tls"] = array(
+    if ($decode_vmess["port"] === "443" || $decode_vmess["tls"] === "tls") {
+        $configResult["tls"] = [
             "enabled" => true,
-            "server_name" => $decode_vmess['sni'] !== "" ? $decode_vmess['sni'] : $decode_vmess['add'],
+            "server_name" =>
+                $decode_vmess["sni"] !== ""
+                    ? $decode_vmess["sni"]
+                    : $decode_vmess["add"],
             "insecure" => true,
             "disable_sni" => false,
-            "utls"=> array(
-                "enabled"=> true,
-                "fingerprint"=> "chrome"
-              )
-        );
+            "utls" => [
+                "enabled" => true,
+                "fingerprint" => "chrome",
+            ],
+        ];
     }
-
-    if ($decode_vmess['net'] === "ws") {
-        $configResult["transport"] = array(
-            "type" => $decode_vmess['net'],
-            "path" => "/" . $decode_vmess['path'],
-            "headers" => array(
-                "Host" => $decode_vmess['host'] !== "" ? $decode_vmess['host'] : $decode_vmess['add'] !== "" ? $decode_vmess['add'] : ""
-            ),
-            "max_early_data" => 0,
-            "early_data_header_name" => "Sec-WebSocket-Protocol"
-        );
-    } elseif ($decode_vmess['net'] === "grpc") {
-        $configResult["transport"] = array(
-            "type" => $decode_vmess['net'],
-            "service_name" => $decode_vmess['path'],
+    
+    if ($decode_vmess["net"] === "ws") {
+        $pathProcess = processWsPath($decode_vmess["path"]);
+        $configResult["transport"] = [
+            "type" => $decode_vmess["net"],
+            "path" => $pathProcess['path'],
+            "headers" => [
+                "Host" =>
+                    $decode_vmess["host"] !== ""
+                        ? $decode_vmess["host"]
+                        : ($decode_vmess["add"] !== ""
+                            ? $decode_vmess["add"]
+                            : ""),
+            ],
+            "max_early_data" => $pathProcess['max_early_data'],
+            "early_data_header_name" => "Sec-WebSocket-Protocol",
+        ];
+    } elseif ($decode_vmess["net"] === "grpc") {
+        $configResult["transport"] = [
+            "type" => $decode_vmess["net"],
+            "service_name" => $decode_vmess["path"],
             "idle_timeout" => "15s",
             "ping_timeout" => "15s",
-            "permit_without_stream" => false
-        );
+            "permit_without_stream" => false,
+        ];
     }
 
     return $configResult;
@@ -147,24 +174,18 @@ function VlessSingbox($VlessUrl)
         ) {
             return null;
         }
-        if (
-            !isEvenLength($decoded_vless["params"]["sid"]) && 
-            !is_null($decoded_vless["params"]["sid"])
-           ) {
-            return null;
-        }
         }
     }
     $transportTypes = [
         "ws" => [
             "type" => $decoded_vless["params"]["type"],
-            "path" => "/" . $decoded_vless["params"]["path"],
+            "path" => processWsPath($decoded_vless["params"]["path"])['path'],
             "headers" => [
                 "Host" => !is_null($decoded_vless["params"]["host"])
                     ? $decoded_vless["params"]["host"]
                     : "",
             ],
-            "max_early_data" => 0,
+            "max_early_data" => processWsPath($decoded_vless["params"]["path"])['max_early_data'],
             "early_data_header_name" => "Sec-WebSocket-Protocol",
         ],
         "grpc" => [
@@ -187,55 +208,65 @@ function VlessSingbox($VlessUrl)
     return $configResult;
 }
 
-function TrojanSingbox($TrojanUrl){
+function TrojanSingbox($TrojanUrl)
+{
     $decoded_trojan = parseProxyUrl($TrojanUrl);
-    if (is_null($decoded_trojan['hash']) || $decoded_trojan['hash'] === ""){
+    if (is_null($decoded_trojan["hash"]) || $decoded_trojan["hash"] === "") {
         return null;
     }
-    $configResult = array(
-        "tag"=> $decoded_trojan['hash'],
-        "type"=> "trojan",
-        "server"=> $decoded_trojan['hostname'],
-        "server_port"=> intval($decoded_trojan['port']),
-        "password"=> $decoded_trojan['username'],
-        "multiplex"=> array(
-          "enabled"=> false,
-          "protocol"=> "smux",
-          "max_streams"=> 32
-        )
-    );
+    $configResult = [
+        "tag" => $decoded_trojan["hash"],
+        "type" => "trojan",
+        "server" => $decoded_trojan["hostname"],
+        "server_port" => intval($decoded_trojan["port"]),
+        "password" => $decoded_trojan["username"],
+        "multiplex" => [
+            "enabled" => false,
+            "protocol" => "smux",
+            "max_streams" => 32,
+        ],
+    ];
 
-    if ($decoded_trojan['port'] === "443" || $decoded_trojan['params']["security"] === "tls"){
-        $configResult['tls'] = array(
-            "enabled"=> true,
-            "server_name"=> !is_null($decoded_trojan['params']['sni']) ? $decoded_trojan['params']['sni'] : "",
-            "insecure"=> true,
-            "utls"=> array(
-                "enabled"=> true,
-                "fingerprint"=> "chrome"
-            )
-        );
+    if (
+        $decoded_trojan["port"] === "443" ||
+        $decoded_trojan["params"]["security"] === "tls"
+    ) {
+        $configResult["tls"] = [
+            "enabled" => true,
+            "server_name" => !is_null($decoded_trojan["params"]["sni"])
+                ? $decoded_trojan["params"]["sni"]
+                : "",
+            "insecure" => true,
+            "utls" => [
+                "enabled" => true,
+                "fingerprint" => "chrome",
+            ],
+        ];
     }
 
-    $transportTypes = array(
-        "ws" => array(
-            "type"=> $decoded_trojan['params']["type"],
-            "path"=> "/" . $decoded_trojan['params']["path"],
-            "headers"=> array(
-                "Host"=> $decoded_trojan['params']["host"]
-            )
-          ),
-          "grpc" => array(
-            "type" => $decoded_trojan['params']["type"],
-            "service_name" => $decoded_trojan['params']["serviceName"],
+    $transportTypes = [
+        "ws" => [
+            "type" => $decoded_trojan["params"]["type"],
+            "path" => processWsPath($decoded_trojan["params"]["path"])["path"],
+            "headers" => [
+                "Host" => $decoded_trojan["params"]["host"],
+            ],
+        ],
+        "grpc" => [
+            "type" => $decoded_trojan["params"]["type"],
+            "service_name" => $decoded_trojan["params"]["serviceName"],
             "idle_timeout" => "15s",
             "ping_timeout" => "15s",
-            "permit_without_stream" => false
-          )
-    );
-    if (isset($decoded_trojan['params']["type"])){
-        if ($decoded_trojan['params']["type"] === "ws" || $decoded_trojan['params']["type"] === "grpc"){
-            $configResult["transport"] = $transportTypes[$decoded_trojan['params']["type"]];
+            "permit_without_stream" => false,
+        ],
+    ];
+    if (isset($decoded_trojan["params"]["type"])) {
+        if (
+            $decoded_trojan["params"]["type"] === "ws" ||
+            $decoded_trojan["params"]["type"] === "grpc"
+        ) {
+            $configResult["transport"] =
+                $transportTypes[$decoded_trojan["params"]["type"]];
         }
     }
     return $configResult;
