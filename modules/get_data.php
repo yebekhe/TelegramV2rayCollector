@@ -93,12 +93,11 @@ function is_reality($input, $type)
             }
         case "trojan":
             return false;
-        case "ss":
-            return false;
         case "tuic":
             return false;
+        case "ss":
+            return false;
     }
-    return false;
 }
 
 function check_pbk($input)
@@ -134,10 +133,10 @@ function get_address($input, $type)
         case "vless":
         case "trojan":
             return $input["hostname"];
-        case "ss":
-            return $input["server_address"];
         case "tuic":
             return $input["hostname"];
+        case "ss":
+            return $input["server_address"];
     }
 }
 
@@ -230,10 +229,10 @@ function get_port($input, $type)
         case "vless":
         case "trojan":
             return $input["port"];
-        case "ss":
-            return $input["server_port"];
         case "tuic":
             return $input["port"];
+        case "ss":
+            return $input["server_port"];
     }
 }
 
@@ -263,7 +262,7 @@ function generate_name($channel, $flag, $is_reality, $number, $type)
     $name = "";
     switch ($is_reality) {
         case true:
-            $name =
+            return
                 "رایگان | REALITY | " .
                 "@" .
                 $channel .
@@ -271,9 +270,8 @@ function generate_name($channel, $flag, $is_reality, $number, $type)
                 $flag .
                 " | " .
                 numberToEmoji($number);
-            break;
         case false:
-            $name =
+            return
                 "رایگان | " .
                 $type .
                 " | @" .
@@ -282,38 +280,30 @@ function generate_name($channel, $flag, $is_reality, $number, $type)
                 $flag .
                 " | " .
                 numberToEmoji($number);
-            break;
     }
-    return $name;
 }
 
 function parse_config($input, $type, $is_sub = false)
 {
-    $parsed_config = [];
     switch ($type) {
         case "vmess":
-            $parsed_config = $is_sub
+            return $is_sub
                 ? decode_vmess($input)
                 : decode_vmess($type . "://" . $input);
-            break;
         case "vless":
         case "trojan":
-            $parsed_config = $is_sub
+            return $is_sub
                 ? parseProxyUrl($input, $type)
                 : parseProxyUrl($type . "://" . $input, $type);
-            break;
-        case "ss":
-            $parsed_config = $is_sub
-                ? ParseShadowsocks($input)
-                : ParseShadowsocks($type . "://" . $input);
-            break;
         case "tuic":
-            $parsed_config = $is_sub
+            return $is_sub
                 ? parseTuic($input)
                 : parseTuic($type . "://" . $input);
-            break;
+        case "ss":
+            return $is_sub
+                ? ParseShadowsocks($input)
+                : ParseShadowsocks($type . "://" . $input);
     }
-    return $parsed_config;
 }
 
 function build_config($input, $type)
@@ -324,10 +314,10 @@ function build_config($input, $type)
         case "vless":
         case "trojan":
             return buildProxyUrl($input, $type);
-        case "ss":
-            return BuildShadowsocks($input);
         case "tuic":
             return buildTuic($input);
+        case "ss":
+            return BuildShadowsocks($input);
     }
 }
 
@@ -357,7 +347,7 @@ function get_config($channel, $type)
     }
     $config_number = 1;
 
-    foreach ($configs[1] as $key => $config) {
+    foreach (array_reverse($configs[1]) as $key => $config) {
         if ($key >= $key_limit) {
             if (is_valid($config)) {
                 if (strpos($config, "<br/>") !== false) {
@@ -371,7 +361,7 @@ function get_config($channel, $type)
 
                 $address = get_address($the_config, $type);
                 if ($check_pbk) {
-                    if (is_valid_address($address) !== false) {
+                    if (is_valid_address($address)) {
                         $ip = get_ip($the_config, $type, $is_reality);
                         $port = get_port($the_config, $type);
 
@@ -459,7 +449,7 @@ function process_subscription($input, $channel)
 
         $address = get_address($the_config, $type);
         if ($check_pbk) {
-            if (is_valid_address($address) !== false) {
+            if (is_valid_address($address)) {
                 $ip = get_ip($the_config, $type, $is_reality);
                 $port = get_port($the_config, $type);
 
