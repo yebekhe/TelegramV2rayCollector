@@ -42,6 +42,8 @@ function seprate_by_country($configs){
             $configName = parse_config($config, $configType)['hash'];
         } elseif ($configType === "ss"){
             $configName = parse_config($config, "ss")['name'];
+        } elseif ($configType === "tuic"){
+            $configName = parse_config($config, "tuic")['hash'];
         }
 
         if (stripos($configName, "RELAY🚩")){
@@ -101,7 +103,7 @@ $shadowsocks_data = []; // Initialize an empty array for shadowsocks data
 $tuic_data = []; // Initialize an empty array for tuic data
 
 //Get data from channels
-foreach ($Types as $key => $type_array) {
+foreach ($Types as $channelUsername => $type_array) {
     $count = count($type_array);
     for ($type_count = $count - 1; $type_count >= 0; $type_count--) {
         $current_type = $type_array[$type_count];
@@ -110,7 +112,7 @@ foreach ($Types as $key => $type_array) {
                 $vmess_data = array_merge(
                     $vmess_data,
                     /** @scrutinizer ignore-call */ 
-                    get_config($key, $current_type)
+                    get_config($channelUsername, $current_type)
                 );
         } 
         if ($current_type === "vless") {
@@ -118,7 +120,7 @@ foreach ($Types as $key => $type_array) {
                 $vless_data = array_merge(
                     $vless_data,
                     /** @scrutinizer ignore-call */
-                    get_config($key, $current_type)
+                    get_config($channelUsername, $current_type)
                 );
         } 
         if ($current_type === "trojan") {
@@ -126,7 +128,7 @@ foreach ($Types as $key => $type_array) {
                 $trojan_data = array_merge(
                     $trojan_data,
                     /** @scrutinizer ignore-call */
-                    get_config($key, $current_type)
+                    get_config($channelUsername, $current_type)
                 );
         } 
         if($current_type === "ss") {
@@ -134,7 +136,7 @@ foreach ($Types as $key => $type_array) {
                 $shadowsocks_data = array_merge(
                     $shadowsocks_data,
                     /** @scrutinizer ignore-call */
-                    get_config($key, $current_type)
+                    get_config($channelUsername, $current_type)
                 );
         } 
         if ($current_type === "tuic") {
@@ -142,7 +144,7 @@ foreach ($Types as $key => $type_array) {
                 $tuic_data = array_merge(
                     $tuic_data,
                     /** @scrutinizer ignore-call */
-                    get_config($key, $current_type)
+                    get_config($channelUsername, $current_type)
                 );
         }
     }
