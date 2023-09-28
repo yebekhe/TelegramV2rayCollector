@@ -112,9 +112,9 @@
                 "URL-TEST | رایگان",
                 "US🇺🇸",
                 "PL🇵🇱",
-                "NL🇳🇱",
                 "FR🇫🇷",
-                "GB🇬🇧"
+                "GB🇬🇧",
+                "NL🇳🇱"
             ]
         },
         {
@@ -123,12 +123,12 @@
             "outbounds": [
                 "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @DeamNet_Proxy | PL🇵🇱 | 0️⃣1️⃣",
-                "رایگان | SS | @DeamNet_Proxy | NL🇳🇱 | 0️⃣2️⃣",
-                "رایگان | SS | @vmess_vless_v2rayng | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | SS | @VPNGate_Config | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @VPNGate_Config | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣"
+                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣",
+                "رایگان | SS | @vmess_vless_v2rayng | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -155,21 +155,11 @@
             "tolerance": 50
         },
         {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @DeamNet_Proxy | NL🇳🇱 | 0️⃣2️⃣",
-                "رایگان | SS | @vmess_vless_v2rayng | NL🇳🇱 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @VPNGate_Config | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @VPNGate_Config | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -182,6 +172,16 @@
             "outbounds": [
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "NL🇳🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @vmess_vless_v2rayng | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -208,27 +208,17 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @DeamNet_Proxy | NL🇳🇱 | 0️⃣2️⃣",
-            "type": "shadowsocks",
-            "server": "beecomf.xyz",
-            "server_port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "oZIoA69Q8yhcQV8ka3Pa3A",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @vmess_vless_v2rayng | NL🇳🇱 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "2mci-join.outline-vpn.cloud",
-            "server_port": 26137,
-            "method": "chacha20-ietf-poly1305",
-            "password": "qV2w5xgyW8h4OMQC4n5MFr",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
             "tag": "رایگان | SS | @VPNGate_Config | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "57.128.75.84",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @VPNGate_Config | FR🇫🇷 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "37.59.21.131",
             "server_port": 443,
@@ -264,6 +254,16 @@
             "server_port": 443,
             "method": "aes-128-gcm",
             "password": "shadowsocks",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @vmess_vless_v2rayng | NL🇳🇱 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "2mci-join.outline-vpn.cloud",
+            "server_port": 26137,
+            "method": "chacha20-ietf-poly1305",
+            "password": "qV2w5xgyW8h4OMQC4n5MFr",
             "plugin": "",
             "plugin_opts": ""
         },
