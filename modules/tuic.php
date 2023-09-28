@@ -40,7 +40,7 @@ function remove_duplicate_tuic($input)
     $array = explode("\n", $input);
 
     foreach ($array as $item) {
-        $parts = ParseTuic($item);
+        $parts = parseTuic($item);
         $part_hash = $parts["hash"];
         unset($parts["hash"]);
         ksort($parts["params"]);
