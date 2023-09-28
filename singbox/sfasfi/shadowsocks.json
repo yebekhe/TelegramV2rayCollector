@@ -109,10 +109,10 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "FR🇫🇷",
-                "AL🇦🇱",
-                "US🇺🇸",
-                "DE🇩🇪",
                 "GB🇬🇧",
+                "UA🇺🇦",
+                "US🇺🇸",
+                "PL🇵🇱",
                 "NL🇳🇱"
             ]
         },
@@ -121,12 +121,13 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | SS | @iP_CF | AL🇦🇱 | 0️⃣2️⃣",
-                "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | SS | @DeamNet_Proxy | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣2️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | UA🇺🇦 | 0️⃣2️⃣",
+                "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @DeamNet_Proxy | PL🇵🇱 | 0️⃣1️⃣",
                 "رایگان | SS | @vmess_vless_v2rayng | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -138,17 +139,29 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣1️⃣"
+                "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "AL🇦🇱",
+            "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | AL🇦🇱 | 0️⃣2️⃣"
+                "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "UA🇺🇦",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @V2rayCollectorDonate | UA🇺🇦 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -165,21 +178,10 @@
             "tolerance": 50
         },
         {
-            "tag": "DE🇩🇪",
+            "tag": "PL🇵🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @DeamNet_Proxy | DE🇩🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "GB🇬🇧",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣"
+                "رایگان | SS | @DeamNet_Proxy | PL🇵🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -198,15 +200,15 @@
         {
             "tag": "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "145.239.6.202",
-            "server_port": 4444,
-            "method": "aes-256-gcm",
-            "password": "pKEW8JPByTVTLtM",
+            "server": "37.59.21.131",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "asdKkaskJKfnsa",
             "plugin": "",
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "51.178.87.37",
             "server_port": 810,
@@ -216,32 +218,12 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @iP_CF | AL🇦🇱 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "31.171.153.178",
-            "server_port": 989,
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "205.134.180.147",
-            "server_port": 443,
+            "server": "51.142.185.215",
+            "server_port": 33866,
             "method": "chacha20-ietf-poly1305",
-            "password": "9Bvkw5aupNy8",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @DeamNet_Proxy | DE🇩🇪 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "145.239.1.100",
-            "server_port": 8119,
-            "method": "aes-256-gcm",
-            "password": "cdBIDV42DCwnfIN",
+            "password": "SMTHK9ius1vgLsgHSRTbNM",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -262,6 +244,36 @@
             "server_port": 443,
             "method": "aes-128-gcm",
             "password": "shadowsocks",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @V2rayCollectorDonate | UA🇺🇦 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "194.38.23.137",
+            "server_port": 51348,
+            "method": "chacha20-ietf-poly1305",
+            "password": "NeVavl43FD6DgFoim7S6HGks",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "205.134.180.147",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "9Bvkw5aupNy8",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @DeamNet_Proxy | PL🇵🇱 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "51.77.53.200",
+            "server_port": 8882,
+            "method": "aes-256-gcm",
+            "password": "kDWvXYZoTBcGkC4",
             "plugin": "",
             "plugin_opts": ""
         },
