@@ -366,7 +366,7 @@ function get_config($channel, $type)
                         $port = get_port($the_config, $type);
 
                         @$ping_data = ping($ip, $port);
-                        if ($ping_data !== "unavailable") {
+                        if ($ping_data !== "unavailable" || $type === "tuic") {
                             $flag = get_flag($ip);
 
                             $name_key = $name_array[$type];
@@ -454,7 +454,7 @@ function process_subscription($input, $channel)
                 $port = get_port($the_config, $type);
 
                 @$ping_data = ping($ip, $port);
-                if ($ping_data !== "unavailable") {
+                if ($ping_data !== "unavailable" || $type === "tuic") {
                     $flag = get_flag($ip);
 
                     $name_key = $name_array[$type];
