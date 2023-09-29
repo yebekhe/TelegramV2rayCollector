@@ -106,9 +106,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
-                "FR🇫🇷",
-                "NL🇳🇱",
-                "TR🇹🇷"
+                "FR🇫🇷"
             ]
         },
         {
@@ -116,10 +114,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TUIC | @Helix_Servers | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣2️⃣",
-                "رایگان | TUIC | @V2rayCollector | TR🇹🇷 | 0️⃣3️⃣"
+                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -140,27 +135,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "TR🇹🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollector | TR🇹🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -202,75 +176,6 @@
                 "disable_sni": true,
                 "server_name": "",
                 "insecure": false,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "46.30.41.144",
-            "server_port": 54681,
-            "uuid": "eb26c87a-bbb2-4e61-9ff8-7859d6899228",
-            "password": "3ac3ab5f",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣2️⃣",
-            "type": "tuic",
-            "server": "46.30.41.138",
-            "server_port": 38551,
-            "uuid": "cc4a36f7-fee8-4c66-9e9c-1c59ad25bd85",
-            "password": "5412d410",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | TR🇹🇷 | 0️⃣3️⃣",
-            "type": "tuic",
-            "server": "185.250.240.77",
-            "server_port": 24635,
-            "uuid": "4056f64d-d96b-40ae-8731-d9d96e309b6f",
-            "password": "3df47043",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true,
                 "alpn": [
                     "h3",
                     "spdy\/3.1"
