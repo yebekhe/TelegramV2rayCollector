@@ -5,6 +5,7 @@ include "shadowsocks.php";
 include "vmess.php";
 include "xray.php";
 include "tuic.php";
+include "hysteria2.php";
 include "ping.php";
 
 function numberToEmoji($number)
@@ -95,6 +96,8 @@ function is_reality($input, $type)
             return false;
         case "tuic":
             return false;
+        case "hy2":
+            return false;
         case "ss":
             return false;
     }
@@ -122,6 +125,8 @@ function get_ip($input, $type, $is_reality)
             return get_ss_ip($input);
         case "tuic":
             return get_tuic_ip($input);
+        case "hy2":
+            return get_hy2_ip($input);
     }
 }
 
@@ -134,6 +139,8 @@ function get_address($input, $type)
         case "trojan":
             return $input["hostname"];
         case "tuic":
+            return $input["hostname"];
+        case "hy2":
             return $input["hostname"];
         case "ss":
             return $input["server_address"];
@@ -216,6 +223,11 @@ function get_tuic_ip($input)
     return $input["hostname"];
 }
 
+function get_hy2_ip($input)
+{
+    return $input["hostname"];
+}
+
 function get_ss_ip($input)
 {
     return $input["server_address"];
@@ -230,6 +242,8 @@ function get_port($input, $type)
         case "trojan":
             return $input["port"];
         case "tuic":
+            return $input["port"];
+        case "hy2":
             return $input["port"];
         case "ss":
             return $input["server_port"];
@@ -299,6 +313,10 @@ function parse_config($input, $type, $is_sub = false)
             return $is_sub
                 ? parseTuic($input)
                 : parseTuic($type . "://" . $input);
+        case "hy2":
+            return $is_sub
+                ? parseHy2($input)
+                : parseHy2($type . "://" . $input);
         case "ss":
             return $is_sub
                 ? ParseShadowsocks($input)
@@ -316,6 +334,8 @@ function build_config($input, $type)
             return buildProxyUrl($input, $type);
         case "tuic":
             return buildTuic($input);
+        case "hy2":
+            return buildHy2($input);
         case "ss":
             return BuildShadowsocks($input);
     }
@@ -328,7 +348,8 @@ function get_config($channel, $type)
         "vless" => "hash",
         "trojan" => "hash",
         "ss" => "name",
-        "tuic" => "hash"
+        "tuic" => "hash",
+        "hy2" => "hash"
     ];
     // Fetch the content of the Telegram channel URL
     $get = file_get_contents("https://t.me/s/" . $channel);
@@ -416,7 +437,10 @@ function detect_type($input)
         return "ss";
     } elseif (substr($input, 0, 7) === "tuic://") {
         return "tuic";
+    } elseif (substr($input, 0, 6) === "hy2://") {
+        return "hy2";
     } 
+    
 
 }
 
@@ -427,7 +451,8 @@ function process_subscription($input, $channel)
         "vless" => "hash",
         "trojan" => "hash",
         "ss" => "name",
-        "tuic" => "hash"
+        "tuic" => "hash",
+        "hy2" => "hash",
     ];
 
     $final_data = [];
@@ -437,6 +462,7 @@ function process_subscription($input, $channel)
     $array_helper_ss = 0;
     $array_helper_trojan = 0;
     $array_helper_tuic = 0;
+    $array_helper_hy2 = 0;
     $config_number = 1;
     $i = 0;
     $channel = $channel . " | Donated";

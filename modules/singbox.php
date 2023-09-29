@@ -333,6 +333,47 @@ function TuicSingbox($TuicUrl) {
     return $configResult;
 }
 
+function Hy2Singbox($Hy2Url) {
+    $decodedHy2 = ParseTuic($Hy2Url);
+    if (
+        is_null($decodedHy2['hash']) ||
+        $decodedHy2['hash'] === ""
+    ) {
+        return null;
+    }
+
+    $configResult = [
+        "tag" => $decodedHy2["hash"],
+        "type" => "hysteria2",
+        "server" => $decodedHy2['hostname'],
+        "server_port" => intval($decodedHy2['port']),
+        "up_mbps" => 0,
+        "down_mbps" => 0,
+        "password" => $decodedHy2['username'],
+        "network" => "tcp",
+    ];
+
+
+    $configResult['obfs'] = [
+        "type" => $decodedHy2['params']['obfs'],
+        "password" => $decodedHy2['params']['obfs-password'],
+    ];
+    $configResult['tls'] = [
+            "enabled" => true,
+            "disable_sni" => isset($decodedHy2['params']['sni']) ? false : true,
+            "server_name" => isset($decodedHy2['params']['sni']) ? $decodedHy2['params']['sni'] : "",
+            "insecure" => isset($decodedHy2['params']['insecure']) && intval($decodedHy2['params']['insecure']) === 1 ? true : false,
+            "alpn" => [
+                "h3"
+            ],
+    ];
+    /*if (!isset($decodedHy2['params']['alpn']) || is_null($decodedHy2['params']['alpn']) || $decodedHy2['params']['alpn'] === "") {
+      unset($configResult['tls']["alpn"]);
+    }*/
+
+    return $configResult;
+}
+
 function GenerateConfig($input, $output, $theType){
     $outbound = [];
     $v2ray_subscription = str_replace(" ", "%20", $input);
@@ -353,6 +394,9 @@ function GenerateConfig($input, $output, $theType){
                 break;
             case "tuic":
                 $configSingbox = TuicSingbox($config);
+                break;
+            case "hy2":
+                $configSingbox = Hy2Singbox($config);
                 break;
             case "ss":
                 $configSingbox = ShadowsocksSingbox($config);
@@ -441,6 +485,9 @@ function GenerateConfigLite($input, $output, $theType){
                 break;
             case "tuic":
                 $configSingbox = TuicSingbox($config);
+                break;
+            case "hy2":
+                $configSingbox = Hy2Singbox($config);
                 break;
             case "ss":
                 $configSingbox = ShadowsocksSingbox($config);

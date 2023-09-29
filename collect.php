@@ -44,6 +44,8 @@ function seprate_by_country($configs){
             $configName = parse_config($config, "ss")['name'];
         } elseif ($configType === "tuic"){
             $configName = parse_config($config, "tuic")['hash'];
+        } elseif ($configType === "hy2"){
+            $configName = parse_config($config, "hy2")['hash'];
         }
 
         if (stripos($configName, "RELAY🚩")){
@@ -101,6 +103,8 @@ $trojan_data = []; // Initialize an empty array for trojan data
 $vless_data = []; // Initialize an empty array for vless data
 $shadowsocks_data = []; // Initialize an empty array for shadowsocks data
 $tuic_data = []; // Initialize an empty array for tuic data
+$hy2_data = []; // Initialize an empty array for hy2 data
+
 
 //Get data from channels
 foreach ($Types as $channelUsername => $type_array) {
@@ -147,6 +151,14 @@ foreach ($Types as $channelUsername => $type_array) {
                     get_config($channelUsername, $current_type)
                 );
         }
+        if ($current_type === "hy2") {
+            // Merge the results of `get_config` function with $tuic_data array
+            $hy2_data = array_merge(
+                $hy2_data,
+                /** @scrutinizer ignore-call */
+                get_config($channelUsername, $current_type)
+            );
+    }
     }
 }
 
@@ -155,6 +167,7 @@ $donated_trojan_data = []; // Initialize an empty array for trojan data
 $donated_vless_data = []; // Initialize an empty array for vless data
 $donated_shadowsocks_data = []; // Initialize an empty array for shadowsocks data
 $donated_tuic_data = []; // Initialize an empty array for tuic data
+$donated_hy2_data = []; // Initialize an empty array for tuic data
 
 $base_donated_url = "https://yebekhe.000webhostapp.com/donate/donated_servers/";
 
@@ -211,6 +224,12 @@ foreach ($donated_subscription as $url){
                         $donated_data
                     );
             }
+            if ($donated_type === "hy2") {
+                $donated_hy2_data = array_merge(
+                    $donated_hy2_data,
+                    $donated_data
+                );
+        }
         }
     }
 }
@@ -220,6 +239,7 @@ $string_donated_vless = $donated_vless_data !== [] ? remove_duplicate_xray(fast_
 $string_donated_trojan = $donated_trojan_data !== [] ? remove_duplicate_xray(fast_fix(implode("\n", config_array($donated_trojan_data))), "trojan") : "";
 $string_donated_shadowsocks = $donated_shadowsocks_data !== [] ? remove_duplicate_ss(fast_fix(implode("\n", config_array($donated_shadowsocks_data)))) : "";
 $string_donated_tuic = $donated_tuic_data !== [] ? remove_duplicate_tuic(fast_fix(implode("\n", config_array($donated_tuic_data)))) : "";
+$string_donated_hy2 = $donated_tuic_hy2 !== [] ? remove_duplicate_hy2(fast_fix(implode("\n", config_array($donated_hy2_data)))) : "";
 $string_donated_reality = get_reality($string_donated_vless);
 
 $donated_mix =
@@ -231,7 +251,9 @@ $donated_mix =
     "\n" .
     $string_donated_shadowsocks .
     "\n" .
-    $string_donated_tuic;
+    $string_donated_tuic .
+    "\n" .
+    $string_donated_hy2;
 $donated_array = explode("\n", $donated_mix);
 
 foreach ($donated_array as $key => $donated_config){
@@ -251,6 +273,7 @@ $vless_array = config_array($vless_data);
 $trojan_array = config_array($trojan_data);
 $shadowsocks_array = config_array($shadowsocks_data);
 $tuic_array = config_array($tuic_data);
+$hy2_array = config_array($hy2_data);
 
 $fixed_string_vmess = remove_duplicate_vmess(implode("\n", $vmess_array));
 $fixed_string_vmess_array = explode("\n", $fixed_string_vmess);
@@ -341,6 +364,24 @@ foreach ($tuic_data as $tuic_config_data) {
     }
 }
 
+$string_hy2 = fast_fix(implode("\n", $hy2_array));
+$fixed_string_hy2 = remove_duplicate_hy2($string_hy2);
+$fixed_string_hy2_array = explode("\n", $fixed_string_hy2);
+$json_hy2_array = [];
+
+// Iterate over $hy2_data and $fixed_string_hy2_array to find matching configurations
+foreach ($hy2_data as $hy2_config_data) {
+    foreach ($fixed_string_hy2_array as $key => $hy2_config) {
+        if (
+            parsehy2($hy2_config)["hash"] ===
+            parsehy2($hy2_config_data["config"])["hash"]
+        ) {
+            // Add matching configuration to $json_hy2_array
+            $json_hy2_array[$key] = $hy2_config_data;
+        }
+    }
+}
+
 $fixed_string_reality = get_reality($fixed_string_vless);
 
 $mix =
@@ -354,6 +395,8 @@ $mix =
     "\n" .
     $fixed_string_tuic .
     "\n" .
+    $fixed_string_hy2 .
+    "\n" .
     $donated_mix;
 
 $mix_data = array_merge(
@@ -362,6 +405,7 @@ $mix_data = array_merge(
     $trojan_data,
     $shadowsocks_data,
     $tuic_data,
+    $hy2_data
 );
 
 $mix_data_deduplicate = array_merge(
@@ -369,7 +413,8 @@ $mix_data_deduplicate = array_merge(
     $json_vless_array,
     $json_trojan_array,
     $json_shadowsocks_array,
-    $json_tuic_array
+    $json_tuic_array,
+    $json_hy2_array
 );
 
 $subscription_types = [
@@ -379,7 +424,8 @@ $subscription_types = [
     "reality" => base64_encode(addHeader($fixed_string_reality, "TVC | REALITY")),
     "trojan" => base64_encode(addHeader($fixed_string_trojan, "TVC | TROJAN")),
     "shadowsocks" => base64_encode(addHeader($fixed_string_shadowsocks, "TVC | SHADOWSOCKS")),
-    "tuic" => base64_encode(addHeader($fixed_string_tuic, "TVC | tuic")),
+    "tuic" => base64_encode(addHeader($fixed_string_tuic, "TVC | TUIC")),
+    "hysteria2" => base64_encode(addHeader($fixed_string_hy2, "TVC | HYSTERIA2")),
 ];
 
 // Write subscription data to files
@@ -416,6 +462,7 @@ $singboxTypes = [
     "trojan" => $fixed_string_trojan,
     "shadowsocks" => $fixed_string_shadowsocks,
     "tuic" => $fixed_string_tuic,
+    "hysteria2" => $fixed_string_hy2,
 ];
 
 foreach ($singboxTypes as $singboxType => $subContents) {
@@ -462,6 +509,11 @@ $data = [
         "data" => $tuic_data,
         "filename" => "channel_ranking_tuic.json",
         "type" => "tuic",
+    ],
+    [
+        "data" => $hy2_data,
+        "filename" => "channel_ranking_hy2.json",
+        "type" => "hy2",
     ],
 ];
 
