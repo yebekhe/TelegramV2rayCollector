@@ -25,7 +25,7 @@ function parseHy2 ($config_str) {
 
 function buildHy2($obj)
 {
-    $url = "tuic://";
+    $url = "hy2://";
     $url .= addUsernameAndPassword($obj);
     $url .= $obj["hostname"];
     $url .= addPort($obj);
