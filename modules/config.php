@@ -46,9 +46,9 @@ $Types = [
     "ipcloudflaree" => ["vless", "trojan", "ss"],
     "iP_CF" => ["vless", "vmess", "trojan", "ss", "tuic", "hy2"],
     "irancpi_vpn" => ["tuic", "hy2"],
-    "V2rayCollector" => ["vless", "tuic"],
-    "azadi_az_inja_migzare" => ["vmess", "vless", "ss"],
-    "V2rayCollectorDonate" => ["vmess", "vless", "trojan", "ss", "tuic"],
+    "V2rayCollector" => ["vless", "tuic", "hy2"],
+    "azadi_az_inja_migzare" => ["vmess", "vless", "ss", "tuic", "hy2"],
+    "V2rayCollectorDonate" => ["vmess", "vless", "trojan", "ss", "tuic", "hy2"],
     "ProxyForOpeta" => ["vless"],
     "VpnWLF" => ["vmess", "vless"],
     "V2rayNGn" => ["vmess", "vless"],
@@ -120,6 +120,7 @@ $Types = [
     "IRN_VPN" => ["vless"],
     "flyv2ray" => ["vless"],
     "serveriran11" => ["vless"],
+    "forwardv2ray" => ["vmess", "vless", "trojan", "ss"],
 ];
 
 $donated_subscription = [
