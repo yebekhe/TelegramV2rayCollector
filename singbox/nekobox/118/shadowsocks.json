@@ -113,6 +113,7 @@
                 "RU🇷🇺",
                 "MD🇲🇩",
                 "GB🇬🇧",
+                "SG🇸🇬",
                 "CH🇨🇭",
                 "KR🇰🇷",
                 "US🇺🇸",
@@ -132,8 +133,10 @@
                 "رایگان | SS | @Watashi_VPN | MD🇲🇩 | 0️⃣2️⃣",
                 "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣",
-                "رایگان | SS | @iP_CF | CH🇨🇭 | 0️⃣2️⃣",
-                "رایگان | SS | @V2rayCollectorDonate | KR🇰🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | SG🇸🇬 | 0️⃣2️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | SG🇸🇬 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | CH🇨🇭 | 0️⃣3️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | KR🇰🇷 | 0️⃣4️⃣",
                 "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @VPNGate_Config | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @DeamNet_Proxy | PL🇵🇱 | 0️⃣1️⃣",
@@ -182,10 +185,21 @@
             "tolerance": 50
         },
         {
+            "tag": "SG🇸🇬",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @iP_CF | SG🇸🇬 | 0️⃣2️⃣",
+                "رایگان | SS | @V2rayCollectorDonate | SG🇸🇬 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "CH🇨🇭",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | CH🇨🇭 | 0️⃣2️⃣"
+                "رایگان | SS | @iP_CF | CH🇨🇭 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -195,7 +209,7 @@
             "tag": "KR🇰🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @V2rayCollectorDonate | KR🇰🇷 | 0️⃣1️⃣"
+                "رایگان | SS | @V2rayCollectorDonate | KR🇰🇷 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -316,7 +330,27 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @iP_CF | CH🇨🇭 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @iP_CF | SG🇸🇬 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "18.139.0.10",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "amazonskr05",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @V2rayCollectorDonate | SG🇸🇬 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "213.35.112.142",
+            "server_port": 20552,
+            "method": "chacha20-ietf-poly1305",
+            "password": "b7182184-8e2d-4db1-b3fd-1c30458d909d",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @iP_CF | CH🇨🇭 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "84.17.53.163",
             "server_port": 110,
@@ -326,7 +360,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @V2rayCollectorDonate | KR🇰🇷 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @V2rayCollectorDonate | KR🇰🇷 | 0️⃣4️⃣",
             "type": "shadowsocks",
             "server": "158.180.84.193",
             "server_port": 20110,
