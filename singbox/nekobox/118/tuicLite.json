@@ -112,9 +112,8 @@
                 "URL-TEST | رایگان",
                 "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | TUIC | @Helix_Servers | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | TR🇹🇷 | 0️⃣2️⃣",
-                "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣3️⃣"
+                "رایگان | TUIC | @V2rayCollector | RELAY🚩 | 0️⃣1️⃣",
+                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣2️⃣"
             ]
         },
         {
@@ -123,9 +122,8 @@
             "outbounds": [
                 "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | TUIC | @Helix_Servers | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | TR🇹🇷 | 0️⃣2️⃣",
-                "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣3️⃣"
+                "رایگان | TUIC | @V2rayCollector | RELAY🚩 | 0️⃣1️⃣",
+                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -170,7 +168,26 @@
             }
         },
         {
-            "tag": "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣1️⃣",
+            "tag": "رایگان | TUIC | @V2rayCollector | RELAY🚩 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "172.232.33.169",
+            "server_port": 443,
+            "uuid": "a1ce5159-2e1c-45b6-ac25-534aa06aa4c7",
+            "password": "b5328d0c70252b13",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "quic",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": true,
+                "server_name": "",
+                "insecure": true
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣2️⃣",
             "type": "tuic",
             "server": "172.232.33.162",
             "server_port": 443,
@@ -186,52 +203,6 @@
                 "disable_sni": true,
                 "server_name": "",
                 "insecure": true
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | TR🇹🇷 | 0️⃣2️⃣",
-            "type": "tuic",
-            "server": "185.250.240.77",
-            "server_port": 24635,
-            "uuid": "4056f64d-d96b-40ae-8731-d9d96e309b6f",
-            "password": "3df47043",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | NL🇳🇱 | 0️⃣3️⃣",
-            "type": "tuic",
-            "server": "46.30.41.138",
-            "server_port": 38551,
-            "uuid": "cc4a36f7-fee8-4c66-9e9c-1c59ad25bd85",
-            "password": "5412d410",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
             }
         },
         {
