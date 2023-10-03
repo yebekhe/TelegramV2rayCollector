@@ -41,6 +41,7 @@ $Types = [
     "Awlix_V2RAY" => ["vless"],
     "DarkVPNpro" => ["vless"],
     "liq_VPN" => ["vless"],
+    "v2logy" => ["vless"],
     "Watashi_VPN" => ["vmess", "vless", "trojan", "ss"],
     "servermomo" => ["vless", "trojan", "ss"],
     "ipcloudflaree" => ["vless", "trojan", "ss"],
