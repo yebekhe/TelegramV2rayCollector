@@ -110,17 +110,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "SE🇸🇪",
-                "FR🇫🇷"
+                "SE🇸🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣2️⃣"
+                "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -137,61 +134,12 @@
             "tolerance": 50
         },
         {
-            "tag": "FR🇫🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣",
             "type": "tuic",
             "server": "172.232.132.221",
             "server_port": 443,
             "uuid": "9345e01b-23e9-4a7e-9f85-a2c35e59baa2",
             "password": "6b55724214843451",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "quic",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "172.232.33.169",
-            "server_port": 443,
-            "uuid": "a1ce5159-2e1c-45b6-ac25-534aa06aa4c7",
-            "password": "b5328d0c70252b13",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "quic",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | FR🇫🇷 | 0️⃣2️⃣",
-            "type": "tuic",
-            "server": "172.232.33.162",
-            "server_port": 443,
-            "uuid": "fb25d32c-e3b4-48bd-ac76-96f19801335d",
-            "password": "fb8944c60d158b8e",
             "congestion_control": "bbr",
             "udp_relay_mode": "quic",
             "zero_rtt_handshake": false,
