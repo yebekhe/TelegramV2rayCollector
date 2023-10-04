@@ -39,7 +39,6 @@ $Types = [
     "V2raysFree" => ["vless"],
     "LuminousNet" => ["vless"],
     "Awlix_V2RAY" => ["vless"],
-    "DarkVPNpro" => ["vless"],
     "liq_VPN" => ["vless"],
     "v2logy" => ["vless"],
     "Watashi_VPN" => ["vmess", "vless", "trojan", "ss"],
