@@ -110,16 +110,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "SE🇸🇪",
-                "FR🇫🇷"
+                "SE🇸🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣",
-                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
+                "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -130,16 +128,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TUIC | @Helix_Servers | SE🇸🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FR🇫🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -162,29 +150,6 @@
                 "disable_sni": true,
                 "server_name": "",
                 "insecure": true
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "tuic4d.cpionline.co",
-            "server_port": 443,
-            "uuid": "4d14b5f1-b6bd-4a30-81ea-19fa1d47699f",
-            "password": "f8AB EN2P3ifobaKOCRi",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": false,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
             }
         },
         {
