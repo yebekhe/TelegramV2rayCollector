@@ -111,12 +111,13 @@
                 "KR🇰🇷",
                 "RU🇷🇺",
                 "ES🇪🇸",
-                "LU🇱🇺",
+                "TR🇹🇷",
                 "CH🇨🇭",
                 "US🇺🇸",
                 "FR🇫🇷",
                 "JP🇯🇵",
-                "GB🇬🇧"
+                "GB🇬🇧",
+                "DE🇩🇪"
             ]
         },
         {
@@ -125,9 +126,9 @@
             "outbounds": [
                 "رایگان | SS | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @Watashi_VPN | RU🇷🇺 | 0️⃣2️⃣",
-                "رایگان | SS | @VPNGate_Config | RU🇷🇺 | 0️⃣3️⃣",
+                "رایگان | SS | @iP_CF | RU🇷🇺 | 0️⃣2️⃣",
                 "رایگان | SS | @Watashi_VPN | ES🇪🇸 | 0️⃣3️⃣",
-                "رایگان | SS | @iP_CF | LU🇱🇺 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | TR🇹🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @azadi_az_inja_migzare | CH🇨🇭 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
@@ -136,7 +137,8 @@
                 "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣3️⃣",
                 "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @VPNGate_Config | JP🇯🇵 | 0️⃣2️⃣",
-                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣"
+                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣",
+                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -157,7 +159,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @Watashi_VPN | RU🇷🇺 | 0️⃣2️⃣",
-                "رایگان | SS | @VPNGate_Config | RU🇷🇺 | 0️⃣3️⃣"
+                "رایگان | SS | @iP_CF | RU🇷🇺 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -174,10 +176,10 @@
             "tolerance": 50
         },
         {
-            "tag": "LU🇱🇺",
+            "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | LU🇱🇺 | 0️⃣1️⃣"
+                "رایگان | SS | @iP_CF | TR🇹🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -238,6 +240,16 @@
             "tolerance": 50
         },
         {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "رایگان | SS | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
             "type": "shadowsocks",
             "server": "158.180.84.193",
@@ -258,7 +270,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @VPNGate_Config | RU🇷🇺 | 0️⃣3️⃣",
+            "tag": "رایگان | SS | @iP_CF | RU🇷🇺 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "92.223.109.205",
             "server_port": 51348,
@@ -278,12 +290,12 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @iP_CF | LU🇱🇺 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @iP_CF | TR🇹🇷 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "92.38.163.53",
-            "server_port": 989,
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3",
+            "server": "5.188.36.54",
+            "server_port": 51348,
+            "method": "chacha20-ietf-poly1305",
+            "password": "U8zmZHm67IUht6LRPd7",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -374,6 +386,16 @@
             "server_port": 443,
             "method": "aes-128-gcm",
             "password": "shadowsocks",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "91.107.190.145",
+            "server_port": 39724,
+            "method": "chacha20-ietf-poly1305",
+            "password": "3QJFbV8bJS1fhrVQGUA1Fs",
             "plugin": "",
             "plugin_opts": ""
         },
