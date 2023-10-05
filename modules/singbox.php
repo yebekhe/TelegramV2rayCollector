@@ -159,6 +159,7 @@ function VlessSingbox($VlessUrl)
             $decoded_vless["params"]["security"] === "reality" ||
             isset($decoded_vless["params"]["pbk"])
         ) {
+            $configResult["tls"]["utls"]["fingerprint"] = $decoded_vless["params"]["fp"];
             $configResult["tls"]["reality"] = [
                 "enabled" => true,
                 "public_key" => !is_null($decoded_vless["params"]["pbk"])
