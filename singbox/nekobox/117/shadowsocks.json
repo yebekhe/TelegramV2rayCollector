@@ -105,6 +105,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "ID🇮🇩",
                 "EE🇪🇪",
                 "SG🇸🇬",
                 "CA🇨🇦",
@@ -119,7 +120,8 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | EE🇪🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | ID🇮🇩 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | EE🇪🇪 | 0️⃣2️⃣",
                 "رایگان | SS | @free4allVPN | SG🇸🇬 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣3️⃣",
@@ -136,10 +138,20 @@
             "tolerance": 50
         },
         {
+            "tag": "ID🇮🇩",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @iP_CF | ID🇮🇩 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "EE🇪🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | EE🇪🇪 | 0️⃣1️⃣"
+                "رایگان | SS | @iP_CF | EE🇪🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -219,7 +231,17 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | SS | @iP_CF | EE🇪🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @iP_CF | ID🇮🇩 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "103.146.202.137",
+            "server_port": 51348,
+            "method": "chacha20-ietf-poly1305",
+            "password": "zeffFGy6NhB51Lhaisyej",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @iP_CF | EE🇪🇪 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "45.129.96.62",
             "server_port": 51348,
