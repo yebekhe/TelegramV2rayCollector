@@ -106,7 +106,10 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "US🇺🇸",
-                "IE🇮🇪"
+                "SG🇸🇬",
+                "FR🇫🇷",
+                "DE🇩🇪",
+                "HK🇭🇰"
             ]
         },
         {
@@ -114,7 +117,10 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @V2rayCollectorDonate | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @PrivateVPNs | IE🇮🇪 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @V2rayCollectorDonate | SG🇸🇬 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -131,10 +137,40 @@
             "tolerance": 50
         },
         {
-            "tag": "IE🇮🇪",
+            "tag": "SG🇸🇬",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @PrivateVPNs | IE🇮🇪 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @V2rayCollectorDonate | SG🇸🇬 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FR🇫🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "HK🇭🇰",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -169,9 +205,21 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @PrivateVPNs | IE🇮🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | SG🇸🇬 | 0️⃣2️⃣",
             "type": "trojan",
-            "server": "52.16.74.205",
+            "server": "2si6.09vpn.com",
+            "server_port": 2083,
+            "password": "u3851046806",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "13.37.64.113",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "multiplex": {
@@ -187,6 +235,39 @@
                     "enabled": true,
                     "fingerprint": "chrome"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "3.77.59.130",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "trj.rollingnext.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "103.15.217.182",
+            "server_port": 33058,
+            "password": "QHhbhwe6lj",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             }
         },
         {
