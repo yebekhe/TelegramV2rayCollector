@@ -110,26 +110,53 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣4️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣4️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "2si6.09vpn.com",
+            "server_port": 2083,
+            "password": "u3851046806",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "رایگان | TROJAN | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
@@ -216,9 +243,30 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣1️⃣",
             "type": "trojan",
-            "server": "de1.connecton.surf",
+            "server": "54.36.173.159",
+            "server_port": 443,
+            "password": "4452b6961b",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "pol1.connecton.surf",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "5.199.143.230",
             "server_port": 443,
             "password": "517ccb0754",
             "multiplex": {
@@ -234,6 +282,18 @@
                     "enabled": true,
                     "fingerprint": "chrome"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "103.15.217.182",
+            "server_port": 33058,
+            "password": "QHhbhwe6lj",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             }
         },
         {
