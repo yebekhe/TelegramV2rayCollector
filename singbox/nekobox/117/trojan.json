@@ -105,35 +105,41 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "SG🇸🇬",
-                "DE🇩🇪",
-                "HK🇭🇰",
                 "TR🇹🇷",
-                "RELAY🚩"
+                "JP🇯🇵",
+                "DE🇩🇪",
+                "HK🇭🇰"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @forwardv2ray | SG🇸🇬 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @V2rayCollectorDonate | JP🇯🇵 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @forwardv2ray | TR🇹🇷 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "SG🇸🇬",
+            "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @forwardv2ray | SG🇸🇬 | 0️⃣3️⃣"
+                "رایگان | TROJAN | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "JP🇯🇵",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @V2rayCollectorDonate | JP🇯🇵 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -161,31 +167,11 @@
             "tolerance": 50
         },
         {
-            "tag": "TR🇹🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @forwardv2ray | TR🇹🇷 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "RELAY🚩",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣1️⃣",
             "type": "trojan",
-            "server": "2si6.09vpn.com",
-            "server_port": 2083,
-            "password": "u3851046806",
+            "server": "141.11.127.26",
+            "server_port": 443,
+            "password": "a00330bc-7f67-4bad-a59b-481cd2d67456",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -193,7 +179,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "",
+                "server_name": "16-163-218-240.nhost.00cdn.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -202,11 +188,11 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @forwardv2ray | SG🇸🇬 | 0️⃣3️⃣",
+            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | JP🇯🇵 | 0️⃣2️⃣",
             "type": "trojan",
-            "server": "103.253.24.212",
+            "server": "185.212.56.168",
             "server_port": 443,
-            "password": "5c5ceb40-902b-11eb-945a-1239d0255272",
+            "password": "share.mjj-home.com",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -214,7 +200,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "sg1-trojan.bonds.id",
+                "server_name": "tw.softbank.mjj-home.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -274,55 +260,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @forwardv2ray | TR🇹🇷 | 0️⃣1️⃣",
-            "type": "trojan",
-            "server": "141.11.127.26",
-            "server_port": 443,
-            "password": "a00330bc-7f67-4bad-a59b-481cd2d67456",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "16-163-218-240.nhost.00cdn.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣2️⃣",
-            "type": "trojan",
-            "server": "pz.kholochel.tk",
-            "server_port": 443,
-            "password": "9iiN39jgvc",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "Rev.EfnTen.top",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/9iiN39jgvc",
-                "headers": {
-                    "Host": "Rev.EfnTen.top"
-                }
             }
         },
         {
