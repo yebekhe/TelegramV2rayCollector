@@ -109,10 +109,12 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | TR🇹🇷 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @forwardv2ray | SG🇸🇬 | 0️⃣3️⃣"
             ]
         },
         {
@@ -120,10 +122,12 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @iP_CF | SG🇸🇬 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | TR🇹🇷 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @forwardv2ray | SG🇸🇬 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -143,27 +147,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
-            "type": "trojan",
-            "server": "35.158.187.4",
-            "server_port": 22222,
-            "password": "telegram-id-directvpn",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "trj.rollingnext.co.uk",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -223,6 +206,76 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @forwardv2ray | TR🇹🇷 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "141.11.127.26",
+            "server_port": 443,
+            "password": "a00330bc-7f67-4bad-a59b-481cd2d67456",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "16-163-218-240.nhost.00cdn.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "pz.kholochel.tk",
+            "server_port": 443,
+            "password": "9iiN39jgvc",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "Rev.EfnTen.top",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/9iiN39jgvc",
+                "headers": {
+                    "Host": "Rev.EfnTen.top"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @forwardv2ray | SG🇸🇬 | 0️⃣3️⃣",
+            "type": "trojan",
+            "server": "103.253.24.212",
+            "server_port": 443,
+            "password": "5c5ceb40-902b-11eb-945a-1239d0255272",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sg1-trojan.bonds.id",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
             }
         },
         {
