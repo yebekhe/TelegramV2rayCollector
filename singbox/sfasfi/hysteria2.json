@@ -107,52 +107,16 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST | رایگان",
-                "DE🇩🇪"
+                "URL-TEST | رایگان"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | HY2 | @iP_CF | DE🇩🇪 | 0️⃣1️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "DE🇩🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | HY2 | @iP_CF | DE🇩🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | HY2 | @iP_CF | DE🇩🇪 | 0️⃣1️⃣",
-            "type": "hysteria2",
-            "server": "161.123.69.19",
-            "server_port": 1602,
-            "up_mbps": 0,
-            "down_mbps": 0,
-            "password": "0f737d73b058c8cf",
-            "network": "tcp",
-            "obfs": {
-                "type": "salamander",
-                "password": "2915ed88"
-            },
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true,
-                "alpn": [
-                    "h3"
-                ]
-            }
         },
         {
             "tag": "direct",
