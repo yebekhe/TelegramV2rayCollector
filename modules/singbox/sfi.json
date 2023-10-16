@@ -19,13 +19,13 @@
   "dns": {
     "servers": [
       {
-        "address": "https://dns.bitdefender.net/dns-query",
+        "address": "tcp://95.85.95.85",
         "address_resolver": "dns-direct",
         "strategy": "ipv4_only",
         "tag": "dns-remote"
       },
       {
-        "address": "https://dns.bitdefender.net/dns-query",
+        "address": "tcp://95.85.95.85",
         "address_resolver": "dns-local",
         "detour": "direct",
         "strategy": "ipv4_only",
@@ -81,7 +81,7 @@
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
-      "stack": "system",
+      "stack": "mixed",
       "endpoint_independent_nat": true,
       "sniff": true,
       "sniff_override_destination": false
@@ -115,71 +115,77 @@
     }
   ],
   "route": {
-    "auto_detect_interface": true,
-    "override_android_vpn": true,
-    "final": "proxy",
-    "geoip": {
-      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
-      "download_detour": "direct"
-    },
-    "geosite": {
-      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
-      "download_detour": "direct"
-    },
-    "rules": [
-      {
-        "outbound": "dns-out",
-        "port": [
-          53
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy",
+        "geoip": {
+            "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
+            "download_detour": "direct"
+        },
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "geosite:category-ads-all",
+                    "malware",
+                    "phishing",
+                    "cryptominers"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geoip": [
+                "malware",
+                "phishing"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "ir",
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "ir",
+                    "private",
+                    "arvancloud"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ]
+            }
         ]
-      },
-      {
-        "inbound": [
-          "dns-in"
-        ],
-        "outbound": "dns-out"
-      },
-      {
-        "domain_suffix": [
-          "ir"
-        ],
-        "outbound": "bypass"
-      },
-      {
-        "geoip": [
-          "ir"
-        ],
-        "outbound": "bypass"
-      },
-      {
-        "geosite": [
-          "ir"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "geosite": [
-          "other"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "geosite": [
-          "geosite:category-ads-all"
-        ],
-        "outbound": "block"
-      },
-      {
-        "ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
-        "outbound": "block",
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ]
-      }
-    ]
-  }
+    }
 }
