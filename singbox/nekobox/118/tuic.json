@@ -109,48 +109,16 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST | رایگان",
-                "PL🇵🇱"
+                "URL-TEST | رایگان"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollectorDonate | PL🇵🇱 | 0️⃣1️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "PL🇵🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollectorDonate | PL🇵🇱 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollectorDonate | PL🇵🇱 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "178.236.246.236",
-            "server_port": 443,
-            "uuid": "914d2e37-a566-45f1-a7d7-e27bc4d11d26",
-            "password": "86a395641d8af224",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "quic",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": true
-            }
         },
         {
             "tag": "direct",
