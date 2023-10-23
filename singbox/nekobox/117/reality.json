@@ -114,8 +114,8 @@
                 "CH🇨🇭",
                 "SE🇸🇪",
                 "GB🇬🇧",
-                "RELAY🚩",
                 "US🇺🇸",
+                "RELAY🚩",
                 "PL🇵🇱",
                 "NO🇳🇴",
                 "AT🇦🇹",
@@ -262,8 +262,7 @@
                 "رایگان | REALITY | @V2Hub | Donated | GB🇬🇧 | 1️⃣4️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | GB🇬🇧 | 3️⃣3️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | GB🇬🇧 | 8️⃣2️⃣",
-                "رایگان | REALITY | @V2rayNGn | RELAY🚩 | 0️⃣3️⃣",
-                "رایگان | REALITY | @proxyymeliii | RELAY🚩 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2rayNGn | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2rayng_vpnrog | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 1️⃣0️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 2️⃣9️⃣",
@@ -272,6 +271,7 @@
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 6️⃣6️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 9️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 9️⃣2️⃣",
+                "رایگان | REALITY | @proxyymeliii | RELAY🚩 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | PL🇵🇱 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | PL🇵🇱 | 1️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | PL🇵🇱 | 7️⃣3️⃣",
@@ -506,20 +506,10 @@
             "tolerance": 50
         },
         {
-            "tag": "RELAY🚩",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @V2rayNGn | RELAY🚩 | 0️⃣3️⃣",
-                "رایگان | REALITY | @proxyymeliii | RELAY🚩 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @V2rayNGn | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2rayng_vpnrog | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 1️⃣0️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 2️⃣9️⃣",
@@ -528,6 +518,16 @@
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 6️⃣6️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 9️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | US🇺🇸 | 9️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "RELAY🚩",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @proxyymeliii | RELAY🚩 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -4998,7 +4998,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayNGn | RELAY🚩 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @V2rayNGn | US🇺🇸 | 0️⃣3️⃣",
             "type": "vless",
             "server": "VPNCUSTOMIZE.cam",
             "server_port": 443,
@@ -5021,41 +5021,6 @@
                 "reality": {
                     "enabled": true,
                     "public_key": "yursYhzaAg72M5qeEeiAXBYUxTExox-6YVp9EGvz9SE",
-                    "short_id": "bcedc719"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@VPNCUSTOMIZE",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @proxyymeliii | RELAY🚩 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "vpncustomize.cam",
-            "server_port": 443,
-            "uuid": "T",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.iranserver.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "LW8JqGYFjnyJMw2y72BLIaiYsTwI1ftoMTXGVTDVDUo",
                     "short_id": "bcedc719"
                 }
             },
@@ -5321,6 +5286,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": null,
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @proxyymeliii | RELAY🚩 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "vpncustomize.cam",
+            "server_port": 443,
+            "uuid": "T",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.iranserver.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "LW8JqGYFjnyJMw2y72BLIaiYsTwI1ftoMTXGVTDVDUo",
+                    "short_id": "bcedc719"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@VPNCUSTOMIZE",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
