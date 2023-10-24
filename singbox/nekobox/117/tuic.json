@@ -105,16 +105,40 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "AZ🇦🇿",
-                "NL🇳🇱"
+                "NL🇳🇱",
+                "PL🇵🇱",
+                "AZ🇦🇿"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TUIC | @V2rayCollector | AZ🇦🇿 | 0️⃣1️⃣",
+                "رایگان | TUIC | @iP_CF | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | TUIC | @V2rayCollectorDonate | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | TUIC | @iP_CF | PL🇵🇱 | 0️⃣2️⃣",
+                "رایگان | TUIC | @V2rayCollector | AZ🇦🇿 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "NL🇳🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TUIC | @iP_CF | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | TUIC | @V2rayCollectorDonate | NL🇳🇱 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "PL🇵🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TUIC | @iP_CF | PL🇵🇱 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -131,22 +155,12 @@
             "tolerance": 50
         },
         {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollectorDonate | NL🇳🇱 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | AZ🇦🇿 | 0️⃣1️⃣",
+            "tag": "رایگان | TUIC | @iP_CF | NL🇳🇱 | 0️⃣1️⃣",
             "type": "tuic",
-            "server": "kuroit.yebekhe.link",
-            "server_port": 443,
-            "uuid": "c28f2f1e-265c-4672-ab64-d038254cc362",
-            "password": "8264dd9849a38cf8",
+            "server": "tui881hqp.youthinkyoucanstopmefyoudpi.site",
+            "server_port": 25172,
+            "uuid": "2209d482-3dbb-44da-817a-ddc2c8f27daa",
+            "password": "2aaae510",
             "congestion_control": "bbr",
             "udp_relay_mode": "quic",
             "zero_rtt_handshake": false,
@@ -156,7 +170,11 @@
                 "enabled": true,
                 "disable_sni": true,
                 "server_name": "",
-                "insecure": false
+                "insecure": false,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
             }
         },
         {
@@ -180,6 +198,48 @@
                     "h3",
                     "spdy\/3.1"
                 ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @iP_CF | PL🇵🇱 | 0️⃣2️⃣",
+            "type": "tuic",
+            "server": "94.228.165.186",
+            "server_port": 8443,
+            "uuid": "738e1d25-f88e-4409-904b-9d2235afb84d",
+            "password": "1f08834422e4c179",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @V2rayCollector | AZ🇦🇿 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "kuroit.yebekhe.link",
+            "server_port": 443,
+            "uuid": "c28f2f1e-265c-4672-ab64-d038254cc362",
+            "password": "8264dd9849a38cf8",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "quic",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": true,
+                "server_name": "",
+                "insecure": false
             }
         },
         {
