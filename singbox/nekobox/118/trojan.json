@@ -110,6 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "US🇺🇸",
                 "RELAY🚩",
                 "CR🇨🇷",
                 "CH🇨🇭",
@@ -122,9 +123,10 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @V2rayCollectorDonate | CR🇨🇷 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @V2rayCollectorDonate | CH🇨🇭 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @V2rayCollectorDonate | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @V2rayCollectorDonate | CR🇨🇷 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @V2rayCollectorDonate | CH🇨🇭 | 0️⃣4️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣3️⃣",
@@ -136,10 +138,20 @@
             "tolerance": 50
         },
         {
+            "tag": "US🇺🇸",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @V2rayCollectorDonate | US🇺🇸 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "RELAY🚩",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -149,7 +161,7 @@
             "tag": "CR🇨🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @V2rayCollectorDonate | CR🇨🇷 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @V2rayCollectorDonate | CR🇨🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -159,7 +171,7 @@
             "tag": "CH🇨🇭",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @V2rayCollectorDonate | CH🇨🇭 | 0️⃣3️⃣"
+                "رایگان | TROJAN | @V2rayCollectorDonate | CH🇨🇭 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -198,7 +210,35 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | US🇺🇸 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "tracking.betarays.ir",
+            "server_port": 443,
+            "password": "d971aa94-81e6-4c2a-8672-a09cbbdeb450",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "tracking.betarays.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/ECJIMZVCZDD0Oyd1AEUEUd",
+                "headers": {
+                    "Host": "tracking.betarays.ir"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | RELAY🚩 | 0️⃣2️⃣",
             "type": "trojan",
             "server": "discord.com",
             "server_port": 443,
@@ -226,7 +266,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | CR🇨🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | CR🇨🇷 | 0️⃣3️⃣",
             "type": "trojan",
             "server": "all-network.aparat.lol",
             "server_port": 8443,
@@ -254,7 +294,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | CH🇨🇭 | 0️⃣3️⃣",
+            "tag": "رایگان | TROJAN | @V2rayCollectorDonate | CH🇨🇭 | 0️⃣4️⃣",
             "type": "trojan",
             "server": "16.62.65.57",
             "server_port": 443,
