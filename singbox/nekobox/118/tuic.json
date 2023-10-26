@@ -109,48 +109,16 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST | رایگان",
-                "AZ🇦🇿"
+                "URL-TEST | رایگان"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollector | AZ🇦🇿 | 0️⃣1️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "AZ🇦🇿",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollector | AZ🇦🇿 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollector | AZ🇦🇿 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "kuroit.yebekhe.link",
-            "server_port": 443,
-            "uuid": "c28f2f1e-265c-4672-ab64-d038254cc362",
-            "password": "8264dd9849a38cf8",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "quic",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": false
-            }
         },
         {
             "tag": "direct",
