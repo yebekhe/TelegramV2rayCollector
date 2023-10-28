@@ -103,39 +103,15 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": [
-                "URL-TEST | رایگان",
-                "رایگان | TUIC | @V2rayCollectorDonate | SE🇸🇪 | 0️⃣1️⃣"
-            ]
+            "outbounds": null
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @V2rayCollectorDonate | SE🇸🇪 | 0️⃣1️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | TUIC | @V2rayCollectorDonate | SE🇸🇪 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "172.232.132.221",
-            "server_port": 443,
-            "uuid": "9345e01b-23e9-4a7e-9f85-a2c35e59baa2",
-            "password": "6b55724214843451",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
-                "insecure": false
-            }
         },
         {
             "tag": "direct",
