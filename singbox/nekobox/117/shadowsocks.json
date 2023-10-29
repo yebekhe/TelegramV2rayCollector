@@ -110,8 +110,7 @@
                 "JP🇯🇵",
                 "RU🇷🇺",
                 "DE🇩🇪",
-                "GB🇬🇧",
-                "CA🇨🇦"
+                "GB🇬🇧"
             ]
         },
         {
@@ -127,12 +126,12 @@
                 "رایگان | SS | @bright_vpn | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @VPNGate_Config | JP🇯🇵 | 0️⃣1️⃣",
                 "رایگان | SS | @VPNGate_Config | RU🇷🇺 | 0️⃣2️⃣",
                 "رایگان | SS | @V2rayngninja | RU🇷🇺 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣",
-                "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣"
+                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -159,7 +158,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @free4allVPN | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣"
+                "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -201,16 +201,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "CA🇨🇦",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -307,6 +297,16 @@
             "plugin_opts": ""
         },
         {
+            "tag": "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "la.telegavpn.org",
+            "server_port": 33966,
+            "method": "chacha20-ietf-poly1305",
+            "password": "amiN10tOnlIW94hafDjSQE",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
             "tag": "رایگان | SS | @VPNGate_Config | JP🇯🇵 | 0️⃣1️⃣",
             "type": "shadowsocks",
             "server": "84.17.34.108",
@@ -353,16 +353,6 @@
             "server_port": 443,
             "method": "aes-128-gcm",
             "password": "shadowsocks",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "toronto.telegavpn.org",
-            "server_port": 31024,
-            "method": "chacha20-ietf-poly1305",
-            "password": "yI7hFIQJPbRBz7sowdN0lx",
             "plugin": "",
             "plugin_opts": ""
         },
