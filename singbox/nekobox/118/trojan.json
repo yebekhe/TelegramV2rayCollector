@@ -125,10 +125,13 @@
                 "رایگان | TROJAN | @iP_CF | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @iP_CF | RELAY🚩 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | JP🇯🇵 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | JP🇯🇵 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | JP🇯🇵 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | JP🇯🇵 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -159,7 +162,8 @@
             "tag": "RELAY🚩",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @iP_CF | RELAY🚩 | 0️⃣3️⃣"
+                "رایگان | TROJAN | @iP_CF | RELAY🚩 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -181,7 +185,9 @@
             "tag": "JP🇯🇵",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @oneclickvpnkeys | JP🇯🇵 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | JP🇯🇵 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | JP🇯🇵 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @forwardv2ray | JP🇯🇵 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -279,6 +285,27 @@
             }
         },
         {
+            "tag": "رایگان | TROJAN | @forwardv2ray | RELAY🚩 | 0️⃣3️⃣",
+            "type": "trojan",
+            "server": "gsawsjp2.aiopen.cfd",
+            "server_port": 443,
+            "password": "6504a551-673d-44d6-85a9-b05f67fdf971",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "18-140-66-207.nhost.00cdn.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣1️⃣",
             "type": "trojan",
             "server": "15.236.7.60",
@@ -355,6 +382,48 @@
             "tls": {
                 "enabled": true,
                 "server_name": "jp1.connecton.surf",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @forwardv2ray | JP🇯🇵 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "gsawshk2.aiopen.cfd",
+            "server_port": 443,
+            "password": "6504a551-673d-44d6-85a9-b05f67fdf971",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "18-140-66-207.nhost.00cdn.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @forwardv2ray | JP🇯🇵 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "3.113.25.58",
+            "server_port": 443,
+            "password": "6504a551-673d-44d6-85a9-b05f67fdf971",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "18-140-66-207.nhost.00cdn.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
