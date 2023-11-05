@@ -108,9 +108,11 @@
                 "FR🇫🇷",
                 "IT🇮🇹",
                 "CA🇨🇦",
+                "NL🇳🇱",
                 "US🇺🇸",
                 "RU🇷🇺",
-                "GB🇬🇧"
+                "GB🇬🇧",
+                "PA🇵🇦"
             ]
         },
         {
@@ -118,15 +120,17 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣2️⃣",
+                "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣3️⃣",
                 "رایگان | SS | @V2rayCollectorDonate | IT🇮🇹 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | SS | @free4allVPN | CA🇨🇦 | 0️⃣2️⃣",
-                "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @DeamNet_Proxy | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @VPNGate_Config | RU🇷🇺 | 0️⃣1️⃣",
                 "رایگان | SS | @V2rayngninja | RU🇷🇺 | 0️⃣1️⃣",
-                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣1️⃣"
+                "رایگان | SS | @bright_vpn | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | PA🇵🇦 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -137,7 +141,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣2️⃣"
+                "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -165,10 +169,20 @@
             "tolerance": 50
         },
         {
+            "tag": "NL🇳🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @DeamNet_Proxy | NL🇳🇱 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -197,6 +211,16 @@
             "tolerance": 50
         },
         {
+            "tag": "PA🇵🇦",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | PA🇵🇦 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣1️⃣",
             "type": "shadowsocks",
             "server": "149.202.82.172",
@@ -207,7 +231,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "54.36.174.181",
             "server_port": 5601,
@@ -247,7 +271,17 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @DeamNet_Proxy | NL🇳🇱 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "89.19.216.18",
+            "server_port": 8388,
+            "method": "chacha20-ietf-poly1305",
+            "password": "NC7jORVNrruV\/+3+PwOJrnnOeG7n75X1",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "205.134.180.145",
             "server_port": 443,
@@ -293,6 +327,16 @@
             "server_port": 443,
             "method": "aes-128-gcm",
             "password": "shadowsocks",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | PA🇵🇦 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "138.186.142.4",
+            "server_port": 989,
+            "method": "aes-256-cfb",
+            "password": "f8f7aCzcPKbsF8p3",
             "plugin": "",
             "plugin_opts": ""
         },
