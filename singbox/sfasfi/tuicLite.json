@@ -106,15 +106,43 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": null
+            "outbounds": [
+                "URL-TEST | رایگان",
+                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
+            ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": null,
+            "outbounds": [
+                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
+            ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "singbox.foriran.trade",
+            "server_port": 14903,
+            "uuid": "96fb89bd-1f43-4393-9717-6414e7fa5e08",
+            "password": "96fb89bd-1f43-4393-9717-6414e7fa5e08",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.bing.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
         },
         {
             "tag": "direct",
