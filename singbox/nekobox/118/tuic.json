@@ -110,6 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "FR🇫🇷",
                 "US🇺🇸"
             ]
         },
@@ -117,9 +118,20 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | TUIC | @V2rayCollector | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | TUIC | @V2rayCollector | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TUIC | @V2rayCollector | US🇺🇸 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FR🇫🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -136,6 +148,29 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | TUIC | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "hys3.cpionline.co",
+            "server_port": 2073,
+            "uuid": "2ade2c69-8597-4397-a36e-585c9672ac88",
+            "password": "b23f2c33cd3ea09b",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
         },
         {
             "tag": "رایگان | TUIC | @V2rayCollector | US🇺🇸 | 0️⃣1️⃣",
