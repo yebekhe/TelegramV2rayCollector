@@ -110,8 +110,8 @@
                 "URL-TEST | رایگان",
                 "PL🇵🇱",
                 "FR🇫🇷",
-                "US🇺🇸",
-                "RU🇷🇺"
+                "GB🇬🇧",
+                "US🇺🇸"
             ]
         },
         {
@@ -124,8 +124,9 @@
                 "رایگان | SS | @hcv2ray | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @hcv2ray | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @hcv2ray | FR🇫🇷 | 0️⃣3️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣2️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -149,7 +150,18 @@
                 "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣3️⃣",
                 "رایگان | SS | @hcv2ray | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @hcv2ray | FR🇫🇷 | 0️⃣2️⃣",
-                "رایگان | SS | @hcv2ray | FR🇫🇷 | 0️⃣3️⃣"
+                "رایگان | SS | @hcv2ray | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -159,17 +171,7 @@
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "RU🇷🇺",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣2️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -236,22 +238,32 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "www.outline.network.ak1956.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
+            "server_port": 8388,
+            "method": "chacha20-ietf-poly1305",
+            "password": "MGY5N",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "13.87.75.155",
+            "server_port": 46130,
+            "method": "chacha20-ietf-poly1305",
+            "password": "mTypilmjidrr6dQYaOGHf7",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "www.outline.network.ak1954.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 8881,
             "method": "aes-256-gcm",
             "password": "kDWvXYZoTBcGkC4",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣2️⃣",
-            "type": "shadowsocks",
-            "server": "www.outline.network.ak1953.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
-            "server_port": 51348,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ackkokOi",
             "plugin": "",
             "plugin_opts": ""
         },
