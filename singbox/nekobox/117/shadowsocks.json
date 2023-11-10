@@ -105,9 +105,9 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "CA🇨🇦",
-                "GB🇬🇧",
+                "PL🇵🇱",
                 "FR🇫🇷",
+                "GB🇬🇧",
                 "US🇺🇸"
             ]
         },
@@ -115,9 +115,10 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | CA🇨🇦 | 0️⃣1️⃣",
-                "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣2️⃣",
+                "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -125,20 +126,10 @@
             "tolerance": 50
         },
         {
-            "tag": "CA🇨🇦",
+            "tag": "PL🇵🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | CA🇨🇦 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "GB🇬🇧",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣2️⃣"
+                "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -148,7 +139,18 @@
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -165,22 +167,22 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | SS | @iP_CF | CA🇨🇦 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "cf.fanqiecloud.top",
-            "server_port": 20749,
-            "method": "chacha20-ietf-poly1305",
-            "password": "4b29d8bb-3df9-4db6-8dcf-57908a4103b3",
+            "server": "51.77.53.200",
+            "server_port": 8881,
+            "method": "aes-256-gcm",
+            "password": "kDWvXYZoTBcGkC4",
             "plugin": "",
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣2️⃣",
             "type": "shadowsocks",
-            "server": "13.87.75.155",
-            "server_port": 46130,
-            "method": "chacha20-ietf-poly1305",
-            "password": "mTypilmjidrr6dQYaOGHf7",
+            "server": "149.202.82.172",
+            "server_port": 8009,
+            "method": "aes-256-gcm",
+            "password": "XKFKl2rULjIp74",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -191,6 +193,16 @@
             "server_port": 8388,
             "method": "chacha20-ietf-poly1305",
             "password": "MGY5N",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "13.87.75.155",
+            "server_port": 46130,
+            "method": "chacha20-ietf-poly1305",
+            "password": "mTypilmjidrr6dQYaOGHf7",
             "plugin": "",
             "plugin_opts": ""
         },
