@@ -112,6 +112,8 @@
                 "US🇺🇸",
                 "GB🇬🇧",
                 "FR🇫🇷",
+                "SE🇸🇪",
+                "DE🇩🇪",
                 "RELAY🚩"
             ]
         },
@@ -121,13 +123,17 @@
             "outbounds": [
                 "رایگان | TROJAN | @iP_CF | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @iP_CF | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @VmessProtocol | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @proxystore11 | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @proxystore11 | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @VmessProtocol | RELAY🚩 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @proxystore11 | RELAY🚩 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @proxystore11 | RELAY🚩 | 0️⃣3️⃣"
+                "رایگان | TROJAN | @ConfigsHUB | SE🇸🇪 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @ConfigsHUB | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @proxystore11 | RELAY🚩 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -148,7 +154,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @iP_CF | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @proxystore11 | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @VmessProtocol | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @proxystore11 | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @proxystore11 | US🇺🇸 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -159,7 +167,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -176,12 +185,31 @@
             "tolerance": 50
         },
         {
+            "tag": "SE🇸🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @ConfigsHUB | SE🇸🇪 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @ConfigsHUB | DE🇩🇪 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "RELAY🚩",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @VmessProtocol | RELAY🚩 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @proxystore11 | RELAY🚩 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @proxystore11 | RELAY🚩 | 0️⃣3️⃣"
+                "رایگان | TROJAN | @proxystore11 | RELAY🚩 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -244,11 +272,67 @@
             }
         },
         {
+            "tag": "رایگان | TROJAN | @VmessProtocol | US🇺🇸 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "aws-ar-buenosaires-1.f1cflineb.com",
+            "server_port": 443,
+            "password": "your_password",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "aws-ar-buenosaires-1.f1cflineb.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/f1rocket",
+                "headers": {
+                    "Host": "aws-ar-buenosaires-1.f1cflineb.com"
+                }
+            }
+        },
+        {
             "tag": "رایگان | TROJAN | @proxystore11 | US🇺🇸 | 0️⃣2️⃣",
             "type": "trojan",
             "server": "cdn.proxystore11.site",
             "server_port": 2083,
             "password": "VnQFHKa2pj",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn.proxystore11.site",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @proxystore11 | US🇺🇸 | 0️⃣3️⃣",
+            "type": "trojan",
+            "server": "cdn.proxystore11.site",
+            "server_port": 2083,
+            "password": "Qk5naxAaTd",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -314,6 +398,27 @@
             }
         },
         {
+            "tag": "رایگان | TROJAN | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "3.11.18.117",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "trj.rollingnext.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣3️⃣",
             "type": "trojan",
             "server": "35.181.199.255",
@@ -335,11 +440,11 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @VmessProtocol | RELAY🚩 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @ConfigsHUB | SE🇸🇪 | 0️⃣1️⃣",
             "type": "trojan",
-            "server": "aws-ar-buenosaires-1.f1cflineb.com",
-            "server_port": 443,
-            "password": "your_password",
+            "server": "16.16.226.75",
+            "server_port": 22222,
+            "password": "telegram-id-directvpn",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
@@ -347,18 +452,53 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "aws-ar-buenosaires-1.f1cflineb.com",
+                "server_name": "trj.rollingnext.co.uk",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "18.198.62.12",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             },
-            "transport": {
-                "type": "ws",
-                "path": "\/f1rocket",
-                "headers": {
-                    "Host": "aws-ar-buenosaires-1.f1cflineb.com"
+            "tls": {
+                "enabled": true,
+                "server_name": "trj.rollingnext.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @ConfigsHUB | DE🇩🇪 | 0️⃣3️⃣",
+            "type": "trojan",
+            "server": "3.66.68.39",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "trj.rollingnext.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },
@@ -376,34 +516,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "panel.proxystore11.site",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11 ‌proxystore11",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @proxystore11 | RELAY🚩 | 0️⃣3️⃣",
-            "type": "trojan",
-            "server": "cdn.proxystore11.site",
-            "server_port": 2083,
-            "password": "Qk5naxAaTd",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "cdn.proxystore11.site",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
