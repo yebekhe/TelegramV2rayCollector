@@ -275,7 +275,7 @@ function generate_name($channel, $flag, $is_reality, $number, $type)
 {
     $name = "";
     if ($channel === "iP_CF") {
-        $channel = "iP_CF | کلاهبردار";
+        $channel = "FAKEOFTVC";
     }
     switch ($is_reality) {
         case true:
@@ -404,7 +404,7 @@ function get_config($channel, $type)
 
                             $final_config = build_config($the_config, $type);
 
-                            $final_data[$key]["channel"]["username"] = $channel === "iP_CF" ? "iP_CF | کلاهبردار" : $channel;
+                            $final_data[$key]["channel"]["username"] = $channel === "iP_CF" ? "FAKEOFTVC" : $channel;
                             $final_data[$key]["channel"]["title"] =
                                 $channels_assets[$channel]["title"];
                             $final_data[$key]["channel"]["logo"] =
