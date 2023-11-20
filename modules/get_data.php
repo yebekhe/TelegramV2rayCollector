@@ -274,6 +274,9 @@ function get_channels_assets()
 function generate_name($channel, $flag, $is_reality, $number, $type)
 {
     $name = "";
+    if ($channel === "iP_CF") {
+        $channel = "iP_CF | کلاهبردار"
+    }
     switch ($is_reality) {
         case true:
             return
