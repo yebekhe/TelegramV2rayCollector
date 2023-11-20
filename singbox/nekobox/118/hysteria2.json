@@ -109,52 +109,16 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST | رایگان",
-                "NL🇳🇱"
+                "URL-TEST | رایگان"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | HY2 | @V2rayCollector | NL🇳🇱 | 0️⃣1️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | HY2 | @V2rayCollector | NL🇳🇱 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | HY2 | @V2rayCollector | NL🇳🇱 | 0️⃣1️⃣",
-            "type": "hysteria2",
-            "server": "194.5.97.15",
-            "server_port": 443,
-            "up_mbps": 0,
-            "down_mbps": 0,
-            "password": "99999",
-            "network": "tcp",
-            "obfs": {
-                "type": "salamander",
-                "password": "99999"
-            },
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.bing.com",
-                "insecure": true,
-                "alpn": [
-                    "h3"
-                ]
-            }
         },
         {
             "tag": "direct",
