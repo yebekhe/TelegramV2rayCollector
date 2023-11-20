@@ -108,44 +108,32 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "PL🇵🇱",
-                "GB🇬🇧",
+                "US🇺🇸",
                 "FR🇫🇷",
+                "PL🇵🇱",
                 "DE🇩🇪",
-                "BG🇧🇬",
-                "US🇺🇸"
+                "BG🇧🇬"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣1️⃣",
-                "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣2️⃣",
-                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣2️⃣",
+                "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣3️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | SS | @forwardv2ray | BG🇧🇬 | 0️⃣1️⃣",
-                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣3️⃣"
+                "رایگان | SS | @forwardv2ray | BG🇧🇬 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "PL🇵🇱",
+            "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "GB🇬🇧",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣2️⃣"
+                "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -155,7 +143,17 @@
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣3️⃣"
+                "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "PL🇵🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -182,42 +180,32 @@
             "tolerance": 50
         },
         {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
+            "tag": "رایگان | SS | @iP_CF | US🇺🇸 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "38.75.137.66",
+            "server_port": 5004,
+            "method": "aes-256-gcm",
+            "password": "g5MeD6Ft3CWlJId",
+            "plugin": "",
+            "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "54.36.174.181",
+            "server_port": 7306,
+            "method": "aes-256-gcm",
+            "password": "FoOiGlkAA9yPEGP",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @iP_CF | PL🇵🇱 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "ak1644.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
             "server_port": 8118,
             "method": "aes-256-gcm",
             "password": "cdBIDV42DCwnfIN",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @iP_CF | GB🇬🇧 | 0️⃣2️⃣",
-            "type": "shadowsocks",
-            "server": "13.87.75.155",
-            "server_port": 46130,
-            "method": "chacha20-ietf-poly1305",
-            "password": "mTypilmjidrr6dQYaOGHf7",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @iP_CF | FR🇫🇷 | 0️⃣3️⃣",
-            "type": "shadowsocks",
-            "server": "141.95.99.192",
-            "server_port": 443,
-            "method": "aes-256-cfb",
-            "password": "asdKkaskJKfnsa",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -238,16 +226,6 @@
             "server_port": 989,
             "method": "aes-256-cfb",
             "password": "f8f7aCzcPKbsF8p3",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣3️⃣",
-            "type": "shadowsocks",
-            "server": "la.telegavpn.org",
-            "server_port": 33966,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Y7SWLTto68Bp3wGvejAl7v",
             "plugin": "",
             "plugin_opts": ""
         },
