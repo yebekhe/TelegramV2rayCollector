@@ -404,7 +404,7 @@ function get_config($channel, $type)
 
                             $final_config = build_config($the_config, $type);
 
-                            $final_data[$key]["channel"]["username"] = $channel;
+                            $final_data[$key]["channel"]["username"] = $channel === "iP_CF" ? "iP_CF | کلاهبردار" : $channel;
                             $final_data[$key]["channel"]["title"] =
                                 $channels_assets[$channel]["title"];
                             $final_data[$key]["channel"]["logo"] =
