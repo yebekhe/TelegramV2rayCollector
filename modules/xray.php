@@ -61,7 +61,7 @@ function addParams($obj)
 {
     $url = "";
     if (!empty($obj["params"])) {
-        $url .= "?" . http_build_query($obj["params"]);
+        $url .= "?" . http_build_query($obj["params"], '', null, PHP_QUERY_RFC3986|PHP_QUERY_RFC1738);
     }
     return $url;
 }
