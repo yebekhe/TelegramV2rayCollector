@@ -107,7 +107,8 @@
                 "URL-TEST | رایگان",
                 "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣2️⃣",
-                "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣3️⃣"
+                "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣3️⃣",
+                "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣1️⃣"
             ]
         },
         {
@@ -116,7 +117,8 @@
             "outbounds": [
                 "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣2️⃣",
-                "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣3️⃣"
+                "رایگان | TUIC | @EUT_VPN | CA🇨🇦 | 0️⃣3️⃣",
+                "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -184,6 +186,29 @@
                 "enabled": true,
                 "disable_sni": false,
                 "server_name": "www.google.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "hys3.foriran.trade",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
                 "insecure": true,
                 "alpn": [
                     "h3",
