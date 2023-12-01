@@ -264,6 +264,8 @@ function TrojanSingbox($TrojanUrl)
                 $transportTypes[$decoded_trojan["params"]["type"]];
         }
     }
+    if ($decoded_trojan["params"]["type"] === "ws" && ($configResult["transport"]["headers"]["Host"] === "" || is_null($configResult["transport"]["headers"]["Host"]))) return null;
+    if ($decoded_trojan["params"]["type"] === "grpc" && ($configResult["transport"]["service_name"] === "" || is_null($configResult["transport"]["service_name"]))) return null;
     return $configResult;
 }
 
