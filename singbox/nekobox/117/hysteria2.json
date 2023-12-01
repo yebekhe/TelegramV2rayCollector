@@ -105,28 +105,17 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "FR🇫🇷",
-                "NL🇳🇱"
+                "NL🇳🇱",
+                "FR🇫🇷"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | HY2 | @EUT_VPN | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | HY2 | @EUT_VPN | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | HY2 | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | HY2 | @EUT_VPN | NL🇳🇱 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FR🇫🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | HY2 | @EUT_VPN | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | HY2 | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣"
+                "رایگان | HY2 | @azadi_az_inja_migzare | FR🇫🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -136,29 +125,40 @@
             "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | HY2 | @EUT_VPN | NL🇳🇱 | 0️⃣2️⃣"
+                "رایگان | HY2 | @EUT_VPN | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "رایگان | HY2 | @EUT_VPN | FR🇫🇷 | 0️⃣1️⃣",
+            "tag": "FR🇫🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | HY2 | @irancpi_vpn | FR🇫🇷 | 0️⃣1️⃣",
+                "رایگان | HY2 | @azadi_az_inja_migzare | FR🇫🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "رایگان | HY2 | @EUT_VPN | NL🇳🇱 | 0️⃣1️⃣",
             "type": "hysteria2",
-            "server": "45.76.44.57",
-            "server_port": 443,
+            "server": "5.255.119.232",
+            "server_port": 446,
             "up_mbps": 0,
             "down_mbps": 0,
-            "password": "f40b1e441addaec3",
+            "password": "13185bc123940cfa",
             "network": "tcp",
             "obfs": {
                 "type": "salamander",
-                "password": "2db7b42a"
+                "password": "b92a1f1e"
             },
             "tls": {
                 "enabled": true,
-                "disable_sni": false,
-                "server_name": "google.co",
+                "disable_sni": true,
+                "server_name": "",
                 "insecure": true,
                 "alpn": [
                     "h3"
@@ -189,22 +189,22 @@
             }
         },
         {
-            "tag": "رایگان | HY2 | @EUT_VPN | NL🇳🇱 | 0️⃣2️⃣",
+            "tag": "رایگان | HY2 | @azadi_az_inja_migzare | FR🇫🇷 | 0️⃣1️⃣",
             "type": "hysteria2",
-            "server": "5.255.119.232",
-            "server_port": 446,
+            "server": "45.76.44.57",
+            "server_port": 443,
             "up_mbps": 0,
             "down_mbps": 0,
-            "password": "13185bc123940cfa",
+            "password": "f40b1e441addaec3",
             "network": "tcp",
             "obfs": {
                 "type": "salamander",
-                "password": "b92a1f1e"
+                "password": "2db7b42a"
             },
             "tls": {
                 "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
+                "disable_sni": false,
+                "server_name": "google.co",
                 "insecure": true,
                 "alpn": [
                     "h3"
