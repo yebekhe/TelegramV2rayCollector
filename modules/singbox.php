@@ -92,7 +92,7 @@ function VmessSingbox($VmessUrl)
             "headers" => [
                 "Host" =>
                     $decode_vmess["host"]
-                    ?? decode_vmess["add"],
+                    ?? $decode_vmess["add"],
             ],
             "max_early_data" => $pathProcess['max_early_data'],
             "early_data_header_name" => "Sec-WebSocket-Protocol",
