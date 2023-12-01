@@ -101,6 +101,7 @@ function VmessSingbox($VmessUrl)
             "max_early_data" => $pathProcess['max_early_data'],
             "early_data_header_name" => "Sec-WebSocket-Protocol",
         ];
+        if ($configResult["transport"]["headers"]["Host"] === "") return null;
     } elseif ($decode_vmess["net"] === "grpc") {
         $configResult["transport"] = [
             "type" => $decode_vmess["net"],
