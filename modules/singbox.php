@@ -73,9 +73,8 @@ function VmessSingbox($VmessUrl)
         $configResult["tls"] = [
             "enabled" => true,
             "server_name" =>
-                $decode_vmess["sni"] !== ""
-                    ? $decode_vmess["sni"]
-                    : $decode_vmess["add"],
+                $decode_vmess["sni"]
+                ?? $decode_vmess["add"],
             "insecure" => true,
             "disable_sni" => false,
             "utls" => [
@@ -92,24 +91,22 @@ function VmessSingbox($VmessUrl)
             "path" => $pathProcess['path'],
             "headers" => [
                 "Host" =>
-                    $decode_vmess["host"] !== ""
-                        ? $decode_vmess["host"]
-                        : ($decode_vmess["add"] !== ""
-                            ? $decode_vmess["add"]
-                            : ""),
+                    $decode_vmess["host"]
+                    ?? decode_vmess["add"],
             ],
             "max_early_data" => $pathProcess['max_early_data'],
             "early_data_header_name" => "Sec-WebSocket-Protocol",
         ];
-        if ($configResult["transport"]["headers"]["Host"] === "") return null;
+        if ($configResult["transport"]["headers"]["Host"] === "" || is_null($configResult["transport"]["headers"]["Host"])) return null;
     } elseif ($decode_vmess["net"] === "grpc") {
         $configResult["transport"] = [
             "type" => $decode_vmess["net"],
-            "service_name" => $decode_vmess["path"],
+            "service_name" => $decode_vmess["path"] ?? "",
             "idle_timeout" => "15s",
             "ping_timeout" => "15s",
             "permit_without_stream" => false,
         ];
+      if ($configResult["transport"]["service_name"] === "" || is_null($configResult["transport"]["service_name"])) return null;
     }
 
     return $configResult;
@@ -146,9 +143,7 @@ function VlessSingbox($VlessUrl)
     ) {
         $configResult["tls"] = [
             "enabled" => true,
-            "server_name" => !is_null($decoded_vless["params"]["sni"])
-                ? $decoded_vless["params"]["sni"]
-                : "",
+            "server_name" => $decoded_vless["params"]["sni"] ?? "",
             "insecure" => false,
             "utls" => [
                 "enabled" => true,
@@ -183,16 +178,14 @@ function VlessSingbox($VlessUrl)
             "type" => $decoded_vless["params"]["type"],
             "path" => processWsPath($decoded_vless["params"]["path"])['path'],
             "headers" => [
-                "Host" => !is_null($decoded_vless["params"]["host"])
-                    ? $decoded_vless["params"]["host"]
-                    : "",
+                "Host" => $decoded_vless["params"]["host"] ?? $decoded_vless["hostname"] ?? "",
             ],
             "max_early_data" => processWsPath($decoded_vless["params"]["path"])['max_early_data'],
             "early_data_header_name" => "Sec-WebSocket-Protocol",
         ],
         "grpc" => [
             "type" => $decoded_vless["params"]["type"],
-            "service_name" => $decoded_vless["params"]["serviceName"],
+            "service_name" => $decoded_vless["params"]["serviceName"] ?? "",
             "idle_timeout" => "15s",
             "ping_timeout" => "15s",
             "permit_without_stream" => false,
@@ -207,6 +200,8 @@ function VlessSingbox($VlessUrl)
                 $transportTypes[$decoded_vless["params"]["type"]];
         }
     }
+    if ($decoded_vless["params"]["type"] === "ws" && ($configResult["transport"]["headers"]["Host"] === "" || is_null($configResult["transport"]["headers"]["Host"]))) return null;
+    if ($decoded_vless["params"]["type"] === "grpc" && ($configResult["transport"]["service_name"] === "" || is_null($configResult["transport"]["service_name"]))) return null;
     return $configResult;
 }
 
@@ -235,9 +230,7 @@ function TrojanSingbox($TrojanUrl)
     ) {
         $configResult["tls"] = [
             "enabled" => true,
-            "server_name" => !is_null($decoded_trojan["params"]["sni"])
-                ? $decoded_trojan["params"]["sni"]
-                : "",
+            "server_name" => $decoded_trojan["params"]["sni"] ?? "",
             "insecure" => true,
             "utls" => [
                 "enabled" => true,
@@ -251,12 +244,12 @@ function TrojanSingbox($TrojanUrl)
             "type" => $decoded_trojan["params"]["type"],
             "path" => processWsPath($decoded_trojan["params"]["path"])["path"],
             "headers" => [
-                "Host" => $decoded_trojan["params"]["host"],
+                "Host" => $decoded_trojan["params"]["host"] ?? $decoded_trojan["hostname"] ?? "",
             ],
         ],
         "grpc" => [
             "type" => $decoded_trojan["params"]["type"],
-            "service_name" => $decoded_trojan["params"]["serviceName"],
+            "service_name" => $decoded_trojan["params"]["serviceName"] ?? "",
             "idle_timeout" => "15s",
             "ping_timeout" => "15s",
             "permit_without_stream" => false,
