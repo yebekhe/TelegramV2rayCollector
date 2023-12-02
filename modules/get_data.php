@@ -367,7 +367,7 @@ function get_config($channel, $type)
     if ($channel === "V2rayCollectorDonate") {
         $key_limit = count($configs[1]) - 20;
     } else {
-        $key_limit = count($configs[1]) - 3;
+        $key_limit = count($configs[1]) - 7;
     }
     $config_number = 1;
 
