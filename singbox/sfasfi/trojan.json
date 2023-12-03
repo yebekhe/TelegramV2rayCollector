@@ -113,9 +113,8 @@
                 "DE🇩🇪",
                 "KR🇰🇷",
                 "IS🇮🇸",
-                "ES🇪🇸",
-                "NL🇳🇱",
                 "CA🇨🇦",
+                "NL🇳🇱",
                 "CR🇨🇷",
                 "HK🇭🇰",
                 "US🇺🇸",
@@ -137,15 +136,14 @@
                 "رایگان | TROJAN | @DirectVPN | GB🇬🇧 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @DirectVPN | GB🇬🇧 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣6️⃣",
-                "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣7️⃣",
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣7️⃣",
                 "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @VmessProtocol | KR🇰🇷 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | IS🇮🇸 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @VmessProtocol | ES🇪🇸 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @proxystore11 | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @VmessProtocol | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @proxystore11 | CA🇨🇦 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @proxystore11 | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @proxystore11 | CR🇨🇷 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @yaney_01 | HK🇭🇰 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @yaney_01 | US🇺🇸 | 0️⃣2️⃣",
@@ -197,7 +195,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣6️⃣",
-                "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣7️⃣",
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -236,10 +233,11 @@
             "tolerance": 50
         },
         {
-            "tag": "ES🇪🇸",
+            "tag": "CA🇨🇦",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @VmessProtocol | ES🇪🇸 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @VmessProtocol | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @proxystore11 | CA🇨🇦 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -250,16 +248,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @proxystore11 | NL🇳🇱 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "CA🇨🇦",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @proxystore11 | CA🇨🇦 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -537,27 +525,6 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣7️⃣",
-            "type": "trojan",
-            "server": "52.47.64.102",
-            "server_port": 22222,
-            "password": "telegram-id-privatevpns",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "trj.rollingnext.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣7️⃣",
             "type": "trojan",
             "server": "13.37.116.218",
@@ -663,7 +630,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @VmessProtocol | ES🇪🇸 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @VmessProtocol | CA🇨🇦 | 0️⃣1️⃣",
             "type": "trojan",
             "server": "vp1n3ip.vpweb.cfd",
             "server_port": 443,
@@ -685,6 +652,34 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "v2qAAYBGDaSp7xbeLIZs",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @proxystore11 | CA🇨🇦 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "proxystore11.ddns.net",
+            "server_port": 443,
+            "password": "dd3b2971-2e5e-49c4-8de9-62aca12ff466",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn.miladfaryad.cf",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "RGikK8PMHRUZX8MrGWVN1ct9nq",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
@@ -716,34 +711,6 @@
                 "headers": {
                     "Host": "cdn.miladfaryad.cf"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @proxystore11 | CA🇨🇦 | 0️⃣2️⃣",
-            "type": "trojan",
-            "server": "proxystore11.ddns.net",
-            "server_port": 443,
-            "password": "dd3b2971-2e5e-49c4-8de9-62aca12ff466",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "cdn.miladfaryad.cf",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "RGikK8PMHRUZX8MrGWVN1ct9nq",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
