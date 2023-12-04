@@ -112,6 +112,7 @@
                 "URL-TEST | رایگان",
                 "US🇺🇸",
                 "NL🇳🇱",
+                "DE🇩🇪",
                 "FR🇫🇷"
             ]
         },
@@ -127,7 +128,10 @@
                 "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | TUIC | @EUT_VPN | NL🇳🇱 | 0️⃣3️⃣",
-                "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣4️⃣",
+                "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | TUIC | @FAKEOFTVC | FR🇫🇷 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -155,7 +159,19 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TUIC | @EUT_VPN | NL🇳🇱 | 0️⃣3️⃣",
-                "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣1️⃣"
+                "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -356,7 +372,7 @@
             }
         },
         {
-            "tag": "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣1️⃣",
+            "tag": "رایگان | TUIC | @irancpi_vpn | NL🇳🇱 | 0️⃣4️⃣",
             "type": "tuic",
             "server": "hys3.foriran.trade",
             "server_port": 443,
@@ -372,6 +388,75 @@
                 "disable_sni": false,
                 "server_name": "www.apple.com",
                 "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "hdfyhys1.foriran.nl",
+            "server_port": 24471,
+            "uuid": "16ba5e83-8cfb-41f9-8009-dc65cdf17f5c",
+            "password": "16ba5e83-8cfb-41f9-8009-dc65cdf17f5c",
+            "congestion_control": "cubic",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "hdfyhys1.foriran.nl",
+                "insecure": false,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "tuic",
+            "server": "hdfyhys1.foriran.trade",
+            "server_port": 24470,
+            "uuid": "16ba5e83-8cfb-41f9-8009-dc65cdf17f5c",
+            "password": "16ba5e83-8cfb-41f9-8009-dc65cdf17f5c",
+            "congestion_control": "cubic",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "hdfyhys1.foriran.trade",
+                "insecure": false,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @irancpi_vpn | DE🇩🇪 | 0️⃣3️⃣",
+            "type": "tuic",
+            "server": "hdfyhys1.cpionline.co",
+            "server_port": 24469,
+            "uuid": "16ba5e83-8cfb-41f9-8009-dc65cdf17f5c",
+            "password": "16ba5e83-8cfb-41f9-8009-dc65cdf17f5c",
+            "congestion_control": "cubic",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "hdfyhys1.cpionline.co",
+                "insecure": false,
                 "alpn": [
                     "h3",
                     "spdy\/3.1"
