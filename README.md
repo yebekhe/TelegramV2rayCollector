@@ -34,7 +34,7 @@
       <th colspan="2">SINGBOX SUBSCRIPTION</th>
       <th>CLASH SUBSCRIPTION</th>
       <th>CLASH.Meta SUBSCRIPTION</th>
-      <th>SURFBOARD SUSCRIPTION</th>
+      <th>SURFBOARD SUBSCRIPTION</th>
     </tr>
   </thead>
   <tbody>
