@@ -115,6 +115,7 @@
                 "US🇺🇸",
                 "UA🇺🇦",
                 "RU🇷🇺",
+                "HK🇭🇰",
                 "TR🇹🇷",
                 "NL🇳🇱",
                 "FR🇫🇷"
@@ -138,6 +139,8 @@
                 "رایگان | SS | @VmessProtocol | RU🇷🇺 | 0️⃣3️⃣",
                 "رایگان | SS | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣3️⃣",
+                "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣1️⃣",
+                "رایگان | SS | @VmessProtocol | HK🇭🇰 | 0️⃣5️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | TR🇹🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | SS | @FAKEOFTVC | FR🇫🇷 | 0️⃣6️⃣",
@@ -200,7 +203,18 @@
             "outbounds": [
                 "رایگان | SS | @VmessProtocol | RU🇷🇺 | 0️⃣3️⃣",
                 "رایگان | SS | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣3️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣3️⃣",
+                "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "HK🇭🇰",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @VmessProtocol | HK🇭🇰 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -374,6 +388,26 @@
             "server_port": 2443,
             "method": "aes-256-gcm",
             "password": "ec+AA7AaT5JfP4UGJHsYwFqyy+hkunVRp8gdIrfWt7U=",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "vpn-ru.wwp.im",
+            "server_port": 15174,
+            "method": "chacha20-ietf-poly1305",
+            "password": "ylPAqClrEFmn55ayJOcIv4",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @VmessProtocol | HK🇭🇰 | 0️⃣5️⃣",
+            "type": "shadowsocks",
+            "server": "50.114.157.63",
+            "server_port": 10020,
+            "method": "chacha20-ietf-poly1305",
+            "password": "259d0fe4-37b8-4df0-90a1-b7f7cfbec4f7",
             "plugin": "",
             "plugin_opts": ""
         },
