@@ -157,6 +157,7 @@
                 "رایگان | VMESS | @v2Line | EE🇪🇪 | 0️⃣4️⃣",
                 "رایگان | VMESS | @DailyV2RY | TR🇹🇷 | 0️⃣4️⃣",
                 "رایگان | VMESS | @DailyV2RY | JP🇯🇵 | 0️⃣5️⃣",
+                "رایگان | VMESS | @forwardv2ray | JP🇯🇵 | 0️⃣1️⃣",
                 "رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣1️⃣",
@@ -265,7 +266,8 @@
             "tag": "JP🇯🇵",
             "type": "urltest",
             "outbounds": [
-                "رایگان | VMESS | @DailyV2RY | JP🇯🇵 | 0️⃣5️⃣"
+                "رایگان | VMESS | @DailyV2RY | JP🇯🇵 | 0️⃣5️⃣",
+                "رایگان | VMESS | @forwardv2ray | JP🇯🇵 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -738,11 +740,11 @@
         {
             "tag": "رایگان | VMESS | @ConfigsHUB | CA🇨🇦 | 0️⃣1️⃣",
             "type": "vmess",
-            "server": "crownv2.ddns.net",
+            "server": "188.114.97.1",
             "server_port": 443,
-            "uuid": "1C1AB893-ABB0-4B1A-8DB2-244193AEE8BB",
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
-            "alter_id": 0,
+            "alter_id": 1,
             "global_padding": false,
             "authenticated_length": true,
             "packet_encoding": "",
@@ -753,7 +755,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "Kansas.bobbykotick.rip",
+                "server_name": "odelia.autos",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -763,9 +765,9 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/speedtest",
+                "path": "\/linkvws",
                 "headers": {
-                    "Host": "Kansas.bobbykotick.rip"
+                    "Host": "odelia.autos"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -1101,6 +1103,23 @@
             "uuid": "593b8525-0c48-4b0f-d9af-2d73a9148973",
             "security": "auto",
             "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @forwardv2ray | JP🇯🇵 | 0️⃣1️⃣",
+            "type": "vmess",
+            "server": "64.176.47.200",
+            "server_port": 29414,
+            "uuid": "4d5e8aa2-0641-4323-e92c-2c061cdc8e34",
+            "security": "auto",
+            "alter_id": 0,
             "global_padding": false,
             "authenticated_length": true,
             "packet_encoding": "",
