@@ -113,7 +113,6 @@
                 "US🇺🇸",
                 "SE🇸🇪",
                 "RU🇷🇺",
-                "CA🇨🇦",
                 "FR🇫🇷"
             ]
         },
@@ -122,16 +121,15 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @vmess_vless_v2rayng | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @vmess_vless_v2rayng | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @VmessProtocol | BY🇧🇾 | 0️⃣1️⃣",
                 "رایگان | SS | @VmessProtocol | TR🇹🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @VmessProtocol | UA🇺🇦 | 0️⃣3️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | SE🇸🇪 | 0️⃣3️⃣",
                 "رایگان | SS | @FAKEOFTVC | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣4️⃣",
-                "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | SS | @FAKEOFTVC | FR🇫🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -143,6 +141,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @vmess_vless_v2rayng | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @vmess_vless_v2rayng | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | GB🇬🇧 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -183,8 +182,7 @@
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -212,16 +210,6 @@
             "tolerance": 50
         },
         {
-            "tag": "CA🇨🇦",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
@@ -233,6 +221,16 @@
         },
         {
             "tag": "رایگان | SS | @vmess_vless_v2rayng | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "series-a2-mec.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "u17T3BvpYaaiuW2c",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @vmess_vless_v2rayng | GB🇬🇧 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "13.87.75.155",
             "server_port": 46130,
@@ -292,16 +290,6 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣2️⃣",
-            "type": "shadowsocks",
-            "server": "la.telegavpn.org",
-            "server_port": 33966,
-            "method": "chacha20-ietf-poly1305",
-            "password": "6bYhuX8Mit2dPAQJFGvg3F",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
             "tag": "رایگان | SS | @OutlineVpnOfficial | SE🇸🇪 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "www.outline.network.ak1989.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
@@ -328,16 +316,6 @@
             "server_port": 2443,
             "method": "aes-256-gcm",
             "password": "ec+AA7AaT5JfP4UGJHsYwFqyy+hkunVRp8gdIrfWt7U=",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "toronto.telegavpn.org",
-            "server_port": 31024,
-            "method": "chacha20-ietf-poly1305",
-            "password": "utdPjsoaruTUO4fQDd18Gh",
             "plugin": "",
             "plugin_opts": ""
         },
