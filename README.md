@@ -1,5 +1,7 @@
 # V2ray Collector
 
+<h1>Project Upgraded to version 2 and only accessible through Telegram bot: <a href="https://t.me/v2raycollectorbot">TVC BOT</a>.</h1>
+
 <p align="center">
   <a href="https://t.me/v2raycollectorbot">
     <img src="https://img.shields.io/badge/Telegram_Bot-@v2raycollectorbot-darkblue?style=flat&logo=telegram" alt="Telegram Bot">
