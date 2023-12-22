@@ -112,8 +112,7 @@
                 "FR🇫🇷",
                 "DE🇩🇪",
                 "CA🇨🇦",
-                "KR🇰🇷",
-                "JP🇯🇵"
+                "KR🇰🇷"
             ]
         },
         {
@@ -139,8 +138,7 @@
                 "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣4️⃣",
                 "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣",
-                "رایگان | TROJAN | @kingofilter | JP🇯🇵 | 0️⃣1️⃣"
+                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -224,16 +222,6 @@
             "outbounds": [
                 "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "JP🇯🇵",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @kingofilter | JP🇯🇵 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -619,34 +607,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @kingofilter | JP🇯🇵 | 0️⃣1️⃣",
-            "type": "trojan",
-            "server": "54.168.244.142",
-            "server_port": 3306,
-            "password": "d07a02a06191c99f",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "n2.gladns.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/gateway\/connect",
-                "headers": {
-                    "Host": "54.168.244.142"
-                }
             }
         },
         {
