@@ -148,6 +148,7 @@
                 "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @nofiltering2 | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 0️⃣7️⃣",
@@ -279,7 +280,8 @@
                 "رایگان | REALITY | @V2Hub | Donated | NO🇳🇴 | 2️⃣2️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | NO🇳🇴 | 2️⃣5️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | LV🇱🇻 | 2️⃣3️⃣",
-                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣1️⃣"
+                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣1️⃣",
+                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -313,6 +315,7 @@
                 "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @nofiltering2 | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 0️⃣7️⃣",
@@ -543,7 +546,8 @@
             "tag": "IN🇮🇳",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣1️⃣"
+                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣1️⃣",
+                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1359,6 +1363,41 @@
                     "public_key": "IiuIighvDsor2v-vb5s3IJbNiqwLw568auiqoXxc7FM",
                     "short_id": ""
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "116.203.149.241",
+            "server_port": 443,
+            "uuid": "a9b2b28c-057c-4cd1-c680-6c888d6bb729",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "greenpepper.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "qy0K2teJw3PGV9atFmmWFL7gdnWUzKtFqSj6VQxHUz8",
+                    "short_id": "7ca5db34"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
@@ -5206,6 +5245,34 @@
             "tls": {
                 "enabled": true,
                 "server_name": "ftp.debian.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "oMNdNFZOc6vhepLrmFankR_ucI12sjk1xV_x-aqNiUU",
+                    "short_id": "c6a9c8836de6e101"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "148.113.3.134",
+            "server_port": 22,
+            "uuid": "ed52c12c-b5a4-4b2f-9caa-3de6730f2388",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "discord.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
