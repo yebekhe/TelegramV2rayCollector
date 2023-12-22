@@ -108,6 +108,7 @@
                 "GB🇬🇧",
                 "IS🇮🇸",
                 "NL🇳🇱",
+                "KR🇰🇷",
                 "SE🇸🇪"
             ]
         },
@@ -115,9 +116,11 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @VmessProtocol | IS🇮🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @VmessProtocol | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | SS | @yaney_01 | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @FAKEOFTVC | SE🇸🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -128,6 +131,7 @@
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -155,6 +159,16 @@
             "tolerance": 50
         },
         {
+            "tag": "KR🇰🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @yaney_01 | KR🇰🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "SE🇸🇪",
             "type": "urltest",
             "outbounds": [
@@ -163,6 +177,16 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | SS | @V2rayCollectorDonate | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "uk.fanqiecloud.top",
+            "server_port": 24504,
+            "method": "chacha20-ietf-poly1305",
+            "password": "9718396a-f078-4a51-a38d-69b12f80cfaa",
+            "plugin": "",
+            "plugin_opts": ""
         },
         {
             "tag": "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
@@ -191,6 +215,16 @@
             "server_port": 1165,
             "method": "chacha20-ietf-poly1305",
             "password": "0cAOTNuOqZQuK1c9-mCXJQ",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @yaney_01 | KR🇰🇷 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "43.201.56.214",
+            "server_port": 443,
+            "method": "aes-256-cfb",
+            "password": "amazonskr05",
             "plugin": "",
             "plugin_opts": ""
         },
