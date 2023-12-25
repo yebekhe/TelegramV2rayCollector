@@ -109,6 +109,7 @@
                 "TR🇹🇷",
                 "GB🇬🇧",
                 "AT🇦🇹",
+                "TW🇹🇼",
                 "CH🇨🇭"
             ]
         },
@@ -119,9 +120,10 @@
                 "رایگان | SS | @V2rayCollectorDonate | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣3️⃣",
+                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣4️⃣",
                 "رایگان | SS | @VmessProtocol | AT🇦🇹 | 0️⃣1️⃣",
-                "رایگان | SS | @VmessProtocol | CH🇨🇭 | 0️⃣2️⃣"
+                "رایگان | SS | @VmessProtocol | TW🇹🇼 | 0️⃣2️⃣",
+                "رایگان | SS | @VmessProtocol | CH🇨🇭 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -152,7 +154,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @proxyymeliii | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣3️⃣"
+                "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -169,10 +171,20 @@
             "tolerance": 50
         },
         {
+            "tag": "TW🇹🇼",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @VmessProtocol | TW🇹🇼 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "CH🇨🇭",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @VmessProtocol | CH🇨🇭 | 0️⃣2️⃣"
+                "رایگان | SS | @VmessProtocol | CH🇨🇭 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -209,7 +221,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣3️⃣",
+            "tag": "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣4️⃣",
             "type": "shadowsocks",
             "server": "52.142.146.57",
             "server_port": 50395,
@@ -229,7 +241,17 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @VmessProtocol | CH🇨🇭 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @VmessProtocol | TW🇹🇼 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "ty11.twty.dynu.net",
+            "server_port": 2203,
+            "method": "chacha20-ietf-poly1305",
+            "password": "7b039abd-ad30-4ce4-a876-0a97a3ccaf74",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @VmessProtocol | CH🇨🇭 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "94.131.12.58",
             "server_port": 26669,
