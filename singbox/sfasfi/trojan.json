@@ -111,8 +111,8 @@
                 "GB🇬🇧",
                 "FR🇫🇷",
                 "DE🇩🇪",
-                "KR🇰🇷",
                 "CA🇨🇦",
+                "KR🇰🇷",
                 "JP🇯🇵"
             ]
         },
@@ -137,10 +137,11 @@
                 "رایگان | TROJAN | @DirectVPN | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @V2RayTz | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @yaney_01 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣4️⃣",
+                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @kingofilter | JP🇯🇵 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -210,22 +211,23 @@
             "tolerance": 50
         },
         {
-            "tag": "KR🇰🇷",
+            "tag": "CA🇨🇦",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
-                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "CA🇨🇦",
+            "tag": "KR🇰🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣4️⃣"
+                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -590,27 +592,31 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | CA🇨🇦 | 0️⃣1️⃣",
             "type": "trojan",
-            "server": "64.110.90.224",
-            "server_port": 40003,
-            "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
+            "server": "speed.cloudflare.com",
+            "server_port": 2083,
+            "password": "NgCnEanOAQ",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣",
-            "type": "trojan",
-            "server": "64.110.90.224",
-            "server_port": 40004,
-            "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn6.realityprotocol.shop",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/@its_payman @its_payman @its_payman @its_payman",
+                "headers": {
+                    "Host": "cdn.realityprotocol.shop"
+                }
             }
         },
         {
@@ -629,6 +635,30 @@
             "tag": "رایگان | TROJAN | @yaney_01 | CA🇨🇦 | 0️⃣4️⃣",
             "type": "trojan",
             "server": "68.233.121.121",
+            "server_port": 40004,
+            "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "64.110.90.224",
+            "server_port": 40003,
+            "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @yaney_01 | KR🇰🇷 | 0️⃣5️⃣",
+            "type": "trojan",
+            "server": "64.110.90.224",
             "server_port": 40004,
             "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
             "multiplex": {
