@@ -111,6 +111,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "NL🇳🇱",
+                "TW🇹🇼",
                 "RU🇷🇺",
                 "DE🇩🇪"
             ]
@@ -120,8 +121,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @VmessProtocol | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | SS | @kingofilter | RU🇷🇺 | 0️⃣1️⃣",
-                "رایگان | SS | @kingofilter | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | SS | @forwardv2ray | TW🇹🇼 | 0️⃣1️⃣",
+                "رایگان | SS | @kingofilter | RU🇷🇺 | 0️⃣2️⃣",
+                "رایگان | SS | @kingofilter | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -138,10 +140,20 @@
             "tolerance": 50
         },
         {
+            "tag": "TW🇹🇼",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | TW🇹🇼 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "RU🇷🇺",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @kingofilter | RU🇷🇺 | 0️⃣1️⃣"
+                "رایگان | SS | @kingofilter | RU🇷🇺 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -151,7 +163,7 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @kingofilter | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | SS | @kingofilter | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -168,7 +180,17 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @kingofilter | RU🇷🇺 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @forwardv2ray | TW🇹🇼 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "118.167.76.130",
+            "server_port": 7773,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4c698ff1-ab96-4ce3-8c3a-e23ced87b441",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @kingofilter | RU🇷🇺 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "195.2.85.32",
             "server_port": 56901,
@@ -178,7 +200,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @kingofilter | DE🇩🇪 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @kingofilter | DE🇩🇪 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "passconf.xyz",
             "server_port": 8080,
