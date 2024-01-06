@@ -110,6 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "DE🇩🇪",
                 "US🇺🇸"
             ]
         },
@@ -117,10 +118,27 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣4️⃣"
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣5️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣6️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣7️⃣",
+                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -130,22 +148,22 @@
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣4️⃣"
+                "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣5️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣6️⃣",
+                "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣7️⃣",
+                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
+            "tag": "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣1️⃣",
             "type": "tuic",
-            "server": "64.110.25.10",
-            "server_port": 11227,
-            "uuid": "764b539f-2d3c-4772-9731-5ebf6984af98",
-            "password": "dongtaiwang.com",
+            "server": "199.247.1.134",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
             "congestion_control": "bbr",
             "udp_relay_mode": "native",
             "zero_rtt_handshake": false,
@@ -154,7 +172,7 @@
             "tls": {
                 "enabled": true,
                 "disable_sni": false,
-                "server_name": "bing.com",
+                "server_name": "www.apple.com",
                 "insecure": true,
                 "alpn": [
                     "h3",
@@ -163,7 +181,99 @@
             }
         },
         {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
+            "tag": "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "tuic",
+            "server": "45.76.94.18",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣3️⃣",
+            "type": "tuic",
+            "server": "136.244.88.153",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣",
+            "type": "tuic",
+            "server": "95.179.167.38",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣5️⃣",
+            "type": "tuic",
+            "server": "108.181.22.155",
+            "server_port": 12255,
+            "uuid": "ed6a538a-6e66-4f21-a769-4b389bb2f3ab",
+            "password": "dongtaiwang",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": true,
+                "server_name": "",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣6️⃣",
             "type": "tuic",
             "server": "[2602:294:0:f5:1234:4321:dc1e:1]",
             "server_port": 28029,
@@ -186,7 +296,7 @@
             }
         },
         {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣",
+            "tag": "رایگان | TUIC | @azadi_az_inja_migzare | US🇺🇸 | 0️⃣7️⃣",
             "type": "tuic",
             "server": "108.181.22.239",
             "server_port": 45600,
@@ -209,12 +319,12 @@
             }
         },
         {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣4️⃣",
+            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
             "type": "tuic",
-            "server": "108.181.22.155",
-            "server_port": 12255,
-            "uuid": "ed6a538a-6e66-4f21-a769-4b389bb2f3ab",
-            "password": "dongtaiwang",
+            "server": "64.110.25.10",
+            "server_port": 11227,
+            "uuid": "764b539f-2d3c-4772-9731-5ebf6984af98",
+            "password": "dongtaiwang.com",
             "congestion_control": "bbr",
             "udp_relay_mode": "native",
             "zero_rtt_handshake": false,
@@ -222,8 +332,8 @@
             "network": "tcp",
             "tls": {
                 "enabled": true,
-                "disable_sni": true,
-                "server_name": "",
+                "disable_sni": false,
+                "server_name": "bing.com",
                 "insecure": true,
                 "alpn": [
                     "h3",
