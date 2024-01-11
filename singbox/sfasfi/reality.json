@@ -109,6 +109,7 @@
                 "KR🇰🇷",
                 "FI🇫🇮",
                 "DE🇩🇪",
+                "NL🇳🇱",
                 "SE🇸🇪",
                 "TR🇹🇷",
                 "NO🇳🇴",
@@ -123,10 +124,12 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ShadowProxy66 | KR🇰🇷 | 0️⃣1️⃣",
-                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 1️⃣0️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣6️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣3️⃣",
@@ -223,7 +226,7 @@
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -235,7 +238,18 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 1️⃣0️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "NL🇳🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -410,7 +424,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣5️⃣",
             "type": "vless",
             "server": "65.21.58.66",
             "server_port": 443,
@@ -515,6 +529,34 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "mrz3.gsmvp.com",
+            "server_port": 8443,
+            "uuid": "a6bc744d-01e3-49d6-956b-b2fd8d712a6a",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn.discordapp.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+                    "short_id": ""
+                }
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @V2Hub | Donated | DE🇩🇪 | 1️⃣0️⃣",
             "type": "vless",
             "server": "128.140.123.35",
@@ -547,6 +589,34 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣6️⃣",
+            "type": "vless",
+            "server": "185.167.98.190",
+            "server_port": 8443,
+            "uuid": "7bd5c898-5739-4442-b934-97b193b65e1f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn3.gsmvp.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+                    "short_id": ""
+                }
             }
         },
         {
