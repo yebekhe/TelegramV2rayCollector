@@ -110,12 +110,12 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @DailyV2RY | IR🇮🇷 | 0️⃣2️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣6️⃣",
+                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣2️⃣",
@@ -205,12 +205,12 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @DailyV2RY | IR🇮🇷 | 0️⃣2️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣6️⃣",
+                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣2️⃣",
@@ -298,6 +298,34 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "91.107.248.118",
+            "server_port": 10723,
+            "uuid": "d6ce7ebf-dba6-4e43-82a3-24fe19dc087e",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "discord.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "DI1xCthf1sy3Hagj_tT5On9z8LDKYU5kmRvnFhByoyE",
+                    "short_id": "1e3de310"
+                }
+            }
         },
         {
             "tag": "رایگان | REALITY | @ShadowProxy66 | KR🇰🇷 | 0️⃣1️⃣",
@@ -426,42 +454,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "195.201.33.20",
-            "server_port": 25365,
-            "uuid": "75f63b6d-4624-4fb1-b211-2c3d6a71a7b1",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.discord.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "6rBhsNIv02Pec_Qjj-GsFD-46eZ19R9RUYW4X2OyiGc",
-                    "short_id": "3c4b770c"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ZEDMODEON",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣6️⃣",
+            "tag": "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣1️⃣",
             "type": "vless",
             "server": "65.21.58.66",
             "server_port": 443,
