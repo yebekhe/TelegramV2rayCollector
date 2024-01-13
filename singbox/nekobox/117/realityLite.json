@@ -105,11 +105,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @prrofile_purple | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | NL🇳🇱 | 0️⃣6️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @VmessProtocol | KR🇰🇷 | 0️⃣2️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣2️⃣",
@@ -196,11 +199,14 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @prrofile_purple | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | NL🇳🇱 | 0️⃣6️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @VmessProtocol | KR🇰🇷 | 0️⃣2️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣2️⃣",
@@ -287,7 +293,42 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "95.217.25.101",
+            "server_port": 2096,
+            "uuid": "59a1df04-1a3f-4a5f-8f73-84b5d380a29d",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.discord.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "3FLH17fndOM6rTNRA27410SbzTqCss2qFM4gagENbEc",
+                    "short_id": "f2d66561"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ZEDMODEON",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣7️⃣",
             "type": "vless",
             "server": "kamyarservers.camdvr.org",
             "server_port": 443,
@@ -319,6 +360,34 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @prrofile_purple | DE🇩🇪 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "free01.miraclev2ray.online",
+            "server_port": 443,
+            "uuid": "d2c418b1-62ff-4227-9f2b-668bd50524e5",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "free-api01.miraclev2ray.online",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "8fQWsJr0l6n5x98oArx-3a1IO3elnrrHOHZorOyFSHw",
+                    "short_id": "4189a3adbea837f0"
+                }
             }
         },
         {
@@ -442,6 +511,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@Fnet00",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣6️⃣",
+            "type": "vless",
+            "server": "49.12.209.197",
+            "server_port": 443,
+            "uuid": "b79fcb6b-5da4-494b-9ecc-d65d3ebcf7fe",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "dnschecker.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "vxyZGYyn1CSmVCiAmTwYpEqP331l_PSBzaiDXsqrYXc",
+                    "short_id": "961777e2"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
