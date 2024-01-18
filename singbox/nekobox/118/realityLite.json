@@ -112,8 +112,8 @@
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @Parsashonam | CH🇨🇭 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣0️⃣",
-                "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣"
+                "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣"
             ]
         },
         {
@@ -122,8 +122,8 @@
             "outbounds": [
                 "رایگان | REALITY | @Parsashonam | CH🇨🇭 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣0️⃣",
-                "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣"
+                "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -186,6 +186,34 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "551-Join.V2RayTz.sbs",
+            "server_port": 2053,
+            "uuid": "64272a1b-fcab-4eef-a09a-8459dda467b2",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "tun1n.gsmxreality.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "_sTFgvAF7aj2yRzeXSx9TDdu-mhyqBr0WMLfI9SxBz0",
+                    "short_id": "0bb95c9e598a7bd4"
+                }
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
             "type": "vless",
             "server": "footlo.argha-v2pedia.monster",
@@ -218,34 +246,6 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "pr.dadnetiran.xyz",
-            "server_port": 12754,
-            "uuid": "fa1661aa-a1e3-4b74-9a2d-1d4d62050bc5",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "discord.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "7Ig5GBzwQkBPQ-3gEPgBjTt-6N14VNcW6qgsTW2dKxA",
-                    "short_id": "02085b77"
-                }
             }
         },
         {
