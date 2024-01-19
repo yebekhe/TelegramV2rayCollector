@@ -106,9 +106,9 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "SE🇸🇪",
                 "HK🇭🇰",
                 "DE🇩🇪",
-                "AU🇦🇺",
                 "FI🇫🇮"
             ]
         },
@@ -116,10 +116,21 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣2️⃣",
+                "رایگان | REALITY | @EliV2ray | SE🇸🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣6️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @Outlinev2rayNG | AU🇦🇺 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "SE🇸🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @EliV2ray | SE🇸🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -129,7 +140,7 @@
             "tag": "HK🇭🇰",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣2️⃣"
+                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -146,19 +157,10 @@
             "tolerance": 50
         },
         {
-            "tag": "AU🇦🇺",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @Outlinev2rayNG | AU🇦🇺 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -166,7 +168,35 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @EliV2ray | SE🇸🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "45.82.13.135",
+            "server_port": 2053,
+            "uuid": "64272a1b-fcab-4eef-a09a-8459dda467b2",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "tun1n.gsmxreality.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "_sTFgvAF7aj2yRzeXSx9TDdu-mhyqBr0WMLfI9SxBz0",
+                    "short_id": "0bb95c9e598a7bd4"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣6️⃣",
             "type": "vless",
             "server": "91.229.132.132",
             "server_port": 443,
@@ -229,12 +259,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @Outlinev2rayNG | AU🇦🇺 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "richard.dgi000.store",
-            "server_port": 45454,
-            "uuid": "Azadi-az-inja-migzare",
-            "flow": "xtls-rprx-vision",
+            "server": "95.217.128.188",
+            "server_port": 443,
+            "uuid": "daeec10e-92f4-4346-b174-60c0920a896c",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -243,17 +273,24 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "richard.dgi000.store",
+                "server_name": "3tpharma.com.vn",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "x_c1xN7STkeMumpLPU32WDeZ0UacaiAlvyj1zXEwljk",
-                    "short_id": "3dae8e8d"
+                    "public_key": "whCikzvk0RJwGHSVOBAwvzpR7YP8sjc4arHDSEmuKiY",
+                    "short_id": "d9eadeae"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ZEDMODEON",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
