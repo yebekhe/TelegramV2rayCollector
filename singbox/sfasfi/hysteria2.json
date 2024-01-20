@@ -105,16 +105,147 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST | رایگان"
+                "URL-TEST | رایگان",
+                "SE🇸🇪",
+                "GB🇬🇧",
+                "US🇺🇸"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": null,
+            "outbounds": [
+                "رایگان | HY2 | @FAKEOFTVC | SE🇸🇪 | 0️⃣1️⃣",
+                "رایگان | HY2 | @FAKEOFTVC | SE🇸🇪 | 0️⃣2️⃣",
+                "رایگان | HY2 | @FAKEOFTVC | GB🇬🇧 | 0️⃣3️⃣",
+                "رایگان | HY2 | @FAKEOFTVC | US🇺🇸 | 0️⃣4️⃣"
+            ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "SE🇸🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | HY2 | @FAKEOFTVC | SE🇸🇪 | 0️⃣1️⃣",
+                "رایگان | HY2 | @FAKEOFTVC | SE🇸🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | HY2 | @FAKEOFTVC | GB🇬🇧 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "US🇺🇸",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | HY2 | @FAKEOFTVC | US🇺🇸 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "رایگان | HY2 | @FAKEOFTVC | SE🇸🇪 | 0️⃣1️⃣",
+            "type": "hysteria2",
+            "server": "70.34.205.24",
+            "server_port": 443,
+            "up_mbps": 0,
+            "down_mbps": 0,
+            "password": "d2e21fabfe6ddb83",
+            "network": "tcp",
+            "obfs": {
+                "type": "salamander",
+                "password": "ca39a177"
+            },
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "T.me\/IP_CF",
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | HY2 | @FAKEOFTVC | SE🇸🇪 | 0️⃣2️⃣",
+            "type": "hysteria2",
+            "server": "70.34.213.123",
+            "server_port": 443,
+            "up_mbps": 0,
+            "down_mbps": 0,
+            "password": "4a52c165e81fa8fc",
+            "network": "tcp",
+            "obfs": {
+                "type": "salamander",
+                "password": "a16d0be0"
+            },
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "T.me\/IP_CF",
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | HY2 | @FAKEOFTVC | GB🇬🇧 | 0️⃣3️⃣",
+            "type": "hysteria2",
+            "server": "66.245.192.15",
+            "server_port": 443,
+            "up_mbps": 0,
+            "down_mbps": 0,
+            "password": "9f73c619627d6a5d",
+            "network": "tcp",
+            "obfs": {
+                "type": "salamander",
+                "password": "bd7f765e"
+            },
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "T.me\/IP_CF",
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | HY2 | @FAKEOFTVC | US🇺🇸 | 0️⃣4️⃣",
+            "type": "hysteria2",
+            "server": "66.135.28.59",
+            "server_port": 443,
+            "up_mbps": 0,
+            "down_mbps": 0,
+            "password": "f6e4b19a3110d19d",
+            "network": "tcp",
+            "obfs": {
+                "type": "salamander",
+                "password": "8c3ce17b"
+            },
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "T.me\/IP_CF",
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ]
+            }
         },
         {
             "tag": "direct",
