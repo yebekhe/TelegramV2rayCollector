@@ -107,8 +107,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "GB🇬🇧",
-                "DE🇩🇪",
-                "US🇺🇸"
+                "US🇺🇸",
+                "DE🇩🇪"
             ]
         },
         {
@@ -116,13 +116,14 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TUIC | @irancpi_vpn | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣4️⃣",
+                "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣6️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣7️⃣"
+                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣7️⃣",
+                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -139,25 +140,26 @@
             "tolerance": 50
         },
         {
-            "tag": "DE🇩🇪",
+            "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣3️⃣"
+                "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣5️⃣",
+                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣6️⃣",
+                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "US🇺🇸",
+            "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣4️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣5️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣6️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣7️⃣"
+                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -187,80 +189,34 @@
             }
         },
         {
-            "tag": "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "45.76.94.18",
-            "server_port": 443,
-            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
-            "password": "e7b1c11f0d40cc95",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.apple.com",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣2️⃣",
-            "type": "tuic",
-            "server": "136.244.88.153",
-            "server_port": 443,
-            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
-            "password": "e7b1c11f0d40cc95",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.apple.com",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣3️⃣",
-            "type": "tuic",
-            "server": "95.179.167.38",
-            "server_port": 443,
-            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
-            "password": "e7b1c11f0d40cc95",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.apple.com",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣4️⃣",
+            "tag": "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣1️⃣",
             "type": "tuic",
             "server": "64.110.25.10",
             "server_port": 33445,
             "uuid": "670998c6-a78f-43cc-86aa-29292476e040",
+            "password": "dongtaiwang.com",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "bing.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @FAKEOFTVC | US🇺🇸 | 0️⃣2️⃣",
+            "type": "tuic",
+            "server": "64.110.25.10",
+            "server_port": 11227,
+            "uuid": "764b539f-2d3c-4772-9731-5ebf6984af98",
             "password": "dongtaiwang.com",
             "congestion_control": "bbr",
             "udp_relay_mode": "native",
@@ -340,6 +296,75 @@
                 "enabled": true,
                 "disable_sni": false,
                 "server_name": "www.virustotal.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "45.76.94.18",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "tuic",
+            "server": "136.244.88.153",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | TUIC | @TUICity | DE🇩🇪 | 0️⃣3️⃣",
+            "type": "tuic",
+            "server": "95.179.167.38",
+            "server_port": 443,
+            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
+            "password": "e7b1c11f0d40cc95",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.apple.com",
                 "insecure": true,
                 "alpn": [
                     "h3",
