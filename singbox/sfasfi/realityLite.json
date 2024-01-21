@@ -108,6 +108,8 @@
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @flyv2ray | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @flyv2ray | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @proxy_mtm | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
@@ -119,6 +121,8 @@
             "outbounds": [
                 "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @flyv2ray | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @flyv2ray | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @proxy_mtm | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
@@ -195,6 +199,62 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @flyv2ray | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "xn--mgby2ch93cpf.xn--rgb.website",
+            "server_port": 443,
+            "uuid": "71a7db14-1b6f-5aec-9e5d-9bd5f8beabab",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "xn--mgby2ch93cpf.xn--rgb.website",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QnGXBXIib_bQ1TiAq1V9CrVra0kIKIiZmu7E4lO3N2I",
+                    "short_id": "a56abbb54e4fa948"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @flyv2ray | FI🇫🇮 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "finland.notmmdg.com",
+            "server_port": 8443,
+            "uuid": "e15f76e9-870d-4237-b4f0-7d403fa9f31c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "notmmdg.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+                    "short_id": ""
+                }
             }
         },
         {
