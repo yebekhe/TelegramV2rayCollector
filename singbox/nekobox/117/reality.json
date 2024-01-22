@@ -108,7 +108,8 @@
                 "TR🇹🇷",
                 "DE🇩🇪",
                 "GB🇬🇧",
-                "FI🇫🇮"
+                "FI🇫🇮",
+                "IR🇮🇷"
             ]
         },
         {
@@ -118,9 +119,10 @@
                 "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @flyv2ray | GB🇬🇧 | 0️⃣7️⃣",
-                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣4️⃣",
-                "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣7️⃣",
+                "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣",
+                "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -160,9 +162,19 @@
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣4️⃣",
-                "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣7️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "IR🇮🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -267,42 +279,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "95.216.170.113",
-            "server_port": 443,
-            "uuid": "691a087a-f23c-4162-99f5-6d3270a08108",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "greenpepper.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "XjP7jAIA1Y0QmNnNMlUGKsQnkP4HpbZtU5yPqesorm8",
-                    "short_id": "54052ca6"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
             "type": "vless",
             "server": "footlo.argha-v2pedia.monster",
             "server_port": 443,
@@ -337,6 +314,41 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣7️⃣",
+            "type": "vless",
+            "server": "95.216.170.113",
+            "server_port": 443,
+            "uuid": "691a087a-f23c-4162-99f5-6d3270a08108",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "greenpepper.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "XjP7jAIA1Y0QmNnNMlUGKsQnkP4HpbZtU5yPqesorm8",
+                    "short_id": "54052ca6"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣",
             "type": "vless",
             "server": "finland.notmmdg.com",
@@ -361,6 +373,34 @@
                     "enabled": true,
                     "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
                     "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "pr.dadnetiran.xyz",
+            "server_port": 12754,
+            "uuid": "fa1661aa-a1e3-4b74-9a2d-1d4d62050bc5",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "discord.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7Ig5GBzwQkBPQ-3gEPgBjTt-6N14VNcW6qgsTW2dKxA",
+                    "short_id": "02085b77"
                 }
             }
         },
