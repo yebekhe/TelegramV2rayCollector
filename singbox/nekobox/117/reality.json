@@ -114,6 +114,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @proxystore11 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
@@ -126,7 +127,8 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -174,6 +176,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣7️⃣",
+            "type": "vless",
+            "server": "49.13.62.154",
+            "server_port": 2096,
+            "uuid": "228ecb97-e00b-4f3d-9d0a-834fa2d3ed91",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tlEkxG7DMRkccWv6-ky41PrV4sdfXyfeAKzem3tYjh0",
+                    "short_id": "e6539b55"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ZEDMODEON",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
