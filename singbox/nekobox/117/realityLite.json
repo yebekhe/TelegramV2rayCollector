@@ -106,8 +106,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
             ]
@@ -117,8 +117,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
             ],
@@ -162,6 +162,41 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "49.12.209.197",
+            "server_port": 443,
+            "uuid": "b79fcb6b-5da4-494b-9ecc-d65d3ebcf7fe",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "dnschecker.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "vxyZGYyn1CSmVCiAmTwYpEqP331l_PSBzaiDXsqrYXc",
+                    "short_id": "961777e2"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣6️⃣",
             "type": "vless",
             "server": "164.90.227.92",
@@ -191,41 +226,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@ZEDMODEON",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @mehrosaboran | FI🇫🇮 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "95.216.170.113",
-            "server_port": 443,
-            "uuid": "691a087a-f23c-4162-99f5-6d3270a08108",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "greenpepper.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "XjP7jAIA1Y0QmNnNMlUGKsQnkP4HpbZtU5yPqesorm8",
-                    "short_id": "54052ca6"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
