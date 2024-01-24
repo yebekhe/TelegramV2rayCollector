@@ -108,7 +108,8 @@
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
                 "TR🇹🇷",
-                "FI🇫🇮"
+                "FI🇫🇮",
+                "IR🇮🇷"
             ]
         },
         {
@@ -117,13 +118,12 @@
             "outbounds": [
                 "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣7️⃣",
                 "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣8️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣9️⃣",
                 "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣6️⃣",
-                "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
+                "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣",
+                "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -135,7 +135,6 @@
             "outbounds": [
                 "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -146,9 +145,8 @@
             "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣7️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣8️⃣"
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣8️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣9️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -160,6 +158,16 @@
             "outbounds": [
                 "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣6️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "IR🇮🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -229,34 +237,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "91.107.249.141",
-            "server_port": 52391,
-            "uuid": "fd881ed5-1c65-422e-a0ef-505690c4c3f3",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "discord.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "aLE5KaEL109tMDAisa1qRPFMzgBsNiZXCLzNZ0S-hmY",
-                    "short_id": "366fba16"
-                }
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
             "type": "vless",
             "server": "49.13.72.241",
@@ -292,42 +272,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "84.32.230.81",
-            "server_port": 443,
-            "uuid": "0a3c1e43-7778-4737-9a27-d31103ba0bf2",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "eSq2viks3QTjVd77cFKfenQfxAL2JBxoJX9xxblcsno",
-                    "short_id": "7b6e4dd3"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Dr.Phone",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣7️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣8️⃣",
             "type": "vless",
             "server": "svtkk.edlaghiye.com",
             "server_port": 2087,
@@ -362,7 +307,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣8️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣9️⃣",
             "type": "vless",
             "server": "svtkk.edlaghiye.com",
             "server_port": 2053,
@@ -449,6 +394,34 @@
                     "enabled": true,
                     "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
                     "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "pr.dadnetiran.xyz",
+            "server_port": 12754,
+            "uuid": "fa1661aa-a1e3-4b74-9a2d-1d4d62050bc5",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "discord.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7Ig5GBzwQkBPQ-3gEPgBjTt-6N14VNcW6qgsTW2dKxA",
+                    "short_id": "02085b77"
                 }
             }
         },
