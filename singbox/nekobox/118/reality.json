@@ -112,6 +112,7 @@
                 "URL-TEST | رایگان",
                 "GB🇬🇧",
                 "DE🇩🇪",
+                "TR🇹🇷",
                 "FI🇫🇮"
             ]
         },
@@ -121,9 +122,9 @@
             "outbounds": [
                 "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -145,9 +146,18 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "TR🇹🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -227,7 +237,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
             "type": "vless",
             "server": "91.107.154.103",
             "server_port": 443,
@@ -290,12 +300,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "5.75.237.96",
-            "server_port": 59944,
-            "uuid": "cbb3edbc-c7a9-421e-ab04-d39637ecfdaf",
-            "flow": "",
+            "server": "84.32.230.81",
+            "server_port": 443,
+            "uuid": "0a3c1e43-7778-4737-9a27-d31103ba0bf2",
+            "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -304,21 +314,21 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "medium.com",
+                "server_name": "sourceforge.net",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "LUDu8PtcG8K_pifCbwRBC6Mv6S0U_w-XWoV-oDWw3E0",
-                    "short_id": "ae2bf12c"
+                    "public_key": "eSq2viks3QTjVd77cFKfenQfxAL2JBxoJX9xxblcsno",
+                    "short_id": "7b6e4dd3"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,@sabz_v2ray | TELEGRAM,",
+                "service_name": "Dr.Phone",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
