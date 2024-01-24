@@ -106,6 +106,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "GB🇬🇧",
                 "DE🇩🇪",
                 "TR🇹🇷",
                 "FI🇫🇮"
@@ -115,13 +116,22 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣2️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣3️⃣",
-                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣6️⃣",
+                "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣5️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -131,7 +141,7 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣"
             ],
@@ -143,8 +153,7 @@
             "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣2️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣3️⃣"
+                "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -154,7 +163,6 @@
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣6️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -162,7 +170,35 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣5️⃣",
+            "tag": "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "sv3.venom.servers.rezasnapp.fun",
+            "server_port": 443,
+            "uuid": "VENOMservers",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vultr.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "yWVYVstxNzhxibELLlg2_C0-7MH0AB8U2ra4Y1q1XVc",
+                    "short_id": "696877e7"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣6️⃣",
             "type": "vless",
             "server": "49.12.209.197",
             "server_port": 443,
@@ -260,81 +296,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣2️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollector | TR🇹🇷 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "svtkk.edlaghiye.com",
-            "server_port": 2087,
-            "uuid": "ac20c983-0cde-4d23-bbc7-b5b5bcd58b91",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.cloudflare.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "BTLxoKrEMzNLTVPfpg7wGHOK7glz2Q-jXP3i-4-qXTE",
-                    "short_id": "f5beef30f052fd2c"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "xyz",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣3️⃣",
-            "type": "vless",
-            "server": "svtkk.edlaghiye.com",
-            "server_port": 2053,
-            "uuid": "ac20c983-0cde-4d23-bbc7-b5b5bcd58b91",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "BTLxoKrEMzNLTVPfpg7wGHOK7glz2Q-jXP3i-4-qXTE",
-                    "short_id": "f5beef30f052fd2c"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "xyz",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "95.217.163.167",
-            "server_port": 45312,
-            "uuid": "32ba101a-1acb-4640-8206-309114e50de6",
+            "server": "84.32.230.81",
+            "server_port": 443,
+            "uuid": "0a3c1e43-7778-4737-9a27-d31103ba0bf2",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -344,17 +310,24 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "discord.com",
+                "server_name": "sourceforge.net",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "YhjMYGbGTHGzxdvju5AoM8HGrEVwkG6F5oE1Eq9XVyA",
-                    "short_id": "236cd291"
+                    "public_key": "eSq2viks3QTjVd77cFKfenQfxAL2JBxoJX9xxblcsno",
+                    "short_id": "7b6e4dd3"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Dr.Phone",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
