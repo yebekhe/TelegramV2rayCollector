@@ -106,16 +106,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "DE🇩🇪",
-                "IE🇮🇪"
+                "DE🇩🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @Outlinev2rayNG | IE🇮🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -126,16 +124,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣6️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "IE🇮🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @Outlinev2rayNG | IE🇮🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -174,34 +162,6 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @Outlinev2rayNG | IE🇮🇪 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "t.me.amazonvpn.ir.haypermarketfamily.top",
-            "server_port": 443,
-            "uuid": "04d4f6da-fcc3-4a2a-9683-391db4f46e4b",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "HWl2nmkJYhPYy0KALqT_CMJepLlKWhF3dZ4UGzDBB2M",
-                    "short_id": "1e248ec9"
-                }
             }
         },
         {
