@@ -109,7 +109,7 @@
                 "US🇺🇸",
                 "DE🇩🇪",
                 "BE🇧🇪",
-                "IR🇮🇷"
+                "HK🇭🇰"
             ]
         },
         {
@@ -148,7 +148,7 @@
                 "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @DeamNet_Proxy | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | VMESS | @oneclickvpnkeys | BE🇧🇪 | 0️⃣6️⃣",
-                "رایگان | VMESS | @ConfigsHUB | IR🇮🇷 | 0️⃣2️⃣"
+                "رایگان | VMESS | @v2Line | HK🇭🇰 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -223,10 +223,10 @@
             "tolerance": 50
         },
         {
-            "tag": "IR🇮🇷",
+            "tag": "HK🇭🇰",
             "type": "urltest",
             "outbounds": [
-                "رایگان | VMESS | @ConfigsHUB | IR🇮🇷 | 0️⃣2️⃣"
+                "رایگان | VMESS | @v2Line | HK🇭🇰 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1207,11 +1207,11 @@
             }
         },
         {
-            "tag": "رایگان | VMESS | @ConfigsHUB | IR🇮🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | VMESS | @v2Line | HK🇭🇰 | 0️⃣1️⃣",
             "type": "vmess",
-            "server": "62.60.131.238",
-            "server_port": 12888,
-            "uuid": "66214d78-b33c-459a-a7b9-e50ab19d16b9",
+            "server": "hk1.xv2ray.net",
+            "server_port": 80,
+            "uuid": "6f20c1ae-c712-4a26-a9f4-5e5b3c480b9d",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1221,6 +1221,15 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess",
+                "headers": {
+                    "Host": "hk1.xv2ray.net"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
