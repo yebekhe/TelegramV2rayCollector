@@ -108,6 +108,7 @@
                 "URL-TEST | رایگان",
                 "GB🇬🇧",
                 "SE🇸🇪",
+                "FI🇫🇮",
                 "DE🇩🇪"
             ]
         },
@@ -115,9 +116,9 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣5️⃣",
+                "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @Capital_NET | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -128,7 +129,7 @@
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣4️⃣"
+                "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -138,7 +139,17 @@
             "tag": "SE🇸🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣5️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FI🇫🇮",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @Capital_NET | FI🇫🇮 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -148,7 +159,6 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -156,7 +166,7 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣5️⃣",
             "type": "vless",
             "server": "sv3.venom.servers.rezasnapp.fun",
             "server_port": 443,
@@ -184,7 +194,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @V2RayTz | SE🇸🇪 | 0️⃣5️⃣",
             "type": "vless",
             "server": "13.49.231.106",
             "server_port": 8080,
@@ -219,12 +229,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣7️⃣",
+            "tag": "رایگان | REALITY | @Capital_NET | FI🇫🇮 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "gr1.bandaritond.ir",
+            "server": "tel.1lagvpn13.cfd",
             "server_port": 443,
-            "uuid": "95c2dd55-d255-4ad6-afd2-343ebd20a859",
-            "flow": "xtls-rprx-vision",
+            "uuid": "9eb0967f-8c35-4aa5-b6be-a2e46f4c2348",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -233,17 +243,24 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "gr1.bandaritond.ir",
+                "server_name": "gsmarena.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "yRZ593iS6XfYL-Dvt4DIZLRjSY4MqnVyReRjZwv8I0w",
-                    "short_id": "133ce6dd"
+                    "public_key": "uX1V5lrEbOrtXi-2dQyPNVJ6sf80g19HYujUUWN5nxA",
+                    "short_id": "464f8607"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@LAGVPN13",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
