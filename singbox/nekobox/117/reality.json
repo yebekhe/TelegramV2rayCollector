@@ -105,18 +105,17 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "DE🇩🇪",
-                "FR🇫🇷"
+                "DE🇩🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣9️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣1️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣3️⃣"
+                "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -126,8 +125,9 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣9️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣1️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -135,17 +135,7 @@
             "tolerance": 50
         },
         {
-            "tag": "FR🇫🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣9️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣1️⃣",
             "type": "vless",
             "server": "cloud.ns.g01e.nochofscu.sbs",
             "server_port": 10443,
@@ -208,6 +198,41 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "188.34.194.108",
+            "server_port": 443,
+            "uuid": "cb00ef4a-fcf7-484a-8c49-6a2422ed84e6",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ftp.debian.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "W6ol7KU4fjV1mBS2aG_xs8emIKsqF8y6Ufva-2MRa20",
+                    "short_id": "9d2b63ad"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "51.75.86.63",
@@ -233,41 +258,6 @@
                     "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
                     "short_id": "d73382b02fa94fc2"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣3️⃣",
-            "type": "vless",
-            "server": "136.244.114.210",
-            "server_port": 21877,
-            "uuid": "9284d21d-2a21-4db0-b1a1-92ea718360fa",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.samsung.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "byvIRogPMVZWaGPT6ZLylyTkIgjsqTErbbYv9nk65EY",
-                    "short_id": "6ba85179e30d4fc2"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "grpc",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
