@@ -110,8 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "SE🇸🇪",
-                "GB🇬🇧"
+                "SE🇸🇪"
             ]
         },
         {
@@ -119,8 +118,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | HY2 | @TUICity | SE🇸🇪 | 0️⃣1️⃣",
-                "رایگان | HY2 | @TUICity | SE🇸🇪 | 0️⃣2️⃣",
-                "رایگان | HY2 | @TUICity | GB🇬🇧 | 0️⃣3️⃣"
+                "رایگان | HY2 | @TUICity | SE🇸🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -132,16 +130,6 @@
             "outbounds": [
                 "رایگان | HY2 | @TUICity | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | HY2 | @TUICity | SE🇸🇪 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "GB🇬🇧",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | HY2 | @TUICity | GB🇬🇧 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -182,29 +170,6 @@
             "obfs": {
                 "type": "salamander",
                 "password": "a16d0be0"
-            },
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.apple.com",
-                "insecure": true,
-                "alpn": [
-                    "h3"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | HY2 | @TUICity | GB🇬🇧 | 0️⃣3️⃣",
-            "type": "hysteria2",
-            "server": "66.245.192.15",
-            "server_port": 443,
-            "up_mbps": 0,
-            "down_mbps": 0,
-            "password": "9f73c619627d6a5d",
-            "network": "tcp",
-            "obfs": {
-                "type": "salamander",
-                "password": "bd7f765e"
             },
             "tls": {
                 "enabled": true,
