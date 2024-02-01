@@ -118,7 +118,8 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2rayCollectorDonate | RO🇷🇴 | 0️⃣5️⃣"
             ],
@@ -130,7 +131,8 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -148,7 +150,7 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣5️⃣",
+            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
             "type": "vless",
             "server": "5.75.237.16",
             "server_port": 443,
@@ -180,6 +182,34 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "5.75.170.38",
+            "server_port": 8443,
+            "uuid": "X4Azadi",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "app.hubspot.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "LiOp3R5lcVf2-Qd_yP3q1fPKqTkTu92hjHNNqpiFsiA",
+                    "short_id": ""
+                }
             }
         },
         {
