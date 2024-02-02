@@ -105,7 +105,8 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "DE🇩🇪"
+                "DE🇩🇪",
+                "NL🇳🇱"
             ]
         },
         {
@@ -114,8 +115,9 @@
             "outbounds": [
                 "رایگان | REALITY | @V2pedia | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣2️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣3️⃣",
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -127,8 +129,18 @@
             "outbounds": [
                 "رایگان | REALITY | @V2pedia | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣2️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "NL🇳🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -198,7 +210,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣2️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣3️⃣",
             "type": "vless",
             "server": "167.235.194.0",
             "server_port": 20832,
@@ -250,6 +262,34 @@
                     "enabled": true,
                     "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
                     "short_id": "d73382b02fa94fc2"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣7️⃣",
+            "type": "vless",
+            "server": "159.223.4.137",
+            "server_port": 38915,
+            "uuid": "24f6cf45-67ef-493c-8db8-5cad032bf123",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "V7PuAOITOyH7RZ-PRJndYVA5udmu-DqAp7LdjpNYwUQ",
+                    "short_id": "33c38f16"
                 }
             }
         },
