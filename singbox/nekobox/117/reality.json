@@ -105,9 +105,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "DE🇩🇪",
-                "FI🇫🇮",
-                "SE🇸🇪"
+                "DE🇩🇪"
             ]
         },
         {
@@ -117,9 +115,7 @@
                 "رایگان | REALITY | @V2pedia | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣2️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣3️⃣",
-                "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣6️⃣"
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -133,26 +129,6 @@
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FI🇫🇮",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "SE🇸🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -275,69 +251,6 @@
                     "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
                     "short_id": "d73382b02fa94fc2"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣3️⃣",
-            "type": "vless",
-            "server": "finland.nodes.mrzb.artydev.ru",
-            "server_port": 8443,
-            "uuid": "518aa910-411c-421a-9cae-7fd90ece7752",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "cdn.discordapp.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "13.49.231.106",
-            "server_port": 8080,
-            "uuid": "049f97b8-7180-4b67-d79d-9541ff116fe8",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "*.google.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tj4NuuQRH5GMJqWUYRYsCPvhR4KCRQ58TqF7gqCf9lQ",
-                    "short_id": "21e3"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@kiava",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
