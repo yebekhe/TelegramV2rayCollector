@@ -114,10 +114,11 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | RO🇷🇴 | 0️⃣7️⃣"
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | RO🇷🇴 | 0️⃣8️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -127,7 +128,8 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -138,7 +140,7 @@
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣2️⃣"
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -148,18 +150,46 @@
             "tag": "RO🇷🇴",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | RO🇷🇴 | 0️⃣7️⃣"
+                "رایگان | REALITY | @V2rayCollectorDonate | RO🇷🇴 | 0️⃣8️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
+            "tag": "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣5️⃣",
             "type": "vless",
-            "server": "5.75.237.16",
-            "server_port": 443,
-            "uuid": "telegram-id-ArV2ray",
+            "server": "5.75.170.38",
+            "server_port": 8443,
+            "uuid": "X4Azadi",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "app.hubspot.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "LiOp3R5lcVf2-Qd_yP3q1fPKqTkTu92hjHNNqpiFsiA",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "167.235.194.0",
+            "server_port": 20832,
+            "uuid": "3709d9c3-0287-498a-8663-c476db86a6a3",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -169,7 +199,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "ftp.debian.org",
+                "server_name": "sourceforge.net",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -177,16 +207,9 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "fjq_yNNj2GMJqOgpkhZ6rHNQNzSfyyfhDohClRxk0Go",
-                    "short_id": "4ccd96c5"
+                    "public_key": "ng6XQkeYA7Omk3Gbsj2famKYasixtk8mFpifFBRv8Qo",
+                    "short_id": "914deebd"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
@@ -218,7 +241,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣3️⃣",
             "type": "vless",
             "server": "finland.nodes.mrzb.artydev.ru",
             "server_port": 8443,
@@ -246,7 +269,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | RO🇷🇴 | 0️⃣7️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | RO🇷🇴 | 0️⃣8️⃣",
             "type": "vless",
             "server": "nodes.mrzb.artydev.ru",
             "server_port": 8443,
