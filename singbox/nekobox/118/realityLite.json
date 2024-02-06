@@ -112,9 +112,10 @@
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @NIM_VPN_ir | PL🇵🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @frev2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2rayCollector | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | NL🇳🇱 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
         },
@@ -124,9 +125,10 @@
             "outbounds": [
                 "رایگان | REALITY | @NIM_VPN_ir | PL🇵🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @frev2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2rayCollector | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | NL🇳🇱 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -191,6 +193,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @frev2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "reryretjetjethe.ryeunegerwgbnwerghwrhrw.erhente.rovamask.top",
+            "server_port": 8443,
+            "uuid": "5fd0002b-8843-4c22-ba21-241c9acfcc54",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "dash.cloudflare.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "ZZ8I2sRUo5tX7_IiYHPpFqqSP6nrUPVheiNWabW5axI",
+                    "short_id": "44d0d356"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "\/\/\/v2raymask",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
@@ -267,12 +304,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | NL🇳🇱 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "reryretjetjethe.ryeunegerwgbnwerghwrhrw.erhente.rovamask.top",
-            "server_port": 8443,
-            "uuid": "5fd0002b-8843-4c22-ba21-241c9acfcc54",
-            "flow": "",
+            "server": "185.242.86.156",
+            "server_port": 443,
+            "uuid": "6c3cd88a-54da-4ab6-9a65-e6ee880ddc78",
+            "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -281,7 +318,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "dash.cloudflare.com",
+                "server_name": "google.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -289,16 +326,9 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "ZZ8I2sRUo5tX7_IiYHPpFqqSP6nrUPVheiNWabW5axI",
-                    "short_id": "44d0d356"
+                    "public_key": "sfnjE7zzQhrk7OCM5eVRYkPkITbP9pfIyAcJK1QawRs",
+                    "short_id": "f033b9d6"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "\/\/\/v2raymask",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
