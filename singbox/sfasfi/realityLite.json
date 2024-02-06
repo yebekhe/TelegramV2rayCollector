@@ -108,9 +108,10 @@
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @NIM_VPN_ir | PL🇵🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2pedia | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @frev2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2rayCollector | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
         },
@@ -120,9 +121,10 @@
             "outbounds": [
                 "رایگان | REALITY | @NIM_VPN_ir | PL🇵🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2pedia | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @frev2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2rayCollector | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -187,6 +189,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @frev2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "reryretjetjethe.ryeunegerwgbnwerghwrhrw.erhente.rovamask.top",
+            "server_port": 443,
+            "uuid": "bb5490a2-883d-47a6-e418-badade93ccba",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "dash.cloudflare.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "RtItUBzRjrYg054MeFKTBv4fpsN358uECTGeNTyNex0",
+                    "short_id": "315b"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "\/\/\/v2raymask",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
@@ -263,7 +300,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣2️⃣",
             "type": "vless",
             "server": "95.217.208.245",
             "server_port": 443,
