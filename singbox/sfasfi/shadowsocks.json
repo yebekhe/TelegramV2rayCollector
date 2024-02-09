@@ -113,6 +113,7 @@
                 "PL🇵🇱",
                 "CA🇨🇦",
                 "GB🇬🇧",
+                "AU🇦🇺",
                 "AT🇦🇹",
                 "RU🇷🇺",
                 "FI🇫🇮"
@@ -135,7 +136,8 @@
                 "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣3️⃣",
                 "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣4️⃣",
                 "رایگان | SS | @proxy_mtm | GB🇬🇧 | 0️⃣4️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣4️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | AU🇦🇺 | 0️⃣4️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣5️⃣",
                 "رایگان | SS | @ROMAX_VPN | RU🇷🇺 | 0️⃣2️⃣",
                 "رایگان | SS | @ROMAX_VPN | FI🇫🇮 | 0️⃣3️⃣"
             ],
@@ -220,10 +222,20 @@
             "tolerance": 50
         },
         {
+            "tag": "AU🇦🇺",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @OutlineVpnOfficial | AU🇦🇺 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "AT🇦🇹",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣4️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -380,7 +392,17 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣4️⃣",
+            "tag": "رایگان | SS | @OutlineVpnOfficial | AU🇦🇺 | 0️⃣4️⃣",
+            "type": "shadowsocks",
+            "server": "au-ss.ipracevpn.com",
+            "server_port": 2443,
+            "method": "aes-256-gcm",
+            "password": "StRPmBQw4HLCWZPqR4DHTmImaHFPhjj0PdKCDUwyrSk=",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣5️⃣",
             "type": "shadowsocks",
             "server": "212.113.106.243",
             "server_port": 12949,
