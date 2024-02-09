@@ -111,8 +111,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "FI🇫🇮",
-                "US🇺🇸",
-                "DE🇩🇪"
+                "DE🇩🇪",
+                "SG🇸🇬"
             ]
         },
         {
@@ -120,14 +120,15 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ARv2ray | FI🇫🇮 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣4️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣3️⃣",
                 "رایگان | REALITY | @customv2ray | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | REALITY | @prrofile_purple | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @Capoit | SG🇸🇬 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -138,19 +139,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ARv2ray | FI🇫🇮 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣4️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣3️⃣",
                 "رایگان | REALITY | @customv2ray | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣4️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | US🇺🇸 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -161,9 +152,20 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @prrofile_purple | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "SG🇸🇬",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @Capoit | SG🇸🇬 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -205,7 +207,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣4️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣3️⃣",
             "type": "vless",
             "server": "finland.nodes.mrzb.artydev.ru",
             "server_port": 8443,
@@ -303,34 +305,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | US🇺🇸 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "[0000:0000:0000:0000:0000:ffff:054b:c06c]",
-            "server_port": 443,
-            "uuid": "f282b575-60ec-4ddd-afb8-ea3b507fe8cb",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.emirates.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SXvVCyjcyu-9UM-EBQkAuzN_A5bV6LyCCiJPI4L1D3E",
-                    "short_id": "3ae4eeb2"
-                }
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @prrofile_purple | DE🇩🇪 | 0️⃣4️⃣",
             "type": "vless",
             "server": "78.47.198.99",
@@ -363,6 +337,34 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣7️⃣",
+            "type": "vless",
+            "server": "128.140.97.199",
+            "server_port": 52606,
+            "uuid": "bbcac1db-e11c-4e8e-8421-442b910d2231",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "oC_KW2uWbqYBPZ33Ywhkr0N-n2rYDecWwQj87asCl2Y",
+                    "short_id": "f6159ff1"
+                }
             }
         },
         {
@@ -401,7 +403,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "64.227.117.48",
             "server_port": 443,
@@ -461,6 +463,41 @@
                     "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
                     "short_id": "d73382b02fa94fc2"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @Capoit | SG🇸🇬 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "15.235.143.146",
+            "server_port": 443,
+            "uuid": "392203cd-27c0-426d-88be-5a5ec1cf7b78",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "bugarbahagia.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "vb5EKWNuql1-jsROMRQaAfhqNOeY2ajFPJJUz15yNHo",
+                    "short_id": "97713807"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
