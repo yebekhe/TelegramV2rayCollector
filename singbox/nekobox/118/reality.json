@@ -110,8 +110,6 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "US🇺🇸",
-                "FI🇫🇮",
                 "DE🇩🇪"
             ]
         },
@@ -119,29 +117,8 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣3️⃣",
-                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
+                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FI🇫🇮",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -151,6 +128,7 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -158,46 +136,11 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣3️⃣",
             "type": "vless",
-            "server": "5.78.83.250",
-            "server_port": 25365,
-            "uuid": "3bb09d54-9cf2-4f4e-a619-b2196e7568e8",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "3tG_6ui57nKUktmjW_BvM9OPLO0hCH8SyLlphGoLWHA",
-                    "short_id": "80af7bf6"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "ZEDMODEON-ZEDMODEON-ZEDMODEON",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "37.27.7.241",
+            "server": "kamyarconfigs.camdve.store",
             "server_port": 443,
-            "uuid": "telegram-id-ArV2ray",
+            "uuid": "31c1daf2-127a-4654-a909-34f05abcc21e",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -207,7 +150,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "ftp.debian.org",
+                "server_name": "greenpepper.ir",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -215,13 +158,13 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "m0g72CLscL0SSXyJp9hz1XMub641LoYxjr7h_-vFRFY",
-                    "short_id": "bce662cb"
+                    "public_key": "gmVJCEhdOMxANl_Kua3bAsu0y98OA1cn_j1oyLdgBB8",
+                    "short_id": "61ce894b"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
+                "service_name": "@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs,@ConfigMs",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
