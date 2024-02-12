@@ -110,8 +110,7 @@
                 "DE🇩🇪",
                 "FI🇫🇮",
                 "US🇺🇸",
-                "GB🇬🇧",
-                "NL🇳🇱"
+                "GB🇬🇧"
             ]
         },
         {
@@ -120,11 +119,11 @@
             "outbounds": [
                 "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣6️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣7️⃣",
-                "رایگان | REALITY | @ConfigsHUB | NL🇳🇱 | 0️⃣5️⃣"
+                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -145,6 +144,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -176,16 +176,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣7️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | NL🇳🇱 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -252,6 +242,34 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "5.75.192.194",
+            "server_port": 443,
+            "uuid": "0acf46b6-fc2b-4f73-a936-81285f5ed7e4",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.zula.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tVVmkXcGLwT2v9vc-m2388mc7z6J8GDyy8gYUe1MhV4",
+                    "short_id": "d035a4e345793f9b"
+                }
             }
         },
         {
@@ -382,41 +400,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ConfigsHUB | NL🇳🇱 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "167.99.34.101",
-            "server_port": 443,
-            "uuid": "4328c347-04a0-469d-b3e4-e824e19d6554",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "wagadtoha.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "do1Vyiz0OhO2UjrbiNuKgwGlUTJDv8JxrAju2EO2rSE",
-                    "short_id": "f7ee09ad"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
