@@ -110,6 +110,7 @@
                 "FI🇫🇮",
                 "US🇺🇸",
                 "GB🇬🇧",
+                "NL🇳🇱",
                 "DE🇩🇪"
             ]
         },
@@ -121,7 +122,7 @@
                 "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @ConfigsHUB | NL🇳🇱 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -169,10 +170,19 @@
             "tolerance": 50
         },
         {
+            "tag": "NL🇳🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @ConfigsHUB | NL🇳🇱 | 0️⃣7️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -313,12 +323,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @ConfigsHUB | NL🇳🇱 | 0️⃣7️⃣",
             "type": "vless",
-            "server": "128.140.97.199",
-            "server_port": 52606,
-            "uuid": "bbcac1db-e11c-4e8e-8421-442b910d2231",
-            "flow": "xtls-rprx-vision",
+            "server": "167.99.34.101",
+            "server_port": 443,
+            "uuid": "4328c347-04a0-469d-b3e4-e824e19d6554",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -327,17 +337,24 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "sourceforge.net",
+                "server_name": "wagadtoha.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "oC_KW2uWbqYBPZ33Ywhkr0N-n2rYDecWwQj87asCl2Y",
-                    "short_id": "f6159ff1"
+                    "public_key": "do1Vyiz0OhO2UjrbiNuKgwGlUTJDv8JxrAju2EO2rSE",
+                    "short_id": "f7ee09ad"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
