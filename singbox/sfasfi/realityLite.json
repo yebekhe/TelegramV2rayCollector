@@ -106,13 +106,13 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ipV2Ray | SG🇸🇬 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
+                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
         },
@@ -120,13 +120,13 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ipV2Ray | SG🇸🇬 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
+                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -134,7 +134,42 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @ipV2Ray | SG🇸🇬 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "15.235.143.146",
+            "server_port": 443,
+            "uuid": "392203cd-27c0-426d-88be-5a5ec1cf7b78",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "bugarbahagia.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "vb5EKWNuql1-jsROMRQaAfhqNOeY2ajFPJJUz15yNHo",
+                    "short_id": "97713807"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
             "type": "vless",
             "server": "193.124.46.68",
             "server_port": 443,
@@ -197,42 +232,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "usa.mmdgogoli.top",
-            "server_port": 2096,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣2️⃣",
             "type": "vless",
             "server": "England.kamimiller.top",
             "server_port": 8443,
@@ -302,7 +302,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣2️⃣",
             "type": "vless",
             "server": "167.99.34.101",
             "server_port": 443,
@@ -337,12 +337,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣7️⃣",
             "type": "vless",
-            "server": "161.35.17.40",
+            "server": "my.gozargahvpn.top",
             "server_port": 443,
-            "uuid": "f876f795-fced-4604-b190-4db485813c89",
-            "flow": "",
+            "uuid": "GozargahVPN-GozargahVPN",
+            "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -351,7 +351,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "feat.agency",
+                "server_name": "sourceforge.net",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -359,16 +359,9 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "RdG5aIJYY3zhj4rwssViQaohx4xKm4aT5Hsd9mMu2x4",
-                    "short_id": "015aab49"
+                    "public_key": "Z_g2Io7m5pNVmWGVMktAbI1xJVUJdat1Y8xehBRhtkY",
+                    "short_id": "798d84035d2b"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
