@@ -115,12 +115,14 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣0️⃣",
+                "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣3️⃣",
+                "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣5️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣5️⃣",
+                "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣3️⃣"
             ],
@@ -133,7 +135,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣4️⃣"
+                "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣3️⃣",
+                "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣5️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -143,11 +147,11 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣0️⃣",
+                "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -166,6 +170,41 @@
         },
         {
             "tag": "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "159.223.234.160",
+            "server_port": 443,
+            "uuid": "f104d365-b21f-4ab2-97cb-7d90db5c94f3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "kateihome.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "xyRkkZVwf7z-1HDL41tsYVx5KTJ1_h3fbAXAZ_769Cw",
+                    "short_id": "055d0384"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣3️⃣",
             "type": "vless",
             "server": "152.42.132.236",
             "server_port": 443,
@@ -200,7 +239,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣5️⃣",
             "type": "vless",
             "server": "188.166.33.153",
             "server_port": 443,
@@ -235,11 +274,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 1️⃣0️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣5️⃣",
             "type": "vless",
-            "server": "128.140.73.69",
+            "server": "128.199.60.64",
             "server_port": 443,
-            "uuid": "021e1111-e6d9-4f6c-a1b8-03a70b6e4540",
+            "uuid": "bcb032f0-9b14-4451-8ced-e64b4838c51d",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -249,7 +288,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "mail.albasir.in",
+                "server_name": "*.feedthemplants.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -257,13 +296,48 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "pFIXFBUWlfxKzjMQG4k7RxZrtHbbROURhe61gbKTOzM",
-                    "short_id": "23e8beee"
+                    "public_key": "6w1YppYTfGfJgldQ8RseRFwlA2MQ9CGdA2AgyAJctD0",
+                    "short_id": "a626e83e"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "@ASATeam_1",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "159.223.17.211",
+            "server_port": 443,
+            "uuid": "82726ccd-17a3-4827-b06c-8da69b973602",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "dnschecker.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "-2iaaZuCAi7I9r4680lLC8p4krVTtEFq2xj6ylvpJUc",
+                    "short_id": "47890dea"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
@@ -375,11 +449,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣6️⃣",
             "type": "vless",
-            "server": "167.235.219.105",
+            "server": "49.13.136.109",
             "server_port": 443,
-            "uuid": "telegram-id-ArV2ray",
+            "uuid": "ac554074-ad55-41c6-9fc1-5af16ace00f1",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -389,7 +463,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "ftp.debian.org",
+                "server_name": "albasir.in",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -397,13 +471,13 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "Gbyto4BT5UYvIA3ddgwlznSOgR9cC_t4HbChRHy1rEo",
-                    "short_id": "bd073ffa"
+                    "public_key": "Bd-_Pb-tDjuVjONc59pDmblvX6tUx_-fsJDs8fAYTG4",
+                    "short_id": "0cb80458"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
+                "service_name": "@ipV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
