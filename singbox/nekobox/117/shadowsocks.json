@@ -112,6 +112,7 @@
                 "RU🇷🇺",
                 "CA🇨🇦",
                 "AT🇦🇹",
+                "BR🇧🇷",
                 "SE🇸🇪",
                 "NL🇳🇱"
             ]
@@ -137,10 +138,10 @@
                 "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | SS | @ROMAX_VPN | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @VmessProtocol | RU🇷🇺 | 0️⃣2️⃣",
-                "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣4️⃣",
+                "رایگان | SS | @forwardv2ray | BR🇧🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | BR🇧🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @kingofilter | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | SS | @kingofilter | NL🇳🇱 | 0️⃣2️⃣"
             ],
@@ -204,8 +205,7 @@
             "tag": "RU🇷🇺",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @VmessProtocol | RU🇷🇺 | 0️⃣2️⃣",
-                "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣2️⃣"
+                "رایگان | SS | @VmessProtocol | RU🇷🇺 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -215,8 +215,7 @@
             "tag": "CA🇨🇦",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -227,6 +226,17 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "BR🇧🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | BR🇧🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | BR🇧🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -423,16 +433,6 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣2️⃣",
-            "type": "shadowsocks",
-            "server": "45.139.24.63",
-            "server_port": 57456,
-            "method": "chacha20-ietf-poly1305",
-            "password": "afa22bb1050134b8",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
             "tag": "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "ca-ss.ipracevpn.com",
@@ -443,22 +443,32 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @forwardv2ray | CA🇨🇦 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "toronto.telegavpn.org",
-            "server_port": 31024,
-            "method": "chacha20-ietf-poly1305",
-            "password": "hiAIBTn0Nzz6tTXEhlYaGM",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
             "tag": "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣4️⃣",
             "type": "shadowsocks",
             "server": "212.113.106.243",
             "server_port": 12949,
             "method": "chacha20-ietf-poly1305",
             "password": "P2zxXPewlV3BlfqqYiSthvtLc",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | BR🇧🇷 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "168.138.132.149",
+            "server_port": 7704,
+            "method": "aes-256-gcm",
+            "password": "8890ad02-a35e-4662-8fa9-dd1b5a7e8a14",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | BR🇧🇷 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "150.230.68.218",
+            "server_port": 7703,
+            "method": "aes-256-gcm",
+            "password": "8890ad02-a35e-4662-8fa9-dd1b5a7e8a14",
             "plugin": "",
             "plugin_opts": ""
         },
