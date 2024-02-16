@@ -119,16 +119,18 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣4️⃣",
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣5️⃣",
                 "رایگان | REALITY | @V2RayTz | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @TVCminer | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -138,7 +140,7 @@
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣3️⃣"
+                "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -160,19 +162,21 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @TVCminer | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣4️⃣",
             "type": "vless",
             "server": "95.179.217.33",
             "server_port": 45712,
@@ -294,6 +298,41 @@
                     "enabled": true,
                     "public_key": "KVzIvG9xQahVZNQH61XfhhNMgVWzU0I6R-_1FoRYeFM",
                     "short_id": "2589fd53"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "159.223.17.211",
+            "server_port": 443,
+            "uuid": "82726ccd-17a3-4827-b06c-8da69b973602",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "dnschecker.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "-2iaaZuCAi7I9r4680lLC8p4krVTtEFq2xj6ylvpJUc",
+                    "short_id": "47890dea"
                 }
             },
             "transport": {
@@ -505,6 +544,41 @@
                     "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
                     "short_id": "d73382b02fa94fc2"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @TVCminer | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "159.69.117.204",
+            "server_port": 443,
+            "uuid": "cba8411e-0e06-4ce9-839c-5833703c9025",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.cloudflare.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "5Y5PJFDDrv6DCsHtP3F-b_pTWDExJMRNTYfB-4ocKwU",
+                    "short_id": "96fdd23e"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@Hatunnel_vpn",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
