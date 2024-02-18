@@ -110,12 +110,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @TVCminer | US🇺🇸 | 0️⃣7️⃣"
             ]
@@ -124,18 +126,48 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @TVCminer | US🇺🇸 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @NIM_VPN_ir | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "95.179.217.33",
+            "server_port": 45712,
+            "uuid": "69a75a84-31ab-46c4-8e42-fc4c6d320ba1",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn.discordapp.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "RsbT8HImgysmMNJaDi3x4yyrUdWpfk3EJEDVYQPvZRw",
+                    "short_id": "d55861e7"
+                }
+            }
         },
         {
             "tag": "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
@@ -313,11 +345,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "49.12.72.62",
-            "server_port": 443,
-            "uuid": "b7c9d0ac-9ad2-4f19-a7af-4e5929a3409c",
+            "server": "79.137.198.240",
+            "server_port": 2053,
+            "uuid": "055f1d1b-32b3-4485-a97b-181b1f2617f9",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -327,24 +359,52 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "*.wearenimble.nl",
+                "server_name": "cdn.discordapp.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "pPpTgNj1bPnJ6cL_l3nSPacY6Bl2R2uctUi_ULZ0iR0",
-                    "short_id": "0d83afe9"
+                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+                    "short_id": ""
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "@ipV2Ray",
+                "service_name": "xyz",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "79.137.198.240",
+            "server_port": 8443,
+            "uuid": "055f1d1b-32b3-4485-a97b-181b1f2617f9",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "discordapp.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+                    "short_id": ""
+                }
             }
         },
         {
