@@ -108,6 +108,7 @@
                 "URL-TEST | رایگان",
                 "NL🇳🇱",
                 "DE🇩🇪",
+                "GB🇬🇧",
                 "FI🇫🇮"
             ]
         },
@@ -120,6 +121,7 @@
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | REALITY | @TVCminer | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | REALITY | @TVCminer | FI🇫🇮 | 0️⃣4️⃣"
             ],
@@ -145,6 +147,16 @@
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -327,6 +339,41 @@
                     "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
                     "short_id": "d73382b02fa94fc2"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "178.79.142.245",
+            "server_port": 2086,
+            "uuid": "fd7eea92-ae65-4e12-8679-7bb2ebbd4547",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "discord.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "8LDFrYcXx-UsftgAZOY1zib8iEnJjyMXL1jGR965WXg",
+                    "short_id": "62b82605b6ebd9b0"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@x2rayn_vpn",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
