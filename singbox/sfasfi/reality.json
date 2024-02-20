@@ -108,6 +108,7 @@
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
                 "GB🇬🇧",
+                "NL🇳🇱",
                 "RU🇷🇺"
             ]
         },
@@ -117,8 +118,10 @@
             "outbounds": [
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2RayTz | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @flyv2ray | RU🇷🇺 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -131,6 +134,7 @@
             "outbounds": [
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -142,6 +146,16 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "NL🇳🇱",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @V2RayTz | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -228,6 +242,41 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "195.201.89.188",
+            "server_port": 443,
+            "uuid": "b1c1da37-726b-4db1-8139-27a7497e3186",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.dnschecker.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "c452clIZOGrphH1pKZLlFFyN9bjhk2JxMemT2Df6C3w",
+                    "short_id": "d276874c"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "51.75.86.63",
@@ -281,6 +330,41 @@
                     "public_key": "lA6wn3tUYgfJZkRzS29e1hJo38UXrL5ko6v6oQFIzB0",
                     "short_id": "62f886757cb2e45e"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2RayTz | NL🇳🇱 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "159.223.209.183",
+            "server_port": 443,
+            "uuid": "047fc688-3374-4dca-ab3d-d90ef410dcbb",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.cloudflare.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "ziJriPZAUrxeMSdzpvkA0ZUxa_gO-RAd7miftqhbfkc",
+                    "short_id": "b4ec3caf"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
