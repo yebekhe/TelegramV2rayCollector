@@ -115,6 +115,7 @@
                 "رایگان | REALITY | @V2rayCollectorDonate | RU🇷🇺 | 0️⃣6️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣5️⃣",
                 "رایگان | REALITY | @proxy_mtm | NL🇳🇱 | 0️⃣2️⃣",
                 "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
@@ -129,6 +130,7 @@
                 "رایگان | REALITY | @V2rayCollectorDonate | RU🇷🇺 | 0️⃣6️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣5️⃣",
                 "رایگان | REALITY | @proxy_mtm | NL🇳🇱 | 0️⃣2️⃣",
                 "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
@@ -292,10 +294,38 @@
             },
             "transport": {
                 "type": "grpc",
-                "service_name": " @ipV2Ray",
+                "service_name": "@ipV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "144.126.234.182",
+            "server_port": 51697,
+            "uuid": "22f3cbcc-55b5-4d71-a3ca-9d6f3287aace",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.sourceforge.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "3KmWh8OPrAr-gBXyVdyS4IaB8DKUTtdIpbv5qvN15RY",
+                    "short_id": "c2abcb19"
+                }
             }
         },
         {
