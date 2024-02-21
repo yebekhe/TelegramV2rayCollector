@@ -108,8 +108,8 @@
                 "URL-TEST | رایگان",
                 "NL🇳🇱",
                 "DE🇩🇪",
-                "FI🇫🇮",
-                "GB🇬🇧"
+                "GB🇬🇧",
+                "FI🇫🇮"
             ]
         },
         {
@@ -119,10 +119,10 @@
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣"
+                "رایگان | REALITY | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
+                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -144,8 +144,18 @@
             "outbounds": [
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -156,16 +166,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "GB🇬🇧",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -277,34 +277,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "zedmodeon-channel-zedmodeon-join-zedmodeon-zedmodeon-zedmodeon.tozedmodeon.store",
-            "server_port": 25365,
-            "uuid": "fe4fa32d-377c-4577-86eb-8e9a81d08cdf",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "t7pJFOkjW5P8PPC4JpV2H97JC1aVwN5-qH2oMygORVw",
-                    "short_id": "fa1007c3"
-                }
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "51.75.86.63",
@@ -333,10 +305,38 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @azadi_az_inja_migzare | GB🇬🇧 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "Finland.titaniom.com",
-            "server_port": 2087,
+            "server": "51.195.148.69",
+            "server_port": 6639,
+            "uuid": "02e490ca-6a99-4bf8-ba42-15cca3f20e6e",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "presshill.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "lA6wn3tUYgfJZkRzS29e1hJo38UXrL5ko6v6oQFIzB0",
+                    "short_id": "62f886757cb2e45e"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "England.titaniom.com",
+            "server_port": 8443,
             "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
             "flow": "",
             "packet_encoding": "xudp",
@@ -347,7 +347,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "www.greenpepper.ir",
+                "server_name": "www.ilovepdf.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -368,10 +368,10 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "England.titaniom.com",
-            "server_port": 8443,
+            "server": "Finland.titaniom.com",
+            "server_port": 2087,
             "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
             "flow": "",
             "packet_encoding": "xudp",
@@ -382,7 +382,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "www.ilovepdf.com",
+                "server_name": "www.greenpepper.ir",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
