@@ -106,30 +106,36 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "FR🇫🇷",
                 "NL🇳🇱",
-                "DE🇩🇪",
                 "JP🇯🇵",
-                "SG🇸🇬",
-                "FI🇫🇮",
-                "LU🇱🇺"
+                "DE🇩🇪",
+                "FI🇫🇮"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @EliV2ray | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @DarkTeam_VPN | JP🇯🇵 | 0️⃣2️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | JP🇯🇵 | 0️⃣1️⃣",
-                "رایگان | REALITY | @DarkTeam_VPN | SG🇸🇬 | 0️⃣3️⃣",
-                "رایگان | REALITY | @DarkTeam_VPN | SG🇸🇬 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2RayTz | SG🇸🇬 | 0️⃣7️⃣",
-                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣4️⃣",
-                "رایگان | REALITY | @mehrosaboran | LU🇱🇺 | 0️⃣1️⃣"
+                "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FR🇫🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @EliV2ray | FR🇫🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -147,18 +153,6 @@
             "tolerance": 50
         },
         {
-            "tag": "DE🇩🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "JP🇯🇵",
             "type": "urltest",
             "outbounds": [
@@ -170,12 +164,12 @@
             "tolerance": 50
         },
         {
-            "tag": "SG🇸🇬",
+            "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @DarkTeam_VPN | SG🇸🇬 | 0️⃣3️⃣",
-                "رایگان | REALITY | @DarkTeam_VPN | SG🇸🇬 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2RayTz | SG🇸🇬 | 0️⃣7️⃣"
+                "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -192,14 +186,39 @@
             "tolerance": 50
         },
         {
-            "tag": "LU🇱🇺",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @mehrosaboran | LU🇱🇺 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
+            "tag": "رایگان | REALITY | @EliV2ray | FR🇫🇷 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "217.69.6.138",
+            "server_port": 442,
+            "uuid": "db47858f-d33d-4177-a1d8-80898cf99af9",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "5ymESWL8fiNj53FXaFl9VoiyP775drBZ9t97Ie_luwY",
+                    "short_id": "d8c6a509"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "FOX_VPN66",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
         },
         {
             "tag": "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
@@ -272,104 +291,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "49.13.11.43",
-            "server_port": 443,
-            "uuid": "telegram-id-ArV2ray",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "xHComVbPv5hNGPcbXx8C_wQ6-zf3aML9MDbPuUs9C20",
-                    "short_id": "36dbdff8"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "188.34.194.108",
-            "server_port": 443,
-            "uuid": "cb00ef4a-fcf7-484a-8c49-6a2422ed84e6",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "ftp.debian.org",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "W6ol7KU4fjV1mBS2aG_xs8emIKsqF8y6Ufva-2MRa20",
-                    "short_id": "9d2b63ad"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "51.75.86.63",
-            "server_port": 443,
-            "uuid": "974d4696-a900-4d44-b627-9833b8a7b27a",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "flightradar24.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "edge"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
-                    "short_id": "d73382b02fa94fc2"
-                }
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @DarkTeam_VPN | JP🇯🇵 | 0️⃣2️⃣",
             "type": "vless",
             "server": "18.181.197.97",
@@ -426,12 +347,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @DarkTeam_VPN | SG🇸🇬 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
             "type": "vless",
-            "server": "54.179.39.37",
-            "server_port": 10012,
-            "uuid": "A7547235-E23F-44A7-9B66-C9D72F769698",
-            "flow": "xtls-rprx-vision",
+            "server": "188.34.194.108",
+            "server_port": 443,
+            "uuid": "cb00ef4a-fcf7-484a-8c49-6a2422ed84e6",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -440,26 +361,33 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "s0.awsstatic.com",
+                "server_name": "ftp.debian.org",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "dR1QmDjsiujobG0AxdPdsom9gNkgf8qnJglB49-XclM",
-                    "short_id": "01fc5e98a68e5e7b"
+                    "public_key": "W6ol7KU4fjV1mBS2aG_xs8emIKsqF8y6Ufva-2MRa20",
+                    "short_id": "9d2b63ad"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
-            "tag": "رایگان | REALITY | @DarkTeam_VPN | SG🇸🇬 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣6️⃣",
             "type": "vless",
-            "server": "54.255.178.212",
-            "server_port": 10013,
-            "uuid": "A7547235-E23F-44A7-9B66-C9D72F769698",
-            "flow": "xtls-rprx-vision",
+            "server": "5.75.225.4",
+            "server_port": 443,
+            "uuid": "5ab6708e-b949-4381-946a-2a80f664aaa8",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -468,25 +396,32 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "s0.awsstatic.com",
+                "server_name": "*.hetzner.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "dR1QmDjsiujobG0AxdPdsom9gNkgf8qnJglB49-XclM",
-                    "short_id": "01fc5e98a68e5e7b"
+                    "public_key": "AVh9z3yAsgz2E7o7UOWUIRcOMKgcrXJjchCIUwaviDQ",
+                    "short_id": "3eb1d20a"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | SG🇸🇬 | 0️⃣7️⃣",
+            "tag": "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "54.255.178.212",
-            "server_port": 10013,
-            "uuid": "A7547235-E23F-44A7-9B66-C9D72F769698",
+            "server": "51.75.86.63",
+            "server_port": 443,
+            "uuid": "974d4696-a900-4d44-b627-9833b8a7b27a",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -496,16 +431,16 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "s0.awsstatic.com",
+                "server_name": "flightradar24.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
+                    "fingerprint": "edge"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "dR1QmDjsiujobG0AxdPdsom9gNkgf8qnJglB49-XclM",
-                    "short_id": "01fc5e98a68e5e7b"
+                    "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
+                    "short_id": "d73382b02fa94fc2"
                 }
             }
         },
@@ -539,41 +474,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @mehrosaboran | LU🇱🇺 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "107.189.28.186",
-            "server_port": 443,
-            "uuid": "0f57a21f-e7bd-41a1-9a64-37ade75714b5",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "*.cloudflare.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "C9XTLtWUS7bxjXafKZ3z_Qgg-jjfMPoAamMhLBmciCw",
-                    "short_id": "b2d438a1"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "channelV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
