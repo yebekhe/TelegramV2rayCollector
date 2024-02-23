@@ -116,6 +116,7 @@
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @Capoit | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @mehrosaboran | LU🇱🇺 | 0️⃣4️⃣",
                 "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
@@ -130,6 +131,7 @@
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @Capoit | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @mehrosaboran | LU🇱🇺 | 0️⃣4️⃣",
                 "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
@@ -335,6 +337,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @mehrosaboran | LU🇱🇺 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "107.189.28.186",
+            "server_port": 443,
+            "uuid": "0f57a21f-e7bd-41a1-9a64-37ade75714b5",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.cloudflare.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "C9XTLtWUS7bxjXafKZ3z_Qgg-jjfMPoAamMhLBmciCw",
+                    "short_id": "b2d438a1"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "channelV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
