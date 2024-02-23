@@ -112,7 +112,8 @@
                 "URL-TEST | رایگان",
                 "NL🇳🇱",
                 "DE🇩🇪",
-                "JP🇯🇵"
+                "JP🇯🇵",
+                "IR🇮🇷"
             ]
         },
         {
@@ -123,7 +124,8 @@
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @DarkTeam_VPN | JP🇯🇵 | 0️⃣2️⃣"
+                "رایگان | REALITY | @DarkTeam_VPN | JP🇯🇵 | 0️⃣2️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | IR🇮🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -156,6 +158,16 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @DarkTeam_VPN | JP🇯🇵 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "IR🇮🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @V2rayCollectorDonate | IR🇮🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -319,6 +331,34 @@
                     "enabled": true,
                     "public_key": "dR1QmDjsiujobG0AxdPdsom9gNkgf8qnJglB49-XclM",
                     "short_id": "01fc5e98a68e5e7b"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | IR🇮🇷 | 0️⃣7️⃣",
+            "type": "vless",
+            "server": "188.121.97.1",
+            "server_port": 443,
+            "uuid": "864462e2-ebcc-464f-9004-36330ac3c824",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "telewebion.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "lJNojEJZOuS4q7sIuvh8hXbfA1OQDNB2VYlobAy6mng",
+                    "short_id": "f5c9bd4c"
                 }
             }
         },
