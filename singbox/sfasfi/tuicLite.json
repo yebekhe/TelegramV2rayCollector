@@ -106,6 +106,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "رایگان | TUIC | @V2rayCollector | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣",
@@ -119,6 +120,7 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | TUIC | @V2rayCollector | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣",
@@ -130,6 +132,29 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | TUIC | @V2rayCollector | US🇺🇸 | 0️⃣1️⃣",
+            "type": "tuic",
+            "server": "38.6.227.43",
+            "server_port": 54009,
+            "uuid": "c12fd04c-2099-4016-a97c-26c0ae2c7d0b",
+            "password": "c12fd04c-2099-4016-a97c-26c0ae2c7d0b",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "zero_rtt_handshake": false,
+            "heartbeat": "10s",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "disable_sni": false,
+                "server_name": "www.bing.com",
+                "insecure": true,
+                "alpn": [
+                    "h3",
+                    "spdy\/3.1"
+                ]
+            }
         },
         {
             "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
