@@ -115,8 +115,10 @@
                 "رایگان | REALITY | @azadi_az_inja_migzare | JP🇯🇵 | 0️⃣1️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @Outlinev2rayNG | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @Outlinev2rayNG | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | JP🇯🇵 | 0️⃣5️⃣",
                 "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @proxy_mtm | FI🇫🇮 | 0️⃣4️⃣",
@@ -133,8 +135,10 @@
                 "رایگان | REALITY | @azadi_az_inja_migzare | JP🇯🇵 | 0️⃣1️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @Outlinev2rayNG | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @Outlinev2rayNG | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | JP🇯🇵 | 0️⃣5️⃣",
                 "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @proxy_mtm | FI🇫🇮 | 0️⃣4️⃣",
@@ -314,7 +318,42 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "65.108.52.226",
+            "server_port": 443,
+            "uuid": "48e4001a-53ac-44b0-a65f-e9d3dcaeebcf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.hetzner.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "5To2hd8dONrepW48wI6V1hbYePWOjYHgMXiR9Gq9tF4",
+                    "short_id": "ca837ff5"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "5.75.225.4",
             "server_port": 443,
@@ -349,7 +388,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @Outlinev2rayNG | NL🇳🇱 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @Outlinev2rayNG | NL🇳🇱 | 0️⃣2️⃣",
             "type": "vless",
             "server": "146.190.17.120",
             "server_port": 443,
@@ -381,6 +420,34 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | JP🇯🇵 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "jpegwdzrw.xqc.best",
+            "server_port": 20005,
+            "uuid": "a35f4400-3d6c-4dfe-8593-f3c516dccefa",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.timeto.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "edge"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Wt9cTNEcGKp6Qy2n050o5U3sDCEK1C-iuzQFYSzXknU",
+                    "short_id": "4a3749e4"
+                }
             }
         },
         {
