@@ -112,10 +112,10 @@
                 "FR🇫🇷",
                 "CA🇨🇦",
                 "AT🇦🇹",
-                "DE🇩🇪",
                 "GB🇬🇧",
-                "KR🇰🇷",
+                "NL🇳🇱",
                 "FI🇫🇮",
+                "KR🇰🇷",
                 "SE🇸🇪"
             ]
         },
@@ -133,7 +133,8 @@
                 "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣3️⃣",
-                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @proxy_mtm | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @proxy_mtm | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | SS | @proxy_mtm | GB🇬🇧 | 0️⃣4️⃣",
@@ -143,9 +144,11 @@
                 "رایگان | SS | @kingofilter | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @kingofilter | GB🇬🇧 | 0️⃣4️⃣",
                 "رایگان | SS | @kingofilter | GB🇬🇧 | 0️⃣5️⃣",
+                "رایگان | SS | @forwardv2ray | NL🇳🇱 | 0️⃣4️⃣",
+                "رایگان | SS | @forwardv2ray | FI🇫🇮 | 0️⃣5️⃣",
+                "رایگان | SS | @ROMAX_VPN | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣",
-                "رایگان | SS | @ROMAX_VPN | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | SS | @ROMAX_VPN | SE🇸🇪 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -217,19 +220,11 @@
             "tolerance": 50
         },
         {
-            "tag": "DE🇩🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @proxy_mtm | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @proxy_mtm | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | SS | @proxy_mtm | GB🇬🇧 | 0️⃣4️⃣",
@@ -245,11 +240,10 @@
             "tolerance": 50
         },
         {
-            "tag": "KR🇰🇷",
+            "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣1️⃣",
-                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣"
+                "رایگان | SS | @forwardv2ray | NL🇳🇱 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -259,7 +253,19 @@
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
+                "رایگان | SS | @forwardv2ray | FI🇫🇮 | 0️⃣5️⃣",
                 "رایگان | SS | @ROMAX_VPN | FI🇫🇮 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "KR🇰🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣1️⃣",
+                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -376,12 +382,22 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "3.122.108.42",
-            "server_port": 8080,
+            "server": "51.143.138.178",
+            "server_port": 33028,
             "method": "chacha20-ietf-poly1305",
-            "password": "dgIYzHB1V5BnFmGE8VGSuQv6vZ0ZppD\/IBPSnZmCa0Q=",
+            "password": "LQBrLz4luy9e1qg5S7NWHM",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "13.42.99.252",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Bog0ELmMM9DSxDdQ",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -476,6 +492,36 @@
             "plugin_opts": ""
         },
         {
+            "tag": "رایگان | SS | @forwardv2ray | NL🇳🇱 | 0️⃣4️⃣",
+            "type": "shadowsocks",
+            "server": "172.233.51.96",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "XlUFgoOqDlVqlZFD3Js0YA",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | FI🇫🇮 | 0️⃣5️⃣",
+            "type": "shadowsocks",
+            "server": "45.159.249.7",
+            "server_port": 31803,
+            "method": "chacha20-ietf-poly1305",
+            "password": "llRQSxw3erJhCElYdwks12",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @ROMAX_VPN | FI🇫🇮 | 0️⃣3️⃣",
+            "type": "shadowsocks",
+            "server": "95.164.113.64",
+            "server_port": 7150,
+            "method": "chacha20-ietf-poly1305",
+            "password": "btzmpL7aOs7YbcLS4In6YX",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
             "tag": "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣1️⃣",
             "type": "shadowsocks",
             "server": "p141.panda001.net",
@@ -492,16 +538,6 @@
             "server_port": 54345,
             "method": "aes-256-cfb",
             "password": "qwerREWQ@@",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @ROMAX_VPN | FI🇫🇮 | 0️⃣3️⃣",
-            "type": "shadowsocks",
-            "server": "95.164.113.64",
-            "server_port": 7150,
-            "method": "chacha20-ietf-poly1305",
-            "password": "btzmpL7aOs7YbcLS4In6YX",
             "plugin": "",
             "plugin_opts": ""
         },
