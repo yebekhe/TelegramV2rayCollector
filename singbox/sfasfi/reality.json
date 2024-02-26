@@ -107,9 +107,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "LU🇱🇺",
-                "FI🇫🇮",
-                "DE🇩🇪",
-                "NL🇳🇱"
+                "NL🇳🇱",
+                "DE🇩🇪"
             ]
         },
         {
@@ -117,11 +116,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ShadowProxy66 | LU🇱🇺 | 0️⃣7️⃣",
-                "رایگان | REALITY | @ConfigsHUB | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @v2rayng_vpnrog | NL🇳🇱 | 0️⃣6️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @TVCminer | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2rayng_vpnrog | NL🇳🇱 | 0️⃣6️⃣"
+                "رایگان | REALITY | @TVCminer | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -138,10 +135,10 @@
             "tolerance": 50
         },
         {
-            "tag": "FI🇫🇮",
+            "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | FI🇫🇮 | 0️⃣1️⃣"
+                "رایگان | REALITY | @v2rayng_vpnrog | NL🇳🇱 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -151,19 +148,8 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @TVCminer | DE🇩🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @v2rayng_vpnrog | NL🇳🇱 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -205,11 +191,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @ConfigsHUB | FI🇫🇮 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @v2rayng_vpnrog | NL🇳🇱 | 0️⃣6️⃣",
             "type": "vless",
-            "server": "95.217.21.144",
+            "server": "146.190.17.120",
             "server_port": 443,
-            "uuid": "43385746-b725-42a0-9e24-71844fd32b94",
+            "uuid": "8558f681-519e-40c3-8cc8-aea8e850d34a",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -219,7 +205,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "*.hetzner.com",
+                "server_name": "*.biro.nl",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -227,43 +213,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "je-mOMqldxeQlec1kGIhrUeIED5K_GLO5t0l6REPOS4",
-                    "short_id": "b3f26ed7"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "116.202.111.71",
-            "server_port": 443,
-            "uuid": "f587585e-e171-4c48-98d5-91c7e062cc54",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "*.hetzner.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oqPBF95pF4VW-1GH2gt5E4-Jyb-BiYOO5fEms-lbwG4",
-                    "short_id": "0de595c5"
+                    "public_key": "tpbNb0GaEaKigfpohZXxjlbNyBXHcsucB0KiFyw3fFA",
+                    "short_id": "85446011"
                 }
             },
             "transport": {
@@ -328,41 +279,6 @@
                     "public_key": "gQCzEjZAaLiDDNoMywHM6o6LD-LAZZcKhrpj70rKJXE",
                     "short_id": "14dbfae1"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2rayng_vpnrog | NL🇳🇱 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "146.190.17.120",
-            "server_port": 443,
-            "uuid": "8558f681-519e-40c3-8cc8-aea8e850d34a",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "*.biro.nl",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tpbNb0GaEaKigfpohZXxjlbNyBXHcsucB0KiFyw3fFA",
-                    "short_id": "85446011"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
