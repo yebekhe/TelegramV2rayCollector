@@ -123,7 +123,8 @@
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ipV2Ray | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | REALITY | @DailyV2RY | GB🇬🇧 | 0️⃣1️⃣"
+                "رایگان | REALITY | @DailyV2RY | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @TVCminer | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -155,7 +156,8 @@
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | GB🇬🇧 | 0️⃣1️⃣"
+                "رایگان | REALITY | @DailyV2RY | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @TVCminer | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -317,6 +319,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "xyz",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @TVCminer | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "209.38.166.46",
+            "server_port": 8057,
+            "uuid": "a5421443-322f-4ad8-92a7-bc5b2ac18426",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "d9Js380tDTgVEIledyWT6z6vyEQCxKA7kVK7vXCFQE4",
+                    "short_id": "31b76e94"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@adwork1ch",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
