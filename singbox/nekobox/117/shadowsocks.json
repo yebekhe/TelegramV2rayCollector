@@ -107,6 +107,7 @@
                 "URL-TEST | رایگان",
                 "PL🇵🇱",
                 "US🇺🇸",
+                "DE🇩🇪",
                 "FR🇫🇷",
                 "CA🇨🇦",
                 "AT🇦🇹",
@@ -123,6 +124,8 @@
                 "رایگان | SS | @DeamNet_Proxy | PL🇵🇱 | 0️⃣1️⃣",
                 "رایگان | SS | @DeamNet_Proxy | PL🇵🇱 | 0️⃣4️⃣",
                 "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | SS | @VmessProtocol | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣3️⃣",
@@ -154,6 +157,17 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @DeamNet_Proxy | US🇺🇸 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @VmessProtocol | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -259,6 +273,26 @@
             "server_port": 50370,
             "method": "chacha20-ietf-poly1305",
             "password": "4sZ69FNmAPosCBiD6MUryB",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @VmessProtocol | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "3.122.238.148",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Z5NgIYGsxSByKve2KIjdjFPQI39mzSTzVZbQHNfvYYg=",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "3.69.28.184",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "AH5hdDx9MDC4\/k2o0+96w\/nvxKXv3J0KVg4JqGjSp9U=",
             "plugin": "",
             "plugin_opts": ""
         },
