@@ -113,7 +113,7 @@
                 "NL🇳🇱",
                 "GB🇬🇧",
                 "DE🇩🇪",
-                "SG🇸🇬"
+                "IR🇮🇷"
             ]
         },
         {
@@ -123,12 +123,12 @@
                 "رایگان | REALITY | @EliV2ray | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Lockey_vpn | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ConfigsHUB | GB🇬🇧 | 0️⃣4️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @free1_vpn | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @https_config_injector | SG🇸🇬 | 0️⃣7️⃣"
+                "رایگان | REALITY | @DailyV2RY | IR🇮🇷 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -149,7 +149,8 @@
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @Lockey_vpn | GB🇬🇧 | 0️⃣1️⃣"
+                "رایگان | REALITY | @Lockey_vpn | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ConfigsHUB | GB🇬🇧 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -161,19 +162,18 @@
             "outbounds": [
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @free1_vpn | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @free1_vpn | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "SG🇸🇬",
+            "tag": "IR🇮🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @https_config_injector | SG🇸🇬 | 0️⃣7️⃣"
+                "رایگان | REALITY | @DailyV2RY | IR🇮🇷 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -264,6 +264,41 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @ConfigsHUB | GB🇬🇧 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "57.128.163.80",
+            "server_port": 443,
+            "uuid": "VPNCUSTOMIZE",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn.kellekcollection.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "w9tYPxes9YU2yvmYMgRYhSFQCWFoyQCz5b0odul1DQQ",
+                    "short_id": "136ce8d8"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@VPNCUSTOMIZE",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣6️⃣",
             "type": "vless",
             "server": "188.34.194.108",
@@ -327,7 +362,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣4️⃣",
             "type": "vless",
             "server": "ng.nourycazablanka.online",
             "server_port": 11426,
@@ -390,11 +425,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @DailyV2RY | IR🇮🇷 | 0️⃣4️⃣",
             "type": "vless",
-            "server": "51.75.86.63",
-            "server_port": 443,
-            "uuid": "974d4696-a900-4d44-b627-9833b8a7b27a",
+            "server": "185.213.164.162",
+            "server_port": 80,
+            "uuid": "169d4fb3-a564-4db5-8865-09e8e0853c24",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -404,44 +439,16 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "flightradar24.com",
+                "server_name": "www.digikala.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "edge"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
-                    "short_id": "d73382b02fa94fc2"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @https_config_injector | SG🇸🇬 | 0️⃣7️⃣",
-            "type": "vless",
-            "server": "54.255.178.212",
-            "server_port": 10013,
-            "uuid": "A7547235-E23F-44A7-9B66-C9D72F769698",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "s0.awsstatic.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "dR1QmDjsiujobG0AxdPdsom9gNkgf8qnJglB49-XclM",
-                    "short_id": "01fc5e98a68e5e7b"
+                    "public_key": "K4rl3rABpQbUBfL_qylcKDIvE9DuYuMfg524Pp3JCT4",
+                    "short_id": ""
                 }
             }
         },
