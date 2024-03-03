@@ -108,6 +108,7 @@
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
                 "GB🇬🇧",
+                "CH🇨🇭",
                 "NL🇳🇱"
             ]
         },
@@ -121,6 +122,7 @@
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @Lockey_vpn | GB🇬🇧 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ConfigsHUB | CH🇨🇭 | 0️⃣6️⃣",
                 "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -146,6 +148,16 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @Lockey_vpn | GB🇬🇧 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "CH🇨🇭",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @ConfigsHUB | CH🇨🇭 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -355,6 +367,41 @@
                     "public_key": "3KmWh8OPrAr-gBXyVdyS4IaB8DKUTtdIpbv5qvN15RY",
                     "short_id": "c2abcb19"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | CH🇨🇭 | 0️⃣6️⃣",
+            "type": "vless",
+            "server": "16.62.1.113",
+            "server_port": 1080,
+            "uuid": "1f6a24b8-6d5f-4a7c-960a-739275739fca",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "d1.awsstatic.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "NrL5Cv7PlIlVnMpJVBvNTRxW7z5xZofepwhQLbr09w8",
+                    "short_id": "c67a363a"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@zabuza_shop_@zabuza_shop_@zabuza_shop_@zabuza_shop_@zabuza_shop",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
