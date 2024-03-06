@@ -107,9 +107,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
-                "JP🇯🇵",
-                "TR🇹🇷",
-                "NL🇳🇱"
+                "NL🇳🇱",
+                "TR🇹🇷"
             ]
         },
         {
@@ -120,9 +119,8 @@
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @ConfigsHUB | JP🇯🇵 | 0️⃣3️⃣",
-                "رایگان | REALITY | @FAKEOFTVC | TR🇹🇷 | 0️⃣2️⃣",
-                "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣2️⃣"
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣5️⃣",
+                "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -142,10 +140,10 @@
             "tolerance": 50
         },
         {
-            "tag": "JP🇯🇵",
+            "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | JP🇯🇵 | 0️⃣3️⃣"
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -155,17 +153,7 @@
             "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @FAKEOFTVC | TR🇹🇷 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣2️⃣"
+                "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -312,12 +300,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @ConfigsHUB | JP🇯🇵 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣5️⃣",
             "type": "vless",
-            "server": "20.222.152.47",
+            "server": "77.246.99.239",
             "server_port": 443,
-            "uuid": "a72196df-d41a-4bc7-89a7-b2d173106eb2",
-            "flow": "",
+            "uuid": "95889265-c183-4b99-a4ab-648245c05c89",
+            "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -326,28 +314,21 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "www.nokia.com",
+                "server_name": "canva.heydasip.xyz",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "safari"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "ulY5p3d9HS3o8oi_Sa0PYwJGa6Gzx1fHdF6Ows7S0FQ",
-                    "short_id": "d1fc028c"
+                    "public_key": "oIXlVQLyObtIYcvEtVGXrathqaxBQd0keGCIrP_KHk8",
+                    "short_id": "b3c1fd20"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "lonanSADASDanasa",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
-            "tag": "رایگان | REALITY | @FAKEOFTVC | TR🇹🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣7️⃣",
             "type": "vless",
             "server": "abadis.ir.mmdargon.top",
             "server_port": 80,
@@ -379,34 +360,6 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "77.246.99.239",
-            "server_port": 443,
-            "uuid": "95889265-c183-4b99-a4ab-648245c05c89",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "canva.heydasip.xyz",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oIXlVQLyObtIYcvEtVGXrathqaxBQd0keGCIrP_KHk8",
-                    "short_id": "b3c1fd20"
-                }
             }
         },
         {
