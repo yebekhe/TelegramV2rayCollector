@@ -119,7 +119,9 @@
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2rayngvpn | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FAKEOFTVC | TR🇹🇷 | 0️⃣3️⃣"
@@ -136,7 +138,9 @@
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2rayngvpn | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -304,7 +308,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣6️⃣",
             "type": "vless",
             "server": "57.129.29.202",
             "server_port": 443,
@@ -333,6 +337,76 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "142.93.166.107",
+            "server_port": 443,
+            "uuid": "5c20c2fe-1b2f-45fd-96a1-657354624f5b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.octopad.ch",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "LD8y7bs5T8tNSLcB83NQXpo0_LfHk76WWykNwXJRG3I",
+                    "short_id": "304a9854"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "5.75.142.73",
+            "server_port": 443,
+            "uuid": "7d419df7-4b41-42b8-bfda-be8535254e94",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.hetzner.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7fX27jWXrP5zA7IzAua7lyfjiDPJ8T6e6bNccQr8-QM",
+                    "short_id": "ec5aedd5"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
