@@ -107,8 +107,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
-                "TR🇹🇷",
-                "NL🇳🇱"
+                "NL🇳🇱",
+                "TR🇹🇷"
             ]
         },
         {
@@ -119,8 +119,8 @@
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ipV2Ray | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2rayngvpn | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @FAKEOFTVC | TR🇹🇷 | 0️⃣3️⃣",
-                "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣2️⃣"
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣6️⃣",
+                "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -140,20 +140,20 @@
             "tolerance": 50
         },
         {
-            "tag": "TR🇹🇷",
+            "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @FAKEOFTVC | TR🇹🇷 | 0️⃣3️⃣"
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "NL🇳🇱",
+            "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣2️⃣"
+                "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -300,7 +300,35 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @FAKEOFTVC | TR🇹🇷 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣6️⃣",
+            "type": "vless",
+            "server": "77.246.99.239",
+            "server_port": 443,
+            "uuid": "95889265-c183-4b99-a4ab-648245c05c89",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "canva.heydasip.xyz",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "oIXlVQLyObtIYcvEtVGXrathqaxBQd0keGCIrP_KHk8",
+                    "short_id": "b3c1fd20"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣7️⃣",
             "type": "vless",
             "server": "abadis.ir.mmdargon.top",
             "server_port": 80,
@@ -332,34 +360,6 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ROMAX_VPN | NL🇳🇱 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "77.246.99.239",
-            "server_port": 443,
-            "uuid": "95889265-c183-4b99-a4ab-648245c05c89",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "canva.heydasip.xyz",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oIXlVQLyObtIYcvEtVGXrathqaxBQd0keGCIrP_KHk8",
-                    "short_id": "b3c1fd20"
-                }
             }
         },
         {
