@@ -111,6 +111,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
+                "FI🇫🇮",
                 "GB🇬🇧"
             ]
         },
@@ -119,8 +120,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @DailyV2RY | GB🇬🇧 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -132,8 +133,17 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FI🇫🇮",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -178,41 +188,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "91.107.186.175",
-            "server_port": 443,
-            "uuid": "telegram-id-ArV2ray",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "greenpepper.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "jsI4GV7A_BAjLydaw-XESSwCwCvE1ki7xIFWOZgwjSw",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "ng.nourycazablanka.online",
@@ -238,6 +213,41 @@
                     "public_key": "xv9dgE3CwwjEFMGfEn3EXyUvH3qfotIeu9v2xxm4sg4",
                     "short_id": "266b4610"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "135.181.110.40",
+            "server_port": 443,
+            "uuid": "8868424f-35a6-4886-a9df-20f67704919c",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.dnschecker.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7dAS16pknh0KY0c8uarwqEfFfzaXgeRfsioAdORuiyY",
+                    "short_id": "f01aead4"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
