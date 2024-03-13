@@ -107,8 +107,7 @@
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
                 "NL🇳🇱",
-                "FI🇫🇮",
-                "TR🇹🇷"
+                "FI🇫🇮"
             ]
         },
         {
@@ -118,9 +117,7 @@
                 "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | NL🇳🇱 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
-                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣3️⃣",
-                "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣5️⃣"
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -151,18 +148,7 @@
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
-                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "TR🇹🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣5️⃣"
+                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -292,62 +278,6 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣3️⃣",
-            "type": "vless",
-            "server": "join.wedbaz.fun",
-            "server_port": 9090,
-            "uuid": "8a3cb0ba-0682-45ca-9ec0-b445dbf1d0de",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.you.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "nnsGvmRXA5JJAgAvr8KbRilTesmKDfOq2YARPr9A7xs",
-                    "short_id": "16791254"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @forwardv2ray | TR🇹🇷 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "turkey-01.ptu.ink",
-            "server_port": 443,
-            "uuid": "8e5e00f6-c5c3-4ea5-ae50-e7b8e5e92611",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.microsoft.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "zGp41QGUA2TBVirEaFS34_n05w38JxQHKbqQxS-iHzM",
-                    "short_id": "cd2ccdd9761335d4"
-                }
             }
         },
         {
