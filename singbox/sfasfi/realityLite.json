@@ -107,6 +107,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @FalconPolV2rayNG | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣"
             ]
@@ -116,6 +117,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @FalconPolV2rayNG | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣"
             ],
@@ -149,6 +151,41 @@
                     "public_key": "1PNLCQnctUWXBFpRqOu4O7zOHnWM5kFdpSFpqvGW1Go",
                     "short_id": "05cc0af9"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @FalconPolV2rayNG | NL🇳🇱 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "104.248.194.223",
+            "server_port": 443,
+            "uuid": "01b6b661-4ab1-482f-a881-1ae895bc24e5",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.housepets.space",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "IizwPX5xVViOal5eU9u-Nkd7OZbnsLhQtclLWklAezI",
+                    "short_id": "189f1252"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
