@@ -115,7 +115,8 @@
                 "FR🇫🇷",
                 "DE🇩🇪",
                 "CA🇨🇦",
-                "US🇺🇸"
+                "US🇺🇸",
+                "TW🇹🇼"
             ]
         },
         {
@@ -128,7 +129,7 @@
                 "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @DirectVPN | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @DirectVPN | GB🇬🇧 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | GB🇬🇧 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | GB🇬🇧 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣4️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣4️⃣",
@@ -144,7 +145,9 @@
                 "رایگان | TROJAN | @VmessProtocol | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @VmessProtocol | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @VmessProtocol | CA🇨🇦 | 0️⃣7️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | TW🇹🇼 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | TW🇹🇼 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -169,7 +172,7 @@
                 "رایگان | TROJAN | @PrivateVPNs | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @DirectVPN | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @DirectVPN | GB🇬🇧 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | GB🇬🇧 | 0️⃣3️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | GB🇬🇧 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -222,6 +225,17 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @oneclickvpnkeys | US🇺🇸 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "TW🇹🇼",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @oneclickvpnkeys | TW🇹🇼 | 0️⃣3️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | TW🇹🇼 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -354,7 +368,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @oneclickvpnkeys | GB🇬🇧 | 0️⃣3️⃣",
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | GB🇬🇧 | 0️⃣5️⃣",
             "type": "trojan",
             "server": "209.97.134.140",
             "server_port": 443,
@@ -778,6 +792,48 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | TW🇹🇼 | 0️⃣3️⃣",
+            "type": "trojan",
+            "server": "b24.ntbq.dynu.net",
+            "server_port": 3271,
+            "password": "6a063257-a783-49e9-afc4-c699c49134d3",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "b24.ntbq.dynu.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | TW🇹🇼 | 0️⃣4️⃣",
+            "type": "trojan",
+            "server": "b12.ntbq.dynu.net",
+            "server_port": 9755,
+            "password": "6a063257-a783-49e9-afc4-c699c49134d3",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "b12.ntbq.dynu.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
             }
         },
         {
