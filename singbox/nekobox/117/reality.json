@@ -106,7 +106,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
-                "FI🇫🇮"
+                "GB🇬🇧"
             ]
         },
         {
@@ -114,8 +114,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣7️⃣"
+                "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -126,6 +127,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -133,10 +135,10 @@
             "tolerance": 50
         },
         {
-            "tag": "FI🇫🇮",
+            "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣7️⃣"
+                "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -171,6 +173,41 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "91.107.186.175",
+            "server_port": 443,
+            "uuid": "telegram-id-ArV2ray",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "greenpepper.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "jsI4GV7A_BAjLydaw-XESSwCwCvE1ki7xIFWOZgwjSw",
+                    "short_id": "290c3561"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @lrnbymaa | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "ng.nourycazablanka.online",
@@ -199,11 +236,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | FI🇫🇮 | 0️⃣7️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | GB🇬🇧 | 0️⃣4️⃣",
             "type": "vless",
-            "server": "135.181.110.40",
+            "server": "64.227.44.75",
             "server_port": 443,
-            "uuid": "8868424f-35a6-4886-a9df-20f67704919c",
+            "uuid": "9aab567d-c1b9-4a33-9e7c-bba600ac5796",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -213,7 +250,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "*.dnschecker.org",
+                "server_name": "dash.cloudflare.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -221,13 +258,13 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "7dAS16pknh0KY0c8uarwqEfFfzaXgeRfsioAdORuiyY",
-                    "short_id": "f01aead4"
+                    "public_key": "O5_bdsbHUkQNlWyJ0le3nijjlowhqrhSskVKiulLRwY",
+                    "short_id": "02a37375"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "@ipV2Ray",
+                "service_name": "@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl-@vpnowl",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
