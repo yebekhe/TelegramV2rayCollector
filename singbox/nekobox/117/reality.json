@@ -115,8 +115,9 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣5️⃣",
@@ -131,8 +132,9 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 0️⃣1️⃣"
+                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @v2rayNG_Matsuri | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -171,7 +173,7 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
             "type": "vless",
             "server": "116.203.14.36",
             "server_port": 443,
@@ -231,6 +233,41 @@
                     "public_key": "vaCJNNqruwoMBKFZJWJzyd6fBd5LE-28oLHMTrs6ryM",
                     "short_id": "8e230eb7"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "5.75.203.32",
+            "server_port": 443,
+            "uuid": "telegram-id-ArV2ray",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.mashti.link",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "ERV7pjULTFsXHHRuSLrLY07f4Wl_gQpu_bkBHQfzMVU",
+                    "short_id": "827ad6ed"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
