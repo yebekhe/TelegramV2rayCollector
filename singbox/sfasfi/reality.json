@@ -106,6 +106,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "FI🇫🇮",
                 "NL🇳🇱",
                 "DE🇩🇪"
             ]
@@ -114,9 +115,20 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @ARv2ray | FI🇫🇮 | 0️⃣2️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣5️⃣",
-                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FI🇫🇮",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @ARv2ray | FI🇫🇮 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -137,11 +149,46 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @ARv2ray | FI🇫🇮 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "65.109.202.24",
+            "server_port": 443,
+            "uuid": "telegram-id-ArV2ray",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ftp.debian.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "LGYXOUTrzO2e9i_JWPJ0_oOoy4sT0S8OpDXOsSo6lR4",
+                    "short_id": "137a6395"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
         },
         {
             "tag": "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣3️⃣",
@@ -200,7 +247,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣",
             "type": "vless",
             "server": "503.quickvpn.shop",
             "server_port": 567,
