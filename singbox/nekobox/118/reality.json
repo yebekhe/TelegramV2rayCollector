@@ -110,6 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "GB🇬🇧",
                 "NL🇳🇱",
                 "DE🇩🇪"
             ]
@@ -118,9 +119,20 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @XsV2ray | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣5️⃣",
                 "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @XsV2ray | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -146,6 +158,34 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @XsV2ray | GB🇬🇧 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "lg.bo3kot.com",
+            "server_port": 46108,
+            "uuid": "9eddb316-a313-4e1d-b206-668bafdcd494",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "store.steampowered.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "jTLrdW3KffXc6JM6-s4FnROfjKpwxR-O2Gv8vfpqzkQ",
+                    "short_id": "da394326"
+                }
+            }
         },
         {
             "tag": "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣3️⃣",
