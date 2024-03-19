@@ -104,102 +104,16 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST | رایگان",
-                "US🇺🇸"
+                "URL-TEST | رایگان"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣1️⃣",
-            "type": "tuic",
-            "server": "38.6.227.43",
-            "server_port": 54009,
-            "uuid": "c12fd04c-2099-4016-a97c-26c0ae2c7d0b",
-            "password": "c12fd04c-2099-4016-a97c-26c0ae2c7d0b",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.bing.com",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣2️⃣",
-            "type": "tuic",
-            "server": "107.173.15.52",
-            "server_port": 14758,
-            "uuid": "81d527fd-5bbf-40fc-b2b0-be1956133aa6",
-            "password": "81d527fd-5bbf-40fc-b2b0-be1956133aa6",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.bing.com",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "رایگان | TUIC | @TUICity | US🇺🇸 | 0️⃣3️⃣",
-            "type": "tuic",
-            "server": "142.171.174.206",
-            "server_port": 61213,
-            "uuid": "b46cb204-5849-4b86-852d-8154fb8eb580",
-            "password": "b46cb204-5849-4b86-852d-8154fb8eb580",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "zero_rtt_handshake": false,
-            "heartbeat": "10s",
-            "network": "tcp",
-            "tls": {
-                "enabled": true,
-                "disable_sni": false,
-                "server_name": "www.bing.com",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy\/3.1"
-                ]
-            }
         },
         {
             "tag": "direct",
