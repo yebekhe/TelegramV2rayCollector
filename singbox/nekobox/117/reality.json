@@ -112,7 +112,8 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -122,14 +123,50 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "api.powercodes.top",
+            "server_port": 443,
+            "uuid": "61656ac4-2bc2-49d1-955e-c4e328b3ee06",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "A59WpA8Kots2lFFY71p7NoiHjEwjWHvhdcQB4FegcVI",
+                    "short_id": "e725"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Vm008QmqlKGyzp1mU4Ood86",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "503.quickvpn.shop",
             "server_port": 567,
