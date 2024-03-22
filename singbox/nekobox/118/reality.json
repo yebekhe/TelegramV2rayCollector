@@ -119,9 +119,9 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣3️⃣",
-                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣5️⃣",
+                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣1️⃣"
             ],
@@ -133,8 +133,7 @@
             "tag": "FI🇫🇮",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣3️⃣",
-                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣5️⃣"
+                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -145,6 +144,7 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -162,7 +162,7 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣4️⃣",
             "type": "vless",
             "server": "95.216.171.190",
             "server_port": 443,
@@ -185,41 +185,6 @@
                 "reality": {
                     "enabled": true,
                     "public_key": "PumyaRi5O0ywKitXi4YC1acZJgjL_Biaf_s6j2vFf1E",
-                    "short_id": "f01aead4"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "95.216.171.190",
-            "server_port": 443,
-            "uuid": "8868424f-35a6-4886-a9df-20f67704919c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "*.hetzner.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "pyuWfUv6DN3jepoynXlvrcqNtDbcrGPxYdx7ag9BWVw",
                     "short_id": "f01aead4"
                 }
             },
@@ -257,6 +222,41 @@
                     "public_key": "Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M",
                     "short_id": "e3f89b63"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "91.107.199.96",
+            "server_port": 443,
+            "uuid": "731b6dc7-d0d8-4cc5-a0fb-058250ca94df",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.hetzner.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "lCzFlKDzMEcuz4bD0Dxj-Bx6qoZZoTU7f-OLZbP42CQ",
+                    "short_id": "c7be06f8"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
