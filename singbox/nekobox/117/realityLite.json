@@ -106,6 +106,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣4️⃣",
                 "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣4️⃣"
             ]
         },
@@ -114,6 +116,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣4️⃣",
                 "رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -146,6 +150,69 @@
                     "public_key": "Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M",
                     "short_id": "e3f89b63"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "allrevolt.r8volt.com",
+            "server_port": 443,
+            "uuid": "ae5aed77-be23-4f6c-bd51-c73745038952",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vu.nl",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Pk--Og6oefYaJlSVLEleq267EVt6NaNRIc0PR-4K9nk",
+                    "short_id": "77895d125b69cf7c"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "15.236.121.188",
+            "server_port": 8080,
+            "uuid": "71d2a6f1-1b5c-41e6-b815-03acc187497b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.zula.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "WQ_kzBtjJTI3TRjagzOg2uTNNlMSYBxsUkBBhnP5Amg",
+                    "short_id": "d8a341b2"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@zabuzza_shop",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
