@@ -111,6 +111,10 @@
                 "IL🇮🇱",
                 "JP🇯🇵",
                 "US🇺🇸",
+                "AT🇦🇹",
+                "FI🇫🇮",
+                "TR🇹🇷",
+                "RU🇷🇺",
                 "KR🇰🇷"
             ]
         },
@@ -121,14 +125,18 @@
                 "رایگان | SS | @DeamNet_Proxy | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | SS | @proxyymeliii | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | SS | @proxy_mtm | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | IL🇮🇱 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | JP🇯🇵 | 0️⃣3️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | SS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣",
-                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣3️⃣"
+                "رایگان | SS | @forwardv2ray | AT🇦🇹 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | FI🇫🇮 | 0️⃣3️⃣",
+                "رایگان | SS | @forwardv2ray | TR🇹🇷 | 0️⃣4️⃣",
+                "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣6️⃣",
+                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -149,7 +157,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | SS | @proxyymeliii | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | SS | @proxyymeliii | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -198,11 +207,50 @@
             "tolerance": 50
         },
         {
+            "tag": "AT🇦🇹",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | AT🇦🇹 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FI🇫🇮",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | FI🇫🇮 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "TR🇹🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | TR🇹🇷 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "RU🇷🇺",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣6️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "KR🇰🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣",
-                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣3️⃣"
+                "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -235,6 +283,16 @@
             "server_port": 8388,
             "method": "chacha20-ietf-poly1305",
             "password": "NGQzMzQz",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "49.13.19.135",
+            "server_port": 32927,
+            "method": "chacha20-ietf-poly1305",
+            "password": "WEvWaC5md2q2MaHKebBau1",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -299,17 +357,47 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @forwardv2ray | AT🇦🇹 | 0️⃣1️⃣",
             "type": "shadowsocks",
-            "server": "p141.panda001.net",
-            "server_port": 54345,
-            "method": "aes-256-cfb",
-            "password": "qwerREWQ@@",
+            "server": "45.138.74.160",
+            "server_port": 7261,
+            "method": "chacha20-ietf-poly1305",
+            "password": "uinkdbT1psmZclh3ZCVize",
             "plugin": "",
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣3️⃣",
+            "tag": "رایگان | SS | @forwardv2ray | FI🇫🇮 | 0️⃣3️⃣",
+            "type": "shadowsocks",
+            "server": "139.28.220.18",
+            "server_port": 5700,
+            "method": "chacha20-ietf-poly1305",
+            "password": "UXoGWyjwDVZIl1WMuHtxSi",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | TR🇹🇷 | 0️⃣4️⃣",
+            "type": "shadowsocks",
+            "server": "45.89.52.197",
+            "server_port": 32058,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Fgltbpm6cD9eHSFhKI6maC",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @forwardv2ray | RU🇷🇺 | 0️⃣6️⃣",
+            "type": "shadowsocks",
+            "server": "moscow.telegavpn.com",
+            "server_port": 60422,
+            "method": "chacha20-ietf-poly1305",
+            "password": "T1lF810GY8ZuHViCaCGnRR",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "218.237.185.230",
             "server_port": 54345,
