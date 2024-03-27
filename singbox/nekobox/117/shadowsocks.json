@@ -110,7 +110,6 @@
                 "GB🇬🇧",
                 "FR🇫🇷",
                 "DE🇩🇪",
-                "US🇺🇸",
                 "RU🇷🇺",
                 "FI🇫🇮",
                 "SG🇸🇬",
@@ -122,14 +121,12 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | JP🇯🇵 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | GB🇬🇧 | 0️⃣3️⃣",
-                "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣4️⃣",
-                "رایگان | SS | @forwardv2ray | FR🇫🇷 | 0️⃣4️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | SS | @proxy_mtm | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | SS | @proxy_mtm | RU🇷🇺 | 0️⃣1️⃣",
                 "رایگان | SS | @proxy_mtm | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | SS | @ROMAX_VPN | SG🇸🇬 | 0️⃣1️⃣",
@@ -144,7 +141,8 @@
             "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣1️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | SS | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -164,8 +162,7 @@
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | GB🇬🇧 | 0️⃣3️⃣",
-                "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | GB🇬🇧 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -175,8 +172,7 @@
             "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣4️⃣",
-                "رایگان | SS | @forwardv2ray | FR🇫🇷 | 0️⃣4️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -188,16 +184,6 @@
             "outbounds": [
                 "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | SS | @proxy_mtm | DE🇩🇪 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -255,6 +241,16 @@
             "plugin_opts": ""
         },
         {
+            "tag": "رایگان | SS | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "62.133.61.35",
+            "server_port": 61227,
+            "method": "chacha20-ietf-poly1305",
+            "password": "tcaSLm0UOEFibwwXdoAYUQ",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
             "tag": "رایگان | SS | @OutlineVpnOfficial | JP🇯🇵 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "185.172.113.182",
@@ -275,32 +271,12 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @forwardv2ray | GB🇬🇧 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "51.145.115.142",
-            "server_port": 59744,
-            "method": "chacha20-ietf-poly1305",
-            "password": "SuhSIkV1fu99VODm7BIFsb",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
             "tag": "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣4️⃣",
             "type": "shadowsocks",
             "server": "149.202.82.172",
             "server_port": 8091,
             "method": "aes-256-gcm",
             "password": "PCnnH6SQSnfoS27",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @forwardv2ray | FR🇫🇷 | 0️⃣4️⃣",
-            "type": "shadowsocks",
-            "server": "77.105.166.51",
-            "server_port": 2096,
-            "method": "aes-128-gcm",
-            "password": "tel",
             "plugin": "",
             "plugin_opts": ""
         },
@@ -321,16 +297,6 @@
             "server_port": 2087,
             "method": "chacha20-ietf-poly1305",
             "password": "NroGzSddDs1AaVv0+GY14GpkyKv3pusgdSMyGOsP1vI=",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @forwardv2ray | US🇺🇸 | 0️⃣2️⃣",
-            "type": "shadowsocks",
-            "server": "205.134.180.137",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "g13S7doXar0A",
             "plugin": "",
             "plugin_opts": ""
         },
