@@ -103,92 +103,15 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": [
-                "URL-TEST | رایگان",
-                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣2️⃣",
-                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣3️⃣"
-            ]
+            "outbounds": null
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣2️⃣",
-                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣3️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "pub2.legendaryking.link",
-            "server_port": 443,
-            "uuid": "ItsLegendaryking",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "fortune.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "balpIlqBtjGKGA5bKJZ9HqhNA2GYiJGxW_P2RpuIKxY",
-                    "short_id": "4045e091"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣3️⃣",
-            "type": "vless",
-            "server": "pub.legendaryking.link",
-            "server_port": 443,
-            "uuid": "ItsLegendaryking",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "fortune.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "0eDBzImazUynnsCJkWllVj6FGB8UcXT8Tznf_24WEFQ",
-                    "short_id": "0935e4a4"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
         },
         {
             "tag": "direct",
