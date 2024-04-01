@@ -105,27 +105,15 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "DE🇩🇪",
-                "FI🇫🇮"
+                "FI🇫🇮",
+                "DE🇩🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣",
-                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣4️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "DE🇩🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -143,11 +131,21 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣4️⃣",
             "type": "vless",
-            "server": "91.107.183.153",
+            "server": "pub2.legendaryking.link",
             "server_port": 443,
-            "uuid": "telegram-id-ArV2ray",
+            "uuid": "ItsLegendaryking",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -157,7 +155,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "www.speedtest.net",
+                "server_name": "fortune.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -165,13 +163,13 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "moE3Ra4Tx2wfcTFNOZJkbxuefu_qB9GEHM_XNJIPSnQ",
-                    "short_id": "a1e03f51"
+                    "public_key": "_20Ts51FfjaRU52-q3JVtHytmB4GUm0gdEdGwEEa-Qc",
+                    "short_id": "0542af6f"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
+                "service_name": "Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
@@ -202,41 +200,6 @@
                     "enabled": true,
                     "public_key": "jgxJPJwyMSB8RinnLBlw8avaoYqfu4STXLZufEaDFVE",
                     "short_id": "ad5c07c9"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "pub2.legendaryking.link",
-            "server_port": 443,
-            "uuid": "ItsLegendaryking",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "fortune.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "_20Ts51FfjaRU52-q3JVtHytmB4GUm0gdEdGwEEa-Qc",
-                    "short_id": "0542af6f"
                 }
             },
             "transport": {
