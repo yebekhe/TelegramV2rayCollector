@@ -103,55 +103,15 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": [
-                "URL-TEST | رایگان",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣"
-            ]
+            "outbounds": null
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "91.107.139.64",
-            "server_port": 443,
-            "uuid": "telegram-id-ArV2ray",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "VhoIdp9oGG_2sETrvoJss35jKkADWTPtyHgIgE0JtyU",
-                    "short_id": "eaaee78d"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
         },
         {
             "tag": "direct",
