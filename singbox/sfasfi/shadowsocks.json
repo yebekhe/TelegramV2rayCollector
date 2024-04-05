@@ -106,7 +106,6 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "GB🇬🇧",
                 "FR🇫🇷",
                 "DE🇩🇪",
                 "CA🇨🇦",
@@ -115,6 +114,7 @@
                 "PL🇵🇱",
                 "NL🇳🇱",
                 "JP🇯🇵",
+                "GB🇬🇧",
                 "BH🇧🇭",
                 "KR🇰🇷"
             ]
@@ -123,8 +123,6 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @DeamNet_Proxy | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @FAKEOFTVC | GB🇬🇧 | 0️⃣4️⃣",
                 "رایگان | SS | @VmessProtocol | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @VmessProtocol | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | SS | @VmessProtocol | FR🇫🇷 | 0️⃣3️⃣",
@@ -136,23 +134,13 @@
                 "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | PL🇵🇱 | 0️⃣4️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣5️⃣",
-                "رایگان | SS | @FAKEOFTVC | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | JP🇯🇵 | 0️⃣6️⃣",
-                "رایگان | SS | @proxy_mtm | BH🇧🇭 | 0️⃣1️⃣",
+                "رایگان | SS | @FAKEOFTVC | GB🇬🇧 | 0️⃣4️⃣",
+                "رایگان | SS | @kingofilter | BH🇧🇭 | 0️⃣1️⃣",
                 "رایگان | SS | @ROMAX_VPN | KR🇰🇷 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "GB🇬🇧",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @DeamNet_Proxy | GB🇬🇧 | 0️⃣1️⃣",
-                "رایگان | SS | @FAKEOFTVC | GB🇬🇧 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -208,7 +196,8 @@
             "outbounds": [
                 "رایگان | SS | @OutlineVpnOfficial | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -228,8 +217,7 @@
             "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣5️⃣",
-                "رایگان | SS | @FAKEOFTVC | NL🇳🇱 | 0️⃣3️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | NL🇳🇱 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -246,10 +234,20 @@
             "tolerance": 50
         },
         {
+            "tag": "GB🇬🇧",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @FAKEOFTVC | GB🇬🇧 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "BH🇧🇭",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @proxy_mtm | BH🇧🇭 | 0️⃣1️⃣"
+                "رایگان | SS | @kingofilter | BH🇧🇭 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -264,26 +262,6 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | SS | @DeamNet_Proxy | GB🇬🇧 | 0️⃣1️⃣",
-            "type": "shadowsocks",
-            "server": "145.239.6.202",
-            "server_port": 8008,
-            "method": "aes-256-gcm",
-            "password": "XKFKl2rULjIp74",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @FAKEOFTVC | GB🇬🇧 | 0️⃣4️⃣",
-            "type": "shadowsocks",
-            "server": "51.140.37.163",
-            "server_port": 34417,
-            "method": "chacha20-ietf-poly1305",
-            "password": "OZ2VmWR9pI74zoLstexAee",
-            "plugin": "",
-            "plugin_opts": ""
         },
         {
             "tag": "رایگان | SS | @VmessProtocol | FR🇫🇷 | 0️⃣1️⃣",
@@ -396,6 +374,16 @@
             "plugin_opts": ""
         },
         {
+            "tag": "رایگان | SS | @FAKEOFTVC | US🇺🇸 | 0️⃣3️⃣",
+            "type": "shadowsocks",
+            "server": "45.158.171.227",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "oZIoA69Q8yhcQV8ka3Pa3A",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
             "tag": "رایگان | SS | @OutlineVpnOfficial | PL🇵🇱 | 0️⃣4️⃣",
             "type": "shadowsocks",
             "server": "51.77.53.200",
@@ -416,16 +404,6 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @FAKEOFTVC | NL🇳🇱 | 0️⃣3️⃣",
-            "type": "shadowsocks",
-            "server": "45.158.171.227",
-            "server_port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "oZIoA69Q8yhcQV8ka3Pa3A",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
             "tag": "رایگان | SS | @OutlineVpnOfficial | JP🇯🇵 | 0️⃣6️⃣",
             "type": "shadowsocks",
             "server": "185.172.113.182",
@@ -436,12 +414,22 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @proxy_mtm | BH🇧🇭 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @FAKEOFTVC | GB🇬🇧 | 0️⃣4️⃣",
             "type": "shadowsocks",
-            "server": "series-a2-me.samanehha.co",
+            "server": "51.140.37.163",
+            "server_port": 34417,
+            "method": "chacha20-ietf-poly1305",
+            "password": "OZ2VmWR9pI74zoLstexAee",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @kingofilter | BH🇧🇭 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "series-a2-me.varzesh360.co",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
-            "password": "2LVVFxxHJSBMdGdl",
+            "password": "Bog0ELmMM9DSxDdQ",
             "plugin": "",
             "plugin_opts": ""
         },
