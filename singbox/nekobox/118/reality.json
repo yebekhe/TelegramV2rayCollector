@@ -109,16 +109,117 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST | رایگان"
+                "URL-TEST | رایگان",
+                "DE🇩🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": null,
+            "outbounds": [
+                "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣1️⃣"
+            ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "178.63.150.72",
+            "server_port": 27542,
+            "uuid": "02371562-6479-4698-a27c-04c5a73095ff",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "KK12e0CNmA6QTGOPlDA5zJeT27FB95gEMfswF4Mp9U8",
+                    "short_id": "94e9e5c9"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @NIM_VPN_ir | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "178.63.150.73",
+            "server_port": 34455,
+            "uuid": "42ad0425-f618-4429-b2be-9148be5c322b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "3Cv9QAAXxxUDjxlHuSDHyNfye9h6xlJJBz7vGsnmO3o",
+                    "short_id": "23d9b7cb"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "188.40.202.25",
+            "server_port": 8443,
+            "uuid": "bdf90cae-da65-4bd7-9200-a5903c2eff13",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdn.discordapp.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "mrsV5dPIWx0dtPzo9u4FdkZi3Ly3hh8CGN-gHuZY4S8",
+                    "short_id": ""
+                }
+            }
         },
         {
             "tag": "direct",
