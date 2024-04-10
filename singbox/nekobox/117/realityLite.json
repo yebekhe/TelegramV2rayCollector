@@ -105,6 +105,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "رایگان | REALITY | @v2rayNG_Matsuri | IE🇮🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @FAKEOFTVC | ES🇪🇸 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FAKEOFTVC | GB🇬🇧 | 0️⃣3️⃣"
             ]
@@ -113,12 +114,41 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @v2rayNG_Matsuri | IE🇮🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @FAKEOFTVC | ES🇪🇸 | 0️⃣2️⃣",
                 "رایگان | REALITY | @FAKEOFTVC | GB🇬🇧 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @v2rayNG_Matsuri | IE🇮🇪 | 0️⃣6️⃣",
+            "type": "vless",
+            "server": "34.244.22.156",
+            "server_port": 443,
+            "uuid": "a56b225a-5f29-4c39-ad3e-e7e6de0c5df4",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cdnjs.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "znNeZYH7r1Jm5eVmangZGLkTXOYAyuDF11HF78Z7GTA",
+                    "short_id": "2e8844cc7a15beb6"
+                }
+            }
         },
         {
             "tag": "رایگان | REALITY | @FAKEOFTVC | ES🇪🇸 | 0️⃣2️⃣",
