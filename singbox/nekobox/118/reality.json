@@ -110,9 +110,8 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "NL🇳🇱",
                 "DE🇩🇪",
-                "FI🇫🇮",
+                "NL🇳🇱",
                 "US🇺🇸",
                 "GB🇬🇧"
             ]
@@ -121,24 +120,12 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ProxyForOpeta | NL🇳🇱 | 0️⃣6️⃣",
-                "رایگان | REALITY | @v2ray_swhil | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣5️⃣",
-                "رایگان | REALITY | @ShadowProxy66 | FI🇫🇮 | 0️⃣6️⃣",
+                "رایگان | REALITY | @vless_vmess | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @v2ray_swhil | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | REALITY | @FAKEOFTVC | GB🇬🇧 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ProxyForOpeta | NL🇳🇱 | 0️⃣6️⃣",
-                "رایگان | REALITY | @v2ray_swhil | NL🇳🇱 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -149,17 +136,18 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣5️⃣"
+                "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @vless_vmess | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "FI🇫🇮",
+            "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ShadowProxy66 | FI🇫🇮 | 0️⃣6️⃣"
+                "رایگان | REALITY | @v2ray_swhil | NL🇳🇱 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -184,62 +172,6 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @ProxyForOpeta | NL🇳🇱 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "185.142.238.222",
-            "server_port": 8443,
-            "uuid": "ae5aed77-be23-4f6c-bd51-c73745038952",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "maps.google.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "NbtOWq_km9k_SKgCJatXla3Jl7gGKVbjQ-GAtGg4bEk",
-                    "short_id": "bfde1c85a6a4112a"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | NL🇳🇱 | 0️⃣3️⃣",
-            "type": "vless",
-            "server": "allrevolt.r8volt.com",
-            "server_port": 8443,
-            "uuid": "ae5aed77-be23-4f6c-bd51-c73745038952",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "maps.google.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "NbtOWq_km9k_SKgCJatXla3Jl7gGKVbjQ-GAtGg4bEk",
-                    "short_id": "bfde1c85a6a4112a"
-                }
-            }
         },
         {
             "tag": "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣2️⃣",
@@ -298,11 +230,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @ShadowProxy66 | FI🇫🇮 | 0️⃣6️⃣",
+            "tag": "رایگان | REALITY | @vless_vmess | DE🇩🇪 | 0️⃣3️⃣",
             "type": "vless",
-            "server": "65.109.188.83",
-            "server_port": 56888,
-            "uuid": "f6e218b3-e76c-43e5-93ca-1feb336e5c34",
+            "server": "5.75.207.215",
+            "server_port": 49830,
+            "uuid": "2104b29c-130d-4138-b6e5-cda78a11ff79",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -320,8 +252,36 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "WsXvo3TM_RUNg529VtpsjyakG21eK65iOnvIuSvvGTA",
-                    "short_id": "bdfff48d"
+                    "public_key": "Dqs9RsG4pc8GWjiOZ1TYEm7Xt33g8OhcYDgfgQzhwho",
+                    "short_id": "2980368d"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @v2ray_swhil | NL🇳🇱 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "allrevolt.r8volt.com",
+            "server_port": 8443,
+            "uuid": "ae5aed77-be23-4f6c-bd51-c73745038952",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "maps.google.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "NbtOWq_km9k_SKgCJatXla3Jl7gGKVbjQ-GAtGg4bEk",
+                    "short_id": "bfde1c85a6a4112a"
                 }
             }
         },
