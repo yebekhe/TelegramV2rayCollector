@@ -109,7 +109,8 @@
                 "GB🇬🇧",
                 "FR🇫🇷",
                 "DE🇩🇪",
-                "SE🇸🇪"
+                "SE🇸🇪",
+                "RU🇷🇺"
             ]
         },
         {
@@ -121,12 +122,13 @@
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣6️⃣",
-                "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣7️⃣"
+                "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣7️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -150,8 +152,8 @@
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | FR🇫🇷 | 0️⃣3️⃣",
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -174,6 +176,16 @@
             "outbounds": [
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣7️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "RU🇷🇺",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -285,7 +297,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣2️⃣",
             "type": "trojan",
             "server": "fr01.freeflyingcloud.xyz",
             "server_port": 30502,
@@ -306,7 +318,7 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | FR🇫🇷 | 0️⃣3️⃣",
             "type": "trojan",
             "server": "fr01.freeflyingcloud.xyz",
             "server_port": 30502,
@@ -403,6 +415,27 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "ru01.freeflyingcloud.xyz",
+            "server_port": 30002,
+            "password": "ebd1c3e8-a136-49a5-a76c-88c4bf0a23aa",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ru01.freeflyingcloud.xyz",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
