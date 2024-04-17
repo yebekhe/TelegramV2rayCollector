@@ -106,8 +106,6 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "IS🇮🇸",
-                "US🇺🇸",
                 "DE🇩🇪"
             ]
         },
@@ -115,29 +113,7 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @EliV2ray | IS🇮🇸 | 0️⃣3️⃣",
-                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "IS🇮🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @EliV2ray | IS🇮🇸 | 0️⃣3️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -152,76 +128,6 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @EliV2ray | IS🇮🇸 | 0️⃣3️⃣",
-            "type": "vless",
-            "server": "89.221.224.166",
-            "server_port": 8443,
-            "uuid": "7a0f288a-7df3-4f74-a8b2-69d884aebdff",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "172.66.44.245",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "lknJ1qdh1naSh-NJX8O7oOdnFov8vOETpy2A6bVtiUk",
-                    "short_id": "8545118da3a60b18"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "grpc",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "login.snapfooding.com",
-            "server_port": 443,
-            "uuid": "ItsLegendaryking",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "wordpress.org",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "vvjTgRNJbVRjxksrAhGZz63oG3dDddijr2b8hk332xw",
-                    "short_id": "3d5f12d0"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
         },
         {
             "tag": "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣",
