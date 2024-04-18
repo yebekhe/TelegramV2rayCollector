@@ -111,7 +111,6 @@
                 "DE🇩🇪",
                 "SE🇸🇪",
                 "RU🇷🇺",
-                "NL🇳🇱",
                 "US🇺🇸"
             ]
         },
@@ -131,8 +130,7 @@
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣7️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @ConfigsHUB | NL🇳🇱 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -196,20 +194,10 @@
             "tolerance": 50
         },
         {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | TROJAN | @ConfigsHUB | NL🇳🇱 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -468,27 +456,22 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @ConfigsHUB | NL🇳🇱 | 0️⃣1️⃣",
+            "tag": "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣1️⃣",
             "type": "trojan",
-            "server": "nl2-full.privateip.net",
+            "server": "zula.ir",
             "server_port": 443,
-            "password": "8c03bc97-6dd1-485b-9ae6-c0539929592c",
+            "password": "7cb94590-fd39-11ee-b4f1-1239d0255272",
             "multiplex": {
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣2️⃣",
-            "type": "trojan",
-            "server": "us2-full.privateip.net",
-            "server_port": 443,
-            "password": "8a6fc43e-b81b-4efc-ae38-4b9de1720ffe",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/howdy",
+                "headers": {
+                    "Host": "us1.test3.net"
+                }
             }
         },
         {
