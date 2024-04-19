@@ -115,7 +115,8 @@
                 "DE🇩🇪",
                 "SE🇸🇪",
                 "ES🇪🇸",
-                "RU🇷🇺"
+                "RU🇷🇺",
+                "US🇺🇸"
             ]
         },
         {
@@ -137,7 +138,8 @@
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣7️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | ES🇪🇸 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣5️⃣",
-                "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣6️⃣"
+                "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣6️⃣",
+                "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -208,6 +210,16 @@
             "outbounds": [
                 "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @oneclickvpnkeys | RU🇷🇺 | 0️⃣6️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "US🇺🇸",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -542,6 +554,27 @@
             "tls": {
                 "enabled": true,
                 "server_name": "ru01.freeflyingcloud.xyz",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @ConfigsHUB | US🇺🇸 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "138.197.5.103",
+            "server_port": 443,
+            "password": "xxoo",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "v2line.telegram.channel.1342.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
