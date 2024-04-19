@@ -110,6 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "US🇺🇸",
                 "SE🇸🇪",
                 "DE🇩🇪"
             ]
@@ -118,8 +119,23 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | REALITY | @v2rayng_vpnrog | SE🇸🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "US🇺🇸",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -144,6 +160,90 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 9942,
+            "uuid": "21a150b2-79f8-4486-8a81-dc6c31d80f4e",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "linuxfoundation.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "P5ed-hJoYZ-ZKlteB0DnwJATgK1Jg-_sicVDj9Gm1Eg",
+                    "short_id": "d830fbfffdbe9fef"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 8339,
+            "uuid": "a8e8e5fd-f1a6-4bd0-bb8f-7a9ed8dd66e6",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sedo.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "P5ed-hJoYZ-ZKlteB0DnwJATgK1Jg-_sicVDj9Gm1Eg",
+                    "short_id": "d830fbfffdbe9fef"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 9996,
+            "uuid": "e58f14fa-a5fb-4903-a3ed-dff6c78099ab",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "hacks.mozilla.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "P5ed-hJoYZ-ZKlteB0DnwJATgK1Jg-_sicVDj9Gm1Eg",
+                    "short_id": "d830fbfffdbe9fef"
+                }
+            }
         },
         {
             "tag": "رایگان | REALITY | @v2rayng_vpnrog | SE🇸🇪 | 0️⃣7️⃣",
