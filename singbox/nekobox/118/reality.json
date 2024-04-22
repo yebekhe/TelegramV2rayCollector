@@ -110,8 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "DE🇩🇪",
-                "FI🇫🇮"
+                "DE🇩🇪"
             ]
         },
         {
@@ -119,9 +118,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣2️⃣"
+                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -132,18 +130,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @Capital_NET | DE🇩🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FI🇫🇮",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -178,7 +166,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
             "server": "www.morfin.bio",
             "server_port": 443,
@@ -238,41 +226,6 @@
                     "public_key": "fabWUdBWxh7NsMaqOF35petD3ljQbKf6OSDnROV9jDs",
                     "short_id": "6f9deca7"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @DailyV2RY | FI🇫🇮 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "form.morfin.bio",
-            "server_port": 443,
-            "uuid": "ItsLegendaryking",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "fontserver.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "GV3jmAodhgFC_GbUX7aHQf8CkXeqwgn8dj3eNrvV6Wo",
-                    "short_id": "4fa6e72c"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
