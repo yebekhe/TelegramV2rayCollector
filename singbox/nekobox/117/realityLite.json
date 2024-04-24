@@ -105,14 +105,16 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | FI🇫🇮 | 0️⃣4️⃣"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | FI🇫🇮 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -143,6 +145,34 @@
                     "enabled": true,
                     "public_key": "eS-KEoBKsWjjBTpMY6kr5eZbre-UPBGAiqmeNPLRkXg",
                     "short_id": "5038468e"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | FI🇫🇮 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "65.109.188.83",
+            "server_port": 56888,
+            "uuid": "f6e218b3-e76c-43e5-93ca-1feb336e5c34",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ftp.debian.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "WsXvo3TM_RUNg529VtpsjyakG21eK65iOnvIuSvvGTA",
+                    "short_id": "bdfff48d"
                 }
             }
         },
