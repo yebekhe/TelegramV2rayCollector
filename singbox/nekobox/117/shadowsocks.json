@@ -107,11 +107,14 @@
                 "URL-TEST | رایگان",
                 "FR🇫🇷",
                 "RU🇷🇺",
+                "CA🇨🇦",
                 "AE🇦🇪",
                 "PL🇵🇱",
                 "DE🇩🇪",
                 "AT🇦🇹",
-                "SE🇸🇪"
+                "SE🇸🇪",
+                "BH🇧🇭",
+                "US🇺🇸"
             ]
         },
         {
@@ -121,12 +124,16 @@
                 "رایگان | SS | @azadi_az_inja_migzare | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | SS | @azadi_az_inja_migzare | RU🇷🇺 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | RU🇷🇺 | 0️⃣4️⃣",
-                "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣1️⃣",
+                "رایگان | SS | @VmessProtocol | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | SS | @ROMAX_VPN | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣2️⃣",
+                "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣3️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | PL🇵🇱 | 0️⃣1️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | AT🇦🇹 | 0️⃣3️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | SE🇸🇪 | 0️⃣5️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | SE🇸🇪 | 0️⃣5️⃣",
+                "رایگان | SS | @kingofilter | BH🇧🇭 | 0️⃣3️⃣",
+                "رایگان | SS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -154,11 +161,22 @@
             "tolerance": 50
         },
         {
+            "tag": "CA🇨🇦",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @VmessProtocol | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | SS | @ROMAX_VPN | CA🇨🇦 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "AE🇦🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣1️⃣",
-                "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣2️⃣"
+                "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣2️⃣",
+                "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -205,6 +223,26 @@
             "tolerance": 50
         },
         {
+            "tag": "BH🇧🇭",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @kingofilter | BH🇧🇭 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "US🇺🇸",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "رایگان | SS | @azadi_az_inja_migzare | FR🇫🇷 | 0️⃣1️⃣",
             "type": "shadowsocks",
             "server": "paris.telegavpn.com",
@@ -235,7 +273,27 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | SS | @VmessProtocol | CA🇨🇦 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "23.162.200.239",
+            "server_port": 5004,
+            "method": "aes-256-gcm",
+            "password": "g5MeD6Ft3CWlJId",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @ROMAX_VPN | CA🇨🇦 | 0️⃣2️⃣",
+            "type": "shadowsocks",
+            "server": "23.162.200.213",
+            "server_port": 2375,
+            "method": "aes-256-gcm",
+            "password": "faBAoD54k87UJG7",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣2️⃣",
             "type": "shadowsocks",
             "server": "series-a2.varzesh360.co",
             "server_port": 443,
@@ -245,7 +303,7 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣2️⃣",
+            "tag": "رایگان | SS | @VmessProtocol | AE🇦🇪 | 0️⃣3️⃣",
             "type": "shadowsocks",
             "server": "series-a2.samanehha.co",
             "server_port": 443,
@@ -291,6 +349,26 @@
             "server_port": 15214,
             "method": "chacha20-ietf-poly1305",
             "password": "DmMQUmI7pgQDnrWqLXC00L",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @kingofilter | BH🇧🇭 | 0️⃣3️⃣",
+            "type": "shadowsocks",
+            "server": "series-a2-me.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Bog0ELmMM9DSxDdQ",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣",
+            "type": "shadowsocks",
+            "server": "23.157.40.24",
+            "server_port": 8882,
+            "method": "aes-256-gcm",
+            "password": "kDWvXYZoTBcGkC4",
             "plugin": "",
             "plugin_opts": ""
         },
