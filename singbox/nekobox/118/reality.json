@@ -112,6 +112,7 @@
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
                 "BY🇧🇾",
+                "US🇺🇸",
                 "GB🇬🇧"
             ]
         },
@@ -122,6 +123,7 @@
                 "رایگان | REALITY | @V2rayNGmat | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2rayNGmat | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | BY🇧🇾 | 0️⃣6️⃣",
+                "رایگان | REALITY | @Capital_NET | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ROMAX_VPN | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -144,6 +146,16 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @ShadowProxy66 | BY🇧🇾 | 0️⃣6️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "US🇺🇸",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @Capital_NET | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -254,6 +266,34 @@
                     "enabled": true,
                     "public_key": "Uncdk8Sv8BfxzVilbQULDgfpDKqf4kIvTIeIIvPQgAA",
                     "short_id": "d1ebc247"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @Capital_NET | US🇺🇸 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "four.felinetest.site",
+            "server_port": 443,
+            "uuid": "fbe02c0b-775f-4431-8615-a9497255c876",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "none.felinetest.site",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fabWUdBWxh7NsMaqOF35petD3ljQbKf6OSDnROV9jDs",
+                    "short_id": "6f9deca7"
                 }
             }
         },
