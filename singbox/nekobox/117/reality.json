@@ -105,9 +105,8 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "NL🇳🇱",
-                "DE🇩🇪",
                 "US🇺🇸",
+                "DE🇩🇪",
                 "GB🇬🇧"
             ]
         },
@@ -115,32 +114,9 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ServerNett | NL🇳🇱 | 0️⃣2️⃣",
-                "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capital_NET | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @ROMAX_VPN | GB🇬🇧 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "NL🇳🇱",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ServerNett | NL🇳🇱 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "DE🇩🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -157,6 +133,16 @@
             "tolerance": 50
         },
         {
+            "tag": "DE🇩🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @FreakConfig | DE🇩🇪 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "GB🇬🇧",
             "type": "urltest",
             "outbounds": [
@@ -167,11 +153,11 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @ServerNett | NL🇳🇱 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @Capital_NET | US🇺🇸 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "xeon.realsudo.com",
-            "server_port": 8080,
-            "uuid": "0e08ea94-6f77-41f6-fa9b-8e584ff02472",
+            "server": "four.felinetest.site",
+            "server_port": 443,
+            "uuid": "fbe02c0b-775f-4431-8615-a9497255c876",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -181,7 +167,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "mdundo.com",
+                "server_name": "none.felinetest.site",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -189,36 +175,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "6P_NQdJQKG9Z-TC62Lmny1-mgX0ZFJFOWQtkbPBNyDk",
-                    "short_id": "dc3a9fef8a20"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣7️⃣",
-            "type": "vless",
-            "server": "128.140.54.142",
-            "server_port": 57458,
-            "uuid": "42c626b8-171d-4e11-9582-09f1b07c45d8",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "zula.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "PpfDUc1F8zQGeaDUcnSQSqzwy_a654XoT7KT2HsCykk",
-                    "short_id": "5a93d4ff"
+                    "public_key": "fabWUdBWxh7NsMaqOF35petD3ljQbKf6OSDnROV9jDs",
+                    "short_id": "6f9deca7"
                 }
             }
         },
@@ -247,34 +205,6 @@
                     "enabled": true,
                     "public_key": "yiHA11T4BplJbQxAfsQkiiAzAmyxWau-KR7dQptwjDU",
                     "short_id": "c741ad33"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @Capital_NET | US🇺🇸 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "four.felinetest.site",
-            "server_port": 443,
-            "uuid": "fbe02c0b-775f-4431-8615-a9497255c876",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "none.felinetest.site",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "fabWUdBWxh7NsMaqOF35petD3ljQbKf6OSDnROV9jDs",
-                    "short_id": "6f9deca7"
                 }
             }
         },
