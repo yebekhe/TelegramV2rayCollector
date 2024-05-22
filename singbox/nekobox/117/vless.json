@@ -111,7 +111,6 @@
                 "IR🇮🇷",
                 "US🇺🇸",
                 "CR🇨🇷",
-                "FI🇫🇮",
                 "NL🇳🇱",
                 "GB🇬🇧",
                 "CN🇨🇳"
@@ -248,12 +247,12 @@
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣4️⃣",
+                "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣7️⃣",
                 "رایگان | VLESS | @VlessConfig | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | VLESS | @VlessConfig | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | VLESS | @frev2ray | IR🇮🇷 | 0️⃣1️⃣",
                 "رایگان | VLESS | @Lockey_vpn | US🇺🇸 | 0️⃣3️⃣",
-                "رایگان | VLESS | @Lockey_vpn | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | VLESS | @V2rayNGmat | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VLESS | @V2rayNGmat | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VLESS | @V2rayNGmat | US🇺🇸 | 0️⃣4️⃣",
@@ -441,7 +440,6 @@
                 "رایگان | VLESS | @GozargahVPN | CR🇨🇷 | 0️⃣3️⃣",
                 "رایگان | VLESS | @GozargahVPN | CR🇨🇷 | 0️⃣4️⃣",
                 "رایگان | VLESS | @GozargahVPN | CR🇨🇷 | 0️⃣5️⃣",
-                "رایگان | VLESS | @vpn_xw | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | VLESS | @v2logy | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | VLESS | @proxyymeliii | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | VLESS | @mehrosaboran | CN🇨🇳 | 0️⃣4️⃣",
@@ -591,6 +589,7 @@
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣4️⃣",
+                "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -623,7 +622,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | VLESS | @Lockey_vpn | US🇺🇸 | 0️⃣3️⃣",
-                "رایگان | VLESS | @Lockey_vpn | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | VLESS | @V2rayNGmat | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VLESS | @V2rayNGmat | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VLESS | @V2rayNGmat | US🇺🇸 | 0️⃣4️⃣",
@@ -820,16 +818,6 @@
                 "رایگان | VLESS | @GozargahVPN | CR🇨🇷 | 0️⃣3️⃣",
                 "رایگان | VLESS | @GozargahVPN | CR🇨🇷 | 0️⃣4️⃣",
                 "رایگان | VLESS | @GozargahVPN | CR🇨🇷 | 0️⃣5️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FI🇫🇮",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | VLESS | @vpn_xw | FI🇫🇮 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -3878,6 +3866,38 @@
             }
         },
         {
+            "tag": "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "Zula.ir",
+            "server_port": 443,
+            "uuid": "d672ec4f-afba-4f61-af09-eec872f97e99",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "test39.pages.dev",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/Path\/Telegram : LOCKEY_VPN \/",
+                "headers": {
+                    "Host": "test39.pages.dev"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
             "tag": "رایگان | VLESS | @Lockey_vpn | CA🇨🇦 | 0️⃣7️⃣",
             "type": "vless",
             "server": "104.31.16.65",
@@ -4025,38 +4045,6 @@
                     "Host": "w1.sylar8.eu.org"
                 },
                 "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VLESS | @Lockey_vpn | US🇺🇸 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "Zula.ir",
-            "server_port": 443,
-            "uuid": "d672ec4f-afba-4f61-af09-eec872f97e99",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "test39.pages.dev",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/Path\/Telegram : LOCKEY_VPN \/",
-                "headers": {
-                    "Host": "test39.pages.dev"
-                },
-                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
@@ -9246,29 +9234,6 @@
                     "Host": "www.GozargahVPN.top"
                 },
                 "max_early_data": 2048,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VLESS | @vpn_xw | FI🇫🇮 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "95.217.216.45",
-            "server_port": 80,
-            "uuid": "34190107-f315-4ddf-d6d4-7f9f87af715b",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "95.217.216.45"
-                },
-                "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
