@@ -110,6 +110,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
+                "IR🇮🇷",
                 "SE🇸🇪",
                 "NO🇳🇴",
                 "DE🇩🇪",
@@ -120,10 +121,21 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @proxyymeliii | IR🇮🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣3️⃣",
                 "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @Capital_NET | US🇺🇸 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "IR🇮🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @proxyymeliii | IR🇮🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -168,6 +180,34 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @proxyymeliii | IR🇮🇷 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "order.gomgom.tech",
+            "server_port": 2004,
+            "uuid": "08fe3471-6e81-4af3-819f-9f8e03c81336",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "SHVNyUSseB1aZcaBOtrb4Tm4o5kDob6DgzRcRgaEpAE",
+                    "short_id": "585a3054"
+                }
+            }
         },
         {
             "tag": "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣",
