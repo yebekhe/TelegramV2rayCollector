@@ -112,6 +112,7 @@
                 "KZ🇰🇿",
                 "IL🇮🇱",
                 "IR🇮🇷",
+                "IS🇮🇸",
                 "DE🇩🇪",
                 "BE🇧🇪",
                 "UA🇺🇦"
@@ -159,6 +160,7 @@
                 "رایگان | VMESS | @DeamNet_Proxy | KZ🇰🇿 | 0️⃣4️⃣",
                 "رایگان | VMESS | @DeamNet_Proxy | IL🇮🇱 | 0️⃣5️⃣",
                 "رایگان | VMESS | @DailyV2RY | IR🇮🇷 | 0️⃣1️⃣",
+                "رایگان | VMESS | @Hope_Net | IS🇮🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @kingofilter | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | BE🇧🇪 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | UA🇺🇦 | 0️⃣3️⃣"
@@ -254,6 +256,16 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | VMESS | @DailyV2RY | IR🇮🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "IS🇮🇸",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | VMESS | @Hope_Net | IS🇮🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1407,6 +1419,32 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @Hope_Net | IS🇮🇸 | 0️⃣2️⃣",
+            "type": "vmess",
+            "server": "upload.ir",
+            "server_port": 80,
+            "uuid": "085f6281-5c4c-4a34-8b44-d65bc2e2b069",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "is3-vmess.sshmax.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
