@@ -113,63 +113,18 @@
     }
   ],
   "route": {
-    "auto_detect_interface": true,
-    "override_android_vpn": true,
-    "final": "proxy",
-    "geoip": {
-      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
-      "download_detour": "direct"
-    },
-    "geosite": {
-      "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
-      "download_detour": "direct"
-    },
+   
     "rules": [
       {
-        "outbound": "dns-out",
-        "port": [
-          53
-        ]
-      },
-      {
-        "inbound": [
-          "dns-in"
-        ],
+        "port": 53,
         "outbound": "dns-out"
       },
       {
-        "domain_suffix": [
-          "ir"
-        ],
-        "outbound": "direct"
+        "inbound": "dns-in",
+        "outbound": "dns-out"
       },
       {
-        "geoip": [
-          "ir",
-          "private",
-          "arvancloud"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "geosite": [
-          "ir"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "geosite": [
-          "geosite:category-ads-all",
-          "malware",
-          "phishing",
-          "cryptominers"
-        ],
-        "outbound": "block"
-      },
-      {
-        "geosite": [
-          "other"
-        ],
+        "domain_suffix": "ir",
         "outbound": "direct"
       },
       {
@@ -180,16 +135,87 @@
         "outbound": "block"
       },
       {
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
         "ip_cidr": [
           "224.0.0.0/3",
           "ff00::/8"
         ],
-        "outbound": "block",
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ]
+        "outbound": "block"
+      },
+      {
+        "rule_set": [
+          "geosite-category-ads-all",
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geoip-malware",
+          "geoip-phishing"
+        ],
+        "outbound": "block"
+      },
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
       }
-    ]
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs"
+      },
+      {
+        "tag": "geosite-malware",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs"
+      },
+      {
+        "tag": "geosite-phishing",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs"
+      },
+      {
+        "tag": "geosite-cryptominers",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs"
+      },
+      {
+        "tag": "geoip-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs"
+      },
+      {
+        "tag": "geoip-malware",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs"
+      },
+      {
+        "tag": "geoip-phishing",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs"
+      }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
   }
 }
