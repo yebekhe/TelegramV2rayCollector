@@ -113,6 +113,7 @@
                 "US🇺🇸",
                 "BR🇧🇷",
                 "DE🇩🇪",
+                "FI🇫🇮",
                 "NL🇳🇱",
                 "BE🇧🇪",
                 "UA🇺🇦"
@@ -152,6 +153,7 @@
                 "رایگان | VMESS | @oneclickvpnkeys | BR🇧🇷 | 0️⃣2️⃣",
                 "رایگان | VMESS | @oneclickvpnkeys | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | VMESS | @prrofile_purple | FI🇫🇮 | 0️⃣3️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | BE🇧🇪 | 0️⃣4️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | UA🇺🇦 | 0️⃣6️⃣"
@@ -212,6 +214,16 @@
             "outbounds": [
                 "رایگان | VMESS | @oneclickvpnkeys | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "FI🇫🇮",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | VMESS | @prrofile_purple | FI🇫🇮 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1174,6 +1186,32 @@
                 "path": "\/vmess @hopev2ray ed=2048",
                 "headers": {
                     "Host": "de2.v2vmess.site"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @prrofile_purple | FI🇫🇮 | 0️⃣3️⃣",
+            "type": "vmess",
+            "server": "185.146.173.55",
+            "server_port": 80,
+            "uuid": "7d455002-6427-476e-b7a0-4be4f2afa721",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess",
+                "headers": {
+                    "Host": "Fi2.vmess.site."
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
