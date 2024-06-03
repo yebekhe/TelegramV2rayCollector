@@ -110,6 +110,7 @@
                 "GB🇬🇧",
                 "FR🇫🇷",
                 "DE🇩🇪",
+                "AU🇦🇺",
                 "SE🇸🇪",
                 "KR🇰🇷"
             ]
@@ -131,6 +132,7 @@
                 "رایگان | TROJAN | @DirectVPN | FR🇫🇷 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | TROJAN | @oneclickvpnkeys | AU🇦🇺 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @VmessProtocol | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @proxystore11 | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @VmessProtocol | KR🇰🇷 | 0️⃣3️⃣",
@@ -184,6 +186,16 @@
             "outbounds": [
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣7️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "AU🇦🇺",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @oneclickvpnkeys | AU🇦🇺 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -477,6 +489,27 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @oneclickvpnkeys | AU🇦🇺 | 0️⃣1️⃣",
+            "type": "trojan",
+            "server": "au-full.privateip.net",
+            "server_port": 443,
+            "password": "f83a1a37-d8ba-49c2-bb96-44381b519ec5",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
