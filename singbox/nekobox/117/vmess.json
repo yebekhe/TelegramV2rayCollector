@@ -109,8 +109,7 @@
                 "DE🇩🇪",
                 "GB🇬🇧",
                 "NL🇳🇱",
-                "BE🇧🇪",
-                "UA🇺🇦"
+                "BE🇧🇪"
             ]
         },
         {
@@ -154,8 +153,7 @@
                 "رایگان | VMESS | @vmess_vless_v2rayng | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | VMESS | @vless_vmess | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | NL🇳🇱 | 0️⃣3️⃣",
-                "رایگان | VMESS | @ROMAX_VPN | BE🇧🇪 | 0️⃣4️⃣",
-                "رایگان | VMESS | @ROMAX_VPN | UA🇺🇦 | 0️⃣6️⃣"
+                "رایگان | VMESS | @ROMAX_VPN | BE🇧🇪 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -239,16 +237,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | VMESS | @ROMAX_VPN | BE🇧🇪 | 0️⃣4️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "UA🇺🇦",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | VMESS | @ROMAX_VPN | UA🇺🇦 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1449,32 +1437,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": "be2-vmess.sshmax.xyz"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @ROMAX_VPN | UA🇺🇦 | 0️⃣6️⃣",
-            "type": "vmess",
-            "server": "172.67.166.192",
-            "server_port": 80,
-            "uuid": "cd1db809-2de0-409c-aef5-861e95eff53e",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/vmess",
-                "headers": {
-                    "Host": "ua1-vmess.sshmax.xyz"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
