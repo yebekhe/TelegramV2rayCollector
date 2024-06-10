@@ -105,16 +105,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "NO🇳🇴",
-                "US🇺🇸"
+                "NO🇳🇴"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣7️⃣",
-                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣4️⃣"
+                "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -125,16 +123,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣7️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "US🇺🇸",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -165,34 +153,6 @@
                     "enabled": true,
                     "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
                     "short_id": ""
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ConfigsHUB | US🇺🇸 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "us1.x2fast.net",
-            "server_port": 8443,
-            "uuid": "283193ae-aa30-4e5c-a1a4-fb0841a8dd2c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "172.67.173.11",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "t_XMV-WyVYbcDCIgiSSCi3bSPDdW1rqKFa9ZoI8b4RA",
-                    "short_id": "dbdf78b1df376900"
                 }
             }
         },
