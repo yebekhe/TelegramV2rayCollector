@@ -111,10 +111,10 @@
                 "IE🇮🇪",
                 "GB🇬🇧",
                 "PL🇵🇱",
+                "FR🇫🇷",
                 "DE🇩🇪",
                 "KZ🇰🇿",
-                "NL🇳🇱",
-                "FR🇫🇷"
+                "NL🇳🇱"
             ]
         },
         {
@@ -129,10 +129,11 @@
                 "رایگان | SS | @VmessProtocol | GB🇬🇧 | 0️⃣4️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | GB🇬🇧 | 0️⃣2️⃣",
                 "رایگان | SS | @OutlineVpnOfficial | PL🇵🇱 | 0️⃣1️⃣",
-                "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | SS | @kingofilter | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | SS | @kingofilter | KZ🇰🇿 | 0️⃣1️⃣",
-                "رایگان | SS | @kingofilter | NL🇳🇱 | 0️⃣2️⃣",
-                "رایگان | SS | @kingofilter | FR🇫🇷 | 0️⃣3️⃣"
+                "رایگان | SS | @kingofilter | NL🇳🇱 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -192,10 +193,21 @@
             "tolerance": 50
         },
         {
+            "tag": "FR🇫🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | SS | @kingofilter | FR🇫🇷 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣3️⃣"
+                "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -216,16 +228,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | SS | @kingofilter | NL🇳🇱 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FR🇫🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | SS | @kingofilter | FR🇫🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -312,7 +314,27 @@
             "plugin_opts": ""
         },
         {
-            "tag": "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | SS | @OutlineVpnOfficial | FR🇫🇷 | 0️⃣3️⃣",
+            "type": "shadowsocks",
+            "server": "149.202.82.172",
+            "server_port": 7307,
+            "method": "aes-256-gcm",
+            "password": "FoOiGlkAA9yPEGP",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @kingofilter | FR🇫🇷 | 0️⃣3️⃣",
+            "type": "shadowsocks",
+            "server": "paris.telegavpn.com",
+            "server_port": 9802,
+            "method": "chacha20-ietf-poly1305",
+            "password": "l3b7TrZ8NBm5EB4bFoo0ha",
+            "plugin": "",
+            "plugin_opts": ""
+        },
+        {
+            "tag": "رایگان | SS | @OutlineVpnOfficial | DE🇩🇪 | 0️⃣4️⃣",
             "type": "shadowsocks",
             "server": "217.182.198.219",
             "server_port": 3389,
@@ -338,16 +360,6 @@
             "server_port": 18332,
             "method": "chacha20-ietf-poly1305",
             "password": "MyBoz22PePnYgEWNil1jWU",
-            "plugin": "",
-            "plugin_opts": ""
-        },
-        {
-            "tag": "رایگان | SS | @kingofilter | FR🇫🇷 | 0️⃣3️⃣",
-            "type": "shadowsocks",
-            "server": "paris.telegavpn.com",
-            "server_port": 9802,
-            "method": "chacha20-ietf-poly1305",
-            "password": "l3b7TrZ8NBm5EB4bFoo0ha",
             "plugin": "",
             "plugin_opts": ""
         },
