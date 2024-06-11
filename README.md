@@ -1,6 +1,6 @@
 # V2ray Collector
 
-<h1>Project Upgraded to version 2 and only accessible through Telegram bot: <a href="https://t.me/v2raycollectorbot">TVC BOT</a>.</h1>
+<h1>Project Upgraded to <a href="https://github.com/yebekhe/TVC">version 2</a> and accessible through Telegram bot: <a href="https://t.me/v2raycollectorbot">TVC BOT</a>.</h1>
 
 <p align="center">
   <a href="https://t.me/v2raycollectorbot">
@@ -28,7 +28,7 @@
   <b>This project is intended for educational purposes only. Any other use of it, including commercial, personal, or non-educational use, is not accepted!</b>
 </p>
 
-<p align="center">This is a PHP script that collects V2Ray Configs from various Channels and saves them to different Subscription files based on their protocol type (SHADOWSOCKS, VLESS, VMESS, TROJAN, TUIC and HYSTERIA2).</p>
+<p align="center">This is a PHP script that collects V2Ray Configs from various Channels and saves them to different Subscription files based on their location and protocol type (SHADOWSOCKS, VLESS, VMESS, TROJAN, TUIC and HYSTERIA2).</p>
 
 ## Instructions & Usage
 
@@ -66,7 +66,7 @@ You can access the Channels list through our Telegram bot: [TVC BOT](https://t.m
 
 ## Contribution
 
-If you have a Channel and you want to add it to this project or you know Channels that can be used in this project, you can ask for addition in the Issues section or in our [Telegram group](https://t.me/V2rayCollectorGroup).
+If you have a Channel and you want to add it to this project or you know Channels that can be used in this project, you can ask for addition in the [Issues section](https://github.com/yebekhe/TelegramV2rayCollector/issues/43) or in our [Telegram group](https://t.me/V2rayCollectorGroup).
 
 ## License
 
