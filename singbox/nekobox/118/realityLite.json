@@ -108,108 +108,15 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": [
-                "URL-TEST | رایگان",
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣4️⃣",
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣5️⃣",
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣6️⃣"
-            ]
+            "outbounds": null
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣4️⃣",
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣5️⃣",
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣6️⃣"
-            ],
+            "outbounds": null,
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "104.168.107.230",
-            "server_port": 7321,
-            "uuid": "f6623674-901e-42ae-89c3-e18d6dd91621",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "placehold.it",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "nLDsqH0iqy2tsJS62RP-viiKwJoGAcCq5rGh6hKnGFU",
-                    "short_id": "ba345106595e9c3c"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "104.168.107.230",
-            "server_port": 6481,
-            "uuid": "a3d78ee8-b8d4-4aee-ba16-8cb9b6397f60",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "researchgate.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "nLDsqH0iqy2tsJS62RP-viiKwJoGAcCq5rGh6hKnGFU",
-                    "short_id": "ba345106595e9c3c"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "104.168.107.230",
-            "server_port": 4342,
-            "uuid": "9a9cd928-36da-4486-bfd0-42ef6b312b3b",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.who.int",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "nLDsqH0iqy2tsJS62RP-viiKwJoGAcCq5rGh6hKnGFU",
-                    "short_id": "ba345106595e9c3c"
-                }
-            }
         },
         {
             "tag": "direct",
