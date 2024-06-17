@@ -108,15 +108,168 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": null
+            "outbounds": [
+                "URL-TEST | رایگان",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣4️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣5️⃣"
+            ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": null,
+            "outbounds": [
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣4️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣5️⃣"
+            ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 8339,
+            "uuid": "a094f50c-863c-4d3b-aa09-298c25e782b7",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sedo.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QQHxQK7ocGHvaCmqtW3QapnKiBVd4ZjjM3zhCGVMPS4",
+                    "short_id": "db68e802226b21cd"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 7550,
+            "uuid": "e58d0ee3-7d14-4dcf-99e7-ad219a781299",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "pixabay.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QQHxQK7ocGHvaCmqtW3QapnKiBVd4ZjjM3zhCGVMPS4",
+                    "short_id": "db68e802226b21cd"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 9631,
+            "uuid": "e60d38a5-9617-4e9a-8e01-61c99fa080d6",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ftp.debian.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QQHxQK7ocGHvaCmqtW3QapnKiBVd4ZjjM3zhCGVMPS4",
+                    "short_id": "db68e802226b21cd"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 4212,
+            "uuid": "db9abed0-d37a-49bc-aa8e-8321e02bc9e6",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "poynter.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QQHxQK7ocGHvaCmqtW3QapnKiBVd4ZjjM3zhCGVMPS4",
+                    "short_id": "db68e802226b21cd"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "104.168.107.230",
+            "server_port": 6722,
+            "uuid": "3934f954-59f9-4f8e-9eb8-cdc50fd026d8",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "js.hsforms.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QQHxQK7ocGHvaCmqtW3QapnKiBVd4ZjjM3zhCGVMPS4",
+                    "short_id": "db68e802226b21cd"
+                }
+            }
         },
         {
             "tag": "direct",
