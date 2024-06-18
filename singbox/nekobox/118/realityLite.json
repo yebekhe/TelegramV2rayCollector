@@ -108,15 +108,48 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": null
+            "outbounds": [
+                "URL-TEST | رایگان",
+                "رایگان | REALITY | @ConfigsHUB | FI🇫🇮 | 0️⃣3️⃣"
+            ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": null,
+            "outbounds": [
+                "رایگان | REALITY | @ConfigsHUB | FI🇫🇮 | 0️⃣3️⃣"
+            ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @ConfigsHUB | FI🇫🇮 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "65.109.178.68",
+            "server_port": 45315,
+            "uuid": "f08fec47-e785-4b3a-a923-80f5e139c2bc",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "HB3hnc85JraKAWNm5yVV4GS5Gp3vExQsr6LReKusXRo",
+                    "short_id": "1c5ad876"
+                }
+            }
         },
         {
             "tag": "direct",
