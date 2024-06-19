@@ -110,21 +110,51 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @FreakConfig | KR🇰🇷 | 0️⃣2️⃣"
+                "رایگان | REALITY | @ConfigsHUB | FR🇫🇷 | 0️⃣6️⃣",
+                "رایگان | REALITY | @FreakConfig | KR🇰🇷 | 0️⃣3️⃣"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @FreakConfig | KR🇰🇷 | 0️⃣2️⃣"
+                "رایگان | REALITY | @ConfigsHUB | FR🇫🇷 | 0️⃣6️⃣",
+                "رایگان | REALITY | @FreakConfig | KR🇰🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @FreakConfig | KR🇰🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @ConfigsHUB | FR🇫🇷 | 0️⃣6️⃣",
+            "type": "vless",
+            "server": "95.179.214.39",
+            "server_port": 8443,
+            "uuid": "75e7d7eb-60b7-46d0-9fd1-8b52534dfd5b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "PYzMT_U8v3KaH_DyC-g9jqkDxloM-lBDuGFFtf0vVXM",
+                    "short_id": "41f1e7f8"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @FreakConfig | KR🇰🇷 | 0️⃣3️⃣",
             "type": "vless",
             "server": "132.226.172.147",
             "server_port": 62001,
