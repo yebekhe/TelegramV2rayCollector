@@ -110,36 +110,36 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "ES🇪🇸"
+                "DE🇩🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @vpn_xw | ES🇪🇸 | 0️⃣2️⃣"
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "ES🇪🇸",
+            "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @vpn_xw | ES🇪🇸 | 0️⃣2️⃣"
+                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @vpn_xw | ES🇪🇸 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "madrid.xwdil.ir",
-            "server_port": 443,
-            "uuid": "bc267e61-3431-41d2-b29b-6a8e0861cc33",
-            "flow": "",
+            "server": "91.107.176.13",
+            "server_port": 8080,
+            "uuid": "07669291-5061-4e74-a5d7-1f94a5a36367",
+            "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -148,7 +148,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "marca.com",
+                "server_name": "mdundo.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -156,16 +156,9 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "CkSjKQDP5xMVdboAsHzm4LnSfRK8KB9dxoHGDkQARUM",
-                    "short_id": "b9a19b51"
+                    "public_key": "UQcENeMy3VVqYDJIPm68FVHz9r2lC34ydM5chOKa5RU",
+                    "short_id": "18cada"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Dali",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
