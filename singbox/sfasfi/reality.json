@@ -107,8 +107,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "KR🇰🇷",
-                "NL🇳🇱",
-                "DE🇩🇪"
+                "EE🇪🇪",
+                "FR🇫🇷"
             ]
         },
         {
@@ -116,8 +116,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @vless_vmess | KR🇰🇷 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | NL🇳🇱 | 0️⃣2️⃣",
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @VmessProtocol | FR🇫🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -134,20 +134,20 @@
             "tolerance": 50
         },
         {
-            "tag": "NL🇳🇱",
+            "tag": "EE🇪🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | NL🇳🇱 | 0️⃣2️⃣"
+                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "DE🇩🇪",
+            "tag": "FR🇫🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @VmessProtocol | FR🇫🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -182,11 +182,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | NL🇳🇱 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "185.142.238.222",
-            "server_port": 8443,
-            "uuid": "ae5aed77-be23-4f6c-bd51-c73745038952",
+            "server": "95.164.8.185",
+            "server_port": 8080,
+            "uuid": "8da3432a-d4da-4f43-801f-342cda5eae9f",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -196,7 +196,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "maps.google.com",
+                "server_name": "www.speedtest.net",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -204,18 +204,18 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "NbtOWq_km9k_SKgCJatXla3Jl7gGKVbjQ-GAtGg4bEk",
-                    "short_id": "bfde1c85a6a4112a"
+                    "public_key": "MKfDEJAAbEk2S49G67c1m49oFc8BLwd-0jgfiygcOFg",
+                    "short_id": "7554c6ea"
                 }
             }
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @VmessProtocol | FR🇫🇷 | 0️⃣3️⃣",
             "type": "vless",
-            "server": "91.107.176.13",
-            "server_port": 8080,
-            "uuid": "07669291-5061-4e74-a5d7-1f94a5a36367",
-            "flow": "xtls-rprx-vision",
+            "server": "15.236.34.57",
+            "server_port": 123,
+            "uuid": "cad9e325-44ea-442d-b292-0436dfcf25f9",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -224,7 +224,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "mdundo.com",
+                "server_name": "mosifantastic.ir",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -232,9 +232,16 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "UQcENeMy3VVqYDJIPm68FVHz9r2lC34ydM5chOKa5RU",
-                    "short_id": "18cada"
+                    "public_key": "3A9fyH_8UIX11F1WL_ZahX8KSXZfl-IsjciwJNE8MyA",
+                    "short_id": "a2"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@zabuza_shop",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
