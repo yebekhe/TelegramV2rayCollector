@@ -104,15 +104,48 @@
         {
             "tag": "proxy",
             "type": "selector",
-            "outbounds": null
+            "outbounds": [
+                "URL-TEST | رایگان",
+                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
+            ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
-            "outbounds": null,
+            "outbounds": [
+                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
+            ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "158.180.69.174",
+            "server_port": 39193,
+            "uuid": "29ac9b7e-b5ef-42e6-8c11-00441d6af76f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "download-installer.cdn.mozilla.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "safari"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fGc5_76xeIvGaobieJalJow4MRsVX7LJsand8O2ZlU4",
+                    "short_id": "5c53b7e0"
+                }
+            }
         },
         {
             "tag": "direct",
