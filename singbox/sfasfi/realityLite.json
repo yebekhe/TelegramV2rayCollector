@@ -107,12 +107,14 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ProxyForOpeta | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @VmessProtocol | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @VmessProtocol | KR🇰🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣4️⃣",
                 "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣6️⃣",
-                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣"
             ]
         },
         {
@@ -120,12 +122,14 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ProxyForOpeta | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @VmessProtocol | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @VmessProtocol | KR🇰🇷 | 0️⃣3️⃣",
                 "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣4️⃣",
                 "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣6️⃣",
-                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -156,6 +160,34 @@
                     "enabled": true,
                     "public_key": "fGc5_76xeIvGaobieJalJow4MRsVX7LJsand8O2ZlU4",
                     "short_id": "5c53b7e0"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ProxyForOpeta | FI🇫🇮 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "realgod.gamebestir.ir",
+            "server_port": 2093,
+            "uuid": "953a7b6e-d5bb-472c-843b-4c73514e1b15",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7kjyM2dPWAj_zy6VnB88fevwjT4m3XRna6H2rfSEdH0",
+                    "short_id": "d710e2b9"
                 }
             }
         },
@@ -339,6 +371,41 @@
                     "public_key": "UOplfcqYNVqgrkrOykCpxmGLPvwnPzjk8oB2fDicYn4",
                     "short_id": "4374d295a4f9dd83"
                 }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "188.245.64.60",
+            "server_port": 443,
+            "uuid": "telegram-id-ArV2ray",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "cGkz-QX76GRQekaGKr_R77_4OFObkjsOYvo9xyfEMyE",
+                    "short_id": "e0ba4b02"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
