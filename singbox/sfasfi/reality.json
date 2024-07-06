@@ -107,9 +107,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
-                "KR🇰🇷",
-                "FI🇫🇮",
-                "GB🇬🇧"
+                "KR🇰🇷"
             ]
         },
         {
@@ -120,9 +118,8 @@
                 "رایگان | REALITY | @free_v2rayyy | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
-                "رایگان | REALITY | @ProxyForOpeta | FI🇫🇮 | 0️⃣4️⃣",
-                "رایگان | REALITY | @ConfigsHUB | GB🇬🇧 | 0️⃣1️⃣"
+                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -135,7 +132,8 @@
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @free_v2rayyy | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -146,26 +144,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "FI🇫🇮",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ProxyForOpeta | FI🇫🇮 | 0️⃣4️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "GB🇬🇧",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | GB🇬🇧 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -312,6 +290,41 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @mehrosaboran | DE🇩🇪 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "188.245.64.60",
+            "server_port": 443,
+            "uuid": "telegram-id-ArV2ray",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "cGkz-QX76GRQekaGKr_R77_4OFObkjsOYvo9xyfEMyE",
+                    "short_id": "e0ba4b02"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
             "type": "vless",
             "server": "158.180.69.174",
@@ -337,69 +350,6 @@
                     "public_key": "fGc5_76xeIvGaobieJalJow4MRsVX7LJsand8O2ZlU4",
                     "short_id": "5c53b7e0"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ProxyForOpeta | FI🇫🇮 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "realgod.gamebestir.ir",
-            "server_port": 2093,
-            "uuid": "953a7b6e-d5bb-472c-843b-4c73514e1b15",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "stackoverflow.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "7kjyM2dPWAj_zy6VnB88fevwjT4m3XRna6H2rfSEdH0",
-                    "short_id": "d710e2b9"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ConfigsHUB | GB🇬🇧 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "193.233.114.4",
-            "server_port": 443,
-            "uuid": "b34c6ee4-0d00-42bd-80e7-498473e17494",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "discord.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "een7poSoq6eFDvfwDNdGN75DsJrluUh6Vv15SMWLDX8",
-                    "short_id": "00e2953a"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@set_v2ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
