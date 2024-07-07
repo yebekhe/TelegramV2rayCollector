@@ -114,8 +114,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @free_v2rayyy | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -127,8 +127,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @free_v2rayyy | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣1️⃣"
+                "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -180,7 +180,35 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "141.95.75.212",
+            "server_port": 443,
+            "uuid": "200e059b-51ec-4825-8e95-5e49db5d22ad",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "analytics.google.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "yiHA11T4BplJbQxAfsQkiiAzAmyxWau-KR7dQptwjDU",
+                    "short_id": "c741ad33"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣7️⃣",
             "type": "vless",
             "server": "188.245.69.77",
             "server_port": 443,
@@ -209,41 +237,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram-ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "188.245.38.34",
-            "server_port": 443,
-            "uuid": "3b8be01d-e1db-4d8b-8ef2-f88fc373dac6",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "J3OZsgCJTWcl0283D6Teo7ZH-6d5GMR_CsFvN3bNmh0",
-                    "short_id": "453b87fe"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM-Telegram-Proxy_MTM",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
