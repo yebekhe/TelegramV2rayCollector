@@ -106,7 +106,6 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "KR🇰🇷",
                 "SE🇸🇪",
                 "NL🇳🇱"
             ]
@@ -115,19 +114,8 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @sinabigo | NL🇳🇱 | 0️⃣7️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "KR🇰🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -152,34 +140,6 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "158.180.69.174",
-            "server_port": 39193,
-            "uuid": "29ac9b7e-b5ef-42e6-8c11-00441d6af76f",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "download-installer.cdn.mozilla.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "safari"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "fGc5_76xeIvGaobieJalJow4MRsVX7LJsand8O2ZlU4",
-                    "short_id": "5c53b7e0"
-                }
-            }
         },
         {
             "tag": "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣5️⃣",
