@@ -111,6 +111,7 @@
                 "RU🇷🇺",
                 "HK🇭🇰",
                 "SE🇸🇪",
+                "TR🇹🇷",
                 "NL🇳🇱"
             ]
         },
@@ -124,6 +125,7 @@
                 "رایگان | REALITY | @proxy_kafee | RU🇷🇺 | 0️⃣4️⃣",
                 "رایگان | REALITY | @proxy_kafee | HK🇭🇰 | 0️⃣5️⃣",
                 "رایگان | REALITY | @proxy_kafee | SE🇸🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @Outline_Vpn | TR🇹🇷 | 0️⃣4️⃣",
                 "رایگان | REALITY | @sinabigo | NL🇳🇱 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -176,6 +178,16 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @proxy_kafee | SE🇸🇪 | 0️⃣6️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "TR🇹🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @Outline_Vpn | TR🇹🇷 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -356,6 +368,34 @@
                     "enabled": true,
                     "public_key": "_-6yLvMK98xqGz80pOiKHnMWUKx-xSy4Fm6EYPMwkn0",
                     "short_id": "58b47b01"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @Outline_Vpn | TR🇹🇷 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "80.253.255.10",
+            "server_port": 443,
+            "uuid": "7c7af2de-bb97-429f-ac3c-8ef849717491",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.upci.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "jSuIvIWLecUXhjia1bHBwo5sHiYkKsdtdy0x6N-4A1s",
+                    "short_id": "ee46"
                 }
             }
         },
