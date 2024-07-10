@@ -106,9 +106,11 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "KR🇰🇷",
-                "SE🇸🇪",
                 "EE🇪🇪",
+                "KR🇰🇷",
+                "RU🇷🇺",
+                "HK🇭🇰",
+                "SE🇸🇪",
                 "NL🇳🇱"
             ]
         },
@@ -116,32 +118,14 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
+                "رایگان | REALITY | @proxy_kafee | EE🇪🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @proxy_kafee | KR🇰🇷 | 0️⃣2️⃣",
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @proxy_kafee | RU🇷🇺 | 0️⃣4️⃣",
+                "رایگان | REALITY | @proxy_kafee | HK🇭🇰 | 0️⃣5️⃣",
+                "رایگان | REALITY | @proxy_kafee | SE🇸🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣5️⃣",
-                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @sinabigo | NL🇳🇱 | 0️⃣5️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "KR🇰🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "SE🇸🇪",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -151,7 +135,49 @@
             "tag": "EE🇪🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣4️⃣"
+                "رایگان | REALITY | @proxy_kafee | EE🇪🇪 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "KR🇰🇷",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @proxy_kafee | KR🇰🇷 | 0️⃣2️⃣",
+                "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "RU🇷🇺",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @proxy_kafee | RU🇷🇺 | 0️⃣4️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "HK🇭🇰",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @proxy_kafee | HK🇭🇰 | 0️⃣5️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "SE🇸🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @proxy_kafee | SE🇸🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -166,6 +192,62 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
+        },
+        {
+            "tag": "رایگان | REALITY | @proxy_kafee | EE🇪🇪 | 0️⃣1️⃣",
+            "type": "vless",
+            "server": "95.164.8.185",
+            "server_port": 8080,
+            "uuid": "8da3432a-d4da-4f43-801f-342cda5eae9f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "MKfDEJAAbEk2S49G67c1m49oFc8BLwd-0jgfiygcOFg",
+                    "short_id": "7554c6ea"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @proxy_kafee | KR🇰🇷 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "132.226.172.147",
+            "server_port": 62001,
+            "uuid": "f61e2705-1fa7-4202-9724-d8a9e4d63917",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "swdist.apple.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "9rx7JwMO-KRZZEM9TQBO19BOAmmGjJyjN86ll2J7uVc",
+                    "short_id": ""
+                }
+            }
         },
         {
             "tag": "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
@@ -196,7 +278,63 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @proxy_kafee | RU🇷🇺 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "45.67.32.147",
+            "server_port": 15595,
+            "uuid": "e2b52ca2-8a86-4d3f-b95e-ff1743e99ab7",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "qS7RgmrDJXhMiqsMBTmmQCRpDMgqfNRm7WJcRdOq7mI",
+                    "short_id": "f04c5e3b"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @proxy_kafee | HK🇭🇰 | 0️⃣5️⃣",
+            "type": "vless",
+            "server": "18.163.198.56",
+            "server_port": 9211,
+            "uuid": "506c67cb-0c75-4c60-9d49-b13e73b4c9aa",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "addons.mozilla.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "OLnFjq-qdnDg8HWW11xAS_jz-QoefiVa0IoizMtfgyw",
+                    "short_id": "63671540"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @proxy_kafee | SE🇸🇪 | 0️⃣6️⃣",
             "type": "vless",
             "server": "70.34.209.18",
             "server_port": 56639,
@@ -256,34 +394,6 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "95.164.8.185",
-            "server_port": 8080,
-            "uuid": "8da3432a-d4da-4f43-801f-342cda5eae9f",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "MKfDEJAAbEk2S49G67c1m49oFc8BLwd-0jgfiygcOFg",
-                    "short_id": "7554c6ea"
-                }
             }
         },
         {
