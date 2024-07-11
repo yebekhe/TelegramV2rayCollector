@@ -110,7 +110,8 @@
                 "GB🇬🇧",
                 "FR🇫🇷",
                 "PT🇵🇹",
-                "DE🇩🇪"
+                "DE🇩🇪",
+                "HK🇭🇰"
             ]
         },
         {
@@ -149,7 +150,8 @@
                 "رایگان | VMESS | @prrofile_purple | GB🇬🇧 | 0️⃣3️⃣",
                 "رایگان | VMESS | @oneclickvpnkeys | FR🇫🇷 | 0️⃣6️⃣",
                 "رایگان | VMESS | @prrofile_purple | PT🇵🇹 | 0️⃣1️⃣",
-                "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | VMESS | @Hope_Net | HK🇭🇰 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -228,6 +230,16 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣2️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "HK🇭🇰",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | VMESS | @Hope_Net | HK🇭🇰 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1230,6 +1242,23 @@
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @Hope_Net | HK🇭🇰 | 0️⃣3️⃣",
+            "type": "vmess",
+            "server": "91.149.236.46",
+            "server_port": 20143,
+            "uuid": "6785594d-31c8-48ff-c7ad-9f99c9483bf0",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             }
         },
         {
