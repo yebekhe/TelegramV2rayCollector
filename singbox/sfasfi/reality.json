@@ -107,7 +107,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "KR🇰🇷",
-                "FR🇫🇷"
+                "TR🇹🇷"
             ]
         },
         {
@@ -115,7 +115,8 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
-                "رایگان | REALITY | @ConfigsHUB | FR🇫🇷 | 0️⃣5️⃣"
+                "رایگان | REALITY | @Outline_Vpn | TR🇹🇷 | 0️⃣4️⃣",
+                "رایگان | REALITY | @v2rayNG_Matsuri | TR🇹🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -132,10 +133,11 @@
             "tolerance": 50
         },
         {
-            "tag": "FR🇫🇷",
+            "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ConfigsHUB | FR🇫🇷 | 0️⃣5️⃣"
+                "رایگان | REALITY | @Outline_Vpn | TR🇹🇷 | 0️⃣4️⃣",
+                "رایگان | REALITY | @v2rayNG_Matsuri | TR🇹🇷 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -170,11 +172,39 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @ConfigsHUB | FR🇫🇷 | 0️⃣5️⃣",
+            "tag": "رایگان | REALITY | @Outline_Vpn | TR🇹🇷 | 0️⃣4️⃣",
             "type": "vless",
-            "server": "217.69.6.24",
+            "server": "80.253.255.10",
             "server_port": 443,
-            "uuid": "ce5b494d-4a57-4873-a632-8b4f8625179b",
+            "uuid": "7c7af2de-bb97-429f-ac3c-8ef849717491",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.upci.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "jSuIvIWLecUXhjia1bHBwo5sHiYkKsdtdy0x6N-4A1s",
+                    "short_id": "ee46"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @v2rayNG_Matsuri | TR🇹🇷 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "77.92.145.153",
+            "server_port": 443,
+            "uuid": "f53f1a5d-6a86-48ca-b897-f673daf45021",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -184,7 +214,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "cdn.discordapp.com",
+                "server_name": "google.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -192,8 +222,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "HE1w37dsB_bntFV6QIDmlXIcx7ZUTgw9b3hahBommVo",
-                    "short_id": "71dbea41"
+                    "public_key": "Y6NJmcTdR_w9hSOlAFxPaqz37sYhbj_MhuJT3DddnCI",
+                    "short_id": "bfc2e70f"
                 }
             }
         },
