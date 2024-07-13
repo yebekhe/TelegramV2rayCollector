@@ -145,6 +145,7 @@
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | US🇺🇸 | 0️⃣3️⃣",
@@ -152,6 +153,7 @@
                 "رایگان | VMESS | @oneclickvpnkeys | DK🇩🇰 | 0️⃣5️⃣",
                 "رایگان | VMESS | @prrofile_purple | PT🇵🇹 | 0️⃣2️⃣",
                 "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | VMESS | @ConfigsHUB | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | VMESS | @prrofile_purple | GB🇬🇧 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -190,6 +192,7 @@
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @ROMAX_VPN | US🇺🇸 | 0️⃣3️⃣",
@@ -223,7 +226,8 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣3️⃣"
+                "رایگان | VMESS | @prrofile_purple | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | VMESS | @ConfigsHUB | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1004,7 +1008,7 @@
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 2096,
-            "uuid": "26b9c4ce-1a25-4d8e-b265-17ed45ac5f12",
+            "uuid": "2ffbfa07-7161-47fc-8a3b-f94e02a28f49",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1040,7 +1044,7 @@
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 2096,
-            "uuid": "258847cf-7268-40ca-b9aa-932c4bef5b27",
+            "uuid": "b17fd137-b80e-4eda-b7d5-28bd89c735ea",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1074,9 +1078,9 @@
         {
             "tag": "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣",
             "type": "vmess",
-            "server": "172.67.164.164",
-            "server_port": 443,
-            "uuid": "a1655f51-1e20-4a92-8a11-b7ca30a7a353",
+            "server": "zula.ir",
+            "server_port": 2096,
+            "uuid": "8e5c836e-d815-4166-a0c5-a6b083f130aa",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1089,7 +1093,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "afrhms07.xfixedfloat.cfd",
+                "server_name": "kingo.hightechservice.ir",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -1099,9 +1103,45 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/linkws",
+                "path": "\/",
                 "headers": {
-                    "Host": "afrhms07.xfixedfloat.cfd"
+                    "Host": "kingo.hightechservice.ir"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣4️⃣",
+            "type": "vmess",
+            "server": "zula.ir",
+            "server_port": 2096,
+            "uuid": "26b9c4ce-1a25-4d8e-b265-17ed45ac5f12",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "kingo.hightechservice.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "kingo.hightechservice.ir"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -1337,6 +1377,23 @@
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @ConfigsHUB | DE🇩🇪 | 0️⃣1️⃣",
+            "type": "vmess",
+            "server": "159.69.124.138",
+            "server_port": 2086,
+            "uuid": "FILTERSHCAN",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             }
         },
         {
