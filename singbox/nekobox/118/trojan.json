@@ -111,6 +111,7 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "US🇺🇸",
+                "CA🇨🇦",
                 "DE🇩🇪",
                 "SE🇸🇪",
                 "IE🇮🇪",
@@ -122,12 +123,12 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣7️⃣",
+                "رایگان | TROJAN | @Watashi_VPN | CA🇨🇦 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @Watashi_VPN | CA🇨🇦 | 0️⃣4️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @PrivateVPNs | SE🇸🇪 | 0️⃣3️⃣",
@@ -145,12 +146,21 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣3️⃣",
-                "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣6️⃣",
                 "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣7️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "CA🇨🇦",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | TROJAN | @Watashi_VPN | CA🇨🇦 | 0️⃣2️⃣",
+                "رایگان | TROJAN | @Watashi_VPN | CA🇨🇦 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -228,66 +238,10 @@
             }
         },
         {
-            "tag": "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣2️⃣",
-            "type": "trojan",
-            "server": "zula.ir",
-            "server_port": 443,
-            "password": "Watashi_VPN",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "t-watashi-r-jacket-o-people-jan.watashi-java.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/?ed=2560",
-                "headers": {
-                    "Host": "t-watashi-r-jacket-o-people-jan.watashi-java.ir"
-                }
-            }
-        },
-        {
             "tag": "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣3️⃣",
             "type": "trojan",
             "server": "www.gov.se",
             "server_port": 8443,
-            "password": "Watashi_VPN",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "t-watashi-r-jacket-o-people-jan.watashi-java.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/?ed=2560",
-                "headers": {
-                    "Host": "t-watashi-r-jacket-o-people-jan.watashi-java.ir"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | TROJAN | @Watashi_VPN | US🇺🇸 | 0️⃣4️⃣",
-            "type": "trojan",
-            "server": "cf.090227.xyz",
-            "server_port": 443,
             "password": "Watashi_VPN",
             "multiplex": {
                 "enabled": false,
@@ -372,6 +326,62 @@
             "type": "trojan",
             "server": "www.visa.com.sg",
             "server_port": 8443,
+            "password": "Watashi_VPN",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "t-watashi-r-jacket-o-people-jan.watashi-java.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/?ed=2560",
+                "headers": {
+                    "Host": "t-watashi-r-jacket-o-people-jan.watashi-java.ir"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @Watashi_VPN | CA🇨🇦 | 0️⃣2️⃣",
+            "type": "trojan",
+            "server": "zula.ir",
+            "server_port": 443,
+            "password": "Watashi_VPN",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "t-watashi-r-jacket-o-people-jan.watashi-java.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/?ed=2560",
+                "headers": {
+                    "Host": "t-watashi-r-jacket-o-people-jan.watashi-java.ir"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | TROJAN | @Watashi_VPN | CA🇨🇦 | 0️⃣4️⃣",
+            "type": "trojan",
+            "server": "cf.090227.xyz",
+            "server_port": 443,
             "password": "Watashi_VPN",
             "multiplex": {
                 "enabled": false,
