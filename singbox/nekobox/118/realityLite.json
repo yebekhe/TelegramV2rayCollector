@@ -112,8 +112,9 @@
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣",
                 "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣"
             ]
         },
@@ -123,8 +124,9 @@
             "outbounds": [
                 "رایگان | REALITY | @Watashi_VPN | KR🇰🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣",
                 "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -174,7 +176,70 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "70.34.198.175",
+            "server_port": 443,
+            "uuid": "3baac19a-7ed9-4ec2-bfa9-6128a9b14513",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "constant.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "G_YYA8zj3SnrP7NKC-mc7CXuarNTZZG9D5WR_UqzjSs",
+                    "short_id": "495ee1021fc84a"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "77.221.143.183",
+            "server_port": 33000,
+            "uuid": "d5e775de-0530-4062-a654-25dd2ba648d2",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.speedtest.net",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "JrN7nZEbUeBJFHTAKwtz5Dmd10SGgA8UCHEMLA2xOg0",
+                    "short_id": "be7f13dd"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "b",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣",
             "type": "vless",
             "server": "31.24.251.160",
             "server_port": 443,
@@ -198,34 +263,6 @@
                     "enabled": true,
                     "public_key": "S6BVT_agYq3H0tsAR_opYiDkCNJJMNAXqivqchxz5Wo",
                     "short_id": "8558c658"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "45.63.117.10",
-            "server_port": 8080,
-            "uuid": "e3e5f5fa-862d-4246-8fdf-59ab37d6415c",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.coinmarketcap.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "zLaDmeXeP0TOHAlx8Q3LiKcsIy5fN2B4lx2wNQwdNmI",
-                    "short_id": "02"
                 }
             }
         },
