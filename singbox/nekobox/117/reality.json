@@ -108,7 +108,7 @@
                 "DE🇩🇪",
                 "NO🇳🇴",
                 "SE🇸🇪",
-                "TR🇹🇷"
+                "US🇺🇸"
             ]
         },
         {
@@ -123,7 +123,8 @@
                 "رایگان | REALITY | @VmessProtocol | NO🇳🇴 | 0️⃣3️⃣",
                 "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @DailyV2RY | TR🇹🇷 | 0️⃣2️⃣"
+                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -165,10 +166,11 @@
             "tolerance": 50
         },
         {
-            "tag": "TR🇹🇷",
+            "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @DailyV2RY | TR🇹🇷 | 0️⃣2️⃣"
+                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -399,11 +401,39 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @DailyV2RY | TR🇹🇷 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "tr1.tradex2080.com",
+            "server": "74.119.194.136",
+            "server_port": 12345,
+            "uuid": "177dfbdf-8337-40ea-8791-906924b9fb2f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "0hue6xKKmwuEefA0eMXQszxESSoagq2kqLB_gPrRc3s",
+                    "short_id": "c57d2373"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "147.182.162.45",
             "server_port": 443,
-            "uuid": "7c7af2de-bb97-429f-ac3c-8ef849717491",
+            "uuid": "b927294d-b137-45ff-ac76-86d774a15c0a",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -413,7 +443,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "www.upci.org",
+                "server_name": "zula.ir",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -421,8 +451,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "jSuIvIWLecUXhjia1bHBwo5sHiYkKsdtdy0x6N-4A1s",
-                    "short_id": "ee46"
+                    "public_key": "ypqMZeJHgAmookEe0qEObGo4kiEcTIu3nyV6AFfGDRU",
+                    "short_id": "f394b7d3"
                 }
             }
         },
