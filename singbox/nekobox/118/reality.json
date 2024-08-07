@@ -111,8 +111,9 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "DE🇩🇪",
-                "EE🇪🇪",
-                "US🇺🇸"
+                "NL🇳🇱",
+                "US🇺🇸",
+                "EE🇪🇪"
             ]
         },
         {
@@ -120,9 +121,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | REALITY | @VmessProtocol | NL🇳🇱 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣3️⃣",
+                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -132,18 +133,17 @@
             "tag": "DE🇩🇪",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣3️⃣"
+                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "EE🇪🇪",
+            "tag": "NL🇳🇱",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣1️⃣"
+                "رایگان | REALITY | @VmessProtocol | NL🇳🇱 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -153,7 +153,17 @@
             "tag": "US🇺🇸",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣2️⃣"
+                "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "EE🇪🇪",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -174,11 +184,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @VmessProtocol | NL🇳🇱 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "136.244.84.182",
+            "server": "45.77.139.80",
             "server_port": 443,
-            "uuid": "abaf193b-eeb9-4a8a-afa7-6b6385156e94",
+            "uuid": "dfbbc8de-8a4f-407d-8069-6de38d83c4e1",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -188,7 +198,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "www.iranserver.com",
+                "server_name": "www.survive.org.uk",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -196,13 +206,41 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "JiXxyKEi_TmEqRzyvOsBEKciioXup7SbW5rvTa6CnA4",
-                    "short_id": "f1"
+                    "public_key": "gZLTRrh9Z0TIvMoXHB7_ih3EN6Zn0IuLstFFZ0y7Ryc",
+                    "short_id": "cc61d4"
                 }
             }
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣3️⃣",
+            "type": "vless",
+            "server": "74.119.194.136",
+            "server_port": 12345,
+            "uuid": "177dfbdf-8337-40ea-8791-906924b9fb2f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "0hue6xKKmwuEefA0eMXQszxESSoagq2kqLB_gPrRc3s",
+                    "short_id": "c57d2373"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @VmessProtocol | EE🇪🇪 | 0️⃣4️⃣",
             "type": "vless",
             "server": "95.164.8.185",
             "server_port": 8080,
@@ -226,34 +264,6 @@
                     "enabled": true,
                     "public_key": "MKfDEJAAbEk2S49G67c1m49oFc8BLwd-0jgfiygcOFg",
                     "short_id": "7554c6ea"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @VmessProtocol | US🇺🇸 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "137.184.105.42",
-            "server_port": 443,
-            "uuid": "b927294d-b137-45ff-ac76-86d774a15c0a",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "zula.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "ypqMZeJHgAmookEe0qEObGo4kiEcTIu3nyV6AFfGDRU",
-                    "short_id": "f394b7d3"
                 }
             }
         },
