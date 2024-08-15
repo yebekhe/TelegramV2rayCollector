@@ -110,16 +110,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣"
+                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣"
+                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -137,34 +135,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "143.244.149.168",
-            "server_port": 443,
-            "uuid": "b927294d-b137-45ff-ac76-86d774a15c0a",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "zula.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "ypqMZeJHgAmookEe0qEObGo4kiEcTIu3nyV6AFfGDRU",
-                    "short_id": "f394b7d3"
-                }
             }
         },
         {
