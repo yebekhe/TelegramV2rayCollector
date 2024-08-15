@@ -107,7 +107,6 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "US🇺🇸",
-                "TR🇹🇷",
                 "DE🇩🇪"
             ]
         },
@@ -124,7 +123,8 @@
                 "رایگان | VMESS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @v2ray1_ng | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣4️⃣",
+                "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣1️⃣",
@@ -141,7 +141,6 @@
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣5️⃣",
-                "رایگان | VMESS | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣",
                 "رایگان | VMESS | @kingofilter | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -161,7 +160,8 @@
                 "رایگان | VMESS | @DeamNet_Proxy | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @v2ray1_ng | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣4️⃣",
+                "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣1️⃣",
@@ -178,16 +178,6 @@
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣5️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "TR🇹🇷",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | VMESS | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -434,6 +424,42 @@
         {
             "tag": "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣1️⃣",
             "type": "vmess",
+            "server": "104.21.51.208",
+            "server_port": 443,
+            "uuid": "cb4fca5f-edf8-415b-aa8f-ac52f415296a",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "de-02.tradex2080.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/0fpZFB6IbpNptGAxAtI0QM",
+                "headers": {
+                    "Host": "de-02.tradex2080.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣2️⃣",
+            "type": "vmess",
             "server": "172.66.213.38",
             "server_port": 80,
             "uuid": "f533e37c-9da5-4955-a218-a7886e5719b6",
@@ -458,7 +484,7 @@
             }
         },
         {
-            "tag": "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣4️⃣",
+            "tag": "رایگان | VMESS | @DailyV2RY | US🇺🇸 | 0️⃣5️⃣",
             "type": "vmess",
             "server": "172.67.72.154",
             "server_port": 80,
@@ -892,23 +918,6 @@
             "server": "www.speedtest.net",
             "server_port": 2052,
             "uuid": "22be0df7-fe1d-4ce6-9e98-209318865bfe",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣",
-            "type": "vmess",
-            "server": "185.226.92.138",
-            "server_port": 30749,
-            "uuid": "58c87e56-2887-468b-8c9d-63faeb8735e6",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
