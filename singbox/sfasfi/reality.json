@@ -106,16 +106,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "DE🇩🇪",
-                "RU🇷🇺"
+                "DE🇩🇪"
             ]
         },
         {
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣"
+                "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -126,16 +124,6 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣1️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "RU🇷🇺",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -153,34 +141,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @VmessProtocol | RU🇷🇺 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "45.67.32.147",
-            "server_port": 37665,
-            "uuid": "42a4a68f-0427-4489-81d1-adc813b9618e",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "tmogroup.asia",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "0-DZNra7PGFEEmBx5MV0KGdQNRfThH-UUZn84Gr6PDU",
-                    "short_id": "88273704"
-                }
             }
         },
         {
