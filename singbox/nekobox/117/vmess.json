@@ -105,7 +105,8 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "US🇺🇸"
+                "US🇺🇸",
+                "HK🇭🇰"
             ]
         },
         {
@@ -133,7 +134,8 @@
                 "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣5️⃣",
-                "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣6️⃣"
+                "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣6️⃣",
+                "رایگان | VMESS | @mftizi | HK🇭🇰 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -165,6 +167,16 @@
                 "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣6️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "HK🇭🇰",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | VMESS | @mftizi | HK🇭🇰 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -799,6 +811,32 @@
                     "Host": "50907082685942059876387799824779.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"
                 },
                 "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @mftizi | HK🇭🇰 | 0️⃣3️⃣",
+            "type": "vmess",
+            "server": "22.6bnw.top",
+            "server_port": 2052,
+            "uuid": "b0549224-831d-4cba-bab9-94fdc6a1327e",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/cctv",
+                "headers": {
+                    "Host": "polohk.6bnw.top"
+                },
+                "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
