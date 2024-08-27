@@ -117,7 +117,8 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣"
+                "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣",
+                "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -127,7 +128,8 @@
             "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣"
+                "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣",
+                "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -135,6 +137,29 @@
         },
         {
             "tag": "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣1️⃣",
+            "type": "hysteria2",
+            "server": "free.netmh3.pro",
+            "server_port": 443,
+            "up_mbps": 0,
+            "down_mbps": 0,
+            "password": "751c1e55ead7439a",
+            "network": "tcp",
+            "obfs": {
+                "type": "salamander",
+                "password": "159836e3"
+            },
+            "tls": {
+                "enabled": true,
+                "disable_sni": true,
+                "server_name": "",
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ]
+            }
+        },
+        {
+            "tag": "رایگان | HY2 | @FAKEOFTVC | TR🇹🇷 | 0️⃣2️⃣",
             "type": "hysteria2",
             "server": "free.netmh3.pro",
             "server_port": 443,
